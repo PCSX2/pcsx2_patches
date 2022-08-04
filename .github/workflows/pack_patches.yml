@@ -1,0 +1,41 @@
+name: Pack patches
+
+on: [push, pull_request]
+
+jobs:
+  pack:
+    name: Pack patches
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create archives
+        run: |
+          7z a -r cheats_ni.zip ./cheats_ni/*
+          7z a -r cheats_ws.zip ./cheats_ws/*
+
+      - name: Upload archives
+        uses: actions/upload-artifact@v3
+        with:
+          name: cheats
+          path: ./cheats_*.zip
+          if-no-files-found: error
+
+  release:
+    needs: [pack]
+    name: Publish release
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+
+      - name: Create a new release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: latest
+          prerelease: false
+          title: Latest Build
+          files: ./cheats/cheats_*.zip
