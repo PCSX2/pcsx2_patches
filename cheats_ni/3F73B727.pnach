@@ -1,0 +1,5 @@
+gametitle=Zombie Zone - Other Side (PAL-E) (SLES-54461)
+comment=Disable interlacing hack by ElHecht
+
+// disable interlacing
+patch=1,EE,001cb178,word,24040000 // 8f84bbd0

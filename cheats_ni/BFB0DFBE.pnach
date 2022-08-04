@@ -1,0 +1,31 @@
+gametitle=Drag-on Dragoon (Japan) CRC-BFB0DFBE tested
+comment=Enhacement by Felixthecat1970
+
+patch=0,EE,00277664,extended,24050000 //memory
+patch=0,EE,00277668,extended,24060050 //memory
+patch=0,EE,00282A84,extended,24050000 //memory
+patch=0,EE,00282A88,extended,24060050 //memory
+
+patch=0,EE,200FFFB8,extended,3C1B000F //memory
+patch=0,EE,200FFFBC,extended,377BFFD0 //memory
+patch=0,EE,200FFFC0,extended,DC820000 //memory
+patch=0,EE,200FFFC4,extended,3C031200 //memory
+patch=0,EE,200FFFC8,extended,08049154 //memory
+
+patch=0,EE,000FFFD0,extended,00000002 //memory
+patch=0,EE,100FFFD8,extended,00001450 //memory
+patch=0,EE,200FFFE0,extended,00823134 //memory
+patch=0,EE,200FFFE4,extended,001DF4FF //memory
+
+patch=0,EE,2012454C,extended,0803FFEE //memory
+patch=0,EE,20124558,extended,DF620000 //memory
+patch=0,EE,20124560,extended,DF620008 //memory
+patch=0,EE,20124568,extended,DF620010 //memory
+
+patch=0,EE,202F94CC,extended,3C013F40 //memory
+patch=0,EE,202F94D8,extended,4481F000 //memory
+patch=0,EE,202F94DC,extended,461EC602 //memory
+
+patch=0,EE,202612D4,extended,3C0143D6 //memory
+
+patch=0,EE,20129C50,extended,3C014456 //memory

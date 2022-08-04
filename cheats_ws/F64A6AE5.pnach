@@ -1,0 +1,28 @@
+gametitle=Shin Megami Tensei: Persona 3 FES [PAL] (SLES-55354)
+comment=16:9 Widescreen, 60fps, & Progressive Scan
+//Persona art fix added by El_Patas
+
+//Gameplay 16:9
+patch=1,EE,007cd01c,word,3fe38e38
+
+//Partial HUD fix
+patch=1,EE,00106ea0,word,3c043f40
+patch=1,EE,00106ea8,word,00701821
+patch=1,EE,00106eac,word,24634f2c
+patch=1,EE,00106eb4,word,00000000
+patch=1,EE,00106eb8,word,24630004
+patch=1,EE,00106ebc,word,3c043f80
+
+//Persona art fix
+patch=1,EE,00115fa8,word,3c033ec0 //3c033f00
+patch=1,EE,00115fb8,word,3c023f90 //3c023f80
+
+//FMV fix by Arapapa
+patch=1,EE,0010b0bc,word,3c024415 //3c0243e0 #1
+patch=1,EE,0010b0c0,word,34425555 //44821000
+patch=1,EE,0010b0c4,word,44821000 //00000000
+
+patch=1,EE,0010b108,word,3c0243f5 //3c0243b8 #2
+patch=1,EE,0010b10c,word,34425553 //44821000
+patch=1,EE,0010b110,word,44821000 //00000000
+

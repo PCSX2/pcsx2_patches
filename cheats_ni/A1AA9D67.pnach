@@ -1,0 +1,2 @@
+//no interlacing
+patch=1,EE,0010577C,word,30840000 

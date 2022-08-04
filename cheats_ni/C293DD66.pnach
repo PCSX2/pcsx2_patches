@@ -1,0 +1,3 @@
+//No interlacing
+patch=1,EE,201E1AB0,word,30420000
+patch=1,EE,00101f5c,word,00000000 //64420008

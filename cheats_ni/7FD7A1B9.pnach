@@ -1,0 +1,6 @@
+gametitle=Jade Cocoon 2 (PAL-E) (SLES-50735)
+comment=Disable interlacing hack by ElHecht
+
+// disable interlacing
+patch=1,EE,0015a1e4,word,00000000 // 8c27698C boot and menu
+patch=1,EE,001a5d1c,word,30420000 // 30420001 ingame

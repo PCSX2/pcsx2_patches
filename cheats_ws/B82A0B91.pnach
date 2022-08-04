@@ -1,0 +1,5 @@
+gametitle=Mission Impossible - Operation Surma (U)(SLUS-20400)
+comment=Widescreen patch by Arapapa
+
+// 16:9 (0000803f 00000000 00000000 00000000 00000080)
+patch=1,EE,20657E60,word,3F400000 // 3F800000

@@ -1,0 +1,4 @@
+gametitle=Drakengard (SLES-52322) (PAL)
+patch=1,EE,204F67E8,extended,00000050
+patch=1,EE,204F67F4,extended,000001E0
+patch=1,EE,204F6804,extended,00000000

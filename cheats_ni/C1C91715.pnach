@@ -1,0 +1,18 @@
+gametitle=Rumble Roses SLPM_658.85;1) Game CRC = 0xC1C91715
+comment=Enhancement test
+
+//Framebuffer Display and no interleacing
+patch=1,EE,E0041100,extended,01D4ADA0
+patch=1,EE,21D4AD98,extended,00000002
+patch=1,EE,21D4ADC0,extended,00000002
+patch=1,EE,21D4ADA0,extended,00001000
+patch=1,EE,21D4ADC8,extended,00001000
+
+patch=1,EE,E0041400,extended,01D4ADA0
+patch=1,EE,21D4ADA0,extended,00001400
+patch=1,EE,21D4ADC8,extended,00001446
+patch=1,EE,21D4AD98,extended,00000003
+patch=1,EE,21D4ADC0,extended,00000003
+
+patch=1,EE,201029FC,extended,64420000
+patch=1,EE,20102C64,extended,64420000

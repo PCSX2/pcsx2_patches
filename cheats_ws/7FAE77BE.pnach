@@ -1,0 +1,10 @@
+gametitle=Shin Megami Tensei: Devil Summoner 2: Raidou Kuzunoha vs. King Abaddon (NTSC-U)
+comment=Widescreen pnach (Only works for 3D, not for prerendered backgrounds)
+
+patch=1,EE,004278e4,word,3FC6D3A0 //3F951EB8 hor fov
+patch=1,EE,00427c94,word,3FC6D3A0 //3F951EB8 unknown
+
+//black borders's fix (optional)
+patch=1,EE,00116928,word,24040000
+patch=1,EE,00106be0,word,a380a213
+patch=1,EE,001069c4,word,2404FF00

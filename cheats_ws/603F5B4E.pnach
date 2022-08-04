@@ -1,0 +1,5 @@
+gametitle=Aim for the Top - Gunbuster (NTSC-J) (SLPS-25447)
+comment=Widescreen hack by Arapapa
+
+// 16:9 (0000803F 6666E63E 6666E63F)
+patch=1,EE,202CFAA0,word,3F400000 // 3F800000

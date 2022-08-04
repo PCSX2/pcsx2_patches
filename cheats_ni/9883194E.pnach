@@ -1,0 +1,4 @@
+gametitle=Zero
+comment=Progressive Scan Hack
+
+patch=1,EE,2022E3CC,extended,00000000

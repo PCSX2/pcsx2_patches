@@ -1,0 +1,4 @@
+gametitle=Dynasty Warriors 3: Xtreme Legends (NTSC-U) (SLUS-20617)
+comment=no interlace by someother1ne
+patch=1,EE,0019a05c,extended,64420000
+patch=1,EE,0019a2c4,extended,64420000

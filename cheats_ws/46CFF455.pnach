@@ -1,0 +1,7 @@
+gametitle=Kessen II (K)(SLPM-67531)
+comment=Widescreen hack (NTSC-K by Arapapa)
+
+//Widescreen hack 16:9
+
+//X-Fov
+patch=1,EE,0014cef4,word,3c023f40 //3c023f80

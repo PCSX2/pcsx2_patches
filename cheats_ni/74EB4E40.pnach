@@ -1,0 +1,5 @@
+gametitle=WWE SmackDown! vs. Raw 2006 SLUS-21286
+comment=comment=no interlace by someother1ne
+patch=1,EE,2011A6E8,word,30630000
+patch=1,EE,2011d2d4,word,64420000
+patch=1,EE,2011d53c,word,64420000

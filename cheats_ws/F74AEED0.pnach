@@ -1,0 +1,18 @@
+gametitle=Cabela's Dangerous Adventures (E)(SLES-55331)
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+//Zoom
+//003f023c 08a222c4 dc00a1c6 (2nd)
+patch=1,EE,0025018c,word,3c023f20 //3c023f00
+
+//Y-Fov
+//03080046 ec00a0e6 f800a0c6
+patch=1,EE,002501c0,word,08030000 //46001002
+
+patch=1,EE,000c0000,word,46000803
+patch=1,EE,000c0004,word,3c013f40
+patch=1,EE,000c0008,word,4481f000
+patch=1,EE,000c000c,word,461e0002
+patch=1,EE,000c0010,word,08094071

@@ -1,0 +1,22 @@
+gametitle=Shadow Hearts II - Director's Cut (PlayStation2 the Best) [NTSC-J] (SLPS-73214])
+comment=Widescreen Hack
+
+//black borders fix (optional)
+(c843033c 803f023c to c843033c 0000023c)
+patch=1,EE,004047e4,word,3c020000 //3c023f80
+
+// 16:9
+patch=1,EE,00202c94,word,3c013f40 //00000000
+patch=1,EE,00202c98,word,44810000 //00000000
+patch=1,EE,00202ca0,word,4600c602 //00000000
+
+// Render-Fix
+patch=1,EE,002253bc,word,3c033fc0 //3c034000 Fixed address
+//patch=1,EE,0022531c,word,3c033fc0 // The original address was incorrect
+
+// 16:10
+//patch=1,EE,00202c94,word,3c013f55 //00000000
+//patch=1,EE,00202c98,word,34215555 //00000000
+//patch=1,EE,00202ca0,word,44810000 //00000000
+//patch=1,EE,00202ca4,word,4600c602 //00000000
+//patch=1,EE,002253bc,word,3c033fd5 //3c034000 Render-Fix

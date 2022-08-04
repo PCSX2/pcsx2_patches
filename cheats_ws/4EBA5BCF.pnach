@@ -1,0 +1,13 @@
+gametitle=Kidou Senshi Gundam - SEED (K)(SLKA-15018)
+comment=Widescreen hack by Arapapa
+
+//Widescreen hack 16:9
+
+
+//Y-Fov
+//e0430f3c 00404d34 803f0e3c
+patch=1,EE,001610c8,word,3c0f43ab //3c0f43e0
+
+//Zoom
+//0044023c b0ffbd27
+patch=1,EE,00128ef0,word,3c0243C0 //3c024400

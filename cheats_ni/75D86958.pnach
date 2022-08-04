@@ -1,0 +1,5 @@
+gametitle=Champions of Norrath (PAL-M3) (SLES-52325)
+comment=Disable interlacing hack by ElHecht
+
+// disable interlacing
+patch=1,EE,00192fa4,word,a0c00000 // a0c30000

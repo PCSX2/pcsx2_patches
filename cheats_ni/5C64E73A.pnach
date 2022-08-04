@@ -1,0 +1,5 @@
+gametitle=Champions - Return to Arms (PAl-M4) (SLES-53039)
+comment=Disable interlacing hack by ElHecht
+
+// disable interlacing
+patch=1,EE,0019e2e8,word,aca00008 // aca60008

@@ -1,0 +1,8 @@
+gametitle=Reel Fishing III (E)(SLES-51308)
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+patch=1,EE,0012c0ec,word,3c063f40 //3c063f80 X-Fov
+patch=1,EE,0012c100,word,3c0343e0 //3c0343a0 Render Fix
+

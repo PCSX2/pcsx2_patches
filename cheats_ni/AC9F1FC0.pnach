@@ -1,0 +1,9 @@
+patch=1,EE,20100360,extended,AF8095A4
+patch=1,EE,2023E3DC,extended,00000000
+patch=1,EE,2023E464,extended,00000000
+patch=1,EE,E002FFFC,extended,00304C42
+patch=1,EE,202C8EB8,extended,00000001
+patch=1,EE,202C8EC0,extended,000010A8
+patch=1,EE,E002FFFA,extended,00304C42
+patch=1,EE,202C8EB8,extended,00000003
+patch=1,EE,202C8EC0,extended,00001000

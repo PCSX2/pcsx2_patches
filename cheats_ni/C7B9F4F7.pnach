@@ -1,0 +1,2 @@
+patch=1,EE,001cfb44,word,00000000 //64420008
+patch=1,EE,001C6EDC,word,00000000

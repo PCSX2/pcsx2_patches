@@ -1,0 +1,11 @@
+gametitle=Metal slug 3 SLPS_252.09;1) Game CRC = 0x5ACBE847
+comment=enhacement test
+
+//progressive code (old)
+//patch=1,EE,2010031C,extended,00052840
+//patch=1,EE,20100324,extended,3c060050
+
+//Progressive mode
+patch=0,EE,2010031C,extended,3C050000
+patch=0,EE,20100324,extended,3C060050
+patch=0,EE,2010032C,extended,3C070001

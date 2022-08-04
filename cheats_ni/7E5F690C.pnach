@@ -1,0 +1,4 @@
+patch=1,EE,E0011400,extended,002C1050
+patch=1,EE,2023C9AC,extended,30420001
+patch=1,EE,E0019000,extended,002C1050
+patch=1,EE,2023C9AC,extended,30420000

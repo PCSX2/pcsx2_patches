@@ -1,0 +1,18 @@
+gametitle=Akira Psycho ball SLPS_201.50;1) Game CRC = 0xEE4AA14C
+comment=enhacement test
+
+//progressive code
+patch=0,EE,2013C404,extended,3c050000
+patch=0,EE,2013C40C,extended,3C060050
+patch=0,EE,2013C414,extended,3c070001
+patch=1,EE,204C56D8,extended,0183227C
+patch=1,EE,204C56DC,extended,000DF9FF
+patch=1,EE,204C5700,extended,0183227C
+patch=1,EE,204C5704,extended,000DF9FF
+
+
+//Null Int ints
+patch=0,EE,2013D738,extended,03E00008
+patch=0,EE,2013D73C,extended,00000000
+patch=0,EE,2013D930,extended,03E00008
+patch=0,EE,2013D934,extended,00000000

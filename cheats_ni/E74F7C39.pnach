@@ -1,0 +1,5 @@
+gametitle=King of Fighters '94, The - Re-Bout (Japan) (Special Genteiban)
+comment=autoboot question progressive mode by felixthecat1970
+
+//autoboot question 480p (press O in はい=Yes - いいえ=no)
+patch=1,EE,0053C340,byte,01

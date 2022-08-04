@@ -1,0 +1,5 @@
+gametitle=Zombie Zone (PAL-E) (SLES-53398)
+comment=Disable interlacing hack by ElHecht
+
+// disable interlacing
+patch=1,EE,001c83b0,word,24040000 // 8f84aed8

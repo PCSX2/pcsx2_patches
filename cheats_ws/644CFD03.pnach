@@ -1,0 +1,13 @@
+gametitle=Jak 3 (U)(SCUS-97330)
+comment=Widescreen Hack by ElHecht (NTSC-U by Arapapa)
+
+// 16:9
+//003f033c 00008344 00088744
+patch=1,EE,2030aec8,extended,3c033f1f // 3c033f00 zoom
+
+//71601400 014c1400 054c1400 (Pal 71611400)
+patch=1,EE,207D5F68,extended,0014877D // 00146071 force native 16:9 mode
+
+//menu fix
+//patch=1,EE,20C15770,extended,43A90000 // 436E33F5
+//patch=1,EE,20C179B0,extended,43420000 // 43082F0F

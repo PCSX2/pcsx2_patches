@@ -1,0 +1,6 @@
+gametitle=Dynasty Warriors 4: Xtreme Legends (NTSC-U) (SLUS-20812)
+comment=no interlacing by someother1ne
+patch=1,EE,2010211c,word,64420000
+patch=1,EE,2010248c,word,64420000
+patch=1,EE,2012EE28,word,30420000
+

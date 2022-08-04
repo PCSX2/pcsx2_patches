@@ -1,0 +1,7 @@
+//no interlacing
+patch=1,EE,0039D694,extended,30420000
+
+//progressive scan
+patch=1,EE,003a6184,word,3c050000 00052c00
+patch=1,EE,003a618c,word,3c060050 00063400
+patch=1,EE,003a6194,word,3c070001 00073c00

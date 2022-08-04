@@ -1,0 +1,11 @@
+gametitle=Silent Hill Origins (USA) (En,Fr,De,Es,It) SLUS_217.31;1) Game CRC = 0xA8D83239
+comment=Enhacement by felixthecat1970
+
+//Progressive
+patch=0,EE,2029445C,extended,3C050000
+patch=0,EE,20294464,extended,3C060050
+patch=0,EE,2029446C,extended,3C070001
+
+
+
+

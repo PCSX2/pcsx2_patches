@@ -1,0 +1,6 @@
+//Taito Legends 2 USA
+comment=no interlace by someother1ne
+patch=1,EE,00100970,word,30C40000
+patch=1,EE,00103084,word,64420000
+
+

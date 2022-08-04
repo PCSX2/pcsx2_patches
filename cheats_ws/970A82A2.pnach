@@ -1,0 +1,26 @@
+gametitle=Shin Megami Tensei: Persona 3 FES (SLUS-21621) (UNDUB)
+
+//Widescreen 16:9 
+
+//X-Fov by CeruleansBlue
+patch=1,EE,007cad1c,word,3fe38e38
+
+//partial HUD fix
+patch=1,EE,00106e30,word,3c043f40
+patch=1,EE,00106e38,word,00701821
+patch=1,EE,00106e3c,word,24632bac
+patch=1,EE,00106e44,word,00000000
+patch=1,EE,00106e48,word,24630004
+patch=1,EE,00106e4c,word,3c043f80
+
+//persona art fix
+patch=1,EE,00114a1c,word,3c033ec0
+patch=1,EE,00114a2c,word,3c023f90
+
+//FMV's fix by nemesis2000
+patch=1,EE,0010afd0,word,1462000a
+patch=1,EE,0010afd8,word,3c02c294
+patch=1,EE,0010afdc,word,10000008
+patch=1,EE,0010afec,word,00000000
+patch=1,EE,0010affc,word,3c02c1a8
+patch=1,EE,0010b010,word,00000000

@@ -1,0 +1,5 @@
+gametitle=Dragon Sisters (PAL-E) (SLES-54460)
+comment=Disable interlacing hack by ElHecht
+
+// disable interlacing
+patch=1,EE,002405D0,word,00000000 // 8f84b3d4

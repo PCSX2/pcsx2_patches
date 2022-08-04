@@ -1,0 +1,3 @@
+gametitle=Mission Impossible - Operation Surma SLES_520.01
+comment=Widescreen hack
+patch=1,EE,206580e0,extended,3f400000

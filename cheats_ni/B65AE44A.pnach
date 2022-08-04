@@ -1,0 +1,6 @@
+gametitle=Virtua Fighter 4 (PAL-M5) (SCES-50759)
+comment=Disable interlacing hack by ElHecht
+
+// disable interlacing
+patch=1,EE,00269e68,word,a0800004 // a0820004
+patch=1,EE,0026f27c,word,a080d0d4 // a082d0d4

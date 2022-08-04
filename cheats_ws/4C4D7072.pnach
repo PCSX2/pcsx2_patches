@@ -1,0 +1,15 @@
+
+; ==========
+ ; pgert@150820
+ ; http://forums.pcsx2.net/Thread-PCSX2-Widescreen-Game-Patches?pid=240786#pid240786
+; ==========
+
+; ==========
+ gametitle=Splinter Cell 3 - Chaos Theory
+ comment= Splinter Cell 3 - Chaos Theory * SLES-53007 * PAL-M5 * 4C4D7072
+; ==========
+
+; ==========
+ comment=- 16:9 Widescreen hack for Solo/Coop mode by ElHecht.
+ patch=1,EE,001F2908,word,3C023F40 // 3C023F80 - X-axis
+; ==========

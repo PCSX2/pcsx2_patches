@@ -1,0 +1,5 @@
+gametitle=Everybody's Golf (EU)(SCES-52582)
+//no interlacing by UnixRoot
+patch=1,EE,0012a984,word,00000000
+patch=1,EE,0012a71c,word,00000000
+

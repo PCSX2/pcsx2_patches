@@ -1,0 +1,4 @@
+gametitle=Twisted Metal: Head-On (NTSC-U) (SCUS-97621)
+comment=no interlacing hack someother1ne
+patch=1,EE,00264034,word,30420000
+

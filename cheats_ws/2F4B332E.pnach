@@ -1,0 +1,12 @@
+gametitle=World Soccer Winning Eleven 5 (SLPM-62053)
+comment=Widescreen patch by BloodRaynare
+
+patch=1,EE,00144688,word,083eb44c
+patch=1,EE,0014468c,word,00000000
+patch=1,EE,00fad130,word,3c013f40
+patch=1,EE,00fad134,word,4481f000
+patch=1,EE,00fad138,word,c6010068
+patch=1,EE,00fad13c,word,c602006c
+patch=1,EE,00fad140,word,461e0843
+patch=1,EE,00fad144,word,e6010068
+patch=1,EE,00fad148,word,080511a6

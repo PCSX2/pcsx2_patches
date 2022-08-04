@@ -1,0 +1,12 @@
+gametitle=Smuggler's Run (NTSC-U) [SLUS-20065] [0E7F91DA]
+comment=Widescreen hacks by Devina (active X FOV discovery), sergx12 (render fixes) and Aced14 (ELF hacks/repositioning/revisions)
+
+//16:9 widescreen
+patch=1,EE,2023CA3C,extended,0809A2DB //3C04002C - j $00268b6c - Jump to injected MIPS instructions
+patch=1,EE,20268B6C,extended,3C013FAA //0080282D - lui at, $3faa - Set $f31 register to 1.333333373 #1
+patch=1,EE,20268B70,extended,3421AAAB //26107B6E - ori at, at, $aaab - Set $f31 register to 1.333333373 #2
+patch=1,EE,20268B74,extended,4481F800 //0C099E52 - mtc1 at, $f31 - Set $f31 register to 1.333333373 #3
+patch=1,EE,20268B78,extended,461F1082 //0200202D - mul.s $f2, $f2, $f31 - Multiply $f2 by $f31 and store result in $f2
+patch=1,EE,20268B7C,extended,0808F291 //3C03002C - j $0023ca44 - Jump to 2 lines after the overwritten MIPS instruction
+patch=1,EE,20268B80,extended,3C04002C //2604FFFA - lui a0, $002c - Restore overwritten MIPS instruction
+

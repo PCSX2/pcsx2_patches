@@ -1,0 +1,12 @@
+gametitle=Fish Eyes 3 - Ki Oku no Hahen-tachi (J)(SLPS-20291)
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+//X-Fov
+//803f063c b80286ac
+patch=1,EE,0012bf1c,word,3c063f40 //3c063f80
+
+//Render fix
+//a043033c c00283ac
+patch=1,EE,0012bf30,word,3c0343e0 //3c0343a0

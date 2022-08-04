@@ -1,0 +1,4 @@
+//Kagero 2: Dark Illusion (JP) SLPS-25445
+//no interlacing
+patch=1,EE,00120e64,word,64420000
+

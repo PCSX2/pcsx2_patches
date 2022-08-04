@@ -1,0 +1,6 @@
+gametitle=Dynasty Warriors 5: Xtreme Legends (NTSC-U) (SLUS-21299)
+comment=no interlacing by someother1ne
+patch=1,EE,20112964,word,64420000
+patch=1,EE,201427D0,word,30420000
+
+

@@ -1,0 +1,12 @@
+gametitle=Armored Core - Last Raven (NTSC-U)
+comment=De-interlace and blur removal by PsxFan107
+
+//De-Interlace
+patch=1,EE, 00112424,word,00000000
+patch=1,EE, 00177D5C,word,0000102D
+
+//Disable Anti-Aliasing
+patch=1,EE, 001786E8,word,24020001
+
+//Remove Blur
+patch=1,EE, 0018C09C,word,00000000

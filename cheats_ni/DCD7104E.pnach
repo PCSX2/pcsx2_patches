@@ -1,0 +1,6 @@
+gametitle=Michigan Report from hell SLES_530.73;1) Game CRC = DCD7104E
+comment=Enhancement test
+
+//No interleacing
+patch=1,EE,20103604,extended,64420000
+patch=1,EE,201038CC,extended,64420000

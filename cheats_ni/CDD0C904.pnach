@@ -1,0 +1,5 @@
+gametitle=Ghost Vibration SLES_514.33;1) Game CRC = 0xCDD0C904
+comment=No interlacing
+
+//No interlacing
+patch=1,EE,201020CC,extended,64420000
