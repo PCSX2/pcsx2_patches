@@ -1,14 +1,16 @@
 gametitle=Baroque (PAL-E) (SLES-55216)
 comment=Widescreen hack by ElHecht
 
+//Apepars to totally break rendering in both hardware and software currently.
+
 // 16:9
-patch=1,EE,0039f504,word,3c033f40 // 3c033f80 hor fov
-patch=1,EE,0039f50c,word,4483f000 // 44832800
-patch=1,EE,0039f510,word,461ef143 // 00000000
-patch=1,EE,0039f514,word,4602f083 // 46022883
-patch=1,EE,0044cf30,word,3f5eb852 // 3f947ae1 subtitle hor fov
-patch=1,EE,00166ff0,word,3c054028 // 3c054060 hud hp/vt
-patch=1,EE,00167030,word,3c053ff0 // 3c054020 hud hp/vt
+//patch=1,EE,0039f504,word,3c033f40 // 3c033f80 hor fov
+//patch=1,EE,0039f50c,word,4483f000 // 44832800
+//patch=1,EE,0039f510,word,461ef143 // 00000000
+//patch=1,EE,0039f514,word,4602f083 // 46022883
+//patch=1,EE,0044cf30,word,3f5eb852 // 3f947ae1 subtitle hor fov
+//patch=1,EE,00166ff0,word,3c054028 // 3c054060 hud hp/vt
+//patch=1,EE,00167030,word,3c053ff0 // 3c054020 hud hp/vt
 
 // 16:10
 //patch=1,EE,0039f504,word,3c033f55 // 3c033f80 hor fov
