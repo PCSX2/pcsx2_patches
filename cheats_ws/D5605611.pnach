@@ -9,9 +9,10 @@ patch=1,EE,003754ec,word,460318c3
 patch=1,EE,003754f0,word,46031840
 patch=1,EE,00375564,word,e603007c
 
+//With and without the patch is wrong, but being stretched makes more sense with the game mechanics.
 //HUD fix
-patch=1,EE,0037539c,word,00000000
-patch=1,EE,003753a4,word,3C033f40
+//patch=1,EE,0037539c,word,00000000
+//patch=1,EE,003753a4,word,3C033f40
 
 //FMV's fix
 patch=1,EE,003F752c,word,24101400
