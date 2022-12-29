@@ -1,0 +1,8 @@
+gametitle=Shutokou Battle 0 (J)(SLPS-25028)
+comment=No Interlacing by Tokman5
+//While FMV is playing, interlacing will be temporary enabled due to streaming problem
+patch=1,EE,D06452A4,extended,02100001
+patch=1,EE,20262DC8,extended,00000000
+patch=1,EE,0064528C,extended,00000001
+patch=1,EE,D06452A4,extended,01000001
+patch=1,EE,20262DC8,extended,AC22528C
