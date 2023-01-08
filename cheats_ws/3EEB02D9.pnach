@@ -1,0 +1,15 @@
+gametitle=Zhuo Hou La 3 [NTSC-C] (SCAJ-20144)
+comment=Widescreen Hack (NTSC-C by DeQxJ00)
+
+//Widescreen hack 16:9
+
+//screen ratio 
+//3F400000 0.75	      3/4 [Orginal]
+//3F100000 0.5625   9/16   
+//3EDB6DB7             9/21
+patch=1,EE,20734BB0,extended,3F100000
+//fov
+//0.3349616527557373 3EAB8018 [Orginal]
+//1.62  3FCF5C29  [for 16:9]
+//3.25  40066666   [for 21:9]
+patch=1,EE,206C4BF4,extended,3FCF5C29
