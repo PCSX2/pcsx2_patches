@@ -1,6 +1,0 @@
-gametitle=Shadow Tower Abyss (English patch)
-comment=No-Interlacing
-
-//No-Interlacing
-patch=1,EE,0010180c,word,00000000 //64420008
-patch=1,EE,001E8FB0,word,00000000
