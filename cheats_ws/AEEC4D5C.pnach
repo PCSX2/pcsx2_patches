@@ -1,0 +1,6 @@
+gametitle=Giants - Citizen Kabuto (NTSC-U)
+comment=Widescreen 
+
+//Widescreen
+patch=1,EE,003bad40,word,3fe38e39 //3faaaaab
+patch=1,EE,003baef8,word,3fe38e39 //3faaaaab
