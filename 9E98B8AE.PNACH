@@ -1,0 +1,5 @@
+gametitle=Ikki Tousen - Shining Dragon NTSC-J (SLPS-25798)
+comment=No-interlacing
+
+//No-Interlacing
+patch=1,EE,00371834,word,30620000
