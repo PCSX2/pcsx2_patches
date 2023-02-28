@@ -1,0 +1,5 @@
+gametitle=The Adventures of Cookie & Cream (NTSC) SLUS_201.70
+comment=No-Interlacing
+
+//No-Interlacing for Gameplay and menus
+patch=1,EE,001DCD94,word,30420000
