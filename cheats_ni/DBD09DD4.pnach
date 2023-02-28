@@ -1,0 +1,8 @@
+gametitle=Mark of Kri SCUS_971.40
+comment=No-Interlacing
+
+//No Interlacing
+patch=1,EE,002E1244,word,31310000
+patch=1,EE,002E35CC,word,30B20000
+patch=1,EE,003670e4,word,00000000 //64420008
+patch=1,EE,0036734c,word,00000000 //64420008
