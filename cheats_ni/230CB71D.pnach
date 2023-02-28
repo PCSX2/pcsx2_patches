@@ -1,0 +1,5 @@
+gametitle=Legacy of Kain - Soul Reaver 2 (USA) (v2.00) Game CRC=0x230CB71D
+comment=Origial patch by Red_Tv, offsets updated for v2.00
+patch=1,EE,201a9510,word,30420000
+patch=1,EE,00201574,word,00000000
+patch=1,EE,03223edc,word,00000000
