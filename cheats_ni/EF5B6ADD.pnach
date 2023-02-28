@@ -1,0 +1,2 @@
+//Remove Blur
+patch=1,EE,005A6A30,word,00000000
