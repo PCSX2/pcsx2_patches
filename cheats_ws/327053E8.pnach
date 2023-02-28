@@ -43,6 +43,7 @@ patch=1,EE,003c5264,word,e7a100c4
 
 //480p
 patch=1,EE,0045aaa4,word,3c050000
-patch=1,EE,0045aaac,word,3c060050
+// The patch below causes the emulator to crash so comment it out.
+//patch=1,EE,0045aaac,word,3c060050
 patch=1,EE,0045aab4,word,3c070001
 patch=1,EE,0045ad74,word,3c090010
