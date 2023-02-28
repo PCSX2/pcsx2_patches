@@ -1,0 +1,8 @@
+gametitle=Forever Kingdom SLUS_203.43
+comment=No-interlacing
+
+//No-interlacing
+//Subtitles during FMV will flicker, use automatic deinterlacing or disable subtitles (Only 1 FMV in the game)
+patch=1,EE,00104DA8,word,00000000
+patch=1,EE,00202E94,word,00000000
+
