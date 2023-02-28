@@ -2,3 +2,6 @@ gametitle=Virtua Quest SLUS_209.77
 comment=Widescreen Hack
 patch=1,EE,000ccf3c,word,3c033f40
 patch=1,EE,000ccf54,word,3c024420
+
+//Widescreen for Hud
+patch=1,EE,0040a070,word,3f200000 //3f800000

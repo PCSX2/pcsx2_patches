@@ -12,3 +12,11 @@ patch=1,EE,00202ca0,word,4600c602
 
 // Render-Fix
 patch=1,EE,0022531c,word,3c033fc0
+
+
+//16:9 Text box
+//Remove "//" before patch to activate
+//Side Effect -  subtitles during cutscenes will be on the left side of the screen
+//patch=1,EE,0026d2e4,word,3c033f19 //3c033f4c
+//patch=1,EE,0027cf78,word,3c023f19 //3c023f4c
+//patch=1,EE,0026eabc,word,3c023eB0 //3c023f00

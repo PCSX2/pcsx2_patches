@@ -1,0 +1,9 @@
+gametitle=Rise of the Kasai SCUS_974.16
+comment=No Interlacing
+
+//No Interlacing
+patch=1,EE,002DC96C,word,30630000
+patch=1,EE,002DF580,word,30520000
+patch=1,EE,00345AC0,word,30420000
+patch=1,EE,0035237c,word,00000000 //64420008
+patch=1,EE,00352404,word,00000000 //64420008
