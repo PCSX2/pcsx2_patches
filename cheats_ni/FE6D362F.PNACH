@@ -1,0 +1,11 @@
+gametitle=Poinie's Poin (NTSC-J)
+comment=no interlacing by Puggsy
+
+//No-Interlacing in Gameplay and menus
+patch=1,EE,001B2D98,word,30420000
+
+
+//No Interlacing in FMV
+//In order to use it Set Deinterlacing to Blend tff (otherwise you will get flashing Black Screen) and remove the "//" before the patch, (FMV are darker)
+//patch=1,EE,001ABE94,word,00000000
+
