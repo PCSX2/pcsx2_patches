@@ -9,3 +9,6 @@ patch=1,EE,0030b8f4,word,342149f1
 //Font fix
 patch=1,EE,002af4f8,word,3c013f2c //3c013f66
 patch=1,EE,002af4fc,word,3421cccd //34216666
+
+//Widescreen For Gauge
+patch=1,EE,0014300c,word,3c013F40 //3c013f80

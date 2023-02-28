@@ -1,0 +1,6 @@
+gametitle=Forever Kingdom SLUS_203.43
+
+//No-Interlacing
+//Side Effect - subtitles during the first fmv are flickering, set deinterlacing to automatic or disable subtitles.
+patch=1,EE,00104DA8,word,00000000
+patch=1,EE,00202E94,word,00000000

@@ -1,0 +1,9 @@
+gametitle=Appleseed EX (J)(SLPM-66551)
+
+//No-Interlacing
+patch=1,EE,00287B30,word,38420000
+patch=1,EE,00287B34,word,30420000
+patch=1,EE,001286E0,word,38420000
+patch=1,EE,001286E4,word,30420000
+patch=1,EE,00129038,word,38420000
+patch=1,EE,0012903c,word,30420000
