@@ -1,0 +1,5 @@
+gametitle=Sega Ages 2500 Series Vol. 18 - Dragon Force (NTSC-J)
+comment=No interlacing by Puggsy
+
+//No-Interlacing
+patch=1,EE,20101910,extended,30420000
