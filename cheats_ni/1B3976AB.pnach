@@ -1,2 +1,10 @@
+gametitle=Jak and Daxter - The Precursor Legacy (NTSC-U)
+comment=No Interlacing & No Blur
+
+// No Interlacing
 patch=1,EE,202B2014,word,24060000
 patch=1,EE,208781B4,word,AEE0ED00
+
+// No Blur
+patch=1,EE,007027A8,extended,000000E0
+patch=1,EE,2010FF6C,extended,30420000
