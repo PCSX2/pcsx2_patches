@@ -12,8 +12,8 @@ patch=1,EE,0012fb64,word,3c033f19
 patch=1,EE,0012fb6c,word,334639999
 
 //val3
-patch=1,EE,0012f960,word,3c023f19
-patch=1,EE,0012f968,word,34439999
+patch=1,EE,0012f9d8,word,3c023f19
+patch=1,EE,0012f9dc,word,34439999
 
 //rfix1
 patch=1,EE,0012fbe4,word,3c02c3d6
