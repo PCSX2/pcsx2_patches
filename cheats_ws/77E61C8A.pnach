@@ -1,0 +1,16 @@
+gametitle=Gran Turismo 4 [SCUS-97328] (U)
+comment=Widescreen Text
+author=Aero_
+// Corrects Text Aspect Ratio for Widescreen 
+patch=1,EE,20492A30,extended,08125570 // j 004955C0
+patch=1,EE,204955C0,extended,3C090061 // lui t1,0x0061 : Widescreen Mode 1st-Half of Memory Address
+patch=1,EE,204955C4,extended,352984F0 // ori t1,0x84F0 : Widescreen Mode 2nd-Half of Memory Address
+patch=1,EE,204955C8,extended,812A0000 // lb t2,(t1)
+patch=1,EE,204955CC,extended,C65A0024 // lwc1 f26,0x24(s2)
+patch=1,EE,204955D0,extended,11400004 // beqz t2,0x004955E4 : Jumps if Widescreen Mode is Disabled
+patch=1,EE,204955D4,extended,3C013F40 // lui at,0x3F40 : Text Width 1st-Half of Float Value
+patch=1,EE,204955D8,extended,34210000 // ori at,0x0000 : Text Width 2nd-Half of Float Value
+patch=1,EE,204955DC,extended,4481A000 // mtc1 at,f20
+patch=1,EE,204955E0,extended,4614D682 // mul.s f26, f26, f20
+patch=1,EE,204955E4,extended,08124A8D // j 00492A34
+patch=1,EE,2044DBD8,extended,00000000 // nop
