@@ -2,5 +2,5 @@ gametitle=Gran Turismo 4 Online Public Beta [SCUS-97436] (U)
 comment=Widescreen Text
 author=Aero_
 // Corrects Text Aspect Ratio for Widescreen 
-patch=1,EE,2033D7DC,extended,08125570 // lui at, 0x3F40
+patch=1,EE,2033D7DC,extended,3C013F40 // lui at, 0x3F40
 patch=1,EE,2033D7E0,extended,34210000 // ori at, 0x0000
