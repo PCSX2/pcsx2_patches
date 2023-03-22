@@ -1,6 +1,8 @@
-gametitle=Need for Speed - ProStreet (NTSC-U)
-comment=Widescreen Hack by ElHecht
-
-// 16:9
-patch=1,EE,2068CAD0,word,3f400000 // 3f800000
-patch=1,EE,20685938,word,3f2aaaab // 3f000000
+gametitle=Need for Speed ProStreet [SLUS-21658] (U)
+comment=Widescreen Mode (16:9)
+author=Xan1242 & Aero_
+// Enables Widescreen Mode
+patch=1,EE,20168A10,extended,24020001 // li v0, 1
+// Corrects Aspect Ratio
+patch=1,EE,206828D8,extended,3F400000 // Horizontal: 0.75f
+patch=1,EE,206828DC,extended,3F8CCCCD // Vertical: 1.10f
