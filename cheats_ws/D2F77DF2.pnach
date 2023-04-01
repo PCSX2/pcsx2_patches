@@ -1,8 +1,28 @@
-gametitle=Rayman 2 - Revolution (SLUS_20138)
-comment=Widescreen hack
+gametitle=Rayman 2: Revolution (NTSC-U & NTSC-K) (SLUS-20138 & SLPM-67519)
+comment=Widescreen Hacks by ElHecht & ICUP321
 
 // 16:9
 patch=1,EE,0018c7d0,word,3c013f40 // 00000000 hor fov
+
+// General Widescreen Fixes
 patch=1,EE,0018c7e0,word,4481f000 // 00000000
 patch=1,EE,0018c7e4,word,461e0842 // 00000000
 patch=1,EE,0011811c,word,461e6303 // 00000000 renderfix calculation
+
+// 15:9
+//patch=1,EE,0018c7d0,word,3c013f50 // 00000000 hor fov
+
+// 16:10
+//patch=1,EE,0018c7d0,word,3c013f55 // 00000000 hor fov
+//patch=1,EE,0018c7d4,word,34215555 // 00000000 hor fov
+
+// 21:9
+//patch=1,EE,0018c7d0,word,3c013f10 // 00000000 hor fov
+
+// 25:16
+//patch=1,EE,0018c7d0,word,3c013f5a // 00000000 hor fov
+//patch=1,EE,0018c7d4,word,3421740e // 00000000 hor fov
+
+// 32:9
+//patch=1,EE,0018c7d0,word,3c013ed5 // 00000000 hor fov
+//patch=1,EE,0018c7d4,word,3421c28f // 00000000 hor fov
