@@ -1,0 +1,10 @@
+gametitle=Jak x Daxter - Kyuusekai no Isan (NTSC-J)
+comment=No Interlacing & No Blur
+
+// No Interlacing
+patch=1,EE,202B2074,word,24060000
+patch=1,EE,20878904,word,AEE0ED00
+
+// No Blur
+patch=1,EE,00702898,extended,000000E0
+patch=1,EE,2010FF6C,extended,30420000
