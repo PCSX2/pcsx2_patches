@@ -1,6 +1,9 @@
-patch=1,EE,20347808,extended,00000001
-patch=1,EE,20347810,extended,00001038
-patch=1,EE,20347E88,extended,00000001
-patch=1,EE,20347E90,extended,000014A0
-patch=1,EE,20347EB0,extended,00000001
-patch=1,EE,20347EB8,extended,000014A0
+gametitle=Pac-Man World 2 (J)(SLPS-25141)
+comment=No Interlacing
+
+//480p
+patch=1,EE,00347808,extended,00000002
+patch=1,EE,00347810,extended,00001038
+
+//No interlaced FMVs
+patch=1,EE,002CF02C,extended,64420000
