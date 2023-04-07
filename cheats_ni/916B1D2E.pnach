@@ -1,0 +1,9 @@
+gametitle=Dead to Rights (J)(SLPS-25268)
+comment=No Interlacing
+
+//480p
+patch=1,EE,0026EBC8,extended,00000002
+patch=1,EE,0026EBD0,extended,00001038
+
+//No interlaced FMVs
+patch=1,EE,0021EC5C,extended,00000000
