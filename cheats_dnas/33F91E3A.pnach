@@ -6,27 +6,19 @@ patch=1,EE,90331D78,extended,0C0CC706
 //DNAS Bypass
 patch=1,EE,D115D7D4,extended,00000030
 patch=1,EE,2115D7E8,extended,24050005
-
 patch=1,EE,D115D7D4,extended,00000030
 patch=1,EE,2115D7EC,extended,AC850000
-
 patch=1,EE,D115D7D4,extended,00000030
 patch=1,EE,2115D7F0,extended,3C054000
-
 patch=1,EE,D115D7D4,extended,00000030
 patch=1,EE,2115D7F4,extended,24A50004
-
 patch=1,EE,D115D7D4,extended,00000030
 patch=1,EE,2115D7F8,extended,AC850004
-
 patch=1,EE,D115D7D4,extended,00000030
 patch=1,EE,2115D7FC,extended,24050003
-
 patch=1,EE,D115D7D4,extended,00000030
 patch=1,EE,2115D800,extended,AC850008
-
 patch=1,EE,D115D7D4,extended,00000030
 patch=1,EE,2115D804,extended,03E00008
-
 patch=1,EE,D115D7D4,extended,00000030
 patch=1,EE,2115D808,extended,3C020000

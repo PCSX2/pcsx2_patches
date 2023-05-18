@@ -8,24 +8,3 @@ patch=1,EE,D04C55C4,extended,00000006
 patch=1,EE,004C55B8,extended,00000000
 patch=1,EE,D04C55C4,extended,00000006
 patch=1,EE,004C55C4,extended,00000005
-
-
-
-
-//Widescreen hack by harry62
-patch=1,EE,20291674,extended,3C023F3C // camera distance
-patch=1,EE,204A44AC,extended,3FACCCCD // stretch vertical render
-patch=1,EE,2049E9F0,extended,3F3C28F6 // HUD horizontal stretch 
-patch=1,EE,2049E9F4,extended,3F800000 // HUD vertical stretch 
-patch=1,EE,2049EA00,extended,44E2A000 // HUD horizontal offset
-patch=1,EE,2049EA04,extended,44E42000 // HUD vertical offset
-patch=1,EE,202941E4,extended,0C02FC00 // max render distance width fix
-patch=1,EE,200BF000,extended,3C080049
-patch=1,EE,200BF004,extended,8D098DF8
-patch=1,EE,200BF008,extended,11200003
-patch=1,EE,200BF00C,extended,00000000
-patch=1,EE,200BF010,extended,3C083F80
-patch=1,EE,200BF014,extended,AD2801D0
-patch=1,EE,200BF018,extended,0806FFCA
-patch=1,EE,200BF01C,extended,00000000
-
