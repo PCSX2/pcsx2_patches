@@ -1,0 +1,32 @@
+﻿gametitle=MX vs. ATV Unleashed (ID SLUS_211.04)
+
+//Mastercode
+patch=1,EE,90342250,extended,0C0D083C
+
+//DNAS Bypass
+patch=1,EE,D03FCFF4,extended,00009690
+patch=1,EE,2045E708,extended,24050005
+
+patch=1,EE,D03FCFF4 00009690
+patch=1,EE,2045E70C,extended,AC850000
+
+patch=1,EE,D03FCFF4,extended,00009690
+patch=1,EE,2045E710,extended,3C054000
+
+patch=1,EE,D03FCFF4,extended,00009690
+patch=1,EE,2045E714,extended,24A50004
+
+patch=1,EE,D03FCFF4,extended,00009690
+patch=1,EE,2045E718,extended,AC850004
+
+patch=1,EE,D03FCFF4,extended,00009690
+patch=1,EE,2045E71C,extended,24050003
+
+patch=1,EE,D03FCFF4,extended,00009690
+patch=1,EE,2045E720,extended,AC850008
+
+patch=1,EE,D03FCFF4,extended,00009690
+patch=1,EE,2045E724,extended,03E00008
+
+patch=1,EE,D03FCFF4,extended,00009690
+patch=1,EE,2045E728,extended,3C020000

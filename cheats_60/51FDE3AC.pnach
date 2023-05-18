@@ -1,0 +1,4 @@
+gametitle=NARC SLUS-20730
+patch=1,EE,2010774C,extended,00000000
+patch=1,EE,20314A98,extended,24030001
+patch=1,EE,20314AAC,extended,24020001

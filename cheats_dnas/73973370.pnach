@@ -1,0 +1,19 @@
+﻿comment=Conflict: Global Storm (Europe) (En,Fr,De,Es,It) (SLES_525.73)
+
+//DNAS Bypass (Spanish)
+patch=1,EE,D132144C,extended,00000006
+patch=1,EE,0132144C,extended,00000005
+patch=1,EE,D132E54C,extended,00000006
+patch=1,EE,0132E54C,extended,00000005
+
+//DNAS Bypass (English)
+patch=1,EE,D131D54C,extended,00000006
+patch=1,EE,0131D54C,extended,00000005
+patch=1,EE,D1320C4C,extended,00000006
+patch=1,EE,01320C4C,extended,00000005
+
+//DNAS Bypass (French)
+patch=1,EE,D1320C4C,extended,00000006
+patch=1,EE,01320C4C,extended,00000005
+patch=1,EE,D132DC4C,extended,00000006
+patch=1,EE,0132DC4C,extended,00000005

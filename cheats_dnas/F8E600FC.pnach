@@ -1,0 +1,17 @@
+﻿comment=Heroes of the Pacific (Europe) (En,Fr,De,Es,It) (SLES_534.41)
+
+//DNAS Bypass
+patch=1,EE,D1E76CF4,extended,00000006
+patch=1,EE,01E76CF4,extended,00000005
+
+//Force DNAS Bypass (Press R3 + L3 in "Authenticating DNAS Data" screen)
+patch=1,EE,E009FFF9,extended,00769782
+patch=1,EE,21E78B88,extended,24050005
+patch=1,EE,21E78B8C,extended,AC850000
+patch=1,EE,21E78B90,extended,3C054000
+patch=1,EE,21E78B94,extended,24A50004
+patch=1,EE,21E78B98,extended,AC850004
+patch=1,EE,21E78B9C,extended,24050003
+patch=1,EE,21E78BA0,extended,AC850008
+patch=1,EE,21E78BA4,extended,03E00008
+patch=1,EE,21E78BA8,extended,3C020000

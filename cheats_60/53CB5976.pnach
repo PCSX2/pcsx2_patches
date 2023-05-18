@@ -1,0 +1,3 @@
+gametitle=Silent Scope SLUS-20078
+patch=1,EE,202585FC,extended,00000001
+patch=1,EE,2015046C,extended,2403003C

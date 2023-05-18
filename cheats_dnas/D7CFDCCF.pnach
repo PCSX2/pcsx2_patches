@@ -1,0 +1,4 @@
+comment=SOCOM - U.S. Navy SEALs - Combined Assault (USA) (SCUS_975.45)
+
+//DNAS Bypass
+patch=1,EE,2029A2DC,extended,24020001

@@ -1,0 +1,7 @@
+comment=Winning Eleven - Pro Evolution Soccer 2007 (USA) (En,Fr,De,Es,It) (SLUS_214.64)
+
+//DNAS Bypass
+patch=1,EE,D0C46CB0,extended,00000007
+patch=1,EE,00C46CB0,extended,00000005
+patch=1,EE,D0C46CB0,extended,00000006
+patch=1,EE,00C46CB0,extended,00000005

@@ -1,0 +1,5 @@
+gametitle=Blood Will Tell: Tezuka Osamu's Dororo SLUS-20782
+patch=1,EE,203D475C,extended,00000000
+patch=1,EE,20279CF0,extended,3C023F00
+patch=1,EE,20279D14,extended,3C023F00
+patch=1,EE,201D7AB4,extended,3C023F00

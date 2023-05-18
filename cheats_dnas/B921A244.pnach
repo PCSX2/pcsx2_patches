@@ -1,0 +1,7 @@
+comment=Trivial Pursuit - Unhinged (SLES_525.04)
+
+//DNAS Bypass
+patch=1,EE,D0375644,extended,00000006
+patch=1,EE,00375638,extended,00000000
+patch=1,EE,D0375644,extended,00000006
+patch=1,EE,00375644,extended,00000005

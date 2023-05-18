@@ -1,0 +1,16 @@
+﻿gametitle=Serious Sam: Next Encounter (Europe, SLES_524.50, v1.02)
+
+//Master Code
+patch=1,EE,9031FC78,extended,0C0C7EC6
+
+//DNAS Bypass
+patch=1,EE,20265734,extended,0000102D
+patch=1,EE,20265758,extended,0000102D
+patch=1,EE,202657EC,extended,0000102D
+patch=1,EE,00265824,extended,00000000
+patch=1,EE,20265860,extended,00401821
+patch=1,EE,2026595C,extended,0000102D
+patch=1,EE,2039F40C,extended,00100000
+patch=1,EE,2039F418,extended,00100000
+patch=1,EE,2039F424,extended,00100000
+patch=1,EE,2039F430,extended,00100000

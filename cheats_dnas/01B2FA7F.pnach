@@ -1,0 +1,32 @@
+﻿gametitle=Metal Gear Solid 3 - Subsistence (Disc 2 - Persistence) (SLUS_212.43)
+
+//Mastercode
+patch=1,EE,90183688,extended,0c07b869
+
+//DNAS Bypass
+patch=1,EE,2036b1e4,extended,ae220040
+patch=1,EE,2036b1e8,extended,24020000
+patch=1,EE,2036b1ec,extended,03e00008
+patch=1,EE,2036b1f0,extended,00000000
+
+//HTTPS Patch
+patch=1,EE,21322410,extended,68000000
+patch=1,EE,21322414,extended,3a707474
+patch=1,EE,21322418,extended,61732F2F
+patch=1,EE,2132241c,extended,676D6576
+patch=1,EE,21322420,extended,6F632E6F
+patch=1,EE,21322424,extended,73752F6D
+patch=1,EE,21322428,extended,73676D2F
+patch=1,EE,2132242c,extended,00002F33
+
+//Stats Patch
+patch=1,EE,2036b1e4,extended,ae220040
+patch=1,EE,20193a60,extended,00000000
+
+//Crypto Patch
+patch=1,EE,2036b1e4,extended,ae220040
+patch=1,EE,20199f38,extended,03e00008
+patch=1,EE,20199f3c,extended,00000000
+
+//Widescreen Hack
+patch=1,EE,2026D1DC,extended,3F400000

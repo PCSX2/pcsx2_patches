@@ -1,0 +1,8 @@
+﻿gametitle=MotoGP 4 (ID SLUS_211.59)
+
+//Mastercode
+patch=1,EE,90387E20,extended,0C0E1F30
+
+//DNAS Bypass
+patch=1,EE,D0604F88,extended,0000000B
+patch=1,EE,00604F88,extended,00000005

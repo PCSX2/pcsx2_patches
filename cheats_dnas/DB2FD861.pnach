@@ -1,0 +1,7 @@
+comment=Street Racing Syndicate (USA) (SLUS_205.82)
+
+//DNAS Bypass
+patch=1,EE,D123C9EC,extended,00000006
+patch=1,EE,0123C9E0,extended,00000000
+patch=1,EE,D123C9EC,extended,00000006
+patch=1,EE,0123C9EC,extended,00000005

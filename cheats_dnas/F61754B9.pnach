@@ -1,0 +1,7 @@
+comment=World Series of Poker (SLUS_213.01)
+
+//DNAS Bypass
+patch=1,EE,D02C7824,extended,00000006
+patch=1,EE,002C7818,extended,00000000
+patch=1,EE,D02C7824,extended,00000006
+patch=1,EE,002C7824,extended,00000005

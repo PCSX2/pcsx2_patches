@@ -1,0 +1,3 @@
+gametitle=Sonic Heroes SLUS-20718
+patch=1,EE,004777C0,extended,00000001
+patch=1,EE,2028FF5C,extended,24020001

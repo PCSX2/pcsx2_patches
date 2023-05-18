@@ -1,0 +1,7 @@
+﻿comment=Arc the Lad: End of Darkness (USA) (SLUS_211.65)
+
+//DNAS Bypass
+patch=1,EE,D09C37DC,extended,00000006
+patch=1,EE,009C37D0,extended,00000000
+patch=1,EE,D09C37DC,extended,00000006
+patch=1,EE,009C37DC,extended,00000005

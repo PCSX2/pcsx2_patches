@@ -1,0 +1,8 @@
+gametitle=Kingdom Hearts SLUS-20370
+patch=1,EE,D02BFD98,extended,00000000
+patch=1,EE,002B624C,extended,00000000
+patch=1,EE,D02BFD98,extended,00001000
+patch=1,EE,002B624C,extended,00000000
+patch=1,EE,D02BFD98,extended,00000020
+patch=1,EE,002B624C,extended,00000000
+patch=1,EE,D02BFD98,extended,00000001

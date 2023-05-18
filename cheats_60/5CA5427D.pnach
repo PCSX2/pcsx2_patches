@@ -1,0 +1,3 @@
+gametitle=Silent Scope 3 SLUS-20514
+patch=1,EE,00580281,extended,00000001
+patch=1,EE,10530DA0,extended,0000003A

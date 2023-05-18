@@ -1,0 +1,6 @@
+gametitle=Naruto Shippuden: Ultimate Ninja 5 SLES-55605 
+patch=1,EE,00938981,extended,00000001
+patch=1,EE,2076CE08,extended,3C023F00
+patch=1,EE,2076C36C,extended,3C023F00
+patch=1,EE,207056E0,extended,3C033F00
+patch=1,EE,207080AC,extended,3C033F00

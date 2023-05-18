@@ -1,0 +1,3 @@
+gametitle=Psychonauts SLUS-21120
+patch=1,EE,20206BE0,extended,240E0001
+patch=1,EE,2116F990,extended,3F000000

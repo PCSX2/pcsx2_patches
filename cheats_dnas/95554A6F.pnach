@@ -1,0 +1,32 @@
+﻿gametitle=Pool Shark 2 (SLES_527.73)
+
+//Mastercode
+patch=1,EE,903CA0B8,extended,0C0F27D6
+
+//DNAS Bypass
+patch=1,EE,D1588ED4,extended,00000030
+patch=1,EE,21588EE8,extended,24050005
+
+patch=1,EE,D1588ED4,extended,00000030
+patch=1,EE,21588EEC,extended,AC850000
+
+patch=1,EE,D1588ED4,extended,00000030
+patch=1,EE,21588EF0,extended,3C054000
+
+patch=1,EE,D1588ED4,extended,00000030
+patch=1,EE,21588EF4,extended,24A50004
+
+patch=1,EE,D1588ED4,extended,00000030
+patch=1,EE,21588EF8,extended,AC850004
+
+patch=1,EE,D1588ED4,extended,00000030
+patch=1,EE,21588EFC,extended,24050003
+
+patch=1,EE,D1588ED4,extended,00000030
+patch=1,EE,21588F00,extended,AC850008
+
+patch=1,EE,D1588ED4,extended,00000030
+patch=1,EE,21588F04,extended,03E00008
+
+patch=1,EE,D1588ED4,extended,00000030
+patch=1,EE,21588F08,extended,3C020000

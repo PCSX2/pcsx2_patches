@@ -1,0 +1,5 @@
+﻿comment=Spy vs. Spy (Europe) (En,Fr,De,Es) (SLES_530.78)
+
+//DNAS Bypass
+patch=1,EE,D053C2DC,extended,00000006
+patch=1,EE,0053C2DC,extended,00000005

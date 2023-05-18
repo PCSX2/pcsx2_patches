@@ -1,0 +1,8 @@
+﻿gametitle=Marvel Ultimate Alliance (SLUS_213.74)
+
+//Mastercode
+patch=1,EE,9010E890,extended,0C0439CC
+
+//DNAS Bypass
+patch=1,EE,207F6478,extended,24050005
+patch=1,EE,207F647C,extended,ac850000

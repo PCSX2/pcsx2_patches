@@ -1,0 +1,10 @@
+gametitle=Raw Danger! SLUS-21501
+patch=1,EE,20700A3C,extended,00000001
+patch=1,EE,2048DC74,extended,42700000
+patch=1,EE,203A9A40,extended,3EAAAAAB
+patch=1,EE,203A9A50,extended,3EAAAAAB
+patch=1,EE,203AB014,extended,3EAAAAAB
+patch=1,EE,203AA140,extended,3EAAAAAB
+patch=1,EE,2042E854,extended,3EAAAAAB
+patch=1,EE,2043F128,extended,3EAAAAAB
+patch=1,EE,203AA1E4,extended,3EAAAAAB

@@ -1,0 +1,6 @@
+gametitle=Siren SCUS-97355
+patch=1,EE,20145BB4,extended,28420001
+patch=1,EE,20145BD8,extended,24030001
+patch=1,EE,20145BDC,extended,A6030010
+patch=1,EE,20145BFC,extended,A6000012
+patch=1,EE,201AA910,extended,3C033F00

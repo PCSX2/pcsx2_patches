@@ -1,0 +1,5 @@
+﻿comment=Hot Shots Golf Fore! (USA) (SCUS_974.01)
+
+//DNAS Bypass
+patch=1,EE,D059C17C,extended,00000006
+patch=1,EE,0059C17C,extended,00000005

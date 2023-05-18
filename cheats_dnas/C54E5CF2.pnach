@@ -1,0 +1,14 @@
+gametitle=Twisted Metal Black Online (USA)
+
+//Mastercode
+patch=1,EE,902A38B0,extended,0C0A8DD4
+
+//TMBO Revival Server (173.233.94.153)
+patch=1,EE,204E7638,extended,2E333731
+patch=1,EE,204E763C,extended,2E333332
+patch=1,EE,204E7640,extended,312E3439
+patch=1,EE,204E7644,extended,00003335
+patch=1,EE,20316AEC,extended,2E333731
+patch=1,EE,20316AF0,extended,2E333332
+patch=1,EE,20316AF4,extended,312E3439
+patch=1,EE,20316AF8,extended,00003335

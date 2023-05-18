@@ -1,0 +1,3 @@
+gametitle=Dog's Life SLUS-21018
+patch=1,EE,D0824B82,extended,00003D08
+patch=1,EE,20824B80,extended,3C888889

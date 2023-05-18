@@ -1,0 +1,3 @@
+gametitle=Black SLUS-21376
+patch=1,EE,1040DF74,extended,00000001
+patch=1,EE,205A8A9C,extended,3C888889

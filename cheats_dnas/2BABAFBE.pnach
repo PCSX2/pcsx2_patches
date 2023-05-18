@@ -1,0 +1,7 @@
+comment=Pro Evolution Soccer 6 (Europe) (It,Pl) (SLES_542.04)
+
+//DNAS Bypass
+patch=1,EE,D0C3C430,extended,00000007
+patch=1,EE,00C3C430,extended,00000005
+patch=1,EE,D0C3C430,extended,00000006
+patch=1,EE,00C3C430,extended,00000005

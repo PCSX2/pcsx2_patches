@@ -1,0 +1,27 @@
+comment=Crash 'N' Burn (Europe) (Aug 25, 2004 prototype) (TLES_523.39) by Adm Cristian (xCrISTiAhNx)" - Visit https://ps2online.com/
+
+//DNAS Bypass
+patch=1,EE,D172380C,extended,00000006
+patch=1,EE,01723800,extended,00000000
+patch=1,EE,D172380C,extended,00000006
+patch=1,EE,0172380C,extended,00000005
+
+patch=1,EE,D16EB88C,extended,00000006
+patch=1,EE,016EB880,extended,00000000
+patch=1,EE,D16EB88C,extended,00000006
+patch=1,EE,016EB88C,extended,00000005
+
+patch=1,EE,D1720E8C,extended,00000006
+patch=1,EE,01720E80,extended,00000000
+patch=1,EE,D1720E8C,extended,00000006
+patch=1,EE,01720E8C,extended,00000005
+
+patch=1,EE,D171508C,extended,00000006
+patch=1,EE,01715080,extended,00000000
+patch=1,EE,D171508C,extended,00000006
+patch=1,EE,0171508C,extended,00000005
+
+patch=1,EE,D16EB88C,extended,00000006
+patch=1,EE,016EB880,extended,00000000
+patch=1,EE,D16EB88C,extended,00000006
+patch=1,EE,016EB88C,extended,00000005

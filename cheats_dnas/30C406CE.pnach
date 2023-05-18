@@ -1,0 +1,61 @@
+gametitle= IndyCar Series 2005 (SLES_522.98)
+
+//Mastercode
+patch=1,EE,902A2388,extended,0C0A888A
+
+//DNAS Bypass Spanish
+patch=1,EE,D1BF0030,extended,00008010
+patch=1,EE,21BF00C0,extended,24050005
+
+patch=1,EE,D1BF0030,extended,00008010
+patch=1,EE,21BF00C4,extended,AC850000
+
+patch=1,EE,D1BF0030,extended,00008010
+patch=1,EE,21BF00C8,extended,3C054000
+
+patch=1,EE,D1BF0030,extended,00008010
+patch=1,EE,21BF00CC,extended,24A50004
+
+patch=1,EE,D1BF0030,extended,00008010
+patch=1,EE,21BF00D0,extended,AC850004
+
+patch=1,EE,D1BF0030,extended,00008010
+patch=1,EE,21BF00D4,extended,24050003
+
+patch=1,EE,D1BF0030,extended,00008010
+patch=1,EE,21BF00D8,extended,AC850008
+
+patch=1,EE,D1BF0030,extended,00008010
+patch=1,EE,21BF00DC,extended,03E00008
+
+patch=1,EE,D1BF0030,extended,00008010
+patch=1,EE,21BF00E0,extended,3C020000
+
+
+//DNAS Bypass English
+patch=1,EE,D1BF5530,extended,00008010
+patch=1,EE,21BF55C0,extended,24050005
+
+patch=1,EE,D1BF5530,extended,00008010
+patch=1,EE,21BF55C4,extended,AC850000
+
+patch=1,EE,D1BF5530,extended,00008010
+patch=1,EE,21BF55C8,extended,3C054000
+
+patch=1,EE,D1BF5530,extended,00008010
+patch=1,EE,21BF55CC,extended,24A50004
+
+patch=1,EE,D1BF5530,extended,00008010
+patch=1,EE,21BF55D0,extended,AC850004
+
+patch=1,EE,D1BF5530,extended,00008010
+patch=1,EE,21BF55D4,extended,24050003
+
+patch=1,EE,D1BF5530 00008010
+patch=1,EE,21BF55D8 AC850008
+
+patch=1,EE,D1BF5530,extended,00008010
+patch=1,EE,21BF55DC,extended,03E00008
+
+patch=1,EE,D1BF5530,extended,00008010
+patch=1,EE,21BF55E0,extended,3C020000

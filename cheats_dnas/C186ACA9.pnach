@@ -1,0 +1,5 @@
+﻿comment=Juiced (USA) (SLUS_208.72)
+
+//DNAS Bypass
+patch=1,EE,D067FDEC,extended,00000006
+patch=1,EE,0067FDEC,extended,00000005

@@ -1,0 +1,4 @@
+gametitle=Suikoden V SLUS-21291
+patch=1,EE,006E8ED8,extended,00000001
+patch=1,EE,206E91A8,extended,00000001
+patch=1,EE,20247664,extended,3C023F00

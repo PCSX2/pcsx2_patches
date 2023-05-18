@@ -1,0 +1,4 @@
+gametitle=Robotech: Invasion SLUS-20823
+patch=1,EE,202526B0,extended,00000000
+patch=1,EE,202526B4,extended,00000000
+patch=1,EE,201770F4,extended,2403003C

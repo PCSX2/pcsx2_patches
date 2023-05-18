@@ -1,0 +1,6 @@
+gametitle=Yakuza 2 SLUS-21769
+patch=1,EE,20119818,extended,00000000
+patch=1,EE,2080B5E0,extended,3F000000
+patch=1,EE,2080B5E4,extended,3F000000
+patch=1,EE,2080B5E8,extended,3F000000
+patch=1,EE,2080B5EC,extended,3F000000

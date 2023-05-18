@@ -1,0 +1,4 @@
+gametitle=Resident Evil Outbreak File #2 SLUS-20984
+patch=1,EE,20358958,extended,00000000
+patch=1,EE,204C69E8,extended,3F000000
+patch=1,EE,206920CC,extended,3C023F00

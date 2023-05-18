@@ -1,0 +1,5 @@
+gametitle=Rule of Rose SLUS-21448
+patch=1,EE,20296198,extended,00000001
+patch=1,EE,206FE890,extended,3F000000
+patch=1,EE,202EA740,extended,3F000000
+patch=1,EE,202EA744,extended,3F000000

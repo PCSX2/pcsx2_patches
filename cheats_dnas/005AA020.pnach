@@ -1,0 +1,5 @@
+﻿comment=Conflict: Global Terror (USA) (SLUS_211.72)
+
+//DNAS Bypass
+patch=1,EE,D131D54C,extended,00000006
+patch=1,EE,0131D54C,extended,00000005

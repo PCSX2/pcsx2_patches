@@ -1,0 +1,5 @@
+gametitle=Mortal Kombat: Deception (SLUS-20881)
+comment=DNAS bypass by harry62 (pnach by QR--)
+
+//DNAS bypass
+patch=1,EE,203F7638,word,10000540

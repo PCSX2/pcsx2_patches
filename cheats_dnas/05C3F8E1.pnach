@@ -1,0 +1,23 @@
+﻿gametitle=Colin McRae Rally 2005 (SLES_526.36)
+
+//Mastercode
+patch=1,EE,903E93F8,extended,0C0FA4A6
+
+//DNAS Bypass (Agressive)
+patch=1,EE,D18EC9B8,extended,0000000B
+patch=1,EE,018EC9B8,extended,00000005
+
+//DNAS Patch ps2rd 1
+patch=1,EE,D186CA06,extended,000003E0
+patch=1,EE,1186C9C2,extended,0000AC80
+patch=1,EE,D186CA06,extended,000003E0
+patch=1,EE,0186C9C8,extended,00000000
+patch=1,EE,D186CA06,extended,000003E0
+patch=1,EE,2186C9DC,extended,ACE00004
+patch=1,EE,D186CA06,extended,000003E0
+patch=1,EE,2186CA08,extended,03E00008
+patch=1,EE,D186CA06,extended,000003E0
+patch=1,EE,1186CA0E,extended,0000ACC3
+patch=1,EE,D186CA06,extended,000003E0
+patch=1,EE,2186CA04,extended,34030005
+

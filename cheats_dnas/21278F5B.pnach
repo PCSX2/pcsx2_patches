@@ -1,0 +1,10 @@
+﻿gametitle=Tony Hawk's American Wasteland (Collector's Edition) ID SLUS_212.95
+
+//Mastercode
+patch=1,EE,90454FB0,extended,0C115394
+
+//DNAS Bypass
+patch=1,EE,D1CF0F04,extended,24020006
+patch=1,EE,01CF0EF8,extended,00000000
+patch=1,EE,D1CF0F04,extended,24020006
+patch=1,EE,01CF0F04,extended,00000005

@@ -1,0 +1,5 @@
+comment=MLB SlugFest: Loaded (SLUS_208.89)
+
+//DNAS Bypass
+patch=1,EE,D03AD5D8,extended,0000000F
+patch=1,EE,003AD5D8,extended,00000000

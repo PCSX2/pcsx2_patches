@@ -1,0 +1,4 @@
+gametitle=Disaster Report SLUS-20561
+patch=1,EE,203DFECC,extended,00000001
+patch=1,EE,2034C748,extended,42700000
+patch=1,EE,20102830,extended,3C023F00

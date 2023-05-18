@@ -1,0 +1,17 @@
+﻿gametitle=Killzone - Online Public Beta (Europe) (ID TCES_520.04)
+
+//Mastercode
+patch=1,EE,9035AB18,extended,0C0D6A6E
+
+//DNAS Bypass
+patch=1,EE,D03D5F6C,extended,00000006
+patch=1,EE,003D5F60,extended,00000000
+patch=1,EE,D03D5F6C,extended,00000006
+patch=1,EE,003D5F6C,extended,00000005
+
+//Killzone Update IP
+patch=1,EE,20666E88,extended,2E353331
+patch=1,EE,20666E8C,extended,2E383431
+patch=1,EE,20666E90,extended,2E343431
+patch=1,EE,20666E94,extended,00333532
+patch=1,EE,20666E98,extended,00000000

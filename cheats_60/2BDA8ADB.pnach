@@ -1,0 +1,3 @@
+gametitle=Project: Snowblind SLUS-21037
+patch=1,EE,D02D4C04,extended,0000102B
+patch=1,EE,202D4C04,extended,2C620001

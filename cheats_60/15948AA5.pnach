@@ -1,0 +1,2 @@
+gametitle=Without Warning SLUS-21156
+patch=1,EE,004A749C,extended,00000001

@@ -1,0 +1,3 @@
+gametitle=The Matrix: Path of Neo SLUS_21273
+patch=1,EE,20463E1C,extended,3F800000
+patch=1,EE,20463E2C,extended,42700000

@@ -1,0 +1,8 @@
+gametitle=Tales of the Abyss SLUS-21386
+patch=1,EE,201A3D74,extended,10000009
+patch=1,EE,2032E1DC,extended,00000000
+patch=1,EE,20720A20,extended,3FB30000
+patch=1,EE,D0720A18,extended,00000001
+patch=1,EE,20720A14,extended,42F00000
+patch=1,EE,D0720A18,extended,00000000
+patch=1,EE,20720A14,extended,42700000

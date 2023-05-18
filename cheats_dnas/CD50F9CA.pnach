@@ -1,0 +1,7 @@
+comment=The Hustle: Detroit Streets (USA) (SLUS_213.35)" - Visit https://ps2online.com/
+
+//DNAS Bypass
+patch=1,EE,D130932C,extended,00000006
+patch=1,EE,01309320,extended,00000000
+patch=1,EE,D130932C,extended,00000006
+patch=1,EE,0130932C,extended,00000005

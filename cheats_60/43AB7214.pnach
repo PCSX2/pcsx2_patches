@@ -1,0 +1,6 @@
+gametitle=Tales of Legendia SLUS-21201
+patch=1,EE,201393FC,extended,00000000
+patch=1,EE,201BADA0,extended,3C023F80
+patch=1,EE,201D0528,extended,3C023F00
+patch=1,EE,20358410,extended,3C023F00
+patch=1,EE,20381E60,extended,3C023F00

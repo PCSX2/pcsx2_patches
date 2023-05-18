@@ -1,0 +1,5 @@
+gametitle=Ben 10: Alien Force SLUS-21815
+patch=1,EE,201D9CE8,extended,00000000
+patch=1,EE,201D9CEC,extended,00000000
+patch=1,EE,20AAF338,extended,3F000000
+patch=1,EE,20C20DE0,extended,3F000000

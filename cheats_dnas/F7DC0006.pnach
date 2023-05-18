@@ -1,0 +1,5 @@
+﻿comment=Amplitude (Europe) (En,Fr,De,Es,It) (SCES_517.06)
+
+//DNAS Bypass
+patch=1,EE,D04303F8,extended,0000C9DC
+patch=1,EE,0032E8B4,extended,00000005

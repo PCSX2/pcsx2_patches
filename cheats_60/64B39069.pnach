@@ -1,0 +1,6 @@
+gametitle=Spy Hunter: Nowhere to Run SLUS-21421
+patch=1,EE,20384818,extended,28630001
+patch=1,EE,D06D2B02,extended,0000FFFC
+patch=1,EE,2068A9B8,extended,3F000000
+patch=1,EE,D06D2B02,extended,0000FFFA
+patch=1,EE,2068A9B8,extended,3F800000

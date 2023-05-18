@@ -1,0 +1,5 @@
+comment=NFL Blitz Pro (USA) (SLUS_206.31)
+
+//DNAS Bypass
+patch=1,EE,D02E8A24,extended,00000046
+patch=1,EE,002E8A24,extended,00000030

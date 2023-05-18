@@ -1,0 +1,5 @@
+gametitle=Astro Boy SLUS-20867
+patch=1,EE,2069AD90,extended,00000001
+patch=1,EE,2069AD98,extended,42700000
+patch=1,EE,2069AD9C,extended,3C888889
+patch=1,EE,2069ADA0,extended,3F800000

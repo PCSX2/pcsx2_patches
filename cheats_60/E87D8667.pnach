@@ -1,0 +1,2 @@
+gametitle=Bolt SLUS-21844
+patch=1,EE,007E15EC,extended,00000001

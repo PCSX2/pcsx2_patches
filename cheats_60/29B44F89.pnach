@@ -1,0 +1,14 @@
+gametitle=Phantasy Star Universe SLUS-21194
+patch=1,EE,E00A102D,extended,002570B8
+patch=1,EE,202570C0,extended,08030008
+patch=1,EE,200C0020,extended,2405003C
+patch=1,EE,200C0024,extended,AC850004
+patch=1,EE,200C0028,extended,AC65A18C
+patch=1,EE,200C002C,extended,3C054270
+patch=1,EE,200C0030,extended,AC65A188
+patch=1,EE,200C0034,extended,3C053F80
+patch=1,EE,200C0038,extended,AC65A190
+patch=1,EE,200C003C,extended,3C053F00
+patch=1,EE,200C0040,extended,AC65A194
+patch=1,EE,200C0044,extended,03E00008
+

@@ -1,0 +1,4 @@
+gametitle=DreamWorks & Aardman Flushed Away SLUS-21484
+patch=1,EE,201AFB98,extended,00000000
+patch=1,EE,201AFB9C,extended,00000000
+patch=1,EE,20391D54,extended,2405003C

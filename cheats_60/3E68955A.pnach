@@ -1,0 +1,7 @@
+gametitle=Kingdom Hearts Final Mix SLPS-25198
+patch=1,EE,D02C5958,extended,00000000
+patch=1,EE,002BBE0C,extended,00000000
+patch=1,EE,D02C5958,extended,00001000
+patch=1,EE,002BBE0C,extended,00000000
+patch=1,EE,D02C5958,extended,00000020
+patch=1,EE,002BBE0C,extended,00000000

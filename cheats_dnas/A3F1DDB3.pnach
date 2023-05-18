@@ -1,0 +1,7 @@
+comment=WWE SmackDown! vs. Raw (USA) (Jul 6, 2004 prototype) (SLUS_291.16) - Visit https://ps2online.com/
+
+//DNAS Bypass
+patch=1,EE,D044C8F4,extended,00000006
+patch=1,EE,0044C8E8,extended,00000000
+patch=1,EE,D044C8F4,extended,00000006
+patch=1,EE,0044C8F4,extended,00000005

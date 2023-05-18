@@ -1,0 +1,6 @@
+gametitle=The King of Route 66 SLUS-20522
+patch=1,EE,206D8CE0,extended,00000001
+patch=1,EE,201484B4,extended,2463FFFF
+patch=1,EE,20196B14,extended,3C023C88
+patch=1,EE,00196B74,extended,3C023C88
+patch=1,EE,00196B9C,extended,3C023C88

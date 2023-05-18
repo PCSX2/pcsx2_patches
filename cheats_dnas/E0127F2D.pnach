@@ -1,0 +1,20 @@
+﻿gametitle=FlatOut (USA) /ID SLUS_209.01
+
+//Mastercode
+patch=1,EE,902CE200,extended,0C0B3828
+
+//DNAS Bypass
+patch=1,EE,D1A19EAC,extended,00000006
+patch=1,EE,01A19EA0,extended,00000000
+patch=1,EE,D1A19EAC,extended,00000006
+patch=1,EE,01A19EAC,extended,00000005
+
+patch=1,EE,D196D3AC,extended,00000006
+patch=1,EE,0196D3A0,extended,00000000
+patch=1,EE,D196D3AC,extended,00000006
+patch=1,EE,0196D3AC,extended,00000005
+
+patch=1,EE,D1A7042C,extended,00000006
+patch=1,EE,01A70420,extended,00000000
+patch=1,EE,D1A7042C,extended,00000006
+patch=1,EE,01A7042C,extended,00000005

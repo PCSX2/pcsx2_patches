@@ -1,0 +1,7 @@
+gametitle=Kingdom Hearts 2: Final Mix SLPM-66675
+patch=1,EE,D034DCA8,extended,00000003
+patch=1,EE,00349E1C,extended,00000000
+patch=1,EE,00349E2C,extended,00000000
+patch=1,EE,D034DCA8,extended,00000001
+patch=1,EE,00349E1C,extended,00000001
+patch=1,EE,00349E2C,extended,00000001

@@ -1,0 +1,4 @@
+gametitle=Dragon Quest V: Tenkuu no Hanayome SLPM-65555
+patch=1,EE,2070F6F0,extended,00000000
+patch=1,EE,20546E5C,extended,3C023F00
+patch=1,EE,204B9C04,extended,3C083F00

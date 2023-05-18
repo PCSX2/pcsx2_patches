@@ -1,0 +1,3 @@
+gametitle=Terminator 3: Rise of the Machines SLUS-20799
+patch=1,EE,203F17D8,extended,00000000
+patch=1,EE,2013FC7C,extended,3C013F00

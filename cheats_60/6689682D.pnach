@@ -1,0 +1,3 @@
+gametitle=Silent Scope 2: Dark Silhouette SLUS-20243
+patch=1,EE,20246B80,extended,00000001
+patch=1,EE,10250884,extended,0000003A

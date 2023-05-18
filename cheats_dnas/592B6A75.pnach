@@ -1,0 +1,7 @@
+comment=Pro Evolution Soccer 6 (Germany) (SLES_543.61)
+
+//DNAS Bypass
+patch=1,EE,D0C3BC30,extended,00000007
+patch=1,EE,00C3BC30,extended,00000005
+patch=1,EE,D0C3BC30,extended,00000006
+patch=1,EE,00C3BC30,extended,00000005

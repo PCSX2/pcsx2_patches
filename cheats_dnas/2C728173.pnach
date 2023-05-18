@@ -1,0 +1,7 @@
+comment=The Fast and the Furious (USA) (SLUS_214.49)
+
+//DNAS Bypass
+patch=1,EE,D1694DF4,extended,00000006
+patch=1,EE,01694DE8,extended,00000000
+patch=1,EE,D1694DF4,extended,00000006
+patch=1,EE,01694DF4,extended,00000005

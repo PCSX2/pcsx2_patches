@@ -1,0 +1,5 @@
+gametitle=Dragon Quest VIII SLUS-21207
+patch=1,EE,203E4B20,extended,00000001
+patch=1,EE,2016E2D4,extended,3C023E90
+patch=1,EE,201DE148,extended,3C023E90
+patch=1,EE,202FB1C4,extended,3C023F10

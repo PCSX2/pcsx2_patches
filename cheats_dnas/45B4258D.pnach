@@ -1,0 +1,8 @@
+﻿gametitle=AFL Premiership 2005 (ID SCES_534.49)
+
+//Mastercode
+patch=1,EE,9066A898,extended,0C19A9CE
+
+//DNAS Bypass
+patch=1,EE,D0CD8774,extended,00000006
+patch=1,EE,00CD8774,extended,00000005

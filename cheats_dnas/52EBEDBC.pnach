@@ -1,0 +1,7 @@
+comment=Trivial Pursuit - Unhinged (USA) (SLUS_207.91)
+
+//DNAS Bypass
+patch=1,EE,D036C6A4,extended,00000006
+patch=1,EE,0036C698,extended,00000000
+patch=1,EE,D036C6A4,extended,00000006
+patch=1,EE,0036C6A4,extended,00000005

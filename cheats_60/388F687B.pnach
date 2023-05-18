@@ -1,0 +1,4 @@
+gametitle=Yakuza SLUS-21348
+patch=1,EE,2011034C,extended,00000000
+patch=1,EE,207FC418,extended,3F000000
+patch=1,EE,207FC41C,extended,3F000000

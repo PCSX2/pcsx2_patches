@@ -1,0 +1,8 @@
+gametitle=Call of Duty 2 - Big Red One (SLUS_212.28)
+
+//Mastercode
+patch=1,EE,903FC058,extended,0C0FEFBE
+
+//DNAS Bypass (Agressive)
+patch=1,EE,D026CE44,extended,0000001D
+patch=1,EE,0026CE44,extended,00000000

@@ -1,0 +1,4 @@
+gametitle=Trigger Man SLUS-20931
+patch=1,EE,20115F80,extended,00000000
+patch=1,EE,201FC95C,extended,00000000
+patch=1,EE,201FC978,extended,00000000

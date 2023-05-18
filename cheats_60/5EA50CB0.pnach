@@ -1,0 +1,16 @@
+gametitle=Phantasy Star Universe - Ambition of the Illuminus SLUS-21631
+patch=1,EE,E00A102D,extended,0024C258
+patch=1,EE,2024C260,extended,08030008
+patch=1,EE,200C0020,extended,2405003C
+patch=1,EE,200C0024,extended,AC850004
+patch=1,EE,200C0028,extended,AC65B01C
+patch=1,EE,200C002C,extended,3C054270
+patch=1,EE,200C0030,extended,AC65B018
+patch=1,EE,200C0034,extended,3C053F80
+patch=1,EE,200C0038,extended,AC65B020
+patch=1,EE,200C003C,extended,3C053F00
+patch=1,EE,200C0040,extended,AC65B024
+patch=1,EE,200C0044,extended,3C053C88
+patch=1,EE,200C0048,extended,34A58889
+patch=1,EE,200C004C,extended,AC65B028
+patch=1,EE,200C0050,extended,03E00008

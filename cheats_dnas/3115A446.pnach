@@ -1,0 +1,80 @@
+comment=Delta Force: Black Hawk Down (Team Sabre) (USA) (SLUS_214.14) by Adm Cristian (xCrISTiAhNx)
+
+//DNAS Bypass
+patch=1,EE,D03B2328,extended,00000007
+patch=1,EE,203B2328,extended,10000007
+
+//Max Players (Ingreso) 
+patch=1,EE,E0029988,extended,00E5E200
+patch=1,EE,20E5E214,extended,00000010
+patch=1,EE,20E5E218,extended,00360031
+
+//Max Players (Ingreso) 2
+patch=1,EE,E0029988,extended,00E5E180
+patch=1,EE,20E5E194,extended,00000010
+patch=1,EE,20E5E198,extended,00360031
+
+//Max Players (Ingreso) 3
+patch=1,EE,E0029988,extended,00A8A5D0
+patch=1,EE,20A8A5E4,extended,00000010
+patch=1,EE,20A8A5E8,extended,00360031
+
+//Max Players (Ingreso) 4
+patch=1,EE,E0029988,extended,00A89E00
+patch=1,EE,20A89E14,extended,00000010
+patch=1,EE,20A89E18,extended,00360031
+
+//Max Players (Ingreso) 5
+patch=1,EE,E0029988,extended,00A8B790
+patch=1,EE,20A8B7A4,extended,00000010
+patch=1,EE,20A8B7A8,extended,00360031
+
+//Max Players (Ingreso) 6
+patch=1,EE,E0029988,extended,00A8BAE0
+patch=1,EE,20A8BAF4,extended,00000010
+patch=1,EE,20A8BAF8,extended,00360031
+
+//Max Players (Ingreso) 7
+patch=1,EE,E0029988,extended,00A89AB0
+patch=1,EE,20A89AC4,extended,00000010
+patch=1,EE,20A89AC8,extended,00360031
+
+//Max Players (Ingreso) 8
+patch=1,EE,E0029988,extended,00A89DC0
+patch=1,EE,20A89DD4,extended,00000010
+patch=1,EE,20A89DD8,extended,00360031
+
+//Max Players (Ingreso) (Single Player)
+patch=1,EE,E0029988,extended,00EA3180
+patch=1,EE,20EA3194,extended,00000010
+patch=1,EE,20EA3198,extended,00360031
+
+//Max Players (Ingreso) (Single Player) 2
+patch=1,EE,E0029988,extended,00EA3100
+patch=1,EE,20EA3114,extended,00000010
+patch=1,EE,20EA3118,extended,00360031
+
+//Max Players (Ingreso) (Single Player) 3
+patch=1,EE,E0029988,extended,00E62880
+patch=1,EE,20E62894,extended,00000010
+patch=1,EE,20E62898,extended,00360031
+
+//Max Players (Ingreso) (Options)
+patch=1,EE,E0029988,extended,00E60A80
+patch=1,EE,20E60A94,extended,00000010
+patch=1,EE,20E60A98,extended,00360031
+
+//Max Players (Ingreso) (Options) 2
+patch=1,EE,E0029988,extended,00E60B80
+patch=1,EE,20E60B94,extended,00000010
+patch=1,EE,20E60B98,extended,00360031
+
+//Max Players (Ingreso) (Options) 3
+patch=1,EE,E0029988,extended,00E61F00
+patch=1,EE,20E61F14,extended,00000010
+patch=1,EE,20E61F18,extended,00360031
+
+//Max Players (Crear) 
+patch=1,EE,E0029988,extended,00E5F020
+patch=1,EE,20E5F034,extended,00000010
+patch=1,EE,20E5F038,extended,00360031
