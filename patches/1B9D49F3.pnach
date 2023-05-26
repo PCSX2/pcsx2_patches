@@ -1,0 +1,9 @@
+gametitle=Thing, The SLUS_203.71
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,0016ec34,word,3c023fe3
+patch=1,EE,0016ec38,word,34428e38
+
+

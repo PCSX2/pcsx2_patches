@@ -1,9 +1,0 @@
-gametitle=Pac-Man World 2 (U)(SLUS-20224) (Greatest Hits)
-comment=No Interlacing
-
-//480p
-patch=1,EE,0032F988,extended,00000002
-patch=1,EE,0032F990,extended,00001038
-
-//No interlaced FMVs
-patch=1,EE,002B95BC,extended,64420000

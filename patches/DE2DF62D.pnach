@@ -1,0 +1,14 @@
+gametitle=SuperDragonBall Z SLUS_214.42
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,002b12d4,word,3c023f10
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20104C6A,extended,C4B4AC60
+
+

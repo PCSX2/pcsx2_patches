@@ -1,0 +1,13 @@
+gametitle=Aa Megami Sama (J)(SLPS-25743)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+//X-Fov
+//0000f043 eeee6e3f 0000e043
+patch=1,EE,0024b6b8,word,44200000 //43f00000
+
+

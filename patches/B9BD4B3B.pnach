@@ -1,0 +1,32 @@
+gametitle=Moto GP (U)(SLUS-20058)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+//X-fov
+//803f013c 00088144 80020524
+patch=1,EE,001f66a0,word,3c013f40 //3c013f80
+
+//HUD speedometer fix
+patch=1,EE,001acddc,word,3c013f40 //3c013f80
+patch=1,EE,001ad578,word,3c013f40 //3c013f80
+
+//Render fix
+patch=1,EE,001828a4,word,3c014330 //3c0143a0
+patch=1,EE,00185cd4,word,3c014330 //3c0143a0
+patch=1,EE,0021477c,word,3c014010 //3c013f9c
+patch=1,EE,00214780,word,34210000 //342128f6
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20268080,word,0000302B
+patch=1,EE,2021C16C,word,24077900
+patch=1,EE,2025736C,word,24087900
+patch=1,EE,2021B404,word,24117900
+
+

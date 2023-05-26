@@ -1,0 +1,10 @@
+gametitle=Codename Kids Next Door Operation VIDEOGAME [PAL-M4] (SLES_538.12)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by El_Patas
+
+//Gameplay 16:9
+patch=1,EE,20C156A4,extended,3F400000 //3F800000 (Increases hor. axis)
+
+

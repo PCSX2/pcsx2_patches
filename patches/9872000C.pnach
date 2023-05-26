@@ -1,0 +1,11 @@
+gametitle=Spy Fiction (NTSC-K)(SLKA-25007)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack (NTSC-K by Arapapa)
+
+//Widescreen hack 16:9
+//398e633f 0000803f 00000045 00000045
+patch=1,EE,201cab5c,extended,3F2AAAAA //3f638e39
+
+

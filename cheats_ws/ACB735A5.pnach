@@ -1,3 +1,0 @@
-gametitle=AirBlade (NTSC-U)
-comment=Widescreen Hack
-patch=1,EE,202EB9D0,word,3FAAAAAA

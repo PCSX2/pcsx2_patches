@@ -1,0 +1,18 @@
+gametitle=WWE SmackDown! vs. Raw 2006 (SLUS-21286)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by nemesis2000 (pnach by nemesis2000 )
+patch=1,EE,0011e95c,word,3c013f40
+patch=1,EE,0011e960,word,44810000
+patch=1,EE,0011e968,word,4600c602
+
+
+[No-Interlacing]
+gsinterlacemode=1
+comment=comment=no interlace by someother1ne
+patch=1,EE,2011A6E8,word,30630000
+patch=1,EE,2011d2d4,word,64420000
+patch=1,EE,2011d53c,word,64420000
+
+

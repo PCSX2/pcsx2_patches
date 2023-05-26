@@ -1,0 +1,11 @@
+gametitle=Driving Emotion Type-S (PAL)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen patch by FlatOut
+
+//16:9
+patch=1,EE,00466528,word,3F400000
+patch=1,EE,002C6C04,word,40778000 // render fix
+
+

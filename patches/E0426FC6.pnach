@@ -1,0 +1,14 @@
+gametitle=Okage Shadow King SCUS_971.29
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,201FE2E4,extended,3F400000 // 3F800000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,201CFDA0,extended,30420000
+
+

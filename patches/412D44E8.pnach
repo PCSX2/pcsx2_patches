@@ -1,0 +1,15 @@
+gametitle=Gregory Horror Show SLES_519.33
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack
+//patch=1,EE,00166000,word,3c023f40 // hud fix (awkward transitions/thick font)
+patch=1,EE,00166078,word,3c023f40 // hor fov
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2010210C,extended,00000000
+
+

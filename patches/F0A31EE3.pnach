@@ -1,0 +1,8 @@
+gametitle=SMT-Nocturne
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=SMT-Nocturne-NTSC-U-Widescreen Hack (16:9)
+patch=1,EE,202F56B4,word,3FD3A06D
+
+

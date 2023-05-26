@@ -1,0 +1,21 @@
+gametitle= Sega Rally 2006 (NTSC-J SLPM-66212)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment= Sega Rally 2006 (NTSC-J SLPM-66212) Widescreen Hack by VIRGIN KLM
+
+//Widescreen
+patch=1,EE,20383AF8,word,3FC71C71
+patch=1,EE,20356EA0,word,3FC71C71
+patch=1,EE,20356EC0,word,3FC71C71
+patch=1,EE,2038445C,word,00000001
+patch=1,EE,20383C3C,word,3FC00000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20106FA0,extended,34030001
+patch=1,EE,20106FB4,extended,34021040
+
+

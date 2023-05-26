@@ -1,0 +1,10 @@
+gametitle= Dynasty Warriors Gundam 2
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Wide screen (16:9)
+//Wide screen patch by bositman using Widescreen helper
+
+patch=1,EE,204D9EB8,extended,3F2AAAAB // 3F4CCCCD
+
+

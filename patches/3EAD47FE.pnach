@@ -1,0 +1,10 @@
+gametitle=Britney's Dance Beat [NTSC-U]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Britney's Dance Beat
+
+//Widescreen
+patch=1,EE,203467B4,word,3F400000
+
+

@@ -1,0 +1,10 @@
+gametitle=Dark Cloud (J)(SCPS-15004)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+
+
+patch=1,EE,0012ce28,word,3c023f40
+
+

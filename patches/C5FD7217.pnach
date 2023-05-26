@@ -1,0 +1,8 @@
+gametitle=We Love Katamari (SLES-53828)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by nemesis2000 (pnach by nemesis2000 )
+patch=1,EE,00108400,word,3c0143d6
+
+

@@ -1,0 +1,20 @@
+gametitle=Dragon Sisters (PAL-E) (SLES-54460)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack (16:9)
+// Original patch and value by sergx12
+// Updated to ELf address by ElHecht
+
+// 16:9
+patch=1,EE,00252bf8,word,3c013f40 // 3c013f80 hor fov
+
+
+[No-Interlacing]
+gsinterlacemode=1
+comment=Disable interlacing hack by ElHecht
+
+// disable interlacing
+patch=1,EE,002405D0,word,00000000 // 8f84b3d4
+
+

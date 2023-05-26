@@ -1,0 +1,10 @@
+gametitle=Dynasty Warriors 3
+
+[Widescreen 16:9]
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
+gsaspectratio=16:9
+patch=1,EE,00188390,word,3c024307
+patch=1,EE,001885f4,word,3c023f22
+patch=1,EE,202FA714,extended,3FAAAAAB // 3F800000
+
+

@@ -1,0 +1,22 @@
+gametitle=Mark of Kri SCUS_971.40
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,00350714,word,3c013faa
+patch=1,EE,00101370,word,3c014396
+patch=1,EE,00100a9c,word,3c014396
+patch=1,EE,002e08ac,word,3c0144bf
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+
+//No Interlacing
+patch=1,EE,002E1244,word,31310000
+patch=1,EE,002E35CC,word,30B20000
+patch=1,EE,003670e4,word,00000000 //64420008
+patch=1,EE,0036734c,word,00000000 //64420008
+
+

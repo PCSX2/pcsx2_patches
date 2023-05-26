@@ -1,0 +1,8 @@
+gametitle=SuperDragonBall Z SLUS_214.42
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,002b12d4,word,3c023f10
+
+

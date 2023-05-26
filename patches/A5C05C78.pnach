@@ -1,0 +1,15 @@
+gametitle=Dark Cloud (SCUS-97111)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by nemesis2000 (pnach by nemesis2000 )
+patch=1,EE,0012df78,word,3c023f40
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20113EB4,word,00000000
+patch=1,EE,20172300,word,1000000D
+
+

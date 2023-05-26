@@ -1,0 +1,17 @@
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Tekken Tag Tournament (Widescreen) NTSC-U
+// 16:9
+patch=1,EE,0034afbc,word,3c013f40
+patch=1,EE,0034afc0,word,44810000
+patch=1,EE,0034afc8,word,4600c602
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,208BCFC8,word,00000066
+patch=1,EE,208BCFD0,word,00000001
+patch=1,EE,208BCFD8,word,00009400
+
+

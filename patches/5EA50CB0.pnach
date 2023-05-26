@@ -1,0 +1,22 @@
+gametitle=Phantasy Star Universe - Ambition of the Illuminus (NTSC-U) (SLUS-21631)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Patch by TechieSaru
+
+//Widescreen
+patch=1,EE,E008FF90,extended,0026CE80
+patch=1,EE,2026CEB4,extended,08030000
+patch=1,EE,200C0000,extended,3C023F40
+patch=1,EE,200C0004,extended,44820000
+patch=1,EE,200C0008,extended,C4810000
+patch=1,EE,200C000C,extended,46000842
+patch=1,EE,200C0010,extended,E4810000
+patch=1,EE,200C0014,extended,0C09E494
+patch=1,EE,200C001C,extended,0809B3AF
+
+//Battle Cursor Fix
+patch=1,EE,E001FF80,extended,002A2520
+patch=1,EE,202A2578,extended,3C02BF40
+
+

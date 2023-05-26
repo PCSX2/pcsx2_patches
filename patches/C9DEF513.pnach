@@ -1,0 +1,41 @@
+gametitle=Virtua Fighter 4 - Evolution (U)(SLUS-20616)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by ElHecht
+
+// 16:9
+patch=1,EE,003aaa74,word,3c194455 // 3c034420 hor fov
+patch=1,EE,003aaa7c,word,37395555 // 44830800 hor fov
+patch=1,EE,003aaa94,word,44990800 // 00000000
+patch=1,EE,00217b48,word,3c024456 // 3c024420 renderfix
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,E0041000,extended,00923AE0
+patch=1,EE,00923AD8,extended,00000001
+patch=1,EE,00923AE0,extended,00000040
+patch=1,EE,00923D18,extended,00000001
+patch=1,EE,00923D20,extended,00000070
+
+patch=1,EE,E0041400,extended,00923AE0
+patch=1,EE,00923AD8,extended,00000001
+patch=1,EE,10923AE0,extended,00001450
+patch=1,EE,00923D18,extended,00000001
+patch=1,EE,10923D20,extended,0000148C
+
+patch=1,EE,E0041000,extended,009204E0
+patch=1,EE,009204D8,extended,00000001
+patch=1,EE,009204E0,extended,00000040
+patch=1,EE,00920718,extended,00000001
+patch=1,EE,00920720,extended,00000070
+
+patch=1,EE,E0041400,extended,009204E0
+patch=1,EE,009204D8,extended,00000001
+patch=1,EE,109204E0,extended,00001450
+patch=1,EE,00920718,extended,00000001
+patch=1,EE,10920720,extended,0000148C
+
+

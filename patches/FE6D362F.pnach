@@ -1,0 +1,13 @@
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//No-Interlacing in Gameplay and menus
+patch=1,EE,001B2D98,word,30420000
+
+
+//No Interlacing in FMV
+//Set Deinterlacing to blend tff and remove the "//" before patch to activate
+//FMV is darker
+//patch=1,EE,001ABE94,word,00000000
+
+

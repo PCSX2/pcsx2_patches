@@ -1,0 +1,8 @@
+gametitle=Predator Concrete Jungle SLES_530.91
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,0035d1c4,extended,3c013f10
+
+

@@ -1,0 +1,8 @@
+gametitle=Wizardry Tale of the Forsaken Land SLUS_202.59
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,00119d1c,word,3c0143d5
+
+

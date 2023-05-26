@@ -1,0 +1,9 @@
+gametitle=Saint Seiya - Meiou Hades Juunikyuu Hen [NTSC-J] (SLPS-25744)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen
+
+patch=1,EE,00162c68,word,3c033f40
+
+
