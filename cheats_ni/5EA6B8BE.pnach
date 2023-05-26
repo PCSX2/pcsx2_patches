@@ -1,9 +1,0 @@
-gametitle=Dead to Rights (U)(SLUS-20220)
-comment=No Interlacing
-
-//480p
-patch=1,EE,00250B48,extended,00000002
-patch=1,EE,00250B50,extended,00001038
-
-//No interlaced FMVs
-patch=1,EE,00218264,extended,00000000

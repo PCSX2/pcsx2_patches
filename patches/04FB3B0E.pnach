@@ -1,0 +1,11 @@
+gametitle=Avatar - The Legend of Aang - Into the Inferno (NTSC-U / PAL)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack (16:9) by ElHecht
+
+//16:9
+patch=1,EE,00148364,word,3c023fe3 // 3c023faa
+patch=1,EE,00148378,word,34428e39 // 3442aaab
+
+

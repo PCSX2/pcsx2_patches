@@ -1,0 +1,22 @@
+gametitle=Battle Gear 3 (SLPM_65434)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by No.47
+patch=1,EE,202C9B74,word,3F400000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20100360,extended,AF8095A4
+patch=1,EE,2023E3DC,extended,00000000
+patch=1,EE,2023E464,extended,00000000
+patch=1,EE,E002FFFC,extended,00304C42
+patch=1,EE,202C8EB8,extended,00000001
+patch=1,EE,202C8EC0,extended,000010A8
+patch=1,EE,E002FFFA,extended,00304C42
+patch=1,EE,202C8EB8,extended,00000003
+patch=1,EE,202C8EC0,extended,00001000
+
+

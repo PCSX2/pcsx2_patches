@@ -1,0 +1,18 @@
+gametitle=Extermination [PAL-M5] (SCES_502.40)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by El_Patas
+
+//Gameplay 16:9
+patch=1,EE,001D3158,word,3C023F19 //3C023F4C (Increases hor. axis)
+patch=1,EE,001D315C,word,3442AAAB //3442CCCD
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,00101614,word,00000000
+patch=1,EE,0010187c,word,00000000
+
+

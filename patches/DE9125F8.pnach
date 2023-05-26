@@ -1,0 +1,14 @@
+gametitle=Space Channel 5 - Special Edition disc 1 SLUS_208.06
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,2024b694,word,3f400000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,001bcc54,word,00000000 //64420008
+
+

@@ -1,9 +1,0 @@
-gametitle=Spy Hunter (SLUS-20056)
-comment=Widescreen Patch (16:9) by Monsterjamp
-
-//FOV
-patch=1,EE,20393FD0,word,3F400000
-
-//Prevents objects from disappearing from sides of screen
-patch=1,EE,2196FE00,word,3F0CCCCD
-patch=1,EE,2196FDE0,word,BF0CCCCD

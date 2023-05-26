@@ -1,0 +1,15 @@
+[Widescreen 16:9]
+gsaspectratio=16:9
+﻿gametitle=Breath of Fire: Dragon Quarter (SLUS-20499)
+comment=Widescreen patch by nemesis2000 (pnach by nemesis2000)
+patch=1,EE,0012dd1c,word,3c024307 //hor val
+patch=1,EE,0012de68,word,3c034074 //render fix
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20102104,extended,00000000
+patch=1,EE,2010236c,extended,00000000
+
+

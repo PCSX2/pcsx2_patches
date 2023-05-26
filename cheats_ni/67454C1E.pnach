@@ -1,6 +1,0 @@
-gametitle= Tekken Tag Tournament (SLUS-20001)
-comment= original no interlace code by asasega. ported by someother1ne
-
-patch=1,EE,208BD0C8,word,00000066  //00007F67
-patch=1,EE,208BD0D0,word,00000001  //00000003
-patch=1,EE,208BD0D8,word,00009400  //0000948C

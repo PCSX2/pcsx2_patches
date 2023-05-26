@@ -1,0 +1,8 @@
+gametitle=Saint Seiya - The Hades SLES_541.62
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,00162068,word,3c033f40
+
+

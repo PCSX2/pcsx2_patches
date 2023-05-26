@@ -1,0 +1,9 @@
+gametitle=Hot Shots Tennis (NTSC-U) (SCUS-97610)
+
+[No-Interlacing]
+gsinterlacemode=1
+comment=no interlacing by someother1ne
+patch=1,EE,00125464,word,64420000
+patch=1,EE,001256cc,word,64420000
+
+

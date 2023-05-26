@@ -1,0 +1,21 @@
+gametitle=Phantasy Star Universe (NTSC-U) (SLUS-21194)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Patch by TechieSaru
+
+patch=1,EE,E008FF90,extended,00277960
+patch=1,EE,20277994,extended,08030000
+patch=1,EE,200C0000,extended,3C023F40
+patch=1,EE,200C0004,extended,44820000
+patch=1,EE,200C0008,extended,C4810000
+patch=1,EE,200C000C,extended,46000842
+patch=1,EE,200C0010,extended,E4810000
+patch=1,EE,200C0014,extended,0C0A0F4C
+patch=1,EE,200C001C,extended,0809DE67
+
+//Battle Cursor Fix
+patch=1,EE,E001FF80,extended,002ACF80
+patch=1,EE,202ACFD4,extended,3C02BF40
+
+

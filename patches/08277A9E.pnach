@@ -1,0 +1,8 @@
+gametitle=Spartan: Total Warrior (NTSC-U)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen patch
+patch=1,EE,2057C814,extended,3F100000 // 3F400000
+
+

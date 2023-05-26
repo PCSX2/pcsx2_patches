@@ -1,0 +1,8 @@
+gametitle=Metal Gear 3 Snake Eater * SLES-82013 * PAL-E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=PAL-ESP Panoramico por Esppiral ;)
+patch=1,EE,20203FAC,extended,3F400000 // 3F800000
+
+

@@ -1,0 +1,9 @@
+gametitle=Ben 10 - Protector of Earth SLUS_216.61
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,0011940C,word,3C013F4d
+patch=1,EE,00119410,word,3421b6e0
+
+

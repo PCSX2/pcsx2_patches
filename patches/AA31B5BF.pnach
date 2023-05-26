@@ -1,0 +1,10 @@
+gametitle=MGS3 NTSC U SLUS_209.15
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=MGS3 (NTSC-U) Widescreen Patches by Acem
+
+// 16:9
+patch=1,EE,2020247c,extended,3F400000
+
+

@@ -1,0 +1,23 @@
+gametitle=Dynasty Warriors 3: Xtreme Legends (U)(SLUS-20617)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack (16:9) by ElHecht (NTSC-U by Arapapa)
+
+//Widescreen 16:9
+
+//X-Fov
+patch=1,EE,00282f58,word,3faaaaab //3f800000
+patch=1,EE,00282f64,word,3faaaaab //3f800000
+
+//Render fix
+patch=1,EE,0017f9b0,word,3c023f2b //3c023f00
+
+
+[No-Interlacing]
+gsinterlacemode=1
+comment=no interlace by someother1ne
+patch=1,EE,0019a05c,extended,64420000
+patch=1,EE,0019a2c4,extended,64420000
+
+

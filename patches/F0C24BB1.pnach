@@ -1,0 +1,7 @@
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2010C300,extended,34030001
+patch=1,EE,2010C314,extended,3402148C
+
+

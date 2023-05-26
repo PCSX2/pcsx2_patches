@@ -1,0 +1,10 @@
+gametitle=Legendz Gekitou! Saga Battle [NTSC-J] (SLPS-25427)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Little Gaint
+
+//16:9
+patch=1,EE,206DA92C,extended,3F533334
+
+

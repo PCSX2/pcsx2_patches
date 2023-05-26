@@ -1,0 +1,28 @@
+gametitle=Ace Combat 5: The Unsung War (SLUS-20851)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen fix by nemesis2000 (pnach by nemesis2000)
+
+//widescreen fix
+patch=1,EE,00440828,word,43D638F3
+patch=1,EE,0044082C,word,43EB7385
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2032CA34,extended,0C03FFF3
+patch=1,EE,2032CA3C,extended,00000000
+patch=1,EE,200FFFCC,extended,341B0001
+patch=1,EE,200FFFD0,extended,147B0004
+patch=1,EE,200FFFD4,extended,34030001
+patch=1,EE,200FFFD8,extended,FC430000
+patch=1,EE,200FFFDC,extended,03E00008
+patch=1,EE,200FFFE0,extended,DE020010
+patch=1,EE,200FFFE4,extended,FC430000
+patch=1,EE,200FFFE8,extended,DE020010
+patch=1,EE,200FFFEC,extended,03E00008
+patch=1,EE,200FFFF0,extended,30429400
+
+

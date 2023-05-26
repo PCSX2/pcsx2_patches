@@ -1,0 +1,9 @@
+gametitle=Magna Carta - Tears of Blood (PAL-E) (SLES-53483)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack (16:9) by ElHecht
+// 16:9
+patch=1,EE,002bd698,word,3c023f40 // 3c023f80
+
+

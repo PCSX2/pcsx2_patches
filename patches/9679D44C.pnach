@@ -1,0 +1,30 @@
+gametitle=Drakengard (NTSC) SLUS_207
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Ported by InfiniteNine from PAL code by ElHecht
+
+// 16:9
+patch=1,EE,002fd034,word,3c013f40 // 00000000 hor fov
+patch=1,EE,002fd040,word,4481f000 // 00000000
+patch=1,EE,002fd044,word,461ec602 // 00000000
+patch=1,EE,002640a4,word,3c0143d6 // 3c0143a0 renderfix1
+patch=1,EE,00129fc0,word,3c014456 // 3c014420 renderfix2
+
+// 16:10
+//patch=1,EE,0030101c,word,3c013f55 // 00000000 hor fov
+//patch=1,EE,00301020,word,34215555 // 00000000 hor fov
+//patch=1,EE,00301028,word,4481f000 // 00000000
+//patch=1,EE,0030102c,word,461ec602 // 00000000
+//patch=1,EE,00264980,word,3c0143c1 // 3c0143a0 renderfix1
+//patch=1,EE,0012a0ac,word,3c014441 // 3c014420 renderfix2
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,204F2668,extended,00000050
+patch=1,EE,204F2674,extended,000001E0
+patch=1,EE,204F2684,extended,00000000
+
+

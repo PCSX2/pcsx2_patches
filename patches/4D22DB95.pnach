@@ -1,0 +1,9 @@
+gametitle=Whiplash SLUS_206.84
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,002c3768,extended,3c013fe3
+patch=1,EE,002c376c,extended,34217fa5
+
+

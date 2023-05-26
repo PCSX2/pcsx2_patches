@@ -1,0 +1,11 @@
+gametitle=Zombie Attack (E)(SLES-53592)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+patch=1,EE,0017a840,word,3c013f2a //3c013f00
+
+

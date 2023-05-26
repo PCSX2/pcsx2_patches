@@ -1,0 +1,10 @@
+gametitle=Bolt [PAL-M3] (SLES_554.29)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by El_Patas
+
+//Gameplay 16:9
+patch=1,EE,0068C3EC,word,3FE38E39 //3FAAAAAB (Increases hor. axis)
+
+

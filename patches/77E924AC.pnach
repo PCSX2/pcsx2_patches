@@ -1,0 +1,13 @@
+gametitle=Alarm for Cobra 11 (E)(SLES-52063)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by Arapapa
+
+//Widescreen 16:9
+
+//X-Fov
+//00bf023c 86000046
+patch=1,EE,003a0ed0,word,3c02bf55
+
+

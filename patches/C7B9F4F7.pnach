@@ -1,0 +1,21 @@
+gametitle=Eternal Ring (U)(SLUS-20015)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Arapapa
+
+//X-Fov - ELF hack
+//803f013c 00a88144 0045013c
+patch=1,EE,00100fcc,word,3c013f40 //3c013f80
+
+//Memory hack
+//patch=1,EE,201FF100,word,43c00000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,001cfb44,word,00000000 //64420008
+patch=1,EE,001C6EDC,word,00000000
+
+

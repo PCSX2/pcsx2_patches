@@ -1,0 +1,14 @@
+gametitle=Tokyo Xtreme Racer: Drift (SLUS-21236)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+patch=1,EE,001196f4,word,3c043f40
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,201093F0,extended,30630000
+
+

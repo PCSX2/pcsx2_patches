@@ -1,0 +1,8 @@
+gametitle=Gunslinger Girl Volume.I
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=NTSC-J Widescreen Hack by synce
+patch=1,EE,202DB230,extended,3F400000
+
+

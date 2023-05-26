@@ -1,5 +1,0 @@
-gametitle=Minna no Tennis (J) (SCPS-15113)
-comment=no interlacing by someother1ne
-patch=1,EE,00125464,word,64420000
-patch=1,EE,001256cc,word,64420000
-

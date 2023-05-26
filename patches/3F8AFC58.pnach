@@ -1,0 +1,10 @@
+gametitle=Gadget Racers PAL (SLES_519.11)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack & pnach by El_Patas
+
+//Gameplay
+patch=1,EE,206A43B4,extended,3F19999A // 3F4CCCCD (increases hor. axis)
+
+

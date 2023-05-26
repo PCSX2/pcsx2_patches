@@ -1,0 +1,16 @@
+gametitle=Tenchu - Wrath of Heaven SLUS_203.97
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,2163aea4,extended,3F400000 (gameplay)
+patch=1,EE,00155168,word,3C024455 //3C024422 (render fix)
+patch=1,EE,001553D0,word,3C024455 //3C024422 (render fix)
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,202467E8,word,24027900
+
+

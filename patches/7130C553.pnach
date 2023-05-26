@@ -1,0 +1,25 @@
+gametitle=Gitaroo Man (NTSC-U)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+
+//hor fov (note: HUD is left)
+patch=1,EE,2026FC70,extended,3F400000
+//hud fix
+patch=1,EE,00105d2c,word,3c0243f0
+patch=1,EE,0010612c,word,3c0243f0
+patch=1,EE,0010713c,word,3c0243f0
+patch=1,EE,00110620,word,3c0243f0
+patch=1,EE,00112b90,word,3c0243f0
+patch=1,EE,0011516c,word,3c0243f0
+patch=1,EE,0016aab0,word,3c0243f0
+patch=1,EE,002359bc,word,3c0243f0
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,201C8B14,extended,AF808048
+
+

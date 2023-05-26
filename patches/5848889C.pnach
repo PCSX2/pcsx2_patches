@@ -1,0 +1,20 @@
+[Widescreen 16:9]
+gsaspectratio=16:9
+﻿gametitle=Onimusha 2 [NTSC-U]
+comment=Widescreen correction by nemesis2000 (pnach by Little Giant)
+//gameplay
+patch=1,EE,2010285c,word,3c013f40
+patch=1,EE,20102860,word,44810000
+patch=1,EE,20102868,word,4600c602
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,0172A37D,extended,00000000
+patch=1,EE,20100F4C,extended,00000000
+patch=1,EE,201011B4,extended,00000000
+patch=1,EE,20183CB4,extended,00007025
+patch=1,EE,2019CAB4,extended,24047900
+
+

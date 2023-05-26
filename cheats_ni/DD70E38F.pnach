@@ -1,4 +1,0 @@
-gametitle=Shutokou Battle 01
-comment=No Interlacing Patch by Tokman5
-//No Interlace
-patch=1,EE,00131664,word,34020000 //DC221000

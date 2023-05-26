@@ -1,0 +1,7 @@
+[Widescreen 16:9]
+gsaspectratio=16:9
+﻿gametitle=.hack Akushou Heni Vol. 2 [NTSC-J] (SLPS-25143)
+comment=Widescreen hack
+patch=1,EE,209EE7D0,word,3f400000
+
+

@@ -1,0 +1,12 @@
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Harvest Moon - Save the Homeland - Widescreen Hack (16:9) (NTSC-U)
+patch=1,EE,2026EED0,extended,3F400000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2011D608,extended,AF808744
+
+

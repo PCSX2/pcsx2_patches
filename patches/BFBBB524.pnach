@@ -1,0 +1,8 @@
+gametitle=Metal Gear Solid 2 - Sons of Liberty
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,0011ea28,word,3c013f40
+
+

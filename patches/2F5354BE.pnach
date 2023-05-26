@@ -1,0 +1,16 @@
+gametitle= Rumble Racing NTSC-U
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,00154984,word,3C023F40 //3C023F80
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//No Interlacing
+patch=1,EE,00100A64,extended,30420000
+patch=1,EE,00100A88,extended,30440000
+
+

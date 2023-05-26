@@ -1,0 +1,8 @@
+gametitle=Mission Impossible - Operation Surma SLES_520.01
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack
+patch=1,EE,206580e0,extended,3f400000
+
+

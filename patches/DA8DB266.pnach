@@ -1,0 +1,7 @@
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//SingStar Singalong with Disney SCES_55255
+patch=1,EE,002CB81C,word,30420000
+
+

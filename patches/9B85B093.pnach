@@ -1,0 +1,32 @@
+gametitle=WWE SmackDown - Here Comes the Pain (NTSC-U) (SLUS-20787)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by ElHecht
+
+// 16:9
+patch=1,EE,001040e4,word,3c013f40 // 00000000 hor fov
+patch=1,EE,001040f0,word,44810000 // 00000000
+patch=1,EE,001040f4,word,4600c602 // 00000000
+patch=1,EE,00206a5c,word,3c023f08 // 3c023f80 camera fix
+
+// 16:10
+//patch=1,EE,001040e4,word,3c013f55 // 00000000 hor fov
+//patch=1,EE,001040e8,word,34215555 // 00000000 hor fov
+//patch=1,EE,001040f0,word,44810000 // 00000000
+//patch=1,EE,001040f4,word,4600c602 // 00000000
+//patch=1,EE,00206a5c,word,3c023f30 // 3c023f80 camera fix
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,201026CC,extended,00000000
+patch=1,EE,20102934,extended,00000000
+patch=1,EE,E0041100,extended,00756060
+patch=1,EE,20756058,extended,00000001
+patch=1,EE,20756060,extended,00001000
+patch=1,EE,20756080,extended,00000001
+patch=1,EE,20756088,extended,00001000
+
+

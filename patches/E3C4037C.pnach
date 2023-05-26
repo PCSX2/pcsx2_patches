@@ -1,0 +1,18 @@
+gametitle=Forever Kingdom SLUS_203.43
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,00101cc8,word,3c013f40
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+
+//No-Interlacing
+//Side Effect - subtitles during the first fmv are flickering, set deinterlacing to automatic or disable subtitles.
+patch=1,EE,00104DA8,word,00000000
+patch=1,EE,00202E94,word,00000000
+
+

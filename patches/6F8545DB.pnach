@@ -1,0 +1,29 @@
+gametitle=ICO (SCUS-97113)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+
+//widescreen
+patch=1,EE,001146c8,word,3c013f40
+patch=1,EE,001146cc,word,44813800
+patch=1,EE,001146d8,word,46071082
+patch=1,EE,001146dc,word,c78780dc
+
+//render fix
+patch=1,EE,001141a4,word,240302ab
+patch=1,EE,00554790,word,44800000 //optional
+
+//black borders fix
+patch=1,EE,00113030,word,3c010000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,00274EF8,extended,00000001
+patch=1,EE,00274F20,extended,00000001
+patch=1,EE,00274F00,extended,00000040
+patch=1,EE,00274F28,extended,00000040
+
+

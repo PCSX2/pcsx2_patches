@@ -1,6 +1,0 @@
-gametitle=Dark Cloud (J)(SCPS-15004)
-comment=Widescreen Hack
-
-
-patch=1,EE,0012ce28,word,3c023f40
-

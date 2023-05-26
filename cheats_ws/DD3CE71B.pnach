@@ -1,8 +1,0 @@
-gametitle=Need for Speed ProStreet [SLUS-21658] (U)
-comment=Widescreen Mode (16:9)
-author=Xan1242 & Aero_
-// Enables Widescreen Mode
-patch=1,EE,20168A10,extended,24020001 // li v0, 1
-// Corrects Aspect Ratio
-patch=1,EE,206828D8,extended,3F400000 // Horizontal: 0.75f
-patch=1,EE,206828DC,extended,3F8CCCCD // Vertical: 1.10f

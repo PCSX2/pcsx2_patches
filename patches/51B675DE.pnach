@@ -1,0 +1,9 @@
+gametitle=Samurai Jack - The Shadow of Aku SLUS_208.99
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,0019884c,word,3c013f1a
+patch=1,EE,2040918c,word,43a80000
+
+

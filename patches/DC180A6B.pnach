@@ -1,0 +1,10 @@
+gametitle=Silent Hill Origins (SLES-55147)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen fix by nemesis2000 (pnach by nemesis2000)
+
+patch=1,EE,001da9ec,word,3c013fe3
+patch=1,EE,001da9f0,word,34218e39
+
+

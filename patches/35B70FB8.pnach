@@ -1,0 +1,11 @@
+gametitle=L.A. Rush (U)(SLUS-21112)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack (NTSC-U by Arapapa)
+
+//Gameplay 16:9
+
+patch=1,EE,002e38d8,word,3c013f40 //3c013f80
+
+

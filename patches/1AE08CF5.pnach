@@ -1,0 +1,8 @@
+gametitle=Galerians Ash SLES_513.43
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,001e5f68,word,3c013f40
+
+
