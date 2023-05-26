@@ -98,7 +98,7 @@ patch=1,EE,0024576c,word,3c02bf30 //3c02bf80
 //HP
 //patch=1,EE,002cae20,word,3c023f40 //3c033f80
 //patch=1,EE,002cae38,word,4600f346 //46006346
-//Żȯ����
+//Å»È¯ºÎÀ§
 //patch=1,EE,002caed0,word,3c023f00 //3c023f80
 //patch=1,EE,002caf6c,word,3c023f00 //3c023f80
 //patch=1,EE,002cab9c,word,3c033f00 //3c033f80

@@ -2,7 +2,7 @@ gametitle=LEGO Batman: The Video Game [PAL] (SLES_551.35)
 comment=Widescreen hack by El_Patas
 
 //El parche funciona bien para la parte jugable, aunque como efecto negativo provoca que
-//tengan un gran zoom el menú principal y las escenas cinemáticas.
+//tengan un gran zoom el menÃº principal y las escenas cinemÃ¡ticas.
 
 //Gameplay 16:9
 patch=1,EE,2033DE44,extended,00000A01 //00000A00  Internal Wide Option On
