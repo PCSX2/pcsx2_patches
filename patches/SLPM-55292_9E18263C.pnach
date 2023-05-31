@@ -1,0 +1,6 @@
+[Remove Radiosity Filter]
+description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
+
+//Remove Radiosity Filter
+patch=1,EE,206691DC,extended,00000000
+
