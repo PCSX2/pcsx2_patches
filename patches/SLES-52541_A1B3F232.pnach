@@ -2,7 +2,7 @@ gametitle=Grand Theft Auto: San Andreas (SLES-52541)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Original Widescreen fix by nemesis2000 (pnach by nemesis2000) for the NTSC-U version, ported to PAL by shaolinassassin
+author=nemesis2000 + shaolinassassin
 
 //widescreen fix
 patch=1,EE,001130BC,word,3C013F9D
@@ -20,3 +20,8 @@ description=Removes the radiosity filter which causes a ghosting effect on the p
 //Remove Radiosity Filter
 patch=1,EE,20667A64,extended,00000000
 
+[Force 50FPS]
+author=Boludoz
+description=Forces the game to run at 50 fps internally.
+
+patch=1,EE,006679CC,extended,00000001
