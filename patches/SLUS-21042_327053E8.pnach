@@ -45,6 +45,9 @@ patch=1,EE,003c5260,word,e7a10044
 patch=1,EE,003c5264,word,e7a100c4
 
 //480p
+[No-Interlacing]
+gsinterlacemode=1
+
 patch=1,EE,0045aaa4,word,3c050000
 // The patch below causes the emulator to crash so comment it out.
 //patch=1,EE,0045aaac,word,3c060050
