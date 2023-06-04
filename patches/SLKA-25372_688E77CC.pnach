@@ -23,9 +23,9 @@ patch=1,EE,205BCB90,extended,3F400000
 //patch=1,EE,20432370,extended,43aaaaaa //43a00000
 
 
-[60 Fps]
+[60 FPS]
 //60 FPS by asasega
-//patch=1,EE,1040dff4,extended,00000001
-//patch=1,EE,2040ec2c,extended,3C888889
+patch=1,EE,1040dff4,extended,00000001
+patch=1,EE,2040ec2c,extended,3C888889
 
 
