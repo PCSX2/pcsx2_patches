@@ -41,7 +41,10 @@ patch=1,EE,001aae88,word,240a0190
 //subtitles off
 //patch=1,EE,002274cc,word,11e00019
 
+
+[60 FPS]
+description=Forces the game to run at 60.
 //60 FPS
-//patch=1,EE,00356F4C,extended,00000000
+patch=1,EE,00356F4C,extended,00000000
 
 

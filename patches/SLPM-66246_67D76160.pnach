@@ -16,14 +16,19 @@ patch=1,EE,203ace14,extended,3fc65461  // 3f951eb8
 //patch=1,EE,00114310,word,24040000
 //patch=1,EE,00106AD8,word,a3809b13
 
-//progressive scan by Red_Tv
-//patch=1,EE,003575a8,word,00000000 //007c1021
-//patch=1,EE,00376c4c,word,24110000 //00058c03
-//patch=1,EE,00376c50,word,24120050 //00069403
-//patch=1,EE,00376c54,word,24020001
-//patch=1,EE,0035b4d8,word,00000000 //a382db52
 
+[No-Interlacing]
+gsinterlacemode=1
+//progressive scan by Red_Tv
+patch=1,EE,003575a8,word,00000000 //007c1021
+patch=1,EE,00376c4c,word,24110000 //00058c03
+patch=1,EE,00376c50,word,24120050 //00069403
+patch=1,EE,00376c54,word,24020001
+patch=1,EE,0035b4d8,word,00000000 //a382db52
+
+
+[60 FPS]
 //60 FPS by Red_Tv
-//patch=1,EE,0011b560,word,10000006 //14400006
+patch=1,EE,0011b560,word,10000006 //14400006
 
 
