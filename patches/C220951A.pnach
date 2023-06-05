@@ -1,4 +1,4 @@
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-patch=1,EE,201532C4,extended,30840000
+patch=1,EE,2025C724,extended,34020001
