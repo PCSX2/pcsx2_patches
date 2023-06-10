@@ -12,14 +12,17 @@ patch=1,EE,D0145990,extended,8C8B000C
 patch=1,EE,D01459C8,extended,240F8000
 patch=1,EE,D0131758,extended,8E0E0004
 
-//comment=Force 60 FPS
-//patch=1,EE,001D5AD8,extended,00000000
-//patch=1,EE,001D6DB8,extended,00000001
-//patch=1,EE,001D6DBC,extended,00000000
+[60 FPS]
+description=60 fps patch (may need overclocking EE).
 
-//comment=Force 30 FPS
-//patch=1,EE,001D5AD8,extended,00000040
-//patch=1,EE,001D6DB8,extended,00000002
-//patch=1,EE,001D6DBC,extended,00000001
+patch=1,EE,001D5AD8,extended,00000000
+patch=1,EE,001D6DB8,extended,00000001
+patch=1,EE,001D6DBC,extended,00000000
+
+[30 FPS]
+description=30 fps patch.
+patch=1,EE,001D5AD8,extended,00000040
+patch=1,EE,001D6DB8,extended,00000002
+patch=1,EE,001D6DBC,extended,00000001
 
 
