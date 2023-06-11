@@ -1,0 +1,8 @@
+gametitle=Pac-Man World Rally (NTSC-U)
+
+[60 FPS]
+author=asasega
+description=Patches the game to run at 60 FPS.
+
+patch=1,EE,2059BF10,extended,3F800000 // FPS
+patch=1,EE,2055B000,extended,3F000000 // Speed

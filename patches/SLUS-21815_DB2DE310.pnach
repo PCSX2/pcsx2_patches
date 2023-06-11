@@ -2,7 +2,8 @@ gametitle=Ben 10: Alien Force [NTSC-U] (SLUS_218.15)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Sergx12
+author=Sergx12
+description=Patches the game to run at Widescreen 16:9 aspect ratio.
 
 //Gameplay 16:9
 patch=1,EE,002A2430,word,3C013F1C //3C013F00 Zoom
