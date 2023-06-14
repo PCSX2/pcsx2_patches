@@ -1,0 +1,4 @@
+gametitle=gametitle=Darkwatch (SLUS-21042)
+
+//60FPS
+patch=1,EE,0071FA68,extended,00000001
