@@ -23,3 +23,7 @@ patch=1,EE,00158370,word,3c0243d6 // 3c0243a0 renderfix
 //patch=1,EE,00158370,word,3c0243c1 // 3c0243a0 renderfix
 
 
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,0023C2DC,word,00000000

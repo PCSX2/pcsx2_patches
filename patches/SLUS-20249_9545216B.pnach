@@ -9,3 +9,7 @@ patch=1,EE,001dcc6c,word,3c013f40
 patch=1,EE,202FBF80,word,43f00000
 
 
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,002bbc4c,word,0000000
