@@ -22,3 +22,7 @@ patch=1,EE,001c7538,word,461e6b42 // 00000000
 //patch=1,EE,001c7538,word,461e6b42 // 00000000
 
 
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,202BB3EC,extended,00000000
