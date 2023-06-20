@@ -1,0 +1,19 @@
+gametitle=Armored Core - Nexus SLUS_209.86  SLUS_210.79
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,001211c8,word,3c023f22
+patch=1,EE,01e16348,word,3c023f40
+patch=1,EE,202B757C,word,43C00000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,E0011400,extended,002C1050
+patch=1,EE,2023C9AC,extended,30420001
+patch=1,EE,E0019000,extended,002C1050
+patch=1,EE,2023C9AC,extended,30420000
+
+
