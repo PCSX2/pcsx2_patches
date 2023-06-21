@@ -1,6 +1,7 @@
+gametitle=Total Overdose (E)(SLES-53492)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Total Overdose (E)(SLES-53492)
 comment=Widescreen Hack
 
 //00 00 80 3F 83 F9 22 3F DB 0F C9 3F 00 00 00 BF

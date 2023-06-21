@@ -1,6 +1,7 @@
+gametitle=Yuu Yuu Hakusho Forever [NTSC-J](SLPS-25499)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Yuu Yuu Hakusho Forever [NTSC-J](SLPS-25499)
 comment=Widescreen Hack
 
 patch=1,EE,20630240,extended,3f400000

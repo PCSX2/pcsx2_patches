@@ -1,6 +1,7 @@
+gametitle=X-Squad (E)(SLES-50031)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=X-Squad (E)(SLES-50031)
 comment=Widescreen Hack (PAL by Arapapa)
 
 //803f013c 00008144 00000000 000040e4

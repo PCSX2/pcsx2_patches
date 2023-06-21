@@ -1,6 +1,7 @@
+gametitle=Total Overdose: A Gunslinger's Tale in Mexico (NTSC-U)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Total Overdose: A Gunslinger's Tale in Mexico (NTSC-U)
 comment=Widescreen Hack
 
 patch=1,EE,206927AC,word,3F47AE14 // Zoom

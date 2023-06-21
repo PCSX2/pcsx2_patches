@@ -1,6 +1,7 @@
+gametitle=Samurai Dou 2 - Way of the Samurai 2 NTSC-J] (SLPM-65380)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Samurai Dou 2 - Way of the Samurai 2 NTSC-J] (SLPM-65380)
 comment=Widescreen Hack
 
 patch=1,EE,202EFCA0,extended,3F400000

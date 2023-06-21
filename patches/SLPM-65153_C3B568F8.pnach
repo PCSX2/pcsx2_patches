@@ -1,6 +1,7 @@
+gametitle=Gungrave [NTSC-J] (SLPM-65153)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Gungrave [NTSC-J] (SLPM-65153)
 comment=Widescreen Hack
 
 patch=1,EE,001bee9c,word,3c013f40
@@ -11,6 +12,6 @@ patch=1,EE,001beea8,word,4600c602
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-﻿patch=1,EE,201AF9C4,word,00000000 // nop interleaced
+patch=1,EE,201AF9C4,word,00000000 // nop interleaced
 
 

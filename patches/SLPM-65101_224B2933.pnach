@@ -1,6 +1,7 @@
+gametitle=Onimusha 2 [NTSC-J] (SLPM-65101])
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Onimusha 2 [NTSC-J] (SLPM-65101])
 comment=Widescreen correction by nemesis2000 (pnach by Little Giant)
 //gameplay
 patch=1,EE,0010285c,word,3c013f40

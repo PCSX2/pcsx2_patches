@@ -1,6 +1,7 @@
+gametitle=Tenchu Kurenai NTSC-J (SLPS-25384)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Tenchu Kurenai NTSC-J (SLPS-25384)
 comment=Widescreen Hack
 //16:9
 patch=1,EE,0012ef50,word,3c023f40

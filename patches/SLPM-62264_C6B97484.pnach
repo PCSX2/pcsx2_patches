@@ -1,6 +1,7 @@
+gametitle=Shin Contra [NTSC-J] (SLPM-62264)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Shin Contra [NTSC-J] (SLPM-62264)
 comment=Widescreen hack
 patch=1,EE,005dc404,word,3c013f40 // hor fov
 patch=1,EE,005dc408,word,44810000

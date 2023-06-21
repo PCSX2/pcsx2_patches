@@ -1,6 +1,7 @@
+gametitle=Sengoku Musou 2 Moushouden[NTSC-J] (SLPS-670.14)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Sengoku Musou 2 Moushouden[NTSC-J] (SLPS-670.14)
 comment=Widescreen patch
 
 patch=1,EE,00181558,word,3c023f19 // 3c023f4c hor fov 1-player

@@ -1,6 +1,7 @@
+gametitle=Tenchu San NTSC-J (SLPS-25234)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Tenchu San NTSC-J (SLPS-25234)
 comment=Widescreen hack
 patch=1,EE,2163DB24,extended,3f400000 //(gameplay)
 patch=1,EE,001551c8,word,3C024455 //3C024422 (render fix)

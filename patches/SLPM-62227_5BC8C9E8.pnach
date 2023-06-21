@@ -1,6 +1,7 @@
+gametitle=Marvel vs. Capcom 2: New Age of Heroes [NTSC-J] (SLPM-62227)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Marvel vs. Capcom 2: New Age of Heroes [NTSC-J] (SLPM-62227)
 comment=Widescreen patch by nemesis2000 (pnach by nemesis2000)
 
 patch=1,EE,00414174,word,3C023FAA
