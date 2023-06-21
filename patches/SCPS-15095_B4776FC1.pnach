@@ -1,6 +1,7 @@
+gametitle=Genji [NTSC-J] (SCPS-15095)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Genji [NTSC-J] (SCPS-15095)
 comment=Widescreen Hack by okuha8748p, Arapapa
 
 patch=1,EE,002e4ba0,word,3C013FC5

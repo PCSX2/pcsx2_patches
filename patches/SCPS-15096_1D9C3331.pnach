@@ -1,6 +1,7 @@
+gametitle=Saru Get You 3 [NTSC-J] （SCPS-15096)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=Saru Get You 3 [NTSC-J] （SCPS-15096)
 comment=Widescreen hack
 
 patch=1,EE,20762BB0,extended,3F100000

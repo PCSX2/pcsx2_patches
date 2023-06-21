@@ -1,6 +1,7 @@
+gametitle=XIII (SLUS-20677)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-﻿gametitle=XIII (SLUS-20677)
 comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
 
 patch=1,EE,001d66fc,word,14400005
