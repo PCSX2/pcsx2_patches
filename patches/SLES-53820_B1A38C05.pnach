@@ -12,10 +12,26 @@ patch=1,EE,00174e3c,word,461e2f83 // e48402cc
 patch=1,EE,00174e64,word,e49e02cc // 00000000
 
 // 16:10
-patch=1,EE,00174dd4,word,3c094440 // 3c024420 hor fov
-patch=1,EE,00174ddc,word,35290000 // 44822000 hor fov
-patch=1,EE,00174e38,word,4489f000 // 46042903
-patch=1,EE,00174e3c,word,461e2f83 // e48402cc
-patch=1,EE,00174e64,word,e49e02cc // 00000000
+//patch=1,EE,00174dd4,word,3c094440 // 3c024420 hor fov
+//patch=1,EE,00174ddc,word,35290000 // 44822000 hor fov
+//patch=1,EE,00174e38,word,4489f000 // 46042903
+//patch=1,EE,00174e3c,word,461e2f83 // e48402cc
+//patch=1,EE,00174e64,word,e49e02cc // 00000000
 
+[No-Interlacing]
+gsinterlacemode=1
+author=PsxFan107
+patch=1,EE,2011236C,extended,00000000
+patch=1,EE,20177E5C,extended,0000102D
+
+[Remove Blur]
+author=PsxFan107 & 001
+description=Removes motion blur/ghosting
+patch=1,EE,2018C37C,extended,00000000 //by PsxFan107
+patch=1,EE,20177E60,extended,00000000 //by 001
+
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,00246C1A,extended,00000000
 

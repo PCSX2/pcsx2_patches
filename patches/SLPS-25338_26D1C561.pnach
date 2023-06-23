@@ -21,8 +21,19 @@ patch=1,EE,00158370,word,3c0243d6 // 3c0243a0 renderfix
 //patch=1,EE,00120f78,word,3462aaab // 3462cccd hor fov gameplay
 //patch=1,EE,00158370,word,3c0243c1 // 3c0243a0 renderfix
 
-
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,0023C2DC,word,00000000
+
+[Remove Blur]
+author=001 & Berylskid
+description=Removes blur effects.
+patch=1,EE,E0020000,extended,10487740
+patch=1,EE,61CC66E8,extended,00000000
+patch=1,EE,00000001,extended,0000005F
+
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,002096EA,extended,00000000

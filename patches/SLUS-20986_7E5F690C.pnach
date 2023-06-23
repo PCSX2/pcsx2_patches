@@ -1,4 +1,4 @@
-gametitle=Armored Core - Nexus SLUS_209.86  SLUS_210.79
+gametitle=Armored Core - Nexus SLUS_209.86
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -6,7 +6,6 @@ comment=Widescreen Hack
 patch=1,EE,001211c8,word,3c023f22
 patch=1,EE,01e16348,word,3c023f40
 patch=1,EE,202B757C,word,43C00000
-
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
@@ -16,4 +15,14 @@ patch=1,EE,2023C9AC,extended,30420001
 patch=1,EE,E0019000,extended,002C1050
 patch=1,EE,2023C9AC,extended,30420000
 
+[Remove Blur]
+author=001 & Berylskid
+description=Removes blur effects.
+patch=1,EE,E0020000,extended,10298C50
+patch=1,EE,61CC6EE8,extended,00000000
+patch=1,EE,00000001,extended,0000005F
 
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,00209A9A,extended,00000000

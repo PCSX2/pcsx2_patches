@@ -1,23 +1,26 @@
-gametitle=Armored Core: Last Raven SLUS_213.38
+gametitle=Armored Core - Last Raven SLUS_213.38
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00174e64,word,3c024455
-
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=De-interlace and blur removal by PsxFan107
-
-//De-Interlace
-patch=1,EE, 00112424,word,00000000
-patch=1,EE, 00177D5C,word,0000102D
+author=PsxFan107
+patch=1,EE,00112424,word,00000000
+patch=1,EE,00177D5C,word,0000102D
 
 //Disable Anti-Aliasing
-patch=1,EE, 001786E8,word,24020001
+//patch=1,EE,001786E8,word,24020001
 
-//Remove Blur
-patch=1,EE, 0018C09C,word,00000000
+[Remove Blur]
+author=PsxFan107 & 001
+description=blur removal
+patch=1,EE,0018C09C,word,00000000 //by PsxFan107
+patch=1,EE,00177D60,word,00000000 //by 001
 
-
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,00246A8A,extended,00000000
