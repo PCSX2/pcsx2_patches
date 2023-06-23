@@ -18,9 +18,19 @@ patch=1,EE,00174ef4,word,e49e02cc //00000000
 //patch=1,EE,00174ecc,word,461e2f83 //e48402cc
 //patch=1,EE,00174ef4,word,e49e02cc //00000000
 
-
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,00112424,word,00000000
 patch=1,EE,00177D5C,word,0000102D
+
+[Remove Blur]
+author=PsxFan107 & 001
+description=Removes blur effects.
+patch=1,EE,0018C09C,word,00000000 //by PsxFan107
+patch=1,EE,00177D60,word,00000000 //by 001
+
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,002469FA,extended,00000000

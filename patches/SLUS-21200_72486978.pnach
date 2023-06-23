@@ -7,8 +7,19 @@ patch=1,EE,00172538,word,3c023f22
 patch=1,EE,01ec2218,word,3c023f40
 patch=1,EE,202B067C,word,43c00000
 
-
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,0011F014,word,00000000
+
+[Remove Blur]
+author=001 & Berylskid
+description=Removes blur effects.
+patch=1,EE,E0020000,extended,1027CD3C
+patch=1,EE,61D8A268,extended,00000000
+patch=1,EE,00000001,extended,0000005F
+
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,00247C6A,extended,00000000
