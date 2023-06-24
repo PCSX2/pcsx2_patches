@@ -2,7 +2,8 @@ gametitle=Asterix & Obelix - Kick Buttix (U)(SLUS-20866)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+comment=Widescreen hack.
+author=ElHecht
 
 // 16:9
 patch=1,EE,00126ddc,word,081032ec // e6000024 jump to code-inject 0040cbb0
@@ -17,25 +18,36 @@ patch=1,EE,0040cbc4,word,461e0843 // 00000000
 patch=1,EE,0040cbc8,word,e7a10020 // 00000000
 patch=1,EE,0040cbcc,word,08049b78 // 00000000 jump back to 00126de0
 
-
-//Black Bar Fix (Intro Movie, Intro 3D DEMO and etc)
-//patch=1,EE,001956dc,word,3c070000 //3c073f00
-//patch=1,EE,001956e0,word,3c060000 //3c063fc0
-
-//patch=1,EE,00195790,word,3c070000 //3c073f00
-//patch=1,EE,00195798,word,3c060000 //3c063fc0
-
-//patch=1,EE,0019584c,word,3c060000 //3c063f00
-//patch=1,EE,0019585c,word,3c020000 //3c063fc0
-
-//patch=1,EE,00195914,word,3c070000 //3c073f00
-//patch=1,EE,00195918,word,3c060000 //3c063fc0
-
-//patch=1,EE,00195aa8,word,3c070000 //3c073f00
-//patch=1,EE,00195aac,word,3c060000 //3c063fc0
-
-//Font fix by Arapapa
+[Font Fix]
+comment=Corrects the font size for widescreen.
+author=Arapapa
+//Font fix
 patch=1,EE,00229c00,word,3c023f10 //3c023f40
 patch=1,EE,0022a99c,word,3c023f10 //3c023f40
 
+[No-Interlacing]
+comment=Disables screen shaking entirely.
+author=Martyste
+gsinterlacemode=1
+//no interlacing
+patch=1,EE,001AE890,extended,00000000 //00000002
 
+[Black Bar Fix]
+comment=Removes black bars from the Intro and Cutscenes.
+author=ElHecht
+
+//Black Bar Fix
+patch=1,EE,001956dc,word,3c070000 //3c073f00
+patch=1,EE,001956e0,word,3c060000 //3c063fc0
+
+patch=1,EE,00195790,word,3c070000 //3c073f00
+patch=1,EE,00195798,word,3c060000 //3c063fc0
+
+patch=1,EE,0019584c,word,3c060000 //3c063f00
+patch=1,EE,0019585c,word,3c020000 //3c063fc0
+
+patch=1,EE,00195914,word,3c070000 //3c073f00
+patch=1,EE,00195918,word,3c060000 //3c063fc0
+
+patch=1,EE,00195aa8,word,3c070000 //3c073f00
+patch=1,EE,00195aac,word,3c060000 //3c063fc0
