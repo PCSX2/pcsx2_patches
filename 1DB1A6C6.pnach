@@ -1,0 +1,7 @@
+gametitle=Asterix & Obelix XXL (PAL M-5 SLES-51838)
+[No-Interlacing]
+comment=Disables screen shaking entirely.
+author=Martyste
+gsinterlacemode=1
+//no interlacing
+patch=1,EE,001ADBD4,extended,00000000 //00000002
