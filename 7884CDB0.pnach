@@ -1,0 +1,7 @@
+gametitle=Asterix & Obelix Kick Buttix (NTSC-U SLUS-20866)
+[No-Interlacing]
+comment=Disables screen shaking entirely.
+author=Martyste
+gsinterlacemode=1
+//no interlacing
+patch=1,EE,001AE890,extended,00000000 //00000002
