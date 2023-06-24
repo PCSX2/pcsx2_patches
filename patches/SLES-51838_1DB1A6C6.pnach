@@ -2,7 +2,8 @@ gametitle=Asterix & Obelix XXL (PAL-M5) (SLES-51838)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+comment=Widescreen hack.
+author=ElHecht
 
 // 16:9
 patch=1,EE,00126ce4,word,0810504c // e6000024 jump to code-inject 00414130
@@ -17,8 +18,38 @@ patch=1,EE,00414144,word,461e0843 // 00000000
 patch=1,EE,00414148,word,e7a10020 // 00000000
 patch=1,EE,00414150,word,08049b3a // 00000000 jump back to 00126ce8
 
-//Font fix by Arapapa
+[Font Fix]
+comment=Corrects the font size for widescreen.
+author=Arapapa
+
+//Font fix
 patch=1,EE,0023fd98,word,3c023f10 //3c023f40
 patch=1,EE,00240a0c,word,3c023f10 //3c023f40
 
+[No-Interlacing]
+comment=Disables screen shaking entirely.
+author=Martyste
+gsinterlacemode=1
 
+//no interlacing
+patch=1,EE,001ADBD4,extended,00000000 //00000002
+
+[Black Bar Fix]
+comment=Removes black bars from the Intro and Cutscenes.
+author=Martyste & ElHecht
+
+//Black Bars
+patch=1,EE,00194284,word,3c070000 //3c073f00
+patch=1,EE,00194288,word,3c060000 //3c063fc0
+
+patch=1,EE,00194338,word,3c070000 //3c073f00
+patch=1,EE,00194340,word,3c060000 //3c063fc0
+
+patch=1,EE,001944BC,word,3c070000 //3c073f00
+patch=1,EE,001944C0,word,3c060000 //3c063fc0
+
+patch=1,EE,00194650,word,3c070000 //3c073f00
+patch=1,EE,00194654,word,3c060000 //3c063fc0
+
+patch=1,EE,001946EC,word,3c070000 //3c073f00
+patch=1,EE,001946F8,word,3c060000 //3c063fc0
