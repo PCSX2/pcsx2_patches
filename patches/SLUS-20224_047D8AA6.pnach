@@ -1,5 +1,13 @@
 gametitle=Pac-Man World 2 (U)(SLUS-20224)
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack
+
+//Official Widescreen auto-enable (vertical screen skewed)
+patch=1,EE,205A68C0,extended,00000001 // change value to 0 for 4:3
+
+
 [No-Interlacing]
 gsinterlacemode=1
 comment=No Interlacing
