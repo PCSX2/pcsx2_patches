@@ -44,6 +44,9 @@ patch=1,EE,003c525c,word,44810800
 patch=1,EE,003c5260,word,e7a10044
 patch=1,EE,003c5264,word,e7a100c4
 
+
+[60FPS]
+patch=1,EE,0071FA68,extended,00000001
 //480p
 [No-Interlacing]
 gsinterlacemode=1

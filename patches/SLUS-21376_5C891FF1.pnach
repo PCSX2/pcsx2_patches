@@ -13,3 +13,6 @@ patch=1,EE,204CA694,word,3FE38E39
 patch=1,EE,205BC390,word,3F400000
 
 
+[60 FPS]
+patch=1,EE,1040DF74,extended,00000001 // 60 fps
+patch=1,EE,205A8A9C,extended,3C888889 // speed
