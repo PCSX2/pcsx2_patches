@@ -29,6 +29,7 @@ patch=1,EE,0023C2DC,word,00000000
 [Remove Blur]
 author=001 & Berylskid
 description=Removes blur effects.
+patch=1,EE,201317F0,extended,00000000
 patch=1,EE,E0020000,extended,10487740
 patch=1,EE,61CC66E8,extended,00000000
 patch=1,EE,00000001,extended,0000005F
