@@ -10,4 +10,6 @@ patch=1,EE,00527e18,word,34218e34
 patch=0,EE,00527e14,word,3c013fe3
 patch=0,EE,00527e18,word,34218e34
 
-
+[disable Motion blur]
+description= removes motion blur 
+patch=1,EE,001CA488,word,03e00008
