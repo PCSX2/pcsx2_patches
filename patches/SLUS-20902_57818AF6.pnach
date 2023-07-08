@@ -10,3 +10,7 @@ patch=1,EE,00146dec,word,344249f9
 patch=1,EE,001e746c,word,3c044328
 
 
+[No-Interlacing]
+gsinterlacemode=1
+comment=No interleacing, videos still shake
+patch=1,EE,201E9274,extended,30420000
