@@ -1,0 +1,13 @@
+gametitle=Vampire Panic (Japan) (English Patched) [SLPM-62507]
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//No interlacing
+patch=1,EE,201E1AB0,word,30420000
+patch=1,EE,00101f5c,word,00000000 //64420008
+
+//Remove Broken Effect
+patch=1,EE,003FC3E4,word,00400000
+
+

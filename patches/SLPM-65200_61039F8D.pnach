@@ -1,0 +1,8 @@
+gametitle=Shinobi (Japan) [SLPM-65200]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=NTSC-J Widescreen Hack by synce
+patch=1,EE,21BCCA48,extended,3F400000
+
+

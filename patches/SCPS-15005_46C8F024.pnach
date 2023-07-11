@@ -1,0 +1,8 @@
+gametitle=Phase Paradox [SCPS-15005]
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,203118F0,extended,30630000
+
+

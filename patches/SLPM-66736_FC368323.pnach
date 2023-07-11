@@ -1,0 +1,9 @@
+gametitle=Rogue Hearts Dungeon (English Patched) [SLPM-66736]
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+// Rogue Hearts Dungeon
+patch=1,EE,00113554,word,30420000
+
+
