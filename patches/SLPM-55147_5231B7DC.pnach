@@ -1,0 +1,8 @@
+gametitle=Suggoi! Arcana Heart 2 (Japan) [SLPM-55147]
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2010F844,extended,00000000
+
+

@@ -1,0 +1,9 @@
+gametitle=Sega Ages 2500 Series Vol. 15 - Decathlete Collection [SLPM-62444]
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//No-Interlacing
+patch=1,EE,00101114,word,30420000
+
+

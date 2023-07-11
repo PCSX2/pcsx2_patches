@@ -1,8 +1,0 @@
-gametitle=Fantastic 4 - Rise of the Silver Surfer PAL-M2
-
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen Hack
-patch=1,EE,0037F768,word,3Faaaaab // 3F800000
-
-

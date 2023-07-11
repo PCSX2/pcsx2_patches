@@ -1,0 +1,14 @@
+gametitle=Soul Calibur III [SCES-53312]
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+// SoulCalibur 3 PAL 480P Patch
+// replace NTSC mode with Progressive Scan
+patch=1,EE,00509ECA,byte,06
+// rename "PAL60/60 Hz" with "Progressive"
+patch=1,EE,00B73FB4,word,6F725020
+patch=1,EE,00B73FB8,word,73657267
+patch=1,EE,00B73FBC,word,65766973
+patch=1,EE,00B73FC0,word,0A205D20
+
+

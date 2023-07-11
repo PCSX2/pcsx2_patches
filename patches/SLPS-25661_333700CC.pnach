@@ -1,0 +1,12 @@
+gametitle=The King of Fighters NESTS Collection [SLPS-25661]
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,E0020008,extended,0010796C
+patch=1,EE,2010796C,extended,00000000
+patch=1,EE,20107BD4,extended,00000000
+patch=1,EE,E0010008,extended,0010202C
+patch=1,EE,2010202C,extended,00000000
+
+
