@@ -1,4 +1,4 @@
-gametitle= Lets Ride! Silver Buckle Stables [SLES_551.36]
+gametitle=Lets Ride! Silver Buckle Stables [SLES_551.36]
 [Widescreen 16:9]
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 gsaspectratio=16:9
