@@ -18,4 +18,4 @@ patch=1,EE,00242DB4,word,0C044C32
 description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
 
 //Remove Radiosity Filter
-patch=1,EE,206680E4,extended,00C70700
+patch=1,EE,2051A6D8,extended,00000000
