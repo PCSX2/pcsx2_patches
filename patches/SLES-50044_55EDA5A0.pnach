@@ -31,3 +31,6 @@ patch=1,EE,0018c690,word,3c013f40 // 00000000 hor fov
 //patch=1,EE,0018c694,word,3421c28f // 00000000 hor fov
 
 
+[50 FPS]
+description=Patches the game to run at 50 FPS.
+patch=1,EE,2010121C,extended,00000000
