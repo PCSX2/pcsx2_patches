@@ -31,3 +31,6 @@ patch=1,EE,0011811c,word,461e6303 // 00000000 renderfix calculation
 //patch=1,EE,0018c7d4,word,3421c28f // 00000000 hor fov
 
 
+[60 FPS]
+description=Patches the game to run at 60 FPS.
+patch=1,EE,2010121C,extended,00000000
