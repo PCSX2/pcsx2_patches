@@ -3,7 +3,7 @@ gametitle=Grand Theft Auto: Vice City Stories (SLES_546.22)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Some Chump
-comment=Select widescreen in game otherwise image is zoomed out 4:3
+comment=Select widescreen in game otherwise image is zoomed out 4:3 (Original NTSC-U pnach by nemesis2000)
 
 //widescreen fix pal
 patch=1,EE,00265568,word,3c013f9d
