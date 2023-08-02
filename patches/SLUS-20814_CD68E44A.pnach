@@ -1,0 +1,6 @@
+gametitle=Max Payne 2 - Fall of Max Payne (SLUS-20814)
+
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,005D8DF8,word,00000001

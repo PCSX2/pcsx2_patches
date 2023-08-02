@@ -1,0 +1,6 @@
+gametitle=Max Payne 2 - Fall of Max Payne (Spain) (SLES-52256)
+
+[50 FPS]
+author=PeterDelta
+comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,005C0DF8,word,00000001
