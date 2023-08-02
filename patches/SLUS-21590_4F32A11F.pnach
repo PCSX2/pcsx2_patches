@@ -2,7 +2,8 @@ gametitle=Grand Theft Auto: Vice City Stories (SLUS-21590)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
+comment=Select widescreen in game otherwise image is zoomed out 4:3
 
 //widescreen fix
 patch=1,EE,002653d8,word,3c013f9d
@@ -16,4 +17,7 @@ patch=1,EE,0037add4,word,0c0994f6
 patch=1,EE,003b9d14,word,0c0994f9
 patch=1,EE,003ba1b0,word,0c0994f9
 
-
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,20370314,word,00000000
