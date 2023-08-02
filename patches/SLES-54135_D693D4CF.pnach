@@ -1,8 +1,8 @@
-gametitle=Grand Theft Auto: Liberty City Stories (PAL)  SLES_541.35
+gametitle=Grand Theft Auto: Liberty City Stories (SLES_541.35)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen converted from nemesis2000's NTSC pnach
+comment=Select widescreen in game otherwise image is zoomed out 4:3 (Original NTSC-U pnach by nemesis2000)
 
 //widescreen fix
 patch=1,EE,00291990,word,468010a0
@@ -57,4 +57,7 @@ patch=1,EE,00291a50,word,44810000
 patch=1,EE,00291a54,word,0c082128
 patch=1,EE,00291a58,word,46006302
 
-
+[50 FPS]
+author=CRASHARKI
+comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,202D9384,word,00000000 //14820017

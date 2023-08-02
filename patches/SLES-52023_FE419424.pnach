@@ -7,4 +7,7 @@ patch=1,EE,001c88a8,word,3c023f03
 patch=1,EE,001c88c8,word,3c033f6e
 patch=1,EE,001c88d0,word,3462eeee
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50FPS 
+patch=1,EE,0054A1E0,word,08000001 //08000002 j 0x00000008

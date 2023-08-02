@@ -1,0 +1,6 @@
+gametitle=Manhunt 2 (PAL) (SLES_548.19)
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50FPS
+patch=1,EE,00370EE8,word,24020001 //24020002 li v0,0x2

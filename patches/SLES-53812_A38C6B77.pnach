@@ -1,10 +1,14 @@
-gametitle=Codename Kids Next Door Operation VIDEOGAME [PAL-M4] (SLES_538.12)
+gametitle=Codename - Kids Next Door - Operation V.I.D.E.O.G.A.M.E. [PAL-M4] (SLES_538.12)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
+comment=Widescreen Hack
 
 //Gameplay 16:9
 patch=1,EE,20C156A4,extended,3F400000 //3F800000 (Increases hor. axis)
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50FPS
+patch=1,EE,00755C20,byte,01 //02
