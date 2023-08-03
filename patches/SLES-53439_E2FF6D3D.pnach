@@ -12,6 +12,6 @@ patch=1,EE,002DA688,word,3C013FAB //3c013f80
 
 [50 FPS]
 //02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C1 03 00 00 01 00 00 00 01 00 00 00 30 95 57 00
-author=asasega
+author=PeterDelta
 description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
-patch=1,EE,207B3ADC,extended,00000001 //00000002
+patch=1,EE,007B3ADC,word,00000001 //00000002
