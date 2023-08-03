@@ -2,6 +2,6 @@ gametitle=Crash of the Titans (PAL)
 
 [50 FPS]
 //01 00 02 24 12 00 82 14 5C
-author=asasega
+author=IWILLCRAFT
 description=Patches the game to run at 50 FPS (Might need 130% EE Overclock to be stable).
 patch=1,EE,204924B8,extended,24020000 //24020001

@@ -58,6 +58,6 @@ patch=1,EE,00291a54,word,0c082128
 patch=1,EE,00291a58,word,46006302
 
 [50 FPS]
-author=CRASHARKI
+author=Snake356
 comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,202D9384,word,00000000 //14820017
