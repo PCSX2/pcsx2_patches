@@ -2,7 +2,8 @@ gametitle=SpongeBob's Atlantis SquarePantis (E)(SLES-55024)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
+comment=Widescreen Hack
 
 //Widescreen hack 16:9
 
@@ -14,4 +15,7 @@ patch=1,EE,003b3708,word,461eb582
 //Render fix
 patch=1,EE,00393220,word,3c013f2b //3c013f00
 
-
+[50 FPS]
+author=asasega
+comment=Patches the game to run at 50 FPS.
+patch=1,EE,21FAFC98,extended,42700000
