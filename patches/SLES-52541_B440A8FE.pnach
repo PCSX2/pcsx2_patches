@@ -2,7 +2,8 @@ gametitle=Grand Theft Auto: San Andreas [PAL-M5] (v2.01) (SLES-52541)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas
+author=El_Patas
+comment=Select widescreen in game otherwise image is zoomed out 4:3
 
 //Widescreen fix
 patch=1,EE,001130BC,word,3C013F9D
@@ -14,9 +15,15 @@ patch=1,EE,001130CC,word,E78C9A90
 patch=1,EE,0021DFE4,word,0C044C2F //0C044C30
 patch=1,EE,00242DB4,word,0C044C32 //0C044C30
 
+[No-Interlacing]
+gsinterlacemode=1
+patch=1,EE,2054A06C,extended,00000000
+
 [Remove Radiosity Filter]
 description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
-
-//Remove Radiosity Filter
 patch=1,EE,2051A7C8,extended,00000000
 
+[50 FPS]
+author=Snake356
+comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,0066814C,extended,00000001

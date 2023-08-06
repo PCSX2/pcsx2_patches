@@ -1,8 +1,9 @@
-gametitle=Grand Theft Auto: Vice City SLES_510.61 / Ver 3
+gametitle=Grand Theft Auto: Vice City (v3.00) (SLES_510.61)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen converted from NTSC fix by nemesis2000 (pnach by Some Chump)
+author=Some Chump
+comment=Select widescreen in game otherwise image is zoomed out 4:3 (Original NTSC-U pnach by nemesis2000)
 
 //widescreen fix
 patch=1,EE,001324BC,word,3C013F9D
@@ -15,4 +16,11 @@ patch=1,EE,002485dc,word,0C04C92F
 patch=1,EE,002764AC,word,0C04C932
 patch=1,EE,00276A7C,word,0C04C932
 
+[No-Interlacing]
+gsinterlacemode=1
+patch=1,EE,20112444,extended,00000000
 
+[50 FPS]
+author=Snake356
+comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,202788AC,extended,28420001
