@@ -1,0 +1,26 @@
+gametitle=Grand Theft Auto: Vice City (v2.03) (SLES_510.61)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Snake356
+comment=Select widescreen in game otherwise image is zoomed out 4:3
+
+//widescreen fix
+patch=1,EE,001323AC,word,3C013F9D
+patch=1,EE,001323B0,word,44810000
+patch=1,EE,001323B4,word,46006302
+patch=1,EE,001323B8,word,03E00008
+patch=1,EE,001323BC,word,E78C87F8
+
+patch=1,EE,0024335C,word,0C04C8EB
+patch=1,EE,002706DC,word,0C04C8EE
+patch=1,EE,00270CB4,word,0C04C8EE
+
+[No-Interlacing]
+gsinterlacemode=1
+patch=1,EE,201123C4,extended,00000000
+
+[50 FPS]
+author=Snake356
+comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,20272AD4,extended,28420001
