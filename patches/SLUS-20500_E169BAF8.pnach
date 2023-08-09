@@ -1,0 +1,10 @@
+gametitle=Red Dead Revolver SLUS-20500 Blur orPost-Processing removal (V1.03)
+
+[Blur or Post-Processing removal]
+author=kozarovv
+comment=Blur or Post-Processing removal ported from Aggressive CRC
+
+//Vaseline removal
+//https://forums.pcsx2.net/Thread-Post-your-PCSX2-cheats-patches-here?pid=611544#pid611544
+patch=1,EE,004c4b78,word,03e00008
+patch=1,EE,004c4b7c,word,00000000
