@@ -14,4 +14,7 @@ patch=1,EE,00229dac,word,44816800
 patch=1,EE,00229ddc,word,46007307
 patch=1,EE,00229de0,word,46006bc7
 
-
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS.
+patch=1,EE,2011060C,word,2C420001 
