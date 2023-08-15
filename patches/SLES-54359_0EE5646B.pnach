@@ -1,0 +1,10 @@
+gametitle=Legend of Spyro, The - A New Beginning (SLES-54359)
+
+[50 FPS]
+author=asasega + CRASHARKI
+comment=Patches the game to run at 50 FPS.
+patch=1,EE,201211B4,word,28420001 //28420002
+patch=1,EE,201212B8,word,28420001 //28420002
+patch=1,EE,E0020001,extended,0074A914
+patch=1,EE,201211B4,extended,28420002
+patch=1,EE,201212B8,extended,28420002
