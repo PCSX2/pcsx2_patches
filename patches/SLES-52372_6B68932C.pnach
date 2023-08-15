@@ -1,11 +1,11 @@
-gametitle=Spider-Man 2 (NTSC-U) (SLUS_207.76)
+gametitle=Spider-Man 2 (PAL) (SLES_523.72)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=flameofrecca + CRASHARKI
-comment=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original pnach by flameofrecca; new zoom value, gauge_hero, some map and the unused boss hud codes found by CRASHARKI)
-patch=1,EE,2067a910,word,3f947ae1  //vertical fov 3f5eb852
-patch=1,EE,2067a908,word,3c28a2f7  //zoom value 3c0efa35
+comment=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original NTSC-U pnach by flameofrecca; new zoom value, gauge_hero, some map and the unused boss hud codes found by CRASHARKI)
+patch=1,EE,2067ac70,word,3f947ae1  //vertical fov 3f5eb852
+patch=1,EE,2067ac68,word,3c28a2f7  //zoom value 3c0efa35
 
 //Map Screen HUD, text fixes
 //search the 206d**** address range for more map screen hud fixes
@@ -87,9 +87,9 @@ patch=1,EE,2072421C,word,42340000  //gauge_hero_01 42700000
 //patch=1,EE,208831EC,word,440cd000  //gauge_boss_icon_rhino 440EC000
 
 
-[60 FPS]
+[50 FPS]
 author=asasega + CRASHARKI
-description=Patches the game to run at 60 FPS (Might need 130% EE Overclock to be stable on heavy scenes).
-patch=1,EE,0060A9A0,word,00000001 //00000002
-patch=1,EE,E0010001,extended,005E3910
-patch=1,EE,0060A9A0,extended,00000002
+description=Patches the game to run at 50 FPS (Might need 130% EE Overclock to be stable on heavy scenes).
+patch=1,EE,0060AD20,word,00000001 //00000002
+patch=1,EE,E0010001,extended,005E3C90
+patch=1,EE,0060AD20,extended,00000002
