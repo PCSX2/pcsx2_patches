@@ -5,8 +5,8 @@ gsaspectratio=16:9
 comment=Widescreen hacks by Aced14 Font Fixes by gamemasterplc
 
 //16:9 Widescreen
-patch=1,EE,202D10A0,extended,4400A000 //442B8000 - Menu Master X FOV
-patch=1,EE,202D10C0,extended,3F206D39 //3EF0A3D7 - Menu Master Y FOV
+patch=1,EE,202D10A0,extended,4400A000 //442B8000 - Menu/Sweet Tour In-Game Cutscene Master X FOV
+patch=1,EE,202D10C0,extended,3F206D39 //3EF0A3D7 - Menu/Sweet Tour In-Game Cutscene Master Y FOV
 
 patch=1,EE,20222CE8,extended,08030000 //Jump to Custom Code
 patch=1,EE,200C0000,extended,00051843 //Divide Font Width by 2
@@ -20,12 +20,17 @@ patch=1,EE,101EF9AC,extended,0000008C //24060050 - Player 2 Text (1)
 patch=1,EE,101EF9E4,extended,0000008C //24060050 - Player 1 Text (2)
 patch=1,EE,101EF9FC,extended,0000008C //24060050 - Player 2 Text (2)
 
-patch=1,EE,10166194,extended,000043BB //3C0143FA - 1P Sweet Tour Master X FOV #1
-patch=1,EE,10166198,extended,0000E000 //34218000 - 1P Sweet Tour Master X FOV #2
+patch=1,EE,10166194,extended,000043BB //3C0143FA - 1P Sweet Tour Gameplay Master X FOV (after in-game cutscene) #1
+patch=1,EE,10166198,extended,0000E000 //34218000 - 1P Sweet Tour Gameplay Master X FOV (after in-game cutscene) #2
+patch=1,EE,101660F8,extended,000043BB //3C0143FA - 1P Sweet Tour Gameplay Master X FOV (after skipping in-game cutscene) #1
+patch=1,EE,101660FC,extended,0000E000 //34218000 - 1P Sweet Tour Gameplay Master X FOV (after skipping in-game cutscene) #2
 patch=1,EE,101B3F20,extended,000043BB //3C0143FA - 1P Generic Master X FOV #1
 patch=1,EE,101B3F24,extended,0000E000 //34218000 - 1P Generic Master X FOV #2
-patch=1,EE,101B6164,extended,000043BB //3C0143FA - 1P TMHO Story Master X FOV #1
-patch=1,EE,101B6168,extended,0000E000 //34218000 - 1P TMHO Story Master X FOV #2
+//patch=1,EE,201B5E40,extended,340301E0 //94430004 - ori v1, zero, $01e0 - Set v1 register to 480 - 1P TMHO Story In-Game Cutscene Master X FOV (commented-out due to grain overlay positioning issue in opening cutscene's first close-up angle of Calypso)
+patch=1,EE,101B6290,extended,000043BB //3C0143FA - 1P TMHO Story Gameplay Master X FOV (after in-game cutscene) #1
+patch=1,EE,101B6294,extended,0000E000 //34218000 - 1P TMHO Story Gameplay Master X FOV (after in-game cutscene) #2
+patch=1,EE,101B6164,extended,000043BB //3C0143FA - 1P TMHO Story Gameplay Master X FOV (after skipping in-game cutscene) #1
+patch=1,EE,101B6168,extended,0000E000 //34218000 - 1P TMHO Story Gameplay Master X FOV (after skipping in-game cutscene) #2
 patch=1,EE,202D0D00,extended,3F1F49E6 //3EEEEED9 - 1P Master Y FOV
 patch=1,EE,1013B4C8,extended,0000BF80 //3C01BF2E - 1P Master X Radar #1
 patch=1,EE,1013B4CC,extended,00000000 //3421147B - 1P Master X Radar #2
