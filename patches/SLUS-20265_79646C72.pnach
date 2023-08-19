@@ -1,13 +1,17 @@
-gametitle=James Bond 007 - Agent Under Fire (U)(SLUS-20265)
+gametitle=James Bond 007 - Agent Under Fire (U) (SLUS-20265)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+description=16:9 widescreen patch
+author=Arapapa, Silent
 
-//Widescreen hack 16:9
+// Action segments
+patch=1,EE,D03202DC,extended,01003F80
+patch=1,EE,103202DC,extended,00003FAB // 3F80
 
-//X-Fov
-//803f013c 00088144 60654224
-patch=1,EE,003202dc,word,3c013fab //3c013f80
-
-
+// Driving segments
+patch=1,EE,D022DCD8,extended,04003F80
+patch=1,EE,1022DCD8,extended,00003F40
+patch=1,EE,1012B7B0,extended,00003FE8
+patch=1,EE,1012B7B4,extended,00008E39
+patch=1,EE,1011B390,extended,000043F0 // 480.0
