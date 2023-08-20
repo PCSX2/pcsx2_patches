@@ -140,3 +140,16 @@ patch=1,EE,0016a518,word,03e00008
 patch=1,EE,0016a51c,word,27bd0020
 
 
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00477940,word,00000001 //00000002 srl zero,0x00
+patch=1,EE,0028FF6C,word,24020001 //24020002 li v0,0x2 60hz
+patch=1,EE,E001CFD0,extended,00962BAC
+patch=1,EE,0028FEC8,extended,24030002 //50hz li v1,0x2 50hz
+patch=1,EE,E0016380,extended,00962BAC
+patch=1,EE,0028FEC8,extended,24030001
+patch=1,EE,E0015E20,extended,00962BAC
+patch=1,EE,0028FEC8,extended,24030001
+patch=1,EE,E0018580,extended,00962BAC
+patch=1,EE,0028FEC8,extended,24030001
