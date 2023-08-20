@@ -78,3 +78,7 @@ comment= pnach by pgert.
 ; ==========
 
 
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0012795C,word,10000003 //10400003 0043102B sltu v0,v1
