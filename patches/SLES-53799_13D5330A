@@ -1,0 +1,24 @@
+gametitle=Matrix, The - Path of Neo [PAL-M] SLES-53799 13D5330A
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20233F00,extended,34216666 //3C013FA6 lui at,0x3FA6 fps
+patch=1,EE,E0010002,extended,003FCE2C //fmv
+patch=1,EE,20233F00,extended,3C013FA6
+patch=1,EE,E0070034,extended,00463F28 //50
+patch=1,EE,21BAF1A0,extended,3F99999A //40199999 mfc0 t9,C0r19 
+patch=1,EE,21BAF1A4,extended,3F99999A //40199999 mfc0 t9,C0r19 
+patch=1,EE,E0010001,extended,0046DB48 //fix elevator
+patch=1,EE,21BAF1A0,extended,40199999
+patch=1,EE,E0020001,extended,00467C54 //Foco
+patch=1,EE,21BAF1A0,extended,3F19999A
+patch=1,EE,21BAF1A4,extended,3F19999A
+patch=1,EE,E0070000,extended,00463F28 //60
+patch=1,EE,21BAF1A0,extended,3F800000 //40000000 
+patch=1,EE,21BAF1A4,extended,3F800000 //40000000
+patch=1,EE,E0010001,extended,0046DB48 //fix elevator
+patch=1,EE,21BAF1A0,extended,40000000
+patch=1,EE,E0020001,extended,00467C54 //Foco
+patch=1,EE,21BAF1A0,extended,3F000000
+patch=1,EE,21BAF1A4,extended,3F000000
