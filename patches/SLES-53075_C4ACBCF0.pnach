@@ -20,3 +20,9 @@ patch=1,EE,003930e4,word,461eab83 // 00000000 renderfix calculation
 //patch=1,EE,003930e4,word,461eab83 // 00000000 renderfix calculation
 
 
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00382DB8,word,28620001 //28620002 slti v0,v1,0x0002
+patch=1,EE,E0010001,extended,005BF0C4
+patch=1,EE,20382DB8,extended,28620002
