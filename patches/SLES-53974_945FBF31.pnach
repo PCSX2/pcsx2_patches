@@ -1,0 +1,19 @@
+gametitle=Dragon Quest VIII [PAL-M] SLES-53974 945FBF31
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,003EE164,word,00000002 
+patch=1,EE,E0010000,extended,00639ACC
+patch=1,EE,203EE164,extended,00000001 //FPS
+patch=1,EE,00179E98,word,3C023F00 //3C023F80 Ocean
+patch=1,EE,0018DCC0,word,3C023F00 //3C023F80 Clouds
+patch=1,EE,001F5354,word,3C033F00 //3C033F80 Calls
+patch=1,EE,003FEAEC,word,3F19999A //3F99999A lui t9,0x999A speed general
+patch=1,EE,003DF42C,word,3F99999A //3F99999A butterflies and text speed in battle
+patch=1,EE,E0010000,extended,01FF4468
+patch=1,EE,203DF42C,extended,3F19999A
+patch=1,EE,0017037C,word,3C023F00 //3C023F80
+patch=1,EE,001703C0,word,3C023F00 //3C023F80
+patch=1,EE,00947814,word,3D19999A //3D99999A lui t9,0x999A
+patch=1,EE,003DF8D0,word,3DCCCCCD //3E4CCCCD lui t4,0xCCCD

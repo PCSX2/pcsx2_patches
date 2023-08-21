@@ -1,0 +1,6 @@
+gametitle=Destroy All Humans 2 - Make War not Love [PAL-M] SLES-54384 743E10C2
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,002C2E6C,word,24030001 //24030002

@@ -1,0 +1,6 @@
+gametitle=Driver - Parallel Lines [PAL-M] SLES-53556 D720770D
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00324704,word,50400000 //50400006 beqzl v0,0x00324720

@@ -1,0 +1,6 @@
+gametitle=Getaway Black Monday [PAL-M] SCES-52758 09C3DF79
+
+[50/60 FPS]
+author=Snake356
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20252DF8,extended,24020001

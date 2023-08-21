@@ -1,0 +1,6 @@
+gametitle=4 Fantásticos, Los [PAL-S] SLES-53147 F67E4351
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00177A70,word,1000000C //1462000C bne v1,v0,0x00177AA4
