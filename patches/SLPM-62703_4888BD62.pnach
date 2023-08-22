@@ -19,4 +19,10 @@ patch=1,EE,20310878,extended,43834000 //43AF0000 - In-game first person X FOV
 patch=1,EE,20304BD8,extended,3FAAAAAB //3F800000 - Master Y FOV
 patch=1,EE,2030F90C,extended,00000000 //3F800000 - In-game third person camera distance - Restores the original "behind the car" camera from the arcade version (which strangely was changed for the PS2 port)
 
-
+[No-Interlacing]
+gsinterlacemode=1
+author=felixthecat1970
+comment=Autoenable progressive scan mode
+patch=0,EE,0030F310,extended,0000001D
+patch=0,EE,001758F4,extended,00000003
+patch=0,EE,20176F68,extended,01E0782D

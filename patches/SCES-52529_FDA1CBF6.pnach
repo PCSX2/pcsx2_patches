@@ -23,4 +23,7 @@ patch=1,EE,200C0018,word,4481F000
 patch=1,EE,200C001C,word,461EA502
 patch=1,EE,200C0020,word,03E00008
 
-
+[No-Interlacing]
+gsinterlacemode=1
+comment=No Motion Blur by Meos
+patch=1,EE,20160FC8,extended,00000000

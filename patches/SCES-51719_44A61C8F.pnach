@@ -18,4 +18,8 @@ patch=1,EE,204959B8,extended,4614D682 // mul.s f26, f26, f20
 patch=1,EE,204959BC,extended,08124B83 // j 00492E0C
 patch=1,EE,2044DF60,extended,00000000 // nop
 
-
+[No-Interlacing]
+gsinterlacemode=1
+author=Silent
+comment=Enable progressive scan mode in race
+patch=1,EE,20A57E70,extended,00000001
