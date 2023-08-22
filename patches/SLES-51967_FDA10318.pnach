@@ -18,3 +18,7 @@ patch=1,EE,004ff630,word,3f2aaaab // 3f000000
 //patch=1,EE,004ff630,word,3f19999a // 3f000000
 
 
+[50 FPS]
+author=asasega
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2011060C,extended,2C420001 //2C420002

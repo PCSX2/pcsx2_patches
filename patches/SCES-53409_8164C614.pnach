@@ -5,4 +5,7 @@ gsaspectratio=16:9
 comment=Widescreen Hack
 patch=1,EE,00166804,word,3c014455
 
-
+[No-Interlacing]
+gsinterlacemode=1
+comment=No Motion Blur by Meos
+patch=1,EE,201837D8,extended,00000000

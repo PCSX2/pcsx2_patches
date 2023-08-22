@@ -1,0 +1,6 @@
+gametitle=True Crime - Streets of L.A. [PAL-M] SLES-51754 6B9AEA0D. elf secondary 29E9D83C
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,001024D0,word,24040001 //24040002 li a0,0x2

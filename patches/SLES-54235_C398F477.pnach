@@ -1,0 +1,40 @@
+gametitle=Kingdom Hearts II (PAL-S) SLES-54235 C398F477
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by ElHecht
+patch=1,EE,00106d30,word,3c013f4c //c480004c
+patch=1,EE,00106d48,word,3421cccc //4600a7c6
+patch=1,EE,00106d4c,word,4481f800 //00000000
+patch=1,EE,00106d50,word,461fa503 //4600a503
+patch=1,EE,00106d74,word,3c1b3f40 //0000000 hor fov
+patch=1,EE,00106d80,word,449bf000 //00000000
+patch=1,EE,00106d90,word,461effc2 //00000000
+patch=1,EE,00106d94,word,e61f004c //00000000
+patch=1,EE,00378574,word,43f90000 //43d00000 zoom for cutscenes (hides sudden pop-in)
+patch=1,EE,0037b2c4,word,3f400000 //3f800000 font fix
+patch=1,EE,0037b2c8,word,3f400000 //3f800000
+patch=1,EE,0037b2cc,word,3f400000 //3f800000
+patch=1,EE,0014aac8,word,24050000 //24050200 black border fix
+patch=1,EE,0014aaf0,word,24050000 //24050200
+patch=1,EE,0014ab18,word,24050000 //24050200
+patch=1,EE,0014ab48,word,24050000 //24050200
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2035744C,word,00000000
+patch=1,EE,2035743C,word,3F800000 //3F800000 speed
+patch=1,EE,2037D318,word,40000000 //40000000
+patch=1,EE,E0010005,extended,0033EC84 //fmv
+patch=1,EE,2035744C,extended,00000001
+patch=1,EE,E0020001,extended,0033EC90 //gumi map
+patch=1,EE,2035743C,extended,3F400000
+patch=1,EE,2037D318,extended,3F400000
+patch=1,EE,E0020001,extended,0033ECBC //gumi ship
+patch=1,EE,2035743C,extended,3F000000
+patch=1,EE,2037D318,extended,3F000000
+
+[Subtitles off]
+comment=Disable subtitles during scenes
+patch=1,EE,00227774,word,11e00019 //15e00019

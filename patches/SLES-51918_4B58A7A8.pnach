@@ -21,3 +21,7 @@ patch=1,EE,004b5008,word,4600f0c6 // 44821800
 //patch=1,EE,004b5008,word,4600f0c6 // 44821800
 
 
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0066CF44,word,00000001 //00000002

@@ -1,0 +1,7 @@
+gametitle=Judge Dredd - Dredd vs. Death [PAL-M] SLES-51649 6E900957
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0019693C,word,0000FFFA //1440FFFA bne v0, zero, $00196928
+patch=1,EE,002EB504,word,0000FFFA //1040FFFA beq v0, zero, $002eb4f0
