@@ -7,3 +7,9 @@ comment=Widescreen Hack by nemesis2000
 patch=1,EE,0010e994,word,46011702
 patch=1,EE,0032f6ec,word,3f400000
 patch=1,EE,0032f850,word,3f2aaaaa
+
+
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS
+(EE Overclock should be set to 130%. Higher values are usable but may cause hanging).
