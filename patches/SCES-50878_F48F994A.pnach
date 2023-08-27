@@ -14,3 +14,10 @@ patch=1,EE,0018d408,word,3c0143d6  // 3c0143a0 renderfix2
 patch=1,EE,001f7028,word,3c013f40  // 3c013f80 partial HUD fix
 
 
+[No-Interlacing]
+gsinterlacemode=1
+author=felixthecat1970
+comment=Autoboot progressive scan mode
+patch=0,EE,001E2254,extended,24020002
+patch=0,EE,0022B138,extended,24050006
+patch=0,EE,001EDC24,extended,24020009

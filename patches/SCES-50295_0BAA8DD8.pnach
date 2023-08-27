@@ -5,4 +5,10 @@ comment=Dark Cloud (PAL-M5) (SCES-50295) Widescreen Hack (16:9) by ElHecht
 // 16:9
 patch=1,EE,0012e228,word,3c023f40
 
-
+[No-Interlacing]
+gsinterlacemode=1
+author=felixthecat1970
+comment=ntsc video mode v2
+patch=0,EE,0012C338,extended,24060002
+patch=0,EE,0012C428,extended,3C010002
+patch=0,EE,1012C42C,extended,34242000

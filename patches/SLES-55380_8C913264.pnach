@@ -14,8 +14,9 @@ patch=1,EE,0043657c,word,3c024436 // 3c024420 2d char fix pos
 patch=1,EE,007638c0,word,3faaaaab // 3f800000 2d char fix fov
 
 
-[50 FPS]
+[60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=480p mode and FPS unlocked. Might need enable EE Overclock to be stable.
 patch=1,EE,0087C3B4,word,00000032 //00000019
-patch=1,EE,00870a2c,word,3F800000 //3F800000
+patch=1,EE,00870A2C,word,3F99999A //3F800000
+patch=1,EE,00671D04,word,3C060050
