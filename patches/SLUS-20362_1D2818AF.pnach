@@ -11,9 +11,7 @@ patch=1,EE,0032f850,word,3f2aaaaa
 
 [60 FPS]
 author=asasega
-comment=Patches the game to run at 60 FPS
-(EE Overclock should be set to 130%. Higher values are usable but may cause hanging).
-
+comment=Patches the game to run at 60 FPS (EE Overclock should be set to 130%. Higher values are usable but may cause hanging).
 
 // 60FPS
 patch=1,EE,20113E2C,extended,2C420001
