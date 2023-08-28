@@ -21,5 +21,5 @@ patch=1,EE,2044DF60,extended,00000000 // nop
 [No-Interlacing]
 gsinterlacemode=1
 author=Silent
-comment=Enable progressive scan mode in race
+comment=480p mode in race. Set to Graphics "Deinterlacing: Adaptive (Top Field First)". Fix tremor at start game
 patch=1,EE,20A57E70,extended,00000001

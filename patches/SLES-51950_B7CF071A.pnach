@@ -139,6 +139,11 @@ patch=1,EE,0016a514,word,7bb00000
 patch=1,EE,0016a518,word,03e00008
 patch=1,EE,0016a51c,word,27bd0020
 
+[No-Interlacing]
+gsinterlacemode=1
+author=PeterDelta
+comment=480p mode. Only work at 60hz, supports fps unlock patch but will not switch to 50hz even if chosen.
+patch=1,EE,001009CC,word,3C060050
 
 [50/60 FPS]
 author=PeterDelta
