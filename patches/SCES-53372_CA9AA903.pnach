@@ -1,7 +1,11 @@
 gametitle=Tourist Trophy - The Real Riding Simulator (PAL-M) SCES-53372 CA9AA903
 
-[No-Interlacing]
-gsinterlacemode=1
+[Mode 480p]
 author=PeterDelta
 comment=480p mode in race. Set to Graphics "Deinterlacing: Adaptive (Top Field First)". Fix tremor at start game
 patch=1,EE,00830648,word,00000001
+
+[Mode 1080i]
+author=PeterDelta
+comment=1080i mode in race. Set to Graphics "Deinterlacing: Adaptive (Top Field First)". Fix tremor at start game
+patch=1,EE,00830648,word,00000002

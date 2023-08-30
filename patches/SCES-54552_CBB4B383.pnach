@@ -17,4 +17,23 @@ patch=1,EE,00261FB4,word,3C020000 //3C023F80
 patch=1,EE,001D4E2C,word,24060000 //02C23021 Top
 patch=1,EE,001D4E7C,word,240201C0 //00451021 Bottom
 
-
+[50/60 FPS]
+author=Red-tv
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,004A06D4,byte,01 //60fps
+patch=1,EE,001ce06c,word,00000000 //3c033f80 
+patch=1,EE,001ce088,word,3c033f00 //3c033f80, Breaks Gravity
+patch=1,EE,001ce098,word,3c033f00 //3c033f80, Breaks Gravity
+patch=1,EE,0020b6d4,word,3c023f76 //3c023f80 Player's Gravity modifier
+patch=1,EE,0048cb84,word,42700000 //41f00000, Breaks Gravity input latency, Object's Distance, Player's Gravity, subtitles
+patch=1,EE,0048cb8c,word,40000000 //3f800000, Breaks Gravity Timer, Menu, Object's Distance, and Speed Modifier
+patch=1,EE,0048cb88,word,3fe40000 //3f800000 Player's Gravity modifier and Object's Distance
+patch=1,EE,0048da18,word,3F000000 //3f800000 NPC Distance Modifier
+patch=1,EE,E0010001,extended,00729EE6 //Fix Timer in Menus
+patch=1,EE,2048cb8c,extended,40400000 //Fix Timer in Menus
+patch=1,EE,E0020002,extended,004C1E50 //Fix FMV
+patch=1,EE,204A06D4,extended,00000002 //Fix FMV
+patch=1,EE,2048cb8c,extended,3f800000 //Fix FMV
+patch=1,EE,E0020001,extended,004B2660 //Fix Subtitles in FMV
+patch=1,EE,2048cb8c,extended,3f800000 //Fix Subtitles in FMV
+patch=1,EE,201ce098,extended,3c033f80 //Fix Subtitles in FMV
