@@ -18,6 +18,11 @@ patch=1,EE,204959B8,extended,4614D682 // mul.s f26, f26, f20
 patch=1,EE,204959BC,extended,08124B83 // j 00492E0C
 patch=1,EE,2044DF60,extended,00000000 // nop
 
+[Mode 480p]
+author=Silent
+comment=480p mode in race. Set to Graphics "Deinterlacing: Adaptive (Top Field First)". Incompatible with 1080i
+patch=1,EE,20A57E70,extended,00000001
+
 [Mode 1080i]
 author=PeterDelta
 comment=1080i mode in race. Disable it before entering in zone Replay Theatre. Disable all deinterlacing patches.
