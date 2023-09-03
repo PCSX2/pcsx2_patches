@@ -5,3 +5,8 @@ gsinterlacemode=1
 author=PeterDelta
 comment=480p mode in race. Set to Graphics "Deinterlacing: Adaptive (Top Field First)". Fix tremor at start game
 patch=1,EE,00830648,word,00000001
+
+[Mode 1080i]
+author=PeterDelta
+comment=1080i mode in race. Set to Graphics "Deinterlacing: Adaptive (Top Field First)". Fix tremor at start game
+patch=1,EE,00830648,word,00000002

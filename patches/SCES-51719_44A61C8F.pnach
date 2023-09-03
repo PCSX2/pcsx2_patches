@@ -21,5 +21,14 @@ patch=1,EE,2044DF60,extended,00000000 // nop
 [No-Interlacing]
 gsinterlacemode=1
 author=Silent
-comment=480p mode in race. Set to Graphics "Deinterlacing: Adaptive (Top Field First)". Fix tremor at start game
+comment=480p mode in race. Set to Graphics "Deinterlacing: Adaptive (Top Field First)". Incompatible with 1080i
 patch=1,EE,20A57E70,extended,00000001
+
+[Mode 1080i]
+author=PeterDelta
+comment=1080i mode in race. Disable it before entering in zone Replay Theatre. Disable all deinterlacing patches.
+patch=1,EE,E0030001,extended,00A57E7C
+patch=1,EE,206184D4,extended,00000051
+patch=1,EE,20618504,extended,00000240
+patch=1,EE,20618508,extended,000003c0
+patch=1,EE,20A57E70,extended,00000000
