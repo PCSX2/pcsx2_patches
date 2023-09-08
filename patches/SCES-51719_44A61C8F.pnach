@@ -18,17 +18,23 @@ patch=1,EE,204959B8,extended,4614D682 // mul.s f26, f26, f20
 patch=1,EE,204959BC,extended,08124B83 // j 00492E0C
 patch=1,EE,2044DF60,extended,00000000 // nop
 
-[No-Interlacing]
-gsinterlacemode=1
+[Mode 480p]
 author=Silent
-comment=480p mode in race. Set to Graphics "Deinterlacing: Adaptive (Top Field First)". Incompatible with 1080i
+comment=480p mode in race. Disable deinterlacing patch
+patch=1,EE,20A57E70,extended,00000000
+patch=1,EE,2035812C,extended,2442003C
+patch=1,EE,E0020001,extended,00A57E7C
 patch=1,EE,20A57E70,extended,00000001
+patch=1,EE,2035812C,extended,24420032 //speed timer 
 
 [Mode 1080i]
 author=PeterDelta
-comment=1080i mode in race. Disable it before entering in zone Replay Theatre. Disable all deinterlacing patches.
-patch=1,EE,E0030001,extended,00A57E7C
+comment=1080i mode in race. Disable it before entering in zone Replay Theatre.
+patch=1,EE,20A57E70,extended,00000000
+patch=1,EE,2035812C,extended,2442003C
+patch=1,EE,E0050001,extended,00A57E7C
+patch=1,EE,20A57E70,extended,00000002
 patch=1,EE,206184D4,extended,00000051
 patch=1,EE,20618504,extended,00000240
-patch=1,EE,20618508,extended,000003c0
-patch=1,EE,20A57E70,extended,00000000
+patch=1,EE,20618508,extended,000003C0
+patch=1,EE,2035812C,extended,24420032 //speed timer
