@@ -8,3 +8,7 @@ comment=Widescreen Hack by El_Patas
 patch=1,EE,001c3a74,word,3c033f40 //3c033f80
 
 
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0026BBF4,word,00000001 //00000002
