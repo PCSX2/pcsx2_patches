@@ -1,0 +1,6 @@
+gametitle=Need for Speed - Most Wanted [Black Edition] [PAL-M] [SLES-53857]
+
+[Remove Brown Filter]
+author=fobes
+description=Disables the brownish yellow post processing filter
+patch=1,EE,00551058,extended,20000001

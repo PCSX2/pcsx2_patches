@@ -1,0 +1,6 @@
+gametitle=Need for Speed - Most Wanted [NTSC-U] [SLUS-21267]
+
+[Remove Brown Filter]
+author=fobes
+description=Disables the brownish yellow post processing filter
+patch=1,EE,00550D58,extended,20000001
