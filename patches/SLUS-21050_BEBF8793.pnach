@@ -107,6 +107,11 @@ description=Menus will render at 60 FPS
 author=Nehalem
 
 patch=1,EE,201D3F2C,extended,1000000A
+patch=1,EE,20130DD8,extended,C7958074
+patch=1,EE,20130DDC,extended,3C084000
+patch=1,EE,20130DE0,extended,4488A000
+patch=1,EE,20130DE4,extended,4614AD03
+patch=1,EE,20130DE8,extended,00000000
 
 [60 FPS for Crashes]
 description=Crashes will render at 60 FPS
@@ -115,16 +120,6 @@ author=Unknown
 patch=1,EE,204E17DC,extended,01800001 // Frame Rate
 patch=1,EE,2051BAC4,byte,01 // Game Speed
 patch=1,EE,00132F64,extended,00000000
-
-[60 FPS for FMVs]
-description=Fix for FMVs playback speed while using 60 FPS patches
-author=Nehalem
-
-patch=1,EE,20130DD8,extended,C7958074
-patch=1,EE,20130DDC,extended,3C084000
-patch=1,EE,20130DE0,extended,4488A000
-patch=1,EE,20130DE4,extended,4614AD03
-patch=1,EE,20130DE8,extended,00000000
 
 [Progressive Scan]
 description=Always ask for 480p mode during boot
