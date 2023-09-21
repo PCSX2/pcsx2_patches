@@ -4,3 +4,12 @@ gametitle=Red Dead Revolver [PAL-M] SLES-52478 E2E67E23
 author=PeterDelta
 comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,001018AC,word,24030001 //24030002 li v1,0x2
+
+[Mode 480p]
+author=PeterDelta
+comment=Force progressive scan when selecting 60hz
+patch=1,EE,E004F9FF,extended,007A25EC
+patch=1,EE,203CBA1C,extended,3C050000
+patch=1,EE,203CBA24,extended,3C060050
+patch=1,EE,203CBA2C,extended,3C070001
+patch=1,EE,203CBCEC,extended,3C090010

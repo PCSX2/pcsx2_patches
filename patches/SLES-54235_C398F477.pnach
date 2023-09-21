@@ -23,17 +23,11 @@ patch=1,EE,0014ab48,word,24050000 //24050200
 [50 FPS]
 author=PeterDelta
 comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,2035744C,word,00000000
-patch=1,EE,2035743C,word,3F800000 //3F800000 speed
-patch=1,EE,2037D318,word,40000000 //40000000
+patch=1,EE,2035744C,extended,00000000
 patch=1,EE,E0010005,extended,0033EC84 //fmv
 patch=1,EE,2035744C,extended,00000001
-patch=1,EE,E0020001,extended,0033EC90 //gumi map
-patch=1,EE,2035743C,extended,3F400000
-patch=1,EE,2037D318,extended,3F400000
-patch=1,EE,E0020001,extended,0033ECBC //gumi ship
-patch=1,EE,2035743C,extended,3F000000
-patch=1,EE,2037D318,extended,3F000000
+patch=1,EE,203795E8,extended,3F99999A
+patch=1,EE,2037D318,extended,3F99999A
 
 [Subtitles off]
 comment=Disable subtitles during scenes
