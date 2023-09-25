@@ -22,3 +22,11 @@ patch=1,EE,004ff630,word,3f2aaaab // 3f000000
 author=asasega
 comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,2011060C,extended,2C420001 //2C420002
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan and run at 60 fps
+patch=1,EE,003AF874,word,24110000
+patch=1,EE,003AF878,word,24120052
+patch=1,EE,003AF884,word,24130001
+patch=1,EE,004FEFF8,word,3C888889

@@ -4,7 +4,7 @@ gametitle=Midnight Club II (E)(SLES-51054)
 gsaspectratio=16:9
 author=PeterDelta
 comment=Widescreen hack 16:9
-patch=1,EE,0042F134,word,3FC55553 //3F955553
+patch=1,EE,0042F134,word,3FCE38BC //3F955553
 
 [50 FPS]
 author=PeterDelta
