@@ -1,11 +1,11 @@
 //Burnout Revenge (U)(SLUS-21242) (source of the fix: https://www.youtube.com/watch?v=fXY97XEIQQ8)
 
-[Widescreen Fix 16:9]
+[Widescreen 16:9]
 author=SuperType1/remco
 description=Fixes the game and the HUD to run in a 16:9 Scale (only enable one and not both of them).
 gsaspectratio=16:9
 patch=1,EE,201398C0,extended,00000000
-patch=1,EE,0016BCA8,extended,3C013A9D
+patch=1,EE,2016BCA8,extended,3C013A9D
 patch=1,EE,21C02438,extended,3FAA3D71
 patch=1,EE,21C02448,extended,3FAA3D71
 patch=1,EE,21C02398,extended,44610000
@@ -14,15 +14,16 @@ patch=1,EE,21BFE698,extended,438C0000
 patch=1,EE,2010DA78,extended,3C014448
 patch=1,EE,20167844,extended,3C014F23
 patch=1,EE,21C02108,extended,43C30000
+patch=1,EE,2032677C,extended,3C013C9A
 
-[Widescreen Fix 21:9]
+[Widescreen 21:9]
 author=SuperType1/remco
 description=Fixes the game and the HUD to run in a 21:9 Scale (only enable one and not both of them).
 gsaspectratio=Stretch
 patch=1,EE,201398C0,extended,00000000
 patch=1,EE,201398C8,extended,3C014017
-patch=1,EE,0016BCA8,extended,3C013A83
-patch=1,EE,0016BCAC,extended,34211AF4
+patch=1,EE,2016BCA8,extended,3C013A83
+patch=1,EE,2016BCAC,extended,34211AF4
 patch=1,EE,21C02438,extended,3FD0A3D7
 patch=1,EE,21C02448,extended,3FD1EB85
 patch=1,EE,21C02398,extended,447A0000
@@ -31,23 +32,13 @@ patch=1,EE,21BFE698,extended,43480000
 patch=1,EE,2010DA78,extended,3C014448
 patch=1,EE,20167844,extended,3C014F23
 patch=1,EE,21C02108,extended,43E60000
+patch=1,EE,2032677C,extended,3C013cb3
 
 [60 FPS Menus]
 author=SuperType1/remco
 description=Makes the menus run in 60 FPS.
 patch=1,EE,201125F4,extended,24040001
 patch=1,EE,201125EC,extended,00108002
-
-[FOV Fix 16:9]
-author=SuperType1/remco
-description=Fixes the FOV for 16:9 Scale (only enable one and not both of them).
-patch=1,EE,2032677C,extended,3C013C9A
-
-[FOV Fix 21:9]
-author=SuperType1/remco
-description=Fixes the FOV for 21:9 Scale (only enable one and not both of them).
-patch=1,EE,2032677C,extended,3C013C9A
-patch=1,EE,2032677C,extended,3C013cb3
 
 [60 FPS Crashes & Crash Mode]
 author=SuperType1/remco

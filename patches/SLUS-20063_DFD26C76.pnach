@@ -1,0 +1,9 @@
+gametitle=Midnight Club - Street Racing (NTSC-U) SLUS-20063 DFD26C76
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Widescreen hack 16:9
+patch=1,EE,004784C0,word,3F471C97
+patch=1,EE,004784D4,word,3F471C97
+patch=1,EE,004784FC,word,3F471C97

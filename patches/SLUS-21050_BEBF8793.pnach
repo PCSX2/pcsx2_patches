@@ -1,5 +1,6 @@
 [Widescreen 16:9]
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
+author=Aero_
 gsaspectratio=16:9
 Burnout 3: Takedown (SLUS-21050)
 Widescreen Fix (v2.0) by Aero_
@@ -101,4 +102,34 @@ patch=1,EE,20485954,extended,3C19C2D7 // Loading Background X Pos // only change
 patch=1,EE,20485958,extended,AFB901D8 // saves new x pos value
 patch=1,EE,2048595C,extended,080C7691 // jumps back
 
+[60 FPS for Menus]
+description=Menus will render at 60 FPS
+author=Nehalem
 
+patch=1,EE,201D3F2C,extended,1000000A
+patch=1,EE,20130DD8,extended,C7958074
+patch=1,EE,20130DDC,extended,3C084000
+patch=1,EE,20130DE0,extended,4488A000
+patch=1,EE,20130DE4,extended,4614AD03
+patch=1,EE,20130DE8,extended,00000000
+
+[60 FPS for Crashes]
+description=Crashes will render at 60 FPS
+author=Unknown
+
+patch=1,EE,204E17DC,extended,01800001 // Frame Rate
+patch=1,EE,2051BAC4,byte,01 // Game Speed
+patch=1,EE,00132F64,extended,00000000
+
+[Progressive Scan]
+description=Always ask for 480p mode during boot
+author=Nehalem
+
+patch=1,EE,20437758,extended,100000F1
+
+[MPH to KPH]
+description=Change speedometer unit from MPH to KPH
+author=Nehalem
+
+patch=1,EE,101A3BA0,extended,000082F0
+patch=1,EE,101A3D78,extended,000007D7
