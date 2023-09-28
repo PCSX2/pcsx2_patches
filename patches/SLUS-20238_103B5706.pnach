@@ -7,11 +7,28 @@ patch=1,EE,001138B8,extended,3c013f11 //vertical fov
 patch=1,EE,001127A0,extended,3c013f2a //zoom value
 patch=1,EE,0011287C,extended,3c013f2a //render value
 
-
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,2016A048,extended,AF80E750
 patch=1,EE,2016A054,extended,AF80E750
 
+[Cortex Vortex FX Fix]
+author=TechieSaru
+description=Fixes hardware upscaling issues in level 25.
+patch=1,EE,20242894,extended,100000BC
 
+[Disable Dark Effect]
+author=TechieSaru
+description=Fixes hardware upscaling issues in level 26.
+patch=1,EE,20258588,extended,44801000
+
+[Mech FX Fix]
+author=TechieSaru
+description=Fixes hardware upscaling issues in levels 17 and 24.
+patch=1,EE,20257CF0,extended,0000182D
+
+[Underwater FX Fix]
+author=TechieSaru
+description=Fixes hardware upscaling issues in levels 7, 10, and 19.
+patch=1,EE,202438AC,extended,0000182D
