@@ -12,19 +12,3 @@ patch=1,EE,00712398,word,3c013AC0 // 3c013b00 - Y-Fov
 patch=1,EE,004511d0,word,24057300 // y-pos
 patch=1,EE,004511d4,word,24062000 // x width
 patch=1,EE,004511dc,word,24071b00 // y width
-
-///////////////////
-
-// Patch disabled due to broken icons on screen. Patch appears to be mostly working,
-// but in Buy menus, the icon which is supposed to appear in the Information panel
-// is not AR adjusted and appears over top of the text describing the item. Needs
-// fixed before re-enabling.
-// https://github.com/PCSX2/pcsx2_patches/pull/203
-
-// comment=Widescreen gameplay hack by nemesis2000
-//patch=1,EE,006e70f4,word,23c013f40 // hor value - reported broken
-//patch=1,EE,006e70f4,word,3c013f40 // hor value - by kozarovv
-//patch=1,EE,006e70f8,word,44810000
-//patch=1,EE,006e7100,word,4600c602
-
-///////////////////
