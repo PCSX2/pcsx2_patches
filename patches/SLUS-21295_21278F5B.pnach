@@ -2,7 +2,7 @@ gametitle=Tony Hawk's American Wasteland (Collector's Edition) (SLUS-21295)
 
 [Remove effect layer]
 author=TechieSaru
-comment=Removes Removes an effect that's problematic with hardware upscaling.
+comment=Removes an effect that's problematic with hardware upscaling.
 patch=1,EE,201BDBAC,extended,10000006
 patch=1,EE,201BF180,extended,10000006
 
