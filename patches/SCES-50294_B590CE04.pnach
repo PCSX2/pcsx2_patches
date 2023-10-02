@@ -1,14 +1,14 @@
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,2025B4E8,extended,34020001
+gametitle=Gran Turismo 3 [PAL] (SCES-50294)
 
-[60 FPS]
-author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
-patch=1,EE,2028F840,extended,24120052
-patch=1,EE,2035163C,extended,3C888889 //speed flags 
-patch=1,EE,20351F1C,extended,3C888889 //speed cars
-patch=1,EE,20351980,extended,3C888889 //speed icon ilumination
-patch=1,EE,203519D4,extended,3C888889 //speed icon menu principal
-patch=1,EE,201F0D30,extended,24420032 //speed timer
+[No-Interlacing]
+gsinterlacemode=1
+comment=No Interlacing Patch by asasega (ported to PAL by xan1242). Press SELECT+L2 buttons to display the 480 buffer, press SELECT+R2 buttons to display the default buffers (the normal default mode)
+patch=1,EE,2025B4E8,extended,34020001
+patch=1,EE,D02EBE42,extended,0000FEFE
+patch=1,EE,204A83E0,extended,00000001
+patch=1,EE,D02EBE42,extended,0000FEFE
+patch=1,EE,20251EA4,extended,340494D3
+patch=1,EE,D02EBE42,extended,0000FDFE
+patch=1,EE,204A83E0,extended,00000003
+patch=1,EE,D02EBE42,extended,0000FDFE
+patch=1,EE,20251EA4,extended,00832025
