@@ -1,0 +1,6 @@
+gametitle=Gran Turismo 3 [PAL] (SCES-50294)
+
+[No-Interlacing]
+gsinterlacemode=1
+comment=No Interlacing Patch by asasega (ported to PAL by KingJackSkellington, framebuffer codes not included)
+patch=1,EE,2025A3C8,extended,34020001
