@@ -1,0 +1,6 @@
+gametitle=Crusty Demons (PAL-M) (SLES-54146) 11DADE15
+
+[50/60 FPS]
+author=HydL
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0083274C,extended,00000001 //00000002 fps

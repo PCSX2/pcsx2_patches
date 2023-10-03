@@ -2,10 +2,7 @@ gametitle=Star Wars: Battlefront 2 (E)(SLES-53501)
 comment=Widescreen Hack by nemesis2000 and Arapapa
 [Widescreen 16:9]
 gsaspectratio=16:9
-
-
 //Game changes ELF on boot to SWBFRNT2.ELF with active CRC B68D35CA
-
 //Widescreen hack 16:9
 
 //00000000 00000000 83051646 00000000
@@ -19,3 +16,10 @@ patch=1,EE,00582820,word,46000003 //00000000
 patch=1,EE,00573f6c,word,3c013f2b //3c013f00
 //003f013c 00008144 f000b07f
 patch=1,EE,005b074c,word,3c013f2b //3c013f00
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00602D1C,extended,00000001
+patch=1,EE,E0010001,extended,0060EABC
+patch=1,EE,00602D1C,extended,00000002
