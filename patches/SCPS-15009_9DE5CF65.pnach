@@ -2,7 +2,8 @@ gametitle=Gran Turismo 3 [NTSC-J] (SCPS-15009)
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=No Interlacing Patch by asasega (ported to NTSC-J by xan1242). Press SELECT+L2 buttons to display the 480 buffer, press SELECT+R2 buttons to display the default buffers (the normal default mode)
+author=asasega / xan1242
+comment=Press SELECT+L2 buttons to display the 480 buffer, press SELECT+R2 buttons to display the default buffers (the normal default mode)
 patch=1,EE,20256DB0,extended,34020001
 patch=1,EE,D02E6F8A,extended,0000FEFE
 patch=1,EE,204A0A20,extended,00000001
