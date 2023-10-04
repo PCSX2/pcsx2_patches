@@ -2,18 +2,19 @@ gametitle=Gran Turismo 3 A-Spec [PAL] (SCES-50294)
 
 [No-Interlacing]
 gsinterlacemode=1
-author=asasega / junfurano / xan1242
-comment=Press SELECT+L2 buttons to display the 480 buffer, press SELECT+R2 buttons to display the default buffers (the normal default mode)
+author=asasega / junfurano
 description=Attempts to disable interlaced offset rendering.
 patch=1,EE,2025B4E8,extended,34020001
-patch=1,EE,D02EBE42,extended,0000FEFE
-patch=1,EE,204A83E0,extended,00000001
-patch=1,EE,D02EBE42,extended,0000FEFE
-patch=1,EE,20251EA4,extended,340494D3
-patch=1,EE,D02EBE42,extended,0000FDFE
-patch=1,EE,204A83E0,extended,00000003
-patch=1,EE,D02EBE42,extended,0000FDFE
-patch=1,EE,20251EA4,extended,00832025
+// uncomment for the effect described below
+// comment=Press SELECT+L2 buttons to display the 480 buffer, press SELECT+R2 buttons to display the default buffers (the normal default mode)
+//patch=1,EE,D02EBE42,extended,0000FEFE
+//patch=1,EE,204A83E0,extended,00000001
+//patch=1,EE,D02EBE42,extended,0000FEFE
+//patch=1,EE,20251EA4,extended,340494D3
+//patch=1,EE,D02EBE42,extended,0000FDFE
+//patch=1,EE,204A83E0,extended,00000003
+//patch=1,EE,D02EBE42,extended,0000FDFE
+//patch=1,EE,20251EA4,extended,00832025
 
 [60 FPS]
 author=PeterDelta

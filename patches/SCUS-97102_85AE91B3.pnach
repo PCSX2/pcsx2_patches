@@ -3,9 +3,9 @@ gametitle=Gran Turismo 3 A-Spec [NTSC-U] (SCUS-97102)
 [No-Interlacing]
 gsinterlacemode=1
 author=asasega
-comment=Press SELECT+L2 buttons to display the 480 buffer, press SELECT+R2 buttons to display the default buffers (the normal default mode)
 description=Attempts to disable interlaced offset rendering.
 patch=1,EE,2025A3C8,extended,34020001
+comment=Press SELECT+L2 buttons to display the 480 buffer, press SELECT+R2 buttons to display the default buffers (the normal default mode)
 patch=1,EE,D02EA812,extended,0000FEFE
 patch=1,EE,204A6A20,extended,00000001
 patch=1,EE,D02EA812,extended,0000FEFE
