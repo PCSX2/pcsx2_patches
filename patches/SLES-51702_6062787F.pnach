@@ -1,4 +1,4 @@
-gametitle=Battlestar Galactica SLES_517.02
+gametitle=Battlestar Galactica (PAL-M) SLES-51702 6062787F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -12,4 +12,8 @@ patch=1,EE,001cb81c,word,34216666
 //993f013c 9a992134 00008144 cc3f013c to 663f013c 66662134 00008144 cc3f013c gameplay
 //993f013c 9a992134 00608144 f00040c4 to 663f013c 66662134 00608144 f00040c4  menu
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,E0010002,extended,00081E90
+patch=1,EE,00343EE0,extended,00000001 //00000002

@@ -20,4 +20,7 @@ patch=1,EE,0017081c,word,4481a800
 patch=1,EE,00170820,word,3c0142d4 //render fix
 patch=1,EE,00170824,word,44810000
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00174394,word,2C420001 //2C420002

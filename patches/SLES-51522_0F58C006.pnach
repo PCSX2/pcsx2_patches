@@ -1,0 +1,6 @@
+gametitle=Return to Castle Wolfenstein - Operation Resurrection (PAL-S) SLES-51522 0F58C006
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00174394,word,2C420001 //2C420002
