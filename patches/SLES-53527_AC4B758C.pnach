@@ -65,4 +65,11 @@ patch=1,EE,00206AA4,word,00000000 //C601031C
 //803f013c 00008144 0800e003 00000000 (2nd)
 patch=1,EE,00220c70,word,3c013f40 //3c013f80
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00220250,extended,28420002
+patch=1,EE,00220270,extended,28420002
+patch=1,EE,E0020000,extended,00526394
+patch=1,EE,00220250,extended,28420001
+patch=1,EE,00220270,extended,28420001

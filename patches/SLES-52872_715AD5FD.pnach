@@ -8,4 +8,7 @@ comment=Widescreen Hack by Arapapa
 //803f013c 00108144 0c00438e
 patch=1,EE,002b5118,word,3c013f40 //3c013f80
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,004B70F8,word,00000000 //00000001
