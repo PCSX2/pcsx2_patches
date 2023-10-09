@@ -7,4 +7,7 @@ comment=Widescreen pnach by El_Patas
 //Gameplay 16:9
 patch=1,EE,0047015C,word,241102AA //00000000 (Increases hor. axis)
 
-
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0017ACD8,word,00000000 //1640FFE5

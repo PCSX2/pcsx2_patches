@@ -26,4 +26,7 @@ patch=1,EE,004f40bc,word,46030002 //00000000 hud-identification fix
 patch=1,EE,004f40c0,word,461e0002 //00000000 hud-identification fix
 patch=1,EE,004f40c4,word,080ce663 //00000000 hud-identification fix
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,003ADF78,word,2C420001 //0043102B

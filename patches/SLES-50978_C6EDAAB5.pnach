@@ -1,0 +1,9 @@
+gametitle=Onimusha 2 - Samurai's Destiny 2 [PAL-M5] SLES-50978 C6EDAAB5
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen hack 16:9
+patch=1,EE,201028f4,word,3c013f40
+patch=1,EE,201028f8,word,44810000
+patch=1,EE,20102900,word,4600c602
