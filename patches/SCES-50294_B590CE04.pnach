@@ -39,9 +39,7 @@ patch=1,EE,20244520,short,0200
 // this affects the actual res
 // field 0
 patch=1,EE,20244368,short,0200
-//patch=1,EE,20244368,short,0002
 // field 1 -- we nuke this one
-//patch=1,EE,202443D0,short,0200
 patch=1,EE,202443D0,short,0001
 patch=1,EE,20244464,word,AC530008
 // disable field switching
@@ -73,7 +71,7 @@ patch=1,EE,2016D730,short,0200
 patch=1,EE,20181590,short,0200
 patch=1,EE,20181704,short,0200
 
-// halve 3D render res in menus to avoid bugs
+// halve 3D render res in menus to avoid bugs (Q29gt2k_menu3Car)
 // entrypoint
 patch=1,EE,201CBD84,extended,0C0D2876
 patch=1,EE,201CBDA0,extended,0C0D2876
@@ -88,6 +86,30 @@ patch=1,EE,2034A1F0,extended,24030100 // Y res
 patch=1,EE,2034A1F4,extended,AC83000C
 patch=1,EE,2034A1F8,extended,03E00008
 patch=1,EE,2034A1FC,extended,00000000
+
+// halve 3D render res for Q29gt2k_menu8CarsItem
+// entrypoint
+patch=1,EE,2013DECC,extended,0C0D1B56
+patch=1,EE,2013DEE4,extended,0C0D1B56
+
+// detour to 0x346D58 (copy of 0x2455D8)
+patch=1,EE,20346D58,extended,27BDFFD0
+patch=1,EE,20346D5C,extended,FFB00000
+patch=1,EE,20346D60,extended,0080802D
+patch=1,EE,20346D64,extended,FFB10010
+patch=1,EE,20346D68,extended,FFBF0020
+patch=1,EE,20346D6C,extended,0C0D2876 // jal 0x0034A1D8
+patch=1,EE,20346D70,extended,00C0882D
+patch=1,EE,20346D74,extended,AE110004
+patch=1,EE,20346D78,extended,0200202D
+patch=1,EE,20346D7C,extended,0C09178E
+patch=1,EE,20346D80,extended,AE000028
+patch=1,EE,20346D84,extended,0200102D
+patch=1,EE,20346D88,extended,DFBF0020
+patch=1,EE,20346D8C,extended,DFB10010
+patch=1,EE,20346D90,extended,DFB00000
+patch=1,EE,20346D94,extended,03E00008
+patch=1,EE,20346D98,extended,27BD0030
 
 // adjust transforms
 // remove blur height doubling
@@ -133,3 +155,8 @@ patch=1,EE,2034AA34,extended,8C82000C
 
 // fix halved viewports
 patch=1,EE,20245800,extended,02401021
+
+// fix "congratulations" screen after championship
+patch=1,EE,20139C38,short,0004
+// trophy hack (causes double trophies to be rendered)
+patch=1,EE,20139B60,extended,00000000

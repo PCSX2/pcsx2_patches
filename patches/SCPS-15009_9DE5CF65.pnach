@@ -70,7 +70,7 @@ patch=1,EE,2016BEA8,short,01C0
 patch=1,EE,2017FB94,short,01C0
 patch=1,EE,2017FD08,short,01C0
 
-// halve 3D render res in menus to avoid bugs
+// halve 3D render res in menus to avoid bugs (Q29gt2k_menu3Car)
 // entrypoint
 patch=1,EE,201C924C,extended,0C0D0AE6
 patch=1,EE,201C9268,extended,0C0D0AE6
@@ -85,6 +85,31 @@ patch=1,EE,20342BB0,extended,24030140 // Y res
 patch=1,EE,20342BB4,extended,AC83000C
 patch=1,EE,20342BB8,extended,03E00008
 patch=1,EE,20342BBC,extended,00000000
+
+// halve 3D render res for Q29gt2k_menu8CarsItem
+// entrypoint
+patch=1,EE,2013CFB0,extended,0C0D0702
+patch=1,EE,2013CFC8,extended,0C0D0702
+
+// detour to 0x341C08 (copy of 0x241188)
+patch=1,EE,20341C08,extended,27BDFFD0
+patch=1,EE,20341C0C,extended,FFB00000
+patch=1,EE,20341C10,extended,0080802D
+patch=1,EE,20341C14,extended,FFB10010
+patch=1,EE,20341C18,extended,FFBF0020
+patch=1,EE,20341C1C,extended,0C0D0AE6 // jal 0x00342B98
+patch=1,EE,20341C20,extended,00C0882D
+patch=1,EE,20341C24,extended,AE110004
+patch=1,EE,20341C28,extended,0200202D
+patch=1,EE,20341C2C,extended,0C090676
+patch=1,EE,20341C30,extended,AE000028
+patch=1,EE,20341C34,extended,0200102D
+patch=1,EE,20341C38,extended,DFBF0020
+patch=1,EE,20341C3C,extended,DFB10010
+patch=1,EE,20341C40,extended,DFB00000
+patch=1,EE,20341C44,extended,03E00008
+patch=1,EE,20341C48,extended,27BD0030
+
 
 // adjust transforms
 // entrypoint for blur
@@ -134,3 +159,8 @@ patch=1,EE,20343404,extended,03E00008
 patch=1,EE,20343408,extended,8C820024
 patch=1,EE,2034340C,extended,03E00008
 patch=1,EE,20343410,extended,00000000
+
+// fix "congratulations" screen after championship
+patch=1,EE,20138D38,short,0004
+// trophy hack (causes double trophies to be rendered)
+patch=1,EE,20138C60,extended,00000000
