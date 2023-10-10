@@ -3,14 +3,112 @@ gametitle=Gran Turismo 3 A-Spec [NTSC-U] (SCUS-97102)
 [No-Interlacing]
 gsinterlacemode=1
 author=asasega
-description=Attempts to disable interlaced offset rendering.
 patch=1,EE,2025A3C8,extended,34020001
-comment=Press SELECT+L2 buttons to display the 480 buffer, press SELECT+R2 buttons to display the default buffers (the normal default mode)
-patch=1,EE,D02EA812,extended,0000FEFE
+description=Attempts to disable interlaced offset rendering.
+// uncomment for the effect described below
+// comment=Press SELECT+L2 buttons to display the 480 buffer, press SELECT+R2 buttons to display the default buffers (the normal default mode)
+// patch=1,EE,D02EA812,extended,0000FEFE
+// patch=1,EE,204A6A20,extended,00000001
+// patch=1,EE,D02EA812,extended,0000FEFE
+// patch=1,EE,20250D84,extended,340494D3
+// patch=1,EE,D02EA812,extended,0000FDFE
+// patch=1,EE,204A6A20,extended,00000003
+// patch=1,EE,D02EA812,extended,0000FDFE
+// patch=1,EE,20250D84,extended,00832025
+
+[No-Interlacing-2]
+gsinterlacemode=1
+author=xan1242
+description=Experimental full-frame render hack for maximum sharpness in gameplay. WARNING: potentially breaks minor things.
+
+//
+// resolution stuff
+//
+patch=1,EE,00243204,short,3F80
+patch=1,EE,2024341C,short,01C0
+// this affects the actual res
+// field 0
+patch=1,EE,20243260,short,01C0
+// field 1 -- we nuke this one
+patch=1,EE,202432CC,short,0001
+patch=1,EE,202432F4,word,AC530008
+// disable field switching
+patch=1,EE,2025A3C8,extended,34020001
+
+patch=1,EE,2010148C,extended,24030000
+patch=1,EE,201014A4,extended,24020001
+// disable switchers
+patch=1,EE,20101490,extended,00000000
+patch=1,EE,201014B0,extended,00000000
+
+// force full frame
 patch=1,EE,204A6A20,extended,00000001
-patch=1,EE,D02EA812,extended,0000FEFE
-patch=1,EE,20250D84,extended,340494D3
-patch=1,EE,D02EA812,extended,0000FDFE
-patch=1,EE,204A6A20,extended,00000003
-patch=1,EE,D02EA812,extended,0000FDFE
-patch=1,EE,20250D84,extended,00832025
+
+// disable half-res rendering
+//
+patch=1,EE,20252A44,extended,00003021
+patch=1,EE,20252A70,extended,00003021
+patch=1,EE,20252ABC,extended,00001821
+patch=1,EE,20252AE4,extended,00002021
+patch=1,EE,20252B10,extended,00003021
+
+//
+// font stuff
+//
+patch=1,EE,201D1B54,short,01C0
+patch=1,EE,2016CCC0,short,01C0
+patch=1,EE,20180B6C,short,01C0
+patch=1,EE,20180CDC,short,01C0
+
+// halve 3D render res in menus to avoid bugs
+// entrypoint
+patch=1,EE,201CAE7C,extended,0C0D2226
+patch=1,EE,201CAE98,extended,0C0D2226
+// detour to 0x00348898
+patch=1,EE,20348898,extended,03E03821
+patch=1,EE,2034889C,extended,0C091146
+patch=1,EE,203488A0,extended,00000000
+patch=1,EE,203488A4,extended,00E0F821 // MAX RES: 640x320, SAFE RES: 640x224
+patch=1,EE,203488A8,extended,24030280 // X res
+patch=1,EE,203488AC,extended,AC830008
+patch=1,EE,203488B0,extended,24030140 // Y res 
+patch=1,EE,203488B4,extended,AC83000C
+patch=1,EE,203488B8,extended,03E00008
+patch=1,EE,203488BC,extended,00000000
+
+// adjust transforms
+// entrypoint for blur
+patch=1,EE,201CD8A4,extended,0C0D243C
+// entrypoint for splitscreen
+patch=1,EE,20183E88,extended,0C0D243C
+// entrypoint for demo replays menu
+patch=1,EE,201D22C4,extended,0C0D243C
+patch=1,EE,201D2318,extended,0C0D243C
+// entrypoint for playlist config menu
+patch=1,EE,201D24F8,extended,0C0D243C
+patch=1,EE,201D2538,extended,0C0D243C
+// entrypoint for title screen
+patch=1,EE,201D1F1C,extended,0C0D243C
+patch=1,EE,201D1F70,extended,0C0D243C
+// entrypoint for pause menu
+patch=1,EE,201AFF34,extended,0C0D243C
+
+// other entrypoints (comment each pair if something is bugged!)
+patch=1,EE,201D1DE0,extended,0C0D243C
+patch=1,EE,201D1E34,extended,0C0D243C
+
+patch=1,EE,201D2060,extended,0C0D243C
+patch=1,EE,201D20B0,extended,0C0D243C
+
+patch=1,EE,201D2194,extended,0C0D243C
+patch=1,EE,201D21E8,extended,0C0D243C
+
+patch=1,EE,201D23F0,extended,0C0D243C
+patch=1,EE,201D243C,extended,0C0D243C
+
+// detour to 0x3490F0
+patch=1,EE,203490F0,extended,03E00008
+patch=1,EE,203490F4,extended,8C82000C
+
+// fix halved viewports
+patch=1,EE,202446F8,extended,02401021

@@ -25,3 +25,111 @@ patch=1,EE,20351F1C,extended,3C888889 //speed cars
 patch=1,EE,20351980,extended,3C888889 //speed icon ilumination
 patch=1,EE,203519D4,extended,3C888889 //speed icon menu principal
 patch=1,EE,201F0D30,extended,24420032 //speed timer
+
+[No-Interlacing-2]
+gsinterlacemode=1
+author=xan1242
+description=Experimental full-frame render hack for maximum sharpness in gameplay. WARNING: breaks fade screens in races/replays and some other minor things.
+
+//
+// resolution stuff
+//
+patch=1,EE,2024430C,short,3F80
+patch=1,EE,20244520,short,0200
+// this affects the actual res
+// field 0
+patch=1,EE,20244368,short,0200
+//patch=1,EE,20244368,short,0002
+// field 1 -- we nuke this one
+//patch=1,EE,202443D0,short,0200
+patch=1,EE,202443D0,short,0001
+patch=1,EE,20244464,word,AC530008
+// disable field switching
+patch=1,EE,2025B4E8,extended,34020001
+
+patch=1,EE,2010156C,extended,24030000
+patch=1,EE,20101584,extended,24020001
+// disable switchers
+patch=1,EE,20101570,extended,00000000
+patch=1,EE,20101590,extended,00000000
+
+// force full frame
+patch=1,EE,204A83E0,extended,00000001
+
+//
+// disable half-res rendering
+//
+patch=1,EE,20253B64,extended,00003021
+patch=1,EE,20253B90,extended,00003021
+patch=1,EE,20253BDC,extended,00001821
+patch=1,EE,20253C04,extended,00002021
+patch=1,EE,20253C30,extended,00003021
+
+//
+// font stuff
+//
+patch=1,EE,201D2A64,short,0200
+patch=1,EE,2016D730,short,0200
+patch=1,EE,20181590,short,0200
+patch=1,EE,20181704,short,0200
+
+// halve 3D render res in menus to avoid bugs
+// entrypoint
+patch=1,EE,201CBD84,extended,0C0D2876
+patch=1,EE,201CBDA0,extended,0C0D2876
+// detour to 0x0034A1D8
+patch=1,EE,2034A1D8,extended,03E03821
+patch=1,EE,2034A1DC,extended,0C091588
+patch=1,EE,2034A1E0,extended,00000000
+patch=1,EE,2034A1E4,extended,00E0F821 // MAX & SAFE RES: 640x256
+patch=1,EE,2034A1E8,extended,24030280 // X res
+patch=1,EE,2034A1EC,extended,AC830008
+patch=1,EE,2034A1F0,extended,24030100 // Y res 
+patch=1,EE,2034A1F4,extended,AC83000C
+patch=1,EE,2034A1F8,extended,03E00008
+patch=1,EE,2034A1FC,extended,00000000
+
+// adjust transforms
+// remove blur height doubling
+patch=1,EE,201CE7A8,extended,46000506
+// entrypoint for blur
+patch=1,EE,201CE700,extended,0C0D2A8C
+patch=1,EE,201CE71C,extended,0C0D2A8C
+patch=1,EE,201CE784,extended,0C0D2A8C
+patch=1,EE,201CE7A4,extended,0C0D2A8C
+// entrypoint for splitscreen
+patch=1,EE,201848B0,extended,0C0D2A8C
+// entrypoint for demo replays menu
+patch=1,EE,201D31D4,extended,0C0D2A8C
+patch=1,EE,201D3228,extended,0C0D2A8C
+// entrypoint for playlist config menu
+patch=1,EE,201D3408,extended,0C0D2A8C
+patch=1,EE,201D3448,extended,0C0D2A8C
+// entrypoint for title screen
+patch=1,EE,201D2E2C,extended,0C0D2A8C
+patch=1,EE,201D2E80,extended,0C0D2A8C
+// entrypoint for pause menu
+patch=1,EE,201B0E34,extended,0C0D2A8C
+
+// other entrypoints (comment each pair if something is bugged!)
+patch=1,EE,201D2BB0,extended,0C0D2A8C
+patch=1,EE,201D2BD8,extended,0C0D2A8C
+
+patch=1,EE,201D2CF0,extended,0C0D2A8C
+patch=1,EE,201D2D44,extended,0C0D2A8C
+
+patch=1,EE,201D2F70,extended,0C0D2A8C
+patch=1,EE,201D2FC0,extended,0C0D2A8C
+
+patch=1,EE,201D30A4,extended,0C0D2A8C
+patch=1,EE,201D30F8,extended,0C0D2A8C
+
+patch=1,EE,201D3300,extended,0C0D2A8C
+patch=1,EE,201D334C,extended,0C0D2A8C
+
+// detour to 0x34AA30
+patch=1,EE,2034AA30,extended,03E00008
+patch=1,EE,2034AA34,extended,8C82000C
+
+// fix halved viewports
+patch=1,EE,20245800,extended,02401021
