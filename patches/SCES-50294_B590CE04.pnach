@@ -67,7 +67,6 @@ patch=1,EE,20253C30,extended,00003021
 // font stuff
 //
 patch=1,EE,201D2A64,short,0200
-patch=1,EE,2016D730,short,0200
 patch=1,EE,20181590,short,0200
 patch=1,EE,20181704,short,0200
 
@@ -156,7 +155,8 @@ patch=1,EE,2034AA34,extended,8C82000C
 // fix halved viewports
 patch=1,EE,20245800,extended,02401021
 
-// fix "congratulations" screen after championship
-patch=1,EE,20139C38,short,0004
-// trophy hack (causes double trophies to be rendered)
+// fix trophy screens - multi-pass rendering has to be disabled otherwise it's a black screen
 patch=1,EE,20139B60,extended,00000000
+patch=1,EE,20139C18,extended,00000000
+patch=1,EE,20139C00,short,0006
+patch=1,EE,20139C38,short,0006

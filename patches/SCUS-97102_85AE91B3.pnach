@@ -56,7 +56,6 @@ patch=1,EE,20252B10,extended,00003021
 // font stuff
 //
 patch=1,EE,201D1B54,short,01C0
-patch=1,EE,2016CCC0,short,01C0
 patch=1,EE,20180B6C,short,01C0
 patch=1,EE,20180CDC,short,01C0
 
@@ -137,7 +136,49 @@ patch=1,EE,203490F4,extended,8C82000C
 // fix halved viewports
 patch=1,EE,202446F8,extended,02401021
 
-// fix "congratulations" screen after championship
-patch=1,EE,20139798,short,0004
-// trophy hack (causes double trophies to be rendered)
-patch=1,EE,201396C0,extended,00000000
+// fix championship trophy screen
+// modify code on the fly to only affect the championship screen and not regular trophy screen
+// this disables multi-pass rendering because it is currently bugged
+
+// entrypoint 1 -- when in championship trophy render, modify trophy render code and set the transform disable flag, then revert changes after function call
+patch=1,EE,20139BF0,extended,0C0D150B
+
+// detour to 0x34542C
+patch=1,EE,2034542C,extended,27BDFFE0
+patch=1,EE,20345430,extended,FFB60010
+patch=1,EE,20345434,extended,FFBF0000
+patch=1,EE,20345438,extended,24020006
+patch=1,EE,2034543C,extended,24030001
+patch=1,EE,20345440,extended,3C160014
+patch=1,EE,20345444,extended,26D69700
+patch=1,EE,20345448,extended,A6C20060
+patch=1,EE,2034544C,extended,A6C20098
+patch=1,EE,20345450,extended,A6C3FE20
+patch=1,EE,20345454,extended,A2C3016C
+patch=1,EE,20345458,extended,0C04E528
+patch=1,EE,2034545C,extended,24050001
+patch=1,EE,20345460,extended,24020005
+patch=1,EE,20345464,extended,24030004
+patch=1,EE,20345468,extended,A6C20060
+patch=1,EE,2034546C,extended,A6C20098
+patch=1,EE,20345470,extended,A6C3FE20
+patch=1,EE,20345474,extended,A2C0016C
+patch=1,EE,20345478,extended,DFB60010
+patch=1,EE,2034547C,extended,DFBF0000
+patch=1,EE,20345480,extended,03E00008
+patch=1,EE,20345484,extended,27BD0020
+
+// entrypoint 2 -- intercept the transform function and don't execute if the transform disable flag is set
+patch=1,EE,201396C0,extended,0C0D1522
+
+// detour to 0x345488
+patch=1,EE,20345488,extended,3C030014
+patch=1,EE,2034548C,extended,2463986C
+patch=1,EE,20345490,extended,8C620000
+patch=1,EE,20345494,extended,10400003
+patch=1,EE,20345498,extended,00000000
+patch=1,EE,2034549C,extended,03E00008
+patch=1,EE,203454A0,extended,00001021
+patch=1,EE,203454A4,extended,00000000
+patch=1,EE,203454A8,extended,0809128C
+patch=1,EE,203454AC,extended,00000000

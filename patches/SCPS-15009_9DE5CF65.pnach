@@ -66,7 +66,6 @@ patch=1,EE,20343424,extended,00000000
 // font stuff
 //
 patch=1,EE,201CF6DC,short,01C0
-patch=1,EE,2016BEA8,short,01C0
 patch=1,EE,2017FB94,short,01C0
 patch=1,EE,2017FD08,short,01C0
 
@@ -160,7 +159,49 @@ patch=1,EE,20343408,extended,8C820024
 patch=1,EE,2034340C,extended,03E00008
 patch=1,EE,20343410,extended,00000000
 
-// fix "congratulations" screen after championship
-patch=1,EE,20138D38,short,0004
-// trophy hack (causes double trophies to be rendered)
-patch=1,EE,20138C60,extended,00000000
+// fix championship trophy screen
+// modify code on the fly to only affect the championship screen and not regular trophy screen
+// this disables multi-pass rendering because it is currently bugged
+
+// entrypoint 1 -- when in championship trophy render, modify trophy render code and set the transform disable flag, then revert changes after function call
+patch=1,EE,20139190,extended,0C0CFD2E
+
+// detour to 0x33F4B8
+patch=1,EE,2033F4B8,extended,27BDFFE0
+patch=1,EE,2033F4BC,extended,FFB60010
+patch=1,EE,2033F4C0,extended,FFBF0000
+patch=1,EE,2033F4C4,extended,24020006
+patch=1,EE,2033F4C8,extended,24030001
+patch=1,EE,2033F4CC,extended,3C160014
+patch=1,EE,2033F4D0,extended,26D68CA0
+patch=1,EE,2033F4D4,extended,A6C20060
+patch=1,EE,2033F4D8,extended,A6C20098
+patch=1,EE,2033F4DC,extended,A6C3FE20
+patch=1,EE,2033F4E0,extended,A2C3016C
+patch=1,EE,2033F4E4,extended,0C04E290
+patch=1,EE,2033F4E8,extended,24050001
+patch=1,EE,2033F4EC,extended,24020005
+patch=1,EE,2033F4F0,extended,24030004
+patch=1,EE,2033F4F4,extended,A6C20060
+patch=1,EE,2033F4F8,extended,A6C20098
+patch=1,EE,2033F4FC,extended,A6C3FE20
+patch=1,EE,2033F500,extended,A2C0016C
+patch=1,EE,2033F504,extended,DFB60010
+patch=1,EE,2033F508,extended,DFBF0000
+patch=1,EE,2033F50C,extended,03E00008
+patch=1,EE,2033F510,extended,27BD0020
+
+// entrypoint 2 -- intercept the transform function and don't execute if the transform disable flag is set
+patch=1,EE,20138C60,extended,0C0CFD45
+
+// detour to 0x33F514
+patch=1,EE,2033F514,extended,3C030014
+patch=1,EE,2033F518,extended,24638E0C
+patch=1,EE,2033F51C,extended,8C620000
+patch=1,EE,2033F520,extended,10400003
+patch=1,EE,2033F524,extended,00000000
+patch=1,EE,2033F528,extended,03E00008
+patch=1,EE,2033F52C,extended,00001021
+patch=1,EE,2033F530,extended,00000000
+patch=1,EE,2033F534,extended,080905BA
+patch=1,EE,2033F538,extended,00000000
