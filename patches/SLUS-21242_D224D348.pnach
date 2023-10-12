@@ -44,3 +44,12 @@ patch=1,EE,201125EC,extended,00108002
 author=SuperType1/remco
 description=Makes the Crashes & Crash Mode run in 60 FPS.
 patch=1,EE,20104B9C,extended,90850608
+
+[120 FPS]
+author=Scirvir
+description=Requires setting PCSX2 framerate to 120FPS in Properties>Emulation>Speed Controls.
+patch=1,EE,10103238,extended,3c104205
+patch=1,EE,10104a30,extended,3c104205
+patch=1,EE,10103230,extended,24040078
+patch=1,EE,001125d4,extended,24040078
+patch=1,EE,00303f00,extended,3c014e0c
