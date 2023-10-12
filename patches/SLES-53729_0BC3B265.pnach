@@ -1,0 +1,6 @@
+gametitle=Battlefield 2 - Modern Combat (PAL-M) SLES-53729 0BC3B265
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0022D9DC,word,24630001 //24630002

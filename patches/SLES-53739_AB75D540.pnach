@@ -10,4 +10,7 @@ patch=1,EE,205D27AC,extended,3FE38E32 //3FAAAAAB (Increases hor. axis)
 //Start menu and left status bar (ELF Hack)
 patch=1,EE,00287DE0,word,3C014455 //3C014420
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,005294A8,word,00000001 //00000002

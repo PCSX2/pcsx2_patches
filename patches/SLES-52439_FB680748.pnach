@@ -86,4 +86,11 @@ patch=1,EE,001E779C,word,00000000 //46000847
 //Font fix
 patch=1,EE,001f9cd0,word,3c013f40 //3c013f80
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,001F92C0,extended,28420002
+patch=1,EE,001F92E0,extended,28420002
+patch=1,EE,E0020000,extended,00476E44
+patch=1,EE,001F92C0,extended,28420001
+patch=1,EE,001F92E0,extended,28420001
