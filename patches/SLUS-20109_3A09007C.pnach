@@ -1,0 +1,7 @@
+gametitle=Rune - Viking Warlord (NTSC-U) SLUS-20109 3A09007C secondary crc 1259612B
+
+[60 FPS]
+author=PeterDelta
+comment=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,E001FFFD,extended,001305A8
+patch=1,EE,201305A8,extended,00000000 //1440FFFD

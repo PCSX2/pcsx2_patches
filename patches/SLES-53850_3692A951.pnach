@@ -2,7 +2,8 @@ gametitle=Teenage Mutant Ninja Turtles 3 - Mutant Nightmare (PAL-M5) (SLES-53850
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
+comment=Widescreen Hack 16:9
 //
 // 16:9
 patch=1,EE,0028ff90,word,3c023fe3 // 3c023faa ver fov
@@ -12,3 +13,19 @@ patch=1,EE,0028fe54,word,44810000 // 00000000
 patch=1,EE,0028fe58,word,46006303 // 00000000
 
 
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,10750C44,extended,04000001 //04000002
+patch=1,EE,E001D70A,extended,005B3190
+patch=1,EE,205B3190,extended,3CA3D70A //3D23D70A 50hz
+patch=1,EE,E0018889,extended,005B3190
+patch=1,EE,205B3190,extended,3C888889 //3D088889 60hz
+
+[Mode 480p]
+author=PeterDelta
+comment=Force progressive scan when selecting 60hz
+patch=1,EE,E0030000,extended,005B30C0
+patch=1,EE,201009F4,extended,24110000
+patch=1,EE,201009F8,extended,24120050
+patch=1,EE,20100A04,extended,24130001
