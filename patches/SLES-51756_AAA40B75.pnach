@@ -2,14 +2,15 @@ gametitle=Batman - Rise of Sin Tzu (E)(SLES-51756)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
-
-//Widescreen hack 16:9
-
+author=Arapapa
+comment=Widescreen Hack 16:9
 //X-Fov
 patch=1,EE,004b0b28,word,3f5a7408 //3f23d70a
 
 //Render Fix
 patch=1,EE,00309008,word,3c023f40 //3c023f00
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00535FA0,word,00000001 //00000002

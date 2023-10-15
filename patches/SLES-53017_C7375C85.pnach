@@ -1,10 +1,27 @@
+gametitle=TMNT Teenage Mutant Ninja Turtles 2 - Battle Nexus (PAL-M5) SLES-54478 D76BF975
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Teenage Mutant Ninja Turtles 2 - Battle Nexus (PAL-M5) (SLES-53017)
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
+comment=Widescreen Hack 16:9
 //
 // 16:9
 patch=1,EE,00234710,word,460d6302
 patch=1,EE,00234714,word,460d6b42
 
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,10557B6C,extended,04000001 //04000002
+patch=1,EE,E001D70A,extended,00558200
+patch=1,EE,20558200,extended,3CA3D70A //3D23D70A 50hz
+patch=1,EE,E0018889,extended,00558200
+patch=1,EE,20558200,extended,3C888889 //3D088889 60hz
 
+[Mode 480p]
+author=PeterDelta
+comment=Force progressive scan when selecting 60hz
+patch=1,EE,E0030000,extended,00558788
+patch=1,EE,201009B4,extended,24110000
+patch=1,EE,201009B8,extended,24120050
+patch=1,EE,201009C4,extended,24130001
