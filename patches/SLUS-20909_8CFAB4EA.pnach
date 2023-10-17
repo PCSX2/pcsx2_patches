@@ -1,0 +1,11 @@
+[Widescreen 16:9]
+author=TechieSaru
+gsaspectratio=16:9
+patch=1,EE,20166EE4,extended,24060001
+patch=1,EE,20179994,extended,24020001
+patch=1,EE,2019B398,extended,24030001
+patch=1,EE,2019FFA4,extended,24020001
+patch=1,EE,201A0034,extended,24020001
+patch=1,EE,201A05E8,extended,24020001
+patch=1,EE,201A6F9C,extended,24030001
+patch=1,EE,202AEB54,extended,24020001
