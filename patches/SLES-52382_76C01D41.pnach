@@ -1,0 +1,14 @@
+gametitle=Shrek 2 (Spain) (SLES_523.82)
+//Main CRC 4CF48A70
+//SHREK2.ELF CRC 76C01D41
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+comment=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original NTSC-U pnach by Arapapa)
+
+//Wide 16:9 (EA4ED1BC 00000000 7FAAAA3F 00000000)
+patch=1,EE,20379A30,word,3F800000 // 3FAAAA7F
+
+//00 00 80 3F 00 00 80 3F 00 00 00 00
+patch=1,EE,20367674,extended,3f400000 //3f800000 HUD fix
