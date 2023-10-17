@@ -1,8 +1,6 @@
-gametitle=Crash Twinsanity (U)(SLUS-20909)
-
-[Widescreen always enabled]
+[Widescreen 16:9]
 author=TechieSaru
-comment=Enables widescreen by default.
+gsaspectratio=16:9
 patch=1,EE,20166EE4,extended,24060001
 patch=1,EE,20179994,extended,24020001
 patch=1,EE,2019B398,extended,24030001
