@@ -1,0 +1,6 @@
+gametitle=Transformers - Revenge of the Fallen (PAL-M) SLES-55520 9E36E023
+
+[50 FPS]
+author=asasega
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0011E888,word,28420001 //28420002

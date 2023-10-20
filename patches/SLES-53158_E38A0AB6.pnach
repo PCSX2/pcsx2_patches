@@ -1,0 +1,6 @@
+gametitle=Cold Fear (PAL-M) SLES-53158 E38A0AB6 
+
+[50 FPS]
+author=Snake356
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0046E404,extended,00000001

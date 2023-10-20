@@ -1,0 +1,7 @@
+gametitle=Transformers - The Game (PAL-S-F) SLES-54756 F453BCD9
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,00382DA8,word,28420001 //28420002 
+patch=1,EE,00434EBC,word,3C013F00 //3C013F80

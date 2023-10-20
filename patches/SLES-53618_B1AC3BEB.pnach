@@ -1,7 +1,6 @@
 gametitle=True Crime - New York City [PAL-S] SLES-53618 B1AC3BEB. elf secondary B2D44C6C
+//Corresponds to the main crc to activate the secondary crc B2D44C6C called TC2.ELF
 
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,004A1AE4,word,24040001 //24040002
-patch=1,EE,0050549C,word,3F000000 //3F800000
+comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.

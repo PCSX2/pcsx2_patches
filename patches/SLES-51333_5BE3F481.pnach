@@ -1,0 +1,6 @@
+gametitle=Dark Angel (PAL-M) SLES-51333 5BE3F481
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0025BE04,word,00000000 //1040FFFA

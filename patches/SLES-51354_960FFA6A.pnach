@@ -2,11 +2,12 @@ gametitle=Jurassic Park - Operation Genesis (E)(SLES-51354)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
-
-//Widescreen hack 16:9
-
+author=Arapapa
+comment=Widescreen Hack
 patch=1,EE,0055a410,word,3ff3aaab //3eaaaaab
 patch=1,EE,0055c1f4,word,3FB60CD0 //3f8889a0
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00564EE4,word,00000001 //00000002

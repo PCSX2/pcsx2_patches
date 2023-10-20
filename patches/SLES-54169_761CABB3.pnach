@@ -1,0 +1,6 @@
+gametitle=Aeon Flux (PAL-M) SLES-54169 761CABB3
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 300% EE Overclock to be stable.
+patch=1,EE,00362EB8,word,28630001 //28630002

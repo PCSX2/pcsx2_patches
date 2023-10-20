@@ -1,0 +1,6 @@
+gametitle=Superman - Shadow of Apokolips (PAL-M) SLES-50795 4F5579D3
+
+[50 FPS]
+author=asasega
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0032D1E8,word,00000001
