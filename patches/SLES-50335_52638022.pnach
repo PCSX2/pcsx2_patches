@@ -1,0 +1,7 @@
+gametitle=Rune - Viking Warlord (PAL-E) SLES-50335 7DB392C5 secondary crc 52638022
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,E001FFFD,extended,001307B0
+patch=1,EE,201307B0,extended,00000000 //1440FFFD

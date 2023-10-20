@@ -1,0 +1,6 @@
+gametitle=Aeon Flux (NTSC-U) SLUS-21205 9FA0A1B0
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable 300% EE Overclock to be stable.
+patch=1,EE,2036C438,extended,28630001
