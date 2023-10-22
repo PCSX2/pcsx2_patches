@@ -1,0 +1,8 @@
+gametitle=Ape Escape 2 (Spain) (SCES-51105)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,203E19B4,word,00000001 //00000000 Widescreen
+//patch=1,EE,20535690,word,00000004 //00000002 Widescreen
