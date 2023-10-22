@@ -2,8 +2,8 @@ gametitle=Grand Theft Auto: Vice City Stories (SLES_546.22)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Some Chump
-comment=Select widescreen in game otherwise image is zoomed out 4:3 (Original NTSC-U pnach by nemesis2000)
+author=Some Chump + CRASHARKI
+comment=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original widescreen fix by nemesis2000)
 
 //widescreen fix pal
 patch=1,EE,00265568,word,3c013f9d
@@ -16,6 +16,9 @@ patch=1,EE,0026557c,word,e44c7784
 patch=1,EE,0037afb4,word,0c09955a
 patch=1,EE,003ba014,word,0c09955d
 patch=1,EE,003ba4b0,word,0c09955d
+
+//Force widescreen from the start
+patch=1,EE,21FB5830,byte,1
 
 [50 FPS]
 author=Snake356

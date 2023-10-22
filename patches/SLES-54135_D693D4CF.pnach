@@ -2,7 +2,8 @@ gametitle=Grand Theft Auto: Liberty City Stories (SLES_541.35)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Select widescreen in game otherwise image is zoomed out 4:3 (Original NTSC-U pnach by nemesis2000)
+author=Some Chump + CRASHARKI
+comment=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original widescreen fix by nemesis2000)
 
 //widescreen fix
 patch=1,EE,00291990,word,468010a0
@@ -56,6 +57,9 @@ patch=1,EE,00291a4c,word,3c013f9d
 patch=1,EE,00291a50,word,44810000
 patch=1,EE,00291a54,word,0c082128
 patch=1,EE,00291a58,word,46006302
+
+//Force widescreen from the start
+patch=1,EE,203D8DAA,byte,1
 
 [50 FPS]
 author=Snake356
