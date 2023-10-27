@@ -1,0 +1,4 @@
+gametitle=Spyro: Enter the Dragonfly (SLUS_20315)
+
+[Default Widescreen mode]
+patch=0,EE,00198A64,short,00000030 // Default: 0x20 (4:3); 0x30 (16:9);
