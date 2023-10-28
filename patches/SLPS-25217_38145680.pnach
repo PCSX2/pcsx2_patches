@@ -17,3 +17,7 @@ patch=1,EE,0010180c,word,00000000 //64420008
 patch=1,EE,001E8FB0,word,00000000
 
 
+[Remove Scanmask Blur]
+author=val & refraction
+description=Disables scanmask usage to reduce blur when turning.
+patch=1,EE,20158CA8,extended,24050004
