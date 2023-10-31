@@ -1,0 +1,16 @@
+gametitle=Half-Life (PAL-S) SLES-50509 F9E3CF90
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,002aa624,word,3c013fe3
+patch=1,EE,002aa628,word,34218e38
+patch=1,EE,002a9e60,word,3c013f2b
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan and run at 60 fps
+patch=1,EE,002EEFA0,word,34050052
+patch=1,EE,002EEFA4,word,24030002
+patch=1,EE,002EEFA8,word,0000000C
+patch=1,EE,002EEFAC,word,03E00008

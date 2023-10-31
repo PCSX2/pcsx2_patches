@@ -1,14 +1,14 @@
-gametitle=Max Payne 2 - Fall of Max Payne (Spain) (SLES-52256)
+gametitle=Max Payne 2 - The Fall of Max Payne (PAL-E) SLES-51954 564F352C
 
 [50 FPS]
 author=PeterDelta
 comment=Unlocked at 50 FPS. Might need enable 300% EE Overclock to be stable.
-patch=1,EE,005C0DF8,word,00000001 //00000002
+patch=1,EE,005D8F78,word,00000001 //00000002
 
 [60 FPS]
 author=PeterDelta
 comment=Forces progressive scan and run at 60 fps
-patch=1,EE,E0040000,extended,005C0E0C
+patch=1,EE,E0040000,extended,005D8F88
 patch=1,EE,2010D1E0,extended,34050052
 patch=1,EE,2010D1E4,extended,24030002
 patch=1,EE,2010D1E8,extended,0000000C

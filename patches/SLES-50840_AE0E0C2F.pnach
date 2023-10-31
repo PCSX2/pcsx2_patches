@@ -1,0 +1,8 @@
+gametitle=Indiana Jones y la Tumba del Emperador (PAL-S) SLES-50840 AE0E0C2F
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+comment=Widescreen Hack
+patch=1,EE,0011cf0c,word,3c013f24 //3c013f49
+patch=1,EE,0011cf10,word,34216666 //34210fda

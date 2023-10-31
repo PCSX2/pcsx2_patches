@@ -2,8 +2,8 @@ gametitle=The Suffering PAL (SLES_524.39)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
-
+author=El_Patas
+comment=Widescreen Hack 
 //Gameplay 16:9
 patch=1,EE,001E766C,word,E7B40010 //14E00004
 patch=1,EE,001E7670,word,8E020338 //E7B40010
@@ -94,3 +94,10 @@ patch=1,EE,001F92E0,extended,28420002
 patch=1,EE,E0020000,extended,00476E44
 patch=1,EE,001F92C0,extended,28420001
 patch=1,EE,001F92E0,extended,28420001
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan and run at 60 fps
+patch=1,EE,00418544,word,24110000
+patch=1,EE,00418548,word,24120052
+patch=1,EE,00418554,word,24130001
