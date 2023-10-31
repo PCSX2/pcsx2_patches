@@ -1,0 +1,8 @@
+gametitle=Primal (PAL-M) SLES-51135 DCC4EEEA
+
+[50/60 FPS]
+author=Gabominated
+comment=Unlocked at 50/60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,204877FC,extended,00000001
+patch=1,EE,E0010000,extended,00485A2C
+patch=1,EE,204877FC,extended,00000002

@@ -1,0 +1,21 @@
+gametitle=007 - From Russia with Love (PAL-M7) SLES-53553 22DC8EAC
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Widescreen Hack
+patch=1,EE,0040560c,word,46140002 //e7b40030
+patch=1,EE,00405610,word,27a50030 //46140002
+patch=1,EE,00405614,word,46010003 //27a50030
+patch=1,EE,00405618,word,3c013f40 //00000000 //Hor value
+patch=1,EE,0040561c,word,44810800 //00000000
+patch=1,EE,00405620,word,4601a503 //46010003
+patch=1,EE,00405624,word,e7b40030 //46020002
+patch=1,EE,00405628,word,46020002 //0c0c87e6
+patch=1,EE,0040562c,word,0c0c87e6 //e7a00034
+patch=1,EE,00405630,word,e7a00034 //7bb00050
+patch=1,EE,00405634,word,7bb00050 //dfbf0040
+patch=1,EE,00405638,word,dfbf0040 //c7b40060
+patch=1,EE,0040563c,word,c7b40060 //03e00008
+patch=1,EE,00405640,word,03e00008 //27bd0070
+patch=1,EE,00405644,word,27bd0070 //00000000
