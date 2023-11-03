@@ -1,0 +1,13 @@
+gametitle=Crash Twinsanity (v2.00) (SLUS-20909)
+
+[Widescreen 16:9]
+author=TechieSaru
+gsaspectratio=16:9
+patch=1,EE,20166E64,extended,24060001
+patch=1,EE,201798AC,extended,24020001
+patch=1,EE,2019B270,extended,24030001
+patch=1,EE,2019FE7C,extended,24020001
+patch=1,EE,2019FF0C,extended,24020001
+patch=1,EE,201A04C0,extended,24020001
+patch=1,EE,201A6E74,extended,24030001
+patch=1,EE,202AE764,extended,24020001
