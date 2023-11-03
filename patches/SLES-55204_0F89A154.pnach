@@ -10,6 +10,8 @@ patch=1,EE,21A2A108,extended,3F000000 //3F2AAAAA //Zoom without Progressive Scan
 patch=1,EE,E0010001,extended,01A2A0A8 //Check if Progressive Scan is on
 patch=1,EE,21A2A108,extended,3F066666 //3F333333 //Zoom with Progressive Scan
 
+patch=1,EE,20715330,byte,1 //00000000 //Progressive Scan\60 FPS from the beginning
+
 [50/60 FPS]
 author=IWILLCRAFT
 description=Patches the game to run at 50 FPS (Activate Progressive Scan for 60 FPS).
