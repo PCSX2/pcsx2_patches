@@ -1,0 +1,9 @@
+gametitle=Taz Wanted (SLUS-20236)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,203FEF70,word,00000910 //00000304 //HUD
+patch=1,EE,203FEF94,word,3FE7E9B8 //3FC36507 //Rendering
+patch=1,EE,204125C4,byte,1 //0 //In-game option
