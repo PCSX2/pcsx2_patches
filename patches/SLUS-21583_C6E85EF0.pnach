@@ -1,5 +1,13 @@
 gametitle=Crash of the Titans (NTSC-U)
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,21BD4F68,byte,1 //00000000 //In-game option
+patch=1,EE,21BD4FA2,byte,10 //40 //Zoom 1
+patch=1,EE,21BD4FA8,word,3F066666 //3F333333 //Zoom 2
+
 [60 FPS]
 author=asasega
 description=Patches the game to run at 60 FPS (Might need 130% EE Overclock to be stable).
