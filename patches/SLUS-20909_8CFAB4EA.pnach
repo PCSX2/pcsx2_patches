@@ -3,6 +3,7 @@ gametitle=Crash Twinsanity (v2.00) (SLUS-20909)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=TechieSaru
+comment=Forces the game into widescreen mode
 patch=1,EE,20166E64,extended,24060001
 patch=1,EE,201798AC,extended,24020001
 patch=1,EE,2019B270,extended,24030001
