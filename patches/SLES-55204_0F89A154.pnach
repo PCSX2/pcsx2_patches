@@ -1,7 +1,17 @@
 gametitle=Crash - Mind Over Mutant (PAL)
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,21A2A0C8,byte,1 //00000000 //HUD
+patch=1,EE,21A2A102,byte,10 //40 //Zoom 1
+patch=1,EE,21A2A108,extended,3F000000 //3F2AAAAA //Zoom without Progressive Scan
+patch=1,EE,E0010001,extended,01A2A0A8 //Check if Progressive Scan is on
+patch=1,EE,21A2A108,extended,3F066666 //3F333333 //Zoom with Progressive Scan
+
 [50/60 FPS]
-//01 00 02 24 12 00 82
 author=IWILLCRAFT
 description=Patches the game to run at 50 FPS (Activate Progressive Scan for 60 FPS).
+//01 00 02 24 12 00 82
 patch=1,EE,20582168,extended,24020000 //24020001
