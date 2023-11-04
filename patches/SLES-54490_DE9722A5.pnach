@@ -2,7 +2,7 @@ gametitle=God Hand (PAL-M5) (SLES-54490)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=ElHecht and Arapapa
 comment=Widescreen Hack
 // 16:9
 patch=1,EE,00138814,word,3c014455
