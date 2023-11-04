@@ -5,4 +5,3 @@ gsaspectratio=16:9
 author=CRASHARKI
 comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
 patch=1,EE,2030AA44,word,00000001 //00000000
-patch=1,EE,20BD9F34,word,00000001 //00000000
