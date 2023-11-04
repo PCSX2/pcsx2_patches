@@ -2,7 +2,8 @@ gametitle=Pitfall - The Lost Expedition (PAL-S) SLES-51690 D8A68BBA
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
+comment=Widescreen Hack
 //X-Fov
 //000018e6 280015e6
 patch=1,EE,0036e1c0,word,08112ed4

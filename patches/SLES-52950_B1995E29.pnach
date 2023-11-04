@@ -2,6 +2,7 @@ gametitle=Shadow of Rome SLES_529.50
 
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=sergx12
 comment=Widescreen Hack
 patch=1,EE,00146c08,word,3c023f1f
 patch=1,EE,00146c10,word,344249f9

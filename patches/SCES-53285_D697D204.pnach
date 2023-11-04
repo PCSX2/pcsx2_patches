@@ -2,8 +2,8 @@ gametitle=Ratchet - Gladiator (PAL-M5) (SCES-53285)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+comment=Widescreen Hack
 // enable widescreen mode in options
 patch=1,EE,e0010032,extended,00171e5c // check 00171e5c matches value xxxx0032
 patch=1,EE,20171e6b,extended,00000001 // 00000000

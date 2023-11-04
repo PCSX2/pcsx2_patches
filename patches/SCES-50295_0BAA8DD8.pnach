@@ -1,8 +1,9 @@
+gametitle=Dark Cloud (PAL-M5) (SCES-50295) 0BAA8DD8
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Dark Cloud (PAL-M5) (SCES-50295) Widescreen Hack (16:9) by ElHecht
-//
-// 16:9
+author=ElHecht
+comment=Widescreen Hack
 patch=1,EE,0012e228,word,3c023f40
 
 [No-Interlacing]

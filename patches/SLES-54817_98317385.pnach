@@ -2,13 +2,13 @@ gametitle=Garfield - Lasangna World Tour (E)(SLES-54817)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
-
+author=El_Patas
+comment=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,001c3a74,word,3c033f40 //3c033f80
 
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,0026BBF4,word,00000001 //00000002

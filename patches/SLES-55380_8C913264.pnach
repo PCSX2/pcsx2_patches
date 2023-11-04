@@ -2,8 +2,8 @@ gametitle=Sonic Unleashed (PAL-M5) (SLES-55380)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+comment=Widescreen Hack
 // 16:9
 patch=1,EE,0038d71c,word,3c014340 // 00000000 hor fov
 patch=1,EE,0038d720,word,3c1b008a // 00000000

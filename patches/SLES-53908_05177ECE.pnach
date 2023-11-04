@@ -1,13 +1,12 @@
-gametitle=Lara Croft Tomb Raider - Legend
+gametitle=Lara Croft Tomb Raider - Legend * SLES-53908 * PAL/Europe * 05177ECE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=pgert
+comment=Widescreen Hack
 ; ==========
 ; pgert@190222
 ; http://forums.pcsx2.net/Thread-PCSX2-Widescreen-Game-Patches?pid=240786#pid240786
-; ==========
-comment= Lara Croft Tomb Raider - Legend * SLES-53908 * PAL/Europe * 05177ECE
-comment= pnach by pgert.
 ; ==========
 ; Note that GSdx have a CRC-specific HW-hack for this game.
 ; ==========

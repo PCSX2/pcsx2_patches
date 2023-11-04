@@ -2,7 +2,8 @@ gametitle=Champions - Return to Arms (PAl-M4) (SLES-53039)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
+comment=Widescreen Hack
 
 // 16:9
 patch=1,EE,0016595c,word,3c013f40 // 460c7382 hor fov

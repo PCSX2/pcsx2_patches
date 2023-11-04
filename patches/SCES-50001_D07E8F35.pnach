@@ -1,7 +1,9 @@
+gametitle=Tekken Tag Tournament (PAL-M5) (SCES-50001)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Tekken Tag Tournament (PAL-M5) (SCES-50001) Widescreen Hack (16:9) by ElHecht
-//
+author=ElHecht
+comment=Widescreen Hack
 // 16:9
 patch=1,EE,0034b014,word,3c013f40
 patch=1,EE,0034b018,word,44810000

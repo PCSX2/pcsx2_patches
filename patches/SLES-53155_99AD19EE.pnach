@@ -2,8 +2,8 @@ gametitle=Star Wars - Episode III - Revenge of the Sith (PAL-M3) (SLES-53155)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+comment=Widescreen Hack
 // 16:9
 patch=1,EE,004dbd44,word,3c023f40 // 3c023f80 hor fov
 patch=1,EE,0051bca0,word,3c013f40 // 00000000 renderfix

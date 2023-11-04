@@ -2,7 +2,8 @@ gametitle=Enter the Matrix [PAL-M5] (SLES_512.03)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
+author=El_Patas
+comment=Widescreen Hack
 
 //Built-in widescreen 16:9
 patch=1,EE,001CFA78,word,A2740BCC //AE600BCC (Increases hor. axis)
@@ -10,7 +11,7 @@ patch=1,EE,001CFA78,word,A2740BCC //AE600BCC (Increases hor. axis)
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,201D3518,extended,3C013FA6 //3C013FA6 li at,0x3FA66666 FPS
 patch=1,EE,201D1A44,extended,3C014270 //3C014270 lui at,0x4270 speed general
 patch=1,EE,201B56D4,extended,3C0140C0 //3C0140C0 lui at,0x40C0 speed menu

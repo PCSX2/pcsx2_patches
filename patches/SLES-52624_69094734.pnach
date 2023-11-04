@@ -2,8 +2,8 @@ gametitle=X-Men Legends (PAL-E) (SLES-52624)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by XxGaMiNGK3LLERxX
-
+author=XxGaMiNGK3LLERxX
+comment=Widescreen Hack
 patch=1,EE,20D86690,word,3F666666 // HUD Height
 patch=1,EE,207214D4,word,3FA00000 // HUD & Menu Width
 patch=1,EE,20D86678,word,3F59999A // HUD Width

@@ -2,8 +2,8 @@ gametitle=Just Cause (E)(SLES-54137)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack  by Arapapa
-
+author=Arapapa
+comment=Widescreen Hack
 //Widescreen hack 16:9
 
 //0000803f 0000803f 0000003f 66666645
@@ -12,5 +12,5 @@ patch=1,EE,207BEE08,extended,3FAAAAAB //3f800000
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
 patch=1,EE,003B860C,word,44800000 //45000010 bc1f 0x003B8A4C

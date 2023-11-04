@@ -2,7 +2,8 @@ gametitle=Beat Down - Fists of Vengeance (PAL-M5) (SLES-53505)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
+comment=Widescreen Hack
 
 //16:9
 patch=1,EE,003753d4,word,3c013f40 // 00000000 hor fov

@@ -2,8 +2,8 @@ gametitle=Prince of Persia - The Sands of Time (PAL-M5) (SLES-51918)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
-
+author=ElHecht
+comment=Widescreen Hack
 // 16:9
 patch=1,EE,004b4fc0,word,3c013f40 // 00000000 hor fov
 patch=1,EE,004b4fd8,word,34210000 // 00000000 hor fov
@@ -23,5 +23,5 @@ patch=1,EE,004b5008,word,4600f0c6 // 44821800
 
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
 patch=1,EE,0066CF44,word,00000001 //00000002

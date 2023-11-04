@@ -2,8 +2,8 @@ gametitle=Kingdom Hearts II (PAL-G) (SLES-54233)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+comment=Widescreen Hack
 //16:9
 patch=1,EE,00106d30,word,3c013f4c // c480004c
 patch=1,EE,00106d48,word,3421cccc // 4600a7c6

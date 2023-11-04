@@ -2,8 +2,8 @@ gametitle=Need for Speed - Hot Pursuit 2 (PAL-M6) (SLES-50731)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by nemesis2000/pnach by ElHecht
-
+author=ElHecht
+comment=Widescreen ported from NTSC hack by nemesis2000
 // 16:9
 patch=1,EE,0032f6fc,word,3f400000 // 3f800000 hor fov
 patch=1,EE,0032f850,word,3f2aaaab // 3f000000 increase hor fov
@@ -11,7 +11,7 @@ patch=1,EE,0010e840,word,3c013f2b // 3c013f00 renderfix
 
 [50 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,00113E2C,word,2C420001
 
 [60 FPS]
