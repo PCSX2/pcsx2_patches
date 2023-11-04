@@ -2,6 +2,13 @@ gametitle=Crash Twinsanity (v2.00) (SLUS-20909)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=CRASHARKI
-comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
-patch=1,EE,2030A744,word,00000001 //00000000
+author=TechieSaru
+comment=Forces the game into widescreen mode
+patch=1,EE,20166EE4,extended,24060001
+patch=1,EE,20179994,extended,24020001
+patch=1,EE,2019B398,extended,24030001
+patch=1,EE,2019FFA4,extended,24020001
+patch=1,EE,201A0034,extended,24020001
+patch=1,EE,201A05E8,extended,24020001
+patch=1,EE,201A6F9C,extended,24030001
+patch=1,EE,202AEB54,extended,24020001
