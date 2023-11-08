@@ -1,10 +1,9 @@
+gametitle=Bolt (U)(SLUS-21844)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-1gametitle=Bolt (U)(SLUS-21844)
-comment=Widescreen Hack by Arapapa
-
-//Widescreen hack 16:9
-
+author=Arapapa
+comment=Widescreen Hack
 /X-Fov
 //43030d46 07000046 140040e4 0400a4e7
 patch=1,EE,002d8668,word,08171b24 //e7a40004
@@ -19,4 +18,7 @@ patch=1,EE,005c6ca0,word,080b619b
 //003f013c 00008144 7900023c (1st)
 patch=1,EE,004b5328,word,3c013f2b //3c013f00
 
-
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,007E15EC,word,00000001

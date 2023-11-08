@@ -1,0 +1,7 @@
+gametitle=GoldenEye - Agente Corrupto (PAL-S) SLES-52977 3BEBCCAC
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,001223F4,word,2C420001 //2C420002
+patch=1,EE,00100030,word,3E800000 //3F000000

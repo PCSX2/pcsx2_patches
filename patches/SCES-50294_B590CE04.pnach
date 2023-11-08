@@ -1,4 +1,7 @@
+gametitle=Gran Turismo 3 - A-Spec (PAL-M) SCES-50294 B590CE04
+
 [No-Interlacing]
+author=junfurano
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,2025B4E8,extended,34020001
@@ -12,3 +15,4 @@ patch=1,EE,20351F1C,extended,3C888889 //speed cars
 patch=1,EE,20351980,extended,3C888889 //speed icon ilumination
 patch=1,EE,203519D4,extended,3C888889 //speed icon menu principal
 patch=1,EE,201F0D30,extended,24420032 //speed timer
+patch=1,EE,204A840C,extended,00080000

@@ -2,7 +2,8 @@ gametitle=Demon Stone (SLUS-20804)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
+comment=Widescreen hack
 
 patch=1,EE,001a4fb0,word,3c013f40
 patch=1,EE,001a4fb4,word,44810000
@@ -14,4 +15,7 @@ patch=1,EE,001562a0,word,34438e38
 //black borders fix
 patch=1,EE,001d8330,word,24040001
 
-
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,003223C0,word,00000000

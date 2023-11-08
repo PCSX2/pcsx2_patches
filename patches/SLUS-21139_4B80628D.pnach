@@ -1,0 +1,6 @@
+gametitle=Gun (NTSC-U) SLUS-21139 4B80628D
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0028ED08,word,1000000B

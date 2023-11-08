@@ -11,3 +11,4 @@ comment=Forces progressive scan and run at 60 fps
 patch=1,EE,004938DC,word,24110000
 patch=1,EE,004938E0,word,24120052
 patch=1,EE,004938EC,word,24130001
+patch=1,EE,00AAF950,word,40A00000

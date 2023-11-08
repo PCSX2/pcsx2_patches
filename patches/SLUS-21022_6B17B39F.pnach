@@ -2,7 +2,8 @@ gametitle=Prince of Persia: Warrior Within (SLUS-21022)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000 )
+author=nemesis2000
+comment=Widescreen hack
 
 //gameplay
 patch=1,EE,00544dd4,word,3C023f40
@@ -25,3 +26,7 @@ patch=1,EE,0019e55c,word,3c03bddd
 patch=1,EE,0019e564,word,3464dddd
 
 
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,007B7F6C,word,00000001
