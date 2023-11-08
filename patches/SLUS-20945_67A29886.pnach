@@ -1,0 +1,6 @@
+gametitle=Destroy All Humans! (NTSC-U) SLUS-20945 67A29886
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,003EF80C,word,00000001

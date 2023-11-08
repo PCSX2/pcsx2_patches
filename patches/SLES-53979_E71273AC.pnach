@@ -1,0 +1,10 @@
+gametitle=Torrente 3 - El Protector (PAL-S) SLES-53979 E71273AC
+
+[Mode 480p]
+author=PeterDelta
+comment=Forces progressive scan mode 480p at startup.
+patch=1,EE,20102CD8,extended,00069403
+patch=1,EE,20997EA0,extended,000001E0
+patch=1,EE,E0020000,extended,0056F5BC
+patch=1,EE,20102CD8,extended,24120050
+patch=1,EE,20997EA0,extended,00000200

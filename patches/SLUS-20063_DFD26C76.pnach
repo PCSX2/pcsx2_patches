@@ -7,3 +7,8 @@ comment=Widescreen hack 16:9
 patch=1,EE,004784C0,word,3F471C97
 patch=1,EE,004784D4,word,3F471C97
 patch=1,EE,004784FC,word,3F471C97
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00302934,word,00000001
