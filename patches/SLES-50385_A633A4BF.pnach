@@ -2,7 +2,8 @@ gametitle=Metal Gear Solid 2 - Sons Of Liberty (S) (SLES-50385) A633A4BF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
+comment=Widescreen Hack
 //16:9
 patch=1,EE,0011F230,word,3C013F40
 

@@ -2,8 +2,8 @@ gametitle=The Suffering: Ties That Bind PAL (SLES_535.27)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
-
+author=El_Patas
+comment=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,002069CC,word,E7B40010 //14E00004
 patch=1,EE,002069D0,word,8E020348 //E7B40010

@@ -2,8 +2,8 @@ gametitle=Baldur's Gate: Dark Alliance II SLES-52188 F59FF56B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas
-comment= Widescreen Hack by El_Patas corrected by pgert
+author=El_Patas and pgert
+comment= Widescreen Hack
 //Vert fov-
 patch=1,EE,001ED078,word,3C013F36 // 3C013F08
 patch=1,EE,001ED07C,word,34210B62 // 34218889

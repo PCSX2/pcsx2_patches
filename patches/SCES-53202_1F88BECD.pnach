@@ -2,8 +2,8 @@ gametitle=Tekken 5 (PAL-M5) (SCES-53202)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by nemesis2000
-// Ported to PAL (elhecht)
+author=ElHecht
+comment=Widescreen ported from NTSC hack by nemesis2000
 
 patch=1,EE,00340bb0,word,3c013f40 // both fov+
 

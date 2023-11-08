@@ -2,6 +2,7 @@ gametitle=Total Overdose (E)(SLES-53492)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=koozka
 comment=Widescreen Hack
 
 //00 00 80 3F 83 F9 22 3F DB 0F C9 3F 00 00 00 BF
@@ -13,5 +14,5 @@ patch=1,EE,206C64C4,word,3F400000 // Vert fov
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,01B71FC0,word,00000001 //00000002

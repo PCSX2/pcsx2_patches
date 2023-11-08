@@ -2,7 +2,8 @@ gametitle=Cars [PAL-Spain] (SLES_540.07)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
+comment=Widescreen Hack
 
 //Gameplay 16:9
 patch=1,EE,00116D50,word,3C033CAE //3C033C8E Zoom
@@ -21,7 +22,7 @@ patch=1,EE,001D5D78,word,3C023FAB //3C023F80
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,001B0F88,word,28630001 //0072182A slt v1,s2
 patch=1,EE,E0010000,extended,008B86A4 //004976B8 00000001
 patch=1,EE,201B0F88,extended,0072182A

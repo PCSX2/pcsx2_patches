@@ -2,7 +2,8 @@ gametitle=Champions of Norrath [PAL-M2] [En,Es] (SLES-52373)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas
+author=El_Patas
+comment=Widescreen Hack
 
 // 16:9
 patch=1,EE,0015b294,word,3c013f40 //460c7382 hor fov

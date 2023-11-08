@@ -2,8 +2,8 @@ gametitle=Rogue Galaxy [PAL-M5] (SLES_545.52)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
-
+author=El_Patas
+comment=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,001C5E40,word,3C023F10 //3C023F40 (Increases hor. axis)
 

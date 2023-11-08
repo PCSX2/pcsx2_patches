@@ -2,7 +2,8 @@ gametitle=Disney's: Chicken Little [PAL] (SLES_537.39)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
+author=El_Patas
+comment=Widescreen Hack
 
 //Gameplay 16:9 (Memory Hack)
 patch=1,EE,205D27AC,extended,3FE38E32 //3FAAAAAB (Increases hor. axis)

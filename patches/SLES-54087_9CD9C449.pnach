@@ -2,8 +2,8 @@ gametitle=Suikoden V PAL (SLES_540.87)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
-
+author=El_Patas and sergx12
+comment=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,001B8804,word,3C023F40 //3C023F80 hor value
 

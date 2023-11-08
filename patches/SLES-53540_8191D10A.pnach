@@ -2,6 +2,7 @@ gametitle=Fahrenheit (PAL-M) SLES-53540 8191D10A
 
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=sergx12
 comment=Widescreen Hack
 patch=1,EE,20836500,extended,3FE38E38 //3FAAAAAB
 

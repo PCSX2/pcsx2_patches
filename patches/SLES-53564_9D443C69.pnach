@@ -2,7 +2,8 @@ gametitle=Darkwatch [PAL] (SLES_535.64)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
+author=El_Patas
+comment=Widescreen Hack
 
 //Gameplay 16:9
 patch=1,EE,006429F0,word,3FAAAAAB //3F800000 (Increases hor. axis)
@@ -48,4 +49,7 @@ patch=1,EE,003C5954,word,E7A100C4 //C4600000
 //patch=1,EE,0045B6B4,word,3C070001 //00073C00
 //patch=1,EE,0045B974,word,3C090010 //00094C00
 
-
+[50 FPS]
+author=someother1ne
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,20721368,extended,00000001

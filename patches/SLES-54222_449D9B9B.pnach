@@ -2,8 +2,8 @@ gametitle=Super-Bikes: Riding Challenge [PAL-M5] (SLES_542.22)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
-
+author=El_Patas
+comment=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,00145538,word,4482E000 //44820000
 patch=1,EE,00145548,word,460CE002 //460C0002

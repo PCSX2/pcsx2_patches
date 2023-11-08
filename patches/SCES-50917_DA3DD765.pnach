@@ -2,8 +2,8 @@ gametitle=Sly Raccoon (PAL-M5) (SCES-50917)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+comment=Widescreen Hack
 // 16:9
 patch=1,EE,001438b0,word,08086204 // e60c01f0
 patch=1,EE,001438b4,word,00000000 // 46020842
@@ -38,7 +38,8 @@ patch=1,EE,0015f338,word,00000000 // ac623620
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=No Motion Blur by Meos
+author=Meos
+comment=No Motion Blur
 patch=1,EE,2015F32C,extended,08057CCF
 patch=1,EE,20190210,extended,08064088
 patch=1,EE,201EACD8,extended,0807AB39

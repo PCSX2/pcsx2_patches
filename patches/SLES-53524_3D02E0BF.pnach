@@ -1,6 +1,7 @@
 gametitle=Mortal Kombat - Shaolin Monks (SLES-53524)
 
 [Widescreen 16:9]
+author=nemesis2000
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 gsaspectratio=16:9
 

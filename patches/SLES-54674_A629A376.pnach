@@ -2,6 +2,8 @@ gametitle=Lara Croft Tomb Raider - Anniversary
 
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=pgert
+comment=Widescreen Hack
 ; ==========
 ; pgert@190222
 ; http://forums.pcsx2.net/Thread-PCSX2-Widescreen-Game-Patches?pid=240786#pid240786

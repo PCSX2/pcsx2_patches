@@ -2,8 +2,8 @@ gametitle=ObsCure II (PAL-M5) (SLES-54782)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+comment=Widescreen Hack
 // 16:9
 patch=1,EE,00172924,word,08103ca7 // 46070202  jump to code-inject 0040f29c
 patch=1,EE,00172928,word,00000000 // 24430050

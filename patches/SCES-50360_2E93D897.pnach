@@ -2,8 +2,8 @@ gametitle=Twisted Metal: Black (PAL-Unk) [SCES-50360] [2E93D897]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Aced14
-
+author=Aced14
+comment=Widescreen Hack
 //16:9 Widescreen
 
 //Main Menu

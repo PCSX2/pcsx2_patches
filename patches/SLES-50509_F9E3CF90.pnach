@@ -2,6 +2,7 @@ gametitle=Half-Life (PAL-S) SLES-50509 F9E3CF90
 
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=nemesis2000
 comment=Widescreen Hack
 patch=1,EE,002aa624,word,3c013fe3
 patch=1,EE,002aa628,word,34218e38

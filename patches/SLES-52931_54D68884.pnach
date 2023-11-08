@@ -2,8 +2,8 @@ gametitle=Legend of Kay (PAL-M5) (SLES-52931)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+comment=Widescreen Hack
 // 16:9
 patch=1,EE,00392a1c,word,08128980 // 8e040004
 patch=1,EE,00392a20,word,00000000 // 46020003

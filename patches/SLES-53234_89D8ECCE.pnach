@@ -2,8 +2,8 @@ gametitle=Samurai Western (PAL-M5) (SLES-53234)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+comment=Widescreen Hack
 // 16:9
 patch=1,EE,0013e560,word,3c024455 // 3c024420 hor fov 60hz
 patch=1,EE,0013e564,word,34425555 // 44820000

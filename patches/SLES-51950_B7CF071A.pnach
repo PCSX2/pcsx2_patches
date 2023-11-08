@@ -2,7 +2,8 @@ gametitle=Sonic Heroes (PAL-M5) (SLES-51950)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=ElHecht
+comment=Widescreen Hack ported from NTSC hack by nemesis2000
 //ported to PAL (ElHecht)
 
 //---

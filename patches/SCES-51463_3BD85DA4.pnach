@@ -1,0 +1,6 @@
+gametitle=Ghosthunter (PAL-M) SCES-51463 3BD85DA4
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,005681E0,word,00000001 //00000002

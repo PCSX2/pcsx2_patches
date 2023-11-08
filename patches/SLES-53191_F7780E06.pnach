@@ -3,7 +3,7 @@ gametitle=Kaido Racer PAL (SLES_531.91)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen hack by El_Patas
+comment=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,20431190,extended,3F400000 //3F800000 (Increases hor. axis)
 

@@ -1,6 +1,9 @@
+gametitle=Death by Degrees (PAL-M2) (SCES-53054)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Death by Degrees (PAL-M2) (SCES-53054) Widescreen Hack (16:9) by ElHecht
+author=ElHecht
+comment=Widescreen Hack
 //
 // Gameplay
 patch=1,EE,00188170,word,3C023FE3
