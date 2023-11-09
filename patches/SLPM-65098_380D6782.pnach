@@ -62,4 +62,6 @@ patch=1,EE,001dade0,word,3463aaab //3463999a
 patch=1,EE,001db298,word,3c023f2c //3c023f66
 patch=1,EE,001db29c,word,3442cccd //34426666
 
-
+[60 fps]
+author=asasega
+patch=1,EE,201A6D58,extended,00000000
