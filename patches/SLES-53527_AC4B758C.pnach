@@ -4,7 +4,6 @@ gametitle=The Suffering: Ties That Bind PAL (SLES_535.27)
 gsaspectratio=16:9
 author=El_Patas
 comment=Widescreen Hack
-//Gameplay 16:9
 patch=1,EE,002069CC,word,E7B40010 //14E00004
 patch=1,EE,002069D0,word,8E020348 //E7B40010
 patch=1,EE,002069D4,word,AE020340 //8E020348
@@ -67,7 +66,7 @@ patch=1,EE,00220c70,word,3c013f40 //3c013f80
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,00220250,extended,28420002
 patch=1,EE,00220270,extended,28420002
 patch=1,EE,E0020000,extended,00526394

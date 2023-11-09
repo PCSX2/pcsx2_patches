@@ -1,0 +1,8 @@
+gametitle=Primal - Civilization Is Only Skin Deep (NTSC-U) SCUS-97142 FCD89DC3
+
+[60 FPS]
+author=asasega and PeterDelta
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,204874FC,extended,00000001
+patch=1,EE,E0010000,extended,0048572C
+patch=1,EE,204874FC,extended,00000002

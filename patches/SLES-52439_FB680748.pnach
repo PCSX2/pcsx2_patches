@@ -3,8 +3,7 @@ gametitle=The Suffering PAL (SLES_524.39)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen Hack 
-//Gameplay 16:9
+comment=Widescreen Hack
 patch=1,EE,001E766C,word,E7B40010 //14E00004
 patch=1,EE,001E7670,word,8E020338 //E7B40010
 patch=1,EE,001E7674,word,AE020330 //8E020338
@@ -88,7 +87,7 @@ patch=1,EE,001f9cd0,word,3c013f40 //3c013f80
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,001F92C0,extended,28420002
 patch=1,EE,001F92E0,extended,28420002
 patch=1,EE,E0020000,extended,00476E44

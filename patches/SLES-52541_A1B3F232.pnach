@@ -17,6 +17,8 @@ patch=1,EE,00242D54,word,0C044C32
 
 [No-Interlacing]
 gsinterlacemode=1
+author=Mensa
+comment=Attempts to disable interlaced offset rendering.
 patch=1,EE,2054996C,extended,00000000
 
 [Remove Radiosity Filter]

@@ -1,4 +1,4 @@
-gametitle=Crash of the Titans (PAL)
+gametitle=Crash of the Titans (PAL-R) SLES-54843 AEFD7D25
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -13,3 +13,11 @@ author=CRASHARKI
 description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 //01 00 02 24 12 00 82 14 5C
 patch=1,EE,20492588,extended,24020000 //24020001
+
+[Mode 480p]
+author=PeterDelta
+comment=Forces progressive scan mode 480p at startup
+patch=1,EE,0057E9D4,word,3C050000
+patch=1,EE,0057E9DC,word,3C060050
+patch=1,EE,0057E9E4,word,3C070001
+patch=1,EE,11BD81D0,extended,01E0

@@ -2,8 +2,8 @@ gametitle=The Suffering (SLUS-20636)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
-
+author=nemesis2000
+comment=Widescreen hack
 patch=1,EE,001e6a8c,word,e7b40010
 patch=1,EE,001e6a90,word,8e020338
 patch=1,EE,001e6a94,word,ae020330
@@ -85,4 +85,11 @@ patch=1,EE,001e6bbc,word,00000000
 //Font fix
 patch=1,EE,001f90e8,word,3c013f40 //3c013f80
 
-
+[60 FPS]
+author=asasega and PeterDelta
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,201F86C0,extended,28420002
+patch=1,EE,201F86E0,extended,28420002
+patch=1,EE,E0020000,extended,00475204
+patch=1,EE,201F86C0,extended,28420001
+patch=1,EE,201F86E0,extended,28420001
