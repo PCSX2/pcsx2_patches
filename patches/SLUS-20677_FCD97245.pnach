@@ -2,8 +2,8 @@ gametitle=XIII (SLUS-20677)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
-
+author=nemesis2000
+comment=Widescreen hack
 patch=1,EE,001d66fc,word,14400005
 patch=1,EE,001d6700,word,3c04003d
 patch=1,EE,001d6704,word,0c09f8fc
@@ -70,4 +70,7 @@ patch=1,EE,00355288,word,24420951
 patch=1,EE,00355370,word,260276b0
 patch=1,EE,003553bc,word,24420951
 
-
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,20191C64,extended,28420001

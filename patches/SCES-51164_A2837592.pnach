@@ -62,3 +62,11 @@ patch=1,EE,203e89a0,extended,00000000 // 00000000
 patch=1,EE,003e89b8,word,080c4721 // 00000000
 
 
+[No-Interlacing]
+gsinterlacemode=1
+author=PeterDelta
+comment=Attempts to disable interlaced offset rendering.
+patch=1,EE,0029F904,word,31310000 //31310001
+patch=1,EE,002A1CAC,word,30B20000 //30B20001
+patch=1,EE,00326DBC,word,00000000 //64420008
+patch=1,EE,00326E44,word,00000000 //64420008

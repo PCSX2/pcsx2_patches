@@ -2,12 +2,15 @@ gametitle= Portal Runner NTSC-U (SLUS-20003)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Portal Runner NTSC-U (SLUS-20003) Widescreen Hack by VIRGIN KLM
-
+author=VIRGIN KLM
+comment=Widescreen Hack
 //P1 Screen
 patch=1,EE,0030ADD0,word,3FA1C40E // 3FD7B013
 
 //P2 Screen
 patch=1,EE,0030B000,word,3FA1C40E // 3FD7B013
 
-
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2016F998,word,2C630001

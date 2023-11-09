@@ -19,6 +19,8 @@ patch=1,EE,0027C00C,word,0C061296
 
 [No-Interlacing]
 gsinterlacemode=1
+author=Mensa
+comment=Attempts to disable interlaced offset rendering.
 patch=1,EE,2011299C,extended,00000000
 
 [50 FPS]
