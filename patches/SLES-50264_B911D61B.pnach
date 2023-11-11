@@ -1,0 +1,14 @@
+gametitle=Hype - The Time Quest SLES-50264 (france)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack
+
+patch=1,EE,001ec23c,word,3C023ee0 //3c023f00
+patch=1,EE,001ec2e8,word,3c023f2b //3c023f00 render fix
+patch=1,EE,0020b874,word,3c023f18 //3c023f00
+patch=1,EE,0030d1d4,word,3fe38e39 //3faaaaab vert
+
+
+
+

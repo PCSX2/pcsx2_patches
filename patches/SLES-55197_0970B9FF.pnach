@@ -1,0 +1,9 @@
+gametitle=Dance Dance Revolution SuperNova 2 SLES-55197
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack conversion
+// 16:9
+patch=1,EE,00180ab4,word,3c023f22 // 3c023f00
+patch=1,EE,00180ca4,word,3c023fe3 // 3c023faa
+patch=1,EE,00180cb0,word,34458e39 // 3445aaab

@@ -1,0 +1,11 @@
+gametitle=Hot Wheels - Stunt Track Challenge SLES-52481
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+
+comment=Widescreen Hack
+patch=1,EE,001f50dc,word,3c013f40 //3c013f80 render fix
+patch=1,EE,00202a0c,word,3c013fc0 //3c014000 fov
+patch=1,EE,00363aec,word,3c013f10 //3c013f40 vert fov
+
+

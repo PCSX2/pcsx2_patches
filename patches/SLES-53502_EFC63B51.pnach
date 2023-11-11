@@ -1,0 +1,24 @@
+gametitle=Star Wars: Battlefront 2 (F)(SLES-53505)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack Conversion
+
+//Game changes ELF on boot to SWBFRNT2.ELF with active CRC EFC63B51
+
+//Widescreen hack 16:9
+
+//00000000 00000000 83051646 00000000
+//403f013c 00008144 83051646 03000046
+patch=1,EE,00582814,word,3c013f40 //00000000
+patch=1,EE,00582818,word,44810000 //00000000
+patch=1,EE,00582820,word,46000003 //00000000
+
+//Render fix
+//003f013c 00208144 c2180546
+patch=1,EE,00573f6c,word,3c013f2b //3c013f00
+//003f013c 00008144 f000b07f
+patch=1,EE,005b074c,word,3c013f2b //3c013f00
+
+
