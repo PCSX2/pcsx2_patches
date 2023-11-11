@@ -6,7 +6,7 @@ comment=Widescreen hack
 gsaspectratio=16:9
 //Widescreen hack 16:9
 
-//For ELF CRC 0E361BC
+//For ELF CRC 0E3617BC
 
 patch=1,EE,E0070030,extended,00100008
 patch=1,EE,2011b760,extended,08063b04
