@@ -1,0 +1,13 @@
+gametitle=Stuntman Ignition (E)(SLES-54820)
+
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen hack conversion
+
+//Zoom
+patch=1,EE,002aa174,word,3c023f10 //3c023f40
+
+//Y-Fov
+patch=1,EE,205AA760,extended,3F252945 //3f5c370f  Memory Hack. but able to ISO patch.
