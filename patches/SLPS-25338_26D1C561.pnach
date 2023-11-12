@@ -2,35 +2,26 @@ gametitle=Armored Core - Nexus - Disc 1 - Evolution [NTSC-J] (SLPS-25338)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
-// 16:9
-patch=1,EE,0023f6bc,word,3c013f40 // 00000000 hor fov menu
-patch=1,EE,0023f6c8,word,44810000 // 00000000
-patch=1,EE,0023f6cc,word,4600c602 // 00000000
-patch=1,EE,00120f70,word,3c033f19 // 3c033f4c hor fov gameplay
-patch=1,EE,00120f78,word,3462999a // 3462cccd hor fov gameplay
-patch=1,EE,00158370,word,3c0243d6 // 3c0243a0 renderfix
-
-// 16:10
-//patch=1,EE,0023f6bc,word,3c013f55 // 00000000 hor fov menu
-//patch=1,EE,0023f6c0,word,34215555 // 00000000 hor fov menu
-//patch=1,EE,0023f6c8,word,44810000 // 00000000
-//patch=1,EE,0023f6cc,word,4600c602 // 00000000
-//patch=1,EE,00120f70,word,3c033f2a // 3c033f4c hor fov gameplay
-//patch=1,EE,00120f78,word,3462aaab // 3462cccd hor fov gameplay
-//patch=1,EE,00158370,word,3c0243c1 // 3c0243a0 renderfix
+description=Widescreen Hack
+patch=1,EE,00120F70,extended,00000019 // 3C033F4C hor fov gameplay
+patch=1,EE,10120F78,extended,0000999A // 3462CCCD hor fov gameplay
+patch=1,EE,00158370,extended,000000D6 // 3C0243A0 renderfix
+patch=1,EE,C1E15D18,extended,3C023F80
+patch=1,EE,01E15D18,extended,00000040 // 3C023F80 hor fov menu
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-patch=1,EE,0023C2DC,word,00000000
+patch=1,EE,D0487740,extended,01100000
+patch=1,EE,0023C2DC,extended,00000001
+patch=1,EE,D0487740,extended,01000000
+patch=1,EE,0023C2DC,extended,00000000
 
 [Remove Blur]
 author=001 & Berylskid
 description=Removes blur effects.
 patch=1,EE,201317F0,extended,00000000
-patch=1,EE,E0020000,extended,10487740
+patch=1,EE,D0487740,extended,02100000
 patch=1,EE,61CC66E8,extended,00000000
 patch=1,EE,00000001,extended,0000005F
 
