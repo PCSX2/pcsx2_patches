@@ -1,0 +1,87 @@
+gametitle=Test Drive: Eve of Destruction (NTSC-U) (SLUS-20910)(5D0244D3)
+
+[Disable 16:9 Edge Borders]
+author=Virjoinga
+description=Disables the edge border when using 16:9 (from game options). WARNING, menus don't have a skybox so expect artifacts on edges of screen.
+patch=1,EE,203DD64C,extended,00000000 //16:9 Edge Border (0 = off, 1 = on)
+
+[Aspect Ratio - 3xStretch]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3E800000
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 3x15:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3E888889
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 3x16:10]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3E8E38E4
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 3x4:3]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3EAAAAAB
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 3x5:4]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3EB60B61
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 32:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3EC00000
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 21:9 (3840x1600)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3F0E38E4
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 21:9 (3440x1440)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3F0EE23C //Aspect Ratio
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 21:9 (2560x1080)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3F100000
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
