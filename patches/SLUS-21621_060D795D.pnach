@@ -1,0 +1,13 @@
+gametitle=Shin Megami Tensei - Persona 3 FES (NTSC-U) SLUS-21621 060D795D (Spanish 1.1b)
+
+[Mode 480p]
+author=felixthecat1970
+comment=Forces progressive scan at startup
+patch=0,EE,00197AF0,extended,24040057
+patch=0,EE,1077EF3C,extended,000001C0
+patch=0,EE,204DFF34,extended,241B0050
+patch=0,EE,204E00B4,extended,A07B5762
+patch=0,EE,204E2900,extended,A05B5762
+patch=0,EE,2019D328,extended,03601020
+patch=0,EE,2019D334,extended,0000D82D
+patch=0,EE,2019D348,extended,241B0001

@@ -1,0 +1,6 @@
+gametitle=WipEout Pulse (PAL-M) SCES-54748 F8AE6FF2
+
+[50/60 FPS]
+author=asasega
+comment=Unlocked at 50/60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0027A860,word,00000000
