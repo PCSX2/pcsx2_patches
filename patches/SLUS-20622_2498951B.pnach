@@ -27,4 +27,7 @@ patch=1,EE,002b6200,word,24100000 //fmv black borders
 patch=1,EE,001ee320,word,03E00008
 patch=1,EE,001ee324,word,00000000
 
-
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS
+patch=1,EE,2013058C,extended,00000000
