@@ -1,0 +1,8 @@
+gametitle=TY the Tasmanian Tiger (NTSC-U) SLUS-20571 4F755D39
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Widescreen Hack
+patch=1,EE,00228EE8,word,3C013F40 //3C013F80
+

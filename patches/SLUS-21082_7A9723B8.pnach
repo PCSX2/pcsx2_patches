@@ -1,0 +1,6 @@
+gametitle=Chronicles of Narnia - The Lion Witch and The Wardrobe (NTSC-U) SLUS-21082 7A9723B8
+
+[60 FPS]
+author=PeterDelta
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,00171F1C,word,00000000
