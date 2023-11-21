@@ -1,0 +1,6 @@
+gametitle=The Chronicles of Narnia The Lion Witch and The Wardrobe (PAL-M) SLES-53712 37718361
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001721DC,word,00000000
