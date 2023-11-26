@@ -1,0 +1,6 @@
+gametitle=Spawn - Armageddon (NTSC-U) SLUS-20707 B7E7D66F
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,202EEEC8,extended,00000001
