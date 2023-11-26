@@ -14,10 +14,9 @@ description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to b
 //01 00 02 24 12 00 82 14 5C
 patch=1,EE,204924B8,extended,24020000 //24020001
 
-[Mode 480p]
+[60 FPS]
 author=PeterDelta
-comment=Forces progressive scan mode 480p at startup
+comment=Forces progressive scan mode at startup
 patch=1,EE,0057E904,word,3C050000
-patch=1,EE,0057E90C,word,3C060050
+patch=1,EE,0057E90C,word,3C060052
 patch=1,EE,0057E914,word,3C070001
-patch=1,EE,11BD8250,extended,01E0
