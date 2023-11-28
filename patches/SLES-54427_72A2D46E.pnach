@@ -1,0 +1,6 @@
+gametitle=Jumanji (PAL-M) SLES-54427 72A2D46E
+
+[50 FPS]
+author=PeterDelta
+description=Unlocked at 50 fps on dash
+patch=1,EE,0025E4BC,word,00000001 //00000002

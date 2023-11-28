@@ -1,0 +1,12 @@
+gametitle=Medal of Honor - European Assault (PAL-S) SLES-53336 BB70FFB9
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,0012927c,word,00000000
+
+[50 FPS]
+author=asasega
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,20127570,extended,28420001
