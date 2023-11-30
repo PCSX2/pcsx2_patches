@@ -1,0 +1,8 @@
+gametitle=The Incredible Hulk - Ultimate Destruction (NTSC-U) (SLUS-20941)
+
+[60FPS Hack]
+author=asasega
+comment=Patches the game to run at 60FPS. Requires 180% EE Overclock
+
+//60FPS
+patch=1,EE,2046E968,word,24020001
