@@ -1,0 +1,13 @@
+gametitle=Señor de Los Anillos, El - Las Dos Torres (PAL-S) SLES-51256 9ABF90FB
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,00107160,word,3C023FE3 //3C023FAA hor fov
+patch=1,EE,00107164,word,34428E39 //3442AAAB hor fov
+
+[50 FPS]
+author=asasega
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,00381744,word,00000000
