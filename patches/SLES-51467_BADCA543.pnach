@@ -1,0 +1,11 @@
+gametitle=Freedom Fighters (PAL-E) SLES-51467 BADCA543 secondary crc 6EEE06DD
+//Corresponds to the main crc to activate the secondary crc 6EEE06DD called FF.ELF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Enable native widescreen
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan and run at 60 fps

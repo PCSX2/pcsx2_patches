@@ -1,0 +1,9 @@
+gametitle=Power Rangers - Super Legends (PAL-M) SLES-54835 3E1661EF
+
+[Mode 480p]
+author=PeterDelta
+comment=Forces progressive scan mode 480p at startup
+patch=1,EE,0010FE8C,word,3C050000
+patch=1,EE,0010FE94,word,3C060050
+patch=1,EE,0010FE9C,word,3C070001
+patch=1,EE,10492B08,extended,01E0
