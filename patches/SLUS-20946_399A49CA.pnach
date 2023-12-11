@@ -25,3 +25,21 @@ description=Removes the radiosity filter which causes a ghosting effect on the p
 
 //Remove Radiosity Filter
 patch=1,EE,20519FD8,extended,00000000
+
+
+[Mode 480p]
+author=Unknown
+comment=Only activate the 480p mode if the intro FMV is skipped/finished playing
+patch=1,EE,e003ffe0,extended,0088d900
+patch=1,EE,20358fbc,extended,24050000
+patch=1,EE,20358fb8,extended,24060050
+patch=1,EE,20358fc4,extended,24070001
+patch=1,EE,00511eb8,word,8c430008
+patch=1,EE,108298ba,extended,00000093
+patch=1,EE,108298e2,extended,00000093
+patch=1,EE,10829c0a,extended,00000093
+patch=1,EE,10829c32,extended,00000093
+patch=1,EE,10829bda,extended,00000093
+patch=1,EE,10829bea,extended,00000093
+patch=1,EE,10829c4a,extended,00000093
+patch=1,EE,10829c5a,extended,00000093
