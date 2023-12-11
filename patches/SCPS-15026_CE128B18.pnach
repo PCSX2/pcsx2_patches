@@ -1,0 +1,11 @@
+gametitle=Boku no Natsuyasumi 2 English Patch (NTSC-J) SCPS-15026 CE128B18
+
+[High Resolution Fix]
+author=Hilltop
+comment=Fixes text in high resolution render modes - WARNING: DO NOT USE IF NOT UPSCALING
+patch=1,EE,2018077c,extended,24C30016
+patch=1,EE,20180794,extended,24820016
+patch=1,EE,2029057C,extended,24C50016
+patch=1,EE,20290588,extended,00000000
+patch=1,EE,202905D0,extended,244200B0
+patch=1,EE,2028EB68,extended,2463ffff
