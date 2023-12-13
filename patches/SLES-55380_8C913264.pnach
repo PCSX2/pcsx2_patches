@@ -3,8 +3,7 @@ gametitle=Sonic Unleashed (PAL-M5) (SLES-55380)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
-// 16:9
+comment=Renders the game in 16:9 aspect ratio
 patch=1,EE,0038d71c,word,3c014340 // 00000000 hor fov
 patch=1,EE,0038d720,word,3c1b008a // 00000000
 patch=1,EE,0038d724,word,af6143b0 // 00000000
@@ -13,14 +12,16 @@ patch=1,EE,00528cf4,word,3c023fab // 3c023f80 renderfix
 patch=1,EE,0043657c,word,3c024436 // 3c024420 2d char fix pos
 patch=1,EE,007638c0,word,3faaaaab // 3f800000 2d char fix fov
 
-
 [50 FPS]
 author=PeterDelta
 comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,0087C3B4,word,00000032 //00000019
 patch=1,EE,00870A2C,word,3F99999A //3F800000
 
-[Mode 480p]
+[60 FPS]
 author=PeterDelta
-comment=Unlocked progressive Mode 480p
-patch=1,EE,00671D04,word,3C060050
+comment=Forces progressive scan mode at 60 fps
+patch=1,EE,00671CFC,word,3C050000
+patch=1,EE,00671D04,word,3C060052
+patch=1,EE,00671D0C,word,3C070001
+patch=1,EE,00671FCC,word,3C090010
