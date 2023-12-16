@@ -1,20 +1,16 @@
-gametitle=Sonic Unleashed (PAL-M5) (SLES-55380)
+gametitle=Sonic Unleashed (PAL-M5) (SLES-55380) 8C913264
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht
+author=PeterDelta
 comment=Renders the game in 16:9 aspect ratio
-patch=1,EE,0038d71c,word,3c014340 // 00000000 hor fov
-patch=1,EE,0038d720,word,3c1b008a // 00000000
-patch=1,EE,0038d724,word,af6143b0 // 00000000
-patch=1,EE,0038d728,word,03e00008 // 00000000
-patch=1,EE,00528cf4,word,3c023fab // 3c023f80 renderfix
-patch=1,EE,0043657c,word,3c024436 // 3c024420 2d char fix pos
-patch=1,EE,007638c0,word,3faaaaab // 3f800000 2d char fix fov
+patch=1,EE,00872D50,word,3FD21DA8 //3F9D9643
+patch=1,EE,00ED1AD8,word,00000000 //42600000 fmv
+patch=1,EE,00ED1AE8,word,43E00000 //43C40000
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,0087C3B4,word,00000032 //00000019
 patch=1,EE,00870A2C,word,3F99999A //3F800000
 
