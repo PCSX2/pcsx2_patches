@@ -131,10 +131,10 @@ patch=1,EE,00135B18,word,3C014270
 patch=1,EE,00135BFC,word,3C0140F0
 patch=1,EE,00135BC4,word,3C014110
 patch=1,EE,00135B80,word,3C014190
-//Remove Post Processing
+
+[Remove Post Processing]
+comment=Remove Post Processing effects
 patch=1,EE,00350C0C,word,00000000 //blurry bloom
 patch=1,EE,0035108C,word,00000000 //dark filter
 patch=1,EE,00350F1C,word,00000000 //post process and noise in-game
-//patch=1,EE,0035905C,word,00000000 //post process and noise on menus, optional, makes main menu bland looking.
-
-
+patch=1,EE,0035905C,word,00000000 //post process and noise on menus, optional, makes main menu bland looking.
