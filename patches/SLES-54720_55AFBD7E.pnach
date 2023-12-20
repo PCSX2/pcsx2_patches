@@ -1,0 +1,6 @@
+gametitle=Shield - The Game, The (PAL-M) SLES-54720 55AFBD7E
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0036AFFC,word,00000001 //00000002

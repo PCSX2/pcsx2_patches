@@ -1,0 +1,12 @@
+gametitle=NASCAR '07 (PAL-E) SLES-54223 8AE96AEE
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,003E54A8,word,3F400000 //3F800000
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,002E068C,word,28420001 //28420002

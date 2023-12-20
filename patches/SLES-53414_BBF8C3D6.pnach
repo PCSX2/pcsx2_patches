@@ -1,17 +1,22 @@
-gametitle=Echo Night: Beyond [PAL] (SLES_534.14)
+gametitle=Echo Night: Beyond [PAL] (SLES_534.14) BBF8C3D6
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas and Arapapa
-
-//Widescreen hack 16:9
-
+author=El_Patas and Arapapa
+comment=Renders the game in 16:9 aspect ratio
 //Force turn on Internal Widescreen
 //01 00 00 00 00 00 00 3F
 patch=1,EE,202b4001,byte,00000001
-
-//Zoom Fix
 patch=1,EE,00146EA4,word,3C023F1F //3C023F00 Zoom
 //patch=1,EE,00146EA0,word,3C033FA0 //3C033F70 Y-FOV
 
+[60 FPS]
+author=PeterDelta
+comment=Select 60 Hz to unlock fps. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,E001001E,extended,0028A348
+patch=1,EE,0028A348,extended,0000003C
 
+[Performance Fix]
+author=PeterDelta
+comment=Remove flashlight shadows improving performance.
+patch=1,EE,001471C4,word,3C020000 //3C023F80

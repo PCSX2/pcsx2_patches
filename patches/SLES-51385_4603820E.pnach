@@ -1,0 +1,6 @@
+gametitle=Rugrats Rescate Real (PAL-S) SLES-51385 4603820E
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0042D820,word,00000001 //00000002

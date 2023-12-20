@@ -1,0 +1,7 @@
+gametitle=Serie de Catastróficas Desdichas de Lemony Snicket, Una (PAL-S) SLES-52825 43A02228
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0047D2C0,word,42C80000 //42480000
+patch=1,EE,0047D2C4,word,3C23D70A //3CA3D70A

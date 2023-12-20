@@ -1,16 +1,16 @@
-gametitle=Blowout [PAL] (SLES_529.89)
+gametitle=Blowout [PAL] (SLES_529.89) 0158297B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
-
-//Gameplay 16:9
+author=El_Patas
+comment=Renders the game in 16:9 aspect ratio
 patch=1,EE,001D29AC,word,00000000 //AF80C5A8
 patch=1,EE,003BAA18,word,00000001 //00000000
-
-//HUD fix
-patch=1,EE,003B7DF0,word,C0222222 //BFF33333
+patch=1,EE,003B7DF0,word,C0222222 //BFF33333 HUD fix
 patch=1,EE,003B7E08,word,40222222 //3FF33333
 patch=1,EE,003B7E28,word,40222222 //3FF33333
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,002B13B8,word,28630001 //28630002

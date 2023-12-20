@@ -1,4 +1,4 @@
-gametitle=Star Wars - Episode III - Revenge of the Sith (PAL-M3) (SLES-53155)
+gametitle=Star Wars - Episode III - Revenge of the Sith (PAL-M3) (SLES-53155) 99AD19EE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -20,10 +20,9 @@ patch=1,EE,0051bcf0,word,461e4a42 // 00000000
 //patch=1,EE,0051bcac,word,4481f000 // 00000000
 //patch=1,EE,0051bcf0,word,461e4a42 // 00000000
 
-
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,001AF538,word,00000001 //00000002
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001AF538,word,00000002 //00000002
 patch=1,EE,E0010002,extended,001B4344
 patch=1,EE,201AF538,extended,00000001
