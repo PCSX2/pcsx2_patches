@@ -104,7 +104,7 @@ patch=1,EE,2048595C,extended,080C7691 // jumps back
 
 [60 FPS for Menus]
 description=Menus will render at 60 FPS
-author=Nehalem
+author=Nahelam
 
 patch=1,EE,201D3F2C,extended,1000000A
 patch=1,EE,20130DD8,extended,C7958074
@@ -123,13 +123,13 @@ patch=1,EE,00132F64,extended,00000000
 
 [Progressive Scan]
 description=Always ask for 480p mode during boot
-author=Nehalem
+author=Nahelam
 
 patch=1,EE,20437758,extended,100000F1
 
 [MPH to KPH]
 description=Change speedometer unit from MPH to KPH
-author=Nehalem
+author=Nahelam
 
 patch=1,EE,101A3BA0,extended,000082F0
 patch=1,EE,101A3D78,extended,000007D7

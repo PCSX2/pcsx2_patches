@@ -44,3 +44,14 @@ patch=1,EE,201125EC,extended,00108002
 author=SuperType1/remco
 description=Makes the Crashes & Crash Mode run in 60 FPS.
 patch=1,EE,20104B9C,extended,90850608
+
+[Progressive Scan]
+author=Nahelam
+description=Always ask for 480p mode during boot
+patch=1,EE,2019778C,extended,10A2001C
+
+[MPH to KPH]
+author=Nahelam
+description=Change speedometer unit from MPH to KPH
+patch=1,EE,201765E8,extended,0000102D
+patch=1,EE,201767DC,extended,0000102D
