@@ -2,7 +2,17 @@ gametitle=Madagascar (PAL-E) SLES-53225 D3051E54
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,004B0604,byte,0001 //0002
-patch=1,EE,00346D24,word,00000064 //00000032
-patch=1,EE,01ADA8F4,word,3F000000 //3F800000 animations
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,004B0604,byte,01 //02
+patch=1,EE,00346D24,byte,64 //32
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan mode at startup
+patch=1,EE,002F8AE0,word,34050052
+patch=1,EE,002F8AE4,word,24030002
+patch=1,EE,002F8AE8,word,0000000C
+patch=1,EE,002F8AEC,word,03E00008
+patch=1,EE,004DF4C8,word,02051290
+patch=1,EE,004DF4F0,word,02051290
+patch=1,EE,00346D24,byte,76
