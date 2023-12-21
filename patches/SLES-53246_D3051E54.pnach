@@ -15,4 +15,6 @@ patch=1,EE,002F8AE8,word,0000000C
 patch=1,EE,002F8AEC,word,03E00008
 patch=1,EE,004DF4C8,word,02051290
 patch=1,EE,004DF4F0,word,02051290
-patch=1,EE,00346D24,byte,76
+patch=1,EE,00346D24,byte,38
+patch=1,EE,E0010001,extended,004B0604
+patch=1,EE,00346D24,extended,76
