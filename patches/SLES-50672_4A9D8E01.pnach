@@ -31,12 +31,3 @@ patch=1,EE,00152C40,word,3C014440 // 3C014480
 ; Render fix
 patch=1,EE,003224C8,word,3FE2FC96 // 3FAA3D71
 patch=1,EE,003224EC,word,3FE2FC96 // 3FAA3D71
-; ==========
-
-
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,00204C58,word,30420000
-
-

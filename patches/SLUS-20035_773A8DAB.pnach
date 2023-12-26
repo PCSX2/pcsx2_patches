@@ -46,12 +46,3 @@ patch=1,EE,00320fcc,word,3fe3d70a
 ; render fix value by No.47
 // patch=1,EE,00320fa8,word,3FCC49BB
 // patch=1,EE,00320fcc,word,3FCC49BB
-; ==========
-
-
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,20203B9C,word,34030001
-
-

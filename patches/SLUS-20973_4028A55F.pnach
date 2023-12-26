@@ -21,11 +21,3 @@ patch=1,EE,002A8914,word,3C013FE2 //3C013FAA
 patch=1,EE,002A8918,word,3421FC95 //34213D70
 patch=1,EE,002A8948,word,3C013FE2 //3C013FAA
 patch=1,EE,002A894C,word,3421FC95 //34213D70
-
-
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,2019D9D4,extended,ACA00008
-
-

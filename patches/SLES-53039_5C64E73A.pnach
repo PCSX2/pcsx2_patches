@@ -34,13 +34,3 @@ patch=1,EE,001869f0,word,461ece43 // 44810800
 //patch=1,EE,001869d4,word,4499f000 // 00000000
 //patch=1,EE,001869ec,word,4600b047 // 3c01bf80
 //patch=1,EE,001869f0,word,461ece43 // 44810800
-
-
-[No-Interlacing]
-gsinterlacemode=1
-comment=Disable interlacing hack by ElHecht
-
-// disable interlacing
-patch=1,EE,0019e2e8,word,aca00008 // aca60008
-
-

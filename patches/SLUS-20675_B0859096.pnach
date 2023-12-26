@@ -28,11 +28,3 @@ patch=1,EE,002c4578,word,3421d70a
 //patch=1,EE,002c82d4,word,3c014288 //alternate render fix value
 patch=1,EE,002c82dc,word,3c013fe3
 patch=1,EE,002c82e0,word,3421d70a
-
-
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,201EA278,extended,30630000
-
-
