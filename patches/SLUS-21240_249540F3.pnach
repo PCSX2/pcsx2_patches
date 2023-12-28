@@ -14,8 +14,3 @@ comment=Widescreen Hack by nemesis2000 and Arapapa
 patch=1,EE,00580784,word,3c013f40 //hor fov
 patch=1,EE,00580788,word,44810000
 patch=1,EE,00580790,word,46000003
-
-[60 FPS]
-author=Gabominated
-description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,20602c9c,extended,00000001 //00000002
