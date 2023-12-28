@@ -1,8 +1,0 @@
-gametitle=G.I. Joe - The Rise of Cobra SLES-55537 724b94f6
-comment=50/60fps toggle on by Gabominated
-
-[50/60fps]
-author=Gabominated
-description=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,00253bbc,word,28630001 //28630002
-
