@@ -5,19 +5,6 @@ gametitle=Star Wars - Battlefront 2 (NTSC-U) SLUS-21240 02F4B541 secondary SWBFR
 gsaspectratio=16:9
 comment=Widescreen Hack by nemesis2000 and Arapapa
 
-//Game changes ELF on boot to SWBFRNT2.ELF with active CRC 62390B9E
-
-//Widescreen hack 16:9
-
-//00000000 00000000 83051646 00000000
-//403f013c 00008144 83051646 03000046
-patch=1,EE,00580784,word,3c013f40 //hor fov
-patch=1,EE,00580788,word,44810000
-patch=1,EE,00580790,word,46000003
-
-[60fps]
+[60 FPS]
 author=Gabominated
-description=60fps toggle on by Gabominated
-patch=1,EE,20602c9c,extended,00000001 //00000002
-patch=1,EE,E0010001,extended,00744514
-patch=1,EE,20602c9c,extended,00000002
+description=Unlocked at 60 FPS. Might need enable EE Overlooked to be stable. 
