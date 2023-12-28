@@ -1,0 +1,28 @@
+gametitle=Conan SLES-52451 9A206BA3
+comment=50/60fps + Progressive Scan by Gabominated
+
+[50fps]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20107FDC,extended,2C630001 //2C630002 fps 1
+
+[60fps + progressive scan]
+author=Gabominated
+description=Unlocked at 60fps + progresive scan. Might need enable EE Overclock to be stable.
+patch=1,EE,20107FDC,extended,2C630001 //2C630002 fps 1
+patch=1,EE,201011E4,extended,24060050 //24060003 progressive scan mode
+//optional fps unlockers for testing
+//patch=1,EE,20107FC4,extended,10000009 //50400009 fps 2
+//patch=1,EE,20107fc0,extended,2c420001 //2c420002 fps 3
+//patch=1,EE,20107FE0,extended,00000000 //1460FFFB fps 4
+
+
+
+
+
+
+
+
+
+
+

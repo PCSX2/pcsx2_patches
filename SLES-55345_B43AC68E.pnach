@@ -1,0 +1,11 @@
+gametitle=007 - Quantum of Solace (PAL-M) SLES-55345 B43AC68E
+comment=50/60fps toggle on by Gabominated
+
+[50/60fps]
+author=Gabominated
+description=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,E001001E,extended,003CA850
+patch=1,EE,203CA850,extended,0000003C //00000001E
+patch=1,EE,E0010019,extended,003CA850
+patch=1,EE,203CA850,extended,00000032 //000000019
+

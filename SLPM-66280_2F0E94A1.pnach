@@ -1,0 +1,24 @@
+gametitle=Monster Hunter 2 SLPM-66280 2F0E94A1
+comment=60fps toggle on by Gabominated
+
+[60fps]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00218CC4,word,00000000 //00000001 fps
+patch=1,EE,003ABAEC,word,3c023f80 //3c024000 speed 2 quest
+patch=1,EE,0039C1F8,word,3c023f80 //3c024000 speed 1 quest
+patch=1,EE,00714DC0,word,3c023fa0 //3c024020 run in quest
+patch=1,EE,00715874,word,3c023f4C //3c023fCC climb up in quest
+patch=1,EE,00715A94,word,3c023f4C //3c023fCC climb down in quest
+patch=1,EE,00715888,word,3C023fa0 //3c024020 climb up booster
+patch=1,EE,00715AA8,word,3C023fa6 //3c024026 climb down booster
+patch=1,EE,0039C1D0,word,3C023f80 //3c024000 gathering
+patch=1,EE,0077DF50,word,3c023f80 //3c024000 npc in town
+patch=1,EE,00794E84,word,3c023f80 //3c024000 walk in town
+patch=1,EE,00797CA8,word,3C033fa0 //3C034020 run in town
+patch=1,EE,00905604,word,3C024000 //3c024000 npc in quest
+patch=1,EE,009055F4,word,3C024348 //3C0242C8 npc in quest 2
+patch=1,EE,0031AED4,word,2403023F //2403047E cam speed
+
+
+

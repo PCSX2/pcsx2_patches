@@ -1,0 +1,13 @@
+gametitle=Run Like Hell - Hunt or Be Hunted SLUS-20037 F802A575
+comment=60fps toggle on by Gabominated
+
+[60fps]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,201d0b20,extended,28420001 //28420002 fps 1
+patch=1,EE,201C0D54,extended,3c013c88 //3c013d08 npc 2
+patch=1,EE,201c0d50,extended,3c013c88 //3c013d08 npc and doors
+patch=1,EE,201c0b5c,extended,3c013c88 //3c013d08 enviroment 2
+patch=1,EE,201c0e38,extended,3c013c88 //3c013d08 enviroment
+patch=1,EE,20198ab8,extended,3c01BF80 //3c013f80 traverse
+patch=1,EE,2019B890,extended,3C011F83 //3C013F06 main character 

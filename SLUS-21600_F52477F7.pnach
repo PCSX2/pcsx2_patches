@@ -1,0 +1,8 @@
+gametitle=Spider-Man - Friend or Foe SLUS-21600 F52477F7
+comment=60fps toggle on by Gabominated
+
+[60fps]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2037DCA0,extended,00000001 //00000002
+

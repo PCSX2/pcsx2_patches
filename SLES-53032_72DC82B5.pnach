@@ -1,0 +1,13 @@
+gametitle=Hitman - Blood Money SLES-53032 72DC82B5
+comment=Unlocked at 50/60FPS
+
+[50/60FPS]
+author=Gabominated & PeterDelta
+description=
+patch=1,EE,0061C020,word,00000001
+patch=1,EE,E0010000,extended,01FECCF4
+patch=1,EE,0061C020,extended,00000002
+
+[removes red lights]
+patch=1,EE,002ABF28,word,00000000 //01E0F809
+

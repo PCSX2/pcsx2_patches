@@ -1,0 +1,9 @@
+gametitle=Teenage Mutant Ninja Turtles 2 - Battle Nexus SLUS-20981 EE628509
+comment=60fps toggle on by Gabominated
+
+[60fps]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,E0010002,extended,00552874
+patch=1,EE,20552874,extended,00000001 //00000002 //fps
+patch=1,EE,20552F00,extended,3c888889 //3d088889 //speed

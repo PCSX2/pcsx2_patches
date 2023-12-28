@@ -1,0 +1,34 @@
+gametitle=Kill.switch SCES-52124 91A65EAE
+comment=60fps through HDTV 720p Mode by Gabominated
+
+[60fps in Gameplay]
+author=Gabominated
+description=Unlocked at 60fps through HDTV 720p Mode by Gabominated
+patch=1,EE,D05605D2,extended,00AD
+patch=1,EE,203703F8,extended,24120052
+patch=1,EE,D05605D2,extended,006A
+patch=1,EE,203703F8,extended,24120052
+patch=1,EE,D05605D2,extended,0018
+patch=1,EE,203703F8,extended,24120052
+patch=1,EE,D05605D2,extended,002D
+patch=1,EE,203703F8,extended,24120052
+patch=1,EE,D05605D2,extended,0034
+patch=1,EE,203703F8,extended,24120052
+patch=1,EE,D05605D2,extended,0038
+patch=1,EE,203703F8,extended,24120052
+patch=1,EE,D05605D2,extended,001C
+patch=1,EE,203703F8,extended,24120052
+patch=1,EE,D05605D2,extended,001B
+patch=1,EE,203703F8,extended,00069403
+patch=1,EE,D05605D2,extended,0052
+patch=1,EE,203703F8,extended,00069403
+patch=1,EE,D05605D2,extended,0082
+patch=1,EE,203703F8,extended,00069403
+patch=1,EE,D05605D2,extended,0156
+patch=1,EE,203703F8,extended,00069403
+patch=1,EE,D05605D2,extended,0033
+patch=1,EE,203703F8,extended,00069403
+patch=1,EE,D04F9A82,extended,F7FF
+patch=1,EE,203703F8,extended,00069403
+
+

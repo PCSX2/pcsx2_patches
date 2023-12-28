@@ -1,0 +1,7 @@
+gametitle=Secret Service - Ultimate Sacrifice SLUS-21836 5AA9405C
+comment=60fps toggle on by Gabominated
+
+[60fps]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,201841F8,extended,2C420001 //2C420002

@@ -1,0 +1,19 @@
+gametitle=Hitman 2 - Silent Assassin (PAL-S)
+comment=50/60fps + progressive scan by Gabominated
+
+[50fps]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20508090,extended,00000001 //00000002
+
+[60fps + progressive scan]
+author=Gabominated
+description=Unlocked at 60fps + progressive scan. Might need enable EE Overclock to be stable.
+patch=1,EE,20508090,extended,00000000 //00000002
+patch=1,EE,20415930,extended,24120050 //00069403
+patch=1,EE,201016c8,extended,24060050 //24060003
+
+
+
+
+

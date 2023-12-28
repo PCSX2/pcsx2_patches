@@ -1,0 +1,15 @@
+gametitle=Red Ninja - End of Honor SLUS-20714 6B0F338D
+comment=60fps toggle on by Gabominated
+
+[60fps]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,E0030002,extended,0047b210
+patch=1,EE,2047b210,extended,00000001 //00000002 //fps
+patch=1,EE,205210a8,extended,3f800000 //40000000 //speed modifiers
+patch=1,EE,2015b274,extended,3c013f40 //3c013f80 //environment speed
+
+[30fps]
+patch=1,EE,2047b210,extended,00000002 //00000002 //fps
+patch=1,EE,205210a8,extended,40000000 //40000000 //speed modifiers
+patch=1,EE,2015b274,extended,3c013f80 //3c013f80 //environment speed

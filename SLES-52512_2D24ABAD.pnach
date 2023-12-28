@@ -1,0 +1,23 @@
+gametitle=Headhunter - Redemption (PAL-M)
+comment=50/60fps + progressive scan by Gabominated
+
+[50fps]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2043a3c8,extended,00000001 //00000002 fps
+patch=1,EE,2059D1C4,extended,3ca3d70a //3d23d70a speed
+
+[60fps + progresive scan]
+author=Gabominated
+description=Unlocked at 60 fps + progressive scan. Might need enable EE Overclock to be stable.
+patch=1,EE,203B54F8,extended,24120050 //00069403 480p
+patch=1,EE,2043a3c8,extended,00000000 //00000002 fps
+patch=1,EE,2059D1C4,extended,3c888889 //3d23d70a speed
+
+
+
+
+
+
+
+

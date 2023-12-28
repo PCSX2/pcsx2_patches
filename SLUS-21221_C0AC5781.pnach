@@ -1,0 +1,11 @@
+gametitle=Magna Carta - Tears of Blood
+comment=60fps toggle on by Gabominated
+
+[60fps]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,201C69E4,extended,28410001 //28410002
+
+[30fps]
+patch=1,EE,201C69E4,extended,28410002 //28410002
+

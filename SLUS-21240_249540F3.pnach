@@ -1,0 +1,9 @@
+gametitle=Star Wars - Battlefront II
+comment=60fps toggle on by Gabominated
+
+[60fps]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20602c9c,extended,00000001 //00000002
+
+

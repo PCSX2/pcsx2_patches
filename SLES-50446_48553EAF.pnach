@@ -1,0 +1,8 @@
+gametitle=Shadow Man - 2econd Coming (PAL-M) SLES-50446 48553AF
+comment=50fps toggle on by Gabominated
+
+[50fps]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,202BBD70,extended,00000000 //00000001
+

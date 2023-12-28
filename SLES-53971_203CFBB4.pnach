@@ -1,0 +1,9 @@
+gametitle=El Padrino (PAL-S) SLES-53971 203CFBB4
+comment=50fps toggle on by Gabominated
+
+[50fps]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,202E4ECC,extended,00000000 //14400008 //fps
+
+

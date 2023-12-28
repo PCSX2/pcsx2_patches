@@ -1,0 +1,23 @@
+gametitle=Syphon Filter - The Omega Strain
+comment=50/60fps forced and native by Gabominated
+
+[50fps Forced]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20543504,extended,00000032 //00000019
+
+[50fps Native]
+author=Gabominated
+description=Unlocked native 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20175E1C,extended,24020032 //24020019 Native fps
+
+[60fps Native]
+author=Gabominated
+description=Unlocked native 60fps through HDTV 720p mode. Might need enable EE Overclock to be stable.
+patch=1,EE,20175E1C,extended,2402003c //24020019 Native fps
+patch=1,EE,D053B2B8,extended,0001
+patch=1,EE,201028b8,extended,00069403
+patch=1,EE,D04EABD2,extended,0001
+patch=1,EE,201028b8,extended,00069403
+patch=1,EE,D05676C6,extended,0001
+patch=1,EE,201028b8,extended,24120052
