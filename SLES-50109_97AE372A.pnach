@@ -1,8 +1,0 @@
-gametitle=7 Blades SLES-50109 97AE372A
-comment=50fps toggle on by Gabominated
-
-[50fps]
-author=Gabominated
-description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,203BE838,extended,24020000 //24020001 fps
-patch=1,EE,2051bb2c,extended,3E99999a //3F19999a speed
