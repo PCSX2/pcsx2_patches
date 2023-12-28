@@ -1,9 +1,0 @@
-gametitle=Dawn of Mana (NTSC-U) SLUS-21574 9DC6EE5A
-comment=60fps toggle on by Gabominated
-
-[60fps]
-author=Gabominated
-description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,20113010,extended,28620001 //28620002 fps without doubling speed
-patch=1,EE,E0010001,extended,005D7338 //condition to avoid hang and skip FMVs
-patch=1,EE,20113010,extended,28620002
