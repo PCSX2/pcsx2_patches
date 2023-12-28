@@ -17,4 +17,7 @@ patch=1,EE,0036f42c,word,3c013f10 //3c013f40
 //Cutscene Bars
 patch=1,EE,006617B8,word,00000001
 
-
+[50 FPS]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,202E4ECC,extended,00000000 //14400008 //fps

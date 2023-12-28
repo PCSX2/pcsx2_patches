@@ -25,4 +25,13 @@ patch=1,EE,00267018,word,3c013f20 //3c013f00
 //patch=1,EE,00108674,word,3c013ec0 //3c013f00
 //patch=1,EE,0010867c,word,3c014070 //3c0140a0
 
+[50 FPS]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20107FDC,extended,2C630001 //2C630002 fps 1
 
+[60 FPS]
+author=Gabominated
+description=Unlocked at 60fps + progresive scan. Might need enable EE Overclock to be stable.
+patch=1,EE,20107FDC,extended,2C630001 //2C630002 fps 1
+patch=1,EE,201011E4,extended,24060050 //24060003 progressive scan mode

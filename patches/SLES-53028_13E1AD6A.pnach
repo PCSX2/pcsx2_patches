@@ -10,4 +10,10 @@ patch=1,EE,00178b98,word,461e0003 //00000000
 patch=1,EE,00291610,word,461ea502 //00000000
 patch=1,EE,002b27f4,word,461ea302 //4600a306
 
-
+[50/60 FPS]
+author=Gabominated
+description=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,E0010002,extended,00617820 //condition fps
+patch=1,EE,20617820,extended,00000001 //00000002 fps
+patch=1,EE,E0010001,extended,00617890 //condition in fMVs
+patch=1,EE,20617820,extended,00000002

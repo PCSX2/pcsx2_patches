@@ -19,4 +19,10 @@ patch=1,EE,0035dcc4,word,3c013f2b // 3c013f00 renderfix enemies
 patch=1,EE,00109e90,word,3c01c380 // 3c01c316 remove black bars in cut-scenes
 patch=1,EE,00109ec4,word,3c014380 // 3c014316 remove black bars in cut-scenes
 
-
+[60 FPS]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,E0030002,extended,0047b210
+patch=1,EE,2047b210,extended,00000001 //00000002 //fps
+patch=1,EE,205210a8,extended,3f800000 //40000000 //speed modifiers
+patch=1,EE,2015b274,extended,3c013f40 //3c013f80 //environment speed
