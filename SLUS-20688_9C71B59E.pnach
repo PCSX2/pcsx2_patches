@@ -1,9 +1,0 @@
-﻿gametitle=Psi-Ops - The Mindgate Conspiracy SLUS-20688 9C71B59E
-comment=60fps toggle on by Gabominated
-
-[60fps]
-author=Gabominated
-description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,2017AB28,extended,00000000 //1640FFE5 fps1
-//patch=1,EE,0017AB0C,word,305200FF //305200FF fps2
-//patch=1,EE,0017AB08,word,2c650000 //00652825 fps3
