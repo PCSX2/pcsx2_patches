@@ -1,34 +1,23 @@
-gametitle=Defender (U)(SLUS-20191)
+gametitle=Defender (U)(SLUS-20191) 10BB2872
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
-
-//Widescreen hack 16:9
-
+author=Arapapa
+comment=Widescreen hack
 //Render Fix
 //003f013c 00008144 50ffbd27
 patch=1,EE,001c8268,word,3c013f40 //3c013f00
-
-
-
 //X-Fov Menu (Select Ship)
 patch=1,EE,002e8a4c,word,3FF6CF35 //3fb6db6e
-
 //X-Fov Game Play
 patch=1,EE,002e8b74,word,3FF6CF35 //3fb6db6e
-
 //X-Fov Cut-Scene
 patch=1,EE,002e8b9c,word,3FF6CF35 //3fb6db6e
-
-
-
 //???????
 patch=1,EE,002e8b44,word,3ff6cf35 //3fb6db6e
 patch=1,EE,002e8b48,word,3ff6cf35 //3fb6db6e
 patch=1,EE,002e8b98,word,3ff6cf35 //3fb6db6e
 patch=1,EE,002e8bc0,word,3ff6cf35 //3fb6db6e
-
 
 /////////////////////////////////////////////
 //X-Fov But ????
@@ -40,4 +29,7 @@ patch=1,EE,002e8bc0,word,3ff6cf35 //3fb6db6e
 //patch=1,EE,00208544,word,3c01bff0
 //patch=1,EE,002277bc,word,3c013ec0 //3c013f00
 
-
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,20227458,extended,00000000

@@ -1,10 +1,9 @@
-gametitle=Grand Theft Auto: San Andreas (SLUS-20946GH) / Ver 3.00
+gametitle=Grand Theft Auto: San Andreas (SLUS-20946GH) 2C6BE434 / Ver 3.00
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by nemesis2000 (pnach by nemesis2000)
-
-//widescreen fix
+author=nemesis2000
+comment=Widescreen fix
 patch=1,EE,001130BC,word,3C013F9D
 patch=1,EE,001130C0,word,44810000
 patch=1,EE,001130C4,word,46006302
@@ -16,6 +15,10 @@ patch=1,EE,00242DB4,word,0C044C32
 
 [Remove Radiosity Filter]
 description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
-
 //Remove Radiosity Filter
 patch=1,EE,2051A6D8,extended,00000000
+
+[60 FPS]
+author=someother1ne
+description=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0066804C,word,10000001
