@@ -1,0 +1,6 @@
+gametitle=Sonic Gems Collection (PAL-M) SLES-53350 4A198252 Main CRC
+
+[Sonic CD 60 FPS]
+author=PeterDelta
+comment=Forces progressive scan mode when starting Sonic CD
+//Used to enable SLES-53350_82DB1E89.pnach elf: S1.DAT Sonic CD

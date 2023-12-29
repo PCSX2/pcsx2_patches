@@ -1,0 +1,6 @@
+gametitle=Motocross Mania 3 (PAL-M) SLES-53092 D536E4BA
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,003219EC,word,00000001 //00000002

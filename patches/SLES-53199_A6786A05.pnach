@@ -1,0 +1,20 @@
+gametitle=25 to Life (PAL-E) SLES-53199 A6786A05
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,00319794,word,3c013f40 //X-Fov
+patch=1,EE,00319798,word,4481f000
+patch=1,EE,003197bc,word,461e6b43
+patch=1,EE,0022c01c,word,0809a844 //Render fix
+patch=1,EE,0026a110,word,4600b306 //00000000
+patch=1,EE,0026a114,word,3c013f40 //00000000
+patch=1,EE,0026a118,word,4481f000 //00000000
+patch=1,EE,0026a11c,word,461e6303 //00000000
+patch=1,EE,0026a120,word,0808b008 //00000000
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,005F787C,word,00000001 //00000002

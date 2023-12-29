@@ -1,0 +1,15 @@
+gametitle=Tom Clancy's Ghost Recon 2 (PAL-M) SLES-52646 CE64E328
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,E0010000,extended,00E966F8
+patch=1,EE,20E966F8,extended,3F400000
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,205D8B50,extended,00000000
+patch=1,EE,E0010001,extended,00722870
+patch=1,EE,205D8B50,extended,1440FFF9

@@ -1,0 +1,7 @@
+gametitle=Graffiti Kingdom (PAL-M) SLES-53311 F28709A1
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,001F1510,word,3C023FAB //3C023F80

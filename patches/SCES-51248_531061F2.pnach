@@ -1,0 +1,6 @@
+gametitle=Dog's Life (PAL-M) SCES-51248 531061F2
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,00791350,word,3CA3D70A

@@ -1,49 +1,24 @@
-gametitle=50 Cent - Bulletproof (E)(SLES-53734)
+gametitle=50 Cent - Bulletproof (E)(SLES-53734) E3F32982
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa and 60 FPS by asasega
-
-//Gameplay 16:9
-
-//X-Fov 4:3 fix
-//e63e013c 1a8b2134 00608144 (2nd)
-//083f013c 83882134 00608144
-patch=1,EE,001eb448,word,3c013f08 //3c013ee6
+author=Arapapa
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,001eb448,word,3c013f08 //3c013ee6 (2nd) X-Fov 4:3 fix
 patch=1,EE,001eb44c,word,34218883 //34218b1a
-
-//X-Fov Wide screen fix
-//80df4426 cc3e013c cdcc2134 00608144
-//80df4426 083f013c 83882134 00608144
-patch=1,EE,001eb464,word,3c013F08 //3c013ecc
+patch=1,EE,001eb464,word,3c013F08 //3c013ecc X-Fov Wide screen fix
 patch=1,EE,001eb468,word,34218883 //3421cccd
-
-//Font's Shadow fix
-//803f013c 00888144 01630246
-//403f013c 00888144 01630246
-patch=1,EE,00158464,word,3c013f40 //3c013f80
-
-//868c0046 ac00058e (1st)
-patch=1,EE,00158484,word,0807d744 //46008c86
-
+patch=1,EE,00158464,word,3c013f40 //3c013f80 Font's Shadow fix
+patch=1,EE,00158484,word,0807d744 //46008c86 (1st)
 patch=1,EE,001f5d10,word,3c013f80
 patch=1,EE,001f5d14,word,44819000
 patch=1,EE,001f5d18,word,08056122
-
-//Font fix
-//803f013c 00888144 01030c46
-//403f013c 00888144 01030c46
-patch=1,EE,001584b8,word,3c013f40 //3c013f80
-
-//868c0046 ac00058e (2nd)
-patch=1,EE,001584d4,word,0807d747 //46008c86
-
+patch=1,EE,001584b8,word,3c013f40 //3c013f80 Font fix
+patch=1,EE,001584d4,word,0807d747 //46008c86 868c0046 ac00058e (2nd)
 patch=1,EE,001f5d1c,word,3c013f80
 patch=1,EE,001f5d20,word,44819000
 patch=1,EE,001f5d24,word,08056136
-
-//Font fix (Menu)
-patch=1,EE,204E9668,extended,3F400000
+patch=1,EE,204E9668,extended,3F400000 //Font fix (Menu)
 patch=1,EE,204E9858,extended,3F400000
 patch=1,EE,204E9900,extended,3F400000
 patch=1,EE,204E99A4,extended,3F400000
@@ -125,9 +100,11 @@ patch=1,EE,204ECF98,extended,3F400000
 patch=1,EE,204ED750,extended,3F400000
 patch=1,EE,204ED7F4,extended,3F400000
 patch=1,EE,204ED898,extended,3F400000
-
-//Yes and No
-patch=1,EE,204F92DC,extended,3f400000
+patch=1,EE,204F92DC,extended,3f400000 //Yes and No
 patch=1,EE,204F9380,extended,3f400000
 
-
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,001B3CE8,word,3C014270 //3C0141F0
+patch=1,EE,00427FA4,word,3F000000 //3F800000

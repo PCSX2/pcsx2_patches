@@ -1,0 +1,8 @@
+gametitle=TY the Tasmanian Tiger 3 - Night of the Quinkan (PAL-M) SLES-53636 64E8F1DC
+
+[50 FPS]
+author=PeterDelta and asasega
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0012C85C,extended,28420001
+patch=1,EE,E0010000,extended,00516110
+patch=1,EE,2012C85C,extended,28420002

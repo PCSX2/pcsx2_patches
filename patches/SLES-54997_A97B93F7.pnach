@@ -1,0 +1,16 @@
+gametitle=Mercenaries 2 - World in Flames (PAL-E) SLES-54997 A97B93F7
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,0037CC14,word,3C013F40 //3C013F80
+patch=1,EE,00380F1C,word,3C013F2B //3C013F00 render fix
+patch=1,EE,00389870,word,3C013F2B //3C013F00 render fix 2
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,003FD244,extended,3C0200A0
+patch=1,EE,E0010000,extended,0055D9E4
+patch=1,EE,003FD244,extended,3C020050
