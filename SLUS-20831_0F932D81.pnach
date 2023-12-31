@@ -1,4 +1,0 @@
-//Fix for Money Glitch. 
-patch=0,EE,10255c00,extended,B560
-patch=0,EE,10255c04,extended,1430
-patch=0,EE,10255c20,extended,1182
