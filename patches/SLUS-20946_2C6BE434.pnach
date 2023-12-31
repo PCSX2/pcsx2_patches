@@ -21,4 +21,5 @@ patch=1,EE,2051A6D8,extended,00000000
 [60 FPS]
 author=someother1ne
 description=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,0066804C,word,10000001
+patch=1,EE,D066804C,extended,00000002
+patch=1,EE,0066804C,extended,10000001
