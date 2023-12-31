@@ -1,0 +1,6 @@
+gametitle=London Racer 2 (PAL-M) SLES-50955 0CEB8F2F
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,00254824,word,00000000 //1440FFFA

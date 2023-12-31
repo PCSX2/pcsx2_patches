@@ -1,0 +1,6 @@
+gametitle=Fairly OddParents, The - Shadow Showdown (PAL-M) SLES-52857 38351989
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,004D1414,word,42700000 //41F00000
