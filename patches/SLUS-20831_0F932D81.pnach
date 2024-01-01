@@ -12,4 +12,9 @@ description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,20131684,extended,00000000
 
-
+[Wanderers Fix]
+author=Kinglink
+comment=Reduce Exotic Butterfly and Whirlwind Fanfare's Credit(CP) requirements by 100.
+patch=0,EE,10255c00,extended,B560
+patch=0,EE,10255c04,extended,1430
+patch=0,EE,10255c20,extended,1182
