@@ -250,7 +250,7 @@ patch=1,EE,005a22e8,word,080d1ddd
 ///////////////////////////////////////////////////////
 //Head Portraits (Right, In the Battles) fix by Arapapa
 //10004426 7000a527 (1st)
-patch=1,EE,0022d764,word,08030000 #1
+patch=1,EE,0022d764,word,08030000 //#1
 patch=1,EE,000c0000,word,26440010
 patch=1,EE,000c0004,word,c7bf0078
 patch=1,EE,000c0008,word,3c013f40
@@ -260,7 +260,7 @@ patch=1,EE,000c0014,word,e7bf0078
 patch=1,EE,000c0018,word,0808b5da
 
 //10014426 7000a527 (1st)
-patch=1,EE,0022d864,word,08030008 #2
+patch=1,EE,0022d864,word,08030008 //#2
 patch=1,EE,000c0020,word,26440110
 patch=1,EE,000c0024,word,c7bf0078
 patch=1,EE,000c0028,word,3c013f40
