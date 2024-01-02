@@ -1,14 +1,15 @@
-gametitle=Sonic Unleashed (SLUS-21846)
+//gametitle=Sonic Unleashed (SLUS-21846)
+//Disabled due to crashing during night statges and boss battles.
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen Patch (16:9) by Monsterjamp
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//comment=Widescreen Patch (16:9) by Monsterjamp
 
 //FOV
-patch=1,EE,20872CD0,word,3FD21DAF
+//patch=1,EE,20872CD0,word,3FD21DAF
 
 //Fixes video aspect ratio
-patch=1,EE,20ED1A68,word,43E00000
-patch=1,EE,20ED1A58,word,00000000
+//patch=1,EE,20ED1A68,word,43E00000
+//patch=1,EE,20ED1A58,word,00000000
 
 
