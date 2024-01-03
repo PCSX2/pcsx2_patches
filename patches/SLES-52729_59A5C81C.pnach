@@ -10,6 +10,6 @@ patch=1,EE,203018E0,extended,3F891A2A //3fb6cb8f
 [50 FPS]
 author=asasega and PeterDelta
 comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,20343668,extended,00000002
-patch=1,EE,E0010001,extended,002DA2D8
-patch=1,EE,20343668,extended,00000001
+patch=1,EE,00343668,extended,00000001
+patch=1,EE,E0010000,extended,002DCE80
+patch=1,EE,00343668,extended,00000002
