@@ -20,4 +20,4 @@ patch=1,EE,00117290,word,080a2073
 author=PeterDelta
 comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,004B0304,byte,01
-patch=1,EE,003469C4,byte,78
+patch=1,EE,003469C4,byte,77
