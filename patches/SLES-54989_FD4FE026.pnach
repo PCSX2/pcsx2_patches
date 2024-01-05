@@ -1,0 +1,17 @@
+gametitle=Bratz - The Movie (PAL-S-I) SLES-54989 FD4FE026
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,003DDD24,word,3C013F40
+patch=1,EE,003DDD28,word,4481F000
+patch=1,EE,003DDD30,word,461EB582
+patch=1,EE,003BD070,word,3C013F2B
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,003F4324,extended,46010003
+patch=1,EE,E0010000,extended,004C0850
+patch=1,EE,003F4324,extended,46010001

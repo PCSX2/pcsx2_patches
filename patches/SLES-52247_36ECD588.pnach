@@ -1,0 +1,16 @@
+gametitle=The Hobbit (PAL-R) SLES-52247 36ECD588
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,002FA6AC,word,3C013EC0 //3C013F00
+patch=1,EE,0038B168,word,3C013EC0 //3C013F00
+patch=1,EE,0038B27C,word,3C013F40 //3C013F00
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,2040458C,extended,00000001
+patch=1,EE,E0010000,extended,003E9010
+patch=1,EE,2040458C,extended,00000002
