@@ -1,11 +1,9 @@
-gametitle=Lemony Snicket's A Series of Unfortunate Events (U)(SLUS-21078)
+gametitle=Lemony Snicket's A Series of Unfortunate Events (U)(SLUS-21078) 4835F048
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
-
-//Widescreen hack 16:9
-
+author=Arapapa
+comment=Widescreen hack
 //Zoom (Gameplay)
 //003f013c 00608144
 patch=1,EE,0018cd58,word,3c013f1b //3c013f00
@@ -35,4 +33,8 @@ patch=1,EE,0037b9dc,word,4481f000
 patch=1,EE,0037b9e0,word,461e6302
 patch=1,EE,0037b9e4,word,080aefca
 
-
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,20447740,extended,42EFC28F
+patch=1,EE,20447744,extended,3C08AB86

@@ -12,4 +12,7 @@ patch=1,EE,002644ec,word,3c014440 // hor fov
 patch=1,EE,00225ffc,word,3c014000 //3c014286
 patch=1,EE,00226000,word,00000000 //34216667
 
-
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,201002F4,extended,10000011

@@ -1,0 +1,6 @@
+gametitle=Wild Wild Racing (PAL-M) SLES-50009 04FE3778
+
+[50 FPS]
+author=asasega
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,202003D4,extended,28420001
