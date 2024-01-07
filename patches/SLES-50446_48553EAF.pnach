@@ -10,4 +10,7 @@ comment=Widescreen Hack by Arapapa
 patch=1,EE,002b9534,word,3FE38E08 //3faaaaab
 patch=1,EE,002b955c,word,3FE38E08 //3faaaaab
 
-
+[50 FPS]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,202BBD70,extended,00000000 //00000001

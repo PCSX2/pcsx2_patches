@@ -51,4 +51,7 @@ patch=1,EE,2072a3cc,extended,432b0000
 //patch=1,EE,e0010000,extended,005e1638
 //patch=1,EE,201d5124,extended,3c024000
 
-
+[50 FPS]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,201F3EF8,extended,28420001 //28420002
