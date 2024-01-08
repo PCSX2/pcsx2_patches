@@ -4,10 +4,10 @@ gametitle=Tomb Raider - Angel of Darkness * SLES-51227 * PAL-M10 * 54AD76D7
 gsaspectratio=16:9
 author=Arapapa
 comment=Widescreen Hack ported from NTSC-U
-; ==========
-; pgert@190227
-; http:// forums.pcsx2.net/Thread-PCSX2-Widescreen-Game- patches?pid=240786#pid240786
-; ==========
+// ==========
+// pgert@190227
+// http:// forums.pcsx2.net/Thread-PCSX2-Widescreen-Game- patches?pid=240786#pid240786
+// ==========
 
 // Fast Boot 4:3 hack - 16:9
 patch=1,EE,00207494,word,3C013FE2 // 3C013FAA
