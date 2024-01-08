@@ -4,18 +4,18 @@ gametitle=Lara Croft Tomb Raider - Legend * SLES-53908 * PAL/Europe * 05177ECE
 gsaspectratio=16:9
 author=pgert
 comment=Widescreen Hack
-; ==========
-; pgert@190222
-; http://forums.pcsx2.net/Thread-PCSX2-Widescreen-Game-Patches?pid=240786#pid240786
-; ==========
-; Note that GSdx have a CRC-specific HW-hack for this game.
-; ==========
-; This game gains a big speedup by (in combination) setting "EE Cycle Skipping" to 2
-;  under Config > Emulation Settings > Speedhacks, and activating "Monitor Frequency PAL-60"
-;  under Options > Display in the game-menu.
-; ==========
+// ==========
+// pgert@190222
+// http://forums.pcsx2.net/Thread-PCSX2-Widescreen-Game-Patches?pid=240786#pid240786
+// ==========
+// Note that GSdx have a CRC-specific HW-hack for this game.
+// ==========
+// This game gains a big speedup by (in combination) setting "EE Cycle Skipping" to 2
+//  under Config > Emulation Settings > Speedhacks, and activating "Monitor Frequency PAL-60"
+//  under Options > Display in the game-menu.
+// ==========
 
-; ==========
+// ==========
 // 16:10 support.
 // patch=1,EE,001B6B34,word,3C013F55 // 3C013F40 - source HOW - GamePlay X-axis.
 // patch=1,EE,204A4E10,extended,3F555555 // 3F800000\3F400000 - HOW set from 001B6B34.
@@ -36,9 +36,9 @@ comment=Widescreen Hack
 // patch=1,EE,002DF170,word,3C013F55 // 3C013F40
 // patch=1,EE,002F41C0,word,3C013F55 // 3C013F40
 // patch=1,EE,002F995C,word,3C013F55 // 3C013F40
-; ==========
+// ==========
 
-; ==========
+// ==========
 // 15:10 support (MS Surface Book).
 // patch=1,EE,001B6B34,word,3C013F64
 // patch=1,EE,204A4E10,extended,3F638E39
@@ -59,9 +59,9 @@ comment=Widescreen Hack
 // patch=1,EE,002DF170,word,3C013F64
 // patch=1,EE,002F41C0,word,3C013F64
 // patch=1,EE,002F995C,word,3C013F64
-; ==========
+// ==========
 
-; ==========
+// ==========
 // Widescreen enforcement lazy-hack (optional).
 // patch=1,EE,203921F0,extended,3F800000 // 00000000
 // patch=1,EE,203B9080,extended,00000001 // 00000000
@@ -69,12 +69,12 @@ comment=Widescreen Hack
 // patch=1,EE,20977390,extended,00000001 // 00000000
 // patch=1,EE,2098EFA0,extended,00000001 // 00000000
 // - Might not work with all BIOS types & configurations.
-; ==========
+// ==========
 // Blackbars hack (optional).
 // patch=1,EE,0016C688,word,3C01BF60 // 3C01BF40 - bisects upper Blackbar of Cinematics (sets it to 50%).
 // patch=1,EE,0016C694,word,3C013F60 // 3C013F40 - bisects lower Blackbar of Cinematics (sets it to 50%).
 // - Set the value of these patches to 3C01BF80 & 3C013F80 to fully remove the Blackbars.
-; ==========
+// ==========
 
 
 [50/60 FPS]
