@@ -1,0 +1,11 @@
+gametitle=Disney Piglet - El Gran Juego (PAL-S) SLES-51666 1BD0A97E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,00291A7C,word,3C024081 //3C024049
+patch=1,EE,002D4C64,word,3C023FE3 //3C023FAA
+patch=1,EE,002D4C68,word,34428E32 //3442AAAB
+patch=1,EE,003257C4,word,3C023FE3 //3C023FAA
+patch=1,EE,003257C8,word,34428E32 //3442AAAB
