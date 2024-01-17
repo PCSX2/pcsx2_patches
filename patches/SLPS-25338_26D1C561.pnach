@@ -12,16 +12,13 @@ patch=1,EE,01E15D18,extended,00000040 // 3C023F80 hor fov menu
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-patch=1,EE,D0487740,extended,01100000
-patch=1,EE,0023C2DC,extended,00000001
-patch=1,EE,D0487740,extended,01000000
 patch=1,EE,0023C2DC,extended,00000000
 
 [Remove Blur]
 author=001 & Berylskid
 description=Removes blur effects.
 patch=1,EE,201317F0,extended,00000000
-patch=1,EE,D0487740,extended,02100000
+patch=1,EE,D1D46A22,extended,02006F73
 patch=1,EE,61CC66E8,extended,00000000
 patch=1,EE,00000001,extended,0000005F
 
