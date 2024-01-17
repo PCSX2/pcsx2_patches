@@ -17,7 +17,7 @@ patch=1,EE,2011F014,extended,00000000
 [Remove Blur]
 author=001 & Berylskid
 description=Removes blur effects.
-patch=1,EE,D027CC74,extended,02100000
+patch=1,EE,D1DF5F22,extended,02006F73
 patch=1,EE,61D8D4C8,extended,00000000
 patch=1,EE,00000001,extended,0000005F
 
