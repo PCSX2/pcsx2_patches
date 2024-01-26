@@ -1,0 +1,10 @@
+gametitle=AirBlade (PAL-M5) (SCES_502.46)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack Conversion
+author=Bigdemon
+
+patch=1,EE,202EB1D0,word,3FAAAAAA
+
+
