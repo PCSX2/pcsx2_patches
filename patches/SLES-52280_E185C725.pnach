@@ -12,7 +12,5 @@ patch=1,EE,20FFAE5C,extended,3FAB0000 //3F800000 Horizontal axis
 //Render fix
 patch=1,EE,20FFADC4,extended,3D000000 //3D4CCCCD
 
-//Rendering distancce
+//Rendering distance
 patch=1,EE,20FFADC8,extended,44000000 //43660000
-
-
