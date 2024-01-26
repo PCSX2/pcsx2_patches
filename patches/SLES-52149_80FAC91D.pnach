@@ -1,0 +1,13 @@
+gametitle=Splinter Cell - Pandora Tomorrow (PAL-M) SLES-52149 80FAC91D SC2A.ELF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,0017A200,word,3C1B3F40 //AE03008C - X-axis
+patch=1,EE,001B79F4,word,AE1B008C //AE03008C
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0018D7FC,word,00000000 //1440FFFA
