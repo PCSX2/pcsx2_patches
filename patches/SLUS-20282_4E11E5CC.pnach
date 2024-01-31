@@ -7,7 +7,7 @@ comment=Widescreen hack by Arapapa
 //Widescreen hack 16:9
 
 
-X-Fov (In Squared Ring)
+//X-Fov (In Squared Ring)
 //803f013c 00a08144
 patch=1,EE,00114578,word,3c013f40 //3c013f80
 

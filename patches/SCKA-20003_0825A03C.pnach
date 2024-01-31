@@ -50,9 +50,9 @@ patch=1,EE,202A4CA4,extended,00000014 //0000001A - Health Icon 4 Inner Width +6c
 patch=1,EE,202A4D34,extended,00000014 //0000001A - Health Icon 4 Outer Width +fc
 
 //Distant Shadows
-00 00 00 44 BF 21 E0 81 3C 2B 2E 80 DE AD 20 00
+//00 00 00 44 BF 21 E0 81 3C 2B 2E 80 DE AD 20 00
 patch=1,EE,2025c3e8,extended,43C00000 //44000000 - Distant Shadows Width #1 (ZAxisAllLoop)
-00 00 00 44 D0 7B 80 81 3C 03 00 80 FF 02 00 00
+//00 00 00 44 D0 7B 80 81 3C 03 00 80 FF 02 00 00
 patch=1,EE,2025c4b0,extended,43C00000 //44000000 - Distant Shadows Width #2 (ZAxisClipXY2)
 
 //Sprites

@@ -5,7 +5,6 @@ gsaspectratio=16:9
 comment=Widescreen Hack by Arapapa
 
 //Widescreen hack 16:9
-s
 //Zoom
 patch=1,EE,0023c03c,word,3c023f20 //3c023f00
 

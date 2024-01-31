@@ -24,7 +24,7 @@ patch=1,EE,203328BC,extended,3F19999A // 3F4CCCCD (hor axis)
 
 [60 FPS]
 description=Forces the game to run at 60.
-60 FPS
+//60 FPS
 patch=1,EE,004386B0,extended,00000000
 
 //60 FPS Ladder Fix by Sirius902
