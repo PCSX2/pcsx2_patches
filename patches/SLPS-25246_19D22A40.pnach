@@ -4,7 +4,7 @@ gametitle=Lara Croft Tomb Raider: Utsukushiki Toubousha * NTSC-J * SLPS-25246 * 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-descrition=Native Widescreen activation hack (Full boot bypassing)
+description=Native Widescreen activation hack (Full boot bypassing)
 patch=1,EE,00224bf0,word,24020002 // 30420003
 
 // Fast Boot 4:3 fix

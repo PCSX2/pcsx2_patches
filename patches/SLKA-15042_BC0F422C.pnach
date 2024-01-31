@@ -6,6 +6,6 @@ comment=Widescreen hack by Arapapa
 
 //Widescreen hack 16:9
 
-patch=1,EE,00C93688,Word,3F400000
+patch=1,EE,00C93688,word,3F400000
 
 
