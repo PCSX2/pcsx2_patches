@@ -10,7 +10,7 @@ patch=1,EE,002123f8,word,3c013f40 // 00000000 hor fov
 
 
 // cut-scenes black bar removal
-2044033c 00088344 28868070
+//2044033c 00088344 28868070
 patch=1,EE,001ffcd8,word,3c030000 // 3c034420 remove black bars in cut-scenes
 
 // 16:9 and 16:10 main modfication

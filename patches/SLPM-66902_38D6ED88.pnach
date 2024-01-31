@@ -25,7 +25,7 @@ patch=1,EE,003fb630,word,40000000 //3eaaaaab
 //patch=1,EE,206db7e0,extended,3e3f0000 //3e4d4fdf
 
 //Black Bar Fix
-8642013c 67662134 00008144
+//8642013c 67662134 00008144
 patch=1,EE,00188d18,word,00000000 //44810000
 
 

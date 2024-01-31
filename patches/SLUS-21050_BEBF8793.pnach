@@ -2,8 +2,8 @@
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 author=Aero_
 gsaspectratio=16:9
-Burnout 3: Takedown (SLUS-21050)
-Widescreen Fix (v2.0) by Aero_
+// Burnout 3: Takedown (SLUS-21050)
+// Widescreen Fix (v2.0) by Aero_
 
 // FOV (16:9)
 
