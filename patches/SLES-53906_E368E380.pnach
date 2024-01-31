@@ -1,7 +1,7 @@
 gametitle=50 Cent - Bulletproof (F)(SLES-53906)
 
 [Widescreen 16:9]
-gsaspectrpatio=16:9
+gsaspectratio=16:9
 comment=Widescreen hack conversion
 author=Bigdemon
 //Gameplay 16:9
