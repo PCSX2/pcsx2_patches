@@ -14,10 +14,3 @@ patch=1,EE,0035d3a0,word,44820800
 patch=1,EE,0035d3a4,word,27a50028
 patch=1,EE,0035d3a8,word,46010083
 patch=1,EE,0035d3ac,word,e7a20028
-
-//480p
-patch=1,EE,0026435c,word,24050000
-patch=1,EE,00264360,word,24060050
-patch=1,EE,002636a8,word,24060050
-patch=1,EE,002636ac,word,24050000
-patch=1,EE,00102254,word,3c090010
