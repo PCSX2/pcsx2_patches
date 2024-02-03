@@ -8,6 +8,8 @@ comment=Converted by Bigdemon
 // 16:9
 patch=1,EE,0033b038,word,3c013f40 // 00000000 hor fov
 
+// [Widescreen 16:10]
+// gsaspectratio=16:10
 // 16:10
 //patch=1,EE,0033b038,word,3c013f55 // 00000000 hor fov
 //patch=1,EE,0033b03c,word,34215555 // 00000000 hor fov
