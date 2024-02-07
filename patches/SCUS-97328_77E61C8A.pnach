@@ -4,6 +4,7 @@ gametitle=Gran Turismo 4 [SCUS-97328] (U)
 gsaspectratio=16:9
 comment=Widescreen Text
 author=Aero_
+
 // Corrects Text Aspect Ratio for Widescreen
 patch=1,EE,20492A30,extended,08125570 // j 004955C0
 patch=1,EE,204955C0,extended,3C090061 // lui t1,0x0061 : Widescreen Mode 1st-Half of Memory Address
@@ -18,4 +19,16 @@ patch=1,EE,204955E0,extended,4614D682 // mul.s f26, f26, f20
 patch=1,EE,204955E4,extended,08124A8D // j 00492A34
 patch=1,EE,2044DBD8,extended,00000000 // nop
 
+[Adjusted triggers sensitivity]
+description=Makes throttle/brake more precise when using triggers, like on PS3
+author=Silent & Aero_
 
+// Throttle
+patch=1,EE,1043BEFC,extended,0000005A
+patch=1,EE,2043BEF0,extended,00000000
+// Brake
+patch=1,EE,1043BF5C,extended,0000005A
+patch=1,EE,2043BF50,extended,00000000
+// Reverse
+patch=1,EE,1043C01C,extended,0000005A
+patch=1,EE,2043C010,extended,00000000
