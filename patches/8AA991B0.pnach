@@ -22,14 +22,6 @@ author=Silent
 // 1 - MPH/Miles
 patch=1,EE,202F59D8,extended,0
 
-// Power units
-// 0 - PS
-// 1 - HP
-// 2 - BHP
-// 3 - CV
-// 4 - kW
-patch=1,EE,202F59DC,extended,1
-
 // Torque units
 // 0 - kgf.m
 // 1 - ft.lb
