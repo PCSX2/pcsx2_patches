@@ -8,4 +8,9 @@ patch=1,EE,003a0498,word,3c013f14 //3c013f00
 patch=1,EE,002d4b40,word,3c014010 //3c014040
 patch=1,EE,0022e768,word,3C013F8A //3C013F80
 
-
+[60 FPS]
+author=asasega & Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,204A20B4,extended,00000001 //00000002
+patch=1,EE,E0010001,extended,0044C690
+patch=1,EE,204A20B4,extended,00000002

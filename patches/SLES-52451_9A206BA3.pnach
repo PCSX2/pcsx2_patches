@@ -30,7 +30,8 @@ author=Gabominated
 description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,20107FDC,extended,2C630001 //2C630002 fps 1
 
-[60 FPS]
+[480p 60FPS]
+gsinterlacemode=1
 author=Gabominated
 description=Unlocked at 60fps + progresive scan. Might need enable EE Overclock to be stable.
 patch=1,EE,20107FDC,extended,2C630001 //2C630002 fps 1
