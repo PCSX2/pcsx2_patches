@@ -2,14 +2,11 @@ gametitle=Rogue Trooper (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
-comment=Widescreen Hack
-//X-Fov
-//803f013c 00e08144
-patch=1,EE,001c8974,word,3c013f40 //3c013f80
+author=Gabominated
+description=Widescreen fix
+patch=1,EE,00112D80,word,3C013F05 //3C013F00 zoom
 
 [60 FPS]
-author=asasega
-comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,201BE834,word,00000000
-patch=1,EE,203C8384,word,00000000
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,001BE810,word,1460000A //1060000A

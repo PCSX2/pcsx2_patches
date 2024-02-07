@@ -1,0 +1,6 @@
+gametitle=Ghost in the Shell - Stand Alone Complex [SLUS_21006] [95CC86EF]
+
+[60 FPS]
+author=asasega
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20392f7C,extended,00000001 //00000002

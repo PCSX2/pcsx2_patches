@@ -67,4 +67,7 @@ patch=1,EE,002111b8,word,468000e0
 patch=1,EE,002111bc,word,8c8301e8
 patch=1,EE,002111c0,word,46021043
 
-
+[60 FPS]
+author=asasega
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2013D168,extended,2C420001

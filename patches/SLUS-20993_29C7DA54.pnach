@@ -1,0 +1,8 @@
+gametitle=Ghosthunters SLUS-20993 29C7DA54
+
+[60 FPS]
+author=asasega & Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2056A1F0,extended,00000001 //00000002
+patch=1,EE,E0010001,extended,00651FE0
+patch=1,EE,2056A1F0,extended,00000002
