@@ -17,4 +17,12 @@ patch=1,EE,001481a0,word,461e0843 // 00000000
 patch=1,EE,001481a4,word,e6010068 // 00000000
 patch=1,EE,001481a8,word,0806ec74 // 00000000
 
-
+[60 FPS]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,001CA814,word,10000007 //10400007
+patch=1,EE,E0043D08,extended,0067D8B2
+patch=1,EE,1067D8B2,extended,00003C88
+patch=1,EE,1067D8B6,extended,00003C88
+patch=1,EE,1067D8BA,extended,00003C88
+patch=1,EE,1067D8BE,extended,00003C88
