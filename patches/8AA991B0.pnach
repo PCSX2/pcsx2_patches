@@ -1,0 +1,37 @@
+gametitle=Gran Turismo 3 [PBPX-95503] (U)
+
+[Adjusted triggers sensitivity]
+description=Makes throttle/brake more precise when using triggers, like on the PS3
+author=Silent & Aero_
+
+// Throttle
+patch=1,EE,10211218,extended,0000005A
+// Brake
+patch=1,EE,10211260,extended,0000005A
+// Reverse
+patch=1,EE,102112F0,extended,0000005A
+// Input multiplier
+patch=1,EE,20211014,extended,00000000
+
+[Metric units]
+description=Changes units to metric counterparts
+author=Silent
+
+// Speed and distance units
+// 0 - KMH/KM
+// 1 - MPH/Miles
+patch=1,EE,202F59D8,extended,0
+
+// Power units
+// 0 - PS
+// 1 - HP
+// 2 - BHP
+// 3 - CV
+// 4 - kW
+patch=1,EE,202F59DC,extended,1
+
+// Torque units
+// 0 - kgf.m
+// 1 - ft.lb
+// 2 - NM
+patch=1,EE,202F59E0,extended,2
