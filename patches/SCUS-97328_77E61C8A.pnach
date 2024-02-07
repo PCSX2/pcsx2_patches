@@ -32,3 +32,39 @@ patch=1,EE,2043BF50,extended,00000000
 // Reverse
 patch=1,EE,1043C01C,extended,0000005A
 patch=1,EE,2043C010,extended,00000000
+
+[GT3 Chase Camera]
+description=GT3-like camera from GT4 First Preview
+author=Silent
+
+// Values changed by this cheat are float values represented in hex.
+// If you want to customize those parameters, use a float-to-hex converter like this one:
+// https://gregstoll.com/~gregstoll/floattohex/
+
+// Default parameters in this cheat correspond to the values from GT4 First Preview,
+// but you may freely customize them. For example, if you want to make the camera
+// even stiffer (like in GT5/6), increase the damper value.
+
+// Camera damper, default - 120.0
+// Higher values make the camera center quicker
+patch=1,EE,2069F4C8,extended,41F00000 // 30.0
+// Camera max angle, default - 15.0
+// Higher values make the camera lean further to the sides
+patch=1,EE,2069F4D0,extended,41200000 // 10.0
+
+[Far chase camera]
+description=Added GT4 First Preview camera mode
+author=Silent
+
+// Swap 4-byte instructions to 2-byte ones to make space
+patch=1,EE,2037ACDC,extended,84E30000
+patch=1,EE,1037ACE0,extended,0002
+patch=1,EE,1037ACF0,extended,0004
+patch=1,EE,2037AD00,extended,84E30000
+
+patch=1,EE,1037AD10,extended,0004
+patch=1,EE,0037AD28,extended,40
+patch=1,EE,1037AD3A,extended,8442
+
+patch=1,EE,206211E8,extended,00010000
+patch=1,EE,206211EC,extended,00060014
