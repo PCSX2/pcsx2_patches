@@ -4,7 +4,7 @@ gametitle=Rogue Trooper (NTSC-U)
 gsaspectratio=16:9
 author=Gabominated
 description=Widescreen fix
-patch=1,EE,01D166E8,word,3f772000 //3F800000 zoom
+patch=1,EE,00112D80,word,3C013F05 //3C013F00 zoom
 
 [60 FPS]
 author=Gabominated
