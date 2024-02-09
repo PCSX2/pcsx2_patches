@@ -1,5 +1,5 @@
 gametitle=Project - Snowblind SLUS-21037 2BDA8ADB secundary crc 7849F069
-//Corresponds to the main crc to activate the secondary crc 75A5436A called SP.IMG
+//Corresponds to the main crc to activate the secondary crc 7849F069 called B03GM.ELF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -7,5 +7,5 @@ author=Gabominated
 description=Widescreen Hack
 
 [60 FPS]
-author=asasega
+author=asasega & Gabominated
 description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
