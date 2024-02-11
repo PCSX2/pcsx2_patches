@@ -14,7 +14,7 @@ patch=1,EE,102112F0,extended,0000005A
 patch=1,EE,20211014,extended,00000000
 
 [Metric units]
-description=Changes units to metric counterparts
+description=Changes MPH to KMH, ft.lb to NM
 author=Silent
 
 // Speed and distance units
