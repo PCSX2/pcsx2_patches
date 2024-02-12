@@ -79,7 +79,7 @@ patch=1,EE,0016F380,word,3C013F80
 //patch=1,EE,001515B4,word,3C013F83 // 3C013F80
 // - Y-axis placement of Subtitles, but not the SubtitlesBackground.
 
-[50/60 fps]
+[50/60 FPS]
 author=PeterDelta
 comment=Might need EE overclocking to be stable.
 patch=1,EE,0012795C,word,10000003 // 10400003 - 0043102B sltu v0,v1

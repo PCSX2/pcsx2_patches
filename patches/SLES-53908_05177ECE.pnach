@@ -79,7 +79,7 @@ description=Removes the Blackbars
 patch=1,EE,0016C688,word,3C01BF80
 patch=1,EE,0016C694,word,3C013F80
 
-[50/60 fps]
+[50/60 FPS]
 author=PeterDelta
 comment=Might need EE overclocking to be stable.
 patch=1,EE,0012795C,word,10000003 // 10400003 - 0043102B sltu v0,v1

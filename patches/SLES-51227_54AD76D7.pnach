@@ -39,7 +39,7 @@ patch=1,EE,002074AC,word,3421851F
 // patch=1,EE,0011A4D0,word,3C013F48 // 3C013F40 - Zoom out (3C013F38 for Zoom in)
 // patch=1,EE,0011A4B4,word,3C013F75 // 3C013F6B - Zoom out (3C013F60 for Zoom in)
 
-[60 fps]
+[60 FPS]
 author=Gabominated
 description=60 fps through HDTV 720p mode
 comment=Might need EE overclocking to be stable.
