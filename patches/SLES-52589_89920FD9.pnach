@@ -7,7 +7,14 @@ comment=Converted by Bigdemon
 
 patch=1,EE,0033b038,word,3c013f40 // 00000000 hor fov
 
-// 16:9 Modification
+[Widescreen 16:10]
+gsaspectratio=stretch
+patch=1,EE,0033b038,word,3c013f55 // 00000000 hor fov
+patch=1,EE,0033b03c,word,34215555 // 00000000 hor fov
+
+// 16:9 and 16:10 main modifications
+// no need to change anything here! all modifications are calculated
+// based on the hor fov value in the upper 16:9/16:10 section
 patch=1,EE,0033b040,word,4481f000 // 00000000 fov
 patch=1,EE,0033b080,word,4600f306 // 44816000 fov
 patch=1,EE,0033ef0c,word,461e0843 // 3c013f80 renderfix 1 objects
