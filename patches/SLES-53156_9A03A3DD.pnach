@@ -11,7 +11,7 @@ patch=1,EE,0051bcac,word,4481f000 // 00000000
 patch=1,EE,0051bcf0,word,461e4a42 // 00000000
 
 [Widescreen 16:10]
-gsaspectratio=stretch
+gsaspectratio=Stretch
 patch=1,EE,004dbd30,word,3c013f55 // 00000000 hor fov
 patch=1,EE,004dbd34,word,34215555 // 00000000 hor fov
 patch=1,EE,004dbd3c,word,4481f800 // 00000000
