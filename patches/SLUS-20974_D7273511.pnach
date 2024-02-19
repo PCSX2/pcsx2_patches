@@ -1,8 +1,8 @@
-gametitle=Digital Devil Saga
+//gametitle=Digital Devil Saga
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Shin Megami Tensei - Digital Devil Saga (SLUS-20974) (CRC-D7273511)
-patch=1,EE,203245E4,word,3FC6E2B5
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//comment=Shin Megami Tensei - Digital Devil Saga (SLUS-20974) (CRC-D7273511)
+//patch=1,EE,203245E4,word,3FC6E2B5
 
-
+// Disabled due to causing TLB misses on boot.
