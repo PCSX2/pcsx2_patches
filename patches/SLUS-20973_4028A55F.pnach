@@ -1,23 +1,38 @@
-gametitle=Champions: Return to Arms (NTSC-U)
+gametitle=Champions: Return to Arms * NTSC-U * SLUS-20973 * 4028A55F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
-patch=1,EE,0018A2F0,word,3C013F3F //3C013F7F
-patch=1,EE,001949D4,word,3C013F3F //3C013F7F
-patch=1,EE,0018A280,word,3C013FE2 //3C013FAA
-patch=1,EE,0018A284,word,3421FC95 //34213D70
-patch=1,EE,00199C3C,word,3C013FE2 //3C013FAA
-patch=1,EE,00199C40,word,3421FC95 //34213D70
-patch=1,EE,00199C70,word,3C013FE2 //3C013FAA
-patch=1,EE,00199C74,word,3421FC95 //34213D70
-patch=1,EE,0019A038,word,3C013FE2 //3C013FAA
-patch=1,EE,0019A03C,word,3421FC95 //34213D70
-patch=1,EE,0019A520,word,3C013FE2 //3C013FAA
-patch=1,EE,0019A524,word,3421FC95 //34213D70
-patch=1,EE,0019B5C8,word,3C013FE2 //3C013FAA
-patch=1,EE,0019B5CC,word,3421FC95 //34213D70
-patch=1,EE,002A8914,word,3C013FE2 //3C013FAA
-patch=1,EE,002A8918,word,3421FC95 //34213D70
-patch=1,EE,002A8948,word,3C013FE2 //3C013FAA
-patch=1,EE,002A894C,word,3421FC95 //34213D70
+author=No.47
+ patch=1,EE,0018A2F0,word,3C013F3F // 3C013F7F
+ patch=1,EE,001949D4,word,3C013F3F // 3C013F7F
+ patch=1,EE,0018A280,word,3C013FE2 // 3C013FAA
+ patch=1,EE,0018A284,word,3421FC95 // 34213D70
+ patch=1,EE,00199C3C,word,3C013FE2 // 3C013FAA
+ patch=1,EE,00199C40,word,3421FC95 // 34213D70
+ patch=1,EE,00199C70,word,3C013FE2 // 3C013FAA
+ patch=1,EE,00199C74,word,3421FC95 // 34213D70
+ patch=1,EE,0019A038,word,3C013FE2 // 3C013FAA
+ patch=1,EE,0019A03C,word,3421FC95 // 34213D70
+ patch=1,EE,0019A520,word,3C013FE2 // 3C013FAA
+ patch=1,EE,0019A524,word,3421FC95 // 34213D70
+ patch=1,EE,0019B5C8,word,3C013FE2 // 3C013FAA
+ patch=1,EE,0019B5CC,word,3421FC95 // 34213D70
+ patch=1,EE,002A8914,word,3C013FE2 // 3C013FAA
+ patch=1,EE,002A8918,word,3421FC95 // 34213D70
+ patch=1,EE,002A8948,word,3C013FE2 // 3C013FAA
+ patch=1,EE,002A894C,word,3421FC95 // 34213D70
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Agrippa
+comment=EE overclock is needed to avoid infrequent frame rate drops.
+ patch=1,EE,2044FD40,extended,00000000
+ patch=1,EE,2044FD44,extended,00000001
+ patch=1,EE,2044FDB4,extended,00000001
+ patch=1,EE,2019DB0C,extended,10000010
+ patch=1,EE,2019DB6C,extended,10000004
+ patch=1,EE,2019E3AC,extended,24020001
+
+[No Interlacing hack by asasega]
+author=asasega
+ patch=1,EE,2019D9D4,extended,ACA00008
