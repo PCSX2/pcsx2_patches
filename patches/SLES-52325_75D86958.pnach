@@ -1,45 +1,56 @@
-gametitle=Champions of Norrath (PAL-M3) (SLES-52325)
+gametitle=Champions of Norrath * PAL-M3 * SLES-52325 * 75D86958
+
+// ==========
+// To speed-up this game, set "EE Cyclerate" to 2 and "EE Cycle Skipping" to 3
+//  (in combination) under Config > Emulation Settings > Speedhacks.
+// ==========
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
-// 16:9
-patch=1,EE,0015b1fc,word,3c013f40 // 460c7382 hor fov
-patch=1,EE,0015b214,word,34210000 // e48e0000 hor fov
+// Main Widescreen patches
 patch=1,EE,0015b218,word,4481f000 // 00000000
 patch=1,EE,0015b21c,word,461e6302 // 00000000
 patch=1,EE,0015b240,word,460c7382 // 00000000
 patch=1,EE,0015b244,word,e48e0000 // 00000000
 patch=1,EE,0017f49c,word,00000000 // 4600d306
 patch=1,EE,0017f4f0,word,00000000 // 4600d306
-patch=1,EE,0017b384,word,3c193f40 // 00000000 renderfix
-patch=1,EE,0017b388,word,4499f000 // 00000000 renderfix
 patch=1,EE,0017b3a0,word,4600b047 // 3c01bf80
 patch=1,EE,0017b3a4,word,461ece43 // 44810800
+patch=1,EE,0017b388,word,4499f000 // 00000000
 
-// 16:10
-//patch=1,EE,0015b1fc,word,3c013f55 // 460c7382 hor fov
-//patch=1,EE,0015b214,word,34215555 // e48e0000 hor fov
-//patch=1,EE,0015b218,word,4481f000 // 00000000
-//patch=1,EE,0015b21c,word,461e6302 // 00000000
-//patch=1,EE,0015b240,word,460c7382 // 00000000
-//patch=1,EE,0015b244,word,e48e0000 // 00000000
-//patch=1,EE,0017f49c,word,00000000 // 4600d306
-//patch=1,EE,0017f4f0,word,00000000 // 4600d306
-//patch=1,EE,0017b340,word,4617bd80 // 3c013f80
-//patch=1,EE,0017b344,word,3c193f55 // 4481b000 renderfix
-//patch=1,EE,0017b384,word,37395555 // 00000000 renderfix
-//patch=1,EE,0017b388,word,4499f000 // 00000000
-//patch=1,EE,0017b3a0,word,4600b047 // 3c01bf80
-//patch=1,EE,0017b3a4,word,461ece43 // 44810800
+// 16:9
+patch=1,EE,0015b1fc,word,3c013f40 // 460c7382 - X-FoV
+patch=1,EE,0015b214,word,34210000 // e48e0000 - X-FoV
+patch=1,EE,0017b384,word,3c193f40 // 00000000 - renderfix
+// patch=1,EE,0017b388,word,4499f000 // 00000000 - renderfix
 
+[Widescreen/16:10]
+gsaspectratio=Stretch
+comment=Combine with 'Widescreen 16:9'.
+patch=1,EE,0015b1fc,word,3c013f55 // 460c7382 - X-FoV
+patch=1,EE,0015b214,word,34215555 // e48e0000 - X-FoV
+patch=1,EE,0017b340,word,4617bd80 // 3c013f80
+patch=1,EE,0017b344,word,3c193f55 // 4481b000 - renderfix
+patch=1,EE,0017b384,word,37395555 // 00000000 - renderfix
+
+[Widescreen/15:10]
+gsaspectratio=Stretch
+comment=Combine with 'Widescreen 16:9'.
+patch=1,EE,0015b1fc,word,3c013F63
+patch=1,EE,0015b214,word,34218E39
+patch=1,EE,0017b340,word,4617bd80
+patch=1,EE,0017b344,word,3c193F63
+patch=1,EE,0017b384,word,37398E39
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Disable interlacing hack by ElHecht
-
-// disable interlacing
-patch=1,EE,00192fa4,word,a0c00000 // a0c30000
-
-
+author=Agrippa
+comment=EE overclock is needed to avoid infrequent frame rate drops.
+patch=1,EE,20392EC0,extended,00000000
+patch=1,EE,20392EC4,extended,00000001
+patch=1,EE,20392F30,extended,00000001
+patch=1,EE,20195734,extended,10000010
+patch=1,EE,2019579C,extended,10000006
+patch=1,EE,2019634C,extended,24030001

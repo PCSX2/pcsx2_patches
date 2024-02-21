@@ -1,8 +1,13 @@
-gametitle=Baldur's Gate: Dark Alliance II (SLUS-20675)
+gametitle=Baldur's Gate: Dark Alliance II * NTSC-U * SLUS-20675 * B0859096
+
+// ==========
+// To speed-up this game, set "EE Cyclerate" to 2
+//  under Config > Emulation Settings > Speedhacks.
+// ==========
 
 [Widescreen 16:9]
-description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 gsaspectratio=16:9
+author=nemesis2000
 
 patch=1,EE,001ed388,word,3c013f1f
 patch=1,EE,001ed38c,word,342149f1
@@ -20,11 +25,29 @@ patch=1,EE,002c8698,word,3c013f1f
 patch=1,EE,002c869c,word,342149f1
 patch=1,EE,002c86a8,word,3c014440
 
-//render fix value by No.47
-//patch=1,EE,002c456c,word,3c014288 //alternate render fix value
+/////////
+
+// Render fix value by No.47
+
+//patch=1,EE,002c456c,word,3c014288 // alternate Render fix value
 patch=1,EE,002c4574,word,3c013fe3
 patch=1,EE,002c4578,word,3421d70a
 
-//patch=1,EE,002c82d4,word,3c014288 //alternate render fix value
+//patch=1,EE,002c82d4,word,3c014288 // alternate Render fix value
 patch=1,EE,002c82dc,word,3c013fe3
 patch=1,EE,002c82e0,word,3421d70a
+
+/////////
+
+[No-Interlacing]
+author=second_reality
+patch=1,EE,201EA278,extended,30630000
+
+// ==========
+// Built-in cheats:
+// ==========
+// Warp & Invulnerability menu:
+//  while in a game, press L1 + R1 + Triangle + Square + Circle + Cross + Start.
+// Level 10 + 500,000 gold + 45 skillpoints:
+//  while in a game, press L1 + R1 + Triangle + Square + Circle + Cross + L2.
+// ==========
