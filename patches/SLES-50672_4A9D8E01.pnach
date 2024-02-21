@@ -1,33 +1,75 @@
-gametitle=Baldur's Gate: Dark Alliance
+gametitle=Baldur's Gate: Dark Alliance * PAL-M5 * SLES-50672 * 4A9D8E01
+
+// ==========
+ // To speed-up this game, set "EE Cyclerate" to 2
+ //  under Config > Emulation Settings > Speedhacks.
+// ==========
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas and pgert
-comment= Widescreen Hack
+author=nemesis2000, No.47 & El_Patas
+// Widescreen hack by nemesis2000 - ported by El_Patas.
+// somewhat corrected by pgert
 // ==========
-// pgert@180129
-// http://forums.pcsx2.net/Thread-PCSX2-Widescreen-Game-Patches?pid=240786#pid240786
+ // Y-FoV- 
+ patch=1,EE,00322460,word,3F1F49F4 // 3EEEEEF0
+ patch=1,EE,00322418,word,3F360B62 // 3F088889
+ patch=1,EE,003224F0,word,3F360B62 // 3F088889
+ patch=1,EE,00322550,word,3F360B62 // 3F088889
+ patch=1,EE,00323E9C,word,3F360B62 // 3F088889
 // ==========
-comment= Baldur's Gate: Dark Alliance * SLES-50672 * PAL-M5 * 4A9D8E01
-comment= Widescreen Hack by El_Patas
+ // Both FoV+
+ patch=1,EE,001451D0,word,3C014440 // 3C014480
+ patch=1,EE,0014CCF4,word,3C014440 // 3C014480
+ patch=1,EE,00201E40,word,3C014440 // 3C014480
+ patch=1,EE,0013D280,word,3C014440 // 3C014480
+ patch=1,EE,00152C40,word,3C014440 // 3C014480
+// ==========
+ // Render fix by No.47 - ported by El_Patas.
+ patch=1,EE,003224C8,word,3FE2FC96 // 3FAA3D71
+ patch=1,EE,003224EC,word,3FE2FC96 // 3FAA3D71
 // ==========
 
-// 16:9 - somewhat corrected by pgert
+[Widescreen/16:10]
+gsaspectratio=Stretch
+// converted by pgert
 // ==========
-// Vert fov-
-patch=1,EE,00322460,word,3F1F49F4 // 3EEEEEF0
-patch=1,EE,00322418,word,3F360B62 // 3F088889
-patch=1,EE,003224F0,word,3F360B62 // 3F088889
-patch=1,EE,00322550,word,3F360B62 // 3F088889
-patch=1,EE,00323E9C,word,3F360B62 // 3F088889
+ patch=1,EE,00322460,word,3F0F5C2A
+ patch=1,EE,00322418,word,3F23D70C
+ patch=1,EE,003224F0,word,3F23D70C
+ patch=1,EE,00322550,word,3F23D70C
+ patch=1,EE,00323E9C,word,3F23D70C
 // ==========
-// Both fov+
-patch=1,EE,001451D0,word,3C014440 // 3C014480
-patch=1,EE,0014CCF4,word,3C014440 // 3C014480
-patch=1,EE,00201E40,word,3C014440 // 3C014480
-patch=1,EE,0013D280,word,3C014440 // 3C014480
-patch=1,EE,00152C40,word,3C014440 // 3C014480
+ patch=1,EE,001451D0,word,3C014455
+ patch=1,EE,0014CCF4,word,3C014455
+ patch=1,EE,00201E40,word,3C014455
+ patch=1,EE,0013D280,word,3C014455
+ patch=1,EE,00152C40,word,3C014455
 // ==========
-// Render fix
-patch=1,EE,003224C8,word,3FE2FC96 // 3FAA3D71
-patch=1,EE,003224EC,word,3FE2FC96 // 3FAA3D71
+ patch=1,EE,003224C8,word,3FCC49BB
+ patch=1,EE,003224EC,word,3FCC49BB
+// ==========
+
+[Widescreen/15:10]
+gsaspectratio=Stretch
+// converted by pgert
+// ==========
+ patch=1,EE,00322460,word,3F066667
+ patch=1,EE,00322418,word,3F066665
+ patch=1,EE,003224F0,word,3F066665
+ patch=1,EE,00322550,word,3F066665
+ patch=1,EE,00323E9C,word,3F066665
+// ==========
+ patch=1,EE,001451D0,word,3C014464
+ patch=1,EE,0014CCF4,word,3C014464
+ patch=1,EE,00201E40,word,3C014464
+ patch=1,EE,0013D280,word,3C014464
+ patch=1,EE,00152C40,word,3C014464
+// ==========
+ patch=1,EE,003224C8,word,3FBF851F
+ patch=1,EE,003224EC,word,3FBF851F
+// ==========
+
+[No-Interlacing]
+author=Agrippa
+ patch=1,EE,00204C58,word,30420000

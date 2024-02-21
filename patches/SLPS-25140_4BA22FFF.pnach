@@ -1,29 +1,75 @@
-gametitle=Baldur's Gate: Dark Alliance (J) (SLPS_25140)
+gametitle=Baldur's Gate: Dark Alliance * NTSC-J * SLPS-25140 * 4BA22FFF
+
+// ==========
+ // To speed-up this game, set "EE Cyclerate" to 2
+ //  under Config > Emulation Settings > Speedhacks.
+// ==========
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach NTSC-J by Arapapa)
-//Nemesis2000's search values did not apply to NTSC-J
+author=nemesis2000, No.47 & Arapapa
+// Widescreen hack by nemesis2000 - ported by Arapapa.
+// nemesis2000's search values did not apply to NTSC-J.
+// ==========
+// Y-FoV-  eeeeee3e 00ff7445 00803b45 (5 Times)
+ patch=1,EE,002c418c,word,3f1f49f4 // 3eeeeeee (NTSC-U 3eeeeef0)
+ patch=1,EE,002c41d4,word,3f1f49f4
+ patch=1,EE,002c4258,word,3f1f49f4
+ patch=1,EE,002c42ac,word,3f1f49f4
+ patch=1,EE,002c5ce0,word,3f1f49f4
+// ==========
+// both FoV+  3c014480 (5 times from Top address)
+ patch=1,EE,00139794,word,3c014440 // 3c014480
+ patch=1,EE,00141b20,word,3c014440
+ patch=1,EE,001494dc,word,3c014440
+ patch=1,EE,0014f668,word,3c014440
+ patch=1,EE,001fab70,word,3c014440
+// ==========
+// Render fix value by No.47 (703daa3f 2 times) - ported by Arapapa.
+ patch=1,EE,002c4238,word,3fe3d70a // 3faa3d70 (NTSC-U 3faa3d71) 
+ patch=1,EE,002c4298,word,3fe3d70a
+// ==========
 
-//vert fov-  eeeeee3e 00ff7445 00803b45 (5 Times)
-patch=1,EE,002c418c,word,3f1f49f4 // 3eeeeeee (NTSC-U 3eeeeef0)
-patch=1,EE,002c41d4,word,3f1f49f4
-patch=1,EE,002c4258,word,3f1f49f4
-patch=1,EE,002c42ac,word,3f1f49f4
-patch=1,EE,002c5ce0,word,3f1f49f4
+[Widescreen/16:10]
+gsaspectratio=Stretch
+// converted by pgert
+// ==========
+ patch=1,EE,002c418c,word,3F0F5C2A
+ patch=1,EE,002c41d4,word,3F0F5C2A
+ patch=1,EE,002c4258,word,3F0F5C2A
+ patch=1,EE,002c42ac,word,3F0F5C2A
+ patch=1,EE,002c5ce0,word,3F0F5C2A
+// ==========
+ patch=1,EE,00139794,word,3C014455
+ patch=1,EE,00141b20,word,3C014455
+ patch=1,EE,001494dc,word,3C014455
+ patch=1,EE,0014f668,word,3C014455
+ patch=1,EE,001fab70,word,3C014455
+// ==========
+ patch=1,EE,002c4238,word,3FCC49BB
+ patch=1,EE,002c4298,word,3FCC49BB
+// ==========
 
-//both fov+  3c014480 (5 times from Top address)
-patch=1,EE,00139794,word,3c014440 // 3c014480
-patch=1,EE,00141b20,word,3c014440
-patch=1,EE,001494dc,word,3c014440
-patch=1,EE,0014f668,word,3c014440
-patch=1,EE,001fab70,word,3c014440
+[Widescreen/15:10]
+gsaspectratio=Stretch
+// converted by pgert
+// ==========
+ patch=1,EE,002c418c,word,3F066665
+ patch=1,EE,002c41d4,word,3F066665
+ patch=1,EE,002c4258,word,3F066665
+ patch=1,EE,002c42ac,word,3F066665
+ patch=1,EE,002c5ce0,word,3F066665
+// ==========
+ patch=1,EE,00139794,word,3C014464
+ patch=1,EE,00141b20,word,3C014464
+ patch=1,EE,001494dc,word,3C014464
+ patch=1,EE,0014f668,word,3C014464
+ patch=1,EE,001fab70,word,3C014464
+// ==========
+ patch=1,EE,002c4238,word,3FBF851F
+ patch=1,EE,002c4298,word,3FBF851F
+// ==========
 
-//render fix value by No.47 (703daa3f 2 times)
-patch=1,EE,002c4238,word,3fe3d70a // 3faa3d70 (NTSC-U 3faa3d71)
-patch=1,EE,002c4298,word,3fe3d70a
-
-//No interlacing by asasega
-//patch=1,EE,201fd4ac,word,34030001
-
-
+[No-Interlacing]
+author=asasega
+ patch=1,EE,201fd4ac,word,34030001
