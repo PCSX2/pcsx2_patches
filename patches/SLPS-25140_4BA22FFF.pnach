@@ -69,7 +69,3 @@ patch=1,EE,001fab70,word,3C014464
 patch=1,EE,002c4238,word,3FBF851F
 patch=1,EE,002c4298,word,3FBF851F
 // ==========
-
-[No-Interlacing]
-author=asasega
-patch=1,EE,201fd4ac,word,34030001

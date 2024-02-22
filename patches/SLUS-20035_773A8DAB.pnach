@@ -70,6 +70,3 @@ patch=1,EE,00144f60,word,3C014464
 patch=1,EE,00320fa8,word,3FBF851F
 patch=1,EE,00320fcc,word,3FBF851F
 // ==========
-
-[No-Interlacing]
-patch=1,EE,20203B9C,word,34030001
