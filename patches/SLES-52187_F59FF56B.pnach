@@ -1,4 +1,4 @@
-gametitle=Baldur's Gate: Dark Alliance II * PAL-M3 * SLES-52188 * F59FF56B
+gametitle=Baldur's Gate: Dark Alliance II * PAL-M3 * SLES-52187 * F59FF56B
 
 // ==========
 // To speed-up this game, set "EE Cyclerate" to 2
@@ -7,7 +7,7 @@ gametitle=Baldur's Gate: Dark Alliance II * PAL-M3 * SLES-52188 * F59FF56B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000 & El_Patas
+author=El_Patas
 // somewhat corrected by pgert
 // ==========
 // Y-FoV- 

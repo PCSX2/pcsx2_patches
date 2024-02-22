@@ -6,7 +6,7 @@ gametitle=Drakan - The Ancients' Gates * PAL-M5 * SCES-50006 * 04F9D87F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000 & Dreadmoth
+author=Dreadmoth
 
 // 16:9
 patch=1,EE,00132934,word,3C013F40 // AE43000C

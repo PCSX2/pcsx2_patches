@@ -7,8 +7,7 @@ gametitle=Baldur's Gate: Dark Alliance * PAL-M5 * SLES-50672 * 4A9D8E01
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000, No.47 & El_Patas
-// Widescreen hack by nemesis2000 - ported by El_Patas.
+author=El_Patas & No.47
 // somewhat corrected by pgert
 // ==========
 // Y-FoV- 
@@ -69,7 +68,3 @@ patch=1,EE,00152C40,word,3C014464
 patch=1,EE,003224C8,word,3FBF851F
 patch=1,EE,003224EC,word,3FBF851F
 // ==========
-
-[No-Interlacing]
-author=Agrippa
-patch=1,EE,00204C58,word,30420000

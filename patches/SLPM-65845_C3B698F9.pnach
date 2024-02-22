@@ -39,10 +39,6 @@ patch=1,EE,002c4c68,word,34210000 // 34213d71
 //patch=1,EE,002c4c64,word,3c013fe3 // 3c013faa
 //patch=1,EE,002c4c68,word,3421f70a // 34213d71
 
-[No-Interlacing]
-author=pcsx2user156 (ported by)
-patch=1,EE,001E7D08,word,30630000
-
 // ==========
 // Built-in cheats:
 // ==========
