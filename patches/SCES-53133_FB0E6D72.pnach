@@ -1,9 +1,10 @@
-gametitle=God of War PAL [SCES_531.33]
+gametitle=God of War (PAL-M) [SCES_531.33] FB0E6D72
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Some Chump
-comment=Widescreen Converted from NTSC hack by nemesis2000
+author=Some Chump and PeterDelta
+description=Widescreen fix
+//Ported from SCUS-97399 by nemesis2000
 patch=1,EE,00169268,word,3c013f11
 patch=1,EE,0016926c,word,342135fc
 patch=1,EE,00169270,word,44812000
@@ -132,7 +133,6 @@ patch=1,EE,00169458,word,7ba20060
 patch=1,EE,0016945c,word,7c820030
 patch=1,EE,00169460,word,03e00008
 patch=1,EE,00169464,word,27bd0090
-
-patch=1,EE,0112222C,word,00000000 // Removes Title screen flames
-
-
+patch=1,EE,E0020001,extended,0029DA58 //Fix title flames by PeterDelta
+patch=1,EE,E0010001,extended,0029DAC8
+patch=1,EE,001692d0,extended,3c013f10
