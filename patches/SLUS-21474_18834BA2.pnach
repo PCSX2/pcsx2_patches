@@ -1,0 +1,12 @@
+gametitle=The History Channel - Civil War - A Nation Divided (U)(SLUS-21474)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen Hack
+
+//Zoom
+patch=1,EE,001828dc,word,3c013fc0 //3c014000
+
+//Y-Fov
+patch=1,EE,00237d30,word,3c013f10 //3c013f40

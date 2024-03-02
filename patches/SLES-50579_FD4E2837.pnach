@@ -1,0 +1,10 @@
+gametitle=Kessen II (PAL-F) (SLES-50579)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack Conversion
+author=Bigdemon
+
+patch=1,EE,0015798c,word,3c023f40
+
+
