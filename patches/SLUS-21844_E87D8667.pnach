@@ -4,7 +4,7 @@ gametitle=Bolt (U)(SLUS-21844)
 gsaspectratio=16:9
 author=Arapapa
 comment=Widescreen Hack
-/X-Fov
+//X-Fov
 //43030d46 07000046 140040e4 0400a4e7
 patch=1,EE,002d8668,word,08171b24 //e7a40004
 

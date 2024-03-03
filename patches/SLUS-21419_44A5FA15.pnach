@@ -1,9 +1,10 @@
-//[Widescreen 16:9]
-//gsaspectratio=16:9
-//comment=Dirge of Cerberus - Final Fantasy VII Widescreen Hack (16:9) (NTSC-U)
+gametitle=Dirge of Cerberus - Final Fantasy VII SLUS-21419 44A5FA15
 
-//patch=1,EE,0040B628,word,3C013FC9
-//patch=1,EE,0040B62C,word,342162D8
-//patch=1,EE,0040C220,word,3C013EC0
-
-// Disable due to causing a black or other colour sphere to appear in the sky or in corridors at certain viewing angles.
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Widescreen hack
+patch=1,EE,004FB248,word,3FC962FC //3F970A3D y-fov
+patch=1,EE,004FB250,word,42b40000 //42930000 zoom
+patch=1,EE,0040c5d4,word,3c013fab //3c013f80 render y-fix
+patch=1,EE,0040c5f4,word,3c013fab //3c013f80 render y-fix

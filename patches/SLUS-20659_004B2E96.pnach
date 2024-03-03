@@ -10,7 +10,7 @@ comment=Widescreen Hack by Arapapa
 //4940023c 00088344 db0f4434
 patch=1,EE,00295cbc,word,3c024086 //3c024049
 
-s//Y-Fov
+//Y-Fov
 //aa3f023c abaa4234  00688244(5th, 6th)
 patch=1,EE,002d9504,word,3c023fe3 //3c023faa Gameplay
 patch=1,EE,002d9508,word,34428e32 //3442aaab

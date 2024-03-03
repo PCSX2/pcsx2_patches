@@ -1,19 +1,4 @@
-gametitle=Gran Turismo 3 [SCUS-97102] (U)
-
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,2025A3C8,extended,34020001
-
-patch=1,EE,D02EA812,extended,0000FEFE
-patch=1,EE,204A6A20,extended,00000001
-patch=1,EE,D02EA812,extended,0000FEFE
-patch=1,EE,20250D84,extended,340494D3
-
-patch=1,EE,D02EA812,extended,0000FDFE
-patch=1,EE,204A6A20,extended,00000003
-patch=1,EE,D02EA812,extended,0000FDFE
-patch=1,EE,20250D84,extended,00832025
+gametitle=Gran Turismo 3 [PBPX-95503] (U)
 
 [Adjusted triggers sensitivity]
 description=Makes throttle/brake more precise when using triggers, like on the PS3
