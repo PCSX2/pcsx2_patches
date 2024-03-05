@@ -38,12 +38,3 @@ patch=1,EE,002c82dc,word,3c013fe3
 patch=1,EE,002c82e0,word,3421d70a
 
 /////////
-
-// ==========
-// Built-in cheats:
-// ==========
-// Warp & Invulnerability menu:
-//  while in a game, press L1 + R1 + Triangle + Square + Circle + Cross + Start.
-// Level 10 + 500,000 gold + 45 skillpoints:
-//  while in a game, press L1 + R1 + Triangle + Square + Circle + Cross + L2.
-// ==========

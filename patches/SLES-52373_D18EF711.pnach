@@ -37,6 +37,7 @@ patch=1,EE,0017b41c,word,37395555 // 00000000 - renderfix
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
+// pgert
 comment=Combine with 'Widescreen 16:9'.
 patch=1,EE,0015b294,word,3c013F63 // 460c7382 - X-FoV
 patch=1,EE,0015b2ac,word,34218E39 // e48e0000 - X-FoV

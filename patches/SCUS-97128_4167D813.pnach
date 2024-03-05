@@ -1,9 +1,5 @@
 gametitle=Drakan: The Ancients' Gates * NTSC-U * SCUS-97128 * 4167D813
 
-// ==========
-// Spoiler: Button-sequence for the skeleton-statue at Ravenshold: "S E E W S N N S".
-// ==========
-
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
@@ -143,6 +139,7 @@ patch=1,EE,00132fdc,word,46030842
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
+// pgert
 comment=Combine with 'Widescreen 16:9'.
 patch=1,EE,001328d4,word,3C013F55
 patch=1,EE,00132e68,word,3C013F55
@@ -150,6 +147,7 @@ patch=1,EE,00132fd0,word,3C013F65
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
+// pgert
 comment=Combine with 'Widescreen 16:9'.
 patch=1,EE,001328d4,word,3C013F64
 patch=1,EE,00132e68,word,3C013F64
@@ -157,6 +155,7 @@ patch=1,EE,00132fd0,word,3C013F65
 
 [Widescreen/20:9]
 gsaspectratio=Stretch
+// pgert
 comment=Combine with 'Widescreen 16:9'.
 patch=1,EE,001328d4,word,3C013F1A
 patch=1,EE,00132e68,word,3C013F1A
@@ -164,6 +163,7 @@ patch=1,EE,00132fd0,word,3C013F64
 
 [Widescreen/21:9]
 gsaspectratio=Stretch
+// pgert
 comment=Combine with 'Widescreen 16:9'.
 patch=1,EE,001328d4,word,3C013F12
 patch=1,EE,00132e68,word,3C013F12

@@ -1,9 +1,5 @@
 gametitle=Drakan - The Ancients' Gates * PAL-M5 * SCES-50006 * 04F9D87F
 
-// ==========
-// Spoiler: Button-sequence for the skeleton-statue at Ravenshold: "S E E W S N N S".
-// ==========
-
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Dreadmoth
@@ -142,7 +138,7 @@ patch=1,EE,0013303C,word,46030842 // 46141082
 [Widescreen/16:10]
 gsaspectratio=Stretch
 comment=Combine with 'Widescreen 16:9'.
-// converted by pgert
+// pgert
 patch=1,EE,00132934,word,3C013F55
 patch=1,EE,00132EC8,word,3C013F55
 patch=1,EE,00133030,word,3C013F65
@@ -150,7 +146,7 @@ patch=1,EE,00133030,word,3C013F65
 [Widescreen/15:10]
 gsaspectratio=Stretch
 comment=Combine with 'Widescreen 16:9'.
-// converted by pgert
+// pgert
 patch=1,EE,00132934,word,3C013F64
 patch=1,EE,00132EC8,word,3C013F64
 patch=1,EE,00133030,word,3C013F65
@@ -158,7 +154,7 @@ patch=1,EE,00133030,word,3C013F65
 [Widescreen/20:9]
 gsaspectratio=Stretch
 comment=Combine with 'Widescreen 16:9'.
-// converted by pgert
+// pgert
 patch=1,EE,00132934,word,3C013F1A
 patch=1,EE,00132EC8,word,3C013F1A
 patch=1,EE,00133030,word,3C013F64
@@ -166,7 +162,7 @@ patch=1,EE,00133030,word,3C013F64
 [Widescreen/21:9]
 gsaspectratio=Stretch
 comment=Combine with 'Widescreen 16:9'.
-// converted by pgert
+// pgert
 patch=1,EE,00132934,word,3C013F12
 patch=1,EE,00132EC8,word,3C013F12
 patch=1,EE,00133030,word,3C013F64

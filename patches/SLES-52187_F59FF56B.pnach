@@ -1,4 +1,5 @@
 gametitle=Baldur's Gate: Dark Alliance II * PAL-M3 * SLES-52187 * F59FF56B
+// same CRC as SLES-52188
 
 // ==========
 // To speed-up this game, set "EE Cyclerate" to 2
@@ -79,13 +80,4 @@ patch=1,EE,002C5334,word,3C013FBF
 patch=1,EE,002C5338,word,3421851F
 patch=1,EE,002C909C,word,3C013FBF
 patch=1,EE,002C90A0,word,3421851F
-// ==========
-
-// ==========
-// Built-in cheats:
-// ==========
-// Warp & Invulnerability menu:
-//  while in a game, press L1 + R1 + Triangle + Square + Circle + Cross + Start.
-// Level 10 + 500,000 gold + 45 skillpoints:
-//  while in a game, press L1 + R1 + Triangle + Square + Circle + Cross + L2.
 // ==========
