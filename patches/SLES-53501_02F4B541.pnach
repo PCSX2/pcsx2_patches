@@ -1,11 +1,11 @@
-gametitle=Star Wars - Battlefront 2 (PAL-M) SLES-53501 02F4B541 secondary SWBFRNT2.ELF=B68D35CA
+gametitle=Star Wars - Battlefront 2 (PAL-M) SLES-53501 02F4B541
 //Corresponds to the main crc to activate the secondary crc B68D35CA called SWBFRNT2.ELF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000 and Arapapa
-comment=Widescreen Hack 16:9
+description=Renders the game in 16:9 aspect ratio
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.

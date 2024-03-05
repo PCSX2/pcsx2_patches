@@ -2,33 +2,15 @@ gametitle=Mercenaries 2: World in Flames [PAL-Spain] (SLES_550.01) A97C9BFD
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas
-comment=Renders the game in 16:9 aspect ratio
-// 16:9
-patch=1,EE,0037c350,word,3c013f40 //00000000 hor fov
-
-// 16:10
-//patch=1,EE,0037c350,word,3c013f55 //00000000 hor fov
-//patch=1,EE,0037c354,word,34215555 //00000000 hor fov
-
-// 16:9 and 16:10 main modifications
-// no need to change anything here! all modifications are calculated
-// based on the hor fov value in the upper 16:9/16:10 section
-patch=1,EE,0037c358,word,4481f000 //00000000 fov
-patch=1,EE,0037cc18,word,4600f306 //44816000 fov
-patch=1,EE,00380f54,word,461e0843 //3c013f80 renderfix 1 objects
-patch=1,EE,00380f58,word,46010d43 //4481a800 renderfix 1 objects
-patch=1,EE,00389450,word,4600f306 //44816000 renderfix 2 smoke and fire
-patch=1,EE,0037b490,word,0813cbcb //46030842 hud-identification fix
-patch=1,EE,0037b494,word,00000000 //46030002 hud-identification fix
-patch=1,EE,00556848,word,46030842 //00000000 hud-identification fix
-patch=1,EE,0055684c,word,46030002 //00000000 hud-identification fix
-patch=1,EE,00556850,word,461e0002 //00000000 hud-identification fix
-patch=1,EE,00556854,word,080ce663 //00000000 hud-identification fix
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0037CC14,word,3C013F40 //3C013F80
+patch=1,EE,00380F1C,word,3C013F2B //3C013F00 render fix
+patch=1,EE,00389870,word,3C013F2B //3C013F00 render fix 2
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock at 180%.
 patch=1,EE,003FD244,extended,3C0200A0
 patch=1,EE,E0010000,extended,0055D9E4
 patch=1,EE,003FD244,extended,3C020050

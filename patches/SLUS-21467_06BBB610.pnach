@@ -14,7 +14,7 @@ patch=1,EE,00543020,word,080fe650
 //3443033c b00421c6 Render fix
 patch=1,EE,00291a1c,word,3c034300 //3c034334
 
-[50 FPS]
+[60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,00567378,word,00000001 //00000002

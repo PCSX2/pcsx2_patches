@@ -45,5 +45,5 @@ patch=1,EE,0011e8b4,word,461ef783 // 00000000 inventory-to-documents function
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,00510300,byte,01

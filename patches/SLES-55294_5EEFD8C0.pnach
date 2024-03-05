@@ -1,15 +1,15 @@
 gametitle=Ferrari Challenge - Trofeo Pirelli (PAL-M) SLES-55294 5EEFD8C0
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,0017C11C,word,24040001 //24040002
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan mode at 60 fps
+description=SDTV 480p mode at start.
 patch=1,EE,0043B8CC,word,3C050000
-patch=1,EE,0043B8D4,word,3C060052
+patch=1,EE,0043B8D4,word,3C060050
 patch=1,EE,0043B8DC,word,3C070001
 patch=1,EE,00644E94,word,3C88889A
-patch=1,EE,0056B6C0,word,00000022

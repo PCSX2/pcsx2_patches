@@ -1,9 +1,9 @@
-gametitle=Kingdom Hearts (PAL-UK) (SCES-50971)
+gametitle=Kingdom Hearts (PAL-S) SCES-50971 09F5F39A
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 // 16:9
 patch=1,EE,00110634,word,3c1b3f40 // 00000000 hor fov gameplay
 patch=1,EE,0011066c,word,449bf800 // 00000000
@@ -43,13 +43,25 @@ patch=1,EE,001f9710,word,24030020 // 24030018
 patch=1,EE,0010629c,word,3c071900 // 3c071c08
 patch=1,EE,002a1608,word,70007000 // 74007000
 
-//black border fix
+[Remove Blackbars]
+author=ElHecht
+description=Removes black bars in cutscenes
 patch=1,EE,0010430c,word,00000000 // ac510e48
 patch=1,EE,0010442c,word,00000000 // ac450e48
 
 [50 FPS]
 author=PeterDelta
-comment=Gameplay at 50 fps, Gumi ship and scenes at 25 fps. Might need enable EE Overclock to be stable.
-patch=1,EE,002B6ACC,word,00000000 //00000001
+description=Might need EE Overclock at 130%. Gumi ship at 25 fps.
+patch=1,EE,002B6ACC,extended,00000000
 patch=1,EE,E0010000,extended,00571954
-patch=1,EE,202B6ACC,extended,00000001
+patch=1,EE,002B6ACC,extended,00000001
+patch=1,EE,E001100C,extended,002C0618 //marca trio roja (red trinity)
+patch=1,EE,002B6ACC,extended,00000001
+patch=1,EE,E001100E,extended,002C0618 //marca trio verde (green trinity)
+patch=1,EE,002B6ACC,extended,00000001
+patch=1,EE,E0010008,extended,002C0618 //halloween town coffin to transport at other zone
+patch=1,EE,002B6ACC,extended,00000001
+patch=1,EE,E0011008,extended,002C0618
+patch=1,EE,002B6ACC,extended,00000001
+patch=1,EE,E0010009,extended,002C0618
+patch=1,EE,002B6ACC,extended,00000001

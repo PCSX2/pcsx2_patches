@@ -1,9 +1,9 @@
-gametitle=SWAT - Global Strike Team (E)(SLES-51997) 0E40BA6A
+gametitle=SWAT - Global Strike Team (PAL-M) (SLES-51997) 0E40BA6A
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,002a6774,word,3c013f23 //3c013f00 Zoom
 patch=1,EE,0025fa14,word,080a5248 //460039c2 Y-Fov
 patch=1,EE,00294920,word,460039c2
@@ -14,5 +14,5 @@ patch=1,EE,00294930,word,08097e86
 
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,00468DC0,word,00000001 //00000002

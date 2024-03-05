@@ -2,25 +2,31 @@ gametitle=Burnout 3 - Takedown (Europe, Australia) (En,Es,Nl,Sv) SLES-52584 crc 
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=XxDEATHB3TCHxX
-comment=Widescreen hack 16:9
-// For Burnout 3: Takedown, Changes Button prompts sizes, text, UI & in-game aspect ratio.
-patch=1,EE,20666544,extended,3FE34000 // 3FAAAAAB //
-patch=1,EE,20666540,extended,3FAAAAAB // 3F800000 // Camera zoom
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,0066644D,extended,01
+patch=1,EE,204E0FB8,extended,3FAAAAAB
+patch=1,EE,204E11FC,extended,3FE38E39
 
-//=========Notes:=======//
-//204C9984 - Controls up arrow height button prompt (Value 1.15)
-//204C999C - Controls bottom arrow height button prompt (Value 1.15)
-//20666540 - Controls FOV/zoom of the camera (Value 1.10)
-//21E909A0 - Controls below menu panel
-//204E0C28 - Controls how italics the text is
-//205175D4 - Controls the width but moves camera
-//21E92DF8 - Controls width of Resume text
+[50/60 FPS]
+author=PeterDelta 
+description=Might need EE Overclock 
+patch=1,EE,E0051885,extended,0049B384 //50hz
+patch=1,EE,004E1D5C,extended,00000001
+patch=1,EE,2051C024,extended,00000001
+patch=1,EE,204E2CC0,extended,3CA3D70A
+patch=1,EE,204F561C,extended,3CA3D70A
+patch=1,EE,2051AE34,extended,3CA3D70A
+patch=1,EE,E005177A,extended,0049B384 //60hz
+patch=1,EE,004E1D5C,extended,00000001
+patch=1,EE,2051C024,extended,00000001
+patch=1,EE,204E2CC0,extended,3C888889
+patch=1,EE,204F561C,extended,3C888889
+patch=1,EE,2051AE34,extended,3C88AB85
 
-
-[Mode 480p]
+[480p Mode]
 author=felixthecat1970
-comment=Forces progressive scan at startup
+description=SDTV 480p mode at start
 patch=0,EE,2021B764,extended,0000182D
 patch=0,EE,20437118,extended,241B0003
 patch=0,EE,20437120,extended,A07B09A4

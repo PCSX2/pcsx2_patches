@@ -1,9 +1,9 @@
-gametitle=Hitman - Blood Money (PAL-S) (SLES-53032)
+gametitle=Hitman - Blood Money (PAL-S) (SLES-53032) 72DC82B5
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 // 16:9
 patch=1,EE,00178c2c,word,3c013f40 // 00000000 hor fov
 patch=1,EE,00178c30,word,4481f000 // 00000000
@@ -11,10 +11,15 @@ patch=1,EE,00178c6c,word,461e0003 // 00000000
 patch=1,EE,002916e0,word,461ea502 // 00000000
 patch=1,EE,002b28c4,word,461ea302 // 4600a306
 
-
 [50/60 FPS]
 author=PeterDelta & Gabominated
-comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock at 180%.
 patch=1,EE,0061C020,word,00000001
 patch=1,EE,E0010000,extended,01FECCF4
 patch=1,EE,0061C020,extended,00000002
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=Any Hz selection will output in 480p.
+patch=1,EE,0049AF94,word,00000003

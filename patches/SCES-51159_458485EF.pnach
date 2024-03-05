@@ -2,5 +2,12 @@ gametitle=Getaway, The [PAL-M] SCES-51159 458485EF
 
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,001F0E98,word,1000000B //1500000B
+description=Might need EE Overclock at 130%.
+patch=1,EE,001F0EB8,word,24020001 //24020002
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,003A99FC,extended,00000001
+patch=1,EE,D0391E88,extended,00000000
+patch=1,EE,00391E88,extended,00000001

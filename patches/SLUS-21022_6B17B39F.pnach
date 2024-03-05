@@ -3,7 +3,7 @@ gametitle=Prince of Persia: Warrior Within (SLUS-21022)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen hack
+description=Renders the game in 16:9 aspect ratio
 
 //gameplay
 patch=1,EE,00544dd4,word,3C023f40

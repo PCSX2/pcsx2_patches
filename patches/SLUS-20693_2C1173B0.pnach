@@ -3,10 +3,10 @@ gametitle=F1 Career Challenge (PAL & NTSC-U)(SLUS-20693 & SLES-51584)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00328744,word,01010101
 
-[50 FPS]
+[60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,0033DF50,extended,00000001

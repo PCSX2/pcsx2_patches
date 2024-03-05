@@ -1,8 +1,16 @@
-gametitle=Disney G-Force [PAL-M] SLES-55499 AB761209
+gametitle=Disney G-Force (PAL-M) SLES-55499 AB761209
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,004B5A88,extended,00000032
 patch=1,EE,E0010001,extended,004D5F94
 patch=1,EE,204B5A88,extended,00000019
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,003A28F4,word,24110000
+patch=1,EE,003A28F8,word,24120050
+patch=1,EE,003A2904,word,24130001

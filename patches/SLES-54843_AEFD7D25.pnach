@@ -3,20 +3,21 @@ gametitle=Crash of the Titans (PAL-R) SLES-54843 AEFD7D25
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=CRASHARKI
-comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
 patch=1,EE,21BD81E8,byte,1 //00000000 //In-game option
 patch=1,EE,21BD8222,byte,10 //40 //Zoom 1
 patch=1,EE,21BD8228,word,3F000000 //3F2AAAAA //Zoom 2
 
-[50 FPS]
+[50/60 FPS]
 author=CRASHARKI
-description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+description=Might need EE Overclock at 180%.
 //01 00 02 24 12 00 82 14 5C
 patch=1,EE,20492588,extended,24020000 //24020001
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan mode at startup
+description=SDTV 480p mode at start.
 patch=1,EE,0057E9D4,word,3C050000
-patch=1,EE,0057E9DC,word,3C060052
+patch=1,EE,0057E9DC,word,3C060050
 patch=1,EE,0057E9E4,word,3C070001

@@ -1,0 +1,19 @@
+gametitle=The Punisher (PAL-R) SLES-53203 C493D552
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+//Ported from SLES-53049 by sergx12
+patch=1,EE,00192A6C,word,3C013F40 //00000000 X-FoV
+patch=1,EE,00192A78,word,4481F000 //00000000
+patch=1,EE,00192CE4,word,461EA783 //00000000
+patch=1,EE,00192D40,word,461E0083 //46140083
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,001A0BE4,word,3C050000
+patch=1,EE,001A0BEC,word,3C060050
+patch=1,EE,001A0BF4,word,3C070001
