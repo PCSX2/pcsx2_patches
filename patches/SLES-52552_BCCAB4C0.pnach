@@ -3,7 +3,7 @@ gametitle=Samurai Warriors (PAL-F) (SLES-52552)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack Converted by Bigdemon
+comment=Ported by Bigdemon
 
 patch=1,EE,0013eae8,word,3c024328 // 3c024360 zoom
 patch=1,EE,0013ecd8,word,3c013f40 // 8f838520 ver fov
