@@ -1,4 +1,4 @@
-gametitle=Crash Tag Team Racing (E)(SLES-53439)
+gametitle=Crash Tag Team Racing (PAL-M) (SLES-53439) E2FF6D3D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -9,9 +9,15 @@ patch=1,EE,002DA664,word,3C013FAB //3c013f80
 //Render Fix
 patch=1,EE,002DA688,word,3C013FAB //3c013f80
 
-
-[50 FPS]
-//02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C1 03 00 00 01 00 00 00 01 00 00 00 30 95 57 00
+[Unlock FPS]
 author=PeterDelta
-description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+description=Might need EE Overclock to be stable (180%).
 patch=1,EE,007B3ADC,word,00000001 //00000002
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=Forces progressive scan mode 480p at startup.
+patch=1,EE,0049529C,word,24110000
+patch=1,EE,004952A0,word,24120050
+patch=1,EE,004952AC,word,24130001

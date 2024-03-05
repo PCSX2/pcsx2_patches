@@ -1,4 +1,4 @@
-gametitle=Kingdom Hearts (PAL-UK) (SCES-50971)
+gametitle=Kingdom Hearts (PAL-S) SCES-50971 09F5F39A
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -47,9 +47,9 @@ patch=1,EE,002a1608,word,70007000 // 74007000
 patch=1,EE,0010430c,word,00000000 // ac510e48
 patch=1,EE,0010442c,word,00000000 // ac450e48
 
-[50 FPS]
+[Unlock FPS]
 author=PeterDelta
-comment=Gameplay at 50 fps, Gumi ship and scenes at 25 fps. Might need enable EE Overclock to be stable.
-patch=1,EE,002B6ACC,word,00000000 //00000001
+description=Might need EE Overclock to be stable (130%). Gameplay at 50 fps, Gumi ship at 25 fps.
+patch=1,EE,002B6ACC,extended,00000000
 patch=1,EE,E0010000,extended,00571954
-patch=1,EE,202B6ACC,extended,00000001
+patch=1,EE,002B6ACC,extended,00000001

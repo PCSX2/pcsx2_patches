@@ -4,8 +4,8 @@ gametitle=Freedom Fighters (PAL-I) SLES-51470 BADCA543 secondary crc 6EEE06DD
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-comment=Enable native widescreen
+description=Enable native widescreen
 
-[60 FPS]
+[480p Mode]
 author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
+description=Forces progressive scan mode 480p at startup.

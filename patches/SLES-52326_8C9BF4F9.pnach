@@ -1,6 +1,13 @@
-gametitle=Spawn - Armageddon SLES-52326 8C9BF4F9
+gametitle=Spawn - Armageddon (PAL-M) SLES-52326 8C9BF4F9
 
-[50 FPS]
+[Widescreen 16:9]
+gsaspectratio=16:9
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Enable native widescreen
+patch=1,EE,002D5A70,extended,00000001
+patch=1,EE,00338784,extended,00000001
+
+[Unlock FPS]
+author=PeterDelta
+description=Might need EE Overclock to be stable (130%).
 patch=1,EE,002F1158,word,00000001

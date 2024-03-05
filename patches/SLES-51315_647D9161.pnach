@@ -1,4 +1,4 @@
-gametitle=The Great Escape (E)(SLES-51315) 647D9161
+gametitle=The Great Escape (PAL-M) (SLES-51315) 647D9161
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -11,7 +11,7 @@ patch=1,EE,002b3bc0,word,3421fe54 //34218889
 patch=1,EE,002c4f30,word,3c013d00 //3c013c8e Render fix
 patch=1,EE,002c4f34,word,34210000 //3421fa36
 
-[50 FPS]
+[Unlock FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock to be stable (130%).
 patch=1,EE,002AEBF8,word,2C420001 //2C420002

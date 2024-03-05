@@ -7,8 +7,8 @@ comment=Renders the game in 16:9 aspect ratio
 patch=1,EE,00248138,word,3c013ec0 // 3c013f00 hor fov
 patch=1,EE,001f3c70,word,3c013f40 // 3c013f80 renderfix
 
-[50 FPS]
+[Unlock FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock to be stable (130%).
 patch=1,EE,0024BEAC,word,2C420000 //2C42001E
 patch=1,EE,001DED08,word,3C013F00 //3C013F80

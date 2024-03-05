@@ -11,14 +11,16 @@ patch=1,EE,0037d694,word,3c013fa4 //3c013faa zoom fix
 patch=1,EE,0037d698,word,3421bc76 //3421aaab zoom fix
 patch=1,EE,0031d1f4,word,3c013f80 //3c014000 remove black bars in cut-scenes
 
-[50 FPS]
+[Unlock FPS]
 author=PeterDelta
-comment=Requires having a save game before enabling it. Might need enable 300% EE Overclock.
-patch=1,EE,003194C0,word,00000000
+description=Might need EE Overclock to be stable (300%).
+patch=1,EE,E0010001,extended,00700EA0 //to avoid a bug if there is no profile
+patch=1,EE,203194C0,extended,00000000 //1440FFF5
 
-[Mode 480p]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan mode 480p at startup
+description=Forces progressive scan mode 480p at startup.
 patch=1,EE,00412E2C,word,3C050000
 patch=1,EE,00412E34,word,3C060050
 patch=1,EE,00412E3C,word,3C070001

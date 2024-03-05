@@ -1,4 +1,4 @@
-gametitle=Prince of Persia - The Sands of Time (PAL-M5) (SLES-51918)
+gametitle=Prince of Persia - The Sands of Time (PAL-M5) (SLES-51918) 4B58A7A8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -20,8 +20,7 @@ patch=1,EE,004b5008,word,4600f0c6 // 44821800
 //patch=1,EE,004b4ff0,word,461e1f83 // 00000000
 //patch=1,EE,004b5008,word,4600f0c6 // 44821800
 
-
-[50/60 FPS]
+[Unlock FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock to be stable (180%).
 patch=1,EE,0066CF44,word,00000001 //00000002

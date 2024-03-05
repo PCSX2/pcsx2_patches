@@ -18,9 +18,9 @@ patch=1,EE,00197d88,word,0c0521ab
 //black borders fix
 patch=1,EE,0017f6ec,word,3c013f80
 
-[50/60 FPS]
+[Unlock FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock to be stable (180%).
 patch=1,EE,004A739C,extended,00000001
 patch=1,EE,E0010000,extended,004A5868
 patch=1,EE,004A739C,extended,00000002

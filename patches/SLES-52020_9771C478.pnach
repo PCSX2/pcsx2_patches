@@ -3,10 +3,10 @@ gametitle=Señor de Los Anillos, El - El Retorno del Rey (PAL-S) SLES-52020 9771
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,0014b13c,word,3c023f40 //3c023f80 hor fov
 
-[50 FPS]
+[Unlock FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock to be stable (130%).
 patch=1,EE,0014B318,word,10000013 //14400003
