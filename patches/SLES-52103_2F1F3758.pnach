@@ -1,0 +1,9 @@
+gametitle=Tak & Le Pouvoir de Juju (PAL-F) SLES-52103 2F1F3758
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack Conversion
+
+patch=1,EE,00251438,word,3C013FE3 //3C013FAA
+patch=1,EE,0025143c,word,3421388E //3421AAAB
