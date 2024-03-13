@@ -1,0 +1,6 @@
+gametitle=Hitman Contracts SLES-52136 3569E863
+
+[50/60fps]
+author=Gabominated
+description=50/60fps toggle on by Gabominated
+patch=1,EE,2053a70c,extended,00000001 //00000002

@@ -23,3 +23,11 @@ patch=1,EE,2051A0C8,extended,00000000
 author=Boludoz
 comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,006679CC,extended,00000001
+
+[60 FPS]
+gsinterlacemode=1
+author=Gabominated
+description=480p at 60 FPS, use Software Renderer for FMVs. Might need enable EE Overclock to be stable.
+patch=1,EE,206679cb,extended,00000100
+patch=1,EE,D066B994,extended,00000001
+patch=1,EE,20547bc0,extended,24120050
