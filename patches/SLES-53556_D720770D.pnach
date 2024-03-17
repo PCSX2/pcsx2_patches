@@ -4,3 +4,11 @@ gametitle=Driver - Parallel Lines (PAL-M) SLES-53556 D720770D
 author=PeterDelta
 description=Might need EE Overclock to be stable (130%).
 patch=1,EE,003246EC,word,24440002 //24440001
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=Forces progressive scan mode 480p at startup.
+patch=1,EE,004B5790,word,00000002 //00000001
+patch=1,EE,004B03C8,word,00000003 //00000001
+patch=1,EE,00403588,word,00000000 //00000008
