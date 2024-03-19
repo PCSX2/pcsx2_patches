@@ -2,10 +2,14 @@ gametitle=Spider-Man: Friend or Foe (PAL-M5) (SLES_549.01) 678BE0A5
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas and PeterDelta
+author=El_Patas
 description=Renders the game in 16:9 aspect ratio
 patch=1,EE,203EC6C8,extended,3FE38E38 //3FAAAAAB (Increases hor. axis)
-patch=1,EE,003F0604,extended,00000003 //remove black bands in scenes
+
+[Remove Blackbars]
+author=PeterDelta
+description=Remove black bars in cutscenes
+patch=1,EE,003F0604,extended,00000003
 
 [Unlock FPS]
 author=PeterDelta

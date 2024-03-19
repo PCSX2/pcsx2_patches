@@ -36,7 +36,9 @@ patch=1,EE,0037b2cc,word,3f400000 // 3f800000
 //patch=1,EE,0037b2c8,word,3f555555 // 3f800000 font fix
 //patch=1,EE,0037b2cc,word,3f555555 // 3f800000 font fix
 
-//black border fix
+[Remove Blackbars]
+author=ElHecht
+description=Remove black bars in cutscenes
 patch=1,EE,0014aac8,word,24050000 // 24050200
 patch=1,EE,0014aaf0,word,24050000 // 24050200
 patch=1,EE,0014ab18,word,24050000 // 24050200

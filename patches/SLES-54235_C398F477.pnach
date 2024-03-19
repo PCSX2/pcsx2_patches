@@ -16,7 +16,11 @@ patch=1,EE,00378574,word,43f90000 //43d00000 zoom for cutscenes (hides sudden po
 patch=1,EE,0037b2c4,word,3f400000 //3f800000 font fix
 patch=1,EE,0037b2c8,word,3f400000 //3f800000
 patch=1,EE,0037b2cc,word,3f400000 //3f800000
-patch=1,EE,0014aac8,word,24050000 //24050200 black border fix
+
+[Remove Blackbars]
+author=ElHecht
+description=Remove black bars in cutscenes
+patch=1,EE,0014aac8,word,24050000 //24050200
 patch=1,EE,0014aaf0,word,24050000 //24050200
 patch=1,EE,0014ab18,word,24050000 //24050200
 patch=1,EE,0014ab48,word,24050000 //24050200

@@ -6,7 +6,11 @@ author=PeterDelta
 description=Enable native widescreen
 patch=1,EE,005996C8,extended,00000010 //00000004
 patch=1,EE,005996D0,extended,00000009 //00000003
-patch=1,EE,207419F8,extended,3F800000 //black bands
+
+[Remove Blackbars]
+author=PeterDelta
+description=Remove black bars in cutscenes
+patch=1,EE,207419F8,extended,3F800000
 
 [Unlock FPS]
 author=PeterDelta

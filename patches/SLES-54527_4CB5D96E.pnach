@@ -2,11 +2,15 @@ gametitle=Flushed Away [PAL-M5] (SLES_545.27) 4CB5D96E
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas & PeterDelta
+author=El_Patas
 description=Renders the game in 16:9 aspect ratio
 patch=1,EE,0027CD34,word,3C013CAD //3C013C8E Zoom
 patch=1,EE,001C8334,word,3C013C6E //3C013C8E Y-FOV
-patch=1,EE,00466630,word,00000000 //00000003 remove black bands by PeterDelta
+
+[Remove Blackbars]
+author=PeterDelta
+description=Remove black bars in cutscenes
+patch=1,EE,00466630,word,00000000 //00000003
 
 [Unlock FPS]
 author=PeterDelta

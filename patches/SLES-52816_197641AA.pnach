@@ -2,14 +2,18 @@ gametitle=Increíbles, Los (PAL-S) SLES-52816 197641AA
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas & PeterDelta
+author=El_Patas
 description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001FF744,word,3C023F1C //3C023F00 Zoom
 patch=1,EE,001FF770,word,3C023F10 //3C023F40 Y-FOV
-patch=1,EE,00631CAC,word,00000000 //4247FFFF remove black bands
-patch=1,EE,00631CB0,word,00000000 //4247FFFF
 //Hang fix by Prafull (Only needed for pcsx2, is not needed for the PS2)
 //patch=1,EE,0010EC20,word,00000000 //40036000
+
+[Remove Blackbars]
+author=PeterDelta
+description=Remove black bars in cutscenes
+patch=1,EE,00631CAC,word,00000000 //4247FFFF
+patch=1,EE,00631CB0,word,00000000 //4247FFFF
 
 [480p Mode]
 gsinterlacemode=1
