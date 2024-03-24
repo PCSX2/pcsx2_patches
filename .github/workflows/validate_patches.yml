@@ -1,0 +1,17 @@
+name: Validate Patch PR
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  check-patches:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Validate all patches
+        run: |
+          python .github/scripts/validate_patches.py

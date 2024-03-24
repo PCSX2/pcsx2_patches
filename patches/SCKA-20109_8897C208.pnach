@@ -32,7 +32,7 @@ patch=1,EE,001148cc,word,3c033ec0 // 3c033f00
 patch=1,EE,001148dc,word,3c023f90 // 3c023f80
 
 ///////////////////////////////////////////////////////
-/In-Game Menu Portraits fix by Arapapa
+//In-Game Menu Portraits fix by Arapapa
 //74008224 21104500 00004284
 //74008224 21104500 00004294
 //patch=1,EE,00112a44,word,0803002c

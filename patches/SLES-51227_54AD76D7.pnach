@@ -1,36 +1,52 @@
-gametitle=Tomb Raider - Angel of Darkness * SLES-51227 * PAL-M10 * 54AD76D7
+gametitle=Lara Croft Tomb Raider: The Angel of Darkness * SLES-51227 * PAL-M10 * 54AD76D7
+
+// Widescreen hack ported by pgert from NTSC-U pnach by Arapapa.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
-comment=Widescreen Hack ported from NTSC-U
-// ==========
-// pgert@190227
-// http:// forums.pcsx2.net/Thread-PCSX2-Widescreen-Game- patches?pid=240786#pid240786
-// ==========
+author=Arapapa & pgert
 
-// Fast Boot 4:3 hack - 16:9
+// Fast Boot 4:3 hack - 16:9 (proper aspect ratio)
 patch=1,EE,00207494,word,3C013FE2 // 3C013FAA
 patch=1,EE,00207498,word,3421FC93 // 34213D71
 
-// Fast Boot 4:3 hack - 16:10
-// patch=1,EE,00207494,word,3C013FCC // 3C013FAA
-// patch=1,EE,00207498,word,342149BB // 34213D71
-
-// Fast Boot 4:3 hack - 15:10
-// patch=1,EE,00207494,word,3C013FBF // 3C013FAA
-// patch=1,EE,00207498,word,3421851F // 34213D71
-
-// Full Boot 16:9 fix
+// Full Boot 16:9 fix (proper aspect ratio)
 patch=1,EE,002074A8,word,3C013FE2 // 3C013FD5
 patch=1,EE,002074AC,word,3421FC93 // 3421C28F
 
+[Widescreen/16:10]
+gsaspectratio=Stretch
+
+// Fast Boot 4:3 hack - 16:10
+patch=1,EE,00207494,word,3C013FCC
+patch=1,EE,00207498,word,342149BB
+
 // Full Boot 16:10
-// patch=1,EE,002074A8,word,3C013FCC // 3C013FD5
-// patch=1,EE,002074AC,word,342149BB // 3421C28F
+patch=1,EE,002074A8,word,3C013FCC
+patch=1,EE,002074AC,word,342149BB
+
+[Widescreen/15:10]
+gsaspectratio=Stretch
+
+// Fast Boot 4:3 hack - 15:10
+patch=1,EE,00207494,word,3C013FBF
+patch=1,EE,00207498,word,3421851F
 
 // Full Boot 15:10
-// patch=1,EE,002074A8,word,3C013FBF // 3C013FD5
-// patch=1,EE,002074AC,word,3421851F // 3421C28F
+patch=1,EE,002074A8,word,3C013FBF
+patch=1,EE,002074AC,word,3421851F
 
+// patch=1,EE,0011A4D0,word,3C013F48 // 3C013F40 - Zoom out (3C013F38 for Zoom in)
+// patch=1,EE,0011A4B4,word,3C013F75 // 3C013F6B - Zoom out (3C013F60 for Zoom in)
 
+[60 FPS]
+author=Gabominated
+description=60 fps through HDTV 720p mode
+comment=Might need EE overclocking to be stable.
+patch=1,EE,20212b90,extended,00069403
+patch=1,EE,E0010002,extended,006F313C
+patch=1,EE,20212b90,extended,24120052
+patch=1,EE,E0010004,extended,006F313C
+patch=1,EE,20212b90,extended,24120052
+patch=1,EE,E0010001,extended,006F313C
+patch=1,EE,20212b90,extended,24120052

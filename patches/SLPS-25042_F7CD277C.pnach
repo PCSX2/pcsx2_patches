@@ -3,7 +3,7 @@ gametitle=Maken Shao - Limited Edition [SLPS-25042]
 [Widescreen 16:9]
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 gsaspectratio=16:9
-commentNTSC-J Widescreen Hack
+comment=NTSC-J Widescreen Hack
 patch=1,EE,20334524,extended,3f533334
 
 
