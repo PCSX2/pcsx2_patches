@@ -1,8 +1,9 @@
-gametitle=Jak and Daxter - The Lost Frontier SCES-55510 71583CA9
+gametitle=Jak and Daxter - The Lost Frontier (PAL-M) SCES-55510 71583CA9
 
-[Mode 480p]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Unlocked progressive Mode 480p
+description=Forces progressive scan mode 480p at startup.
 patch=1,EE,01E3FC60,word,00000000 //00000001
 patch=1,EE,01E3FC64,word,00000001 //00000000
 patch=1,EE,01E84AF4,word,00000001 //00000000 16:9

@@ -17,9 +17,9 @@ patch=1,EE,00281554,word,3c013edf // 3c013f00 inventory position fix hor
 patch=1,EE,001fc170,word,3c013f06 // 3c013f33 font fix hor
 patch=1,EE,001fc174,word,34216666 // 34213333 font fix hor
 
-[50 FPS]
+[Unlock FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock to be stable (130%).
 patch=1,EE,001FB600,extended,28420001
 patch=1,EE,001FB61C,extended,28420001
 patch=1,EE,E0020000,extended,003956C0

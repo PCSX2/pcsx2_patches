@@ -1,0 +1,22 @@
+gametitle=George Of The Jungle (PAL-M) SLES-54975 278B7BEA
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00709208,word,3FE38E39 //3FAAAAA8
+
+[Unlock FPS]
+author=PeterDelta
+description=Might need EE Overclock to be stable (130%).
+patch=1,EE,003703F4,extended,30420004
+patch=1,EE,E0010001,extended,003FD960
+patch=1,EE,003703F4,extended,30420001
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=Forces progressive scan mode 480p at startup.
+patch=1,EE,0038665C,word,24110000
+patch=1,EE,00386660,word,24120050
+patch=1,EE,0038666C,word,24130001

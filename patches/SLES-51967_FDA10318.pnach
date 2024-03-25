@@ -1,4 +1,4 @@
-gametitle=Need for Speed - Underground (PAL-M7) (SLES-51967)
+gametitle=Need for Speed - Underground (PAL-M7) (SLES-51967) FDA10318
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -16,17 +16,16 @@ patch=1,EE,004ff630,word,3f2aaaab // 3f000000
 //patch=1,EE,004ff628,word,3f19999a // 3f000000
 //patch=1,EE,004ff630,word,3f19999a // 3f000000
 
-
-[50 FPS]
+[Unlock FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock to be stable (130%).
 patch=1,EE,2011060C,extended,2C420001 //2C420002
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
+description=Forces progressive scan mode 480p at startup.
 patch=1,EE,003AF874,word,24110000
-patch=1,EE,003AF878,word,24120052
+patch=1,EE,003AF878,word,24120050
 patch=1,EE,003AF884,word,24130001
 patch=1,EE,004FEFF8,word,3C888889
-patch=1,EE,0042EE04,word,0000001E

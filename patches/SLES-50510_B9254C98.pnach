@@ -1,4 +1,4 @@
-gametitle=The Mummy Returns (E)(SLES-50510)
+gametitle=The Mummy Returns (PAL-M) (SLES-50510) B9254C98
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -14,7 +14,7 @@ patch=1,EE,000c0008,word,4481f000
 patch=1,EE,000c000c,word,461ead42
 patch=1,EE,000c0010,word,0807e6a6
 
-[50 FPS]
+[Unlock FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock to be stable (130%).
 patch=1,EE,00161A38,word,3C01020F //3C01002D

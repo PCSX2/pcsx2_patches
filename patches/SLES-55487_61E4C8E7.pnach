@@ -1,0 +1,15 @@
+gametitle=Ice Age 3 - Dawn of the Dinosaurs (PAL-M) SLES-55487 61E4C8E7
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,00582828,word,00000100
+
+[Unlock FPS]
+author=PeterDelta
+description=Might need EE Overclock to be stable (130%).
+patch=1,EE,00101408,extended,24020032 //24020019
+patch=1,EE,00582380,extended,00000019
+patch=1,EE,E0010000,extended,00592EF0
+patch=1,EE,00582380,extended,00000032
