@@ -1,8 +1,15 @@
-gametitle=Primal (PAL-M) SLES-51135 DCC4EEEA
+gametitle=Primal * PAL-M5 * SCES-51135 * DCC4EEEA
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=pgert
+description=Native Widescreen is set on start.
+patch=1,EE,204886FC,extended,00000001 // 00000000
 
 [50/60 FPS]
-author=Gabominated
-comment=Unlocked at 50/60 FPS. Might need enable 130% EE Overclock to be stable.
+author=Gabominated & PeterDelta
+comment=Might need EE overclocking to be stable (130%).
 patch=1,EE,204877FC,extended,00000001
+// FMV fix by PeterDelta
 patch=1,EE,E0010000,extended,00485A2C
 patch=1,EE,204877FC,extended,00000002
