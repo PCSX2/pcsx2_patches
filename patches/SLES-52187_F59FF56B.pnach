@@ -36,7 +36,7 @@ patch=1,EE,002C90A0,word,3421FC96 // 34213D71
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
-// converted by pgert
+author=ported by pgert
 // ==========
 patch=1,EE,001ED078,word,3C013F23
 patch=1,EE,001ED07C,word,3421D70C
@@ -60,7 +60,7 @@ patch=1,EE,002C90A0,word,342149BB
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
-// converted by pgert
+author=ported by pgert
 // ==========
 patch=1,EE,001ED078,word,3C013F19
 patch=1,EE,001ED07C,word,3421999B
