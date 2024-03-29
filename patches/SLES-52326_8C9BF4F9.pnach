@@ -11,11 +11,11 @@ patch=1,EE,001220BC,extended,3C013F01 //3C013F00 fix border
 
 [Remove Blackbars]
 author=PeterDelta
-description=Remove black bars in cutscenes
+description=Removes black bars in cutscenes
 patch=1,EE,003217B4,extended,00000001
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=0,EE,00227CB0,word,24020001 //24020002
 //patch=1,EE,002F1158,word,00000001 //real time

@@ -11,9 +11,9 @@ comment=Widescreen Hack 16:9
 //Zoom Fix (When turn on the Widescreen option)
 patch=1,EE,002fbf20,word,3c020000 //3c020060
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (180%).
+description=Unlocks internal FPS. Might need EE Overclock at 180%.
 patch=1,EE,205F9908,extended,00000001
 patch=1,EE,E0010001,extended,00631208
 patch=1,EE,205F9908,extended,00000002

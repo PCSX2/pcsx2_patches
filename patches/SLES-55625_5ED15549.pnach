@@ -3,7 +3,7 @@ gametitle=Despicable Me - The Game (PAL-M) (SLES-55625) 5ED15549
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00119874,word,00000000 //46140034
 patch=1,EE,001198bc,word,3c014235 //3c014265
 patch=1,EE,001198c0,word,3421e327 //34212ee1

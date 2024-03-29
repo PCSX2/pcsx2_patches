@@ -10,7 +10,7 @@ patch=1,EE,003a358c,word,4481f000 //00000000
 patch=1,EE,003a3590,word,461e6b42 //00000000
 patch=1,EE,002670d0,word,3c013f2b //3c013f00 Render fix
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0060EB1C,word,00000001 //00000002

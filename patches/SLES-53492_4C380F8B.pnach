@@ -11,9 +11,9 @@ patch=1,EE,20692A2C,word,3F47AE14 // Zoom
 //00 00 80 3F 00 00 00 00 00 00 00 00 2F 00 00 00
 patch=1,EE,206C64C4,word,3F400000 // Vert fov
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,01B71FC0,word,00000001 //00000002
 
 [480p Mode]

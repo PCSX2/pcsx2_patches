@@ -10,7 +10,7 @@ patch=1,EE,003B7DF0,word,C0222222 //BFF33333 HUD fix
 patch=1,EE,003B7E08,word,40222222 //3FF33333
 patch=1,EE,003B7E28,word,40222222 //3FF33333
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,002B13B8,word,28630001 //28630002

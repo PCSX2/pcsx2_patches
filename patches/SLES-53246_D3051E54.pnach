@@ -1,8 +1,8 @@
 gametitle=Madagascar (PAL-S) SLES-53246 D3051E54
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,004B0604,byte,01 //02
 patch=1,EE,00346D24,byte,64 //32
 

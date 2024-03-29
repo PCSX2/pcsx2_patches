@@ -19,9 +19,9 @@ patch=1,EE,001D5D78,word,3C023FAB //3C023F80
 //patch=1,EE,00116D54,word,34635555 //3463FA34
 //patch=1,EE,00116D48,word,3C023FAB //3C023F80 Y-FOV
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,001B0F88,word,28630001 //0072182A
 patch=1,EE,E0010000,extended,008B86A4
 patch=1,EE,201B0F88,extended,0072182A

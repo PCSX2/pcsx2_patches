@@ -8,7 +8,7 @@ comment=Renders the game in 16:9 aspect ratio
 patch=1,EE,005015d0,word,3f9faaab //3eaaaaab Zoom
 patch=1,EE,00502848,word,3fe38e2a //3faaaaab Y-FOV
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,00198FA8,word,1460000A //1060000A

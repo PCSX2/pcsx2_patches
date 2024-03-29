@@ -7,7 +7,7 @@ comment=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,001c3a74,word,3c033f40 //3c033f80
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0026BBF4,word,00000001 //00000002

@@ -12,8 +12,8 @@ patch=1,EE,20FFB704,extended,3D000000 //3D4CCCCD
 //Rendering distancce
 patch=1,EE,20FFB708,extended,44000000 //43660000
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (300%).
+description=Unlocks internal FPS. Might need EE Overclock at 300%.
 patch=1,EE,0046F354,word,2C410001 //0052082B
 patch=1,EE,002A7748,word,8F889800 //8E284204

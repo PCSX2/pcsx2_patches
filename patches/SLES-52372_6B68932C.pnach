@@ -87,9 +87,9 @@ patch=1,EE,2072421C,word,42340000  //gauge_hero_01 42700000
 //patch=1,EE,208831D8,word,440cd000  //gauge_boss_icon_rhino 440EC000
 //patch=1,EE,208831EC,word,440cd000  //gauge_boss_icon_rhino 440EC000
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta + CRASHARKI
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0060AD20,word,00000001 //00000002
 patch=1,EE,E0010001,extended,005E3C90
 patch=1,EE,0060AD20,extended,00000002

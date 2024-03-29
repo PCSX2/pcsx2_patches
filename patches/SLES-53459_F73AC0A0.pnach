@@ -6,7 +6,7 @@ author=sergx12
 comment=Renders the game in 16:9 aspect ratio
 patch=1,EE,0056768c,word,3c023f40
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,001CC7A8,word,00000001 //00000002

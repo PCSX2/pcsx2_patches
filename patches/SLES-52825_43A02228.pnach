@@ -1,8 +1,8 @@
 gametitle=Serie de Catastróficas Desdichas de Lemony Snicket, Una (PAL-S) SLES-52825 43A02228
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0047D2C0,word,42C80000 //42480000
 patch=1,EE,0047D2C4,word,3C23D70A //3CA3D70A
 

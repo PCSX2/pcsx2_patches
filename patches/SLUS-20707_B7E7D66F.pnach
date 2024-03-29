@@ -11,7 +11,7 @@ patch=1,EE,00121C6C,extended,3C013F01 //3C013F00 fix border
 
 [Remove Blackbars]
 author=PeterDelta
-description=Remove black bars in cutscenes
+description=Removes black bars in cutscenes
 patch=1,EE,0031F3F4,extended,00000001
 
 [60 FPS]

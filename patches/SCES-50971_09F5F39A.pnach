@@ -47,9 +47,9 @@ patch=1,EE,002a1608,word,70007000 // 74007000
 patch=1,EE,0010430c,word,00000000 // ac510e48
 patch=1,EE,0010442c,word,00000000 // ac450e48
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%). Gameplay at 50 fps, Gumi ship at 25 fps.
+description=Unlocks internal FPS. Might need EE Overclock at 130%. Gameplay at 50 fps, Gumi ship at 25 fps.
 patch=1,EE,002B6ACC,extended,00000000
 patch=1,EE,E0010000,extended,00571954
 patch=1,EE,002B6ACC,extended,00000001

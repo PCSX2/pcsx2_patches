@@ -16,9 +16,9 @@ patch=1,EE,004ff630,word,3f2aaaab // 3f000000
 //patch=1,EE,004ff628,word,3f19999a // 3f000000
 //patch=1,EE,004ff630,word,3f19999a // 3f000000
 
-[Unlock FPS]
+[50/60 FPS]
 author=asasega
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,2011060C,extended,2C420001 //2C420002
 
 [480p Mode]

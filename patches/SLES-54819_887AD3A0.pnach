@@ -1,6 +1,6 @@
 gametitle=Manhunt 2 (PAL) (SLES_548.19)
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,00370EE8,word,24020001 //24020002

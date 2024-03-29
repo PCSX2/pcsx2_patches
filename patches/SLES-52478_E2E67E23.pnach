@@ -1,8 +1,8 @@
 gametitle=Red Dead Revolver [PAL-M] SLES-52478 E2E67E23
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,001018AC,word,24030001 //24030002
 
 [480p Mode]

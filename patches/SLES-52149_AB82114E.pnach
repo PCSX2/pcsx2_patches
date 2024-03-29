@@ -30,6 +30,6 @@ description=Renders the game in 16:9 aspect ratio
 // patch=1,EE,21628AC0,extended,3F666666 // 3F800000 - Y-axis
 // ==========
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.

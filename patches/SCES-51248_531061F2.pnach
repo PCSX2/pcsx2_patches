@@ -1,6 +1,6 @@
 gametitle=Dog's Life (PAL-M) SCES-51248 531061F2
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,00791350,word,3CA3D70A

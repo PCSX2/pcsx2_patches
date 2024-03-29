@@ -16,9 +16,9 @@ gametitle=Ultimate Spider-Man (U)(SLUS-20870) and (E)(SLES-53391) // Ultimate Sp
 //patch=1,EE,000c0014,word,08162c85
 //Disable due to missing rendering fix in non-4:3 area
 
-[Unlock FPS]
+[60 FPS]
 author=PeterDelta and asasega
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,00311F18,word,00000000
 patch=1,EE,0069FE20,word,00000001
 patch=1,EE,E0020001,extended,01C82AA0

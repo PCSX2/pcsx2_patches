@@ -1,7 +1,7 @@
 gametitle=Simpsons Game, The (PAL-S-I) SLES-54906 565B7E04
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,00360394,word,30420008 //30420004
 patch=1,EE,00215950,word,2C620000 //0062102A

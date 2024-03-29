@@ -9,4 +9,4 @@ description=Widescreen Hack
 [480p Mode]
 gsinterlacemode=1
 author=PeterDelta
-description=Forces progressive scan mode 480p at startup. Might need 300% EE Overclock
+description=Forces progressive scan mode 480p at startup. Might need EE Overclock at 300%

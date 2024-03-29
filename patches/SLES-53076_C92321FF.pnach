@@ -7,9 +7,9 @@ comment=Widescreen hack
 //X-Fov
 patch=1,EE,00132cf8,word,3c013f40 //3c013f80
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,00116108,word,00000000 //14620011
 patch=1,EE,001FCE50,word,00000000 //46010840
 patch=1,EE,001FCE34,word,00000000 //10000007

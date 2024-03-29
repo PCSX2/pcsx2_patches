@@ -9,12 +9,12 @@ patch=1,EE,005996D0,extended,00000009 //00000003
 
 [Remove Blackbars]
 author=PeterDelta
-description=Remove black bars in cutscenes
+description=Removes black bars in cutscenes
 patch=1,EE,207419F8,extended,3F800000
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (300%).
+description=Unlocks internal FPS. Might need EE Overclock at 300%.
 patch=1,EE,005D8F78,word,00000001 //00000002
 
 [480p Mode]

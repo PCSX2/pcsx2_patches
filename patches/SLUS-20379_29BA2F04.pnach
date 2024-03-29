@@ -1,6 +1,6 @@
 gametitle=Dark Angel - James Cameron's (NSTC-U) SLUS-20379 29BA2F04
 
-[Unlock FPS]
+[60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0025A3F4,word,30420008 //30420004

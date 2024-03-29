@@ -1,8 +1,8 @@
 gametitle=Disney G-Force (PAL-R) SLES-55502 09BF522A
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,004B5900,extended,00000032
 patch=1,EE,E0010001,extended,004D5E14
 patch=1,EE,204B5900,extended,00000019

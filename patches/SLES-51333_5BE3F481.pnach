@@ -1,6 +1,6 @@
 gametitle=Dark Angel (PAL-M) SLES-51333 5BE3F481
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0025BDF4,word,30420008 //30420004

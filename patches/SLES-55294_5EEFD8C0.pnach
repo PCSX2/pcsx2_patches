@@ -1,8 +1,8 @@
 gametitle=Ferrari Challenge - Trofeo Pirelli (PAL-M) SLES-55294 5EEFD8C0
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0017C11C,word,24040001 //24040002
 
 [480p Mode]

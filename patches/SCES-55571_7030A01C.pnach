@@ -12,12 +12,12 @@ patch=1,EE,0037d698,word,3421bc76 //3421aaab zoom fix
 
 [Remove Blackbars]
 author=ElHecht
-description=Remove black bars in cutscenes
+description=Removes black bars in cutscenes
 patch=1,EE,0031d1f4,word,3c013f80 //3c014000
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (300%).
+description=Unlocks internal FPS. Might need EE Overclock at 300%.
 patch=1,EE,E0010001,extended,00700EA0 //to avoid a bug if there is no profile
 patch=1,EE,203194C0,extended,00000000 //1440FFF5
 

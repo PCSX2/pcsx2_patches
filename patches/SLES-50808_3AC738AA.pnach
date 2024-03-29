@@ -1,6 +1,6 @@
 gametitle=Deus Ex [PAL-S] SLES-50808 3AC738AA. ELF secondary 7070DC2F
 //Corresponds to the main crc to activate the secondary crc 7070DC2F called DEUSEX.ELF
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (180%).
+description=Unlocks internal FPS. Might need EE Overclock at 180%.

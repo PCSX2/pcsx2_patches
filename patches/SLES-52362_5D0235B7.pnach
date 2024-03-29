@@ -12,7 +12,7 @@ patch=1,EE,003a7d98,word,4481f000 //00000000
 patch=1,EE,003a7d9c,word,461e6302 //00000000
 patch=1,EE,003a7da0,word,080ba870 //00000000
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0051C4C4,word,42480000 //41C80000

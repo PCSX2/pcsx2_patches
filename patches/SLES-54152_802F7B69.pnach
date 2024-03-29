@@ -1,8 +1,8 @@
 gametitle=Ant Bully, The (PAL-M) SLES-54152 802F7B69
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0015CD54,word,2C620000 //0062102B
 
 [480p Mode]

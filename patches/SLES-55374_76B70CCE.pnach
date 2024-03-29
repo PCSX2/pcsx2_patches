@@ -3,7 +3,7 @@ gametitle=DreamWorks Madagascar 2 - Escape 2 Africa (PAL-M) (SLES-55374) 76B70CC
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001ff07c,word,3c023f1e //3c023f00
 
 [480p Mode]

@@ -1,8 +1,8 @@
 gametitle=Warriors, The (PAL-M) SLES-53443 FA3C1346
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,00596D70,byte,01
 
 [480p Mode]

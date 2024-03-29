@@ -11,7 +11,7 @@ patch=1,EE,001FF770,word,3C023F10 //3C023F40 Y-FOV
 
 [Remove Blackbars]
 author=PeterDelta
-description=Remove black bars in cutscenes
+description=Removes black bars in cutscenes
 patch=1,EE,00631CAC,word,00000000 //4247FFFF
 patch=1,EE,00631CB0,word,00000000 //4247FFFF
 

@@ -6,6 +6,6 @@ gsaspectratio=16:9
 author=nemesis2000
 description=Renders the game in 16:9 aspect ratio
 
-[Unlock FPS]
+[60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.

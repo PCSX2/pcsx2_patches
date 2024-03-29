@@ -11,9 +11,9 @@ patch=1,EE,002CD40C,word,3C013FD5 //3C013FA0
 //Zoom
 patch=1,EE,003811F8,word,3C013EC0 //3C013F00
 
-[Unlock FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0069D990,word,00000001 //00000002
 patch=1,EE,0069D998,word,42700000 //41F00000
 patch=1,EE,0069D99C,word,3C888889 //3D088889

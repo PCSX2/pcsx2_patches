@@ -1,8 +1,8 @@
 gametitle=Brave - The Search for Spirit Dancer (NTSC-U) SLUS-21127 17E7E24E
 
-[Unlock FPS]
+[60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,0033AEF4,extended,30420004
 patch=1,EE,E0010000,extended,003C6D68
 patch=1,EE,0033AEF4,extended,30420008

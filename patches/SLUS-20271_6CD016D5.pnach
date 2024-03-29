@@ -6,7 +6,7 @@ comment=Widescreen Hack
 patch=1,EE,204c4ed0,extended,3F81DE4A
 patch=1,EE,204c4f50,extended,3F81DE4A
 
-[Unlock FPS]
+[60 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,004C4E9C,word,00000001 //00000002

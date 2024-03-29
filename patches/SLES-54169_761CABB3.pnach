@@ -1,6 +1,6 @@
 gametitle=Aeon Flux (PAL-M) SLES-54169 761CABB3
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (300%).
+description=Unlocks internal FPS. Might need EE Overclock at 300%.
 patch=1,EE,00362EB8,word,28630001 //28630002

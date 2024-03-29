@@ -1,6 +1,6 @@
 gametitle=Incredible Hulk, The - Ultimate Destruction (PAL-M) SLES-53430 6B3D50A5
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (180%).
+description=Unlocks internal FPS. Might need EE Overclock at 180%.
 patch=1,EE,0046F3D0,word,24020001 //24020002

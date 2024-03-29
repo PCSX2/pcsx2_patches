@@ -23,7 +23,7 @@ patch=1,EE,0020C568,word,3c0142f8 //3c014321 X scalar "Frame"
 patch=1,EE,0020C584,word,3c01432b //3c01432b Y correction
 patch=1,EE,0020C5B0,word,46011042 //46011842 Offset correction
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,002CA1B8,word,28630001 //28630002

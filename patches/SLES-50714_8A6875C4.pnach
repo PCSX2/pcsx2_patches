@@ -11,7 +11,7 @@ patch=1,EE,00184ba8,word,3c013fd5 //3c013fa0 Menu
 patch=1,EE,001c9efc,word,3c013fd5 //3c013fa0
 patch=1,EE,001c9fb4,word,3c013fd5 //3c013fa0 Gameplay
 
-[Unlock FPS]
+[50 FPS]
 author=PeterDelta
-description=Might need EE Overclock to be stable (130%).
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,00228DC0,word,00000000 //1040FFFD
