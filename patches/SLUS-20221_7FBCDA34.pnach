@@ -11,9 +11,6 @@ patch=1,EE,00212358,word,3c013f40 // 00000000 hor fov
 //patch=1,EE,00212358,word,3c013f55 // 00000000 hor fov
 //patch=1,EE,00212388,word,34215555 // 00000000 hor fov
 
-// cut-scenes black bar removal
-patch=1,EE,001ffc38,word,3c030000 // 3c034420 remove black bars in cut-scenes
-
 // 16:9 and 16:10 main modfication
 // no need to change anything here! all modifications are calculated
 // based on the hor fov value in the upper 16:9/16:10 section
@@ -39,4 +36,6 @@ patch=1,EE,001aedc0,word,46002103 // 44882000 crosshair/aiming fix unit vector
 patch=1,EE,001aedc4,word,461e26c3 // 46002103 crosshair/aiming fix unit vector
 patch=1,EE,001aedc8,word,461b0842 // 46040842 crosshair/aiming fix unit vector
 
-
+[Remove Blackbars]
+description=Removes black bars in cutscenes
+patch=1,EE,001ffc38,word,3c030000 // 3c034420

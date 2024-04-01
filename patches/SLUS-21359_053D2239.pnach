@@ -3,7 +3,7 @@ gametitle=Metal Gear Solid 3 - Subsistence (SLUS_21359) 053D2239
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta and No.47
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,202050AC,word,3F400000
 patch=1,EE,E00367C8,extended,004CCD48
 patch=1,EE,204CCD40,extended,3FB00000
@@ -57,7 +57,11 @@ patch=1,EE,E00367C8,extended,004AD5E0
 patch=1,EE,204AD5D8,extended,3FB00000
 patch=1,EE,204AD5DC,extended,3F2F7CEE
 patch=1,EE,204AD5E4,extended,BFB00000
-patch=1,EE,0025E69C,extended,00000000 //black bands in scenes
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,0025E69C,extended,00000000
 patch=1,EE,E0010001,extended,0020C174
 patch=1,EE,0025E69C,extended,00000001
 

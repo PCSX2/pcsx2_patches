@@ -2,7 +2,8 @@ gametitle=Kingdom Hearts (PAL-G) (SCES-50969)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
+description=Widescreen hack
 
 // 16:9
 patch=1,EE,00110634,word,3c1b3f40 // 00000000 hor fov gameplay
@@ -43,11 +44,11 @@ patch=1,EE,001f9710,word,24030020 // 24030018
 patch=1,EE,0010629c,word,3c071900 // 3c071c08
 patch=1,EE,002a1588,word,70007000 // 74007000
 
-//black border fix
+[Remove Blackbars]
+author=ElHecht
+description=Removes black bars in cutscenes
 patch=1,EE,0010430c,word,00000000 // ac510e48
 patch=1,EE,0010442c,word,00000000 // ac450e48
 
 [60 FPS]
 patch=1,EE,001104d8,word,24820000 // 24820001
-
-
