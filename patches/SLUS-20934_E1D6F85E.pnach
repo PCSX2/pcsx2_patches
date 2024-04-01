@@ -15,13 +15,12 @@ patch=1,EE,001f5c90,word,3442bbd6
 //FMV's fix by nemesis2000
 patch=1,EE,205D9054,extended,3faaaaaa
 
-//black border's fix by nemesis2000
+[Remove Blackbars]
+author=nemesis2000
+description=Removes black bars in cutscenes
 patch=1,EE,0032b0a8,word,3c023f80
-
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,20102A84,extended,34021400
-
-

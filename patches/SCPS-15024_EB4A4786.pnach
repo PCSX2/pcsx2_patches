@@ -14,12 +14,11 @@ patch=1,EE,00263c5c,word,3c023f40 //3c023f80
 //render fix
 patch=1,EE,0011484c,word,3c033fc0 //3c034000
 
-//black borders fix
-patch=1,EE,001a962c,word,24079400 //24076c00
-
 //dialog portraits fix
 patch=1,EE,0011b150,word,240501b0 //24050190
 patch=1,EE,0011b180,word,240501b0 //24050190
 patch=1,EE,0012ad38,word,25850750 //25850780
 
-
+[Remove Blackbars]
+description=Removes black bars in cutscenes
+patch=1,EE,001a962c,word,24079400 //24076c00

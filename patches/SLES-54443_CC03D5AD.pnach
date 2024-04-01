@@ -1,23 +1,24 @@
-gametitle=Made Man (E)(SLES-54443)
+gametitle=Made Man (PAL-M) (SLES-54443) CC03D5AD
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00152E68,word,3C013FAB //3C013F80 Y-Fov
+patch=1,EE,00220530,word,3C013F20 //3C013F00 Zoom
+patch=1,EE,001B2D70,word,3C013F04 //3C013F1C Zoom menu fix
+patch=1,EE,00498B28,word,3F700000 //3F800000 Black bars fix
 
-//Widescreen hack 16:9
+[Remove Blackbars]
+author=Arapapa & PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,00100B88,word,24040000 //24040001 Upper
+patch=1,EE,00100C88,word,24040000 //24040001 Bottom
 
-//Y-Fov
-patch=1,EE,00152e68,word,3c013fab //3c013f80
-
-//Zoom
-patch=1,EE,00220530,word,3c013f20 //3c013f00
-
-//Black Bar Fix
-patch=1,EE,00100b8c,word,3c010000 //3c014420 Bottom
-patch=1,EE,00100ba0,word,3c010000 //3c014270 Upper
-
-//Black Scene Fix
-//f043013c 00a08144 2d200002
-patch=1,EE,00100e2c,word,3c010000 //3c0143f0
-
-
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=Forces progressive scan mode 480p at startup.
+patch=1,EE,001CED74,word,24110000
+patch=1,EE,001CED78,word,24120050
+patch=1,EE,001CED84,word,24130001
