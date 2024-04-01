@@ -6,6 +6,10 @@ gsaspectratio=16:9
 author=El_Patas
 description=Widescreen Hack
 
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+
 [480p Mode]
 gsinterlacemode=1
 author=PeterDelta
