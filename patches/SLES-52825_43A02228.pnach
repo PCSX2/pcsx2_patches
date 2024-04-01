@@ -1,5 +1,22 @@
 gametitle=Serie de Catastróficas Desdichas de Lemony Snicket, Una (PAL-S) SLES-52825 43A02228
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0019c130,word,3c013f1b //3c013f00 Zoom
+patch=1,EE,0019c17c,word,080eb428 //Y-Fov
+patch=1,EE,003ad0a0,word,46001082
+patch=1,EE,003ad0a4,word,3c013f40
+patch=1,EE,003ad0a8,word,4481f000
+patch=1,EE,003ad0ac,word,461e1082
+patch=1,EE,003ad0b0,word,08067060
+
+[Remove Blackbars]
+author=Arapapa
+description=Removes black bars in cutscenes
+patch=1,EE,001c2e10,word,3c013a00 //3c013f80
+
 [50/60 FPS]
 author=PeterDelta
 description=Unlocks internal FPS. Might need EE Overclock at 130%.

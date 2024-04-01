@@ -11,6 +11,13 @@ patch=1,EE,0050eaec,word,0c04821c //00000000
 patch=1,EE,0050eaf0,word,00000000 //0c04821c
 patch=1,EE,0050eaf4,word,461e0003 //00000000
 patch=1,EE,0050eb04,word,461e0082 //c68201f8
+patch=1,EE,E0010001,extended,006698A0 //menu main
+patch=1,EE,20CE7B7C,extended,3F400000
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,001F235C,extended,3C033F40
 
 [480p Mode]
 gsinterlacemode=1
