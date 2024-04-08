@@ -31,7 +31,8 @@ patch=1,EE,003224EC,word,3FE2FC96 // 3FAA3D71
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
-author=ported by pgert
+author=El_Patas & No.47
+comment=converted by pgert
 // ==========
 patch=1,EE,00322460,word,3F0F5C2A
 patch=1,EE,00322418,word,3F23D70C
@@ -51,7 +52,8 @@ patch=1,EE,003224EC,word,3FCC49BB
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
-author=ported by pgert
+author=El_Patas & No.47
+comment=converted by pgert
 // ==========
 patch=1,EE,00322460,word,3F066667
 patch=1,EE,00322418,word,3F066665

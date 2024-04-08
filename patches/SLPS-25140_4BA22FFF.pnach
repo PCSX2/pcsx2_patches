@@ -32,7 +32,8 @@ patch=1,EE,002c4298,word,3fe3d70a
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
-author=ported by pgert
+author=nemesis2000, No.47 & Arapapa
+comment=converted by pgert
 // ==========
 patch=1,EE,002c418c,word,3F0F5C2A
 patch=1,EE,002c41d4,word,3F0F5C2A
@@ -52,7 +53,8 @@ patch=1,EE,002c4298,word,3FCC49BB
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
-author=ported by pgert
+author=nemesis2000, No.47 & Arapapa
+comment=converted by pgert
 // ==========
 patch=1,EE,002c418c,word,3F066665
 patch=1,EE,002c41d4,word,3F066665

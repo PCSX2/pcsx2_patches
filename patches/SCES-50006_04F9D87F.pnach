@@ -137,7 +137,7 @@ patch=1,EE,0013303C,word,46030842 // 46141082
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
-author=ported by pgert
+author=Dreadmoth, converted by pgert
 comment=Combine with 'Widescreen 16:9'.
 patch=1,EE,00132934,word,3C013F55
 patch=1,EE,00132EC8,word,3C013F55
@@ -145,7 +145,7 @@ patch=1,EE,00133030,word,3C013F65
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
-author=ported by pgert
+author=Dreadmoth, converted by pgert
 comment=Combine with 'Widescreen 16:9'.
 patch=1,EE,00132934,word,3C013F64
 patch=1,EE,00132EC8,word,3C013F64
@@ -153,7 +153,7 @@ patch=1,EE,00133030,word,3C013F65
 
 [Widescreen/20:9]
 gsaspectratio=Stretch
-author=ported by pgert
+author=Dreadmoth, converted by pgert
 comment=Combine with 'Widescreen 16:9'.
 patch=1,EE,00132934,word,3C013F1A
 patch=1,EE,00132EC8,word,3C013F1A
@@ -161,7 +161,7 @@ patch=1,EE,00133030,word,3C013F64
 
 [Widescreen/21:9]
 gsaspectratio=Stretch
-author=ported by pgert
+author=Dreadmoth, converted by pgert
 comment=Combine with 'Widescreen 16:9'.
 patch=1,EE,00132934,word,3C013F12
 patch=1,EE,00132EC8,word,3C013F12

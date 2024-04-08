@@ -16,7 +16,8 @@ patch=1,EE,0019A90C,word,3C013FE3 // 3C013FAA - render fix
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
-author=PeterDelta, ported by pgert
+author=PeterDelta
+comment=converted by pgert
 patch=1,EE,0018AAB0,word,3C013F2A
 patch=1,EE,001952B4,word,3C013F2A
 patch=1,EE,0019A50C,word,3C013FCC
@@ -24,7 +25,8 @@ patch=1,EE,0019A90C,word,3C013FCC
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
-author=PeterDelta, ported by pgert
+author=PeterDelta
+comment=converted by pgert
 patch=1,EE,0018AAB0,word,3C013F35
 patch=1,EE,001952B4,word,3C013F35
 patch=1,EE,0019A50C,word,3C013FBF
@@ -32,7 +34,8 @@ patch=1,EE,0019A90C,word,3C013FBF
 
 [Widescreen/20:9]
 gsaspectratio=Stretch
-author=PeterDelta, ported by pgert
+author=PeterDelta
+comment=converted by pgert
 patch=1,EE,0018AAB0,word,3C013EF5
 patch=1,EE,001952B4,word,3C013EF5
 patch=1,EE,0019A50C,word,3C01400E
@@ -40,7 +43,8 @@ patch=1,EE,0019A90C,word,3C01400E
 
 [Widescreen/21:9]
 gsaspectratio=Stretch
-author=PeterDelta, ported by pgert
+author=PeterDelta
+comment=converted by pgert
 patch=1,EE,0018AAB0,word,3C013EE9
 patch=1,EE,001952B4,word,3C013EE9
 patch=1,EE,0019A50C,word,3C014015
