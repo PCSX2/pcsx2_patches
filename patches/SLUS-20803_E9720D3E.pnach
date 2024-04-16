@@ -17,8 +17,7 @@ patch=1,EE,0010ec24,word,3c0341c0 // 3c034200
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
-author=nemesis2000 & Arapapa
-comment=converted by pgert
+author=nemesis2000 & Arapapa, converted by pgert
 patch=1,EE,0011c594,word,3c023f64
 patch=1,EE,0012ed8c,word,3c033f64
 patch=1,EE,001447a8,word,3c053f64
@@ -29,8 +28,7 @@ patch=1,EE,0010ec24,word,3c0341d5
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
-author=nemesis2000 & Arapapa
-comment=converted by pgert
+author=nemesis2000 & Arapapa, converted by pgert
 patch=1,EE,0011c594,word,3c023f55
 patch=1,EE,0012ed8c,word,3c033f55
 patch=1,EE,001447a8,word,3c053f55
@@ -41,8 +39,7 @@ patch=1,EE,0010ec24,word,3c0341e4
 
 [Widescreen/20:9]
 gsaspectratio=Stretch
-author=nemesis2000 & Arapapa
-comment=converted by pgert
+author=nemesis2000 & Arapapa, converted by pgert
 patch=1,EE,0011c594,word,3c023f12
 patch=1,EE,0012ed8c,word,3c033f12
 patch=1,EE,001447a8,word,3c053f12
@@ -53,8 +50,7 @@ patch=1,EE,0010ec24,word,3c034192
 
 [Widescreen/21:9]
 gsaspectratio=Stretch
-author=nemesis2000 & Arapapa
-comment=converted by pgert
+author=nemesis2000 & Arapapa, converted by pgert
 patch=1,EE,0011c594,word,3c023f1a
 patch=1,EE,0012ed8c,word,3c033f1a
 patch=1,EE,001447a8,word,3c053f1a
@@ -65,8 +61,7 @@ patch=1,EE,0010ec24,word,3c03419a
 
 [Widescreen/32:9]
 gsaspectratio=Stretch
-author=nemesis2000 & Arapapa
-comment=converted by pgert
+author=nemesis2000 & Arapapa, converted by pgert
 patch=1,EE,0011c594,word,3c023ec0
 patch=1,EE,0012ed8c,word,3c033ec0
 patch=1,EE,001447a8,word,3c053ec0

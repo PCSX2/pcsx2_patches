@@ -17,8 +17,7 @@ patch=1,EE,0010EC74,word,3C0341C0 // 3C034200
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
-author=nemesis2000, El_Patas & Arapapa
-comment=converted by pgert
+author=nemesis2000, El_Patas & Arapapa, converted by pgert
 patch=1,EE,0011C0D4,word,3C023F55
 patch=1,EE,0012E6EC,word,3C033F55
 patch=1,EE,001440F8,word,3C053F55
@@ -29,8 +28,7 @@ patch=1,EE,0010EC74,word,3C0341D5
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
-author=nemesis2000, El_Patas & Arapapa
-comment=converted by pgert
+author=nemesis2000, El_Patas & Arapapa, converted by pgert
 patch=1,EE,0011C0D4,word,3C023F64
 patch=1,EE,0012E6EC,word,3C033F64
 patch=1,EE,001440F8,word,3C053F64
@@ -41,8 +39,7 @@ patch=1,EE,0010EC74,word,3C0341E4
 
 [Widescreen/20:9]
 gsaspectratio=Stretch
-author=nemesis2000, El_Patas & Arapapa
-comment=converted by pgert
+author=nemesis2000, El_Patas & Arapapa, converted by pgert
 patch=1,EE,0011C0D4,word,3C023F12
 patch=1,EE,0012E6EC,word,3C033F12
 patch=1,EE,001440F8,word,3C053F12
@@ -53,8 +50,7 @@ patch=1,EE,0010EC74,word,3C034192
 
 [Widescreen/21:9]
 gsaspectratio=Stretch
-author=nemesis2000, El_Patas & Arapapa
-comment=converted by pgert
+author=nemesis2000, El_Patas & Arapapa, converted by pgert
 patch=1,EE,0011C0D4,word,3C023F1A
 patch=1,EE,0012E6EC,word,3C033F1A
 patch=1,EE,001440F8,word,3C053F1A
@@ -65,8 +61,7 @@ patch=1,EE,0010EC74,word,3C03419A
 
 [Widescreen/32:9]
 gsaspectratio=Stretch
-author=nemesis2000, El_Patas & Arapapa
-comment=converted by pgert
+author=nemesis2000, El_Patas & Arapapa, converted by pgert
 patch=1,EE,0011C0D4,word,3C023EC0
 patch=1,EE,0012E6EC,word,3C033EC0
 patch=1,EE,001440F8,word,3C053EC0

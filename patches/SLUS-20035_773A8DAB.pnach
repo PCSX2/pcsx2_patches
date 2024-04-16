@@ -30,8 +30,7 @@ patch=1,EE,00320fcc,word,3fe3d70a
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
-author=nemesis2000 & No.47
-comment=converted by pgert
+author=nemesis2000 & No.47, converted by pgert
 // ==========
 // Y-FoV-
 patch=1,EE,00320fd0,word,3F0F5C2A
@@ -54,8 +53,7 @@ patch=1,EE,00320fcc,word,3FCC49BB
 
 [Widescreen/15:10]
 gsaspectratio=Stretch
-author=nemesis2000 & No.47
-comment=converted by pgert
+author=nemesis2000 & No.47, converted by pgert
 // ==========
 patch=1,EE,00320fd0,word,3F066665
 patch=1,EE,0032102c,word,3F066665
