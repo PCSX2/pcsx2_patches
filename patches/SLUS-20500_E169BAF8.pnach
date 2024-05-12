@@ -1,10 +1,15 @@
-gametitle=Red Dead Revolver SLUS-20500 Blur orPost-Processing removal (V1.03)
-
+gametitle=Red Dead Revolver [SLUS-20500] (U)
 [Blur or Post-Processing removal]
 author=kozarovv
 comment=Blur or Post-Processing removal ported from Aggressive CRC
 
 //Vaseline removal
-//https://forums.pcsx2.net/Thread-Post-your-PCSX2-cheats-patches-here?pid=611544#pid611544
+//Source: https://forums.pcsx2.net/Thread-Post-your-PCSX2-cheats-patches-here?pid=611544#pid611544
 patch=1,EE,004c4b78,word,03e00008
 patch=1,EE,004c4b7c,word,00000000
+
+[Force 60FPS]
+description=The original game is capped at 30FPS
+author=Alexkander_
+//Source: https://www.moddb.com/downloads/red-dead-revolver-ps2-60-fps
+patch=1,EE,201018AC,word,24030001
