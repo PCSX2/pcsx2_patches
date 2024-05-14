@@ -100,19 +100,6 @@ author=Aero_
 patch=1,EE,2039CE80,extended,1000000D
 patch=1,EE,2039CEB8,extended,24020001
 
-[Full Trigger Sensitivity]
-comment=Allows the full range of the triggers (L2 & R2) to be used for throttle and brake inputs.
-author=Silent & Aero_
-// Throttle
-patch=1,EE,1043BEFC,extended,00000062
-patch=1,EE,2043BEF0,extended,00000000
-// Brake
-patch=1,EE,1043BF5C,extended,00000062
-patch=1,EE,2043BF50,extended,00000000
-// Reverse
-patch=1,EE,1043C01C,extended,00000062
-patch=1,EE,2043C010,extended,00000000
-
 [Reduce Vibration]
 comment=Reduces the strength of the controller's vibration.
 author=Aero_
