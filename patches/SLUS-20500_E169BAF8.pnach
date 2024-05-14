@@ -20,7 +20,7 @@ description=Removes the stylised black borders at the top and bottom of the scre
 author=?
 patch=1,EE,2073C604,word,00000000
 
-[Lower Bottom HUD]
-description=Lowers the bottom parts of the HUD during gameplay. Should only be used in conjunction with Remove Black Bars.
+[Move HUD Edges]
+description=Lowers the bottom & raises the top parts of the HUD during gameplay. Should only be used in conjunction with Remove Black Bars.
 author=?
 patch=1,EE,2073BF14,word,3F866666
