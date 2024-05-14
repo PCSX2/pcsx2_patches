@@ -1,4 +1,5 @@
-gametitle=Red Dead Revolver [SLUS-20500] (U)
+gametitle=Red Dead Revolver (V1.03) [SLUS-20500] (U)
+
 [Blur or Post-Processing removal]
 author=kozarovv
 comment=Blur or Post-Processing removal ported from Aggressive CRC
@@ -10,6 +11,6 @@ patch=1,EE,004c4b7c,word,00000000
 
 [Force 60FPS]
 description=The original game is capped at 30FPS
-author=Alexkander_
-//Source: https://www.moddb.com/downloads/red-dead-revolver-ps2-60-fps
+author=asasega
+//Source: https://forums.pcsx2.net/Thread-60-fps-codes?pid=548772#pid548772
 patch=1,EE,201018AC,word,24030001
