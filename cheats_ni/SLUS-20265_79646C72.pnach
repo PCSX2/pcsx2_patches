@@ -1,0 +1,7 @@
+gametitle=007 - Agent Under Fire
+
+[Deinterlacing Code]
+author=Josh_7774
+description=Disable Interlacing
+patch=1,EE,D012A400,extended,ACE20134
+patch=1,EE,2012A400,extended,00000000

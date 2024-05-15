@@ -1,0 +1,7 @@
+gametitle=Baldur's Gate - Dark Alliance II
+
+[Deinterlacing Patch]
+author=Josh_7774
+description=Disable Interlacing
+patch=1,EE,201EA27C,extended,00000000
+
