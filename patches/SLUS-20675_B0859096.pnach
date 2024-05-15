@@ -28,3 +28,8 @@ patch=1,EE,002c4578,word,3421d70a
 //patch=1,EE,002c82d4,word,3c014288 //alternate render fix value
 patch=1,EE,002c82dc,word,3c013fe3
 patch=1,EE,002c82e0,word,3421d70a
+
+[Deinterlacing Patch]
+author=Josh_7774
+description=Disable Interlacing
+patch=1,EE,201EA27C,extended,00000000
