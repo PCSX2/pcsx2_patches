@@ -52,6 +52,25 @@ patch=1,EE,2069F4C8,extended,41F00000 // 30.0
 // Higher values make the camera lean further to the sides
 patch=1,EE,2069F4D0,extended,41200000 // 10.0
 
+[GT5 Camera Placement]
+comment=Moves the exterior camera further from the ground like Gran Turismo 5.
+author=Aero_
+patch=1,EE,2037B304,extended,0812555E // j 00495578
+patch=1,EE,20495578,extended,8E180008 // lw t8,0x8(s0)
+patch=1,EE,2049557C,extended,3C19C0C0 // lui t9,0xC0C0
+patch=1,EE,20495580,extended,17380006 // bne t9,t8,0x0049559C : jumps if Z-Axis does not equal -6.0 float
+patch=1,EE,20495584,extended,3C19BFF3 // lui t9,0xBFF3 : Y-Axis 1st-Half of Float Value
+patch=1,EE,20495588,extended,37393333 // ori t9,0x3333 : Y-Axis 2nd-Half of Float Value
+patch=1,EE,2049558C,extended,AE190004 // sw t9,0x4(s0)
+patch=1,EE,20495590,extended,3C19C0E0 // lui t9,0xC0E0 : Z-Axis 1st-Half of Float Value
+patch=1,EE,20495594,extended,37390000 // ori t9,0x0000 : Z-Axis 2nd-Half of Float Value
+patch=1,EE,20495598,extended,AE190008 // sw t9,0x8(s0)
+patch=1,EE,2049559C,extended,C60C0000 // lwc1 f12,0x0(s0)
+patch=1,EE,204955A0,extended,C60D0004 // lwc1 f13,0x4(s0)
+patch=1,EE,204955A4,extended,0C129E11 // jal 0x004A7844
+patch=1,EE,204955A8,extended,C60E0008 // lwc1 f14,0x8(s0)
+patch=1,EE,204955AC,extended,080DECC5 // j 0037B314
+
 [Far chase camera]
 description=Added GT4 First Preview camera mode
 author=Silent
@@ -68,3 +87,32 @@ patch=1,EE,1037AD3A,extended,8442
 
 patch=1,EE,206211E8,extended,00010000
 patch=1,EE,206211EC,extended,00060014
+
+[Analog HUD For All Camera Views]
+comment=The analog tachometer will be used for the chase camera.
+author=Aero_
+patch=1,EE,2039CE80,extended,1000000D
+patch=1,EE,2039CEB8,extended,24020000
+
+[Digital HUD For All Camera Views]
+comment=The digital tachometer will be used for the bumper camera and roof camera.
+author=Aero_
+patch=1,EE,2039CE80,extended,1000000D
+patch=1,EE,2039CEB8,extended,24020001
+
+[Reduce Vibration]
+comment=Reduces the strength of the controller's vibration.
+author=Aero_
+patch=1,EE,2036D1C4,extended,3C014170 // lui at,0x4170 : Vibration Float
+
+[Disable Dynamic Race Text] 
+comment=Disables the text that appears at the bottom of the screen. Example: "GET READY TO DRIVE"
+author=Aero_
+patch=1,EE,2039DA54,extended,00000000 // GET READY TO DRIVE
+patch=1,EE,2039D77C,extended,00000000 // Penalty Timer
+
+[Autoboot in 480p]
+comment=The game will always start in 480p instead of 480i.
+author=Silent
+patch=1,EE,204364A8,extended,AE0516B0
+patch=1,EE,10436598,extended,10E8

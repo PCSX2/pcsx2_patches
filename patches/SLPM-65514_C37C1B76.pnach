@@ -6,7 +6,7 @@ author=nemesis2000
 description=Widescreen hack by nemesis2000 (pnach by nemesis2000)
 patch=1,EE,00149200,word,3c023f40
 
-[No Interlacing]
+[No-Interlacing]
 gsinterlacemode=1
 author=val
 description=Attempts to disable interlaced offset rendering.

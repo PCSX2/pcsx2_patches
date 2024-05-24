@@ -3,7 +3,7 @@ gametitle=Jak 3 (PAL-M7) (SCES-52460)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+comment=Widescreen Hack.
 // 16:9
 patch=1,EE,2030afc8,extended,3c033f1f // 3c033f00 zoom
 patch=1,EE,207d6158,extended,0014877D // 00146171 force native 16:9 mode
@@ -35,5 +35,3 @@ patch=1,EE,20AC3F18,extended,43DF8000 // 43D90000
 patch=1,EE,20AC3F58,extended,43DF8000 // 43D90000
 patch=1,EE,20AC3F98,extended,43DF8000 // 43D90000
 patch=1,EE,20AC3FD8,extended,43DF8000 // 43D90000
-
-

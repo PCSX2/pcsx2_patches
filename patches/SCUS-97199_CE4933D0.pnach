@@ -1,8 +1,8 @@
-gametitle=Ratchet & Clank (NTSC-U)
+//gametitle=Ratchet & Clank (NTSC-U)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen hack by PsxFan107. Currently it appears to break rendering of textures in some areas.
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//comment=Widescreen hack by PsxFan107. Currently it appears to break rendering of textures in some areas.
 
 // DWORD Code patching routine
 //patch=1,EE,200C0000,extended,3C1B000C
