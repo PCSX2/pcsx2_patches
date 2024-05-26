@@ -21,3 +21,10 @@ patch=1,EE,006617B8,word,00000001
 author=Gabominated
 description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,202E4ECC,extended,00000000 //14400008 //fps
+
+[60 FPS]
+gsinterlacemode=1
+author=Gabominated
+description=Progressive scan Mode at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,204d0af0,extended,24120050 //00069403 480p
+patch=1,EE,202E4ECC,extended,10400008 //14400008 //fps

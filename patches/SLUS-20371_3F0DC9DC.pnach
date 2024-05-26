@@ -1,0 +1,14 @@
+gametitle=The Thing SLUS-20371 3F0DC9DC
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Widescreen Hack
+//Gameplay 16:9
+patch=1,EE,0016EC34,word,3C023FE3 //3C023FAA (Increases hor. axis)
+patch=1,EE,0016EC38,word,34428E38 //3442AAAB
+
+[60 FPS]
+author=asasega
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20968CA8,word,00000001 //00000002
