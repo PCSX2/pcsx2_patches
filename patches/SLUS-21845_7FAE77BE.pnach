@@ -1,13 +1,47 @@
-//gametitle=Shin Megami Tensei: Devil Summoner 2: Raidou Kuzunoha vs. King Abaddon (NTSC-U)
+gametitle=Shin Megami Tensei - Devil Summoner 2: Raidou Kuzunoha vs. King Abaddon * NTSC-U * SLUS-21845 * 7FAE77BE
 
-//[Widescreen 16:9]
-//gsaspectratio=16:9
-//comment=Widescreen pnach (Only works for 3D, not for prerendered backgrounds)
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Red_Tv
 
-//patch=1,EE,004278e4,word,3FC6D3A0 //3F951EB8 hor fov
-//patch=1,EE,00427c94,word,3FC6D3A0 //3F951EB8 unknown
+// Gameplay Widescreen
+patch=1,EE,204278e4,extended,3FC6D3A0 // 3F951EB8 - X-FoV
 
-//black borders's fix (optional)
-//patch=1,EE,00116928,word,24040000
-//patch=1,EE,00106be0,word,a380a213
-//patch=1,EE,001069c4,word,2404FF00
+// Widescreen in dialogue screen
+patch=1,EE,20427c94,word,3FC6D3A0 // 3F951EB8
+
+// Revert to to original asspect ratio when needed
+patch=1,EE,e0010001,extended,004DE83C
+patch=1,EE,204278e4,extended,3F951EB8
+
+// Fix World Map
+patch=1,EE,e0010E0E,extended,00B1A730
+patch=1,EE,204278ec,extended,3f000000
+
+// Widescreen in Status screens
+patch=1,EE,e0010001,extended,004E3D04
+patch=1,EE,204278e4,extended,3FC6D3A0
+
+// Widescreen during ingame Cutscenes (version 1)
+//patch=1,EE,e0010001,extended,0043ECF0
+//patch=1,EE,204278e4,extended,3FC6D3A0
+
+// Widescreen during ingame Cutscenes (version 2)
+patch=1,EE,e0020001,extended,0043ECF0
+patch=1,EE,e0010080,extended,005D7B0C
+patch=1,EE,204278e4,extended,3FC6D3A0
+
+[Remove Blackbars]
+author=Little giant
+patch=1,EE,00116928,word,24040000
+patch=1,EE,00106be0,word,a380a213
+patch=1,EE,001069c4,word,2404FF00
+
+[60 FPS]
+author=Red_Tv
+comment=Might need EE overclocking to be stable.
+patch=1,EE,0011e178,word,10000006 // 14400006
+
+[No-Interlacing]
+author=Red_Tv
+patch=1,EE,003d1ca0,word,00000000 // a382016a
