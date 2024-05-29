@@ -1,0 +1,17 @@
+gametitle=Project Arms (J) (SLPS_251.02)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa, ported by FrankyBuster
+comment=Widescreen hack
+
+//Mastercode
+
+patch=1,EE,9030f918,word,0c0c3dee
+
+//Y-Fov
+
+patch=1,EE,202f70a4,word,3c01bf40 //3c01bf80
+
+//Zoom
+patch=1,EE,202f70d0,word,3c0145b4 //3c0145f0
