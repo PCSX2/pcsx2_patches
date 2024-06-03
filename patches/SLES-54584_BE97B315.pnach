@@ -1,0 +1,7 @@
+gametitle=Pac-Man Rally (PAL-M) SLES-54584 BE97B315
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,005DE188,word,3F800000 //40000000
+patch=1,EE,0059AF90,word,3F000000 //3F800000

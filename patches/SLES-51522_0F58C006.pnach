@@ -1,0 +1,17 @@
+gametitle=Return to Castle Wolfenstein - Operation Resurrection (PAL-S) SLES-51522 0F58C006
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+comment=Widescreen hack 16:9
+patch=1,EE,0012f928,word,3c0142ab //ver fov 1
+patch=1,EE,0012f92c,word,3421e328
+patch=1,EE,001302dc,word,3c0142ab //ver fov 2
+patch=1,EE,001302e0,word,3421e328
+patch=1,EE,0012f6d8,word,3c0141e9 //binoculars fov
+patch=1,EE,0012f724,word,3c0142d5 //gameplay fov
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00174394,word,2C420001 //2C420002

@@ -1,0 +1,58 @@
+gametitle=Champions: Return to Arms * PAL-M4 * SLES-53039 * 5C64E73A
+
+// ==========
+// This game gains a minor speed-up by "EE Cyclerate" to 2
+//  under Config > Emulation Settings > Speedhacks.
+// ==========
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0018AAB0,word,3C013F19 // 3C013F4C
+patch=1,EE,001952B4,word,3C013F19 // 3C013F4C
+patch=1,EE,0019A50C,word,3C013FE3 // 3C013FAA - render fix menu
+patch=1,EE,0019A90C,word,3C013FE3 // 3C013FAA - render fix
+
+[Widescreen/16:10]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0018AAB0,word,3C013F2A
+patch=1,EE,001952B4,word,3C013F2A
+patch=1,EE,0019A50C,word,3C013FCC
+patch=1,EE,0019A90C,word,3C013FCC
+
+[Widescreen/15:10]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0018AAB0,word,3C013F35
+patch=1,EE,001952B4,word,3C013F35
+patch=1,EE,0019A50C,word,3C013FBF
+patch=1,EE,0019A90C,word,3C013FBF
+
+[Widescreen/20:9]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0018AAB0,word,3C013EF5
+patch=1,EE,001952B4,word,3C013EF5
+patch=1,EE,0019A50C,word,3C01400E
+patch=1,EE,0019A90C,word,3C01400E
+
+[Widescreen/21:9]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0018AAB0,word,3C013EE9
+patch=1,EE,001952B4,word,3C013EE9
+patch=1,EE,0019A50C,word,3C014015
+patch=1,EE,0019A90C,word,3C014015
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Agrippa
+comment=EE overclocking is needed to avoid infrequent frame rate drops.
+patch=1,EE,20451640,extended,00000000
+patch=1,EE,20451644,extended,00000001
+patch=1,EE,204516B4,extended,00000001
+patch=1,EE,2019E41C,extended,10000010
+patch=1,EE,2019E47C,extended,10000004
+patch=1,EE,2019ED0C,extended,24020001

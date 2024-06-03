@@ -1,0 +1,32 @@
+gametitle=Midnight Club 3 - DUB Edition Remix SLUS_213.55
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+
+patch=1,EE,00527e14,word,3c013fe3
+patch=1,EE,00527e18,word,34218e34
+
+patch=0,EE,00527e14,word,3c013fe3
+patch=0,EE,00527e18,word,34218e34
+
+//[Widescreen 16:9 HUD]
+//author=SuperType1. Appears to cause extreme FPS issues when used.
+//description=Fixes HUD scaling when using Widescreen hack (Requires HW Renderer)
+//patch=1,EE,001D6DB0,byte,1e0 //480p geometry centering 
+//patch=1,EE,001D6DB0,byte,280 //480p geometry centering 
+//patch=1,EE,001C8310,byte,280 //480p post fx centering
+//patch=1,EE,001C8314,byte,1e0 //480p post fx centering
+//patch=1,EE,001C829C,word,0000000 //disable "hdr" glow cut off
+//patch=1,EE,001C82AC,word,0000000 //disable "hdr" glow cut off
+//patch=1,EE,001C828C,word,241E0280 //"hdr" glow offset
+//patch=0,EE,204BF458,byte,01 //enable 480p
+
+[Disable motion blur]
+description= removes motion blur 
+patch=1,EE,001CA488,word,03e00008
+
+[60 FPS]
+author=robertesaum1
+description=Patches the game to run at 60 FPS (Requires 300% EE Overclock).
+patch=2,EE,205280F0,extended,00000000

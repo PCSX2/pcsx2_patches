@@ -1,0 +1,9 @@
+gametitle=Steambot Chronicles SLES_543.35
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=bigdemon
+comment=Widescreen Hack Conversion
+
+patch=1,EE,00132B40,word,3c033f40  //3c033f80
+patch=1,EE,00132998,word,3c0643d6  //3C0643A0

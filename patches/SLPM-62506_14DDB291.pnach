@@ -1,0 +1,27 @@
+gametitle=Vampire Panic (First Print Limited Edition) (J)(SLPM-62506)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+patch=1,EE,001ac344,word,0809b8c0 // e61a0264
+
+patch=1,EE,0026e304,word,3c013f40  // 00000000
+patch=1,EE,0026e308,word,4481f000  // 00000000
+patch=1,EE,0026e30c,word,461ed682  // 00000000
+patch=1,EE,0026e310,word,e61a0264  // 00000000
+patch=1,EE,0026e314,word,0806b0d2  // 00000000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//No interlacing
+patch=1,EE,201E1AB0,word,30420000
+patch=1,EE,00101f5c,word,00000000 //64420008
+//Remove Broken Effect
+patch=1,EE,003FC3E4,word,00400000
+
+

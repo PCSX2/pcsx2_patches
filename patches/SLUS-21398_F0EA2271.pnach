@@ -1,0 +1,10 @@
+gametitle=Dynasty Warriors 5: Empires (NTSC-U)
+
+[Widescreen 16:9]
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
+gsaspectratio=16:9
+
+patch=1,EE,00146e4c,word,3c0243d6 //3c0243a0
+patch=1,EE,0019f8ec,word,3c023f2b //3c023f00
+
+

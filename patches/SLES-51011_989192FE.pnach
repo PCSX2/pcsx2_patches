@@ -1,0 +1,23 @@
+gametitle=Knight Rider (PAL-M4)(SLES-51011)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ThirteenAG
+comment=Widescreen Fix
+//https://thirteenag.github.io/wfp#kr
+patch=1,EE,003E3600,short,3FE3
+patch=1,EE,003E3604,short,8E39
+
+patch=1,EE,003EB864,short,3FE3
+patch=1,EE,003EB868,short,8E39
+
+patch=1,EE,00444108,word,3FE38E39
+
+patch=1,EE,003EB910,short,3C2C
+patch=1,EE,003EB914,short,52D4
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,E0010011,extended,0079B31C
+patch=1,EE,00367BD4,extended,24020001 //24020002

@@ -1,0 +1,15 @@
+gametitle=Enthusia - Professional Racing (SLUS_20967)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by No.47
+patch=1,EE,20383708,word,3F400000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2013363C,word,34060001
+patch=1,EE,20383A40,word,00009450
+
+

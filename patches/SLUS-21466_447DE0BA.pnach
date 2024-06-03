@@ -1,0 +1,8 @@
+gametitle=The Plan SLUS_214.66
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,001125C8,word,3C033FAA
+
+

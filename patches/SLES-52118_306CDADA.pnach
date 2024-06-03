@@ -1,0 +1,18 @@
+gametitle=Castlevania: Lament of Innocence (SLES-52118)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+comment=Widescreen Hack
+
+//gameplay
+patch=1,EE,006ec304,word,23c013f40 //hor value
+patch=1,EE,006ec308,word,44810000
+patch=1,EE,006ec310,word,4600c602
+
+//FMV's fix
+patch=1,EE,00452e30,word,24057300//y-pos
+patch=1,EE,00452e34,word,24062000//x width
+patch=1,EE,00452e3c,word,24071b00//y width
+
+

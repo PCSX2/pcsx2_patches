@@ -1,0 +1,7 @@
+gametitle=Gran Turismo 2000 [PAPX-90203]
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2023FF70,word,00000000
+
+

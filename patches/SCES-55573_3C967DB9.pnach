@@ -1,0 +1,6 @@
+gametitle=MotorStorm - Arctic Edge (PAL-M) SCES-55573 3C967DB9 
+
+[50 FPS]
+author=El_Patas, original code by asasega
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0039B4F8,word,00000000

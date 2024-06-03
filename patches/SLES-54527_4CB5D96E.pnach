@@ -1,0 +1,14 @@
+gametitle=Flushed Away [PAL-M5] (SLES_545.27) 4CB5D96E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,0027CD34,word,3C013CAD //3C013C8E Zoom
+patch=1,EE,001C8334,word,3C013C6E //3C013C8E Y-FOV
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,002AE4A4,word,00000000 //00031A38
+patch=1,EE,003537A4,word,2405003C //2405001E

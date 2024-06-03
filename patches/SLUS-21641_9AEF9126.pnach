@@ -1,0 +1,10 @@
+gametitle=Innocent Life - A Futuristic Harvest Moon (NTSC-U) (SLUS-21641)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by VIRGIN KLM
+
+//Widescreen
+patch=1,EE,2023BDB0,extended,3F199999 //3F4CCCCC
+
+

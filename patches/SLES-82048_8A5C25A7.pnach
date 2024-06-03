@@ -1,0 +1,73 @@
+gametitle=Metal Gear Solid 3: Subsistence [PAL-Spain] (SLES_820.48) (Disc 1 of 3) 8A5C25A7
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta and El_Patas
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,20205D4C,extended,3F400000 //3F800000 (Increases horiz. axis)
+patch=1,EE,E00367C8,extended,004CFC50
+patch=1,EE,204CFC48,extended,3FB00000
+patch=1,EE,204CFC4C,extended,3F43F7CF
+patch=1,EE,204CFC54,extended,BFB00000
+patch=1,EE,E00367C8,extended,004A4348
+patch=1,EE,204A4340,extended,3FB00000
+patch=1,EE,204A4344,extended,3F43F7CF
+patch=1,EE,204A434C,extended,BFB00000
+patch=1,EE,E00367C8,extended,004B5F80
+patch=1,EE,204B5F78,extended,3FB00000
+patch=1,EE,204B5F7C,extended,3F43F7CF
+patch=1,EE,204B5F84,extended,BFB00000
+patch=1,EE,E00367C8,extended,004EC068
+patch=1,EE,204EC060,extended,3FB00000
+patch=1,EE,204EC064,extended,3F43F7CF
+patch=1,EE,204EC06C,extended,BFB00000
+patch=1,EE,E00367C8,extended,00583B48
+patch=1,EE,20583B40,extended,3FB00000
+patch=1,EE,20583B44,extended,3F43F7CF
+patch=1,EE,20583B4C,extended,BFB00000
+patch=1,EE,E00367C8,extended,004B9630
+patch=1,EE,204B9628,extended,3FB00000
+patch=1,EE,204B962C,extended,3F43F7CF
+patch=1,EE,204B9634,extended,BFB00000
+patch=1,EE,E00367C8,extended,00594AE8
+patch=1,EE,20594AE0,extended,3FB00000
+patch=1,EE,20594AE4,extended,3F43F7CF
+patch=1,EE,20594AEC,extended,BFB00000
+patch=1,EE,E00367C8,extended,0059CB08
+patch=1,EE,2059CB00,extended,3FB00000
+patch=1,EE,2059CB04,extended,3F43F7CF
+patch=1,EE,2059CB0C,extended,BFB00000
+patch=1,EE,E00367C8,extended,0055AC80
+patch=1,EE,2055AC78,extended,3FB00000
+patch=1,EE,2055AC7C,extended,3F43F7CF
+patch=1,EE,2055AC84,extended,BFB00000
+patch=1,EE,E00367C8,extended,0049D3D0
+patch=1,EE,2049D3C8,extended,3FB00000
+patch=1,EE,2049D3CC,extended,3F43F7CF
+patch=1,EE,2049D3D4,extended,BFB00000
+patch=1,EE,E00367C8,extended,004B9EF8
+patch=1,EE,204B9EF0,extended,3FB00000
+patch=1,EE,204B9EF4,extended,3F43F7CF
+patch=1,EE,204B9EFC,extended,BFB00000
+patch=1,EE,E00367C8,extended,004A0930
+patch=1,EE,204A0928,extended,3FB00000
+patch=1,EE,204A092C,extended,3F43F7CF
+patch=1,EE,204A0934,extended,BFB00000
+patch=1,EE,E00367C8,extended,004B04E0
+patch=1,EE,204B04D8,extended,3FB00000
+patch=1,EE,204B04DC,extended,3F43F7CF
+patch=1,EE,204B04E4,extended,BFB00000
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,0026139C,extended,00000000
+patch=1,EE,E0010001,extended,0020CE74
+patch=1,EE,0026139C,extended,00000001
+
+[50 FPS]
+author=Snake356
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001D67B8,extended,00000000 //00000040
+patch=1,EE,001D7A78,extended,00000001 //00000002
+patch=1,EE,001D7A7C,extended,00000000 //00000001

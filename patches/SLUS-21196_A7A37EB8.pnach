@@ -1,0 +1,8 @@
+gametitle=Indigo Prophecy SLUS_211.96
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,20836500,extended,3FE38E38 // 3FAAAAAB
+
+

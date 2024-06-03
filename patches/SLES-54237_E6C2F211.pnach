@@ -1,0 +1,13 @@
+gametitle=Pirates of The Caribbean - The Legend of Jack Sparrow PAL[M5] (SLES_542.37) E6C2F211
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack Conversion
+author=Bigdemon
+//16:9
+patch=1,EE,204931D8,extended,3FAB851F // 3F800000
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,00385084,word,24030000 //24030001

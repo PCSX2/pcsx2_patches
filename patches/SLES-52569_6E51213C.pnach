@@ -1,0 +1,9 @@
+gametitle=Spyro: A Hero's Tail (SLES-52569)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen
+
+//Widescreen + Extra Perspective
+patch=1,EE,003B28C8,extended,3C013F10
+patch=2,EE,003B28DC,extended,3C013F10

@@ -1,0 +1,6 @@
+gametitle=Gift (PAL-S) SLES-50299 212D709B
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001FE34C,word,00000000

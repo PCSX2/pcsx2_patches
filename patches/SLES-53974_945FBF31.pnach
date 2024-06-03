@@ -1,0 +1,20 @@
+gametitle=Dragon Quest VIII [PAL-M] SLES-53974 945FBF31
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,203EE164,extended,00000002 
+patch=1,EE,E0010000,extended,00639ACC
+patch=1,EE,203EE164,extended,00000001 //FPS
+patch=1,EE,20179E98,extended,3C023F00 //3C023F80 Ocean
+patch=1,EE,E00145C0,extended,003E1B88 //fixed niebla santuario dragoviano
+patch=1,EE,20179E98,extended,3C023F80
+patch=1,EE,2018DCC0,extended,3C023F00 //3C023F80 Clouds
+patch=1,EE,201F5354,extended,3C033F00 //3C033F80 Calls
+patch=1,EE,203FEAEC,extended,3F19999A //3F99999A speed general
+patch=1,EE,E0010001,extended,003FE650 //in battles fix
+patch=1,EE,203FEAEC,extended,3F49999A
+patch=1,EE,2017037C,extended,3C023F00 //3C023F80 camera 
+patch=1,EE,201703C0,extended,3C023F00 //3C023F80 camera 
+patch=1,EE,20947814,extended,3D19999A //3D99999A camera speed
+patch=1,EE,203DF8D0,extended,3DCCCCCD //3E4CCCCD wind trees

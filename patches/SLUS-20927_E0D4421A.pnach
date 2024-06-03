@@ -1,0 +1,16 @@
+gametitle=Time Crisis - Crisis Zone SLUS_209.27
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,00100658,word,3c033f40
+
+[No Guncon Flash]
+author=Souzooka
+description=Removes the flash and fog effect when firing with the Guncon controller.
+// Sudden white flash
+patch=0,EE,20126EF0,extended,03E00008
+patch=0,EE,20126EF4,extended,00000000
+// Full-auto fog effect
+patch=0,EE,20126FB0,extended,03E00008
+patch=0,EE,20126FB4,extended,00000000

@@ -1,0 +1,18 @@
+gametitle=7 Blades [PAL] (SLES-50109)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa & Gabominated
+description=Widescreen hack
+
+patch=1,EE,002EF7EC,word,3C013FAB //3C013F80 Y-FOV 3C013FAB
+patch=1,EE,002EF970,word,3C0143c0 //3C014400 zoom a by Gabominated
+patch=1,EE,002EF978,word,3C01433f //3C014380 zoom b by Gabominated
+
+[50 FPS]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,203BE838,extended,24020000 //24020001 fps
+patch=1,EE,2051bb2c,extended,3E99999a //3F19999a speed
+patch=1,EE,2035e8e8,extended,3c013f00 //3c013f80 map A
+patch=1,EE,2036565c,extended,3c013f00 //3c013f80 map B

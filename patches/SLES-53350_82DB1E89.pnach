@@ -1,0 +1,9 @@
+gametitle=Sonic Gems Collection (PAL-M) SLES-53350 82DB1E89 elf: S1.DAT Sonic CD
+
+[Sonic CD 60 FPS]
+author=PeterDelta
+comment=Forces progressive scan mode when starting Sonic CD
+patch=1,EE,001025DC,word,3C050000
+patch=1,EE,001025E4,word,3C060052
+patch=1,EE,001025EC,word,3C070001
+patch=1,EE,1054F918,extended,01E0

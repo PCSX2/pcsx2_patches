@@ -1,0 +1,15 @@
+gametitle=Charlie's Angels (E)(SLES-51750)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+//Y-Fov
+patch=1,EE,00110d0c,word,3c01bf2a //3c01bf00
+
+//Zoom
+patch=1,EE,00110c78,word,3c01bfab //3c01bf80
+
+

@@ -1,0 +1,30 @@
+gametitle=Army Men - RTS (PAL-Unk)(SLES-50706)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen Hack
+//3D Scene which is proceeding automatically
+//803f013c 00188144 9000b17f
+patch=1,EE,001a37f4,word,3c013fab //3c013f80 Fov
+//003f013c 00088144 080002c6
+patch=1,EE,001a3834,word,3c013f05 //3c013f00 Zoom
+
+//Game Play
+//803f013c 00a08144 43480200
+patch=1,EE,001a32fc,word,3c013fab //3c013f80 Fov
+//003f013c 00388144 080000c6
+patch=1,EE,001a3734,word,3c013f05 //3c013f00 Zoom
+
+//Render fix
+//803f013c 00188144 43200146
+//patch=1,EE,0020d2ec,word,3c013fab //3c013f80
+
+//Odd Zoom (able to avoid rendering fix)
+//803f013c 00a08144
+patch=1,EE,0020cf5c,word,3c013fb0 //3c013f80
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,003F5974,word,00000000 //00000001

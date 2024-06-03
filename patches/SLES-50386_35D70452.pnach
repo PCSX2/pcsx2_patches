@@ -1,0 +1,10 @@
+gametitle=Crash Bandicoot Wrath Of Cortex (SLES-50386) (PAL)Ver 1.03
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Crash Bandicoot Wrath Of Cortex
+
+// 16:9 hack
+patch=1,EE,21D3F5A4,extended,3F100000 // 3F400000
+
+

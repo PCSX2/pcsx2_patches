@@ -1,0 +1,31 @@
+gametitle=Armored Core - Nexus SLUS_210.79
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen Hack
+patch=1,EE,001211D0,extended,00000019 // 3C033F4C hor fov gameplay
+patch=1,EE,101211D8,extended,0000999A // 3462CCCD hor fov gameplay
+patch=1,EE,001587C0,extended,000000D6 // 3C0243A0 renderfix
+patch=1,EE,C1E16348,extended,3C023F80
+patch=1,EE,01E16348,extended,00000040 // 3C023F80 hor fov menu
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,D02C1050,extended,01001400
+patch=1,EE,0023C9AC,extended,00000001
+patch=1,EE,D02C1050,extended,01009000
+patch=1,EE,0023C9AC,extended,00000000
+
+[Remove Blur]
+author=001 & Berylskid
+description=Removes blur effects.
+patch=1,EE,20131AB0,extended,00000000
+patch=1,EE,D0298C50,extended,02100000
+patch=1,EE,61CC6EE8,extended,00000000
+patch=1,EE,00000001,extended,0000005F
+
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,00209A9A,extended,00000000

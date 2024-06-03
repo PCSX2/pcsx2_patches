@@ -1,0 +1,8 @@
+gametitle=Call of Duty 2 - Big Red One (PAL-M3) SLES-53416 DFB26142
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,004080A0,extended,00000002
+patch=1,EE,E0010001,extended,004D8DB0
+patch=1,EE,204080A0,extended,00000001

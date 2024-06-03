@@ -1,0 +1,26 @@
+gametitle=Metal Arms - Glitch in the System (E)(SLES-51758)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen Hack
+//Widescreen hack 16:9
+
+//Zoom
+//803f013c 00508144 c2190646
+patch=1,EE,003dd134,word,3c013f40 //3c013f80
+
+//Y-Fov
+//82390746 6400a7e7
+patch=1,EE,003dd1e0,word,08109d74 //46073982
+
+patch=1,EE,004275d0,word,46073982 //00000000
+patch=1,EE,004275d4,word,3c013f10 //00000000
+patch=1,EE,004275d8,word,4481f000 //00000000
+patch=1,EE,004275dc,word,461e3182 //00000000
+patch=1,EE,004275e0,word,080f7479 //00000000
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,004BEA90,word,00000001 //00000002

@@ -1,0 +1,26 @@
+gametitle=Death by Degrees (SLUS-20934)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+
+//gameplay by ElHecht
+patch=1,EE,00188250,word,3c023fe3
+patch=1,EE,00188258,word,3443bbd6
+patch=1,EE,0018606c,word,3c023fe3
+patch=1,EE,00186070,word,3443bbd6
+patch=1,EE,001f5c88,word,3c023fe3
+patch=1,EE,001f5c90,word,3442bbd6
+
+//FMV's fix by nemesis2000
+patch=1,EE,205D9054,extended,3faaaaaa
+
+[Remove Blackbars]
+author=nemesis2000
+description=Removes black bars in cutscenes
+patch=1,EE,0032b0a8,word,3c023f80
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20102A84,extended,34021400

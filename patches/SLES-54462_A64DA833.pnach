@@ -1,0 +1,15 @@
+gametitle=Zombie Virus (E)(SLES-54462)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+//X-Fov
+patch=1,EE,00137f94,word,3c033f40 //3c033f80
+
+//Render Fix
+patch=1,EE,00138030,word,3c023f30 //3c023f00
+
+

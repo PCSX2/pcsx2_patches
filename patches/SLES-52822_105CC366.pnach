@@ -1,0 +1,27 @@
+gametitle=Prince of Persia - Warrior Within (PAL-M6) (SLES-52822)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+comment=Widescreen Hack
+// 16:9
+patch=1,EE,005446d0,word,3c013f40 // 00000000 hor fov
+patch=1,EE,005446ec,word,34210000 // 00000000 hor fov
+patch=1,EE,005446f4,word,4481f000 // 00000000
+patch=1,EE,005446f8,word,461e1743 // 00000000
+patch=1,EE,00544708,word,461eb583 // 3c024000
+patch=1,EE,0054470c,word,4600e8c6 // 44821800
+
+// 16:10
+//patch=1,EE,005446d0,word,3c013f55 // 00000000 hor fov
+//patch=1,EE,005446ec,word,34215555 // 00000000 hor fov
+//patch=1,EE,005446f4,word,4481f000 // 00000000
+//patch=1,EE,005446f8,word,461e1743 // 00000000
+//patch=1,EE,00544708,word,461eb583 // 3c024000
+//patch=1,EE,0054470c,word,4600e8c6 // 44821800
+
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,007B7554,word,00000001 //00000002 srl zero,0x00

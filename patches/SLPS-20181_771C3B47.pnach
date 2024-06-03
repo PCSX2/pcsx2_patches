@@ -1,0 +1,11 @@
+gametitle=Alpine Racer 3 (Japan) [SLPS-20181]
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,E00410E0,extended,00686C80
+patch=1,EE,20686C78,extended,00000001
+patch=1,EE,20686C80,extended,00001000
+patch=1,EE,20686CA0,extended,00000001
+patch=1,EE,20686CA8,extended,00001000
+
+

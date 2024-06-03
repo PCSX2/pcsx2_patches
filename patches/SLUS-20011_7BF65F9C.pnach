@@ -1,0 +1,6 @@
+gametitle=Orphen: Scion of Sorcery [NTSC-U] (SLUS-20011) 7BF65F9C
+
+[Remove Blackbars]
+author=Little Giant
+description=Removes black bars in cutscenes
+patch=1,EE,0025fdc4,word,24020000 //24020001

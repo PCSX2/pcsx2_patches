@@ -1,0 +1,8 @@
+gametitle=Call of Duty 3 (PAL-M3) SLES-54167 247F025E
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,0053CF84,extended,00000002
+patch=1,EE,E0010001,extended,00479D0C
+patch=1,EE,2053CF84,extended,00000001

@@ -1,0 +1,23 @@
+gametitle=Syphon Filter - The Omega Strain [PAL-M] SCES-52033 59EB2A95
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Ported by PeterDelta from the other version PAL by nemesis2000
+
+//gameplay
+patch=1,EE,003973B0,word,3c043f40 //3C043F80
+patch=1,EE,003973B4,word,44841800 //3C034000
+patch=1,EE,003973B8,word,46030003 //44841800
+patch=1,EE,003973BC,word,460318c3 //44830800
+patch=1,EE,003973C0,word,46031840 //00000000
+patch=1,EE,00397434,word,e603007c //AE04007C
+
+//With and without the patch is wrong, but being stretched makes more sense with the game mechanics.
+//HUD fix
+//patch=1,EE,0039726C,word,00000000 //10C30005
+//patch=1,EE,00397274,word,3C033f40 //3C033F80
+
+//FMV's fix
+patch=1,EE,0041901C,word,241016d0 //24127880
+patch=1,EE,00419024,word,24127490 //24100F00

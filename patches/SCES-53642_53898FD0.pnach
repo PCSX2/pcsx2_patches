@@ -1,0 +1,7 @@
+gametitle=Ape Escape 3 (SCES-53642)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,2064A188,byte,1 //0 Widescreen

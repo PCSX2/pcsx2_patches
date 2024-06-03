@@ -1,0 +1,9 @@
+gametitle=Saint Seiya The Sanctuary [NTSC-J] (SLPS-25476)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+
+patch=1,EE,0015e300,word,3c033f40
+
+

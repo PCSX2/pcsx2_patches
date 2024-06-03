@@ -1,0 +1,15 @@
+gametitle=TMNT 3 Mutant Nightmare SLUS_211.84
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,0028fd80,extended,3c023f1e
+patch=1,EE,0028fdb0,extended,3c023fe3
+patch=1,EE,0028fdb8,extended,34428e38
+
+[60 FPS]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,E0020002,extended,007491C4 //condition
+patch=1,EE,107491C4,extended,00000001 //00000002 //fps
+patch=1,EE,205B06F0,extended,3c888889 //3d088889 //speed

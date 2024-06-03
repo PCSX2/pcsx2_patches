@@ -1,0 +1,7 @@
+gametitle=Dog's Life (NTSC-U) SLUS-21018 35CB5180
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,D0824B82,extended,00003D08
+patch=1,EE,20824B80,extended,3C888889

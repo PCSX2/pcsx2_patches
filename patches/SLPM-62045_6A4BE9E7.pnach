@@ -1,0 +1,8 @@
+gametitle=Jikkyou J.League Perfect Striker 3 (Japan) [SLPM-62045]
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,201012B4,word,00000000
+
+

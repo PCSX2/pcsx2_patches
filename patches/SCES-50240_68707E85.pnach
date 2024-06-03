@@ -1,0 +1,10 @@
+gametitle=Extermination [PAL-M5] (SCES_502.40)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Widescreen Hack
+
+//Gameplay 16:9
+patch=1,EE,001D3158,word,3C023F19 //3C023F4C (Increases hor. axis)
+patch=1,EE,001D315C,word,3442AAAB //3442CCCD

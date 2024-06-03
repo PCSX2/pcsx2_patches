@@ -1,0 +1,10 @@
+gametitle=Crash Nitro Kart [PAL-M6] (SLES_515.11)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Widescreen Hack
+//Gameplay 16:9
+patch=1,EE,0058BF68,word,3C023F17 //3C023F00 (Increases hor. axis)
+
+

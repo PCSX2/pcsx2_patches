@@ -1,0 +1,12 @@
+gametitle=Kidou Senshi Gundam - Renpou vs. Zeon DX (J)(SLPM-65076)
+
+[Widescreen 16:9]
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
+gsaspectratio=16:9
+
+//Widescreen hack 16:9
+
+patch=1,EE,0013b808,word,3c024328 //3c024360
+patch=1,EE,0019254c,word,3c024395 //3c024360
+
+

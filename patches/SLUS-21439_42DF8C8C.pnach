@@ -1,0 +1,6 @@
+gametitle=Destroy All Humans! 2 (NTSC-U) SLUS-21439 42DF8C8C
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,002C2F0C,word,24030001

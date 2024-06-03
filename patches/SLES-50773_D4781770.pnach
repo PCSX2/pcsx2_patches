@@ -1,0 +1,14 @@
+gametitle=Disney's Donald Duck - PK (E)(SLES-50773)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen Hack
+
+//Widescreen hack 16:9
+
+//X-Fov
+//000080bf 0000803f 000080bf 00000000
+patch=1,EE,003317f0,word,bf400000 //3f800000
+
+

@@ -1,0 +1,15 @@
+gametitle=Sniper Elite [PAL-M5] (SLES-51820) EF47C233
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Renders the game in 16:9 aspect ratio
+//Widescreen Hack ported from NTSC hack by Arapapa
+patch=1,EE,005015d0,word,3f9faaab //3eaaaaab Zoom
+patch=1,EE,00502848,word,3fe38e2a //3faaaaab Y-FOV
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,00474F04,word,00000000
+patch=1,EE,00198FCC,word,00000000

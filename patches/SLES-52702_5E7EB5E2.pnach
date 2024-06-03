@@ -1,0 +1,13 @@
+gametitle=Psi-Ops: The Mindgate Conspiracy [PAL-M5] (SLES_527.02)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Widescreen Hack
+//Gameplay 16:9
+patch=1,EE,0047015C,word,241102AA //00000000 (Increases hor. axis)
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,0017ACD8,word,00000000 //1640FFE5

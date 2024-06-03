@@ -1,0 +1,8 @@
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Corvette (PAL)
+
+//widescreen patch
+patch=1,EE,214FEAF0,word,3FB60B60
+
+

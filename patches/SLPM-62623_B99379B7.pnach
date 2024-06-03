@@ -1,0 +1,14 @@
+gametitle=Erementar Gerad [NTSC-J] (SLPM-62623)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+
+//story
+patch=1,EE,204788F4,extended,3f400000
+
+//battle
+patch=1,EE,204783B4,extended,3f400000
+patch=1,EE,20478A44,extended,3f400000
+
+

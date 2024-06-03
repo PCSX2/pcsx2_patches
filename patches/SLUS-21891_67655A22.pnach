@@ -1,0 +1,8 @@
+gametitle=G-Force (SLUS-21891)
+
+[60 FPS]
+author=asasega and PeterDelta
+comment=Patches the game to run at 60 FPS.
+patch=1,EE,204B5A88,extended,0000003C
+patch=1,EE,E0010001,extended,004D5F94
+patch=1,EE,204B5A88,extended,0000001E

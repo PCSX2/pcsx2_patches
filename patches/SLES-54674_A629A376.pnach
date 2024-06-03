@@ -1,0 +1,85 @@
+gametitle=Lara Croft Tomb Raider: Anniversary * SLES-54674 * PAL-M10 * A629A376
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=pgert
+description=Native Widescreen activation hack.
+patch=1,EE,20398590,extended,3F800000 // 00000000
+patch=1,EE,203BED10,extended,00000001 // 00000000
+patch=1,EE,20992524,extended,00000001 // 00000000
+
+[Widescreen/16:10 shift]
+gsaspectratio=Stretch
+author=pgert
+description=Activates the native widescreen and shifts it to 16:10.
+patch=1,EE,20398590,extended,3F555555 // 00000000
+patch=1,EE,203BED10,extended,00000001 // 00000000
+patch=1,EE,20992524,extended,00000001 // 00000000
+patch=1,EE,001B8754,word,3C013F55 // 3C013F40 - GamePlay X-axis.
+patch=1,EE,204AD580,extended,3F555555 // 3F800000\3F400000 - HOW set from 001B8754.
+patch=1,EE,204AD588,extended,3F555555 // 3F800000\3F400000 - HOW set from 001B8754.
+// - 204AD580 & 204AD588 might not work with all BIOS types & configurations.
+patch=1,EE,00140E1C,word,3C013F55 // 3C013F40
+patch=1,EE,001513C4,word,3C013F55 // 3C013F40
+patch=1,EE,00151680,word,3C013F55 // 3C013F40
+patch=1,EE,001517B4,word,3C013F55 // 3C013F40
+patch=1,EE,0016f374,word,3C01BF55 // 3C01BF40
+patch=1,EE,0016F380,word,3C013F55 // 3C013F40
+patch=1,EE,00192EBC,word,3C013F55 // 3C013F40
+patch=1,EE,00212708,word,3C013F55 // 3C013F40
+patch=1,EE,002147AC,word,3C013F55 // 3C013F40
+patch=1,EE,00241D38,word,3C013F55 // 3C013F40
+patch=1,EE,002A6724,word,3C013F55 // 3C013F40
+patch=1,EE,002C3D1C,word,3C013F55 // 3C013F40
+patch=1,EE,002DBA08,word,3C013F55 // 3C013F40
+patch=1,EE,002F1C98,word,3C013F55 // 3C013F40
+patch=1,EE,002F7864,word,3C013F55 // 3C013F40
+
+[Widescreen/15:10 shift]
+gsaspectratio=Stretch
+author=pgert
+description=Activates the native widescreen and shifts it to 15:10.
+patch=1,EE,20398590,extended,3F638E39
+patch=1,EE,203BED10,extended,00000001
+patch=1,EE,20992524,extended,00000001
+patch=1,EE,001B8754,word,3C013F64
+patch=1,EE,204AD580,extended,3F638E39
+patch=1,EE,204AD588,extended,3F638E39
+patch=1,EE,00140E1C,word,3C013F64
+patch=1,EE,001513C4,word,3C013F64
+patch=1,EE,00151680,word,3C013F64
+patch=1,EE,001517B4,word,3C013F64
+patch=1,EE,0016f374,word,3C01BF64
+patch=1,EE,0016F380,word,3C013F64
+patch=1,EE,00192EBC,word,3C013F64
+patch=1,EE,00212708,word,3C013F64
+patch=1,EE,002147AC,word,3C013F64
+patch=1,EE,00241D38,word,3C013F64
+patch=1,EE,002A6724,word,3C013F64
+patch=1,EE,002C3D1C,word,3C013F64
+patch=1,EE,002DBA08,word,3C013F64
+patch=1,EE,002F1C98,word,3C013F64
+patch=1,EE,002F7864,word,3C013F64
+
+[Blackbars/Bisect]
+author=pgert
+description=Bisects the Blackbars
+patch=1,EE,0016F374,word,3C01BF60 // 3C01BF40 - upper
+patch=1,EE,0016F380,word,3C013F60 // 3C013F40 - lower
+
+[Blackbars/Remove]
+author=pgert
+description=Removes the Blackbars
+patch=1,EE,0016F374,word,3C01BF80
+patch=1,EE,0016F380,word,3C013F80
+
+// Calcutta-Cinematic Subtitles-Placement patches - only for 50 Hz mode.
+//patch=1,EE,00109CB4,word,3C013F47 // 3C013F00
+// - Y-axis of Subtitles & SubtitlesBackground.
+//patch=1,EE,001515B4,word,3C013F83 // 3C013F80
+// - Y-axis placement of Subtitles, but not the SubtitlesBackground.
+
+[50/60 FPS]
+author=PeterDelta
+comment=Might need EE overclocking to be stable.
+patch=1,EE,0012795C,word,10000003 // 10400003 - 0043102B sltu v0,v1

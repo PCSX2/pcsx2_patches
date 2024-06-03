@@ -1,0 +1,11 @@
+gametitle=Ghost Rider (PAL-M) SLES-54317 F9DD17AA
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan and run at 60 fps
+patch=1,EE,00399DA0,word,34050052
+patch=1,EE,00399DA4,word,24030002
+patch=1,EE,00399DA8,word,0000000C
+patch=1,EE,00399DAC,word,03E00008
+patch=1,EE,005DB9C8,word,01852290
+patch=1,EE,005DB9F0,word,01852290

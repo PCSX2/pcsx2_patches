@@ -1,0 +1,19 @@
+gametitle=Auto Modellista (SLES-51191)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+comment=Widescreen Hack
+
+//gameplay
+patch=1,EE,0038972c,word,3fe38e38
+patch=1,EE,00277af0,word,3c023fe3
+patch=1,EE,00277af8,word,34428e38
+
+[Mode 480p]
+author=PeterDelta
+comment=Force progressive scan when selecting 60hz
+patch=1,EE,E0038306,extended,011E2084
+patch=1,EE,20100334,extended,3c050000
+patch=1,EE,2010033C,extended,3c060050
+patch=1,EE,20100344,extended,3c070001

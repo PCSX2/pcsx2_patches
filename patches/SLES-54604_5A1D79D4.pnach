@@ -1,0 +1,11 @@
+gametitle=¡Qué pasa Neng! El videojuego (PAL-S) SLES-54604 5A1D79D4
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan and run at 60 fps
+patch=1,EE,E0050005,extended,00081E98
+patch=1,EE,201C83F8,extended,00069403
+patch=1,EE,E0010000,extended,0020EC34
+patch=1,EE,201C83F8,extended,24120052
+patch=1,EE,20213228,extended,02058290
+patch=1,EE,20213250,extended,02058290

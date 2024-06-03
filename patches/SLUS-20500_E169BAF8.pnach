@@ -1,0 +1,26 @@
+gametitle=Red Dead Revolver (V1.03) [SLUS-20500] (U)
+
+[Blur or Post-Processing removal]
+author=kozarovv
+comment=Blur or Post-Processing removal ported from Aggressive CRC
+
+//Vaseline removal
+//Source: https://forums.pcsx2.net/Thread-Post-your-PCSX2-cheats-patches-here?pid=611544#pid611544
+patch=1,EE,004c4b78,word,03e00008
+patch=1,EE,004c4b7c,word,00000000
+
+[Force 60FPS]
+description=The original game is capped at 30FPS
+author=asasega
+//Source: https://forums.pcsx2.net/Thread-60-fps-codes?pid=548772#pid548772
+patch=1,EE,201018AC,word,24030001
+
+[Remove Black Bars]
+description=Removes the stylised black borders at the top and bottom of the screen during gameplay.
+author=?
+patch=1,EE,2073C604,word,00000000
+
+[Lower Bottom HUD]
+description=Lowers the bottom parts of the HUD during gameplay. Should only be used in conjunction with Remove Black Bars.
+author=?
+patch=1,EE,2073BF14,word,3F866666

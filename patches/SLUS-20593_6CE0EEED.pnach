@@ -1,0 +1,16 @@
+gametitle=Magic Pengel - The Quest for Color SLUS_205.93
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,00338c84,word,3f400000 //3f800000
+patch=1,EE,004a9db0,word,3f206d37 //3ef0a3d7
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20101DD4,word,00000000
+patch=1,EE,2010203C,word,00000000
+
+

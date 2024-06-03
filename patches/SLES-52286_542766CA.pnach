@@ -1,0 +1,13 @@
+gametitle=Tak y el Poder Juju (PAL-S) SLES-52286 542766CA
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Widescreen Hack
+patch=1,EE,00251400,word,3C013FE3 //3C013FAA
+patch=1,EE,00251404,word,3421388E //3421AAAB
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,00440738,word,00000001 //00000002

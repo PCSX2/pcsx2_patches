@@ -1,0 +1,14 @@
+gametitle=Legend of Kay (SLUS_21248)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=No.47
+description=Widescreen hack
+patch=1,EE,2063D9C0,word,3FAE8BA3
+patch=1,EE,2063D9C4,word,401B26CA
+patch=1,EE,206E6814,word,3FBBBBBB
+
+[Remove Blackbars]
+author=No.47
+description=Removes black bars in cutscenes
+patch=1,EE,003047a4,word,3c0141f0 // 3c014180

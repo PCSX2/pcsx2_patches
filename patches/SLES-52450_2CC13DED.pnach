@@ -1,0 +1,6 @@
+gametitle=Serious Sam - Next Encounter (PAL-M) SLES-52450 2CC13DED
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001273A8,word,00000000 //1040FFF9

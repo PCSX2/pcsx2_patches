@@ -1,0 +1,8 @@
+gametitle=LEGO Star Wars - The Video Game SLUS_210.83
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,21f95534,extended,3f100000
+
+

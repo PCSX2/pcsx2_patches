@@ -1,0 +1,48 @@
+gametitle=Bully [NTSC-U] (SLUS-21269) CRC 28703748
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+description=Widescreen fix
+
+patch=1,EE,00471640,word,14640007
+patch=1,EE,00471644,word,3c030022
+patch=1,EE,00471648,word,2404bec0
+patch=1,EE,0047164c,word,a464280c
+patch=1,EE,00471650,word,24043fc0
+patch=1,EE,00471654,word,3c03001d
+patch=1,EE,00471658,word,a4644cf4
+patch=1,EE,0047165c,word,10000007
+patch=1,EE,00471660,word,2404bf00
+patch=1,EE,00471664,word,a464280c
+patch=1,EE,00471668,word,24044000
+patch=1,EE,0047166c,word,3c03001d
+patch=1,EE,00471670,word,a4644cf4
+patch=1,EE,00471674,word,00000000
+patch=1,EE,00471678,word,00000000
+
+patch=1,EE,e0010000,extended,005e09b8
+patch=1,EE,20729748,extended,435c0000
+
+patch=1,EE,e0010000,extended,005e09b8
+patch=1,EE,2072974c,extended,435c0000
+
+patch=1,EE,e001aaab,extended,005e09b8
+patch=1,EE,20729748,extended,432b0000
+
+patch=1,EE,e001aaab,extended,005e09b8
+patch=1,EE,2072974c,extended,432b0000
+
+[480p Mode]
+author=nemesis2000
+description=Force 480p progressive
+
+patch=1,EE,0023ea90,word,24060050
+patch=1,EE,0023ea94,word,24050000
+patch=1,EE,0023ea9c,word,23070001
+
+[Disable Depth of Field]
+author=refraction
+description=Removes depth of field effect.
+
+patch=1,EE,003D9AD4,word,50000198 //Skips DoF code block.

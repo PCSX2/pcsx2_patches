@@ -1,0 +1,7 @@
+gametitle=Killzone [PAL-M] SCES-52004 6624A78C
+
+//[50/60 FPS]
+//author=PeterDelta. Disabled due to causing double speed in menu and game FMVs and other game breaking issues.
+//comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+//patch=1,EE,00152014,word,24420002 //24420001
+//patch=1,EE,005DB004,word,3F000000 //3F800000 speed general

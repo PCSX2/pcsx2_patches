@@ -1,0 +1,11 @@
+gametitle=Metal Gear Solid 2 - Sons of Liberty (J)(SLPM-65078)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+patch=1,EE,0011f090,word,3c013f40 //3c013f80
+
+

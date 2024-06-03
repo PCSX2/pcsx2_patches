@@ -1,0 +1,14 @@
+gametitle=Kung Fu Panda [PAL-Spain] (SLES_552.36)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Widescreen Hack
+//Gameplay 16:9
+patch=1,EE,2069520C,extended,3FE38E38 //3FAAAAAB (Increases hor. axis)
+
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0062B1D4,word,00000001 //00000002 srl zero,0x00

@@ -1,0 +1,18 @@
+gametitle=Gran Turismo 3 - A-Spec (PAL-M) SCES-50294 B590CE04
+
+[No-Interlacing]
+gsinterlacemode=1
+author=PeterDelta
+description=Enable progressive interlacing.
+patch=1,EE,0028F81C,word,3C050000
+
+[60 FPS]
+author=PeterDelta
+description=Forces progressive scan and run at 60 fps
+patch=1,EE,2028F840,extended,24120052
+patch=1,EE,2035163C,extended,3C888889 //speed flags 
+patch=1,EE,20351F1C,extended,3C888889 //speed cars
+patch=1,EE,20351980,extended,3C888889 //speed icon ilumination
+patch=1,EE,203519D4,extended,3C888889 //speed icon menu principal
+patch=1,EE,201F0D30,extended,24420032 //speed timer
+patch=1,EE,204A840C,extended,00080000

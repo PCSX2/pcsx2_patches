@@ -1,0 +1,12 @@
+gametitle=Disney Bolt (PAL-M3) SLES-55430 F77BF348
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,0068C27C,word,3FE38E39 //3FAAAAAB
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,007E886C,word,00000001 //00000002

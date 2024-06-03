@@ -1,0 +1,15 @@
+gametitle=Animaniacs - The Great Edgar Hunt (E)(SLES-52729)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen hack
+//X-Fov
+patch=1,EE,203018E0,extended,3F891A2A //3fb6cb8f
+
+[50 FPS]
+author=asasega and PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,00343668,extended,00000001
+patch=1,EE,E0010000,extended,002DCE80
+patch=1,EE,00343668,extended,00000002

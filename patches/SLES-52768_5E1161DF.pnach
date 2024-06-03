@@ -1,0 +1,11 @@
+gametitle=Commandos - Strike Force (PAL-M) SLES-52768 5E1161DF
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan and run at 60 fps
+patch=1,EE,00100DA0,word,34050052
+patch=1,EE,00100DA4,word,24030002
+patch=1,EE,00100DA8,word,0000000C
+patch=1,EE,00100DAC,word,03E00008
+patch=1,EE,0071E528,word,01852290
+patch=1,EE,0071E550,word,01852290

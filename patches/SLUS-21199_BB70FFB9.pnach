@@ -1,0 +1,20 @@
+gametitle=Medal of Honor: European Assault (NTSC-U) (SLUS-21199) BB70FFB9
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+description=Widescreen hack
+patch=1,EE,0012927c,word,00000000
+
+[60 FPS]
+author=asasega
+description=Unlocks internal FPS. Might need EE Overclock at 180%.
+patch=1,EE,20127570,extended,28420001
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=Forces progressive scan mode 480p at startup.
+patch=1,EE,0044200C,word,24110000
+patch=1,EE,00442010,word,24120050
+patch=1,EE,0044201C,word,24130001

@@ -1,0 +1,14 @@
+gametitle=Midnight Club - Street Racing (PAL-M) SLES-50071 831078BD
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Widescreen hack 16:9
+patch=1,EE,0047B580,word,3F471C97 //3F800000 
+patch=1,EE,0047B594,word,3F471C97 //3F800000
+patch=1,EE,0047B5BC,word,3F471C97 //3F800000
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,003054C4,word,00000001

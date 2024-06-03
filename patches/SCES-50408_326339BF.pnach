@@ -1,0 +1,25 @@
+gametitle=PaRappa the Rapper 2 (PAL-M5) (SCES-50408)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by ElHecht
+
+// 16:9
+patch=1,EE,001666d4,word,3c013f40
+patch=1,EE,001666e0,word,44810000
+patch=1,EE,001666e4,word,4600c602
+
+// 16:10
+//patch=1,EE,001666d4,word,3c013f55
+//patch=1,EE,001666d8,word,34215555
+//patch=1,EE,001666e0,word,44810000
+//patch=1,EE,001666e4,word,4600c602
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//force progressive
+patch=1,EE,20103638,extended,00000000
+
+

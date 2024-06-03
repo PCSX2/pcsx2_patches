@@ -1,0 +1,19 @@
+gametitle=Bombastic SLUS_207.64
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,001581bc,word,3c013f40 //hor menu
+patch=1,EE,00158244,word,3c0143d6 //render fix menu
+patch=1,EE,001aa03c,word,3c013f40 //hor gameplay
+patch=1,EE,001aa054,word,3c0143d6 // render fix gameplay
+//patch=1,EE,001aa074,word,3c014495 // 3c01447a fov decrease
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,001f08f4,word,00000000 //64420008
+patch=1,EE,001f097c,word,00000000 //64420008
+
+

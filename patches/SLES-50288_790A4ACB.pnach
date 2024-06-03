@@ -1,0 +1,16 @@
+gametitle=Stuntman (E)(SLES-50288) 790A4ACB
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa and FlatOut
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,001d4c94,word,3c013f30 //3c013f00 Render fix
+//Other Zoom : 003f013c 00a88144 06650046
+patch=1,EE,00293058,word,3FD66666 //3eaaaaab Fiexed FlatOut
+patch=1,EE,001d4cd8,word,3c013fe3 //3c013faa Y-Fov
+patch=1,EE,001d4cdc,word,34218e3f //3421aaab
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,005C21B4,word,00000001 //00000002

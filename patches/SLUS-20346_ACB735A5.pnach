@@ -1,0 +1,8 @@
+gametitle=AirBlade (NTSC-U)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,202EB9D0,word,3FAAAAAA
+
+

@@ -1,0 +1,15 @@
+gametitle=Galerians Ash SLUS
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,001e0100,word,3c013f40
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,001F0D5C,word,30420000
+patch=1,EE,001F112C,word,00000000
+
+

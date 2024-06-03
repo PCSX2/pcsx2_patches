@@ -1,0 +1,13 @@
+gametitle=Star Wars - Episode III - Revenge of the Sith SLUS_211.43
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,004dbd2c,word,3c033fab
+patch=1,EE,0051ac44,word,3c023f20
+
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS. 180% EE Overclock recommended.
+patch=1,EE,E0010002,extended,001B4344
+patch=1,EE,201AF538,extended,00000001

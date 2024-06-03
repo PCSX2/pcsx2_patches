@@ -1,0 +1,19 @@
+gametitle=Hobbit - The Prelude to the Lord of the Rings (E)(SLES-51723)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen Hack
+//Zoom
+patch=1,EE,002facac,word,3c013ec0 //3c013f00
+//Y-Fov
+patch=1,EE,0038b768,word,3c013ec0 //3c013f00
+//Render fix
+patch=1,EE,0038b87c,word,3c013f40 //3c013f00
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,20404B8C,extended,00000001
+patch=1,EE,E0010000,extended,003E9610
+patch=1,EE,20404B8C,extended,00000002

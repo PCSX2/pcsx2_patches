@@ -1,0 +1,11 @@
+gametitle=Summoner 2 (NTSC-U)
+
+[Widescreen 16:9]
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
+gsaspectratio=16:9
+//
+// 16:9
+patch=1,EE,2088F668,extended,3F100000 // 3F400000 vert fov
+patch=1,EE,202C0580,extended,3FA28F5C // 3EAAAAAB camera zoom
+
+

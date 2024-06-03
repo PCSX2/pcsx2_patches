@@ -1,0 +1,6 @@
+gametitle=Scarface - The World is Yours (SLUS-21111)
+
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,20DAFABC,word,00000000 //00000001

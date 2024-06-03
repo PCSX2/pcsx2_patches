@@ -1,0 +1,8 @@
+gametitle=Disney G-Force [PAL-M] SLES-55499 AB761209
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,004B5A88,extended,00000032
+patch=1,EE,E0010001,extended,004D5F94
+patch=1,EE,204B5A88,extended,00000019

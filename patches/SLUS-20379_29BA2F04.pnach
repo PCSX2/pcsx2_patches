@@ -1,0 +1,6 @@
+gametitle=Dark Angel - James Cameron's (NSTC-U) SLUS-20379 29BA2F04
+
+[60 FPS]
+author=PeterDelta
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0025A404,word,00000000 //1040FFFA

@@ -1,0 +1,10 @@
+gametitle=Legend of Spyro, The - The Eternal Night (SLUS-21607)
+
+[60 FPS]
+author=asasega + CRASHARKI
+comment=Patches the game to run at 60 FPS.
+patch=1,EE,20124360,word,28420001 //28420002
+patch=1,EE,2012447C,word,28420001 //28420002
+patch=1,EE,E0020001,extended,008CC334
+patch=1,EE,20124360,extended,28420002
+patch=1,EE,2012447C,extended,28420002

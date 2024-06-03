@@ -1,0 +1,17 @@
+gametitle=Scooby-Doo! Mystery Mayhem (PAL-E) SLES-51883 8F6A1960
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,001978a0,word,0809fa4c
+patch=1,EE,0027e930,word,46010043
+patch=1,EE,0027e934,word,3c013f40
+patch=1,EE,0027e938,word,4481f000
+patch=1,EE,0027e93c,word,461e0842
+patch=1,EE,0027e940,word,08065e29
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0049AAB8,word,0000003C

@@ -1,0 +1,11 @@
+gametitle=Ben 10 - Alien Force - Vilgax Attacks (U)(SLUS-21921)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas (NTSC-U by Arapapa)
+description=Patches the game to run at Widescreen 16:9 aspect ratio.
+
+//Gameplay 16:9
+patch=1,EE,20741A54,extended,3FE38E38 //3FAAAAAB (Increases hor. axis)
+
+

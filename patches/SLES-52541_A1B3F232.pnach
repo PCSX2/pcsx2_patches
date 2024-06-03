@@ -1,0 +1,25 @@
+gametitle=Grand Theft Auto: San Andreas (v1.03) (SLES-52541)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000 + shaolinassassin
+comment=Select widescreen in game otherwise image is zoomed out 4:3
+
+//widescreen fix
+patch=1,EE,001130BC,word,3C013F9D
+patch=1,EE,001130C0,word,44810000
+patch=1,EE,001130C4,word,46006302
+patch=1,EE,001130C8,word,03E00008
+patch=1,EE,001130CC,word,E78C9A90
+
+patch=1,EE,0021DF84,word,0C044C2F
+patch=1,EE,00242D54,word,0C044C32
+
+[Remove Radiosity Filter]
+description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
+patch=1,EE,2051A0C8,extended,00000000
+
+[50 FPS]
+author=Boludoz
+comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,006679CC,extended,00000001

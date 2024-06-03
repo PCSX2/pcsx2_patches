@@ -1,0 +1,7 @@
+gametitle=Simpsons Game, The (PAL-M4) SLES-54904 4C7BB3C8
+
+[50 FPS]
+author=CRASHARKI
+comment=Unlocked at 50 FPS. Set EE Cycle Skipping to Mild Underclock to prevent framedrops and 130% EE Overclock to be stable.
+patch=1,EE,00215954,word,00000000 //1440FFFA
+patch=1,EE,003603B4,word,00000000 //1040FFF8

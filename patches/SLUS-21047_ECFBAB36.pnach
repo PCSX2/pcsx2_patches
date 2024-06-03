@@ -1,0 +1,6 @@
+gametitle=Cold Fear (NSTC-U) SLUS-21047 ECFBAB36
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0046E484,extended,00000001

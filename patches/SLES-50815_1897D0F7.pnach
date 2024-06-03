@@ -1,0 +1,18 @@
+gametitle=Blood Omen 2: The Legacy of Kain Series (PAL/G) [SLES-50815] 1897D0F7
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=pavachan & nemesis2000
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
+//gameplay (based on pavachan elf hack)
+patch=1,EE,00311810,word,3c013fe3 //3c013faa
+patch=1,EE,00311814,word,34218e38 //3421aaab
+
+//FMV's fix by nemesis2000
+patch=1,EE,002e9ff0,word,240575e0 //24057800
+patch=1,EE,002ea008,word,240a1440 //240a1000
+
+[Remove Blackbars]
+author=nemesis2000
+description=Removes black bars in cutscenes
+patch=1,EE,002d24cc,word,00000000

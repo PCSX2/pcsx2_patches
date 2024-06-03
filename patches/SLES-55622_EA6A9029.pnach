@@ -1,0 +1,18 @@
+gametitle=Disney-Pixar Toy Story 3 (E)(SLES-55622)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen Hack
+//Zoom fix (Internal Widescreen)
+//aa3f033c 0040023c 713d6334
+patch=1,EE,004f6ee8,word,3c033f80
+patch=1,EE,004f6ef0,word,34630000
+
+[Mode 480p]
+author=PeterDelta
+comment=Forces progressive scan mode 480p at startup
+patch=1,EE,005346A4,word,24110000
+patch=1,EE,005346A8,word,24120050
+patch=1,EE,005346B4,word,24130001
+patch=1,EE,008051CC,word,000001E0

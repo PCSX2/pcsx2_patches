@@ -1,0 +1,27 @@
+gametitle=Armored Core - Nine Breaker SLUS_212.00
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen Hack
+patch=1,EE,00172540,extended,00000019 // 3C033F4C hor fov gameplay
+patch=1,EE,10172548,extended,0000999A // 3462CCCD hor fov gameplay
+patch=1,EE,001A8670,extended,000000D6 // 3C0243A0 renderfix
+patch=1,EE,C1EC2218,extended,3C023F80
+patch=1,EE,01EC2218,extended,00000040 // 3C023F80 hor fov menu
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2011F014,extended,00000000
+
+[Remove Blur]
+author=001 & Berylskid
+description=Removes blur effects.
+patch=1,EE,D027CD3C,extended,02100000
+patch=1,EE,61D8A268,extended,00000000
+patch=1,EE,00000001,extended,0000005F
+
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,00247C6A,extended,00000000

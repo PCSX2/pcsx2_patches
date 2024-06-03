@@ -1,0 +1,15 @@
+gametitle=The Bouncer (Japan) [SLPS-25023]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=NTSC-J Widescreen Hack by synce
+patch=1,EE,20391a3c,extended,3F400000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20103FB8,extended,30630000
+patch=1,EE,20286E00,extended,00000000
+
+

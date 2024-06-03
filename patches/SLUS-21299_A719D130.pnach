@@ -1,0 +1,20 @@
+gametitle=Dynasty Warriors 5: Xtreme Legends (SLUS-21299)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by nemesis2000 (pnach by nemesis2000 )
+patch=1,EE,00146d7c,word,3c0243d6
+patch=1,EE,0019814c,word,3c023f2b
+patch=1,EE,00146ac4,word,3c023e10 // cutscene zoom (fixes crash)
+
+
+[No-Interlacing]
+gsinterlacemode=1
+comment=no interlacing by someother1ne
+patch=1,EE,20112964,word,64420000
+patch=1,EE,201427D0,word,30420000
+
+
+[Load original (Enables Musou and Free modes)]
+comment=Dw5xl contains all files required to play Musou/Free modes, This mod unhides Musou/Free mode. 
+patch=1,EE,001abed4,word,24020001

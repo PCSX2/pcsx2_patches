@@ -1,0 +1,12 @@
+gametitle=Poncotsu Roman Daikatsugeki Bumpy Trot (J)(SLPS-25457)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by Arapapa
+
+//Widescreen hack 16:9
+
+patch=1,EE,00132110,word,3c033f40 //3c033f80
+patch=1,EE,00131f68,word,3c0643e0 //3c0643a0
+
+

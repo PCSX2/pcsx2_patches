@@ -1,0 +1,20 @@
+gametitle=Death by Degrees (PAL-M2) (SCES-52586)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+comment=Widescreen Hack
+//
+// Gameplay
+patch=1,EE,00188170,word,3C023FE3
+patch=1,EE,00188178,word,34438E38
+// Cut-Scenes
+patch=1,EE,00185f8c,word,3C023FE3
+patch=1,EE,00185f90,word,34438E38
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,005A8258,word,00000001
+patch=1,EE,E0010202,extended,0058440C
+patch=1,EE,205A8258,extended,00000002

@@ -1,0 +1,13 @@
+gametitle=Gungriffon Blaze (F)(SLES-50159)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack Conversion
+
+//Widescreen hack 16:9
+
+//X-Fov
+patch=1,EE,00211684,word,3c013f40 //3c013f80 Menu
+
+patch=1,EE,00212168,word,3c013f40 //3c013f80 Gameplay

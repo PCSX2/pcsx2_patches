@@ -1,0 +1,13 @@
+gametitle=Gadget & the Gadgetinis [PAL-M6] (SLES_528.45)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Widescreen Hack
+patch=1,EE,00112858,word,3C033F40 //3C033F80 Zoom
+patch=1,EE,0010F478,word,3C023FAB //3C023F80 Y-FOV
+
+[50 FPS]
+author=asasega
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001E9004,word,24040001

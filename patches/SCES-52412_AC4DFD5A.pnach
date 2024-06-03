@@ -1,0 +1,6 @@
+gametitle=Jackie Chan Adventures (PAL-M) SCES-52412 AC4DFD5A
+
+[50/60 FPS]
+author=asasega
+comment=Unlocked at 50/60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,002C4B48,word,00000001

@@ -1,0 +1,31 @@
+gametitle=Tiger Woods PGA Tour 2005 (NTSC-U) (SLUS-21002)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by VIRGIN KLM, pandubz, Willpower
+
+//Widescreen hack 16:9
+
+//Menu 3D
+patch=1,EE,2054CE70,extended,3f400000 //3f800000
+
+//Game Play Fov
+patch=1,EE,207983F0,extended,3f400000 //3f800000
+
+//Game Play Render Fix
+patch=1,EE,20798400,extended,44800000 //44000000
+patch=1,EE,20798408,extended,40000000 //3f400000
+
+//Widescreen hack 21:9
+
+//Menu 3D
+//patch=1,EE,2054CE70,extended,3f000000 //3f800000
+
+//Game Play Fov
+//patch=1,EE,207983F0,extended,3f000000 //3f800000
+
+//Game Play Render Fix
+//patch=1,EE,20798400,extended,45600000 //44000000
+//patch=1,EE,20798408,extended,40600000 //3f400000
+
+

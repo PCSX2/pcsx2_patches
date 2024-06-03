@@ -1,0 +1,11 @@
+gametitle=Okami (PAL-M3) (SLES-54439)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+comment=Widescreen Hack
+// 16:9
+patch=1,EE,001974d4,word,3c014455
+patch=1,EE,00344864,word,3c014455
+
+

@@ -1,0 +1,14 @@
+gametitle=Disney's Treasure Planet (PAL-M) SCES-51177 E6A57677
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,E0020000,extended,00382378
+patch=1,EE,002D0EF8,extended,00000002
+patch=1,EE,00382378,extended,00000002
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,002E8B34,extended,00000000

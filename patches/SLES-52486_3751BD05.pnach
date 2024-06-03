@@ -1,0 +1,20 @@
+gametitle=Astro Boy [PAL] (SLES_524.86)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Widescreen Hack
+
+//Fov
+patch=1,EE,002CD40C,word,3C013FD5 //3C013FA0
+
+//Zoom
+patch=1,EE,003811F8,word,3C013EC0 //3C013F00
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0069D990,word,00000001 //00000002
+patch=1,EE,0069D998,word,42700000 //41F00000
+patch=1,EE,0069D99C,word,3C888889 //3D088889
+patch=1,EE,0069D9A0,word,3F800000 //40000000

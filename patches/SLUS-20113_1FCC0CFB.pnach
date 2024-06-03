@@ -1,0 +1,17 @@
+gametitle= Driving Emotion Type-S NTSC-U (SLUS-20113)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment= Driving Emotion Type-S NTSC-U (SLUS-20113) Widescreen Hack by VIRGIN KLM
+
+//Gameplay 3D
+patch=1,EE,0045B2A8,word,3F400000 // 3F800000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2024C2B8,word,A0E00004
+patch=1,EE,20250C8C,word,A3805404
+
+

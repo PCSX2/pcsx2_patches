@@ -1,0 +1,13 @@
+gametitle=Total Overdose: A Gunslinger's Tale in Mexico (NTSC-U)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+
+patch=1,EE,206927AC,word,3F47AE14 // Zoom
+patch=1,EE,206C62BC,word,3F400000 // Vert fov
+
+[60 FPS]
+author=PeterDelta
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,01B71E70,word,00000001 //00000002

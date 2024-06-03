@@ -1,0 +1,23 @@
+gametitle=Demon Stone (SLUS-20804)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+description=Widescreen hack
+
+patch=1,EE,001a4fb0,word,3c013f40
+patch=1,EE,001a4fb4,word,44810000
+patch=1,EE,001a4fbc,word,46006b43
+
+patch=1,EE,0015629c,word,3c023fe3
+patch=1,EE,001562a0,word,34438e38
+
+[Remove Blackbars]
+author=nemesis2000
+description=Removes black bars in cutscenes
+patch=1,EE,001d8330,word,24040001
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,003223C0,word,00000000

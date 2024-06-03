@@ -1,0 +1,15 @@
+gametitle=Nickelodeon SpongeBob SquarePants in: Battle for Bikini Bottom (PAL)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+
+//gameplay
+patch=1,EE,0035c670,word,0c045286
+patch=1,EE,0035c674,word,00000000
+patch=1,EE,0035c678,word,3c023f40
+patch=1,EE,0035c67c,word,0200202d
+patch=1,EE,0035c680,word,44820800
+patch=1,EE,0035c684,word,27a50028
+patch=1,EE,0035c688,word,46010083
+patch=1,EE,0035c68c,word,e7a20028

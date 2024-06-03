@@ -1,0 +1,42 @@
+gametitle=Lemony Snicket's A Series of Unfortunate Events (E)(SLES-52807) 5B2962FD
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio
+//Zoom (Gameplay)
+//003f013c 00608144
+patch=1,EE,0019c130,word,3c013f1b //3c013f00
+
+//Y-Fov (Gameplay)
+//82100046 000002e6
+patch=1,EE,0019c17c,word,080eb428
+
+patch=1,EE,003ad0a0,word,46001082
+patch=1,EE,003ad0a4,word,3c013f40
+patch=1,EE,003ad0a8,word,4481f000
+patch=1,EE,003ad0ac,word,461e1082
+patch=1,EE,003ad0b0,word,08067060
+
+//X-Fov (Menu, Text and Cutscene)
+//0000acc7 803f013c (2nd)
+patch=1,EE,002ea5c4,word,080eb42d
+
+patch=1,EE,003ad0b4,word,c7ac0000
+patch=1,EE,003ad0b8,word,3c013faa
+patch=1,EE,003ad0bc,word,3421aaab
+patch=1,EE,003ad0c0,word,4481f000
+patch=1,EE,003ad0c4,word,461e6302
+patch=1,EE,003ad0c8,word,080ba972
+
+[Remove Blackbars]
+author=Arapapa
+description=Removes black bars in cutscenes
+//803f013c 00008144 34100046 00000000
+patch=1,EE,001c2e10,word,3c013a00 //3c013f80
+
+[50 FPS]
+author=PeterDelta
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,0047D2C0,word,42C80000 //42480000
+patch=1,EE,0047D2C4,word,3C23D70A //3CA3D70A

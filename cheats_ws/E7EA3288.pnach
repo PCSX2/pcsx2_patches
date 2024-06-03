@@ -1,5 +1,0 @@
-gametitle=Pac-Man World 2 (U)(SLUS-20224) (Greatest Hits)
-comment=Widescreen hack
-
-//Official Widescreen auto-enable (vertical screen skewed)
-patch=1,EE,205A68C0,extended,00000001 // change value to 0 for 4:3

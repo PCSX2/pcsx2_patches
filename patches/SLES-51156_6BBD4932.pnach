@@ -1,0 +1,49 @@
+gametitle=Silent Hill 2 - Director's Cut (PAL-M) SLES-51156 6BBD4932
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,002D7530,word,3F28F5C3 //hor asp
+patch=1,EE,00189d84,word,3c034455 // partial render fix
+patch=1,EE,00281118,word,24100004 //hor black border FMV's fix
+patch=1,EE,0028111c,word,24030004 //hor black border
+patch=1,EE,002810fc,word,340692b0 //bottom
+//patch=1,EE,00281104,word,34c68c80 //right
+patch=1,EE,002810cc,word,3c026d50 //top
+//patch=1,EE,002810d0,word,34467380 //left
+patch=1,EE,0018B6E0,word,3C024010 //Lens Flare's fix
+patch=1,EE,0018B75C,word,3C0243A8
+patch=1,EE,0018C3B4,word,3C024010
+patch=1,EE,0018C44C,word,3C0243A8
+patch=1,EE,0018C4C8,word,3C0243A8
+patch=1,EE,0018CA94,word,3C0243A8
+patch=1,EE,0018CB28,word,3C0243A8
+patch=1,EE,0018CBAC,word,3C0243A8
+patch=1,EE,0018CC50,word,3C0243A8
+patch=1,EE,0018CFE4,word,3C0243A8
+patch=1,EE,0018D078,word,3C0243A8
+patch=1,EE,0018D10C,word,3C0243A8
+patch=1,EE,0018D1A0,word,3C0243A8
+patch=1,EE,0018D394,word,3C0243A8
+patch=1,EE,0018D400,word,3C0243A8
+patch=1,EE,0018D54C,word,3C0243A8
+patch=1,EE,0018D5B8,word,3C0243A8
+patch=1,EE,00291734,word,3c023f10 //3c023f40 Loading scene (Foot Print)
+patch=1,EE,001eac40,word,3c0242aa //3c024280 Item & Equipment Y-Fov
+patch=1,EE,001eac44,word,3442aaab //44820000
+patch=1,EE,001eac48,word,44820000 //00000000
+patch=1,EE,001eafa0,word,3c0242aa //3c024280
+patch=1,EE,001eafa4,word,3442aaab //44820000
+patch=1,EE,001eafa8,word,44820000 //00000000
+patch=1,EE,001db4dc,word,3c033daa //3c033e99 Item Zoom
+patch=1,EE,001db4e0,word,3463aaab //3463999a
+patch=1,EE,001db4dc,word,3c033daa //3c033e99
+patch=1,EE,001db4e0,word,3463aaab //3463999a
+patch=1,EE,001db998,word,3c023f2c //3c023f66 Equipment Zoom
+patch=1,EE,001db99c,word,3442cccd //34426666
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001A7060,word,10000009 //14400009

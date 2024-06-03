@@ -1,0 +1,9 @@
+gametitle=Need for Speed - Carbon SLES-54323 4078F8F1
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan and run at 60 fps
+patch=1,EE,00540A3C,word,24110000
+patch=1,EE,00540A40,word,24120052
+patch=1,EE,00540A4C,word,24130001
+patch=1,EE,00621DC4,word,0000001E

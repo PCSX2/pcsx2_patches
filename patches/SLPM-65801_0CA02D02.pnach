@@ -1,0 +1,7 @@
+gametitle=Crash Bandicoot 5 - Crash & Cortex no Yabou (SLPM-65801)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,2030AA44,word,00000001 //00000000

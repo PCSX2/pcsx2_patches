@@ -1,0 +1,9 @@
+gametitle=Jojo no Kimyou na Bouken: Ougon no Kaze (Japan) [English Patched] [SLPM-65140]
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//No Interlacing
+patch=1,EE,00225960,extended,30630000
+
+

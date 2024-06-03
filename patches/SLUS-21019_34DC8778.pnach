@@ -1,0 +1,23 @@
+gametitle=Technic Beat (U)(SLUS-21019)
+
+[Widescreen 16:9]
+author=Arapapa
+gsaspectratio=16:9
+comment=Widescreen hack
+
+//Widescreen hack 16:9
+
+//Y-Fov
+patch=1,EE,00216954,word,3c023f20 //3c023ef0
+patch=1,EE,00216958,word,34426d2f //3442a3d7
+
+//Zoom
+patch=1,EE,00216944,word,3c02443b //3c02447a
+
+
+[No-Interlacing]
+author=wakfu[CK]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,00103684,word,00000000
+patch=1,EE,001039f4,word,00000000

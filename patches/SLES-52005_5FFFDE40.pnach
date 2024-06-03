@@ -1,0 +1,8 @@
+gametitle=007 - Everything or Nothing (PAL-M) SLES-52005 5FFFDE40
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Widescreen Hack
+patch=1,EE,0030DEE0,word,24020001 //0C04B51A
+

@@ -1,0 +1,13 @@
+gametitle=Kaido Battle 2 - Chain Reaction [NTSC-J] (SLPM-65514)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+description=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+patch=1,EE,00149200,word,3c023f40
+
+[No-Interlacing]
+gsinterlacemode=1
+author=val
+description=Attempts to disable interlaced offset rendering.
+patch=1,EE,0013A204,word,00000000

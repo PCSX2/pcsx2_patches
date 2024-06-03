@@ -1,0 +1,11 @@
+gametitle=Tom Clancy's Splinter Cell: Pandora Tomorrow (SLUS_20958) AEE8FDC4
+//Corresponds to the main crc to activate the secondary crc 0277247B called SC2A.ELF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+comment=Renders the game in 16:9 aspect ratio
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.

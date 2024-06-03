@@ -1,0 +1,11 @@
+gametitle=WWF SmackDown! - Just Bring It (NTSC) (SLUS-20316)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by GTAZAZO98
+
+// 16:9
+patch=1,EE,0010319c,word,3c013f40 // 00000000 hor fov
+patch=1,EE,001031a8,word,44810000 // 00000000 
+patch=1,EE,001031ac,word,4600c602 // 00000000 
+patch=1,EE,001cb7e0,word,3c053f50 // 3c053f80 camera fix

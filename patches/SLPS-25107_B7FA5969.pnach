@@ -1,0 +1,16 @@
+gametitle=Kengou 2 (NTSC-J) [SLPS-25107]
+
+[Widescreen 16:9]
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
+gsaspectratio=16:9
+
+//Gameplay 16:9
+patch=1,EE,001ac584,word,3C013F40 //3C013F80 (Increases hor. axis)
+
+//Cutscenes in movement fix
+patch=1,EE,001ad37c,word,3C013F40 //3C013F80 (Increases hor. axis)
+
+[Removes black box cutscenes texts (Optional)]
+patch=1,EE,001b3a78,word,3C013D00 //3C013F80
+
+

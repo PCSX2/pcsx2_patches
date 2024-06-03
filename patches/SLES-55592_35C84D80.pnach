@@ -1,0 +1,14 @@
+gametitle=Ben 10: Alien Force Vilgax Attacks [PAL-M5] (SLES_555.92) 35C84D80
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,2073DD54,extended,3FE38E38 //3FAAAAAB (Increases hor. axis)
+
+[50 FPS]
+author=asasega and PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,201002F4,extended,10000011
+patch=1,EE,E0010001,extended,004D114C
+patch=1,EE,201002F4,extended,45000011

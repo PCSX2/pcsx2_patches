@@ -1,0 +1,8 @@
+gametitle=Naruto Shippuden Narutimate Accel 2 SLPS_258.37
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,20af3694,extended,3f400000
+
+

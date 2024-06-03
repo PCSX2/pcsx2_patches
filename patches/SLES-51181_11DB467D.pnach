@@ -1,0 +1,18 @@
+gametitle=Tom Clancy's Ghost Recon (PAL-M) (SLES_511.81) 11DB467D
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Somechump
+comment=Renders the game in 16:9 aspect ratio
+//Widescreen hack by nemesis2000 (Converted to PAL by Somechump)
+patch=1,EE,003a89c4,word,3c023f40 //sp
+patch=1,EE,003a89e4,word,3c0243d6
+patch=1,EE,003a8ae4,word,3c023f40 //mp
+patch=1,EE,003a8b04,word,3c0243d6
+patch=1,EE,0053ba44,word,3c023f0c //menu
+patch=1,EE,0053ba54,word,3c0243d6
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,002729D4,word,1000000E //1040000E

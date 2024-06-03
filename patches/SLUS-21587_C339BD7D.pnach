@@ -1,0 +1,16 @@
+gametitle=Made Man - Confessions of the Family Blood (U)(SLUS-21587) C339BD7D
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00152DD0,word,3C013FAB //3C013F80 Y-Fov
+patch=1,EE,002205D8,word,3C013F20 //3C013F00 Zoom
+patch=1,EE,001B2E10,word,3C013F04 //3C013F1C Zoom menu fix
+patch=1,EE,00498B28,word,3F700000 //3F800000 Black bars fix
+
+[Remove Blackbars]
+author=Arapapa & PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,00100B88,word,24040000 //24040001 Upper
+patch=1,EE,00100C88,word,24040000 //24040001 Bottom

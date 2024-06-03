@@ -1,0 +1,31 @@
+gametitle=Armored Core - Nexus - Disc 1 - Evolution (PAL-M5) (SLES-82036)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen Hack
+patch=1,EE,001211D0,extended,00000019 // 3C033F4C hor fov gameplay
+patch=1,EE,101211D8,extended,0000999A // 3462CCCD hor fov gameplay
+patch=1,EE,00158880,extended,000000D6 // 3C0243A0 renderfix
+patch=1,EE,C1E16E68,extended,3C023F80
+patch=1,EE,01E16E68,extended,00000040 // 3C023F80 hor fov menu
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,D1D47A22,extended,0100656D
+patch=1,EE,0023D32C,extended,00000001
+patch=1,EE,D1D47A22,extended,01006F73
+patch=1,EE,0023D32C,extended,00000000
+
+[Remove Blur]
+author=001 & Berylskid
+description=Removes blur effects.
+patch=1,EE,20131AB0,extended,00000000
+patch=1,EE,D1D47A22,extended,02006F73
+patch=1,EE,61CC76E8,extended,00000000
+patch=1,EE,00000001,extended,0000005F
+
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,0020A2DA,extended,00000000

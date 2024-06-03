@@ -1,0 +1,11 @@
+gametitle=Dance Dance Revolution SuperNova SLES-54341
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack Conversion
+
+// 16:9
+patch=1,EE,0014f5a4,word,3c023f22 // 3c023f00
+patch=1,EE,0014f794,word,3c023fe3 // 3c023faa
+patch=1,EE,0014f7a0,word,34458e39 // 3445aaab

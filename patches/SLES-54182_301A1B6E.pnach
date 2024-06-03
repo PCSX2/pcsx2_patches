@@ -1,0 +1,6 @@
+gametitle=Scarface - The World is Yours (MULTI4) (SLES-54182)
+
+[50 FPS]
+author=Gabominated
+comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,00DAFCBC,word,00000000 //00000001

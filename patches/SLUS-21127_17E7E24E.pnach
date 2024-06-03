@@ -1,0 +1,8 @@
+gametitle=Brave - The Search for Spirit Dancer (NTSC-U) SLUS-21127 17E7E24E
+
+[60 FPS]
+author=PeterDelta
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,2033AF04,extended,00000000
+patch=1,EE,E0010000,extended,003C6D68
+patch=1,EE,2033AF04,extended,1040FFFA

@@ -1,0 +1,9 @@
+gametitle=Smugglers Run 2 - Hostile Territory PAL-M4 (SLES_50341)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack Conversion
+patch=1,EE,2036F3A8,word,3FAAAAAA
+
+

@@ -1,0 +1,8 @@
+gametitle=Simple 2000 Series Vol. 101 - The Oneechanpon [SLPS-20466]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=NTSC-J Widescreen Hack by synce
+patch=1,EE,20495104,extended,3F400000
+
+

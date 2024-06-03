@@ -1,0 +1,9 @@
+gametitle=The King of Route 66 (Pal-M5) (SLES-51615)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack Conversion
+author=Bigdemon
+
+patch=1,EE,00130a98,extended,3c033f40 // 3c023f80
+

@@ -1,0 +1,54 @@
+gametitle=Tourist Trophy [SCUS-97502] (USA)
+
+[Autoboot in 480p]
+comment=The game will always start races in 480p instead of 480i.
+author=Blackbird+Silent
+patch=1,EE,20829248,extended,00000001
+
+[Adjusted triggers sensitivity]
+description=Makes throttle/brake more precise when using triggers, like on PS3
+author=Silent & Aero_
+
+// Throttle
+patch=1,EE,10403AEC,extended,0000005A
+patch=1,EE,20403B6C,extended,00000000
+// Brake
+patch=1,EE,10403AF4,extended,0000005A
+patch=1,EE,20403BC8,extended,00000000
+
+[GT3 Chase Camera]
+description=GT3-like camera from GT4 First Preview
+author=Silent
+
+// Values changed by this cheat are hexadecimal.
+
+// Default parameters in this cheat correspond to the values from GT4 First Preview,
+// but you may freely customize them. For example, if you want to make the camera
+// even stiffer (like in GT5/6), increase the damper value.
+
+// Camera damper, default - 120
+// Higher values make the camera center quicker
+patch=1,EE,1058499A,extended,1E1E // 30
+patch=1,EE,1058499C,extended,1E1E // 30
+
+// Camera max angle, default - 15
+// Higher values make the camera lean further to the sides
+patch=1,EE,1058499E,extended,0A0A // 10
+patch=1,EE,105849A0,extended,0A0A // 10
+
+[Far chase camera]
+description=Added GT4 First Preview camera mode
+author=Silent
+
+// Swap 4-byte instructions to 2-byte ones to make space
+patch=1,EE,2032391C,extended,84E30000
+patch=1,EE,10323920,extended,0002
+patch=1,EE,10323930,extended,0004
+patch=1,EE,20323940,extended,84E30000
+
+patch=1,EE,10323950,extended,0004
+patch=1,EE,00323968,extended,40
+patch=1,EE,1032397A,extended,8442
+
+patch=1,EE,20583D88,extended,00010000
+patch=1,EE,20583D8C,extended,00060014

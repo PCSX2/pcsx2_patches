@@ -1,0 +1,16 @@
+gametitle=Harry Potter and The Order of the Phoenix (E)(SLES-54779)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen Hack
+//Widescreen hack 16:9
+
+//Force turn on Internal Widescreen
+patch=1,EE,004c42c8,word,24020002 //30420003
+
+//Zoom fix
+//003f013c 00108144 02000146 (2nd)
+patch=1,EE,00354528,word,3c013f20 //3c013f00
+
+

@@ -1,0 +1,9 @@
+gametitle=God of War 2 - PAL [SCES_542.06]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ShaolinAssassin
+comment=Widescreen Converted from NTSC hack by nemesis2000
+patch=1,EE,002348a0,word,46000406
+
+

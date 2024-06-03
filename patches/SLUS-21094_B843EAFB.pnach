@@ -1,0 +1,8 @@
+gametitle=Midway Arcade Treasures 3
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,001E3E54,word,3C023F40 //3C023F80 (Hydro Thunder)
+
+

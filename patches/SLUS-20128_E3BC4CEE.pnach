@@ -1,0 +1,12 @@
+gametitle=ESPN MLS Extra Time (U)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by Arapapa
+
+//Widescreen hack 16:9
+
+//803f013c 00688144
+patch=1,EE,001123b0,word,3c013f40 //3c013f80 X-Fov
+
+

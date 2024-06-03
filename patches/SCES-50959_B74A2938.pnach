@@ -1,0 +1,13 @@
+gametitle=Disney Stitch: Experiment 626 [PAL-M2] [Esp-Por] (SCES_509.59) B74A2938
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,00236AE4,word,3C023F1E //3C023F00 Zoom 16:9
+patch=1,EE,00236F34,word,3C03BFAC //3C03BF80 Y-FOV 16:9
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,00628C88,byte,01

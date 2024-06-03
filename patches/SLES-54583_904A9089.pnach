@@ -1,0 +1,13 @@
+gametitle=Surf's Up (PAL-M)(SLES-54583) 904A9089
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,006056a4,word,3c033ec0 //3c033f00
+patch=1,EE,0060e678,word,3c033ec0 //3c033f00
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,0060704C,word,28630001 //28630002

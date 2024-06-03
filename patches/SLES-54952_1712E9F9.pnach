@@ -1,0 +1,14 @@
+gametitle=Ben 10: Protector of Earth [PAL-M5] (SLES_549.52) 1712E9F9
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,0011940C,word,3C013F4D //3C013F89
+patch=1,EE,00119410,word,3421B6E0 //34212493
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,00268658,word,00000001 //00000002
+patch=1,EE,001637AC,word,3C013F30

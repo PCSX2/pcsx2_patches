@@ -1,0 +1,35 @@
+gametitle=Disney Princess - Enchanted Journey (PAL-E-G-S) (SLES-54837) 5F30B426
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Widescreen Hack
+//X-Fov
+patch=1,EE,00265454,word,3c014440 //3c014480
+
+//Render Fix
+patch=1,EE,003f3530,word,40000000 //3eaaaaab
+
+//Menu.... Character Position (Not Fixed Address)
+//patch=1,EE,206db7d8,extended,39000000 //3d991686
+//patch=1,EE,206db7e0,extended,3e3f0000 //3e4d4fdf
+
+[Remove Blackbars]
+author=Arapapa
+description=Removes black bars in cutscenes
+patch=1,EE,00188de4,word,00000000 //44810000
+
+[50/60 FPS]
+author=asasega & PeterDelta
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,201002F4,extended,10000011
+patch=1,EE,E0010000,extended,003A6A38 //fixed fmv
+patch=1,EE,201002F4,extended,45000011
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=Forces progressive scan mode 480p at startup.
+patch=1,EE,003313DC,word,24110000
+patch=1,EE,003313E0,word,24120050
+patch=1,EE,003313EC,word,24130001

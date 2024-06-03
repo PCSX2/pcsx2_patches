@@ -12,14 +12,13 @@ jobs:
 
       - name: Create archives
         run: |
-          7z a -r cheats_ni.zip ./cheats_ni/*
-          7z a -r cheats_ws.zip ./cheats_ws/*
+          7z a -r patches.zip ./patches/*
 
       - name: Upload archives
         uses: actions/upload-artifact@v3
         with:
           name: cheats
-          path: ./cheats_*.zip
+          path: ./patches.zip
           if-no-files-found: error
 
   release:
@@ -38,4 +37,4 @@ jobs:
           automatic_release_tag: latest
           prerelease: false
           title: Latest Build
-          files: ./cheats/cheats_*.zip
+          files: ./cheats/patches.zip

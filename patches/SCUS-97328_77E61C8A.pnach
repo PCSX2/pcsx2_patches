@@ -1,0 +1,118 @@
+gametitle=Gran Turismo 4 [SCUS-97328] (U)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Text
+author=Aero_
+
+// Corrects Text Aspect Ratio for Widescreen
+patch=1,EE,20492A30,extended,08125570 // j 004955C0
+patch=1,EE,204955C0,extended,3C090061 // lui t1,0x0061 : Widescreen Mode 1st-Half of Memory Address
+patch=1,EE,204955C4,extended,352984F0 // ori t1,0x84F0 : Widescreen Mode 2nd-Half of Memory Address
+patch=1,EE,204955C8,extended,812A0000 // lb t2,(t1)
+patch=1,EE,204955CC,extended,C65A0024 // lwc1 f26,0x24(s2)
+patch=1,EE,204955D0,extended,11400004 // beqz t2,0x004955E4 : Jumps if Widescreen Mode is Disabled
+patch=1,EE,204955D4,extended,3C013F40 // lui at,0x3F40 : Text Width 1st-Half of Float Value
+patch=1,EE,204955D8,extended,34210000 // ori at,0x0000 : Text Width 2nd-Half of Float Value
+patch=1,EE,204955DC,extended,4481A000 // mtc1 at,f20
+patch=1,EE,204955E0,extended,4614D682 // mul.s f26, f26, f20
+patch=1,EE,204955E4,extended,08124A8D // j 00492A34
+patch=1,EE,2044DBD8,extended,00000000 // nop
+
+[Adjusted triggers sensitivity]
+description=Makes throttle/brake more precise when using triggers, like on PS3
+author=Silent & Aero_
+
+// Throttle
+patch=1,EE,1043BEFC,extended,0000005A
+patch=1,EE,2043BEF0,extended,00000000
+// Brake
+patch=1,EE,1043BF5C,extended,0000005A
+patch=1,EE,2043BF50,extended,00000000
+// Reverse
+patch=1,EE,1043C01C,extended,0000005A
+patch=1,EE,2043C010,extended,00000000
+
+[GT3 Chase Camera]
+description=GT3-like camera from GT4 First Preview
+author=Silent
+
+// Values changed by this cheat are float values represented in hex.
+// If you want to customize those parameters, use a float-to-hex converter like this one:
+// https://gregstoll.com/~gregstoll/floattohex/
+
+// Default parameters in this cheat correspond to the values from GT4 First Preview,
+// but you may freely customize them. For example, if you want to make the camera
+// even stiffer (like in GT5/6), increase the damper value.
+
+// Camera damper, default - 120.0
+// Higher values make the camera center quicker
+patch=1,EE,2069F4C8,extended,41F00000 // 30.0
+// Camera max angle, default - 15.0
+// Higher values make the camera lean further to the sides
+patch=1,EE,2069F4D0,extended,41200000 // 10.0
+
+[GT5 Camera Placement]
+comment=Moves the exterior camera further from the ground like Gran Turismo 5.
+author=Aero_
+patch=1,EE,2037B304,extended,0812555E // j 00495578
+patch=1,EE,20495578,extended,8E180008 // lw t8,0x8(s0)
+patch=1,EE,2049557C,extended,3C19C0C0 // lui t9,0xC0C0
+patch=1,EE,20495580,extended,17380006 // bne t9,t8,0x0049559C : jumps if Z-Axis does not equal -6.0 float
+patch=1,EE,20495584,extended,3C19BFF3 // lui t9,0xBFF3 : Y-Axis 1st-Half of Float Value
+patch=1,EE,20495588,extended,37393333 // ori t9,0x3333 : Y-Axis 2nd-Half of Float Value
+patch=1,EE,2049558C,extended,AE190004 // sw t9,0x4(s0)
+patch=1,EE,20495590,extended,3C19C0E0 // lui t9,0xC0E0 : Z-Axis 1st-Half of Float Value
+patch=1,EE,20495594,extended,37390000 // ori t9,0x0000 : Z-Axis 2nd-Half of Float Value
+patch=1,EE,20495598,extended,AE190008 // sw t9,0x8(s0)
+patch=1,EE,2049559C,extended,C60C0000 // lwc1 f12,0x0(s0)
+patch=1,EE,204955A0,extended,C60D0004 // lwc1 f13,0x4(s0)
+patch=1,EE,204955A4,extended,0C129E11 // jal 0x004A7844
+patch=1,EE,204955A8,extended,C60E0008 // lwc1 f14,0x8(s0)
+patch=1,EE,204955AC,extended,080DECC5 // j 0037B314
+
+[Far chase camera]
+description=Added GT4 First Preview camera mode
+author=Silent
+
+// Swap 4-byte instructions to 2-byte ones to make space
+patch=1,EE,2037ACDC,extended,84E30000
+patch=1,EE,1037ACE0,extended,0002
+patch=1,EE,1037ACF0,extended,0004
+patch=1,EE,2037AD00,extended,84E30000
+
+patch=1,EE,1037AD10,extended,0004
+patch=1,EE,0037AD28,extended,40
+patch=1,EE,1037AD3A,extended,8442
+
+patch=1,EE,206211E8,extended,00010000
+patch=1,EE,206211EC,extended,00060014
+
+[Analog HUD For All Camera Views]
+comment=The analog tachometer will be used for the chase camera.
+author=Aero_
+patch=1,EE,2039CE80,extended,1000000D
+patch=1,EE,2039CEB8,extended,24020000
+
+[Digital HUD For All Camera Views]
+comment=The digital tachometer will be used for the bumper camera and roof camera.
+author=Aero_
+patch=1,EE,2039CE80,extended,1000000D
+patch=1,EE,2039CEB8,extended,24020001
+
+[Reduce Vibration]
+comment=Reduces the strength of the controller's vibration.
+author=Aero_
+patch=1,EE,2036D1C4,extended,3C014170 // lui at,0x4170 : Vibration Float
+
+[Disable Dynamic Race Text] 
+comment=Disables the text that appears at the bottom of the screen. Example: "GET READY TO DRIVE"
+author=Aero_
+patch=1,EE,2039DA54,extended,00000000 // GET READY TO DRIVE
+patch=1,EE,2039D77C,extended,00000000 // Penalty Timer
+
+[Autoboot in 480p]
+comment=The game will always start in 480p instead of 480i.
+author=Silent
+patch=1,EE,204364A8,extended,AE0516B0
+patch=1,EE,10436598,extended,10E8

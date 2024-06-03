@@ -1,0 +1,7 @@
+gametitle=Terminator 3 - Rise Of The Machines (PAL-S) SLES-52039 BE408EFF
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,003EED78,word,00000000 //00000001
+patch=1,EE,0013FC9C,word,3C013F00 //3C013F80

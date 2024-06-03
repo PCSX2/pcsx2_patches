@@ -1,0 +1,30 @@
+gametitle=James Bond 007 - Agent Under Fire (E) (SLES-50539)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=16:9 widescreen patch
+author=Arapapa, Silent
+
+// Action segments
+// English
+patch=1,EE,D0320494,extended,01003F80
+patch=1,EE,10320494,extended,00003FAB // 3F80
+// French
+patch=1,EE,D0320564,extended,01003F80
+patch=1,EE,10320564,extended,00003FAB // 3F80
+// German
+patch=1,EE,D032057C,extended,01003F80
+patch=1,EE,1032057C,extended,00003FAB // 3F80
+// Spanish
+patch=1,EE,D0320574,extended,01003F80
+patch=1,EE,10320574,extended,00003FAB // 3F80
+// Dutch, Swedish
+patch=1,EE,D032059C,extended,01003F80
+patch=1,EE,1032059C,extended,00003FAB // 3F80
+
+// Driving segments
+patch=1,EE,D022E248,extended,04003F80
+patch=1,EE,1022E248,extended,00003F40
+patch=1,EE,1012B7D0,extended,00003FE8
+patch=1,EE,1012B7D4,extended,00008E39
+patch=1,EE,1011B3B0,extended,000043F0 // 480.0

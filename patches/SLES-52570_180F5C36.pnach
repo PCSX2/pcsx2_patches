@@ -1,0 +1,18 @@
+gametitle=Area 51 [PAL-M] SLES-52570 180F5C36
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Ported from the other version PAL by ElHecht
+patch=1,EE,00392730,word,3c193f40 // 00000000 hor fov ok
+patch=1,EE,00392748,word,4499f000 // 00000000
+patch=1,EE,0039274C,word,461ea502 // 00000000
+patch=1,EE,00392E18,word,461ebb03 // 00000000 renderfix calculation
+patch=1,EE,00392E04,word,461eab83 // 00000000 renderfix calculation
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,00382AD8,word,28620001 //28620002 slti v0,v1,0x0002
+patch=1,EE,E0010001,extended,005BE984
+patch=1,EE,20382AD8,extended,28620002

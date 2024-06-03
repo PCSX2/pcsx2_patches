@@ -1,0 +1,9 @@
+gametitle=Busou Renkin: Yokosu Papillon Park e [NTSC-J] (SLPS-25764)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by Little Giant
+
+patch=1,EE,202389F4,extended,3f400000
+
+

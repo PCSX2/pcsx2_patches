@@ -1,0 +1,16 @@
+gametitle=Hot Wheels: Stunt Track Challenge * NTSC-U * SLUS-20954 * E798B2D5
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=sergx12
+patch=1,EE,001f48e4,word,3c013f40 // 3c013f80 - Render fix
+patch=1,EE,00201e2c,word,3c013fc0 // 3c014000 - X-FoV
+patch=1,EE,00362c1c,word,3c013f10 // 3c013f40 - Y-FoV
+
+// old Widescreen hack by arapapa
+// patch=1,EE,20BA949C,extended,3faaaaab // 3f800000 - X-FoV
+// patch=1,EE,20BCCD3C,extended,3faaaaab // 3f800000 - X-FoV
+// This pnach has been reported buggy:
+// https://forums.pcsx2.net/Thread-PCSX2-Widescreen-Game-Patches?pid=628113#pid628113
+//  and officially disabled:
+//  https://github.com/PCSX2/pcsx2_patches/pull/355

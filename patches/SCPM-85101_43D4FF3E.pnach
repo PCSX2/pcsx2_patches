@@ -1,0 +1,10 @@
+gametitle=McDonald's Original Happy Disc (NTSC-J) [SCPM-85101]
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//force progressive (PARAPPA DEMO ONLY)
+patch=1,EE,2023032C,word,00000000
+patch=1,EE,202303B4,word,00000000
+
+

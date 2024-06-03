@@ -1,0 +1,18 @@
+gametitle=Enthusia Professional Racing (J)(SLPM-65948)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by No.47
+
+//Widescreen hack 16:9
+
+patch=1,EE,20388D88,word,3F400000
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20133654,word,34060001
+patch=1,EE,203890c0,word,00009450
+
+

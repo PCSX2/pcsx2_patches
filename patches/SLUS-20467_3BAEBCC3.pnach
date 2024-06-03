@@ -1,0 +1,43 @@
+gametitle=Lara Croft Tomb Raider: The Angel of Darkness * NTSC-U * SLUS-20467 * 3BAEBCC3
+
+// Force English hack by Agrippa - else the game crashes with french or spanish
+//  set in the BIOS configuration - a gamebug, not an emulator bug.
+// Included in Automatic Gamefixes with later builds.
+//patch=1,EE,0020520C,word,24020001 // 0C0882C8
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Native Widescreen activation hack (Full boot bypassing)
+patch=1,EE,00220bd0,word,24020002 // 30420003
+
+// Fast Boot 4:3 fix (proper aspect ratio)
+// aa3f013c 713d2134 (Last)
+patch=1,EE,0020521c,word,3c013fe2 // 3c013faa
+patch=1,EE,00205220,word,3421fc93 // 34213d71
+
+// Full Boot 16:9 fix (proper aspect ratio)
+patch=1,EE,00205230,word,3c013fe2 // 3c013fd5
+patch=1,EE,00205234,word,3421fc93 // 3421c28f
+
+[Widescreen/16:10]
+gsaspectratio=Stretch
+
+// Fast Boot 4:3 hack - 16:10
+patch=1,EE,0020521c,word,3C013FCC
+patch=1,EE,00205220,word,342149BB
+
+// Full Boot 16:10
+patch=1,EE,00205230,word,3C013FCC
+patch=1,EE,00205234,word,342149BB
+
+[Widescreen/15:10]
+gsaspectratio=Stretch
+
+// Fast Boot 4:3 hack - 15:10
+patch=1,EE,0020521c,word,3C013FBF
+patch=1,EE,00205220,word,3421851F
+
+// Full Boot 15:10
+patch=1,EE,00205230,word,3C013FBF
+patch=1,EE,00205234,word,3421851F

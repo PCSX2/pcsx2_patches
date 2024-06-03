@@ -1,0 +1,47 @@
+gametitle=Champions of Norrath * PAL-M2 (En,Es) * SLES-52373 * D18EF711
+
+// ==========
+// To speed-up this game, set "EE Cyclerate" to 2 and "EE Cycle Skipping" to 3
+//  (in combination) under Config > Emulation Settings > Speedhacks.
+// ==========
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0017F3E0,word,3C013F19 // 3C013F4C
+patch=1,EE,0018A1DC,word,3C013F19 // 3C013F4C
+patch=1,EE,00191324,word,3C013FE3 // 3C013FAA - render fix menu
+patch=1,EE,00191664,word,3C013FE3 // 3C013FAA - render fix
+
+[Widescreen/16:10]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0017F3E0,word,3C013F2A
+patch=1,EE,0018A1DC,word,3C013F2A
+patch=1,EE,00191324,word,3C013FCC
+patch=1,EE,00191664,word,3C013FCC
+
+[Widescreen/15:10]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0017F3E0,word,3C013F35
+patch=1,EE,0018A1DC,word,3C013F35
+patch=1,EE,00191324,word,3C013FBF
+patch=1,EE,00191664,word,3C013FBF
+
+[Widescreen/20:9]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0017F3E0,word,3C013EF5
+patch=1,EE,0018A1DC,word,3C013EF5
+patch=1,EE,00191324,word,3C01400E
+patch=1,EE,00191664,word,3C01400E
+
+[Widescreen/21:9]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0017F3E0,word,3C013EE9
+patch=1,EE,0018A1DC,word,3C013EE9
+patch=1,EE,00191324,word,3C014015
+patch=1,EE,00191664,word,3C014015

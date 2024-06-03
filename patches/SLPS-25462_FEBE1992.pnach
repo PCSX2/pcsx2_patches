@@ -1,0 +1,37 @@
+gametitle=Armored Core - Last Raven [NTSC-J] (SLPS-25462)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen hack by ElHecht
+
+// 16:9
+patch=1,EE,00174e64,word,3c094455 //3c024420 hor fov
+patch=1,EE,00174e6c,word,35295555 //44822000 hor fov
+patch=1,EE,00174ec8,word,4489f000 //46042903
+patch=1,EE,00174ecc,word,461e2f83 //e48402cc
+patch=1,EE,00174ef4,word,e49e02cc //00000000
+
+// 16:10
+//patch=1,EE,00174e64,word,3c094440 //3c024420 hor fov
+//patch=1,EE,00174e6c,word,35290000 //44822000 hor fov
+//patch=1,EE,00174ec8,word,4489f000 //46042903
+//patch=1,EE,00174ecc,word,461e2f83 //e48402cc
+//patch=1,EE,00174ef4,word,e49e02cc //00000000
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,00112424,word,00000000
+patch=1,EE,00177D5C,word,0000102D
+
+[Remove Blur]
+author=PsxFan107 & 001
+description=Removes blur effects.
+patch=1,EE,2018C09C,extended,00000000 //by PsxFan107
+patch=1,EE,D0177D5C,extended,0000102D //by 001
+patch=1,EE,20177D60,extended,00000000 //by 001
+
+[Correct HUD]
+author=001 & Berylskid
+description=Removes HUD artifacts on hardware renderer.
+patch=1,EE,002469FA,extended,00000000

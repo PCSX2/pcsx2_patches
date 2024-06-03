@@ -1,0 +1,15 @@
+gametitle=The Lord of the Rings - The Third Age (PAL-M5) (SLES-52801)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Widescreen hack 16:9
+patch=1,EE,20C36980,word,3F400000 //3F800000
+patch=1,EE,20C36990,word,3FB00000 //3F800000
+patch=1,EE,20C36998,word,3FB00000 //3F800000
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001C36DC,word,00000000 //4501FFF6 bc1t 0x001C36B8
+patch=1,EE,00279890,word,3C013f00 //3C013F80 camera

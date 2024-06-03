@@ -1,0 +1,6 @@
+gametitle=Valkyrie Profile 2: Silmeria (PAL-G) [SLES-54646]
+[Widescreen 16:9]
+gsaspectratio=16:9
+patch=1,EE,001508c8,word,3f11eb85 //3eaaaaab
+
+

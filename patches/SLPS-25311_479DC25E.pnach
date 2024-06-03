@@ -1,0 +1,8 @@
+gametitle=Spy Fiction [NTSC-J] (SLPS-25311)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,001CAADC,word,3F2AAAAB
+
+

@@ -1,0 +1,27 @@
+gametitle=Disney Princess - Enchanted Journey (U)(SLUS-21660)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Widescreen Hack
+//X-Fov
+patch=1,EE,002652c4,word,3c014440 //3c014480
+
+//Render fix
+patch=1,EE,003f2490,word,40000000 //3eaaaaab
+
+//Menu.... Character Position (Not Fixed Address)
+//patch=1,EE,206db7d8,extended,39000000 //3d991686
+//patch=1,EE,206db7e0,extended,3e3f0000 //3e4d4fdf
+
+[Remove Blackbars]
+author=Arapapa
+description=Removes black bars in cutscenes
+patch=1,EE,00188978,word,00000000 //44810000
+
+[60 FPS]
+author=asasega & PeterDelta
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,201002F4,extended,10000011
+patch=1,EE,E0010000,extended,003A67B0 //fixed fmv
+patch=1,EE,201002F4,extended,45000011

@@ -1,0 +1,18 @@
+gametitle=Road Rage 3 (PAL-E) (SLES_519.30)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack by El_Patas
+
+patch=1,EE,20435588,extended,3F400000 // 3F800000 hor fov
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//Search pattern: 3829050008004264 (little endian)
+//Search mask:    ffffffffffffffff
+patch=1,EE,0020c8ec,word,00000000 //64420008
+patch=1,EE,0020ca84,word,00000000 //64420008
+
+

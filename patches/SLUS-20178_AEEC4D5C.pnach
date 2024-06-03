@@ -1,0 +1,18 @@
+gametitle=Giants Citizen Kabuto [SLUS 20178](U)
+
+[Widescreen 16:9]
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
+gsaspectratio=16:9
+
+patch=1,EE,003bad40,word,3fe38e39 //3faaaaab
+patch=1,EE,003baef8,word,3fe38e39 //3faaaaab
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,00210348,word,30630000
+patch=1,EE,26CA3DCC,word,00000000
+patch=1,EE,00224AB4,word,00000000
+
+

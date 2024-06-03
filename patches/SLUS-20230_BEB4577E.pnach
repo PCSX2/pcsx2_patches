@@ -1,0 +1,7 @@
+gametitle=Max Payne (NTSC-U)
+//This pnach corresponds to the main CRC of the game, but it's just meant to activate SLUS-20230_513CA7D9.pnach
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+comment=Widescreen Hack

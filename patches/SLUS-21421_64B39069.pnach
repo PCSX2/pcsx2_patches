@@ -1,0 +1,8 @@
+gametitle=Spy Hunter - Nowhere to Run SLUS_214.21
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+patch=1,EE,005fb404,word,3fdba5e3 //3fa4bc75
+
+

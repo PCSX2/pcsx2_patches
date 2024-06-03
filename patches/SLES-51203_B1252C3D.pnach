@@ -1,0 +1,9 @@
+gametitle=Enter the Matrix [PAL-M5] (SLES_512.03) V2.00
+
+comment=Widescreen hack conversion
+author=Bigdemon
+[Widescreen 16:9]
+gsaspectratio=16:9
+
+//Built-in widescreen 16:9 
+patch=1,EE,001CEFEC,word,A2740BCC //AE600BCC (Increases hor. axis)

@@ -1,0 +1,17 @@
+gametitle=Rogue Trooper (E)(SLES-52921)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen Hack
+//Widescreen hack 16:9
+
+//X-Fov
+//803f013c 00e08144
+patch=1,EE,001c88ec,word,3c013f40 //3c013f80
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,003C8A04,word,00000000 //1040FFFA
+patch=1,EE,001BE7AC,word,00000000 //1440FFFA

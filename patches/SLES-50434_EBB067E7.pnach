@@ -1,0 +1,6 @@
+gametitle=Army Men - RTS (PAL-E) SLES-50434 EBB067E7
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,003F57F3,word,00000000 //00000001

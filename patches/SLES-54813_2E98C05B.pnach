@@ -1,0 +1,7 @@
+gametitle=NASCAR '08 (PAL-E) SLES-54813 2E98C05B
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,003FC9E0,word,3F400000 //3F800000

@@ -1,0 +1,7 @@
+gametitle=Ghost Vibration (PAL-E) SLES_514.33 CDD0C904
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=sergx12
+comment=Widescreen Hack
+patch=1,EE,001F26F0,word,3F400000 // 3F800000

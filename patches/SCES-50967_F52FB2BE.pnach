@@ -1,0 +1,21 @@
+gametitle=Kingdom Hearts (PAL)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen patch
+patch=1,EE,001105e4,word,3c0143d6 //render fix
+patch=1,EE,00110ad0,word,3c013f19 //hor value first half
+patch=1,EE,00110ad4,word,3421999a //hor value second half
+
+//FMV's fix
+patch=1,EE,002a1308,word,70007000
+patch=1,EE,0010629c,word,3c071900
+
+[Remove Blackbars]
+description=Removes black bars in cutscenes
+patch=1,EE,0010430c,word,00000000
+patch=1,EE,0010442c,word,00000000
+
+[60 FPS]
+description=Forces the game to run at 60.
+patch=1,EE,002B67CC,extended,00000000

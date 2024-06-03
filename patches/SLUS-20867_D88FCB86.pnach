@@ -1,0 +1,19 @@
+gametitle=Astro Boy (U)(SLUS-20867)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+comment=Widescreen Hack
+//Fov
+patch=1,EE,002cb778,word,3c013fd5 //3c013fa0
+
+//Zoom
+patch=1,EE,0037f2f8,word,3c013ec0 //3c013f00
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,0069AD90,word,00000001
+patch=1,EE,0069AD98,word,42700000
+patch=1,EE,0069AD9C,word,3C888889
+patch=1,EE,0069ADA0,word,3F800000

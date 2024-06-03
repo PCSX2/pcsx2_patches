@@ -1,0 +1,9 @@
+gametitle=McFarlane's Evil Prophecy (SLES_527.10)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack Correction
+
+//16:9
+patch=1,EE,2031d0d0,extended,443b8000

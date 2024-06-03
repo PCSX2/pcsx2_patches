@@ -1,0 +1,28 @@
+gametitle=Star Wars - Episode III - Revenge of the Sith (PAL-M3) (SLES-53155) 99AD19EE
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+comment=Widescreen Hack
+// 16:9
+patch=1,EE,004dbd44,word,3c023f40 // 3c023f80 hor fov
+patch=1,EE,0051bca0,word,3c013f40 // 00000000 renderfix
+patch=1,EE,0051bcac,word,4481f000 // 00000000
+patch=1,EE,0051bcf0,word,461e4a42 // 00000000
+
+// 16:10
+//patch=1,EE,004dbd30,word,3c013f55 // 00000000 hor fov
+//patch=1,EE,004dbd34,word,34215555 // 00000000 hor fov
+//patch=1,EE,004dbd3c,word,4481f800 // 00000000
+//patch=1,EE,004dbd50,word,4600f806 // 44820000
+//patch=1,EE,0051bca0,word,3c013f55 // 00000000 renderfix
+//patch=1,EE,0051bca4,word,34215555 // 00000000 renderfix
+//patch=1,EE,0051bcac,word,4481f000 // 00000000
+//patch=1,EE,0051bcf0,word,461e4a42 // 00000000
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001AF538,word,00000002 //00000002
+patch=1,EE,E0010002,extended,001B4344
+patch=1,EE,201AF538,extended,00000001

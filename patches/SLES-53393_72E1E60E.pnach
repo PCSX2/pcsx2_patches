@@ -1,0 +1,9 @@
+gametitle=Spartan: Total Warrior (SLES-53393)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=paul_met
+comment=Widescreen Hack
+patch=1,EE,2057C814,extended,3F100000 // 3F400000
+
+

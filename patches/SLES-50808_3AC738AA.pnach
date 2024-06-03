@@ -1,0 +1,6 @@
+gametitle=Deus Ex [PAL-S] SLES-50808 3AC738AA. ELF secondary 7070DC2F
+//Corresponds to the main crc to activate the secondary crc 7070DC2F called DEUSEX.ELF
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.

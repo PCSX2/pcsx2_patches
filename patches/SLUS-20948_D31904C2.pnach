@@ -1,0 +1,29 @@
+gametitle=Crimson Tears SLUS_209.48
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+comment=Widescreen Hack
+
+//aabf023c 00008544 abaa4334
+patch=1,EE,001bcb98,word,3c02bfe3 //3c02bfaa hor fov
+patch=1,EE,001bcba0,word,34438e39 //3443aaab hor fov
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+
+//No-Interlacing
+patch=1,EE,00166A84,word,30420000
+patch=1,EE,002ae84c,word,00000000 //64420008
+patch=1,EE,0032B280,word,30420000
+
+
+//Remove Ghosting and Bloom (Optional)
+//Remove "//" before patch to activate
+//patch=1,EE,006C4D58,word,00000000
+//patch=1,EE,00E36888,word,00000000
+//patch=1,EE,00E363A8,word,00000000
+//patch=1,EE,00E38B78,word,00000000
+
+

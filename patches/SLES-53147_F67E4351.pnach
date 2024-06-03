@@ -1,0 +1,12 @@
+gametitle=4 Fantásticos, Los [PAL-S] SLES-53147 F67E4351
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Widescreen Hack 16:9
+patch=1,EE,0031DA70,word,3FB8E369
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,00177A70,word,1000000C //1462000C bne v1,v0,0x00177AA4

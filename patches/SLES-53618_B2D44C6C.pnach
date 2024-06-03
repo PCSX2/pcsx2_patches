@@ -1,0 +1,10 @@
+gametitle=True Crime - New York City [PAL-S] SLES-53618 B1AC3BEB. elf secondary B2D44C6C
+
+[50/60 FPS]
+author=PeterDelta
+comment=Unlocked at 50/60 FPS indoors. Might need enable 180% EE Overclock to be stable.
+patch=1,EE,004A1AE4,extended,24040002
+patch=1,EE,2050549C,extended,3F800000
+patch=1,EE,E0020000,extended,00500338
+patch=1,EE,004A1AE4,extended,24040001
+patch=1,EE,2050549C,extended,3F000000

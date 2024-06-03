@@ -1,0 +1,16 @@
+gametitle=Warriors, The (PAL-M) SLES-53443 FA3C1346
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00596D70,byte,01
+
+[60 FPS]
+author=PeterDelta
+comment=Forces progressive scan and run at 60 fps
+patch=1,EE,0043CCA0,word,34050052
+patch=1,EE,0043CCA4,word,24030002
+patch=1,EE,0043CCA8,word,0000000C
+patch=1,EE,0043CCAC,word,03E00008
+patch=1,EE,0070F978,word,02058290
+patch=1,EE,0070F9A0,word,02058290
