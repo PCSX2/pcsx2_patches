@@ -18,5 +18,5 @@ patch=1,EE,00355640,word,3f400000 //3f800000
 author=Josh_7774
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-////Disable Interlacing Instruction
+//Disable Interlacing Instruction
 patch=1,EE,20155814,extended,00000000
