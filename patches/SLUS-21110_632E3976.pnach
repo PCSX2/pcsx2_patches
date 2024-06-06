@@ -6,4 +6,7 @@ comment=Widescreen Hack
 //16:9
 patch=1,EE,20492F88,extended,3FAB851F // 3F800000
 
-
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS.
+patch=1,EE,00384CD0,word,10000004

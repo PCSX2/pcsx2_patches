@@ -1,10 +1,12 @@
-gametitle=Tak 2: The Staff of Dreams [NTSC-U]
+gametitle=Tak 2: The Staff of Dreams (U)(SLUS-20952)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
+comment=Widescreen hack
+patch=1,EE,005A66EC,word,3FE38E38 //3FAAAAAB
 
-//Gameplay 16:9
-patch=1,EE,205A66EC,extended,3FE38E38 //3FAAAAAB
-
-
+[60 FPS]
+author=Super David
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,005342E8,word,00000001

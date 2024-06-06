@@ -1,4 +1,4 @@
-gametitle=Teen Titans (PAL-E) (SLES-54431)
+gametitle=Teen Titans (NTSC-U) (SLUS-21183)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -20,4 +20,7 @@ patch=1,EE,001c9da8,word,3c013f40 // 00000000 ver fov cut-scenes
 patch=1,EE,001c9dac,word,4481f000 // 00000000
 patch=1,EE,001c9db4,word,461e0342 // 00000000
 
-
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS.
+patch=1,EE,0015FF94,word,2C620000
