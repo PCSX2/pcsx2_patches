@@ -1,18 +1,27 @@
-gametitle=X-Men Legends SLUS_206.56
+gametitle=X-Men Legends (NTSC-U) (SLUS-20656) v1.01
 
-[Widescreen 16:9]
+[16:9 Widescreen Support]
 gsaspectratio=16:9
-comment=Widescreen Hack
+comment=Widescreen 16:9 Support for X-Men Legends (NTSC-U) (SLUS-20656) (Game Version: v1.01). Requires "Show Overscan" to be enabled for the best 16:9 support. Highlight HUD does not scale and is kind of broken.
+author=NomNom
+
 //patch=1,EE,005cc888,word,3c023f34
-patch=1,EE,20720920,word,3FE147AE  //In-game width widescreen 16:9
-patch=1,EE,2072094c,word,3F000000  //Fonts Width
-patch=1,EE,20720950,word,3F000000  //Fonts Height
-patch=1,EE,20720958,word,3F8CCCCD  //HUD & Menu Height
-patch=1,EE,20720954,word,3FA00000  //HUD & Menu Width
-patch=1,EE,20D85448,word,3F666666  //HUD Height
-patch=1,EE,20D85430,word,3F59999A  //HUD Width
+patch=1,EE,20720920,word,3FE147AE  // In-Game FoV
+patch=1,EE,2072094c,word,3ecccccd  // Fonts Width
+patch=1,EE,20720950,word,3eeb851f  // Fonts Height
+patch=1,EE,20720958,word,3f90a3d7  // HUD & Menu Height
+patch=1,EE,20720954,word,3FA00000  // HUD & Menu Width
+patch=1,EE,20D85448,word,3F733333  // HUD Height
+patch=1,EE,20D85430,word,3F59999A  // HUD Width
 
-//20D85448 //HUD Height
-//206625A8 //HUD Resize
+[16:10 Widescreen Support]
+comment=Widescreen 16:9 Support for X-Men Legends (NTSC-U) (SLUS-20656) (Game Version: v1.01). Requires "Show Overscan" to be enabled for the best 16:10 support. Highlight HUD does not scale and is kind of broken.
+author=NomNom
 
-
+patch=1,EE,20720920,word,3FE147AE  // In-Game FoV
+patch=1,EE,2072094c,word,3ecccccd  // Fonts Width
+patch=1,EE,20720950,word,3eeb851f  // Fonts Height
+patch=1,EE,20720958,word,3f9d70a4  // HUD & Menu Height
+patch=1,EE,20720954,word,3FA00000  // HUD & Menu Width
+patch=1,EE,20D85448,word,3f4ccccd  // HUD Height
+patch=1,EE,20D85430,word,3F59999A  // HUD Width

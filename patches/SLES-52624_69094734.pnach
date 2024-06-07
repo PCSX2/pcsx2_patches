@@ -1,18 +1,26 @@
-gametitle=X-Men Legends (PAL-E) (SLES-52624)
+gametitle=X-Men Legends (PAL-E) (SLES-52624) v1.02
 
-[Widescreen 16:9]
+[16:9 Widescreen Support]
 gsaspectratio=16:9
-author=XxGaMiNGK3LLERxX
-comment=Widescreen Hack
-patch=1,EE,20D86690,word,3F666666 // HUD Height
-patch=1,EE,207214D4,word,3FA00000 // HUD & Menu Width
+comment=16:9 Widescreen for X-Men Legends (PAL-E) (SLES-52624) (Game Version: v1.02). Requires "Show Overscan" to be enabled for the best widescreen support. Highlight HUD does not scale and is kind of broken.
+author=NomNom
+
+patch=1,EE,20D86690,word,3F733333 // HUD Height
 patch=1,EE,20D86678,word,3F59999A // HUD Width
-patch=1,EE,207214CC,word,3F100000 // font width
-patch=1,EE,207214D0,word,3F100000 // font height
-patch=1,EE,207214A0,word,3FE00000 // Gameplay screen fix 16:9
+patch=1,EE,207214D4,word,3FA00000 // HUD & Menu Width
+patch=1,EE,207214D8,word,3f90a3d7 // HUD & Menu Height
+patch=1,EE,207214CC,word,3ecccccd // Font width
+patch=1,EE,207214D0,word,3eeb851f // Font height
+patch=1,EE,207214A0,word,3FE147AE // In-Game FoV [Affects HUD]
 
-//patch=1,EE,20D866B4,word,3F733333
-//patch=1,EE,30231920,word,3F333333
-//patch=1,EE,206A81EC,word,3F7AE148 //character skill highlight beta fix - causes ring health to bug when applied
+[16:10 Widescreen Support]
+comment=16:10 Widescreen for X-Men Legends (PAL-E) (SLES-52624) (Game Version: v1.02). Requires "Show Overscan" to be enabled, and Aspect Ratio set to "Fit to Window / Fullscreen" for the best widescreen support. Highlight HUD does not scale and is kind of broken.
+author=NomNom
 
-
+patch=1,EE,20D86690,word,3f4ccccd // HUD Height
+patch=1,EE,20D86678,word,3F59999A // HUD Width
+patch=1,EE,207214D4,word,3FA00000 // HUD & Menu Width
+patch=1,EE,207214D8,word,3f9d70a4 // HUD & Menu Height
+patch=1,EE,207214CC,word,3ecccccd // Font width
+patch=1,EE,207214D0,word,3eeb851f // Font height
+patch=1,EE,207214A0,word,3FE147AE // In-Game FoV [Affects HUD]
