@@ -4,8 +4,7 @@ gametitle=Silent Hill 2 (PAL-M6) (SLES-50382) 6B149273
 gsaspectratio=16:9
 author=ElHecht
 description=Widescreen Hack
-patch=1,EE,210E4C14,extended,43A8F5C3 // 43E147AE X-RES
-//patch=1,EE,210E4C18,extended,43E00000 // 43E00000 Y-RES
+patch=1,EE,001773C8,word,3C0243C0 // 3C024400 - X-FoV
 
 [50 FPS]
 author=PeterDelta

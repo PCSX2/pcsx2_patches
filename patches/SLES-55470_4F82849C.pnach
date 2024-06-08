@@ -3,14 +3,16 @@ gametitle=Coraline [PAL] (SLES_554.70) 4F82849C
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen hack
+description=Widescreen hack
 //Gameplay 16:9
 patch=1,EE,0026432C,word,3C014440 //3C014480 (Increases horiz. axis)
 
 //Render fix
 patch=1,EE,001A6548,word,3C013C2E //3C013C0E
 
-//Get rid of black bar
+[Remove Blackbars]
+author=El_Patas
+description=Removes black bars in cutscenes
 patch=1,EE,00225ea8,word,3c014000 //3c014299
 patch=1,EE,00225eac,word,00000000 //3421999a
 

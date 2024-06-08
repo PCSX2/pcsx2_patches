@@ -9,6 +9,3 @@ description=Unlocks internal FPS. Might need EE Overclock at 180%.
 gsinterlacemode=1
 author=PeterDelta
 description=Forces progressive scan mode 480p at startup.
-patch=1,EE,00367134,word,24110000
-patch=1,EE,00367138,word,24120050
-patch=1,EE,00367140,word,24130001

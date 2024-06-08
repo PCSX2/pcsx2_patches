@@ -4,7 +4,7 @@ gametitle=Ben 10 - Ultimate Alien - Cosmic Destruction (PAL-M) SLES-55639 F42993
 gsaspectratio=16:9
 author=PeterDelta
 description=Renders the game in 16:9 aspect ratio
-patch=1,EE,00765154,word,3FE38E38 //3FAAAAAB
+patch=1,EE,00765154,word,3FE38E39 //3FAAAAAB
 
 [50/60 FPS]
 author=asasega & PeterDelta
