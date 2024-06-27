@@ -1,8 +1,2 @@
-gametitle=Stella Deus - The Gate of Eternity SLUS_211.32
-
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen Hack
-patch=1,EE,202f7110,extended,44c00000 // 45000000
-
-
+//No Interlacing Stella Deus (by NineKain)
+patch=1,EE,001039EC,word,00000000
