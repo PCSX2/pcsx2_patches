@@ -1,5 +1,10 @@
 gametitle=Ratchet - Deadlocked
 
+[60 FPS splitscreen]
+author=SuperSamus
+comment=Makes all splitscreen modes render at 60 FPS. Needs enable 180% EE Overclock to be stable.
+dpatch=0,4,4,58,A2B01680,6C,A2A01680,70,3C030022,74,8C63DDA4,04,00000000,50,00000000,34,00000000,94,24032470
+
 [Widescreen 16:9]
 gsaspectratio=16:9
 comment=Widescreen hack by PsxFan107
