@@ -8,3 +8,12 @@ patch=1,EE,00191084,extended,3C013F40
 patch=1,EE,00191F34,extended,3C013F40
 patch=1,EE,001D8E20,extended,3C013F40
 patch=1,EE,00236510,extended,3C013F1C
+
+[50/60 FPS]
+author=FlatOut & PeterDelta 
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,002D9608,extended,00000001
+patch=1,EE,E0010008,extended,0028C540
+patch=1,EE,002D9608,extended,00000002
+patch=1,EE,E0016310,extended,00315B64
+patch=1,EE,002EB510,extended,00000000
