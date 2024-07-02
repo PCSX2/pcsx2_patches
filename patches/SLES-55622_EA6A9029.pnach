@@ -1,4 +1,4 @@
-gametitle=Disney-Pixar Toy Story 3 (E)(SLES-55622)
+gametitle=Disney-Pixar Toy Story 3 (PAL-M) (SLES-55622) EA6A9029
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -9,10 +9,10 @@ comment=Widescreen Hack
 patch=1,EE,004f6ee8,word,3c033f80
 patch=1,EE,004f6ef0,word,34630000
 
-[Mode 480p]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan mode 480p at startup
+description=Forces progressive scan mode 480p at startup.
 patch=1,EE,005346A4,word,24110000
 patch=1,EE,005346A8,word,24120050
 patch=1,EE,005346B4,word,24130001
-patch=1,EE,008051CC,word,000001E0

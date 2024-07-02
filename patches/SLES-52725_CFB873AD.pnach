@@ -1,15 +1,15 @@
 gametitle=Need for Speed - Underground 2 (PAL-M) SLES-52725 CFB873AD
 
-[50 FPS]
+[50/60 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,201D7FBC,extended,2C420001
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
+description=Forces progressive scan mode 480p at startup.
 patch=1,EE,00421E54,word,24110000
-patch=1,EE,00421E58,word,24120052
+patch=1,EE,00421E58,word,24120050
 patch=1,EE,00421E64,word,24130001
 patch=1,EE,00563214,word,3C888889
-patch=1,EE,004BBE14,word,0000001E

@@ -31,5 +31,5 @@ patch=1,EE,0044f520,word,080f72cd //00000000
 
 [60 FPS]
 author=PeterDelta
-comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Unlocks internal FPS. Might need EE Overclock at 180%.
 patch=1,EE,004B2C98,word,00000001 //00000002
