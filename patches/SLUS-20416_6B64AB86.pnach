@@ -1,9 +1,9 @@
-gametitle=Headhunter (NTSC-U) (SLUS-20416)
+gametitle=Headhunter (NTSC-U) (SLUS-20416) 6B64AB86
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
-
+author=ElHecht
+description=Widescreen Hack
 // 16:9
 patch=1,EE,00196fd4,word,10400007 // 1040000b
 patch=1,EE,00196fec,word,1000fffd // 00000000
@@ -27,8 +27,8 @@ patch=1,EE,0018f9e0,word,e79dbcb4 // e784bcb4 renderfix
 //patch=1,EE,0018f9ac,word,461e2743 // 4481a000 renderfix
 //patch=1,EE,0018f9e0,word,e79dbcb4 // e784bcb4 renderfix
 
-//Black bar fix by Arapapa (Get rid of 'Black Bar')
+[Remove Blackbars]
+author=Arapapa
+description=Removes black bars in cutscenes
 //9a99993f 5555553f 5655553e
-patch=1,EE,00586d04,word,00000000 /3f99999a
-
-
+patch=1,EE,00586d04,word,00000000 //3f99999a

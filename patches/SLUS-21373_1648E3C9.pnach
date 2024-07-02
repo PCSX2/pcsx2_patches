@@ -2,8 +2,8 @@ gametitle=Drakengard 2 (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+description=Widescreen hack
 patch=1,EE,204cf458,extended,3FE38E32 // 3Faaaaaa
 patch=1,EE,20560f94,extended,44550000 // 44200000
 
@@ -14,7 +14,7 @@ patch=1,EE,20560f94,extended,44550000 // 44200000
 //patch=1,EE,002a1674,word,461e18c3 // c783c51c
 //patch=1,EE,002d2b0c,word,3c014456 // 3c014420 renderfix
 
-// black border fix
+[Remove Blackbars]
+author=ElHecht
+description=Removes black bars in cutscenes
 patch=1,EE,003323dc,word,3c010000 // 3c014300
-
-

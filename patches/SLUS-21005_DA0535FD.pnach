@@ -29,22 +29,21 @@ patch=1,EE,2037ae44,word,3F400000 // 3F800000
 patch=1,EE,2037ae48,word,3F400000 // 3F800000
 patch=1,EE,2037ae4c,word,3F400000 // 3F800000
 
-//black bar fix
+//lower subtitles
+patch=1,EE,001aae88,word,240a0190
+
+[Remove Blackbars]
+description=Removes black bars in cutscenes
 patch=1,EE,0014aaf0,word,24050000
 patch=1,EE,0014ab18,word,24050000
 patch=1,EE,0014ab40,word,24050000
 patch=1,EE,0014ab70,word,24050000
-
-//lower subtitles
-patch=1,EE,001aae88,word,240a0190
-
-//subtitles off
-//patch=1,EE,002274cc,word,11e00019
-
 
 [60 FPS]
 description=Forces the game to run at 60.
 //60 FPS
 patch=1,EE,00356F4C,extended,00000000
 
-
+[Subtitles off]
+description=Disable subtitles during scenes
+patch=1,EE,002274cc,word,11e00019

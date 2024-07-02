@@ -1,6 +1,8 @@
-gametitle=Gran Turismo 3 [PBPX-95503] (U)
+gametitle=Gran Turismo 3: A-Spec [PS2 Bundle] (v1.10) * NTSC-U * PBPX-95503 * 8AA991B0
+// same CRC as SCES-50294_8AA991B0.
 
 [No-Interlacing]
+author=asasega
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,2025A3C8,extended,34020001

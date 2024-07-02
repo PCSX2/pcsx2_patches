@@ -16,8 +16,10 @@ patch=1,EE,003fdcac,word,461e0842 // 46020002
 
 patch=1,EE,0035dcc4,word,3c013f2b // 3c013f00 renderfix enemies
 
-patch=1,EE,00109e90,word,3c01c380 // 3c01c316 remove black bars in cut-scenes
-patch=1,EE,00109ec4,word,3c014380 // 3c014316 remove black bars in cut-scenes
+[Remove Blackbars]
+description=Removes black bars in cutscenes
+patch=1,EE,00109e90,word,3c01c380 // 3c01c316
+patch=1,EE,00109ec4,word,3c014380 // 3c014316
 
 [60 FPS]
 author=Gabominated

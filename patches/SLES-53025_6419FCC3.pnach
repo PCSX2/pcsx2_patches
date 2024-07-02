@@ -1,9 +1,9 @@
-gametitle=Red Ninja - End of Honor (PAL-E) (SLES-53025)
+gametitle=Red Ninja - End of Honor (PAL-E) (SLES-53025) 6419FCC3
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
-
+author=ElHecht
+description=Widescreen hack
 // 16:9
 patch=1,EE,0036dedc,word,3c013f40 // 3c013f80 hor fov1
 patch=1,EE,0036dee0,word,44817000 // 44816000
@@ -16,7 +16,8 @@ patch=1,EE,004026ec,word,461e0842 // 46020842
 
 patch=1,EE,003625c4,word,3c013f2b // 3c013f00 renderfix enemies
 
-patch=1,EE,0010a694,word,3c01c380 // 3c01c316 remove black bars in cut-scenes
-patch=1,EE,0010a6c8,word,3c014380 // 3c014316 remove black bars in cut-scenes
-
-
+[Remove Blackbars]
+author=ElHecht
+description=Removes black bars in cutscenes
+patch=1,EE,0010a694,word,3c01c380 // 3c01c316
+patch=1,EE,0010a6c8,word,3c014380 // 3c014316

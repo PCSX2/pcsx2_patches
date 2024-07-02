@@ -1,11 +1,14 @@
-gametitle=Gladiator - Sword of Vengeance SLES_517.66
+gametitle=Gladiator - Sword of Vengeance (PAL-M) SLES_517.66 80EA26DA
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+author=sergx12
+description=Widescreen hack
 patch=1,EE,001c5c98,word,3c013f40 //fov
 patch=1,EE,0020d690,word,3c013fab // vert fov
-patch=1,EE,00284084,word,3c010000 // black bars remove
 patch=1,EE,2078d930,extended,bfab0000 //hud stretch
 
-
+[Remove Blackbars]
+author=sergx12
+description=Removes black bars in cutscenes
+patch=1,EE,00284084,word,3c010000

@@ -57,7 +57,11 @@ patch=1,EE,E00367C8,extended,004B04E0
 patch=1,EE,204B04D8,extended,3FB00000
 patch=1,EE,204B04DC,extended,3F43F7CF
 patch=1,EE,204B04E4,extended,BFB00000
-patch=1,EE,0026139C,extended,00000000 //black bands in scenes
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,0026139C,extended,00000000
 patch=1,EE,E0010001,extended,0020CE74
 patch=1,EE,0026139C,extended,00000001
 

@@ -1,25 +1,27 @@
-gametitle=Rogue Galaxy [PAL-M5] (SLES_545.52)
+gametitle=Rogue Galaxy [PAL-M5] (SLES_545.52) CBB4B383
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen Hack
+description=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,001C5E40,word,3C023F10 //3C023F40 (Increases hor. axis)
 
 //Compass
 patch=1,EE,00377F9C,word,3C023F10 //3C023F40
 
-//Black border fix
-patch=1,EE,00261FB4,word,3C020000 //3C023F80
-
 //FMV's fix
 patch=1,EE,001D4E2C,word,24060000 //02C23021 Top
 patch=1,EE,001D4E7C,word,240201C0 //00451021 Bottom
 
+[Remove Blackbars]
+author=El_Patas
+description=Removes black bars in cutscenes
+patch=1,EE,00261FB4,word,3C020000 //3C023F80
+
 [50/60 FPS]
 author=Red-tv
-comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+description=Unlocks internal FPS. Might need EE Overclock at 180%.
 patch=1,EE,004A06D4,byte,01 //60fps
 patch=1,EE,001ce06c,word,00000000 //3c033f80 
 patch=1,EE,001ce088,word,3c033f00 //3c033f80, Breaks Gravity

@@ -1,9 +1,9 @@
-gametitle=Headhunter (PAL-M5) (SCES-50500)
+gametitle=Headhunter (PAL-M5) (SCES-50500) 107B1670
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
-
+author=ElHecht
+description=Widescreen Hack
 // 16:9
 patch=1,EE,001966e4,word,10400007 // 1040000b
 patch=1,EE,001966fc,word,1000fffd // 00000000
@@ -27,8 +27,8 @@ patch=1,EE,0018f0f0,word,e79dbca4 // e784bca4 renderfix
 //patch=1,EE,0018f0bc,word,461e2743 // 4481a000 renderfix
 //patch=1,EE,0018f0f0,word,e79dbca4 // e784bca4 renderfix
 
-//Black bar fix by Arapapa (Get rid of 'Black Bar')
+[Remove Blackbars]
+author=Arapapa
+description=Removes black bars in cutscenes
 //9a99993f 5555553f 5655553e
-patch=1,EE,00585104,word,00000000 /3f99999a
-
-
+patch=1,EE,00585104,word,00000000 //3f99999a
