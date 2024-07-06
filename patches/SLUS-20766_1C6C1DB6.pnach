@@ -3,7 +3,7 @@ gametitle=Fatal Frame II: Crimson Butterfly (Undub) * SLUS-20766 * NTSC-U * 1C6C
 // Project Zero II: Crimson Butterfly
 // Zero2Undub: https://github.com/wagrenier/Zero2Undub
 
-/ This game might have some problems with the Cinematics,
+// This game might have some problems with the Cinematics,
 //  regardless of resolution or patches, however this pnach is not the cause of that.
 
 [Widescreen 16:9]
