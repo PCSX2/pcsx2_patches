@@ -1,5 +1,11 @@
 gametitle=Need for Speed - Most Wanted [PAL-M] [SLES-53559] CA2A1B04
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,00AAF954,byte,01
+
 [Remove Brown Filter]
 author=fobes
 description=Disables the brownish yellow post processing filter

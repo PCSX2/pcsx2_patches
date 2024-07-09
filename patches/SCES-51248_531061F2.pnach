@@ -1,5 +1,11 @@
 gametitle=Dog's Life (PAL-M) SCES-51248 531061F2
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,00AB51C0,byte,01
+
 [50 FPS]
 author=PeterDelta
 description=Unlocks internal FPS. Might need EE Overclock at 130%.
