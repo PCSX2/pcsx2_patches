@@ -112,9 +112,6 @@ author=ported by br4zil from NTSC-U
 comment=Makes main menu bland looking
 patch=1,EE,0035905C,word,00000000
 
-[Cheat - Infinite Health]
-patch=1,EE,20256824,extended,000001FD
-
 // ==========
 // Notes (by pgert).
 // ==========
