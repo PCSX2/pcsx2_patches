@@ -4,7 +4,7 @@ gametitle=Midnight Club 3 - DUB Edition (PAL-M) (SLES-52942) EBE1972D
 gsaspectratio=16:9
 author=PeterDelta
 description=Renders the game in 16:9 aspect ratio
-patch=1,EE,00617D30,word,3FC71CEB //3F955554
+patch=1,EE,00617D30,word,3FC71C66 //3F955554
 
 [50 FPS]
 author=PeterDelta
