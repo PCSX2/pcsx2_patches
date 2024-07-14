@@ -1,4 +1,4 @@
-gametitle=25 to Life  (U)(SLUS-21016)
+gametitle=25 to Life (U)(SLUS-21016)
 
 //[Widescreen 16:9]
 //gsaspectratio=16:9
@@ -20,4 +20,7 @@ gametitle=25 to Life  (U)(SLUS-21016)
 //003f013c 00008144 6a00023c (1st)
 //patch=1,EE,003989b8,word,3c013f10 //3c013f00
 
-
+[60 FPS]
+author=asasega
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,007067D8,word,00000001 //00000002
