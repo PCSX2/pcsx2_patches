@@ -2,7 +2,7 @@ gametitle=Armored Core - Last Raven [NTSC-J] (SLPS-25462)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,00174e64,word,3c094455 //3c024420 hor fov

@@ -2,7 +2,7 @@ gametitle=Final Fantasy XII (J)(SLPM-66320)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=NTSC-J Widescreen Hack by synce
+author=synce
 //patch=1,EE,204dfb50,extended,3fe28f5c
 //patch=1,EE,204dfbb0,extended,3fe28f5c
 

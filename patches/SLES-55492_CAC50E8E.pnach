@@ -2,7 +2,7 @@ gametitle=SBK-09 - Superbike World Championship (PAL-M5) (SLES-55492)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0013d448,word,4482e000 // 44820000

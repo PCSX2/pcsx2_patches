@@ -2,7 +2,7 @@ gametitle=Wild Arms 3 (J) (SCPS_150.24)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by Arapapa)
+author=nemesis2000 (pnach by Arapapa)
 
 //towns and maps
 patch=1,EE,00115c90,word,3c023f40

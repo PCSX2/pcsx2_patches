@@ -2,7 +2,7 @@ gametitle=WWE SmackDown vs. Raw (PAL-E) (SLES-52781)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0011a434,word,3c013f40 // 00000000 hor fov

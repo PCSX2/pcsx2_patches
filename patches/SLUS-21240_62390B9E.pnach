@@ -2,7 +2,7 @@ gametitle=Star Wars: Battlefront 2 (U)(SLUS-21240)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by nemesis2000 and Arapapa
+author=nemesis2000 and Arapapa
 
 
 //Game changes ELF on boot to SWBFRNT2.ELF with active CRC 62390B9E

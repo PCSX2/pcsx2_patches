@@ -2,7 +2,7 @@ gametitle=Katamari Damacy (K) (SCKA_200.25)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by Arapapa)
+author=nemesis2000 (pnach by Arapapa)
 
 patch=1,EE,00168550,word,3c0143d6
 

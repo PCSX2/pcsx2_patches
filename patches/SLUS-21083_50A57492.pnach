@@ -2,7 +2,7 @@ gametitle=LEGO Star Wars: The Video Game [NTSC-U] (v1.01) (SLUS_210.83)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas and gamemasterplc
+author=El_Patas and gamemasterplc
 
 patch=1,EE,21F26074,extended,3F100000 //3D and GUI Width
 patch=1,EE,203407F0,extended,00000355 //Text Viewport Width

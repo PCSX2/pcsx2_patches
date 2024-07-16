@@ -2,7 +2,7 @@
 
 //[Widescreen 16:9]
 //gsaspectratio=16:9
-//comment=Widescreen Hack by ElHecht (NTSC-U by Arapapa). Disabled due to causing black texture flickering in desert areas.
+//author=ElHecht (NTSC-U by Arapapa). Disabled due to causing black texture flickering in desert areas.
 
 // 16:9
 //003f033c 00008344 00088744

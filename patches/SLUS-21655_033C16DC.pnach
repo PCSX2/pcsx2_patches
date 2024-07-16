@@ -2,7 +2,7 @@ gametitle=CSI - Crime Scene Investigation - 3 Dimensions of Murder (NTSC-U) (SLU
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0027d5f0,word,3c033f40 // 3c033f80 hor fov

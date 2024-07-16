@@ -2,7 +2,7 @@ gametitle=Dragon Ball Z - Budokai Tenkaichi (U)(SLUS-21227)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by sergx12/ElHecht (NTSC-U by Arapapa)
+author=sergx12/ElHecht (NTSC-U by Arapapa)
 
 // 16:9 menu
 patch=1,EE,001fa2c4,word,3F600000 // 3f490fda sky/background fix

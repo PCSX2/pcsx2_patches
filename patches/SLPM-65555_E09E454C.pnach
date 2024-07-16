@@ -3,7 +3,7 @@ gametitle=Dragon Quest V - Bride of the Sky (English Patched) (NTSC-J) [SLPM-655
 [Widescreen 16:9]
 gsaspectratio=16:9
 
-comment=Widescreen hack by kerostar (Font fix by Arapapa)
+author=kerostar (Font fix by Arapapa)
 
 //16:9
 patch=1,EE,2081B5E0,extended,3F400000 //3F800000 town

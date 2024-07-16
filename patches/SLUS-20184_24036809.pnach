@@ -2,7 +2,7 @@ gametitle=Resident Evil: Code: Veronica X (SLUS-20184)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 //gameplay
 patch=1,EE,001322a0,word,3c023fc0 //vert fov

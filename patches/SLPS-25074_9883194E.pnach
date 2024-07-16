@@ -2,7 +2,7 @@ gametitle=Zero 零 Zero (J)(SLPS-25074)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by nemesis2000 and devina40 (NTSC-J by Arapapa)
+author=nemesis2000 and devina40 (NTSC-J by Arapapa)
 
 //Game Play
 patch=1,EE,00186f14,word,3c013f40 //3c013f80

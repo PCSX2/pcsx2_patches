@@ -2,7 +2,7 @@ gametitle=Shin Megami Tensei - Devil Summoner 2 (SLPM_666.79)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa and Red_Tv
+author=Arapapa and Red_Tv
 
 //fields and battles
 patch=1,EE,20427064,extended,3fc65461  // 3f951eb8
