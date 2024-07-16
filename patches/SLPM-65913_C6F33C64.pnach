@@ -2,7 +2,7 @@ gametitle=Demento (J) (SLPM_65913)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach NTSC-J by Arapapa)
+author=nemesis2000 (pnach NTSC-J by Arapapa)
 
 patch=1,EE,0010e31c,word,3c013f40
 patch=1,EE,0010e320,word,44810000

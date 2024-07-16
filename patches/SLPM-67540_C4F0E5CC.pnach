@@ -2,7 +2,7 @@ gametitle=Auto Modellista (K) (SLPM-67540)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 and Arapapa
+author=nemesis2000 and Arapapa
 
 //Game-play
 patch=1,EE,0032875c,word,3fe38e38 //3faaaaab

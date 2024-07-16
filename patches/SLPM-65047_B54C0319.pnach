@@ -2,7 +2,7 @@ gametitle=Capcom vs. SNK 2: Mark of the Millennium 2001  [NTSC-J] (SLPM-65047)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 patch=1,EE,00142fb0,word,3C023FAA
 patch=1,EE,00143224,word,3C023FAA

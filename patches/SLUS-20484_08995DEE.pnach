@@ -2,7 +2,7 @@ gametitle=Devil May Cry 2 (Disc 1) (Dante Disc) (SLUS-20484) / Devil May Cry 2 (
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000 )
+author=nemesis2000
 patch=1,EE,0017e08c,word,3c013f1a //hor aspect value
 patch=1,EE,0017e094,word,44810000
 

@@ -2,7 +2,7 @@ gametitle=Worms 3D (U)(SLUS-20894)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas & Arapapa
+author=El_Patas & Arapapa
 
 //Widescreen hack 16:9
 patch=1,EE,002e0e34,word,3c013f40

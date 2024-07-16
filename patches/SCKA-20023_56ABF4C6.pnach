@@ -2,7 +2,7 @@ gametitle=Fatal Frame 2 (Project Zero 2) (K)(SCKA-20023)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=16:9 widescreen hack by nemesis2000 and devina40 (NTSC-K by Arapapa)
+author=nemesis2000 and devina40 (NTSC-K by Arapapa)
 
 //16:9 widescreen by nemesis2000
 patch=1,EE,00336ECC,word,3F400000

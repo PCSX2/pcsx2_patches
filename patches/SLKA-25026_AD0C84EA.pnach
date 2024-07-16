@@ -2,7 +2,7 @@ gametitle=Chaos Legion (K) (SLKA_250.26)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (NTSC-K by Arapapa)
+author=nemesis2000 (NTSC-K by Arapapa)
 
 //Wide 16:9
 patch=1,EE,00242a1c,word,3c013f40

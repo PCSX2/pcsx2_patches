@@ -2,7 +2,7 @@ gametitle=Sidewinder F (NTSC-J) (SLPS_250.76)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,001472D8,word,3C0143C0 //3C014400 Zoom

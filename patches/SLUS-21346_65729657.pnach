@@ -2,7 +2,7 @@ gametitle=Ace Combat Zero: The Belkan War (SLUS-21346)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 //widescreen fix
 patch=1,EE,003FA350,word,43D638F3

@@ -2,7 +2,7 @@ gametitle=Atelier Iris 2: The Azoth of Destiny [PAL] (SLES_543.85)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
+author=El_Patas
 
 //3D Scenes
 patch=1,EE,002AB844,word,3C013F40 //00000000 hor value

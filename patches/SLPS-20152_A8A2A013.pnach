@@ -2,7 +2,7 @@ gametitle=Stunt GP (J)(SLPS-20152)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by LRukyk (NTSC-J by Arapapa)
+author=LRukyk (NTSC-J by Arapapa)
 
 //Widescreen hack 16:9
 patch=1,EE,005de5cc,word,3fe37119 //3faa9fbe

@@ -2,7 +2,7 @@ gametitle=Cars: Mater-National Championship [PAL-M4-Eng-Dan-Sve-Nor] (SLES_550.3
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,00119550,word,3C033CAE //3C033C8E Zoom

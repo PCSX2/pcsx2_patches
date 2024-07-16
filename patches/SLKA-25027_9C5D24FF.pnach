@@ -2,7 +2,7 @@
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 gsaspectratio=16:9
 gametitle = NBA Street Vol. 2 (K)(SLKA-25027)
-comment = Widescreen Hack by Ko81e24wy (NTSC-K by Arapapa)
+author=Ko81e24wy (NTSC-K by Arapapa)
 
 // Widescreen 16:9
 patch=1,EE,20956EE0,extended,3F400000

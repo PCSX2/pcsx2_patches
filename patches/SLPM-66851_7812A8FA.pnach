@@ -2,7 +2,7 @@ gametitle=Grand Theft Auto - Liberty City Stories (J) (SLPM_66851)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by nemesis2000 (NTSC-J by Arapapa)
+author=nemesis2000 (NTSC-J by Arapapa)
 
 //widescreen fix
 patch=1,EE,001d96d8,word,468010a0

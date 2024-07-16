@@ -2,7 +2,7 @@ gametitle=One Piece - Round the Land! (PAL-M3) (SLES-52731)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0017b260,word,3c013fe3 // 3c013faa hor fov gameplay

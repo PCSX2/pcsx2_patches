@@ -2,7 +2,7 @@ gametitle=Kagero 2 - Dark Illusion (J)(SLPS-25445)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht (NTSC-J by Arapapa)
+author=ElHecht (NTSC-J by Arapapa)
 
 // 16:9 vertical fov
 //00000000 02a80e46 83050c46 00000000 00000000

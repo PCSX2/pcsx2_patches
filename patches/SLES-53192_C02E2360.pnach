@@ -2,7 +2,7 @@ gametitle=Tim Burton's The Nightmare Before Christmas: Oogie's Revenge [PAL-M5] 
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,00368C38,word,3F206D2F //3EF0A3D7 (Increases hor. axis)

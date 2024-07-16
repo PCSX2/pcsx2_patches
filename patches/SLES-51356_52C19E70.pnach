@@ -2,7 +2,7 @@ gametitle=Road Trip Adventure PAL (SLES_513.56)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack & pnach by El_Patas
+author=El_Patas
 
 //Gameplay
 patch=1,EE,203D5990,extended,3F19999A // 3F4CCCCD (increases hor. axis)

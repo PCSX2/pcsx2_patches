@@ -2,7 +2,7 @@ gametitle=Minna no Tennis (J)(SCPS-15113)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht (NTSC-J by Arapapa)
+author=ElHecht (NTSC-J by Arapapa)
 
 // 16:9
 //440584e4 07210046
@@ -23,7 +23,7 @@ patch=1,EE,00137984,word,3c034456 // 3c034420 2D menu/hud fix
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=no interlacing by someother1ne
+author=someother1ne
 patch=1,EE,00125464,word,64420000
 patch=1,EE,001256cc,word,64420000
 

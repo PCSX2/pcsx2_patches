@@ -2,7 +2,7 @@ gametitle=MotoGP 07 [NTSC-J] [SLPM-66867]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas (NTSC-J by Arapapa)
+author=El_Patas (NTSC-J by Arapapa)
 
 //Gameplay 16:9
 patch=1,EE,0020e264,word,4483E800 //44830800

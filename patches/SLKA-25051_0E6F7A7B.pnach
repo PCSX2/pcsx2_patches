@@ -2,7 +2,7 @@ gametitle=Clock Tower 3 (SLKA_25051)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by nemesis2000 and hyakki (NTSC-K by Arapapa)
+author=nemesis2000 and hyakki (NTSC-K by Arapapa)
 
 //gameplay by hyakki
 patch=1,EE,01939da8,word,3f1fbe77

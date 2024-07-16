@@ -2,7 +2,7 @@ gametitle=Disgaea: Hour of Darkness [NTSC-J] (SLPS-20251)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by Little Giant)
+author=nemesis2000 (pnach by Little Giant)
 
 patch=1,EE,0014c39c,word,3c033f40 //3c033f80
 patch=1,EE,0014c3a4,word,e7a000e4 //00000000

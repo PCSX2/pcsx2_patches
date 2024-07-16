@@ -2,7 +2,7 @@ gametitle=.Hack//G.U Vol. III Redemption Undub (NTSC-U) [SLUS-21489]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) patch by cloudalmasai
+author=cloudalmasai
 patch=1,EE,20A87C94,word,3F400000
 
 

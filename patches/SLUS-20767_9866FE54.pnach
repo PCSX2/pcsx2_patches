@@ -2,7 +2,7 @@ gametitle=MX Unleashed [NTSC-U] (SLUS_207.67)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,00112E60,word,3C033CAA //3C033C8E Zoom

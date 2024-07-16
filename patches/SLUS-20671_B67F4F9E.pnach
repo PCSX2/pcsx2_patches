@@ -2,7 +2,7 @@ gametitle=Mafia [NTSC-U] (SLUS_206.71)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas, Render fixes by arapapa
+author=El_Patas, Render fixes by arapapa
 
 //Gameplay 16:9
 patch=1,EE,20FF8D64,extended,3FAB0000 //3F800000 Vertical axis

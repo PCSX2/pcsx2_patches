@@ -2,7 +2,7 @@ gametitle=Dynasty Warriors 2 (PAL-EUR) (SLES-50057)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by Machiavel Dhy'v converted from ElHecht PAL-G
+author=Machiavel Dhy'v converted from ElHecht PAL-G
 
 // 16:9
 patch=1,EE,00202714,word,3c013f40 // 00000000 zoom - identique

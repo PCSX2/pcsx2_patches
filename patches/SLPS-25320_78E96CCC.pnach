@@ -2,7 +2,7 @@ gametitle=Inuyasha - Juuso no Kamen [NTSC-J] (SLPS-25320)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by miseru99
+author=miseru99
 
 //3D field models
 patch=1,EE,2020E6E0,extended,3F400000
