@@ -13,7 +13,9 @@ patch=1,EE,00114de0,word,46181082
 patch=1,EE,001146F4,word,240302ab
 patch=1,EE,0054E478,word,44fa0000
 
-//black borders fix
+[Remove Blackbars]
+author=nemesis2000
+description=Removes black bars in cutscenes
 patch=1,EE,00113450,word,3c010000
 
 

@@ -1,10 +1,11 @@
 gametitle=Spider-Man - The Movie (S)(SLES-50965) CCF57297
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Arapapa
-comment=Widescreen Hack
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Arapapa
+//comment=Widescreen Hack
 //Y-Fov
-patch=1,EE,004d1554,word,3fe38e2a //3faaaaab
+//patch=1,EE,004d1554,word,3fe38e2a //3faaaaab
 //Zoom
-patch=1,EE,002b5e64,word,3c013c28 //3c013c0e
+//patch=1,EE,002b5e64,word,3c013c28 //3c013c0e
+//Missing render fix

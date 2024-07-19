@@ -1,10 +1,6 @@
-gametitle=Orphen: Scion of Sorcery [NTSC-U] (SLUS-20011)
+gametitle=Orphen: Scion of Sorcery [NTSC-U] (SLUS-20011) 7BF65F9C
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Pnach by Little Giant
-
-//black borders's fix (optional)
+[Remove Blackbars]
+author=Little Giant
+description=Removes black bars in cutscenes
 patch=1,EE,0025fdc4,word,24020000 //24020001
-
-

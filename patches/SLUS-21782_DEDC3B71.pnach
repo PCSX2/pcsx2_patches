@@ -74,7 +74,7 @@ patch=1,EE,001369B0,word,00000000
 
 //characters art fix by nemesis2000
 patch=1,EE,00354CE4,word,3C024340
-patch=1,EE,00223008,word,3C024340 (level up white glow)
+patch=1,EE,00223008,word,3C024340 //(level up white glow)
 
 //partial HUD text fix by nemesis2000
 patch=1,EE,00123430,word,24020BF6

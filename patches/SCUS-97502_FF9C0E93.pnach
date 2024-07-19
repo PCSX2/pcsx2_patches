@@ -1,8 +1,7 @@
 gametitle=Tourist Trophy [SCUS-97502] (USA)
 
-[No-Interlacing]
-gsinterlacemode=1
-comment=Autoboot in 480p
+[Autoboot in 480p]
+comment=The game will always start races in 480p instead of 480i.
 author=Blackbird+Silent
 patch=1,EE,20829248,extended,00000001
 

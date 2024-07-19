@@ -26,10 +26,10 @@ patch=1,EE,00409bc4,word,461e0842 //46020842
 //003f013c 00008144 803d013c
 patch=1,EE,00363ecc,word,3c013f2b //3c013f00 renderfix enemies
 
+[Remove Blackbars]
+description=Removes black bars in cutscenes
 //16c3013c 00688144 (3c7e74c4)
 patch=1,EE,0010ab60,word,3c01c380 //3c01c316 remove black bars in cut-scenes
 
 //1643013c 00688144 3000a427
 patch=1,EE,0010ab94,word,3c014380 //3c014316 remove black bars in cut-scenes
-
-

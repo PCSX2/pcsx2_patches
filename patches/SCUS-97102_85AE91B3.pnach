@@ -1,6 +1,7 @@
-gametitle=Gran Turismo 3 [SCUS-97102] (U)
+gametitle=Gran Turismo 3: A-Spec (v1.00) * NTSC-U * SCUS-97102 * 85AE91B3
 
 [No-Interlacing]
+author=asasega
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,2025A3C8,extended,34020001

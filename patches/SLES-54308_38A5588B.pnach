@@ -1,15 +1,15 @@
-gametitle=Phantasy Star Universe (PAL-M3) (SLES-54308)
+gametitle=Phantasy Star Universe (PAL-M3) (SLES-54308) 38A5588B
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
-
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=ElHecht
+//description=Widescreen Hack. Disabled due to causing SPS.
 // 16:9
-patch=1,EE,0085cb30,word,43400000 // 43800000 hor fov
-patch=1,EE,0068f7a4,word,3c093c02 // 00000000
-patch=1,EE,0068f7a8,word,35293fab // 00000000 renderfix
-patch=1,EE,0068f7f0,word,3c0a0028 // 00000000
-patch=1,EE,0068f7f4,word,ad493d78 // 00000000
+//patch=1,EE,0085cb30,word,43400000 // 43800000 hor fov
+//patch=1,EE,0068f7a4,word,3c093c02 // 00000000
+//patch=1,EE,0068f7a8,word,35293fab // 00000000 renderfix
+//patch=1,EE,0068f7f0,word,3c0a0028 // 00000000
+//patch=1,EE,0068f7f4,word,ad493d78 // 00000000
 
 // 16:10
 //patch=1,EE,0085cb30,word,43555555 // 43800000 hor fov
@@ -18,7 +18,7 @@ patch=1,EE,0068f7f4,word,ad493d78 // 00000000
 //patch=1,EE,0068f7f0,word,3c0a0028 // 00000000
 //patch=1,EE,0068f7f4,word,ad493d78 // 00000000
 
-//optional cut-scenes black bar removal
-//patch=1,EE,00767F94,word,40000000
-
-
+[Remove Blackbars]
+author=ElHecht
+description=Removes black bars in cutscenes
+patch=1,EE,00767F94,word,40000000

@@ -1,0 +1,14 @@
+gametitle=Spider-Man - The Movie (F)(SLES-50813)
+
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Bigdemon
+//comment=Widescreen Hack Conversion
+
+//Y-Fov
+//patch=1,EE,004cff54,word,3fe38e2a //3faaaaab
+
+//Zoom
+//patch=1,EE,002b5e64,word,3c013c28 //3c013c0e
+
+//Missing render fix
