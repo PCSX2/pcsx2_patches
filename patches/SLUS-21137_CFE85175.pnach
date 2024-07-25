@@ -2,7 +2,7 @@ gametitle=Tom Clancy's Splinter Cell: Chaos Theory (SLUS_21137)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 patch=1,EE,001f2904,word,e6600084
 patch=1,EE,001f2908,word,3c01007e

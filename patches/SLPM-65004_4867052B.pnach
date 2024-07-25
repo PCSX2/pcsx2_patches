@@ -2,7 +2,7 @@ gametitle=Reiselied - Ephemeral Fantasia [NTSC-J] (SLPM-65004)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Little Giant
+author=Little Giant
 
 //vert
 patch=1,EE,00230aa4,word,3c023fa2

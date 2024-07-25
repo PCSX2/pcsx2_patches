@@ -2,7 +2,7 @@ gametitle=DragonBall Z - Budokai Tenkaichi (PAL-M6) (SLES-53200)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by sergx12/ElHecht
+author=sergx12/ElHecht
 
 // 16:9 menu
 patch=1,EE,0020b2d4,word,3F600000 // 3f490fda sky/background fix

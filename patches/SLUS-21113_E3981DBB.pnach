@@ -2,7 +2,7 @@ gametitle=Atelier Iris Eternal Mana (NTSC) (SLUS-21113)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by gamemasterplc
+author=gamemasterplc
 
 patch=1,EE,2021CFD8,extended,3C0144AB //Zoom-In Battle Camera View
 patch=1,EE,2024A3C4,extended,08030000 //Jump to Code for Resizing View

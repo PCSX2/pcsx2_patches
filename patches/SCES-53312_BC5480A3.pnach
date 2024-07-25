@@ -2,7 +2,7 @@ gametitle=Soul Calibur III PAL (SCES_533.12)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
+author=El_Patas
 
 //Widescreen fix
 patch=1,EE,0012A120,word,3C013F40 //3C013F4D

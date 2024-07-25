@@ -2,7 +2,7 @@ gametitle=Sly 2 - Band of Thieves (SCUS-97316)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Fix by PsxFan107
+author=PsxFan107
 
 // Widescreen by nemesis2000
 patch=1,EE,2014D750,word,3C013FDD

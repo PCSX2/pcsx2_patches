@@ -2,7 +2,7 @@ gametitle=Dot Hack Part 3 - Outbreak (PAL-M5) (SLES-52469)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0010a68c,word,3c023f40 // 3c023f80 hor fov 1

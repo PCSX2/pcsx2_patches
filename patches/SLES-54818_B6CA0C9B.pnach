@@ -2,7 +2,7 @@ gametitle=Super PickUps [PAL-M5] (SLES_548.18)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Sergx12 & El_Patas
+author=sergx12 & El_Patas
 
 //Gameplay 16:9
 patch=1,EE,00143080,word,3C023F19 //3C023F00 (Increases hor. axis)

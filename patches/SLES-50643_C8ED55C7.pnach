@@ -2,7 +2,7 @@ gametitle=Shifters (PAL-M2) (SLES-50643)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 //
 // 16:9
 patch=1,EE,003d71e4,word,080f40b3 // e4850010 jump to code inject (003d02cc)

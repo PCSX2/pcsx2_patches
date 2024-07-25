@@ -2,7 +2,7 @@ gametitle=Mortal Kombat: Armageddon Premium Edition(SLUS-21543)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 //zoom for arcade mode (widescreen)
 patch=1,EE,00220364,word,3c0342c0

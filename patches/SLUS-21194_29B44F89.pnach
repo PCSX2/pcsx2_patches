@@ -2,7 +2,7 @@ gametitle=Phantasy Star Universe (NTSC-U) (SLUS-21194)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Patch by TechieSaru
+author=TechieSaru
 
 patch=1,EE,E008FF90,extended,00277960
 patch=1,EE,20277994,extended,08030000

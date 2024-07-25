@@ -2,7 +2,7 @@ gametitle=Jak 3 (NTSC-K) (SCKA-20040)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht (NTSC-K by Arapapa)
+author=ElHecht (NTSC-K by Arapapa)
 
 // 16:9
 //003f033c 00008344 00088744

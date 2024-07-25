@@ -2,7 +2,7 @@ gametitle=Gauntlet: Dark Legacy SLUS_212.82
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by pelvicthrustman
+author=pelvicthrustman
 
 //Widescreen
 patch=1,EE,001AC1FC,word,3C013EC0 //00000000

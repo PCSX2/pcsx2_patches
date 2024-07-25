@@ -2,7 +2,7 @@ gametitle=3D Kakutou Tsukuru 2 [NTSC-J] (PBPX-95201)(SLPS-20214)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Little Giant
+author=Little Giant
 
 patch=1,EE,002b59c4,word,3c013f40 //00000000
 patch=1,EE,002b59c8,word,44810000 //00000000

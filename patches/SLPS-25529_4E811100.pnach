@@ -2,7 +2,7 @@ gametitle=Ultraman Fighting Evolution Rebirth [NTSC-J] (SLPS-25529)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Little Giant
+author=Little Giant
 
 //16:9
 patch=1,EE,002a642c,word,3c013f40 //00000000

@@ -2,7 +2,7 @@ gametitle=Prisoner of War (PAL-M5) (SLES-50397)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // The patches cause the game/emulator to crash to desktop
 // comment all of them as commenting only one results in the game locking up instead.

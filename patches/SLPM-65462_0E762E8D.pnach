@@ -2,7 +2,7 @@ gametitle=Shin Megami Tensei III Nocturne Maniax
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=NTSC-J Widescreen Hack by synce
+author=synce
 patch=1,EE,202F5034,extended,3fc65461
 
 //No interlacing by asasega

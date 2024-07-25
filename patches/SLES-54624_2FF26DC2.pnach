@@ -2,7 +2,7 @@ gametitle=Samurai Warriors 2 - Empires (PAL-E) (SLES-54624)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0017a978,word,3c023f19 // 3c023f4c hor fov 1-player

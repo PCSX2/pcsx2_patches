@@ -2,7 +2,7 @@ gametitle=Nightshade [PAL] (SLES_522.38)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,00183124,word,3C023F24 //3C023F5B (Increases hor. axis)

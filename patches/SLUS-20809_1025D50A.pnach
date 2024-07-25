@@ -2,7 +2,7 @@ gametitle=Godzilla - Save the Earth (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,002457ac,word,0812d2c1 // e6000124

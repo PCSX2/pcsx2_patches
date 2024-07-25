@@ -2,7 +2,7 @@ gametitle=World Soccer Winning Eleven 5: Final Evolution (SLPM-62113)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch by BloodRaynare
+author=BloodRaynare
 
 patch=1,EE,00e9e1d8,word,08402c43
 patch=1,EE,00e9e1dc,word,00000000

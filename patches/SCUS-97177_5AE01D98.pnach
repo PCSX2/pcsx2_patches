@@ -56,7 +56,7 @@ patch=1,EE,2027ECC0,extended,434FC000 //438A8000 - 2-4P P1-4 Paused Master X FOV
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=no interlacing by someother1ne
+author=someother1ne
 patch=1,EE,00243D34,word,30420000
 
 

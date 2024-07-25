@@ -2,7 +2,7 @@ gametitle=MX vs ATV Untamed [PAL] (SLES_550.50)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,001119F0,word,3C033CAE //3C033C8E Zoom

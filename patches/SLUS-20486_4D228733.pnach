@@ -2,7 +2,7 @@ gametitle=Marvel vs. Capcom 2: New Age of Heroes (SLUS204.86;1)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch by nemesis2000 CRC by Acem (pnach by nemesis2000)
+author=nemesis2000 CRC by Acem (pnach by nemesis2000)
 
 patch=1,EE,00414284,word,3C023FAA
 patch=1,EE,003DDB10,word,AC83003C

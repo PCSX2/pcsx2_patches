@@ -2,7 +2,7 @@ gametitle=Dot Hack Part 4 - Quarantine (PAL-M5) (SLES-52468)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht (2nd Elf Hack)
+author=ElHecht (2nd Elf Hack)
 
 patch=1,EE,0010a4cc,word,3c023f40 // 3c023f80 hor fov 1
 patch=1,EE,001db3ec,word,3c023f40 // 3c023f80 hor fov 2

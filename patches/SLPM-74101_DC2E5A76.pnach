@@ -2,7 +2,7 @@ gametitle=Bomberman Land 2 (NTSC-J)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by gamemasterplc
+author=gamemasterplc
 
 patch=1,EE,201391F4,extended,24040340 //Framebuffer X Resolution (832)
 patch=1,EE,20139220,extended,24040340 //Internal X Resolution (832)

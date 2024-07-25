@@ -2,7 +2,7 @@ gametitle=Okami (J) (SLPM_66375)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht (pnach by Arapapa)
+author=ElHecht (pnach by Arapapa)
 //Nemesis2000's search values did not apply to NTSC-J
 
 // 16:9

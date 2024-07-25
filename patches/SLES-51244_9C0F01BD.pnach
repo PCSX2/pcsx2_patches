@@ -2,7 +2,7 @@ gametitle=XIII (PAL-M5) (SLES-51244)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by ElHecht)
+author=nemesis2000 (pnach by ElHecht)
 
 // 16:9
 patch=1,EE,001d7758,word,3c013f40 // 00000000 hor fov

@@ -2,7 +2,7 @@ gametitle=Zettaizetsumei Toshi [NTSC-J] (SLPS-25113)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Little Giant
+author=Little Giant
 
 //16:9
 patch=1,EE,0013e3b4,word,3c023f40 //3c023f80 game play

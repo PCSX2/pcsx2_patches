@@ -2,7 +2,7 @@ gametitle=Return to Castle Wolfenstein: Operation Resurrection (SLUS-20297)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 patch=1,EE,0012f928,word,3c0142ab //ver fov 1
 patch=1,EE,0012f92c,word,3421e328

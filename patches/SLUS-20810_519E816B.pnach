@@ -2,7 +2,7 @@ gametitle=Nightshade (SLUS-20810)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000 )
+author=nemesis2000
 patch=1,EE,00183124,word,3c023f24
 patch=1,EE,00183128,word,34428b44
 patch=1,EE,0018314c,word,3c023f40

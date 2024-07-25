@@ -2,7 +2,7 @@ gametitle=ObsCure [PAL-F-I] (SLES-52738)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Bigdemon
+author=Bigdemon
 
 //Gameplay 16:9
 patch=1,EE,00257C54,word,3C023F19 //3C023F00 Zoom

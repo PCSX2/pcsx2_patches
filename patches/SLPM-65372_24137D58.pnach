@@ -2,7 +2,7 @@ gametitle=Soccer Kantoku Saihai Simulation - Formation Final [NTSC-J] [SLPM-6537
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 patch=1,EE,001033c4,word,3c013f40 //00000000

@@ -2,7 +2,7 @@ gametitle=Jade Cocoon 2 (PAL-E) (SLES-50735)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
 //
 // 16:9
 patch=1,EE,21E2EDCC,extended,3F340000 // 3F700000 hor fov
@@ -11,7 +11,7 @@ patch=1,EE,21E2EDCC,extended,3F340000 // 3F700000 hor fov
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Disable interlacing hack by ElHecht
+author=ElHecht
 
 // disable interlacing
 patch=1,EE,0015a1e4,word,00000000 // 8c27698C boot and menu

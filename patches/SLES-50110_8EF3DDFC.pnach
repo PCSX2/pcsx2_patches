@@ -2,7 +2,7 @@ gametitle=Ephemeral Fantasia [PAL] (SLES-50110)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Little Giant
+author=Little Giant
 
 //Vert
 patch=1,EE,00239dbc,word,3c023fa2

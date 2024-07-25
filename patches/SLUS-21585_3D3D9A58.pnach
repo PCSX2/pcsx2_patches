@@ -2,7 +2,7 @@ gametitle=Samurai Warriors 2 - Empires (U) (SLUS-21585) [3D3D9A58]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht converted by Shang
+author=ElHecht converted by Shang
 
 // 16:9
 patch=1,EE,0017a918,word,3c023f19 // 3c023f4c hor fov 1-player

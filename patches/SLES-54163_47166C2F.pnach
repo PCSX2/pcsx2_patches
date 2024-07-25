@@ -1,7 +1,7 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
 comment=Naruto - Ultimate Ninja (PAL-M5) (SLES-54163)
-comment=Widescreen Hack by ElHecht & Arapapa
+author=ElHecht & Arapapa
 
 patch=1,EE,E0081100,extended,00100128 //Spanish
 patch=1,EE,20844FB0,extended,3f400000 //3f800000 X-Fov

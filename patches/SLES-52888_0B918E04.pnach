@@ -2,7 +2,7 @@ gametitle=Brothers in Arms: Road to Hill 30 [PAL-M5] (SLES_528.88)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,003057EC,word,3C023F40 //3C023F80 (Increases hor. axis)

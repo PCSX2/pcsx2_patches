@@ -2,7 +2,7 @@ gametitle=World Soccer Winning Eleven 5 (SLPM-62053)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch by BloodRaynare
+author=BloodRaynare
 
 patch=1,EE,00144688,word,083eb44c
 patch=1,EE,0014468c,word,00000000

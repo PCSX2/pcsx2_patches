@@ -2,7 +2,7 @@ gametitle=Sega Ages Vol. 16 Virtua Fighter 2 (NTSC-J) [SLPM-62547]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by FeRcHuLeS
+author=FeRcHuLeS
 
 patch=1,EE,00119650,word,3c023f40 //3c023f80
 

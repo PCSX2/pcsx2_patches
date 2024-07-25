@@ -2,7 +2,7 @@ gametitle=Aggressive Inline (PAL-M4) (SLES-50480)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0010114c,word,3c013f40 // 3c013f80 hor fov

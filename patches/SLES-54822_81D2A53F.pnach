@@ -2,7 +2,7 @@ gametitle=Atelier Iris 3: Grand Phantasm [PAL] (SLES_548.22)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
+author=El_Patas
 
 //3D Scenes
 patch=1,EE,0035F12C,word,3C013F40 //00000000 hor value

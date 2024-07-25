@@ -2,7 +2,7 @@ gametitle=BMX XXX (SLUS-20415)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch by BloodRaynare
+author=BloodRaynare
 
 // 16:9
 patch=1,EE,00101074,word,3c013f40 // 3c013f80 hor fov

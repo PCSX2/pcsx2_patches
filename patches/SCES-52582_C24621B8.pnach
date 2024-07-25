@@ -2,7 +2,7 @@ gametitle=Everybody's Golf (PAL-M5) (SCES-52582)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,e005010C,extended,005522A4 // check 205522A4 matches value xxxx010c

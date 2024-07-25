@@ -3,7 +3,7 @@ gametitle=Monsters vs. Aliens (NTSC-U) (SLUS-21870) D3C84C28
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 //Zoom (Menu and Cutscenes)
 //003f023c ec0081c6
 patch=1,EE,001abcf0,word,3c023f1b //3c023f00

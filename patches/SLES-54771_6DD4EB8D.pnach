@@ -3,7 +3,7 @@ gametitle=DreamWorks Shrek the Third (PAL-M) (SLES-54771) 6DD4EB8D
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-description=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 //X-Fov
 //003f013c 00b88144 1002a0af
 patch=1,EE,002ee7bc,word,3c013f21 //3c013f00

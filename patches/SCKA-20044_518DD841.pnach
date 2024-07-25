@@ -2,7 +2,7 @@ gametitle=Sly Cooper 2 - Band of Thieves (SCKA-20044)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Fix by PsxFan107 (NTSC-K by Arapapa)
+author=PsxFan107 (NTSC-K by Arapapa)
 
 // Widescreen by nemesis2000
 patch=1,EE,0014dfc0,word,3c013fdd //3c013fa6

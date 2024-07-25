@@ -2,7 +2,7 @@ gametitle=Hitman 2 - Silent Assassin (NTSC-U) (SLUS-20374) (v2.01)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,00313f7c,word,3c013f10 // 3c013f40 ver fov

@@ -2,7 +2,7 @@ gametitle=The Punisher (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0042d2d0,word,3fdba5e3 // 3fa4bc6a ver fov

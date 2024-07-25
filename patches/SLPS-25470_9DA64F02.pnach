@@ -2,7 +2,7 @@ gametitle=Bouken-Ou Beet - Darkness Century (J) (SLPS-25470)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 // 16:9 (0000803f 0000803f 0f070600)
 patch=1,EE,202C11C0,extended,3f400000 // 3f800000

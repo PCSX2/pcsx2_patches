@@ -2,7 +2,7 @@ gametitle=MotoGP 07 [PAL-M5] (SLES_549.59)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,0013BFA4,word,4483E800 //44830800

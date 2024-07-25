@@ -2,7 +2,7 @@ gametitle=Everybody's Tennis (PAL-M11) (SCES-54535)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,001398f0,word,08079ed3 // e4840544 jump to code-inject 001e7b4c
@@ -20,7 +20,7 @@ patch=1,EE,00138154,word,3c034456 // 3c034420 2D menu/hud fix
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=no interlacing by someother1ne
+author=someother1ne
 patch=1,EE,00125464,word,64420000
 patch=1,EE,001256cc,word,64420000
 

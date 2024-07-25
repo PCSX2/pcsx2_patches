@@ -2,7 +2,7 @@ gametitle=The Incredibles [NTSC-U] (SLUS_209.05)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Sergx12
+author=sergx12
 
 //Gameplay 16:9
 patch=1,EE,001fe8e4,word,3c023f1C //3C023F00 Zoom

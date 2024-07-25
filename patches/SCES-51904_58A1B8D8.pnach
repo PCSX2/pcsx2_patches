@@ -2,7 +2,7 @@ gametitle=SOCOM II - U.S. Navy SEALs (PAL-M5) (SCES-51904)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,001c2e44,word,3c013f40 // 00000000 ver fov

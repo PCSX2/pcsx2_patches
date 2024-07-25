@@ -2,7 +2,7 @@ gametitle=Keroro Gunsou - MeroMero Battle Royale Z (NTSC-J] (SLPS-25575)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Little Giant
+author=Little Giant
 
 //16:9
 patch=1,EE,E0025555,extended,00A97474 //

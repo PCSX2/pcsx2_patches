@@ -2,7 +2,7 @@ gametitle= NBA Street (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Widescreen Hack by VIRGIN KLM
+author=VIRGIN KLM
 
 //Widescreen - 3D Elements
 patch=1,EE,00644C48,word,3F955555 // 3F6EEEEF

@@ -2,7 +2,7 @@ gametitle= Sega Rally 2006 (K)(SLKA-25362)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Widescreen Hack by VIRGIN KLM
+author=VIRGIN KLM
 
 //Widescreen
 patch=1,EE,20383AF8,word,3FC71C71

@@ -2,7 +2,7 @@ gametitle=The Sopranos: Road to Respect [PAL] (SLES_542.09)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,00425280,word,3FC0D938 //3F90A3D7 (Increases hor. axis)

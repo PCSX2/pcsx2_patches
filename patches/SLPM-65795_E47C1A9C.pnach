@@ -2,7 +2,7 @@ gametitle=Digital Devil Saga Avatar Tuner 2 [SLPM-65795]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=NTSC-J Widescreen Hack by synce
+author=synce
 patch=1,EE,2037ED64,extended,3fc65461
 
 

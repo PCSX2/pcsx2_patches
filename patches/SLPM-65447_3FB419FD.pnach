@@ -2,7 +2,7 @@ gametitle=Kunoichi
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=NTSC-J Widescreen Hack by synce
+author=synce
 patch=1,EE,21a3eac0,extended,3f248b43
 
 

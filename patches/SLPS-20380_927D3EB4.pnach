@@ -2,7 +2,7 @@ gametitle=Shinkon Gattai Godannar!! [NTSC-J] (SLPS-20380)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Little Gaint
+author=Little Giant
 
 // 16:10
 //patch=1,EE,00103f94,word,3c013f55 //00000000 hor fov

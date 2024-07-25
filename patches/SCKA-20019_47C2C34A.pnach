@@ -2,7 +2,7 @@ gametitle=Forbidden Siren (K) (SCKA_200.19)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Widescreen Hack by sergx12 (pnach by Arapapa)
+author=sergx12 (pnach by Arapapa)
 
 //gameplay by sergx12 (0000a2af 0045033c 803f023c e0000426)
 patch=1,EE,001ffd98,word,3c023f40

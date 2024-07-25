@@ -2,7 +2,7 @@ gametitle=Metal Slug (SLPS-25650)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 patch=1,EE,00496bf4,word,46000003
 patch=1,EE,00496bf8,word,7fb00010

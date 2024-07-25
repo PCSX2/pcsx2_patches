@@ -2,7 +2,7 @@ gametitle=Ar Tonelico Melody of Elemia PAL (SLES_545.86)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen pnach by El_Patas
+author=El_Patas
 
 //3D Scenes
 patch=1,EE,00344C9C,word,3C013F40 //00000000 hor value

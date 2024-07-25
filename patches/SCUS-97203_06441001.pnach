@@ -2,7 +2,7 @@ gametitle=Wild Arms 3 (SCUS-97203)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 //widescreen
 patch=1,EE,00115bd0,word,3c023f40

@@ -2,7 +2,7 @@ gametitle=Monsters Inc - Scare Island (PAL-G) (SCES-50600)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0011a3f0,word,0808ad25 // c6010068 jump to code-inject 0022b494

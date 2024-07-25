@@ -2,7 +2,7 @@ gametitle=Area 51 (J) (SLPM_664.68)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht (pnach by Arapapa)
+author=ElHecht (pnach by Arapapa)
 
 // 16:9
 patch=1,EE,00396748,word,3c193f40 // 00000000 hor fov (00000000 00000000 03ad0046)

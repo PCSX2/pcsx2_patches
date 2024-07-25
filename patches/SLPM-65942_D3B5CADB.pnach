@@ -2,7 +2,7 @@ gametitle=Mercenaries (J)(SLPM-65942)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht (NTSC-J by Arapapa)
+author=ElHecht (NTSC-J by Arapapa)
 
 // 16:9
 //a800a0e7 ffff0324 02000224 ffff4224 00000000 00000000 00000000 00000000 00000000

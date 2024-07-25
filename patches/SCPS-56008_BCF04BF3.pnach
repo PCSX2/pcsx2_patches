@@ -2,7 +2,7 @@ gametitle=Fatal Frame (Project Zero) (K)(SCPS-56008)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=16:9 widescreen hack by nemesis2000, pgert and devina40 (NTSC-K by Arapapa)
+author=nemesis2000, pgert and devina40 (NTSC-K by Arapapa)
 
 //16:9 widescreen by nemesis2000
 patch=1,EE,00189E54,word,3C013F40 //3C013F80

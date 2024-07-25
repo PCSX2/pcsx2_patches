@@ -2,7 +2,7 @@ gametitle=Final Fight: Streetwise (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000 )
+author=nemesis2000
 patch=1,EE,0017f228,word,3c043f71
 patch=1,EE,0017f22c,word,3489d5a2
 patch=1,EE,0017f230,word,3c03bf71

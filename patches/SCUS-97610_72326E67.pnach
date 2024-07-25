@@ -2,7 +2,7 @@ gametitle=Hot Shots Tennis (NTSC-U) (SCUS-97610)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht (ported by Tagg)
+author=ElHecht (ported by Tagg)
 
 // 16:9
 patch=1,EE,001398d0,word,08074b83 // e4840544 jump to code-inject 001d2e0c
@@ -19,7 +19,7 @@ patch=1,EE,00138134,word,3c034456 // 3c034420 2D menu/hud fix
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=no interlacing by someother1ne
+author=someother1ne
 patch=1,EE,00125464,word,64420000
 patch=1,EE,001256cc,word,64420000
 

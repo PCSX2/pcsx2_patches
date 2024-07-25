@@ -2,7 +2,7 @@ gametitle=Dragonball Z 3 (K) (SLKA-25205)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht (NTSC-K by Arapapa)
+author=ElHecht (NTSC-K by Arapapa)
 
 // 16:9
 patch=1,EE,00131ba8,word,080c91f2 // 46000803 jump to code-inject 003247c8

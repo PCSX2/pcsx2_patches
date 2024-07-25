@@ -2,7 +2,7 @@ gametitle=Zettaizetsumei Toshi 2 - Itetsuita Kiokutachi [NTSC-J] (SLPS-25606)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Little Giant
+author=Little Giant
 
 //black borders's fix
 patch=1,EE,001CF198,word,00A52823 //00000000

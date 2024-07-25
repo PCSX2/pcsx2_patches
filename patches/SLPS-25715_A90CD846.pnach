@@ -2,7 +2,7 @@ gametitle=Tales of Destiny (J)(SLPS-25715)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 patch=1,EE,0015b810,word,00000000 //e7ad0040
 patch=1,EE,0015b818,word,3c013f40 //00000000

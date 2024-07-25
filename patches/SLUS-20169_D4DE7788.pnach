@@ -2,7 +2,7 @@ gametitle=Ephemeral Fantasia [NTSC-J] (SLUS-20169)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Little Giant
+author=Little Giant
 
 //vert
 patch=1,EE,00231ff4,word,3c023fa2

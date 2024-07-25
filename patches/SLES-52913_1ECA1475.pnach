@@ -2,7 +2,7 @@ gametitle=Suikoden IV [PAL-M5] (SLES-52913)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by nemesis2000
+author=nemesis2000
 // Ported to PAL
 //
 // 16:9

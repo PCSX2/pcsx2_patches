@@ -2,7 +2,7 @@ gametitle=Alpine Racer 3 [PAL-M5] (SCES_508.87)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,206A1E5C,extended,3F199999 //3F800000 (Increases hor. axis)

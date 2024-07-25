@@ -2,7 +2,7 @@ gametitle=Romancing SaGa (NTSC-J) (SLPM_659.20)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht (pnach by Arapapa)
+author=ElHecht (pnach by Arapapa)
 
 // 16:9
 patch=1,EE,0027f7b4,word,3c013f40 // 00000000 hor fov

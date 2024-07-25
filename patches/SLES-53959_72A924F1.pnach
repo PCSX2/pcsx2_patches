@@ -2,7 +2,7 @@ gametitle=Pac-Man World 3 (PAL-M5)(SLES-53959)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ICUP321
+author=ICUP321
 
 //Widescreen hack 16:9 (Set "Normal" in Picture Options)
 

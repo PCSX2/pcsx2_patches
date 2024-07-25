@@ -2,7 +2,7 @@ gametitle=Sonic Heroes (SLUS-20718)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=16:9 Hack by Brandondorf9999
+author=Brandondorf9999
 
 //---
 patch=1,EE,000C0000,word,3C023F40

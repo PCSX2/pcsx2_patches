@@ -2,7 +2,7 @@ gametitle=Garouden Breakblow (NTSC-J) (SLPS-25530)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0014f58c,word,080ad5cf // 46007bc7

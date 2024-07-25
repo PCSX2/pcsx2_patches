@@ -9,7 +9,7 @@ gsaspectratio=16:9
 
 // ==========
 comment= Gauntlet - Seven Sorrows * SLES-53667 * PAL-M5 * BBB8392E
-comment=- Widescreen hack by nemesis2000.
+author=nemesis2000
 patch=1,EE,00446620,word,24020002 // 8C4206EC
 // ==========
 

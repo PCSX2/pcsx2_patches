@@ -2,7 +2,7 @@ gametitle=Odin Sphere (J)(SLPM-66474)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Zoom
 //0040033c 00108344 00000000 43d00246

@@ -2,7 +2,7 @@ gametitle=Zombie Zone (PAL-E) (SLES-53398)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,001d0104,word,3c013f40 // 3c013f80
@@ -10,7 +10,7 @@ patch=1,EE,001d0104,word,3c013f40 // 3c013f80
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Disable interlacing hack by ElHecht
+author=ElHecht
 
 // disable interlacing
 patch=1,EE,001c83b0,word,24040000 // 8f84aed8

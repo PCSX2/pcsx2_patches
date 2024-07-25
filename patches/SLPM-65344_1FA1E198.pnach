@@ -2,7 +2,7 @@ gametitle=Project Minerva Professional & Simple 2000 Ultimate Series Vol. 23: Pr
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Little Gaint
+author=Little Giant
 
 patch=1,EE,2123a3dc,extended,3F206D3A // vert
 patch=1,EE,21241C9C,extended,3F5AE148 // zoom

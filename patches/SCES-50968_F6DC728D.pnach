@@ -2,7 +2,7 @@ gametitle=Kingdom Hearts (PAL-F) (SCES-50968)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht - Port PAL-FR by PuNkY_BoY
+author=ElHecht - Port PAL-FR by PuNkY_BoY
 
 // 16:9
 patch=1,EE,00110634,word,3c1b3f40 // 00000000 hor fov gameplay

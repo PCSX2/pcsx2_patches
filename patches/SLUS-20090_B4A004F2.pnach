@@ -2,7 +2,7 @@ gametitle=TimeSplitters (SLUS-20090)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 and gamemasterplc (Font Fixes by gamemasterplc)
+author=nemesis2000 and gamemasterplc (Font Fixes by gamemasterplc)
 patch=1,EE,20202634,extended,080E2665 //Jump to Code to Fix Button Width
 patch=1,EE,2020268C,extended,080E2678 //Jump to Code to Fix Button Skip Width
 patch=1,EE,20202690,extended,240200C0 //Button Skip Width Scale (192)

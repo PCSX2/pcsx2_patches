@@ -2,7 +2,7 @@ gametitle=Kinnikuman Muscle Grand Prix Max [NTSC-J] (SLPS_256.76)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Sergx12
+author=sergx12
 
 //Gameplay 16:9
 patch=1,EE,001A4274,word,3C014455 //3C014420 (Increases horiz. axis)

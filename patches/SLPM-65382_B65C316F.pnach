@@ -2,7 +2,7 @@ gametitle=Grand Theft Auto III (SLPM-65382)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by nemesis2000 (NTSC-J by Arapapa)
+author=nemesis2000 (NTSC-J by Arapapa)
 
 //widescreen fix (00000000 0800E003 C8858CE7 00000000 00000000 D0FFBD27)
 patch=1,EE,00184c2c,word,3C013F9D

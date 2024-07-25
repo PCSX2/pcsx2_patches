@@ -2,7 +2,7 @@ gametitle=Dave Mirra Freestyle BMX 2 (SLES-50217)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch by BloodRaynare
+author=BloodRaynare
 
 // 16:9
 patch=1,EE,00100c34,word,3c013f40 // 3c013f80 hor fov

@@ -2,7 +2,7 @@ gametitle=Phantasy Star Universe (NTSC-J) (SLPM-66031)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht (pnach NTSC-J by Arapapa)
+author=ElHecht (pnach NTSC-J by Arapapa)
 
 //search values
 //00007f43 00008043 000060c3 0e01804b (2nd) 20865BB0

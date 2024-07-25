@@ -2,7 +2,7 @@ gametitle=Seek and Destroy (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 // 16:9
 patch=1,EE,001bc24c,word,3C013F40 //00000000 hor fov

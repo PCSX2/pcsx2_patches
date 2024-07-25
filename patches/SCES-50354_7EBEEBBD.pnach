@@ -2,7 +2,7 @@ gametitle=Klonoa 2: Lunatea's Veil PAL (SCES-50354)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 //50hz mode
 patch=1,EE,e0013f80,extended,0018bc94 // check 2018bc94 matches value (3c01)3f80

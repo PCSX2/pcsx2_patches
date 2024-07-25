@@ -2,7 +2,7 @@ gametitle=Need for Speed - ProStreet (PAL-M2) (SLES-55003)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,00682bd4,word,3f400000 // 3f800000

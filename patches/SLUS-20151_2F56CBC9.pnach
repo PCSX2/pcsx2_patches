@@ -2,7 +2,7 @@ gametitle=Klonoa 2:Lunatea's Veil (SLUS-20151)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by synce (NTSC-U pnach by flameofrecca)
+author=synce (NTSC-U pnach by flameofrecca)
 patch=1,EE,0030536c,word,3c013f40
 patch=1,EE,00305370,word,44810000
 patch=1,EE,00305378,word,4600c602
