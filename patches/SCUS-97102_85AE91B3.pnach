@@ -30,7 +30,7 @@ patch=1,EE,102112F0,extended,0000005A
 patch=1,EE,20211014,extended,00000000
 
 [Metric units]
-description=Changes MPH to KMH, ft.lb to NM
+description=Changes MPH to KMH, ft.lb to kgf.m
 author=Silent
 
 // Speed and distance units
@@ -42,4 +42,4 @@ patch=1,EE,202F59D8,extended,0
 // 0 - kgf.m
 // 1 - ft.lb
 // 2 - NM
-patch=1,EE,202F59E0,extended,2
+patch=1,EE,202F59E0,extended,0
