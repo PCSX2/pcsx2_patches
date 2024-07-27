@@ -66,3 +66,12 @@ patch=1,EE,002B9A68,word,03E00008
 patch=1,EE,002B9A6c,word,E42E8130
 
 
+[Door Transition Skip]
+// https://gist.github.com/kapdap/91ff4e4a32d45b5a6ee6b9ef7b298895
+author=kapdap
+patch=1,EE,00133D4C,word,00000000 // remove call to bhControlDoor
+patch=1,EE,00133D54,word,00000000 // remove door animation completed check
+
+[Skip Startup logos and warning]
+author=illusion
+patch=1,EE,001324D4,word,34640008
