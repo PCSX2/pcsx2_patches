@@ -116,3 +116,16 @@ comment=The game will always start in 480p instead of 480i.
 author=Silent
 patch=1,EE,204364A8,extended,AE0516B0
 patch=1,EE,10436598,extended,10E8
+
+[32-Bit Color Depth]
+comment=Color depth will remain 32-bit while using 480p.
+author=Aero_
+patch=1,EE,1043668C,extended,0001 // Color Depth Mode
+patch=1,EE,10436698,extended,0280 // Resolution X
+patch=1,EE,104366A0,extended,0168 // Resolution Y
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+patch=1,EE,203E1500,extended,10400002 // beq v0,zero,0x003E150C : Jumps if Widescreen Mode is Disabled
+patch=1,EE,203E1504,extended,3C013F40 // lui at,0x3F40 : License Trophy Aspect Ratio Float Value (4:3)
+patch=1,EE,203E1508,extended,3C013F80 // lui at,0x3F80 : License Trophy Aspect Ratio Float Value (16:9)
+patch=1,EE,203E150C,extended,34210000 // ori at,at,0x0000
