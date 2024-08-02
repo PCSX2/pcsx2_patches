@@ -1,0 +1,5 @@
+gametitle=James Bond 007 - Agent Under Fire (NTSC)
+
+//Deinterlacing Code
+patch=1,EE,D012A400,extended,ACE20134
+patch=1,EE,2012A400,extended,00000000

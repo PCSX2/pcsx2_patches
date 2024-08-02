@@ -1,0 +1,10 @@
+gametitle=Urban Reign SLUS_212.09
+
+[De-Blur Patch]
+description=Removes screen blur.
+patch=1,EE,0034D308,extended,00000000
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,0034D30A,extended,00000000
