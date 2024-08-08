@@ -1,0 +1,15 @@
+SCUS-97465:
+  dynaPatches:
+    - pattern:
+        - { offset: 0x58, value: 0xA2B01680 }
+        - { offset: 0x6C, value: 0xA2A01680 }
+        - { offset: 0x70, value: 0x3C030022 }
+        - { offset: 0x74, value: 0x8C63DDA4 }
+      replacement:
+        - { offset: 0x04, value: 0x00000000 } # Remove the first physics step (not the second one: it does things like drawing the aiming reticle)
+        - { offset: 0x50, value: 0x00000000 } # Always take the "not 3/4 players" branch (I don't know what it's actually for, but without this, the characters in 3/4 players won't "start")
+        - { offset: 0x34, value: 0x00000000 } # Remove the first VSync (leaving the one that is never skipped)
+        # Feel free to tweak the last 4 digits of the value.
+        # If too low: the game will frameskip when it doesn't need to.
+        # If too high: the game may not realize that it needs to frameskip, and run at half speed. Avoid!
+        - { offset: 0x94, value: 0x24032470 } # Reduce the time required to do another framestep (so that the game will frameskip if it can't keep up)
