@@ -5,4 +5,8 @@ gsaspectratio=16:9
 comment=Widescreen Hack
 patch=1,EE,003cd7fc,word,3f400000
 
-
+[Sound Fix for FMV Scenes]
+author=kozarovv
+description=Sound fix for stuttering glitchy audio during FMV/cut-scenes
+patch=1,EE,00154954,extended,10000009
+//Fix code was posted at PCSX2 wiki. Additional info given was "Skip 1200000 cycles loop - fix audio."
