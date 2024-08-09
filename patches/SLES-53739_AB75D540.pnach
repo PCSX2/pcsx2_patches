@@ -1,4 +1,4 @@
-gametitle=Disney's: Chicken Little [PAL] (SLES_537.39)
+gametitle=Disney's: Chicken Little [PAL] (SLES_537.39) AB75D540
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -13,5 +13,5 @@ patch=1,EE,00287DE0,word,3C014455 //3C014420
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
 patch=1,EE,005294A8,word,00000001 //00000002

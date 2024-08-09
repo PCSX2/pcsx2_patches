@@ -4,8 +4,8 @@ gametitle=Star Wars - Battlefront 2 (PAL-M) SLES-53501 02F4B541 secondary SWBFRN
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000 and Arapapa
-comment=Widescreen Hack 16:9
+description=Widescreen Hack 16:9
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
