@@ -1,0 +1,6 @@
+gametitle=Ghosthunter (SLUS-20993)
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2056A1F0,extended,00000001
