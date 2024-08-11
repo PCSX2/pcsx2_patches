@@ -15,8 +15,14 @@ patch=1,EE,003144e8,word,461e0002 // 00000000
 patch=1,EE,003144ec,word,e7808744 // 00000000
 patch=1,EE,003144f0,word,0804c433 // 00000000 jump back to function 001310cc
 
-[480p 60FPS]
-gsinterlacemode=1
-author=Gabominated
-description=Progressive scan Mode at 60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,00100280,word,24120050
+[480p Mode]
+author=felixthecat1970
+description=Forces progressive scan mode 480p at startup.
+patch=0,EE,103BC300,extended,00000150
+patch=0,EE,203BC320,extended,01000001
+patch=0,EE,20149E9C,extended,00000000
+patch=0,EE,203BC324,extended,02800000
+patch=0,EE,203BC304,extended,02800101
+patch=0,EE,201494F8,extended,241B008C
+patch=0,EE,20149578,extended,A2000038
+patch=0,EE,20149588,extended,A21B0010

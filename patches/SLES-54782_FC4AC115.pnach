@@ -28,9 +28,8 @@ author=Gabominated
 comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,2013D188,extended,2C420001 //2C420002
 
-[480p 60FPS]
+[480p Mode]
 gsinterlacemode=1
 author=Gabominated
-description=Progressive scan Mode at 60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,2013d188,extended,2c420001 //2c420002 fps
+description=SDTV 480p mode at start. Might need enable EE Overclock to be stable.
 patch=1,EE,0010CF00,word,24120050
