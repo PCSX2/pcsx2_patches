@@ -8,3 +8,7 @@ patch=1,EE,004B536C,word,3C023F10 //3C023F40
 patch=1,EE,004B53C4,word,3C02402B //3C024000
 
 
+[Remove Blur/Bloom]
+author=fobes
+description=Removes the post-processing blur/bloom effect
+patch=1,EE,004A9D94,word,00000000
