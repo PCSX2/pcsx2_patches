@@ -1,0 +1,9 @@
+gametitle=Kuon (PAL-M3) SLES-53411 B3589D67 (Spanish Fan Translation)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+
+// 16:9
+patch=1,EE,001382c4,word,3c023f19  // 3c023f4c hor fov
+patch=1,EE,001382c8,word,3443999a  // 3443999a hor fov
