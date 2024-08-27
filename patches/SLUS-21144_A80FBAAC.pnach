@@ -1,9 +1,9 @@
-gametitle=Tom Clancy's Rainbow Six 3 (SLUS-20883)
+gametitle=Tom Clancy's Rainbow Six - Lockdown SLUS-21144 A80FBAAC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000
-
-patch=1,EE,0030f100,word,3c023f40
-
-
+author=Gabominated
+description=Widescreen hack
+patch=1,EE,002015A4,word,3C014115 //3C0140e0 y-fov
+patch=1,EE,00132818,word,3c013F21 //3c013f00 zoom
+patch=1,EE,001af8bc,word,3c013f21 //3c013f00 render fix

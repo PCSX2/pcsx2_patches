@@ -1,0 +1,24 @@
+gametitle=Resident Evil 4 SLES-53702 6BA2F6B9
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated & PeterDelta
+description=Widescreen improvement.
+patch=1,EE,20326FF8,extended,3F5CED91 //x-fov 3F25B22D
+patch=1,EE,202506DC,extended,3C013F5C
+patch=1,EE,202506E0,extended,3421ED91
+patch=1,EE,20326ffc,extended,3faaaaab //y-fov
+patch=1,EE,202506EC,extended,3C013FAA 
+patch=1,EE,202506F0,extended,3421aaab
+patch=1,EE,2021d354,extended,3c013f00
+patch=1,EE,20281268,extended,3c013f80
+patch=1,EE,204311E0,extended,48000000 //forces native widescreen by PeterDelta
+patch=1,EE,E0080000,extended,0041782C
+patch=1,EE,20326FF8,extended,3F25B22D //3F5CED91 x-fov
+patch=1,EE,202506DC,extended,3C013F25 //3C013F5C
+patch=1,EE,202506E0,extended,3421b22d //3421ED91
+patch=1,EE,20326ffc,extended,3f800000 //3faaaaab y-fov
+patch=1,EE,202506EC,extended,3C013F80 //3C013FAA 
+patch=1,EE,202506F0,extended,34210000 //3421aaab
+patch=1,EE,2021d354,extended,3c013f25 //3c013f00 inventory background
+patch=1,EE,20281268,extended,3c013f80 //3c013f00 render fix

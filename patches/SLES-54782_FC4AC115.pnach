@@ -27,3 +27,9 @@ patch=1,EE,001f4b28,word,3c020000 // 3c023f80
 author=Gabominated
 comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,2013D188,extended,2C420001 //2C420002
+
+[480p Mode]
+gsinterlacemode=1
+author=Gabominated
+description=SDTV 480p mode at start. Might need enable EE Overclock to be stable.
+patch=1,EE,0010CF00,word,24120050

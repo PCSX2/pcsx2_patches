@@ -9,4 +9,9 @@ author=Arapapa
 //0000803f 0000803f 0000003f 66666645
 patch=1,EE,207BF288,extended,3FAAAAAB //3f800000
 
+[60 FPS]
+author=asasega
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,203B8A08,extended,00000000 //45000010
+
 
