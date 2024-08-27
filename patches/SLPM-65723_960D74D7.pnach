@@ -1,14 +1,9 @@
-gametitle=Van Helsing (J)(SLPM-65723)
+gametitle=Van Helsing NTSC-J SLPM-65723 960D74D7
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
-
-//Widescreen hack 16:9
-
-patch=1,EE,002ec1b0,word,3fe38e38 //3faaaaaa
-
-//X-Fov (include 2D)
-//patch=1,EE,0023dfc4,word,3c013ec0 //3c013f00
-
-
+author=Arapapa & Gabominated 
+description=Widescreen hack
+patch=1,EE,002EC1B0,word,3fE38E39 //3fAAAAAA
+patch=1,EE,002EC1B4,word,C2D55554 //00000000
+patch=1,EE,002EC1B8,word,443AAAAB //44200000

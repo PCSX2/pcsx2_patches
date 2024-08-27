@@ -1,10 +1,9 @@
-gametitle=Van Helsing [PAL] (SLES_519.08)
+gametitle=Van Helsing PAL-M SLES-51908 8176235A
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas
-
-//Gameplay 16:9
-patch=1,EE,202E88A8,extended,3FE38E38 //3FAAAAAA (Increases hor. axis)
-
-
+author=El_Patas & Gabominated
+description=Widescreen hack
+patch=1,EE,002E88A8,word,3FE38E39 //3FAAAAAA
+patch=1,EE,002E88AC,word,C2D55554 //00000000
+patch=1,EE,002E88B0,word,443AAAAB //44200000
