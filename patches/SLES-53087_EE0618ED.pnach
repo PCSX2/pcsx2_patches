@@ -1,0 +1,8 @@
+gametitle=TOCA Race Driver 3 (PAL-M) SLES-53087 EE0618ED
+
+[480p Mode]
+gsinterlacemode=1
+author=Gabominated
+description=SDTV 480p mode at start. Might need enable EE overclock to be stable
+patch=1,EE,204BA9A4,extended,3C888889 //3CA3D70A
+patch=1,EE,20465c10,extended,24120050
