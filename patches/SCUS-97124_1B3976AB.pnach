@@ -2,7 +2,7 @@ gametitle=Jak and Daxter - The Precursor Legacy (NTSC-U) [SCUS-97124]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,202AF750,extended,3f1f3b64 // 3f000000 zoom

@@ -2,7 +2,7 @@ gametitle=Kingdom Hearts Re - Chain of Memories (Ultimate Hits) [NTSC-J] (SLPM-6
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen correction by nemesis2000 (pnach by Little Giant)
+author=nemesis2000 (pnach by Little Giant)
 
 //gameplay by asmodean
 patch=1,EE,20332fbc,extended,3F19999A // 3F4CCCCD (hor axis)

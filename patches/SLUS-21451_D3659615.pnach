@@ -2,7 +2,7 @@ gametitle=The Grim Adventures of Billy & Mandy (NTSC-U)(SLUS-21451)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 //0000803f 000080bf 00000000

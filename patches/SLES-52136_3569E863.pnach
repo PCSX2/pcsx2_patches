@@ -1,0 +1,6 @@
+gametitle=Hitman Contracts SLES-52136 3569E863
+
+[50/60fps]
+author=Gabominated
+description=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2053a70c,extended,00000001 //00000002

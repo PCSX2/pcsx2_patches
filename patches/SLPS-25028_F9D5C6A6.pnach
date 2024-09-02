@@ -2,7 +2,7 @@ gametitle=Shutokou Battle 0 (J)(SLPS-25028)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa and VIRGIN KLM
+author=Arapapa and VIRGIN KLM
 
 //Widescreen hack 16:9
 
@@ -94,7 +94,7 @@ patch=1,EE,2074F514,extended,3F400000
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=No Interlacing Patch by Tokman5
+author=Tokman5
 //While FMV is playing, deinterlacing will be temporary disabled due to streaming problem
 patch=1,EE,D06452A0,extended,01100001
 patch=1,EE,20263518,extended,34022000

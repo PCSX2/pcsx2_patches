@@ -2,7 +2,7 @@ gametitle=Kingdom Hearts (NTSC-J) [SLPS-25105]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch by nemesis2000 (pnach by nemesis2000 )
+author=nemesis2000
 patch=1,EE,0011043c,word,3c0143d6 //render fix
 patch=1,EE,00110930,word,3c013f19 //hor value first half
 patch=1,EE,00110934,word,3421999a //hor value second half

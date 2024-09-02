@@ -2,7 +2,7 @@ gametitle=Jet Ski Riders [PAL] (SLES_505.52)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas
+author=El_Patas
 
 //Causes a Zoom in the 2 Player mode
 

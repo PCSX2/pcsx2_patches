@@ -2,7 +2,7 @@ gametitle=Genji - Dawn of the Samurai(K) (SCKA_20052)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht, Arapapa
+author=ElHecht, Arapapa
 
 //16:9 (2044013c 00088144 07010046)
 patch=1,EE,002e0a28,word,3c014455  // 3c014420  hor fov

@@ -2,7 +2,7 @@ gametitle=One Piece Land Land [NTSC-J] (SLPS-25382)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 // 16:9
 //(aa3f013c aaaa2134) first... find address from top (00000000)

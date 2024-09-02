@@ -2,7 +2,7 @@ gametitle=Ratchet & Clank (PAL-M5) (SCES-50916)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9 code-inject function
 patch=1,EE,e0220000,extended,00100000 // check 20100000 matches value xxxx0000

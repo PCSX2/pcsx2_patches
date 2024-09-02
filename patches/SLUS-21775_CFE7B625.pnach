@@ -1,0 +1,6 @@
+gametitle=The Munmmy - Tomb of the Dragon Emperor [SLUS_21775] [cfe7b625]
+
+[60 FPS]
+author=asasega
+comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2037be98,extended,0000003c //0000001e

@@ -1,13 +1,11 @@
-gametitle=SpongeBob Squarepants - Revenge of the Flying Dutchman (U)(SLUS-20425)
+//gametitle=SpongeBob Squarepants - Revenge of the Flying Dutchman (U)(SLUS-20425)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Arapapa. Disabled as it causes misaligned effects.
 
 //Widescreen hack 16:9
 
 //X-Fov
 //803f023c 1000bfff 00188244
-patch=1,EE,00301a24,word,3c023f40 //3c023f80
-
-
+//patch=1,EE,00301a24,word,3c023f40 //3c023f80

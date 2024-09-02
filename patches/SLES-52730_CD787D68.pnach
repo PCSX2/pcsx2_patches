@@ -2,7 +2,7 @@ gametitle=DragonBall Z - Budokai 3 (PAL-M5) (SLES-52730)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9 gui and gameplay
 patch=1,EE,001310c8,word,080c5137 // 46000803 jump to code-inject 003144dc
@@ -15,4 +15,14 @@ patch=1,EE,003144e8,word,461e0002 // 00000000
 patch=1,EE,003144ec,word,e7808744 // 00000000
 patch=1,EE,003144f0,word,0804c433 // 00000000 jump back to function 001310cc
 
-
+[480p Mode]
+author=felixthecat1970
+description=Forces progressive scan mode 480p at startup.
+patch=0,EE,10404300,extended,00000150
+patch=0,EE,20404320,extended,01000001
+patch=0,EE,20148BA0,extended,00000000
+patch=0,EE,20404324,extended,02800000
+patch=0,EE,20404304,extended,02800101
+patch=0,EE,201481A8,extended,241B008C
+patch=0,EE,20148228,extended,A2000038
+patch=0,EE,20148238,extended,A21B0010

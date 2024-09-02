@@ -2,7 +2,7 @@ gametitle=The Incredibles: Rise of the Underminer [PAL-M3] (SLES_534.74)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,00218F24,word,3C023F1C //3C023F00 Zoom

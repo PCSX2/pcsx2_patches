@@ -2,7 +2,7 @@ gametitle=Spider-Man 3 (K)(SLKA-25385)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 patch=1,EE,0032ab04,word,3c023f22 //3c023f00

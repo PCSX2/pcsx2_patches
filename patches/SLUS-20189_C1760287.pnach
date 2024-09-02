@@ -2,7 +2,7 @@ gametitle= Tokyo Extreme Racer - Zero (NTSC) (SLUS-20189)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Widescreen Hack by VIRGIN KLM
+author=VIRGIN KLM
 
 // 16:9 - 3D Elements
 patch=1,EE,20748364,word,3F400000

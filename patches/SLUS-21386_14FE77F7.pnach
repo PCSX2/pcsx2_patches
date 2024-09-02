@@ -47,7 +47,6 @@ patch=1,EE,002CE4E0,word,3C024400 //Portraits Y Position
 patch=1,EE,005D6878,word,43D55555 //Skits Text Position
 patch=1,EE,002A3CF8,word,3C0543D5 //Get Item Textbox Position
 patch=1,EE,002A222C,word,3C074455 //Story Textbox Range Extend
-patch=1,EE,0011A668,word,00000000 //Bloom Off
 patch=1,EE,E01ECCCD,extended,00684180 //Battle Enable Condition
 patch=1,EE,2068417C,extended,3C063F19 //Battle Status Face Width
 patch=1,EE,20683A18,extended,3C093F19 //Battle Status Numbers Width
@@ -106,5 +105,5 @@ patch=1,EE,206A4AC8,extended,240602A1 //Enter (Objects) X Position (World Map)
 patch=1,EE,206A3F9C,extended,240602A1 //Enter (Alternate) X Position (World Map)
 patch=1,EE,206AA610,extended,3C154480 //Fades X Position (World Map)
 patch=1,EE,206AA654,extended,3C134200 //Fades Size (World Map)
-
-
+patch=1,EE,205E570C,extended,00000000 // black grid fix - by sergx12
+// https://forums.pcsx2.net/Thread-PCSX2-Widescreen-Game-Patches?pid=627849#pid627849

@@ -2,7 +2,7 @@ gametitle=Sengoku Musou 2 (K)(SLKA-25379)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht (NTSC-K by Arapapa)
+author=ElHecht (NTSC-K by Arapapa)
 
 patch=1,EE,00179868,word,3c023f19 //3c023f4c
 patch=1,EE,00179870,word,3442999a //3442cccd

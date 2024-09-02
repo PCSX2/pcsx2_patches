@@ -25,3 +25,9 @@ patch=1,EE,004b5008,word,4600f0c6 // 44821800
 author=PeterDelta
 comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
 patch=1,EE,0066CF44,word,00000001 //00000002
+
+
+[Remove Blur/Bloom]
+author=fobes
+description=Removes the post-processing blur/bloom effect
+patch=1,EE,004A94D4,word,00000000

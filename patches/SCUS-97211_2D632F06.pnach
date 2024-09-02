@@ -2,7 +2,7 @@ gametitle=ATV Offroad Fury 2 [NTSC-U] (SCUS_972.11)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,0011B0C0,word,3C023CAA //3C023C8E Zoom

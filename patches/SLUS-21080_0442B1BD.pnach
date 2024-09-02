@@ -2,7 +2,7 @@ gametitle=Samurai Warriors: Xtreme Legends (NTSC-U) (SLUS-21080)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht (Pnach by Little Giant)
+author=ElHecht (Pnach by Little Giant)
 
 // 16:9
 patch=1,EE,0013fa48,word,3c024328 // 3c024360

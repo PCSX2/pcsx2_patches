@@ -2,7 +2,7 @@ gametitle=Wild Arms 4 (PAL-E) (SLES-54239)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by nemesis2000
+author=nemesis2000
 //Ported to PAL, added 16:10 support (ElHecht)
 //
 // 16:9

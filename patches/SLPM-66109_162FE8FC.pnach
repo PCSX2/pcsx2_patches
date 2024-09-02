@@ -2,7 +2,7 @@ gametitle=Code Age Commanders [NTSC-J] (SLPM-66109)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Little Gaint
+author=Little Giant
 
 patch=1,EE,00118e00,word,3c013fe3 //hor fov
 patch=1,EE,00118e04,word,3421e838
