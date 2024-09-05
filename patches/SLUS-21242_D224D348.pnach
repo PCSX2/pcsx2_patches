@@ -55,3 +55,9 @@ author=Nahelam
 comment=Change speedometer unit from MPH to KPH
 patch=1,EE,201765E8,extended,0000102D
 patch=1,EE,201767DC,extended,0000102D
+
+[Falling car parts while driving (takedowns & traffic checks)]
+author=Nehalem
+description=Enable falling car parts during takedowns and traffic checks while driving
+patch=0,EE,20210FA8,extended,00000000
+
