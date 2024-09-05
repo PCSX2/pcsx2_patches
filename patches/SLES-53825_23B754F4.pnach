@@ -1,58 +1,85 @@
-gametitle=Project Zero 3 - The Tormented
+gametitle=Project Zero 3: The Tormented * SLES-53825 * PAL-M5 * 23B754F4
+// Fatal Frame III: The Tormented
+
+// Widescreen & HD pnach by pgert.
+// Credits to ElHecht, Little giant and nemesis2000.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht, nemesis2000 and pgert
-comment=Widescreen Hack
-// ==========
-// pgert@180218
-// http://forums.pcsx2.net/Thread-PCSX2-Widescreen-Game-Patches?pid=240786#pid240786
-// ==========
-// This game has a sound-distortion when using the Spu2-X plug-in.
-// Therefore (as a suggestion) use this special version of the plug-in:
-//  "https://forums.pcsx2.net/attachment.php?aid=65729".
-// ==========
-comment= Project Zero 3 - The Tormented * SLES-53825 * PAL-M5 * 23B754F4
-comment=- Widescreen & HD pnach by pgert.
-comment=- Credits to ElHecht, Little giant and nemesis2000.
-// ==========
+author=pgert
 
-// ==========
-// HD-fixes for GSdx in HW-mode - makes no difference with Native Resolution or in SW-mode.
-patch=1,EE,001573FC,word,00000000 // 0C055DD2 - disable Bloom for Cutscenes (originally by nemesis2000).
-patch=1,EE,0036E268,word,43A30000 // 43A00000 - TC X-offset - without this patch set "TC Offset X" to 395 for HD-support (GSdx).
-patch=1,EE,0036E26C,word,43660000 // 43600000 - TC Y-offset - without this patch set "TC Offset Y" to 790 for HD-support (GSdx).
-patch=1,EE,0037098C,word,439F8000 // 43A00000 - fixes an imperfection with the MenuZoom in HD.
-patch=1,EE,00370990,word,435F8000 // 43600000 - fixes an imperfection with the MenuZoom in HD.
-// ==========
-patch=1,EE,0032885C,word,3F400000 // 3F800000 - X-axis of GamePlay - 16:9.
-// patch=1,EE,0032885C,word,3F400000 // - 16:10.
-// ==========
-// patch=1,EE,00370508,word,3F400000 // 3F800000 - CameraCircle-display modification (optional).
-// patch=1,EE,00370524,word,3F400000 // 3F800000 - CameraCircle-display modification (optional).
-// patch=1,EE,00370538,word,3F400000 // 3F800000 - CameraCircle-display modification (optional).
-// ==========
-patch=1,EE,003705A8,word,3F400000 // 3F800000 - Camera TextDisplay - 16:9.
-patch=1,EE,003705B4,word,3F400000 // 3F800000 - Camera PointDisplay - 16:9.
-// patch=1,EE,003705A8,word,3F555555 // - 16:10.
-// patch=1,EE,003705B4,word,3F555555 // - 16:10.
-// ==========
+patch=1,EE,0032885C,word,3F400000 // 3F800000 - X-axis of GamePlay
 
-// ==========
-// 16:9 Cinematics hacks by pgert (thanks to nemesis2000).
+// CameraCircle-display modification
+patch=1,EE,00370508,word,3F400000 // 3F800000
+patch=1,EE,00370524,word,3F400000 // 3F800000
+patch=1,EE,00370538,word,3F400000 // 3F800000
+
+patch=1,EE,003705A8,word,3F400000 // 3F800000 - Camera TextDisplay
+patch=1,EE,003705B4,word,3F400000 // 3F800000 - Camera PointDisplay
+
+// Cinematics hacks by pgert (thanks to nemesis2000).
+// Side-effect: The "Game Over" sign is displayed wrongly.
 patch=1,EE,003713A0,word,43F00000 // 44200000 - width of Cinematics.
 // 44200000h = 640f : 640 * 0,75 = 480 : 480f = 43F00000h
 patch=1,EE,003713A8,word,42D40000 // 3F800000 - X-axis placement of Cinematics.
-// ==========
-// 16:10 Cinematics hacks by pgert (thanks to nemesis2000).
-// patch=1,EE,003713A0,word,44048000 // 44200000 - width of Cinematics.
-// 44200000h = 640f : 640 * 0,828125 = 530 : 530f = 44048000h
-// patch=1,EE,003713A8,word,42830000 // 3F800000 - X-axis placement of Cinematics.
 // 42400000h appears to be the reference point here.
+
 // ==========
-// Problem on both 16:9 & 16:10 because of the Cinematics hacks:
-// - The "Game Over" sign is displayed wrongly.
+
+[Widescreen/16:10]
+gsaspectratio=Stretch
+author=pgert
+
+patch=1,EE,0032885C,word,3F555555
+
+patch=1,EE,00370508,word,3F555555
+patch=1,EE,00370524,word,3F555555
+patch=1,EE,00370538,word,3F555555
+
+patch=1,EE,003705A8,word,3F555555
+patch=1,EE,003705B4,word,3F555555
+
+patch=1,EE,003713A0,word,44055555
+patch=1,EE,003713A8,word,42830000
+
 // ==========
+
+[Widescreen/15:10]
+gsaspectratio=Stretch
+author=pgert
+
+patch=1,EE,0032885C,word,3F638E39
+
+patch=1,EE,00370508,word,3F638E39
+patch=1,EE,00370524,word,3F638E39
+patch=1,EE,00370538,word,3F638E39
+
+patch=1,EE,003705A8,word,3F638E39
+patch=1,EE,003705B4,word,3F638E39
+
+patch=1,EE,003713A0,word,440E38E4
+patch=1,EE,003713A8,word,42830000 // same as 16:10 - might need proper porting.
+
+// ==========
+
+[Disable Overbloom on Cutscenes]
+author=nemesis2000 & pgert
+patch=1,EE,001573FC,word,00000000 // 0C055DD2
+
+[Upscaling offset fix]
+author=pgert
+description=Fixes offset glitch
+patch=1,EE,0036E268,word,43A30000 // 43A00000 - TC X-offset
+// - corresponds to having "TC Offset X" set to 395 (GSdx).
+patch=1,EE,0036E26C,word,43660000 // 43600000 - TC Y-offset
+// - corresponds to having "TC Offset Y" set to 790 (GSdx).
+
+[Upscaling MenuZoom fix]
+author=pgert
+description=Fixes MenuZoom glitch
+patch=1,EE,0037098C,word,439F8000 // 43A00000
+patch=1,EE,00370990,word,435F8000 // 43600000
 
 // ==========
 // Notes (by pgert).
@@ -72,5 +99,3 @@ patch=1,EE,003713A8,word,42D40000 // 3F800000 - X-axis placement of Cinematics.
 // patch=1,EE,003709CC,word,44C00000 // 45000000
 // - Corrects the darkening caused by 0036F2D4, but darkens photos and causes minor corruptions in scene-transitions.
 // ==========
-
-

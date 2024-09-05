@@ -1,13 +1,14 @@
-gametitle=Fatal Frame 2 (Project Zero 2) (K)(SCKA-20023)
+gametitle=Fatal Frame II: Crimson Butterfly * NTSC-K * SCKA-20023 * 56ABF4C6
+// Project Zero II: Crimson Butterfly
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000 and devina40 (NTSC-K by Arapapa)
+author=nemesis2000 & Devina - ported by arapapa
 
-//16:9 widescreen by nemesis2000
+// 16:9 widescreen by nemesis2000
 patch=1,EE,00336ECC,word,3F400000
 
-//FMV's fix by nemesis2000
+// FMV fix by nemesis2000
 patch=1,EE,001E4844,word,3C013F40
 patch=1,EE,001E4848,word,0C07918E
 patch=1,EE,001E484C,word,44811800
@@ -23,24 +24,24 @@ patch=1,EE,001E46EC,word,01C02820
 patch=1,EE,001E46F0,word,E4830030
 patch=1,EE,0033AA58,word,0000006A
 
-//Lens Flare's fix
-//B000BD27 00000000 0c9a8b93
-patch=1,EE,0014f69c,word,3c013f40 //00000000
-patch=1,EE,0014f70c,word,44810800 //00000000
-patch=1,EE,0014f710,word,46016302 //00000000
+// Lens Flare's fix 
+// B000BD27 00000000 0c9a8b93
+patch=1,EE,0014f69c,word,3c013f40 // 00000000
+patch=1,EE,0014f70c,word,44810800 // 00000000
+patch=1,EE,0014f710,word,46016302 // 00000000
 
-//(0c053da7)
-patch=1,EE,0013a10c,word,0c053da7 //0c053da8
-patch=1,EE,0013a194,word,0c053da7 //0c053da8
-patch=1,EE,0013a1fc,word,0c053da7 //0c053da8
-patch=1,EE,0013a274,word,0c053da7 //0c053da8
+// (0c053da7)
+patch=1,EE,0013a10c,word,0c053da7 // 0c053da8
+patch=1,EE,0013a194,word,0c053da7 // 0c053da8
+patch=1,EE,0013a1fc,word,0c053da7 // 0c053da8
+patch=1,EE,0013a274,word,0c053da7 // 0c053da8
 
-//Dither Effect Off
-//12004054 1800838e
-//patch=1,EE,0019ec5c,word,10000012
+// ==========
 
-//Focus Effect Off
-//a82e080c 2d282002
-//patch=1,EE,0020b1d4,word,00000000 //0c080ea8
+[Disable Dither effect]
+// 12004054 1800838e
+patch=1,EE,0019ec5c,word,10000012
 
-
+[Disable Focus effect]
+// a82e080c 2d282002
+patch=1,EE,0020b1d4,word,00000000 // 0c080ea8
