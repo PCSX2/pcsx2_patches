@@ -20,4 +20,7 @@ patch=1,EE,001958e0,word,0808e5ad
 //003f013c 00008144 5100023c (1st)
 patch=1,EE,001e9490,word,3c013f2b //3c013f00
 
-
+[60 FPS]
+author=asasega
+description=Patches the game to run at 60 FPS (Might need 130% EE Overclock to be stable).
+patch=1,EE,005698F8,extended,00000001
