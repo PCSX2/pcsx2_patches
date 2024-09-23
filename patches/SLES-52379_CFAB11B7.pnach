@@ -1,0 +1,34 @@
+gametitle=DreamWorks Shrek 2 (PAL-E) SLES-52379 CFAB11B7 (SHREK2.ELF)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,003791C8,word,3F400000
+patch=1,EE,003604B4,word,3F400000
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0014B6D0,extended,24040001
+patch=1,EE,E0050000,extended,00362714
+patch=1,EE,E0013F99,extended,00386B02
+patch=1,EE,20386B00,extended,3F19999A
+patch=1,EE,E0020280,extended,0037C2E0
+patch=1,EE,0014B6D0,extended,24040002
+patch=1,EE,20386B00,extended,3F99999A
+patch=1,EE,E0050001,extended,00362714
+patch=1,EE,E0013F80,extended,00386B02
+patch=1,EE,20386B00,extended,3F000000
+patch=1,EE,E0020280,extended,0037C2E0
+patch=1,EE,0014B6D0,extended,24040002
+patch=1,EE,20386B00,extended,3F800000
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,00362714,extended,00000001
+patch=1,EE,E0020005,extended,0037D0F0
+patch=1,EE,00386B04,extended,00000001
+patch=1,EE,20386AF0,extended,00000050

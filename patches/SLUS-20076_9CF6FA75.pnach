@@ -1,10 +1,9 @@
-gametitle=Disney's Tarzan - Untamed (U)(SLUS-20076).
+gametitle=Disney's Tarzan - Untamed (U) (SLUS-20076) 9CF6FA75
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-
-//Widescreen hack 16:9
+description=Renders the game in 16:9 aspect ratio
 
 //Zoom
 //a80020c6 003f023c 00088244
@@ -21,3 +20,7 @@ patch=1,EE,000c000c,word,461e0842
 patch=1,EE,000c0010,word,080db2b3
 
 
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,006AD8B8,word,00000000 //00000001

@@ -1,9 +1,9 @@
-gametitle=Disney's Meet the Robinsons (E)(SLES-54510) C76031E8
+gametitle=Disney's Meet the Robinsons (PAL-M) (SLES-54510) C76031E8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,003a3564,word,3c013faa //00000000 X-Fov
 patch=1,EE,003a3568,word,3421aaab //00000000
 patch=1,EE,003a358c,word,4481f000 //00000000
@@ -12,5 +12,5 @@ patch=1,EE,002670d0,word,3c013f2b //3c013f00 Render fix
 
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,0060EB1C,word,00000001 //00000002

@@ -2,6 +2,6 @@ gametitle=Simpsons Game, The (PAL-S-I) SLES-54906 565B7E04
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Set EE Cycle Skipping to Mild Underclock to prevent framedrops and 130% EE Overclock to be stable.
-patch=1,EE,00215954,word,00000000 //1440FFFA
-patch=1,EE,003603AC,word,00000000 //1040FFF8
+description=Might need EE Overclock at 130%.
+patch=1,EE,00360394,word,30420008 //30420004
+patch=1,EE,00215950,word,2C620000 //0062102A

@@ -1,14 +1,20 @@
-gametitle=Need for Speed - Most Wanted [PAL-M] [SLES-53559]
+gametitle=Need for Speed - Most Wanted [PAL-M] [SLES-53559] CA2A1B04
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,00AAF954,byte,01
 
 [Remove Brown Filter]
 author=fobes
 description=Disables the brownish yellow post processing filter
 patch=1,EE,00551058,extended,20000001
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
+description=SDTV 480p mode at start.
 patch=1,EE,004938DC,word,24110000
-patch=1,EE,004938E0,word,24120052
+patch=1,EE,004938E0,word,24120050
 patch=1,EE,004938EC,word,24130001
-patch=1,EE,00AAF950,word,40A00000

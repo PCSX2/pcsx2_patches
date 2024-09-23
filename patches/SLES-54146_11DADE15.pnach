@@ -1,6 +1,14 @@
 gametitle=Crusty Demons (PAL-M) (SLES-54146) 11DADE15
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,008C4C68,word,3FE38E39
+
 [50/60 FPS]
-author=HydL
-comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,0083274C,extended,00000001 //00000002 fps
+author=HydL & PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0083274C,extended,00000001
+patch=1,EE,E0010001,extended,00832A44
+patch=1,EE,0083274C,extended,00000002

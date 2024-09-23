@@ -1,9 +1,9 @@
-gametitle=Psychonauts (E)(SLES-53830)
+gametitle=Psychonauts (PAL-M) (SLES-53830) 6B97BBC8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=pelvicthrustman
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 //Widescreen
 patch=1,EE,001ea96c,word,3c013f40 //00000000 (horizontal fov)
 patch=1,EE,001ea970,word,4481f800 //00000000
@@ -14,9 +14,8 @@ patch=1,EE,001ea98c,word,46061983 //00000000
 patch=1,EE,001e90c4,word,340f02ab //962f0038
 patch=1,EE,001292d8,word,240e02ab //240e0200
 
-
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock at 180%.
 patch=1,EE,00367E6C,word,00000000 //00000001
 patch=1,EE,01172F90,word,3F000000 //3F800000

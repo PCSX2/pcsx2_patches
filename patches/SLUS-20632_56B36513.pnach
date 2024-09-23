@@ -3,7 +3,7 @@ gametitle=XGRA - Extreme G Racing Association (U)(SLUS-20632) 56B36513
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 //003f013c 00088144 b00644c6 Zoom
 patch=1,EE,0019d554,word,3c013ec0 //3c013f00
 //00000000 00000000 83b50046 00000000 00000000 Y-Fov
@@ -14,8 +14,6 @@ patch=1,EE,0019d580,word,4481f000
 patch=1,EE,0019d584,word,461ebdc2
 
 [60 FPS]
-author=PeterDelta
-comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,002052C4,word,1040FFFA
-patch=1,EE,E0010000,extended,01FFE32C
-patch=1,EE,202052C4,extended,00000000
+author=Gabominated
+description=Might need EE Overclock at 130%.
+patch=1,EE,001A78B4,word,14400004 //10400004

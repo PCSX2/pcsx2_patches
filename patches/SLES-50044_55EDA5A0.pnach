@@ -3,7 +3,7 @@ gametitle=Rayman Revolution (PAL-M5) (SLES-50044) 55EDA5A0
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht & ICUP321
-comment=Widescreen Hacks
+description=Renders the game in 16:9 aspect ratio
 // General Widescreen Fixes
 patch=1,EE,0018c6a0,word,4481f000 // 00000000
 patch=1,EE,0018c6a4,word,461e0842 // 00000000
@@ -27,5 +27,5 @@ patch=1,EE,0018c690,word,3c013f40 // 00000000 hor fov
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,001011FC,word,24030000 //24030001

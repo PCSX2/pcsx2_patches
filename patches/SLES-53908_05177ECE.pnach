@@ -81,5 +81,12 @@ patch=1,EE,0016C694,word,3C013F80
 
 [50/60 FPS]
 author=PeterDelta
-comment=Might need EE overclocking to be stable.
-patch=1,EE,0012795C,word,10000003 // 10400003 - 0043102B sltu v0,v1
+description=Might need EE Overclock at 180%.
+patch=1,EE,00125488,word,14400003 //10400003
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,003B905C,extended,00000001
+patch=1,EE,20392208,extended,3F800000

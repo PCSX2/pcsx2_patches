@@ -3,7 +3,7 @@ gametitle=Prince of Persia: The Two Thrones (SLUS-21287)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen hack
+description=Renders the game in 16:9 aspect ratio
 
 //gameplay
 patch=1,EE,005b8794,word,3C023f40

@@ -1,0 +1,19 @@
+gametitle=Spider-Man 3 (PAL-M) SLES-54724 C529B0AD
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,003488C8,word,3C023F1A
+patch=1,EE,0032A974,word,3C023F1A
+patch=1,EE,00C8A278,word,C4342333 //black screen transition fix
+patch=1,EE,01A1AFDC,word,3FBFFFDD
+patch=1,EE,01A4570C,word,3FBFFFDD
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,00404B1C,word,3C050000
+patch=1,EE,00404B24,word,3C060050
+patch=1,EE,00404B2C,word,3C070001

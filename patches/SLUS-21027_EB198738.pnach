@@ -1,4 +1,4 @@
-gametitle=The Lord of the Rings - The Third Age (NTSC-U)
+gametitle=The Lord of the Rings - The Third Age (NTSC-U) EB198738
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -10,5 +10,6 @@ patch=1,EE,20C37598,word,3fb00000 //render fix 2
 
 [60 FPS]
 author=PeterDelta
-comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,001C36EC,word,00000000
+patch=1,EE,0027A3B8,word,3C013F00

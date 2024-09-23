@@ -1,0 +1,15 @@
+gametitle=Disney-Pixar Ratatouille (PAL-S-P) SLES-54747 4FE9650B
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,0067FA70,word,3FE38E39 //3FAAAAAB
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,004E1EE4,word,24110000
+patch=1,EE,004E1EE8,word,24120050
+patch=1,EE,004E1EF4,word,24130001
