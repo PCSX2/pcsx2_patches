@@ -1,0 +1,16 @@
+gametitle=NBA Live 2005 (PAL-S) SLES-52727 3DF16621
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,20811428,extended,3FD55555
+patch=1,EE,0081505C,extended,00000000
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,005D12E4,word,24110000
+patch=1,EE,005D12E8,word,24120050
+patch=1,EE,005D12F4,word,24130001

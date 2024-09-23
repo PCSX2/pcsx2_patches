@@ -1,4 +1,4 @@
-gametitle=Open Season (E)(SLES-54316) 30204F8E
+gametitle=Open Season (PAL-M) (SLES-54316) 30204F8E
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -16,5 +16,5 @@ patch=1,EE,00291b6c,word,3c034300 //3c034334
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,00567F18,word,00000001 //00000002

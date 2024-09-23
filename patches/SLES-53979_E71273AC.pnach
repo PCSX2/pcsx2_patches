@@ -1,10 +1,23 @@
 gametitle=Torrente 3 - El Protector (PAL-S) SLES-53979 E71273AC
 
-[Mode 480p]
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa, ported by PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00253B28,word,08123684
+patch=1,EE,0048DA10,word,3C013F40
+patch=1,EE,0048DA14,word,4481F000
+patch=1,EE,0048DA18,word,C6010068
+patch=1,EE,0048DA1C,word,C602006C
+patch=1,EE,0048DA20,word,461E0843
+patch=1,EE,0048DA24,word,E6010068
+patch=1,EE,0048DA28,word,08094ECC
+
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan mode 480p at startup.
+description=SDTV 480p mode at start.
 patch=1,EE,20102CD8,extended,00069403
-patch=1,EE,20997EA0,extended,000001E0
-patch=1,EE,E0020000,extended,0056F5BC
+patch=1,EE,E0010000,extended,0056F5BC
 patch=1,EE,20102CD8,extended,24120050
-patch=1,EE,20997EA0,extended,00000200
+patch=1,EE,0010471C,extended,64420000

@@ -1,14 +1,14 @@
-gametitle=Smuggler's Run [PAL-M5] (SLES_500.61)
+gametitle=Smuggler's Run [PAL-M5] (SLES_500.61) 95416482
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 //Gameplay 16:9
 patch=1,EE,0023548C,word,3C013FCC //3C013F99
 patch=1,EE,00235490,word,342199CD //3421999A
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,002C6DA4,word,00000001 //00000002

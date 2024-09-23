@@ -4,8 +4,8 @@ gametitle=Tom Clancy's Splinter Cell: Pandora Tomorrow (SLUS_20958) AEE8FDC4
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 
-[50 FPS]
+[60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.

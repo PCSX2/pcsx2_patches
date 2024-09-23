@@ -1,20 +1,21 @@
-gametitle=Demon Stone (SLES-52669)
+gametitle=Forgotten Realms - Demon Stone (PAL-M) SLES-52669 7C7578F3
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001a50d0,word,3c013f40
 patch=1,EE,001a50d4,word,44810000
 patch=1,EE,001a50dc,word,46006b43
-
 patch=1,EE,0015632c,word,3c023fe3
 patch=1,EE,00156330,word,34438e38
 
-//black border fix
+[Remove Blackbars]
+author=nemesis2000
+description=Removes black bars in cutscenes
 patch=1,EE,001d8460,word,24040001
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,00322940,word,00000000 //00000001

@@ -1,0 +1,20 @@
+gametitle=NBA Live 09 (PAL-S) SLES-55337 0F174CC9
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,10FE0EFC,extended,8B8B0101
+patch=1,EE,208B9B88,extended,3FE38E32
+patch=1,EE,008BF85C,extended,00000000
+patch=1,EE,2044E064,extended,3C013F00 //fmv
+patch=1,EE,E0010001,extended,006FE7C8
+patch=1,EE,2044E064,extended,3C013EC0
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0065F7E4,word,24110000
+patch=1,EE,0065F7E8,word,24120050
+patch=1,EE,0065F7F4,word,24130001

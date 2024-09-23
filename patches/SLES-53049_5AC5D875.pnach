@@ -1,0 +1,9 @@
+gametitle=The Punisher (PAL-S-I) SLES-53049 5AC5D875
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,001A0C14,word,3C050000
+patch=1,EE,001A0C1C,word,3C060050
+patch=1,EE,001A0C24,word,3C070001

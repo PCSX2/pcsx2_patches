@@ -1,4 +1,4 @@
-gametitle=Stuntman (E)(SLES-50288) 790A4ACB
+gametitle=Stuntman (PAL-M) (SLES-50288) 790A4ACB
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -12,5 +12,5 @@ patch=1,EE,001d4cdc,word,34218e3f //3421aaab
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,005C21B4,word,00000001 //00000002

@@ -1,8 +1,22 @@
 gametitle=Star Wars - The Force Unleashed [PAL-M] SLES-54659 DAF2145C
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,007B0170,word,00000001
+patch=1,EE,00A50618,word,CDCD0001
+
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,00125678,word,28420001 //28420002
 patch=1,EE,E0010000,extended,01FFFA70
 patch=1,EE,20125678,extended,28420002
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,007AE984,word,00000003
+patch=1,EE,00A50688,word,CDCD0001
