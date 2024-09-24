@@ -27,3 +27,8 @@ patch=1,EE,E0018889,extended,005A929C
 patch=1,EE,205A929C,extended,3C888889
 patch=1,EE,204BC93C,extended,3C888889
 patch=1,EE,2040EC2C,extended,3C888889
+
+[Video Mode]
+author=Gabominated
+description=Always show up standard-480p video selector.
+patch=1,EE,003BE824,word,00000001

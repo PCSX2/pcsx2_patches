@@ -1,4 +1,4 @@
-gametitle=Rise of the Kasai SCUS_974.16
+gametitle=Rise of the Kasai NTSC-U SCUS-97416 EDE17E1B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -19,4 +19,7 @@ patch=1,EE,00345AC0,word,30420000
 patch=1,EE,0035237c,word,00000000 //64420008
 patch=1,EE,00352404,word,00000000 //64420008
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00345A00,word,10A00003 //14A00003

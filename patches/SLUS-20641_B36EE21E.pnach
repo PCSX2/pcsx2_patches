@@ -1,0 +1,6 @@
+gametitle=IndyCar Series NTSC-U SLUS-20641 B36EE21E
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,2025EA3C,extended,00000000

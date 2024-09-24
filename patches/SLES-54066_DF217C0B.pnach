@@ -1,0 +1,25 @@
+gametitle=X-Men - The Official Game PAL-M SLES-54066 DF217C0B
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,004A3C50,extended,00000001
+patch=1,EE,20A0FCF0,extended,3F400000
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,00B0B198,extended,00000000
+patch=1,EE,00B0B1D8,extended,00000000
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,004A3C54,word,42480000 //41C80000
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0042C538,word,24120050
