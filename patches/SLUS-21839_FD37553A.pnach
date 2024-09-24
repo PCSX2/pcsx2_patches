@@ -1,0 +1,6 @@
+gametitle=Ski and Shoot NTSC-U SLUS-21839 FD37553A
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,0018A6A0,word,240F0001 //240F0002

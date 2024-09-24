@@ -1,4 +1,4 @@
-gametitle=Jacked (PAL)(SLES-53778)
+gametitle=Jacked SLES-53778 D7F36BB4
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -14,4 +14,7 @@ patch=1,EE,002fe580,word,3c013f97 //3c013f80
 //00bf013c 00388144 2000b07f 1000bfff (1st)
 patch=1,EE,00302974,word,3c01bec0 //3c01bf00
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,004BCF60,word,00000032 //00000019

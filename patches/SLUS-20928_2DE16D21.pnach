@@ -1,4 +1,4 @@
-gametitle=Echo Night - Beyond (U)(SLUS-20928)
+gametitle=Echo Night - Beyond NTSC-U SLUS-20928 2DE16D21
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -14,12 +14,13 @@ patch=1,EE,202ADC01,byte,00000001
 //patch=1,EE,00143d10,word,3c033fa0 //3c023f70 Y-Fov
 patch=1,EE,00143d14,word,3c023f1f //3c023f00 Zoom
 
-
-[No-Interlacing]
+[60 FPS]
+author=asasega
 gsinterlacemode=1
-comment=No-Interlacing + 60FPS by asasega
-
-//No Interlacing + 60FPS
+description=60 FPS + No interlacing. Might need EE Overclock.
 patch=1,EE,0013FFDC,word,10000014
 
-
+[Performance Fix]
+author=Red-tv
+description=Remove flashlight shadows to increase performance.
+patch=1,EE,00144034,word,3c020000 //3c023f80

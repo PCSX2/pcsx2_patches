@@ -1,0 +1,15 @@
+gametitle=Heatseeker PAL-M SLES-54596 8761B0E5
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,2038CA18,extended,24020002
+patch=1,EE,20649D50,extended,3C888889
+patch=1,EE,20649D54,extended,3C888889
+patch=1,EE,20649D58,extended,3C888889
+patch=1,EE,20649D5C,extended,3C888889
+patch=1,EE,E004D70A,extended,00649D60
+patch=1,EE,20649D50,extended,3CA3D70A
+patch=1,EE,20649D54,extended,3CA3D70A
+patch=1,EE,20649D58,extended,3CA3D70A
+patch=1,EE,20649D5C,extended,3CA3D70A

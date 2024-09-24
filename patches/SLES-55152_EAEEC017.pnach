@@ -1,4 +1,4 @@
-gametitle=Skyscraper (E)(SLES-55152)
+gametitle=Skyscraper PAL-M SLES-55152 EAEEC017
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -8,4 +8,7 @@ author=Arapapa
 
 patch=1,EE,0025c240,word,3c013fab
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0022AF9C,word,10400010 //14400010
