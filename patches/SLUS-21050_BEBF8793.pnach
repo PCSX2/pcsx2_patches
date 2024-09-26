@@ -133,3 +133,8 @@ author=Nehalem
 
 patch=1,EE,101A3BA0,extended,000082F0
 patch=1,EE,101A3D78,extended,000007D7
+
+[Render extra particles while driving (full)]
+author=Nehalem
+
+patch=0,EE,20261E6C,extended,24120001
