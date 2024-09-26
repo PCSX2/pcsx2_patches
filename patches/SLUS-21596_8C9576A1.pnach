@@ -74,3 +74,13 @@ patch=1,EE,202159AC,extended,24040001
 patch=1,EE,202159A4,extended,00108002
 //60 FPS Crashes
 patch=1,EE,20209070,word,908523E8
+
+[Extra particles while driving]
+author=Nehalem
+description=Render all extra particles while driving
+patch=0,EE,202E30DC,extended,24030001
+
+[Falling car parts]
+author=Nehalem
+description=Enable falling car parts of other vehicles while driving
+patch=0,EE,202847D8,extended,00000000
