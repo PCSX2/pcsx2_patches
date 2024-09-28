@@ -1,0 +1,6 @@
+gametitle=Need for Speed - Underground 2 (SLUS-21065) F5C7B45F
+
+[60 FPS]
+author=asasega
+description=Overclock of EE to 180% is recommended for a stable framerate.
+patch=1,EE,201D7ED4,extended,2C420001
