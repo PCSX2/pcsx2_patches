@@ -1,7 +1,6 @@
 gametitle=Simpsons Game, The (NTSC-U) SLUS-21665 BBE4D862
 
 [60 FPS]
-author=asasega
-comment=Unlocked at 60 FPS. Set EE Cycle Skipping to Mild Underclock to prevent framedrops and 130% EE Overclock to be stable.
-patch=1,EE,002158DC,word,00000000 //1440FFFA
-patch=1,EE,0035FEA4,word,00000000 //1040FFF8
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,002158A4,word,14800011

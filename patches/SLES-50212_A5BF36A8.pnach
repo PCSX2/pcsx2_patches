@@ -1,16 +1,22 @@
-gametitle=Paris-Dakar Rally (E)(SLES-50212)
+gametitle=Paris-Dakar Rally (PAL-M) SLES-50212 A5BF36A8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen Hack
-//Widescreen hack 16:9
-
-//X-Fov
-//403f033c 00688344 7a44033c
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001abb4c,word,3c033f10 //3c033f40 Menu
-
-//403f023c 4d00013c
 patch=1,EE,0017c480,word,3c023f10 //3c023f40 Gameplay
 
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0012A15C,byte,01
 
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,004C92D8,word,0000003C
+patch=1,EE,002DF6D8,word,018242C0
+patch=1,EE,002DF6F0,word,018242C2
+patch=1,EE,002DF718,word,018242C0
+patch=1,EE,002DF730,word,018242C2

@@ -1,0 +1,18 @@
+gametitle=Delta Force - Black Hawk Down (PAL-M) SLES-53299 3524C3B8
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Widescreen fix
+patch=1,EE,0043A3E0,word,3FE38E39 //3FAAAAAB Y-Fov
+patch=1,EE,001A8744,word,080C5798 //Zoom Fix
+patch=1,EE,00315E60,word,3C013F52
+patch=1,EE,00315E64,word,4481F000
+patch=1,EE,00315E68,word,461E6303
+patch=1,EE,00315E6C,word,E7AC0000
+patch=1,EE,00315E70,word,0806A1D2
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,001C52C0,word,1460000A
