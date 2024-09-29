@@ -1,9 +1,9 @@
-gametitle=Le Mans 24 Hours (PAL-M5) (SLES-50131)
+gametitle=Le Mans 24 Hours (PAL-M5) (SLES-50131) FEA030CB
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-
+description=Renders the game in 16:9 aspect ratio
 // 16:9
 patch=1,EE,00322d84,word,080e7b49 // 3c033f80
 patch=1,EE,00322d88,word,00000000 // 27b001e0
@@ -20,4 +20,12 @@ patch=1,EE,0039ed30,word,080c8b62 // 00000000
 //patch=1,EE,0039ed2c,word,27b001e0 // 00000000
 //patch=1,EE,0039ed30,word,080c8b62 // 00000000
 
-
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,00159E88,extended,24620001
+patch=1,EE,E0020019,extended,0041100C //50hz
+patch=1,EE,E0010003,extended,004115D4
+patch=1,EE,205AFB6C,extended,42480000
+patch=1,EE,E0010002,extended,004115D4 //60hz
+patch=1,EE,205AFB6C,extended,42700000

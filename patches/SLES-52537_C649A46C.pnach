@@ -1,0 +1,25 @@
+gametitle=DreamWorks Shark Tale (PAL-M) SLES-52537 C649A46C
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00135CA0,word,0806C8E0
+patch=1,EE,001B2380,word,46000346
+patch=1,EE,001B2384,word,3C013F40
+patch=1,EE,001B2388,word,4481F000
+patch=1,EE,001B238C,word,461E6B43
+patch=1,EE,001B2390,word,0804D729
+patch=1,EE,0029E3D4,word,3C013F80
+patch=1,EE,0027A6D0,word,3C013F80
+patch=1,EE,001D3060,word,3C013F40 //render
+patch=1,EE,E0020001,extended,00487EF8
+patch=1,EE,0029E3D4,extended,3C013FAB
+patch=1,EE,0027A6D0,extended,3C013F84
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock
+patch=1,EE,0034AAE4,extended,00000001
+patch=1,EE,E0010001,extended,00333E10
+patch=1,EE,0034AAE4,extended,00000002
