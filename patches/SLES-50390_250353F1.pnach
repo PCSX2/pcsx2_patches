@@ -1,18 +1,20 @@
-gametitle=Driven (E)(SLES-50390)
+gametitle=Driven (PAL-M) (SLES-50390) 250353F1
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Arapapa
-
-//Widescreen hack 16:9
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Arapapa
+//Missing render fix
 
 //X-Fov
-patch=1,EE,001c00d8,word,08030000
+//patch=1,EE,001c00d8,word,08030000
 
-patch=1,EE,000c0000,word,46010043
-patch=1,EE,000c0004,word,3c013f40
-patch=1,EE,000c0008,word,4481f000
-patch=1,EE,000c000c,word,461e0842
-patch=1,EE,000c0010,word,08070037
+//patch=1,EE,000c0000,word,46010043
+//patch=1,EE,000c0004,word,3c013f40
+//patch=1,EE,000c0008,word,4481f000
+//patch=1,EE,000c000c,word,461e0842
+//patch=1,EE,000c0010,word,08070037
 
-
+[Remove blur]
+author=PeterDelta
+description=Remove blur effect
+patch=1,EE,00816664,word,00000003 //00000002
