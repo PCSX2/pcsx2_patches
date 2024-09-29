@@ -1,11 +1,9 @@
-gametitle=Delta Force - Black Hawk Down (U)(SLUS-21124)
+gametitle=Delta Force - Black Hawk Down (U) (SLUS-21124) FAF7FA20
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-
-//Widescreen hack 16:9
-
+description=Widescreen fix
 //Y-Fov (4:3)
 //abaaaa3f 00010000 17d0a63f
 patch=1,EE,0043a3e0,word,3fe38e39 //3faaaaab
@@ -19,4 +17,7 @@ patch=1,EE,00315e68,word,461e6303
 patch=1,EE,00315e6c,word,e7ac0000
 patch=1,EE,00315e70,word,0806a1d2
 
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,001C52C0,word,1460000A
