@@ -1,0 +1,18 @@
+gametitle=Delta Force - Black Hawk Down - Team Sabre (PAL-M) SLES-54115 A8DB29DF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Widescreen fix
+patch=1,EE,004640F8,word,3FE38E39 //3FAAAAAB Y-Fov
+patch=1,EE,001B807C,word,08030000 //Zoom Fix
+patch=1,EE,000C0000,word,3C013F52
+patch=1,EE,000C0004,word,4481F000
+patch=1,EE,000C0008,word,461E6303
+patch=1,EE,000C000C,word,E7AC0000
+patch=1,EE,000C0010,word,0806E020
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=1,EE,001D3B28,word,1460000A
