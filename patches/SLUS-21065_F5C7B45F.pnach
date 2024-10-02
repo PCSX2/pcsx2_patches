@@ -8,7 +8,7 @@ author=asasega
 comment=Might need EE overclocking to be stable (180%).
 patch=1,EE,201D7ED4,word,2C420001
 
-[Aspect Ratio and Icons fixes]
+[4:3 and 16:9 Aspect Ratio fixes]
 author=PsxFan107
 description=Corrects native 4:3 and 16:9 aspect ratio modes.
 patch=1,EE,001CCAF4,word,0C0ED18B
@@ -25,7 +25,13 @@ patch=1,EE,0056FBF8,word,3F470000 // Corrected 16:9 rendering
 gsaspectratio=Stretch
 author=PsxFan107 & pgert
 description=Alters native Widescreen to 16:10.
-comment=Might need support from 'Aspect Ratio and Icons fixes'.
+//Icons fix
+patch=1,EE,001CCAF4,word,0C0ED18B
+patch=1,EE,003B462C,word,3C03004C
+patch=1,EE,003B4630,word,E474D848
+patch=1,EE,003B4634,word,03E00008
+patch=1,EE,003B4638,word,2404001A
+//Aspect ratio
 patch=1,EE,0056FB48,word,3F36F590
 patch=1,EE,0056FBF8,word,3F331999
 
@@ -33,7 +39,13 @@ patch=1,EE,0056FBF8,word,3F331999
 gsaspectratio=Stretch
 author=PsxFan107 & pgert
 description=Alters native Widescreen to 15:10.
-comment=Might need support from 'Aspect Ratio and Icons fixes'.
+//Icons fix
+patch=1,EE,001CCAF4,word,0C0ED18B
+patch=1,EE,003B462C,word,3C03004C
+patch=1,EE,003B4630,word,E474D848
+patch=1,EE,003B4634,word,03E00008
+patch=1,EE,003B4638,word,2404001A
+//Aspect ratio
 patch=1,EE,0056FB48,word,3F432811
 patch=1,EE,0056FBF8,word,3F27E800
 
@@ -41,17 +53,15 @@ patch=1,EE,0056FBF8,word,3F27E800
 gsaspectratio=Stretch
 author=PsxFan107 & pgert
 description=Alters native Widescreen to 20:9.
-comment=Might need support from 'Aspect Ratio and Icons fixes'.
+//Icons fix
+patch=1,EE,001CCAF4,word,0C0ED18B
+patch=1,EE,003B462C,word,3C03004C
+patch=1,EE,003B4630,word,E474D848
+patch=1,EE,003B4634,word,03E00008
+patch=1,EE,003B4638,word,2404001A
+//Aspect ratio
 patch=1,EE,0056FB48,word,3F03BB0C
 patch=1,EE,0056FBF8,word,3F78C000
-
-[Widescreen 21:9]
-gsaspectratio=Stretch
-author=PsxFan107 & pgert
-description=Alters native Widescreen to 21:9.
-comment=Might need support from 'Aspect Ratio and Icons fixes'.
-patch=1,EE,0056FB48,word,3E968CA0
-patch=1,EE,0056FBF8,word,3F829800
 
 [Disable Screen Filter]
 author=kozarovv
