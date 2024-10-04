@@ -1,0 +1,6 @@
+gametitle=Dragon Ball Z - Budokai
+
+[Deinterlacing Patch]
+author=Josh_7774
+description=Disable Interlacing
+patch=1,EE,20155814,extended,00000000
