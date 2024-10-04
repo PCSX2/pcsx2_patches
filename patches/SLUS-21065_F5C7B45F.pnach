@@ -2,10 +2,7 @@ gametitle=Need for Speed: Underground 2 * NTSC-U * SLUS-21065 * F5C7B45F
 
 [60 FPS]
 author=asasega
-// - Whenever the player's car is being parked into a shop/the garage,
-// the in-game driving-in animation is sped up.
-// - Internal Resolution: Native & Blending Accuracy: High
-comment=Might need EE overclocking to be stable (180%).
+comment=Might need EE overclocking to be stable (180%). Speeds up in-game cutscenes.
 patch=1,EE,201D7ED4,word,2C420001
 
 [4:3 and 16:9 Aspect Ratio fixes]
@@ -25,6 +22,7 @@ patch=1,EE,0056FBF8,word,3F470000 // Corrected 16:9 rendering
 gsaspectratio=Stretch
 author=PsxFan107 & pgert
 description=Alters native Widescreen to 16:10.
+comment=Combining with other Aspect Ratio hacks may cause problems.
 //Icons fix
 patch=1,EE,001CCAF4,word,0C0ED18B
 patch=1,EE,003B462C,word,3C03004C
@@ -39,6 +37,7 @@ patch=1,EE,0056FBF8,word,3F331999
 gsaspectratio=Stretch
 author=PsxFan107 & pgert
 description=Alters native Widescreen to 15:10.
+comment=Combining with other Aspect Ratio hacks may cause problems.
 //Icons fix
 patch=1,EE,001CCAF4,word,0C0ED18B
 patch=1,EE,003B462C,word,3C03004C
@@ -53,6 +52,7 @@ patch=1,EE,0056FBF8,word,3F27E800
 gsaspectratio=Stretch
 author=PsxFan107 & pgert
 description=Alters native Widescreen to 20:9.
+comment=Combining with other Aspect Ratio hacks may cause problems.
 //Icons fix
 patch=1,EE,001CCAF4,word,0C0ED18B
 patch=1,EE,003B462C,word,3C03004C
