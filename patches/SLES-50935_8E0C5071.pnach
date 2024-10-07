@@ -1,4 +1,4 @@
-gametitle=Circus Maximus - Chariot Wars (E)(SLES-50935)
+gametitle=Circus Maximus - Chariot Wars PAL-E SLES-50935 8E0C5071
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -17,4 +17,8 @@ patch=1,EE,000c0010,word,0805df4b
 //Render fix
 patch=1,EE,00183e00,word,3c024406 //3c0243c8
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,001c8a30,word,3c023CA3 //3c023d23
+patch=1,EE,001c8ab8,word,3c023CA3 //3c023d23

@@ -1,0 +1,7 @@
+gametitle=Jeep Thrills PAL-M SLES-55275 A68EB83E
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,0019EDB0,word,14600007 //10600007
+patch=1,EE,00144CBC,word,24420003 //24420001

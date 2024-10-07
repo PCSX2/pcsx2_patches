@@ -1,4 +1,4 @@
-gametitle=The Bigs 2 (U)(SLUS-21860)
+gametitle=The Bigs 2 NTSC-U SLUS-21860 BC94F047
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -17,4 +17,7 @@ patch=1,EE,20C74A94,extended,3FE38E32 //3AAAAAAB
 patch=1,EE,20C74B4C,extended,3FE38E32 //3AAAAAAB
 patch=1,EE,20C74C00,extended,3FE38E32 //3AAAAAAB
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,003697ec,word,2c420001 //2c420002

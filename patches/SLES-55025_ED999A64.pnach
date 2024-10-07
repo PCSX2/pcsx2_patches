@@ -1,0 +1,8 @@
+gametitle=Disney/Pixar Cars - Mater-National Championship PAL-E SLES-55025 ED999A64
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,201B8AE4,extended,24040001
+patch=1,EE,E0010001,extended,004B77B8
+patch=1,EE,201B8AE4,extended,24040002

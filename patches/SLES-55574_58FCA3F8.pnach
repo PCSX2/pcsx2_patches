@@ -1,0 +1,14 @@
+gametitle=The Lord of the Rings - Aragorn's Quest PAL-M SLES-55574 58FCA3F8
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,002D66B8,word,00000001 //00000002
+patch=1,EE,002B6AC4,word,00000032 //00000019
+
+[NTSC Mode/60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,001ED700,word,1040000B //1440000B
+patch=1,EE,002D66B8,word,00000001 //00000002
+patch=1,EE,002B6AC4,word,0000003C //00000019

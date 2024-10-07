@@ -1,4 +1,4 @@
-gametitle=Blade II [PAL] (SLES_510.13)
+gametitle=Blade II PAL-E SLES-51013 66CC8148
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -7,4 +7,10 @@ author=El_Patas
 //Gameplay 16:9
 patch=1,EE,0018B798,word,3C033F40 //3C033F80 (Increases hor. axis)
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,0018B3B8,word,1040000D //1440FFFD
+patch=1,EE,001fd8cc,word,3c033c88 //3c033d08
+patch=1,EE,001a9268,word,3c023CA3 //3c023d23
+patch=1,EE,001BA450,word,24420002 //24420001

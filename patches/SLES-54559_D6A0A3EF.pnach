@@ -1,4 +1,4 @@
-gametitle=Free Running (E)(SLES-54559)
+gametitle=Free Running PAL-E SLES-54559 D6A0A3EF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -19,4 +19,7 @@ patch=1,EE,00289670,word,0806722d
 //Render fix
 patch=1,EE,00214570,word,3c013f2b //3c013f00
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,001AB670,word,10400003 //14800003

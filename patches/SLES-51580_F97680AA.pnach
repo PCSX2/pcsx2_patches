@@ -1,0 +1,6 @@
+gametitle=London Racer World Challenge PAL-M SLES-51580 F97680AA
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00133810,word,24020000 //24020001

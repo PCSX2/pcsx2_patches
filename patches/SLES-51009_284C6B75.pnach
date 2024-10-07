@@ -1,4 +1,4 @@
-gametitle=Autobahn Raser IV (G)(SLES-51009)
+gametitle=Autobahn Raser IV PAL-G SLES-51009 284C6B75
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -20,4 +20,7 @@ patch=1,EE,00110cfc,word,34425c29 //3442851f
 //patch=1,EE,003f122c,word,461e1082
 //patch=1,EE,003f1230,word,08072bd3
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0013D210,word,24020000 //24020001

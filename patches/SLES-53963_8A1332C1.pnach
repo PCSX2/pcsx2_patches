@@ -1,0 +1,6 @@
+gametitle=Downhill Slalom PAL-E SLES-53963 8A1332C1
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0014EB64,word,1460000A //1060000A

@@ -1,4 +1,4 @@
-gametitle=Autobahn Raser - Das Spiel zum Film (G)(SLES-52459)
+gametitle=Autobahn Raser - Das Spiel zum Film PAL-G SLES-52459 F2CC17D2
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -15,4 +15,7 @@ patch=1,EE,001480ec,word,4481f000
 patch=1,EE,001480f0,word,461e6302
 patch=1,EE,001480f4,word,08045a25
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00136E80,word,24020000 //24020001

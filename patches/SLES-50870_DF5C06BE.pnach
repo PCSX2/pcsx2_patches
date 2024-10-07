@@ -1,4 +1,4 @@
-gametitle=Mat Hoffman's Pro BMX 2 [PAL] (SLES_508.70)
+gametitle=Mat Hoffman's Pro BMX 2 PAL-E SLES-50870 DF5C06BE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -15,4 +15,9 @@ patch=1,EE,001CC274,word,3C023FAB //3C023F80 Y-FOV
 //Render fix
 patch=1,EE,00254128,word,3C023C2E //3C023C0E
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,2062D5E4,extended,00000002
+patch=1,EE,E0010001,extended,0040EF70
+patch=1,EE,2062D5E4,extended,00000001

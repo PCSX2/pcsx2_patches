@@ -1,4 +1,4 @@
-gametitle=MX SuperFly (U)(SLUS-20381)
+gametitle=MX SuperFly NTSC-U SLUS-20381 0CD3C2F6
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -16,4 +16,8 @@ patch=1,EE,000c0008,word,4481f000
 patch=1,EE,000c000c,word,461e4202
 patch=1,EE,000c0010,word,080aa1b1
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00179DDC,word,AC108440 //AC208440
+patch=1,EE,003EA4A0,word,3c888889 //3d088889

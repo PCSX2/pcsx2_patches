@@ -1,4 +1,4 @@
-gametitle=Despicable Me - The Game (U)(SLUS-21933)
+gametitle=Despicable Me - The Game NTSC-U SLUS-21933 4106DBA1
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -20,4 +20,10 @@ patch=1,EE,00119844,word,3421e327
 //Zoom
 //patch=1,EE,001197ec,word,3c013faa
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,2023749C,extended,2C420000
+patch=1,EE,E0010001,extended,005FBFB4
+patch=1,EE,2023749C,extended,2C420001
+patch=1,EE,2012fb54,extended,2402003c

@@ -47,3 +47,8 @@ patch=1,EE,0011e8b4,word,461ef783 // 00000000 inventory-to-documents function
 author=PeterDelta
 description=Might need EE Overclock at 130%.
 patch=1,EE,00510300,byte,01
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at startup, FMVs remain in PAL.
+patch=1,EE,002b45b0,word,240201c0 //24020200

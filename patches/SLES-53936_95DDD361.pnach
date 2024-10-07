@@ -1,4 +1,4 @@
-gametitle=Snow Rider (E)(SLES-53936)
+gametitle=Snow Rider PAL-E SLES-53936 95DDD361
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -13,4 +13,7 @@ patch=1,EE,001eb6d8,word,4481f000
 patch=1,EE,001eb6dc,word,461e6303
 patch=1,EE,001eb6e0,word,0805a57a
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0014E4F4,word,1460000A //1060000A

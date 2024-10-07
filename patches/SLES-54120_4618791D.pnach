@@ -1,0 +1,6 @@
+gametitle=The Snow Queen Quest PAL-M SLES-54120 4618791D
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0024B234,word,2C420001 //2C420002

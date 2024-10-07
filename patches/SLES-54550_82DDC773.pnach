@@ -1,0 +1,6 @@
+gametitle=White Van Racer PAL-E SLES-54550 82DDC773
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,002036EC,word,3C020004 //3C020038

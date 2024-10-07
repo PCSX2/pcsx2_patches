@@ -1,0 +1,6 @@
+gametitle=Paris-Dakar 2 PAL-M SLES-50879 CB4EBD11
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,001C5388,word,24020000 //24020001

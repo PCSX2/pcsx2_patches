@@ -1,0 +1,6 @@
+gametitle=Go Kart Rally PAL-E SLES-54726 95E80315
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00207F3C,extended,3C020008 //3C020038

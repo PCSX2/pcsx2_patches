@@ -1,4 +1,4 @@
-gametitle=Alarm for Cobra 11 (E)(SLES-52063)
+gametitle=Alarm for Cobra 11 PAL-E SLES-52063 77E924AC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -10,4 +10,7 @@ author=Arapapa
 //00bf023c 86000046
 patch=1,EE,003a0ed0,word,3c02bf55
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00136AC0,word,24020000 //24020001

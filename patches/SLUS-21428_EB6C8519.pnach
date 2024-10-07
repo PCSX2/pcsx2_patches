@@ -1,0 +1,6 @@
+gametitle=Bionicle Heroes NTSC-U SLUS-21428 EB6C8519
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,001C9674,word,24020002 //24020004

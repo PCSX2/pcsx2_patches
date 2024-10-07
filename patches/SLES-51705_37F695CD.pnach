@@ -1,0 +1,6 @@
+gametitle=Ford Racing 2 PAL-M SLES-51705 37F695CD
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00221748,word,2C420001 //2C420002

@@ -1,0 +1,6 @@
+gametitle=World Destruction League - War Jets PAL-M SLES-50262 60BCC078
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00260874,word,00000000 //0C09E490

@@ -1,4 +1,4 @@
-gametitle=Matt Hoffman's Pro BMX 2 SLUS_203.35
+gametitle=Mat Hoffman's Pro BMX 2 NTSC-U SLUS-20335 A37C0344
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -7,4 +7,9 @@ patch=1,EE,001c5744,word,3c023fab
 patch=1,EE,0024d588,word,3c023c2e
 patch=1,EE,0036c108,word,3c033fc0
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,2061F29C,extended,00000002
+patch=1,EE,E0010001,extended,003FF570
+patch=1,EE,2061F29C,extended,00000001

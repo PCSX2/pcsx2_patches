@@ -1,0 +1,10 @@
+gametitle=Dora the Explorer - Dora Saves the Mermaids PAL-A SLES-55112 4AF82486
+
+[NTSC Mode/60 FPS]
+author=Gabominated
+description=NTSC Mode at 60 FPS. Might need EE Overclock.
+patch=1,EE,203C9BD0,extended,00000003
+patch=1,EE,20178010,extended,00000000
+patch=1,EE,E0010001,extended,003C9A48
+patch=1,EE,20178010,extended,0C09FEF8
+patch=1,EE,201AF3BC,extended,2403003c

@@ -1,0 +1,8 @@
+gametitle=Godzilla Unleashed NTSC-U SLUS-21707 179470B4
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,20128278,extended,14400003 //10400003
+patch=1,EE,E0010001,extended,00531390
+patch=1,EE,20128278,extended,10400003

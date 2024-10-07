@@ -1,4 +1,4 @@
-gametitle=Fahrenheit (PAL-M) SLES-53540 8191D10A
+gametitle=Fahrenheit PAL-M SLES-53540 8191D10A
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -8,5 +8,5 @@ patch=1,EE,20836500,extended,3FE38E38 //3FAAAAAB
 
 [50/60 FPS]
 author=Gabominated
-description=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,20836F04,extended,00000001 //00000002
+description=Might need EE Overclock (130%).
+patch=1,EE,00209688,word,10400004 //14400004

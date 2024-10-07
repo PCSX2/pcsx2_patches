@@ -1,0 +1,6 @@
+gametitle=Stuart Little 3 - Big Photo Adventure NTSC-U SLUS-21341 4C7A8693
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00105F7C,word,24110001 //24110002
