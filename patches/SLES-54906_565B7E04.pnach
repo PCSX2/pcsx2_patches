@@ -2,6 +2,5 @@ gametitle=Simpsons Game, The (PAL-S-I) SLES-54906 565B7E04
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,00360394,word,30420008 //30420004
-patch=1,EE,00215950,word,2C620000 //0062102A
+description=Might need EE Overclock (130%).
+patch=1,EE,0021591C,word,14800011

@@ -1,11 +1,9 @@
-gametitle=Biker Mice from Mars (E)(SLES-54319)
+gametitle=Biker Mice from Mars (PAL-M) SLES-54319 86263199
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-
-//Widescreen hack 16:9
-
+description=Renders the game in 16:9 aspect ratio
 //X-Fov
 //02100046 4000a1e7
 patch=1,EE,00134a00,word,08030000 //46001002
@@ -17,4 +15,10 @@ patch=1,EE,000c000c,word,4481f000
 patch=1,EE,000c0010,word,461e0002
 patch=1,EE,000c0014,word,0804d281
 
-
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start. Might need EE Overclock (130%).
+patch=1,EE,0010DB9C,word,24110000
+patch=1,EE,0010DBA0,word,24120050
+patch=1,EE,0010DBAC,word,24130001

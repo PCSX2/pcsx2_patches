@@ -1,0 +1,13 @@
+gametitle=IndyCar Series 2005 (PAL-M) SLES-52298 30C406CE
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,002CA70C,word,00000001 //00000000
+patch=1,EE,002DBAC8,word,3FE38E39 //3FAAAAAB
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,002DBACC,word,00000000 //00000001
