@@ -1,0 +1,111 @@
+gametitle=Need for Speed: Underground 2 * NTSC-U * SLUS-21065 * F5C7B45F
+
+[60 FPS]
+author=asasega
+comment=Might need EE overclocking to be stable (180%). Speeds up in-game cutscenes.
+patch=1,EE,201D7ED4,word,2C420001
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PsxFan107
+description=Corrects native 16:9 aspect ratio (includes native 4:3 fix).
+//Icons fix
+patch=1,EE,001CCAF4,word,0C0ED18B
+patch=1,EE,003B462C,word,3C03004C
+patch=1,EE,003B4630,word,E474D848
+patch=1,EE,003B4634,word,03E00008
+patch=1,EE,003B4638,word,2404001A
+//Aspect ratio
+patch=1,EE,0056FB44,word,3F5B8D14 // Corrected 4:3 aspect
+patch=1,EE,0056FB48,word,3F24A9CF // Corrected 16:9 aspect
+patch=1,EE,0056FBF4,word,3F154000 // Corrected 4:3 rendering
+patch=1,EE,0056FBF8,word,3F470000 // Corrected 16:9 rendering
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=PsxFan107 & pgert
+description=Alters native Widescreen to 16:10.
+comment=Combining with other Aspect Ratio hacks may cause problems.
+//Icons fix
+patch=1,EE,001CCAF4,word,0C0ED18B
+patch=1,EE,003B462C,word,3C03004C
+patch=1,EE,003B4630,word,E474D848
+patch=1,EE,003B4634,word,03E00008
+patch=1,EE,003B4638,word,2404001A
+//Aspect ratio
+patch=1,EE,0056FB48,word,3F36F590
+patch=1,EE,0056FBF8,word,3F331999
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=PsxFan107 & pgert
+description=Alters native Widescreen to 15:10.
+comment=Combining with other Aspect Ratio hacks may cause problems.
+//Icons fix
+patch=1,EE,001CCAF4,word,0C0ED18B
+patch=1,EE,003B462C,word,3C03004C
+patch=1,EE,003B4630,word,E474D848
+patch=1,EE,003B4634,word,03E00008
+patch=1,EE,003B4638,word,2404001A
+//Aspect ratio
+patch=1,EE,0056FB48,word,3F432811
+patch=1,EE,0056FBF8,word,3F27E800
+
+[Widescreen 20:9]
+gsaspectratio=Stretch
+author=PsxFan107 & pgert
+description=Alters native Widescreen to 20:9.
+comment=Combining with other Aspect Ratio hacks may cause problems.
+//Icons fix
+patch=1,EE,001CCAF4,word,0C0ED18B
+patch=1,EE,003B462C,word,3C03004C
+patch=1,EE,003B4630,word,E474D848
+patch=1,EE,003B4634,word,03E00008
+patch=1,EE,003B4638,word,2404001A
+//Aspect ratio
+patch=1,EE,0056FB48,word,3F03BB0C
+patch=1,EE,0056FBF8,word,3F78C000
+
+[Disable Screen Filter]
+author=kozarovv
+description=Removes the exclusive PS2 filter and fixes car smearing in menus. This option also removes Motion Blur.
+//Screenspace filter
+patch=1,EE,001D3930,word,03e00008
+patch=1,EE,001D3934,word,0
+//Motion blur
+patch=1,EE,00570098,word,0
+
+[Disable Fog]
+author=kozarovv
+description=Completely removes ambient and rain fog.
+patch=1,EE,0057004C,word,0
+
+[Disable Motion Blur Effect]
+author=kozarovv
+description=Disables the smear while accelerating, using Nitro and driving at high speed.
+patch=1,EE,00570098,word,0
+
+[Less Rain]
+author=kozarovv
+description=Decreases rain strength (makes it more transparent).
+patch=1,EE,00574158,word,40000000
+
+[More Rain]
+author=kozarovv
+description=Makes rain as harsh as a downpour.
+patch=1,EE,00574158,word,3e000000
+
+[Better Car Brightness]
+author=kozarovv
+description=Slightly increases shader highlight intensity of all racing/traffic cars.
+patch=1,EE,001C2704,word,3C01439F
+
+[Lower World Lights Flare]
+author=kozarovv
+description=Makes in-world lights (lamp posts, light fixtures, etc.) less pronounced.
+patch=1,EE,001C3EE0,word,3C013F40
+
+[Lower Signal Lights Flare]
+author=kozarovv
+description=Tones down all signal lights, such as traffic light orange/yellow sources.
+patch=1,EE,001C3260,word,3C013F50
