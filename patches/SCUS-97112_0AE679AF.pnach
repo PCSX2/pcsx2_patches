@@ -1,7 +1,4 @@
-gametitle=Extermination SCUS 971.12
+//Extermination deinterlace patch by NineKain
+patch=1,EE,0010187C,word,00000000
+patch=1,EE,00101614,word,00000000
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen Hack
-patch=1,EE,001d2978,extended,3c023f19
-patch=1,EE,001d297c,extended,3442999a
