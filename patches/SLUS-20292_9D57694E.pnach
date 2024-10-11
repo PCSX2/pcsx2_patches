@@ -6,4 +6,11 @@ comment=Widescreen Hack
 patch=1,EE,0017cf94,extended,3c013f40
 patch=1,EE,001c1f30,extended,3c013f40
 
+[No-Interlacing]
+author=NineKain
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//Remove Interlacing
+patch=1,EE,00207d14,word,00000000
+patch=1,EE,00207d9c,word,00000000
 
