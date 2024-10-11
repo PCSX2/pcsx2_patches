@@ -5,4 +5,9 @@ gsaspectratio=16:9
 comment=Widescreen Hack
 patch=1,EE,202f7110,extended,44c00000 // 45000000
 
-
+[No-Interlacing]
+author=NineKain
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//Remove Interlacing
+patch=1,EE,001039EC,word,00000000
