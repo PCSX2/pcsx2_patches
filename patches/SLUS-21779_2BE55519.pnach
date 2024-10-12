@@ -1,13 +1,5 @@
 gametitle=Eternal Poison (U) (SLUS-21779)
 
-[No-Interlacing]
-author=NineKain
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-//Remove Interlacing
-patch=1,EE,0032DC7C,word,00000000
-patch=1,EE,0032DD04,word,00000000
-
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
@@ -101,4 +93,10 @@ patch=1,EE,0042cd14,word,0808f377 // 00000000
 //patch=1,EE,0042cd0c,word,461e0002 // 00000000
 //patch=1,EE,0042cd10,word,0808893e // 00000000
 
-
+[No-Interlacing]
+author=NineKain
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//Remove Interlacing
+patch=1,EE,0032DC7C,word,00000000
+patch=1,EE,0032DD04,word,00000000
