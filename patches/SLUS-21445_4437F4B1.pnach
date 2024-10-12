@@ -4,13 +4,6 @@ gametitle=Ar tonelico: Melody of Elemia (SLUS-21445)
 gsaspectratio=16:9
 author=nemesis2000
 
-[No-Interlacing]
-author=NineKain
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-//Remove Interlacing
-patch=1,EE,00340864,word,00000000
-
 //3D scenes
 patch=1,EE,003440bc,word,3c013f40 //hor value
 patch=1,EE,003440c0,word,44810000
@@ -28,4 +21,9 @@ patch=1,EE,001a3648,word,e6810090
 patch=1,EE,001a364c,word,3c014480 //vert value
 patch=1,EE,001a3650,word,44810800
 
-
+[No-Interlacing]
+author=NineKain
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//Remove Interlacing
+patch=1,EE,00340864,word,00000000
