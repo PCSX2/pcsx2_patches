@@ -1,0 +1,12 @@
+gametitle=ICO [PlayStation 2 The Best] * NTSC-J * SCPS-19103 * B1228D1E
+
+[No-Interlacing]
+gsinterlacemode=1
+author=pcsx2user156
+description=Attempts to disable interlaced offset rendering.
+patch=1,EE,0028D480,word,00001040
+patch=1,EE,0028D4A8,word,00001040
+patch=1,EE,0028D478,word,00000001
+patch=1,EE,0028D4A0,word,00000001
+patch=1,EE,0028D48C,word,001DF9FF
+patch=1,EE,0028D4B4,word,001DF9FF
