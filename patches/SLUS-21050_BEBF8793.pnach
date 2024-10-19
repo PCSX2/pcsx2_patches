@@ -123,12 +123,14 @@ patch=1,EE,204E0A94,extended,3FB8E38F // Globe Glow Aspect Ratio // 16:9 = 1.444
 [60 FPS for Menus]
 author=Nehalem
 description=Menus will render at 60 FPS
-patch=0,EE,201D3F2C,extended,1000000A // 60 FPS in menus only
-patch=0,EE,20130DD8,extended,C7958074 // Fix FMVs playback speed while using 60 FPS patches
-patch=0,EE,20130DDC,extended,3C084000 // Fix FMVs playback speed while using 60 FPS patches
-patch=0,EE,20130DE0,extended,4488A000 // Fix FMVs playback speed while using 60 FPS patches
-patch=0,EE,20130DE4,extended,4614AD03 // Fix FMVs playback speed while using 60 FPS patches
-patch=0,EE,20130DE8,extended,00000000 // Fix FMVs playback speed while using 60 FPS patches
+// 60 FPS in menus only
+patch=0,EE,201D3F2C,extended,1000000A
+// Fix FMVs playback speed while using 60 FPS patches
+patch=0,EE,20130DD8,extended,C7958074
+patch=0,EE,20130DDC,extended,3C084000
+patch=0,EE,20130DE0,extended,4488A000
+patch=0,EE,20130DE4,extended,4614AD03
+patch=0,EE,20130DE8,extended,00000000
 
 [60 FPS for Crashes]
 author=Nehalem
