@@ -1,0 +1,6 @@
+gametitle=Counter Terrorist Special Forces - Fire for Effect PAL-M SLES-53046 EDE9DD5C
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0021A53C,word,14600006 //10600006

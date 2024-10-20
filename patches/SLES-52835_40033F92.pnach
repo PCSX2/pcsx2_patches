@@ -1,0 +1,6 @@
+gametitle=The Mummy PAL-M SLES-52835 40033F92
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0021A59C,word,14600006

@@ -1,0 +1,9 @@
+gametitle=Dora the Explorer - Dora Saves the Mermaids NTSC-U SLUS-21717 3340FC2C
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,20177FA8,extended,00000000
+patch=1,EE,E0010001,extended,003C9848
+patch=1,EE,20177FA8,extended,0C09FE78
+patch=1,EE,201AF35C,extended,2403003c

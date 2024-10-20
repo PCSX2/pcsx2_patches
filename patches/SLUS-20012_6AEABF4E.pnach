@@ -1,0 +1,6 @@
+gametitle=SuperCar Street Challenge NTSC-U SLUS-20012 80E9B7EF secundary CRC 6AEABF4E
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0033FD0C,word,24020002 //24020001

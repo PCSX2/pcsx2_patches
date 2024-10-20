@@ -1,4 +1,4 @@
-gametitle=World Racing (E)(SLES-51387)
+gametitle=World Racing PAL-M SLES-51387 E892412E
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -14,4 +14,7 @@ patch=1,EE,0022dd68,word,4600c602 //00000000
 //Render fix
 patch=1,EE,002016cc,word,3c013f2b //3c013f00
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,001CF670,word,10400004 //14400004

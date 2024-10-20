@@ -1,0 +1,6 @@
+gametitle=Crashed PAL-M SLES-50843 0379B4F7
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00227758,word,24020000 //24020001

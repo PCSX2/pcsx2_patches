@@ -1,4 +1,4 @@
-gametitle=G.I. Joe - The Rise of Cobra (NTSC-U)(SLUS-21886)
+gametitle=G.I. Joe - The Rise of Cobra NTSC-U SLUS-21886 4EC21458
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -26,4 +26,7 @@ patch=1,EE,00224450,word,461e18c2
 //Render fix
 //patch=1,EE,00253ffc,word,3c013fb0 //3c013f80
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00253BA4,word,28630001 //28630002

@@ -1,4 +1,4 @@
-gametitle=WarJetz (U)(SLUS-20007)
+gametitle=World Destruction League - War Jetz NTSC-U SLUS-20007 70C924CC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -19,4 +19,7 @@ patch=1,EE,000c0008,word,449bf000
 patch=1,EE,000c000c,word,461e0003
 patch=1,EE,000c0010,word,080ad419
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0025FD04,word,00000000 //0C09E194

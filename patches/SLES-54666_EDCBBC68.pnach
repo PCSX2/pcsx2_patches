@@ -1,4 +1,4 @@
-gametitle=Mr. Bean (E)(SLES-54666)
+gametitle=Mr. Bean PAL-M SLES-54666 EDCBBC68
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -15,4 +15,8 @@ patch=1,EE,0024ebac,word,4481f000
 patch=1,EE,0024ebb0,word,461e6302
 patch=1,EE,0024ebb4,word,0806daea
 
-
+[50 FPS]
+author=Gabominated & PeterDelta
+description=Might need EE Overclock (180%).
+patch=1,EE,0054B694,word,00000001 //00000002
+patch=1,EE,00195AE4,word,3C0142C8 //3C014248

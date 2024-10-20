@@ -1,4 +1,4 @@
-gametitle=Ben Hur - Blood of Braves (E)(SLES-51350)
+gametitle=Ben Hur - Blood of Braves PAL-M SLES-51350 E949C93F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -18,4 +18,11 @@ patch=1,EE,003a92a4,word,080da159
 //Zoom
 //patch=1,EE,00368538,word,3c033fc0 //3c034000
 
-
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0061FF20,word,00000000 //00000001
+patch=1,EE,0011a9d4,word,3c023C88 //3c023d08
+patch=1,EE,0036f6b8,word,3c033C88 //3c033d08
+patch=1,EE,0011a9b0,word,3c023ca3 //3c023d23
+patch=1,EE,0036f6cc,word,3c033ca3 //3c033d23

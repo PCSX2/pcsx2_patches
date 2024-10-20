@@ -1,0 +1,6 @@
+gametitle=Robin Hood's Quest PAL-M SLES-54125 79F6D5C9
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,002257F4,word,2C420001 //2C420002

@@ -1,0 +1,6 @@
+gametitle=Racing Simulation 3 PAL-M SLES-51633 79D8CB9E secondary CRC C7AA13F6
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,001b383c,word,24020001 //24020002 Gameplay

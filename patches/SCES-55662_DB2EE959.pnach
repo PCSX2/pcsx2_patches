@@ -1,0 +1,6 @@
+gametitle=Chandragupta - Warrior Prince PAL-IN SCES-55662 DB2EE959
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0045593C,word,28630001 //28630002

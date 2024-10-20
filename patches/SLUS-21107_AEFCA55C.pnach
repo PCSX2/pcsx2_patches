@@ -1,0 +1,13 @@
+gametitle=X-Men - The Official Game NTSC-U SLUS-21107 AEFCA55C
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Widescreen fix
+patch=1,EE,E001E979,extended,00A10970
+patch=1,EE,20A10970,extended,3f400000 //3F46E979
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,004A4754,word,42700000 //41f00000

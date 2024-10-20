@@ -1,0 +1,10 @@
+gametitle=Heatseeker NTSC-U SLUS-21570 B96DD9F4
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,003A2290,word,24020002 //24020001
+patch=1,EE,00601A90,word,3C888889 //3D088889
+patch=1,EE,00601A94,word,3C888889 //3D088889
+patch=1,EE,00601A98,word,3C888889 //3D088889
+patch=1,EE,00601A9C,word,3C888889 //3D088889

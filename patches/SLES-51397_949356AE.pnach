@@ -1,0 +1,6 @@
+gametitle=IndyCar Series PAL-M SLES-51397 949356AE
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0026007C,word,00000000

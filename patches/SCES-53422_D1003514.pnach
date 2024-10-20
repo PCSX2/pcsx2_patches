@@ -1,0 +1,6 @@
+gametitle=Stuart Little 3 - Big Photo Adventure PAL-M SCES-53422 D1003514
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00105F24,word,24110001 //24110002
