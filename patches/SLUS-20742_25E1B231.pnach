@@ -13,4 +13,9 @@ patch=1,EE,00100fa0,word,3c013f40 //3c013f80
 //Memory hack
 //patch=1,EE,201EDC40,extended,43C00000 // 44000000
 
-
+[No-Interlacing]
+author=NineKain
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//Remove Interlacing
+patch=1,EE,201878D4,extended,30420000
