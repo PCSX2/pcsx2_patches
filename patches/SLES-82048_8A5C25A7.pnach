@@ -2,8 +2,8 @@ gametitle=Metal Gear Solid 3: Subsistence [PAL-Spain] (SLES_820.48) (Disc 1 of 3
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=PeterDelta and El_Patas
-comment=Renders the game in 16:9 aspect ratio
+author=PeterDelta & El_Patas
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,20205D4C,extended,3F400000 //3F800000 (Increases horiz. axis)
 patch=1,EE,E00367C8,extended,004CFC50
 patch=1,EE,204CFC48,extended,3FB00000
@@ -49,6 +49,10 @@ patch=1,EE,E00367C8,extended,004B9EF8
 patch=1,EE,204B9EF0,extended,3FB00000
 patch=1,EE,204B9EF4,extended,3F43F7CF
 patch=1,EE,204B9EFC,extended,BFB00000
+patch=1,EE,E00367C8,extended,004B5980
+patch=1,EE,204B5978,extended,3FB00000
+patch=1,EE,204B597C,extended,3F43F7CF
+patch=1,EE,204B5984,extended,BFB00000
 patch=1,EE,E00367C8,extended,004A0930
 patch=1,EE,204A0928,extended,3FB00000
 patch=1,EE,204A092C,extended,3F43F7CF
@@ -57,6 +61,18 @@ patch=1,EE,E00367C8,extended,004B04E0
 patch=1,EE,204B04D8,extended,3FB00000
 patch=1,EE,204B04DC,extended,3F43F7CF
 patch=1,EE,204B04E4,extended,BFB00000
+patch=1,EE,E00367C8,extended,004C2B20
+patch=1,EE,204C2B18,extended,3FB00000
+patch=1,EE,204C2B1C,extended,3F43F7CF
+patch=1,EE,204C2B24,extended,BFB00000
+patch=1,EE,E00367C8,extended,004B1EA0
+patch=1,EE,204B1E98,extended,3FB00000
+patch=1,EE,204B1E9C,extended,3F43F7CF
+patch=1,EE,204B1EA4,extended,BFB00000
+patch=1,EE,E00367C8,extended,004A53F0
+patch=1,EE,204A53E8,extended,3FB00000
+patch=1,EE,204A53EC,extended,3F43F7CF
+patch=1,EE,204A53F4,extended,BFB00000
 
 [Remove Blackbars]
 author=PeterDelta
@@ -66,8 +82,9 @@ patch=1,EE,E0010001,extended,0020CE74
 patch=1,EE,0026139C,extended,00000001
 
 [50 FPS]
-author=Snake356
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+author=Snake356 & PeterDelta
+description=Might need EE Overclock (130%).
 patch=1,EE,001D67B8,extended,00000000 //00000040
 patch=1,EE,001D7A78,extended,00000001 //00000002
 patch=1,EE,001D7A7C,extended,00000000 //00000001
+patch=1,EE,001D7A8C,extended,00000000
