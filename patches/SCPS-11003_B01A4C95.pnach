@@ -34,26 +34,6 @@ patch=1,EE,00114c84,word,46181082
 patch=1,EE,00114624,word,240302aB
 patch=1,EE,00549778,word,44d2f000
 
-[Widescreen 20:9]
-gsaspectratio=Stretch
-author=nemesis2000, Little Giant, kripkrop, Devina & pgert
-patch=1,EE,00114c6c,word,3c013f1a
-patch=1,EE,00114c70,word,4481c000
-patch=1,EE,00114c80,word,c78780e0
-patch=1,EE,00114c84,word,46181082
-patch=1,EE,00114624,word,24030aaa
-patch=1,EE,00549778,word,451c4000
-
-[Widescreen 21:9]
-gsaspectratio=Stretch
-author=nemesis2000, Little Giant, kripkrop, Devina & pgert
-patch=1,EE,00114c6c,word,3c013f12
-patch=1,EE,00114c70,word,4481c000
-patch=1,EE,00114c80,word,c78780e0
-patch=1,EE,00114c84,word,46181082
-patch=1,EE,00114624,word,24030aaa
-patch=1,EE,00549778,word,45241000
-
 [Remove Blackbars]
 author=nemesis2000 & Little Giant
 description=Removes black bars in cutscenes
