@@ -101,7 +101,8 @@ patch=1,EE,2028F534,extended,001DF9FF
 ///////////////////
 
 [Debug Menu]
-description=Press Select to open the Debug Menu. Enable 'Single Framestep' in the menu for 60fps.
+description=Press Select to open the Debug Menu.
+// Enable 'Single Framestep' in the menu for 60fps.
 patch=1,EE,20101F94,word,0C06C966
 patch=1,EE,201AF850,word,0806BD28
 
