@@ -15,6 +15,6 @@ patch=1,EE,0027579c,word,0C04C932 //0c04c930
 patch=1,EE,00275d6c,word,0C04C932 //0c04c930
 
 [60 FPS]
-author=asasega
+author=Snake356
 comment=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
-patch=1,EE,20272204,extended,28420001
+patch=1,EE,20277B8C,extended,28420001
