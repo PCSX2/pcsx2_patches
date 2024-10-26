@@ -31,6 +31,26 @@ patch=1,EE,00114C80,word,46181082
 patch=1,EE,00114624,word,240302AB
 patch=1,EE,00549578,word,44D2F000
 
+[Widescreen 20:9]
+gsaspectratio=Stretch
+author=nemesis2000, 99skull, kripkrop, Devina & pgert
+comment=Imperfections might show up.
+patch=1,EE,00114C6C,word,3C013F1A
+patch=1,EE,00114C70,word,4481C000
+patch=1,EE,00114C80,word,46181082
+patch=1,EE,00114624,word,24030AAA
+patch=1,EE,00549578,word,451C4000
+
+[Widescreen 21:9]
+gsaspectratio=Stretch
+author=nemesis2000, 99skull, kripkrop, Devina & pgert
+comment=Imperfections might show up.
+patch=1,EE,00114C6C,word,3C013F12
+patch=1,EE,00114C70,word,4481C000
+patch=1,EE,00114C80,word,46181082
+patch=1,EE,00114624,word,24030AAA
+patch=1,EE,00549578,word,45241000
+
 [Remove Blackbars]
 author=nemesis2000 & 99skull
 description=Removes black bars in cutscenes
