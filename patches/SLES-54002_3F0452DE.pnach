@@ -1,13 +1,22 @@
-gametitle=FlatOut 2 [PAL-M4] (SLES_540.02)
+gametitle=FlatOut 2 [PAL-M4] (SLES_540.02) 3F0452DE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas
-comment=Widescreen Hack
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,001B21A0,extended,3C013F94 //gameplay
+patch=1,EE,00233F50,extended,3C013F30
+patch=1,EE,00325628,extended,3C013F30
+patch=1,EE,002D5F64,extended,3C013F80 //car selection
+patch=1,EE,0020D4FC,extended,3C013F80
+patch=1,EE,E0020001,extended,00A2D49C
+patch=1,EE,002D5F64,extended,3C013F40
+patch=1,EE,0020D4FC,extended,3C013FAB
 
-//Gameplay 16:9
-patch=1,EE,003A1F28,word,3C013F14 //3C013F00 Zoom
-patch=1,EE,002D6650,word,3C014010 //3C014040 Y-FOV
-patch=1,EE,00234F18,word,3C013F8A //3C013F80 Y-FOV car menus
-
-
+[50/60 FPS]
+author=PeterDelta 
+description=Might need EE Overclock at 130%.
+patch=1,EE,004A3494,extended,00000001
+patch=1,EE,004CCFD8,extended,00000000
+patch=1,EE,E001FFFE,extended,0041F7C4
+patch=1,EE,004A3494,extended,00000002

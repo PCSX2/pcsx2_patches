@@ -1,20 +1,30 @@
-gametitle=Coraline [PAL] (SLES_554.70)
+gametitle=Coraline [PAL] (SLES_554.70) 4F82849C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen hack
+description=Renders the game in 16:9 aspect ratio
 //Gameplay 16:9
 patch=1,EE,0026432C,word,3C014440 //3C014480 (Increases horiz. axis)
 
 //Render fix
 patch=1,EE,001A6548,word,3C013C2E //3C013C0E
 
-//Get rid of black bar
+[Remove Blackbars]
+author=El_Patas
+description=Removes black bars in cutscenes
 patch=1,EE,00225ea8,word,3c014000 //3c014299
 patch=1,EE,00225eac,word,00000000 //3421999a
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,001002EC,word,00000000 //46000834
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,003F2B34,word,24110000
+patch=1,EE,003F2B38,word,24120050
+patch=1,EE,003F2B44,word,24130001

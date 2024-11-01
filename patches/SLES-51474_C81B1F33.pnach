@@ -3,7 +3,8 @@ gametitle=BloodRayne (PAL-M) SLES-51474 C81B1F33
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-comment=Widescreen hack ported from the ntsc-u version by pelvicthrustman
+description=Renders the game in 16:9 aspect ratio
+//Ported from the SLUS-20461 by pelvicthrustman
 patch=1,EE,001EF6D4,word,3c040001 //10800020 widescreen
 patch=1,EE,0020BD04,word,3c0141d0 //3c014270 X scalar "Face hud"
 patch=1,EE,0020BEA0,word,3c014298 //3c0142a0 Y correction
@@ -24,5 +25,5 @@ patch=1,EE,0020C5B0,word,46011042 //46011842 Offset correction
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,002CA1B8,word,28630001 //28630002

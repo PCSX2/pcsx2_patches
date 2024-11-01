@@ -18,7 +18,7 @@ gametitle=Ultimate Spider-Man (E)(SLES-53390)
 
 [50 FPS]
 author=PeterDelta and asasega
-description=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,00311F18,word,00000000
 patch=1,EE,0069FE20,word,00000001
 patch=1,EE,E0020001,extended,01C83460

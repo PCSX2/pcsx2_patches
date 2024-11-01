@@ -1,9 +1,9 @@
-gametitle=24 - The Game (E)(SCES-53358)
+gametitle=24 - The Game (PAL-M) (SCES-53358) D6A99F53
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen Hack 16:9
+description=Renders the game in 16:9 aspect ratio
 //X-Fov
 //patch=1,EE,0046042c,word,3c013fe3 //3c013faa
 //patch=1,EE,00460430,word,34218e2a //3421aaa8
@@ -13,7 +13,7 @@ patch=1,EE,002fbf20,word,3c020000 //3c020060
 
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock at 180%.
 patch=1,EE,205F9908,extended,00000001
 patch=1,EE,E0010001,extended,00631208
 patch=1,EE,205F9908,extended,00000002

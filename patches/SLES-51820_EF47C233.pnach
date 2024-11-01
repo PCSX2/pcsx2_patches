@@ -10,6 +10,5 @@ patch=1,EE,00502848,word,3fe38e2a //3faaaaab Y-FOV
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,00474F04,word,00000000
-patch=1,EE,00198FCC,word,00000000
+description=Might need EE Overclock at 130%.
+patch=1,EE,00198FA8,word,1460000A //1060000A

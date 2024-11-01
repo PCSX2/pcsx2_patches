@@ -3,12 +3,12 @@ gametitle=Midnight Club II (PAL-M) SLES-51054 ACB1989A
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-comment=Renders the game in 16:9 aspect ratio
-patch=1,EE,0042F134,word,3FC71CEA //3F955553
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0042F134,word,3FC71C65 //3F955553
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,0042F138,word,00000001
 patch=1,EE,00431804,word,3F000000 //3F800000
 patch=1,EE,004317D4,word,3CA08889 //3C888889

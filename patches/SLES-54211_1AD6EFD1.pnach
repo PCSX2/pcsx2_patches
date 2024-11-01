@@ -1,0 +1,8 @@
+gametitle=NHL 2K7 (PAL-M) SLES-54211 1AD6EFD1
+
+[50 FPS]
+author=PeterDelta
+description=Unlocks internal FPS in replays
+patch=1,EE,E0020002,extended,00708B7C
+patch=1,EE,00708B7C,extended,00000001
+patch=1,EE,209B4D9C,extended,3C888880

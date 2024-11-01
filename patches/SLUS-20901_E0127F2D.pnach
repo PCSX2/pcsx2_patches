@@ -1,16 +1,17 @@
-gametitle=FlatOut SLUS_209.01
+gametitle=FlatOut (NTSC-U) SLUS-20901 E0127F2D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
-patch=1,EE,001ad904,word,3c013fab
-//patch=1,EE,0028ee60,word,3C013F19
-patch=1,EE,0018e380,word,3c013fab
-patch=1,EE,0031a934,word,3ee80000
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0019FBFC,extended,3C013F40
+patch=1,EE,001A0AAC,extended,3C013F40
+patch=1,EE,0022C170,extended,3C013F40
+patch=1,EE,0028EE60,extended,3C013F1C
 
 [60 FPS]
 author=asasega & Gabominated
-description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,2034E97C,extended,00000001 //00000002
 patch=1,EE,E0010001,extended,00444010
 patch=1,EE,2034E97C,extended,00000002

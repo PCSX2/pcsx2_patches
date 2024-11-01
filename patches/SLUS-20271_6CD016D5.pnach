@@ -2,11 +2,11 @@ gametitle=Shifters SLUS_202.71 6CD016D5
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,204c4ed0,extended,3F81DE4A
 patch=1,EE,204c4f50,extended,3F81DE4A
 
 [60 FPS]
 author=PeterDelta
-comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,004C4E9C,word,00000001 //00000002 
+description=Might need EE Overclock at 130%.
+patch=1,EE,004C4E9C,word,00000001 //00000002

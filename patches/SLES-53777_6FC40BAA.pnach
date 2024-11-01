@@ -1,9 +1,9 @@
-gametitle=Prince of Persia - The Two Thrones (PAL-M5) (SLES-53777)
+gametitle=Prince of Persia - The Two Thrones (PAL-M5) (SLES-53777) 6FC40BAA
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 // 16:9
 patch=1,EE,005b8cd0,word,3c013f40 // 00000000 hor fov
 patch=1,EE,005b8cec,word,34210000 // 00000000 hor fov
@@ -23,8 +23,8 @@ patch=1,EE,005b8d0c,word,4600e8c6 // 44821800
 
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable 180% EE Overclock to be stable.
-patch=1,EE,00A90CF8,word,00000001 //00000002 srl zero,0x00
+description=Might need EE Overclock at 180%.
+patch=1,EE,00A90CF8,word,00000001 //00000002
 
 
 [Remove Blur/Bloom]

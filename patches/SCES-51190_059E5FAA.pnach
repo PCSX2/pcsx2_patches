@@ -3,18 +3,17 @@ gametitle=Dark Chronicle (PAL-M5) (SCES-51190) 059E5FAA
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00139414,word,3c023f40
-
 
 [50 FPS]
 author=PeterDelta & Gabominated
-comment=Unlocked at 50 FPS. Might need enable EE 130% Overclock to be stable.
-patch=1,EE,0037CDD0,word,00000001 //00000002 srl zero,0x00
-patch=1,EE,00175AC8,word,3C033F19 //3C033F99 lui v1,0x3F99
-patch=1,EE,00175B10,word,3C033F19 //3C033F99 lui v1,0x3F99
+description=Might need EE Overclock at 130%.
+patch=1,EE,0037CDD0,word,00000001 //00000002
+patch=1,EE,00175AC8,word,3C033F19 //3C033F99
+patch=1,EE,00175B10,word,3C033F19 //3C033F99
 patch=1,EE,0035A788,word,3F000000 //3F800000
-patch=1,EE,E0050000,extended,103972B4 //revert cutscenes
+patch=1,EE,E0050000,extended,01EFD534 //103972B4 old in case it fails
 patch=1,EE,E0040000,extended,01EFD43C
 patch=1,EE,2037CDD0,extended,00000002
 patch=1,EE,20175AC8,extended,3C033F99

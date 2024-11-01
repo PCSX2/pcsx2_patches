@@ -14,5 +14,5 @@ patch=1,EE,0053ba54,word,3c0243d6
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,002729D4,word,1000000E //1040000E
+description=Might need EE Overclock at 130%.
+patch=1,EE,002729D4,word,1440000E //1040000E

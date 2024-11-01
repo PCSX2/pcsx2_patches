@@ -1,7 +1,22 @@
-gametitle=Terminator 3 - Rise Of The Machines (PAL-S) SLES-52039 BE408EFF
+gametitle=Terminator 3 - Rise of the Machines (PAL-S) SLES-52039 BE408EFF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa, ported by PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0026D620,word,080BE376
+patch=1,EE,002F8DD8,word,4600A346
+patch=1,EE,002F8DDC,word,3C013F40
+patch=1,EE,002F8DE0,word,4481F000
+patch=1,EE,002F8DE4,word,461E6B42
+patch=1,EE,002F8DE8,word,0809B589 //Target
+patch=1,EE,002870BC,word,080BE37B
+patch=1,EE,002F8DEC,word,461EAD42
+patch=1,EE,002F8DF0,word,E6150000
+patch=1,EE,002F8DF4,word,080A1C30
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock (130%).
 patch=1,EE,003EED78,word,00000000 //00000001
 patch=1,EE,0013FC9C,word,3C013F00 //3C013F80

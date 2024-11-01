@@ -1,10 +1,9 @@
-gametitle=Disney's Tarzan - Freeride (E)(SLES-50350)
+gametitle=Disney's Tarzan - Freeride (PAL-M) (SLES-50350) 368E1540
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-
-//Widescreen hack 16:9
+description=Renders the game in 16:9 aspect ratio
 
 //Zoom
 //a80020c6 003f023c 00088244
@@ -21,3 +20,7 @@ patch=1,EE,004966dc,word,461e0842
 patch=1,EE,004966e0,word,080da6a0
 
 
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,006B00B8,word,00000000 //00000001
