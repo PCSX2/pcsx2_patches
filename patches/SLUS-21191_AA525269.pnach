@@ -15,3 +15,8 @@ patch=1,EE,002D9AD0,word,00000000 //0040F809
 author=asasega
 description=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,207A9E5C,extended,00000001 //00000002
+
+[Unlock PSP Exclusive Content]
+author=CRASHARKI
+description=Unlocks the PSP Exclusive Content (Cars, Battle Arenas and Co-op mode).
+patch=1,EE,209D488C,byte,1 //0
