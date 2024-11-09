@@ -4,5 +4,5 @@ gametitle=DreamWorks Shrek - SuperSlam (PAL) 797ABFFF
 gsaspectratio=16:9
 author=CRASHARKI
 description=Patches the game to run at 16:9 Widescreen Aspect Ratio.
-//Original NTSC-U patch by Michael
+//Original NTSC-U patch by xMichael
 patch=1,EE,21C8109C,extended,3FE38E39 // 3FAAAAAB
