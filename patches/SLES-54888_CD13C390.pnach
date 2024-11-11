@@ -1,0 +1,6 @@
+gametitle=Pro Biker 2 PAL-E SLES-54888 CD13C390
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0022AE2C,word,3C02000B //3C02003B

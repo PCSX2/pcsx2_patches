@@ -14,3 +14,11 @@ gametitle=Men in Black II - Alien Escape (E)(SLES-50789)
 //patch=1,EE,001a6f28,word,3c033f2b //3c033f00
 //causes glitches in textures
 
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,003CBA50,word,24420002 //24420001
+patch=1,EE,008E4B34,word,3CA4D70A //3D23D70A
+patch=1,EE,00288A40,word,3C02BF40 //3C02BF80
+patch=1,EE,00288A58,word,3C023F40 //3C023F80
+patch=1,EE,002F7C44,word,3C023F40 //3C023F80
