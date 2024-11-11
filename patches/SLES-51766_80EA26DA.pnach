@@ -1,4 +1,4 @@
-gametitle=Gladiator - Sword of Vengeance (PAL-M) SLES_517.66 80EA26DA
+gametitle=Gladiator - Sword of Vengeance PAL-M SLES-51766 80EA26DA
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -12,3 +12,13 @@ patch=1,EE,2078d930,extended,bfab0000 //hud stretch
 author=sergx12
 description=Removes black bars in cutscenes
 patch=1,EE,00284084,word,3c010000
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0020D3D4,word,28420001 //28420002
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=1,EE,0020D54C,word,14800006 //10800006

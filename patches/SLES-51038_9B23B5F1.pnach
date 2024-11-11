@@ -1,4 +1,4 @@
-gametitle=MX SuperFly (E)(SLES-51038)
+gametitle=MX Superfly PAL-E SLES-51038 9B23B5F1
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -16,4 +16,8 @@ patch=1,EE,000c0008,word,4481f000
 patch=1,EE,000c000c,word,461e4202
 patch=1,EE,000c0010,word,080aa2b9
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00179F2C,word,AC1088C0 //AC2088C0
+patch=1,EE,003EA8B0,word,3CA3D70A //3D23D70A

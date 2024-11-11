@@ -1,0 +1,6 @@
+gametitle=Supercar Street Challenge PAL-E SLES-50419 DA009310 secundary CRC 833B70DB
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,203487B4,extended,24020002 //24020001

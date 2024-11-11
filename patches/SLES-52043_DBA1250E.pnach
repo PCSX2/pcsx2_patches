@@ -1,4 +1,4 @@
-gametitle=MX Unleashed [PAL] (SLES_520.43)
+gametitle=MX Unleashed PAL-E SLES-52043 DBA1250E
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -13,4 +13,9 @@ patch=1,EE,00112E38,word,3C023FAB //3C023F80 Y-FOV
 patch=1,EE,001ACBD4,word,3C03BFAB //3C03BF80
 patch=1,EE,001ACBD8,word,3C023FAB //3C023F80
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,2019222C,extended,24040001
+patch=1,EE,E0010001,extended,004292A8
+patch=1,EE,2019222C,extended,24040002
