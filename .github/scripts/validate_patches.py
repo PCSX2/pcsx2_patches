@@ -44,6 +44,25 @@ def is_file_valid(file_path):
                 if re.match(",\d{8}(\n|\s*(//.*)*)+(?!.)", line):
                     log_error(file_path, line_number, "Invalid comment syntax at end of patch line.", line, False)
                     return False
+            elif cleaned_line.startswith("dpatch"):
+                match = re.match(r"^dpatch=(\d+),(\d+),(\d+)((?:,[\dA-Fa-f]+)+)", line)
+                if not match:
+                    log_error(file_path, line_number, "Invalid dpatch format.", line, True)
+                    return False
+                num_tuples = int(match.group(2)) + int(match.group(3))
+                dat_str = match.group(4).strip(',').split(',')
+                if len(dat_str) != num_tuples * 2:
+                    log_error(file_path, line_number, "Invalid dpatch format.", line, True)
+                    return False
+                for i in range(0, num_tuples, 2):
+                    # Offsets must be hex
+                    if not re.match(r'^[0-9A-Fa-f]+$', dat_str[i]) or not re.match(r'^[0-9A-Fa-f]+$', dat_str[i+1]):
+                        log_error(file_path, line_number, "Invalid dpatch format.", line, True)
+                        return False
+                    # Offsets must be 4 byte aligned
+                    if int(dat_str[i], 16) % 4 != 0:
+                        log_error(file_path, line_number, "Invalid dpatch offset alignment (must be 4 byte aligned).", line, True)
+                        return False
             else:
                 log_error(file_path, line_number, "Unknown line format.", line, True)
                 return False
