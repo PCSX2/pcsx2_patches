@@ -1,0 +1,6 @@
+gametitle=Racing Simulation 3 PAL-M SLES-51633 79D8CB9E secondary CRC C7AA13F6
+//Corresponds to the main crc to activate the secondary crc C7AA13F6 called RS3.ELF
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.

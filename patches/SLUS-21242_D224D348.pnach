@@ -1,9 +1,9 @@
-gametitle=Burnout Revenge (U)(SLUS-21242)
+gametitle=Burnout Revenge (U) (SLUS-21242)
 
 [Widescreen 16:9]
+gsaspectratio=16:9
 author=SuperType1/remco
 description=Fixes the game and the HUD to run in a 16:9 Scale (only enable one and not both of them).
-gsaspectratio=16:9
 patch=1,EE,201398C0,extended,00000000
 patch=1,EE,2016BCA8,extended,3C013A9D
 patch=1,EE,21C02438,extended,3FAA3D71
@@ -17,9 +17,9 @@ patch=1,EE,21C02108,extended,43C30000
 patch=1,EE,2032677C,extended,3C013C9A
 
 [Widescreen 21:9]
+gsaspectratio=Stretch
 author=SuperType1/remco
 description=Fixes the game and the HUD to run in a 21:9 Scale (only enable one and not both of them).
-gsaspectratio=Stretch
 patch=1,EE,201398C0,extended,00000000
 patch=1,EE,201398C8,extended,3C014017
 patch=1,EE,2016BCA8,extended,3C013A83
@@ -46,15 +46,15 @@ description=Makes the Crashes & Crash Mode run in 60 FPS.
 patch=1,EE,20104B9C,extended,90850608
 
 [Progressive Scan]
-author=Nahelam
-comment=Always ask for 480p mode during boot
-patch=1,EE,2019778C,extended,10A2001C
+author=Nehalem
+description=Always ask for 480p mode during boot
+patch=0,EE,2019778C,extended,10A2001C
 
 [MPH to KPH]
-author=Nahelam
-comment=Change speedometer unit from MPH to KPH
-patch=1,EE,201765E8,extended,0000102D
-patch=1,EE,201767DC,extended,0000102D
+author=Nehalem
+description=Change speedometer unit from MPH to KPH
+patch=0,EE,201765E8,extended,0000102D
+patch=0,EE,201767DC,extended,0000102D
 
 [Falling car parts while driving (takedowns & traffic checks)]
 author=Nehalem

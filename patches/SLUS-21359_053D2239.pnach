@@ -1,10 +1,10 @@
-gametitle=Metal Gear Solid 3 - Subsistence (SLUS_21359) 053D2239
+gametitle=Metal Gear Solid 3 - Subsistence [Disc 1 of 3] (NTSC-U) SLUS-21359 053D2239
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=PeterDelta and No.47
+author=PeterDelta & No.47
 description=Renders the game in 16:9 aspect ratio
-patch=1,EE,202050AC,word,3F400000
+patch=1,EE,202050AC,extended,3F400000
 patch=1,EE,E00367C8,extended,004CCD48
 patch=1,EE,204CCD40,extended,3FB00000
 patch=1,EE,204CCD44,extended,3F2F7CEE
@@ -49,6 +49,10 @@ patch=1,EE,E00367C8,extended,004B7088
 patch=1,EE,204B7080,extended,3FB00000
 patch=1,EE,204B7084,extended,3F2F7CEE
 patch=1,EE,204B708C,extended,BFB00000
+patch=1,EE,E00367C8,extended,004B2B80
+patch=1,EE,204B2B78,extended,3FB00000
+patch=1,EE,204B2B7C,extended,3F2F7CEE
+patch=1,EE,204B2B84,extended,BFB00000
 patch=1,EE,E00367C8,extended,0049DAC0
 patch=1,EE,2049DAB8,extended,3FB00000
 patch=1,EE,2049DABC,extended,3F2F7CEE
@@ -57,6 +61,18 @@ patch=1,EE,E00367C8,extended,004AD5E0
 patch=1,EE,204AD5D8,extended,3FB00000
 patch=1,EE,204AD5DC,extended,3F2F7CEE
 patch=1,EE,204AD5E4,extended,BFB00000
+patch=1,EE,E00367C8,extended,004BFBA0
+patch=1,EE,204BFB98,extended,3FB00000
+patch=1,EE,204BFB9C,extended,3F2F7CEE
+patch=1,EE,204BFBA4,extended,BFB00000
+patch=1,EE,E00367C8,extended,004AECA0
+patch=1,EE,204AEC98,extended,3FB00000
+patch=1,EE,204AEC9C,extended,3F2F7CEE
+patch=1,EE,204AECA4,extended,BFB00000
+patch=1,EE,E00367C8,extended,004A1E70
+patch=1,EE,204A1E68,extended,3FB00000
+patch=1,EE,204A1E6C,extended,3F2F7CEE
+patch=1,EE,204A1E74,extended,BFB00000
 
 [Remove Blackbars]
 author=PeterDelta
@@ -66,11 +82,12 @@ patch=1,EE,E0010001,extended,0020C174
 patch=1,EE,0025E69C,extended,00000001
 
 [60 FPS]
-author=Kabuto_Kun
-description=60 fps patch (may need overclocking EE).
+author=Kabuto_Kun & PeterDelta
+description=60 fps patch (may need overclocking EE 130%).
 patch=1,EE,001D5AD8,extended,00000000
 patch=1,EE,001D6DB8,extended,00000001
 patch=1,EE,001D6DBC,extended,00000000
+patch=1,EE,001D6DCC,extended,00000000
 
 [30 FPS]
 description=30 fps patch.

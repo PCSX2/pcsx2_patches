@@ -1,4 +1,4 @@
-gametitle=King of Clubs (E)(SLES-54731)
+gametitle=King of Clubs PAL-M SLES-54731 079140D6
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -9,4 +9,7 @@ author=Arapapa
 //X-Fov
 patch=1,EE,0037445c,word,3c013f20 //3c013f00
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,0030139C,word,1400FFF8 //1000FFF8

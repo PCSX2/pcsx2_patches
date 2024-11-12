@@ -5,7 +5,7 @@ gsaspectratio=16:9
 author=CRASHARKI
 description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
 patch=1,EE,21BD81E8,byte,1 //00000000 //In-game option
-patch=1,EE,21BD8222,byte,10 //40 //Zoom 1
+patch=1,EE,21BD8220,extended,3F020000 //3F100000 //Zoom 1
 patch=1,EE,21BD8228,word,3F000000 //3F2AAAAA //Zoom 2
 
 [50/60 FPS]

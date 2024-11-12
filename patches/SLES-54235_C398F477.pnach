@@ -35,5 +35,6 @@ patch=1,EE,203795E8,extended,3F99999A
 patch=1,EE,2037D318,extended,3F99999A
 
 [Subtitles off]
+author=ElHecht
 description=Disable subtitles during scenes
 patch=1,EE,00227774,word,11e00019 //15e00019

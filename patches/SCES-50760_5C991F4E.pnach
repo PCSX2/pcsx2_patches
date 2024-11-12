@@ -1,21 +1,191 @@
-gametitle=ICO (SCES-50760)
+gametitle=ICO * PAL-M5 * SCES-50760 * 5C991F4E
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen Hack
-//widescreen
+
+// 16:9 widescreen
 patch=1,EE,00114dd0,word,3c013f40
 patch=1,EE,00114dd4,word,4481c000
 patch=1,EE,00114de0,word,46181082
 
-//render fix
+// 16:9 Render fix
 patch=1,EE,001146F4,word,240302ab
 patch=1,EE,0054E478,word,44fa0000
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000 & pgert
+patch=1,EE,00114dd0,word,3c013f55
+patch=1,EE,00114dd4,word,4481c000
+patch=1,EE,00114de0,word,46181082
+patch=1,EE,001146F4,word,240302ab
+patch=1,EE,0054E478,word,44e10000
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000 & pgert
+patch=1,EE,00114dd0,word,3c013f64
+patch=1,EE,00114dd4,word,4481c000
+patch=1,EE,00114de0,word,46181082
+patch=1,EE,001146F4,word,240302ab
+patch=1,EE,0054E478,word,44d2f000
+
+[Widescreen 20:9]
+gsaspectratio=Stretch
+author=nemesis2000, kripkrop, Devina & pgert
+comment=Imperfections might show up.
+patch=1,EE,00114dd0,word,3c013f1a
+patch=1,EE,00114dd4,word,4481c000
+patch=1,EE,00114de0,word,46181082
+patch=1,EE,001146F4,word,24030aaa
+patch=1,EE,0054E478,word,451c4000
+
+[Widescreen 21:9]
+gsaspectratio=Stretch
+author=nemesis2000, kripkrop, Devina & pgert
+comment=Imperfections might show up.
+patch=1,EE,00114dd0,word,3c013f12
+patch=1,EE,00114dd4,word,4481c000
+patch=1,EE,00114de0,word,46181082
+patch=1,EE,001146F4,word,24030aaa
+patch=1,EE,0054E478,word,45241000
 
 [Remove Blackbars]
 author=nemesis2000
 description=Removes black bars in cutscenes
 patch=1,EE,00113450,word,3c010000
 
+/////////////////////
 
+[60 fps & No Interlacing]
+author=Red_Tv
+comment=Might need EE overclocking to be stable.
+
+// 60 fps
+patch=1,EE,0028F4C4,word,00000001
+
+// Revert to 30 fps during Cutscenes
+//patch=1,EE,e0010001,extended,0063AA08
+//patch=1,EE,2028F4C4,extended,00000002
+
+// No Interlacing (needed for 60 fps)
+patch=1,EE,0013CAD0,word,30420000
+patch=1,EE,001144AC,word,30420000
+
+/////////////////////
+
+[60 fps]
+author=synce & Agrippa
+// 60 fps hack by Agrippa based on the NTSC-U hack by synce
+comment=Set EE Cyclerate to 130% - 180% in combination with this.
+// - makes some animations run too fast
+patch=1,EE,E0010000,extended,0063AA08
+patch=1,EE,0028F4C4,extended,00000001
+
+// Revert to 30 fps during Cutscenes
+patch=1,EE,E0010001,extended,0063AA08
+patch=1,EE,0028F4C4,extended,00000002
+
+[No-Interlacing]
+comment=Don't combine with the 60 fps hacks.
+patch=1,EE,0013CAD0,word,30420000
+patch=1,EE,001144AC,word,30420000
+
+///////////////////
+
+[Full height back buffer]
+author=asasega & Agrippa
+
+// Hacks by Agrippa based on the asasega patch for the NTSC version.
+// A full height back buffer enabled, instead of a downsampled front buffer.
+// Works with both PAL and NTSC modes.
+
+// set the back buffer
+patch=1,EE,2028F500,extended,00001040
+patch=1,EE,2028F528,extended,00001040
+// switch to the interlaced mode with FFMD set to 0. Progressive mode, applied by default,
+// does add a black bar at the bottom in the NTSC mode when the back buffer is enabled
+patch=1,EE,2028F4F8,extended,00000001
+patch=1,EE,2028F520,extended,00000001
+
+// check if the PAL mode is turned on to extend the display buffer from 256 to 512
+patch=1,EE,E0024290,extended,0028F508
+patch=1,EE,2028F50C,extended,001FF9FF
+patch=1,EE,2028F534,extended,001FF9FF
+// check if the NTSC mode is turned on to extend the display buffer from 224 to 448
+patch=1,EE,E002927C,extended,0028F508
+patch=1,EE,2028F50C,extended,001DF9FF
+patch=1,EE,2028F534,extended,001DF9FF
+
+///////////////////
+
+[Debug Menu]
+description=Press Select to open the Debug Menu.
+// Enable 'Single Framestep' in the menu for 60fps.
+patch=1,EE,20101F94,word,0C06C966
+patch=1,EE,201AF850,word,0806BD28
+
+[Maximum Graphics Booster]
+description=No Blur-Effect and maxed out Game Sharpness.
+patch=1,EE,001322f0,word,03e00008
+patch=1,EE,001322f4,word,00000000
+patch=1,EE,001fca60,word,03e00008
+patch=1,EE,001fca64,word,00000000
+patch=1,EE,001137f8,word,03e00008
+patch=1,EE,001137fc,word,00000000
+patch=1,EE,001136b0,word,03e00008
+patch=1,EE,001136b4,word,00000000
+
+[Disable Motion Blur]
+patch=1,EE,001fca60,word,03e00008
+patch=1,EE,001fca64,word,00000000
+
+[Disable Post-Effects]
+description=Disables Post-Effect like the bright reddish Sky.
+patch=1,EE,0028F808,word,00000000
+
+[No Blackborders]
+patch=1,EE,001133F8,word,44800800
+patch=1,EE,00113410,word,44800800
+patch=1,EE,00113420,word,44800800
+patch=1,EE,00113534,word,44800000
+
+[No Shadow Effects]
+patch=1,EE,0028F7CC,word,00000000
+patch=1,EE,0028F7D0,word,00000000
+patch=1,EE,0028F7D4,word,00000000
+patch=1,EE,0028F7D8,word,00000000
+patch=1,EE,0028F7DC,word,00000000
+patch=1,EE,0028F7E0,word,00000000
+patch=1,EE,0028F7E4,word,00000000
+patch=1,EE,0028F7E8,word,00000000
+
+[RGB Values]
+description=RGB Values enhanced & fixed
+
+// Characters RGB Values decently enhanced,
+//  disable extra Light on Boy and Objects
+//  and disable Boy-Dimming in dark Areas.
+patch=1,EE,001170b4,word,24020000
+patch=1,EE,00117000,word,24130000
+patch=1,EE,00117010,word,24130000
+patch=1,EE,001175f4,word,44806000
+patch=1,EE,0028F780,word,3F900000
+patch=1,EE,0028F784,word,3F900000
+patch=1,EE,0028F788,word,3F900000
+patch=1,EE,0028F78C,word,3F800000
+
+// World and Character main RGB fixed Values.
+patch=1,EE,0028F7F0,word,00000080
+patch=1,EE,0028F7F4,word,00000080
+patch=1,EE,0028F7F8,word,00000080
+patch=1,EE,0028F7FC,word,00000000
+
+///////////////////
+
+// Mastercode - not needed for pcsx2
+//patch=1,EE,0E3C7dF2,extended,1456E7A5
+//patch=1,EE,F024E5d4,extended,0024E5d7
+
+///////////////////

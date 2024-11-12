@@ -1,0 +1,8 @@
+gametitle=RoadKill NTSC-U SLUS-20687 EBD245D0
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,002F23F4,word,28630001 //28630002
+patch=1,EE,004C94B8,word,3C088889 //3C888889
+patch=1,EE,004C94C4,word,3c888889 //3D088889

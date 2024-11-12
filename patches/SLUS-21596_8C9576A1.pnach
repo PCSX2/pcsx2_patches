@@ -1,9 +1,9 @@
-gametitle=Burnout - Dominator (U)(SLUS-21596)
+gametitle=Burnout Dominator (U) (SLUS-21596)
 
 [Widescreen 16:9]
+gsaspectratio=16:9
 author=SuperType1/remco
 description=Fixes the game and the HUD to run in a 16:9 Scale (only enable one and not both of them).
-gsaspectratio=16:9
 
 //Force 16:9
 patch=1,EE,001A2798,word,00000000
@@ -32,9 +32,9 @@ patch=1,EE,21C91F60,extended,C4430000//crashbreaker text offset
 patch=1,EE,20441078,extended,438C0000//ea trax pop up width
 
 [Widescreen 21:9]
+gsaspectratio=Stretch
 author=SuperType1/remco
 description=Fixes the game and the HUD to run in a 21:9 Scale (only enable one and not both of them).
-gsaspectratio=Stretch
 
 //Force 21:9
 patch=1,EE,001A2798,word,00000000
@@ -68,7 +68,7 @@ patch=1,EE,20441078,extended,43340000//ea trax width
 
 [60 FPS Menus and Crashes]
 author=SuperType1/remco
-comment=Makes the entire game run in 60 FPS.
+description=Makes the entire game run in 60 FPS.
 //60 FPS Front End
 patch=1,EE,202159AC,extended,24040001
 patch=1,EE,202159A4,extended,00108002
@@ -84,3 +84,8 @@ patch=0,EE,202E30DC,extended,24030001
 author=Nehalem
 description=Enable falling car parts of other vehicles while driving
 patch=0,EE,202847D8,extended,00000000
+
+[Progressive Scan]
+author=Nehalem
+description=Always ask for 480p mode during boot
+patch=0,EE,20183F1C,extended,10000015

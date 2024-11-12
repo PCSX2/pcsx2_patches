@@ -1,0 +1,6 @@
+gametitle=Hugo - Magic in the Trollwoods PAL-M SLES-55598 FFA75E86
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00298708,word,28420001 //28420002

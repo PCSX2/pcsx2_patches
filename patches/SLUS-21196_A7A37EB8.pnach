@@ -1,8 +1,12 @@
-gametitle=Indigo Prophecy SLUS_211.96
+gametitle=Indigo Prophecy NTSC-U SLUS-21196 A7A37EB8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 comment=Widescreen Hack
 patch=1,EE,20836500,extended,3FE38E38 // 3FAAAAAB
 
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00209688,word,10400004 //14400004
 
