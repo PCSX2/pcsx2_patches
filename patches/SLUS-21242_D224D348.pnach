@@ -60,3 +60,8 @@ patch=0,EE,201767DC,extended,0000102D
 author=Nehalem
 description=Enable falling car parts during takedowns and traffic checks while driving
 patch=0,EE,20210FA8,extended,00000000
+
+[Extra particles while driving]
+author=Nehalem
+description=Render all extra particles while driving
+patch=0,EE,202B5334,extended,24030001

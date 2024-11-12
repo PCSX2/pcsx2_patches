@@ -147,3 +147,8 @@ author=Nehalem
 description=Change speedometer unit from MPH to KPH
 patch=0,EE,101A3BA0,extended,000082F0
 patch=0,EE,101A3D78,extended,000007D7
+
+[Extra Particles While Driving]
+author=Nehalem
+description=Render all extra particles while driving
+patch=0,EE,20261E6C,extended,24120001
