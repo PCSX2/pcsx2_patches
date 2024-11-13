@@ -6,5 +6,5 @@ description=Might need EE Overclock.
 patch=1,EE,2052F510,extended,00000001
 patch=1,EE,E0010001,extended,003F66F8
 patch=1,EE,2052F510,extended,00000002
-patch=1,EE,E0010001,extended,00537934
+patch=1,EE,E0010001,extended,00537E10
 patch=1,EE,2052F510,extended,00000002
