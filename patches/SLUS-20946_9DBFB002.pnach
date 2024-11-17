@@ -1,0 +1,28 @@
+gametitle=Grand Theft Auto: San Andreas (SLUS-20946) / Ver 1.03 CRC=9DBFB002
+
+[60FPS]
+author=asasega
+comment=Make sure you set your EE Cycle Rate to 130-180% 
+patch=1,EE,006678CC,extended,00000001
+
+[Remove Radiosity Filter]
+description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
+patch=1,EE,20519FD8,extended,00000000
+
+[Enable Hot Coffee]
+patch=1,EE,206B32FC,extended,00000000
+patch=1,EE,E003F0FF,extended,00700942
+patch=1,EE,2088D760,extended,4C333132
+patch=1,EE,2088D764,extended,3244334C
+patch=1,EE,2088D768,extended,32000052
+
+[Widescreen Fix]
+gsaspectratio=16:9
+author=nemesis2000, port by flameofrecca
+patch=1,EE,001130BC,word,3C013F9D
+patch=1,EE,001130C0,word,44810000
+patch=1,EE,001130C4,word,46006302
+patch=1,EE,001130C8,word,03E00008
+patch=1,EE,001130CC,word,E78C9A90
+patch=1,EE,0021DF84,word,0C044C2F
+patch=1,EE,00242D54,word,0C044C32
