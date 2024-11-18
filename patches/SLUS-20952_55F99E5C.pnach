@@ -3,7 +3,8 @@ gametitle=Tak 2: The Staff of Dreams (U)(SLUS-20952)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen hack
+
+//Gameplay 16:9
 patch=1,EE,005A66EC,word,3FE38E38 //3FAAAAAB
 
 [60 FPS]
