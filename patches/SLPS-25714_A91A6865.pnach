@@ -2,7 +2,7 @@ gametitle=Naruto - Konoha Spirits (NTSC-J) (SLLPS_25714)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Widescreen Hack (16:9) by ElHecht (NTSC-J by Arapapa)
+author=ElHecht (NTSC-J by Arapapa)
 
 // 16:9
 // 613f023c af474234 (search twice)

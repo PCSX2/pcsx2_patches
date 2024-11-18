@@ -2,7 +2,7 @@ gametitle=Indiana Jones and the Emperor's Tomb (PAL-E) (SLES-50836)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,0011cf0c,word,3c013f24 // 3c013f49

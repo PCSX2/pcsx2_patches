@@ -1,17 +1,14 @@
-gametitle=Rogue Trooper (E)(SLES-52921)
+gametitle=Rogue Trooper (PAL-M) SLES-52921 03C8EA64
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
-comment=Widescreen Hack
-//Widescreen hack 16:9
-
-//X-Fov
-//803f013c 00e08144
-patch=1,EE,001c88ec,word,3c013f40 //3c013f80
+author=Gabominated & PeterDelta
+description=Widescreen fix
+patch=1,EE,00112D80,extended,3C013F00
+patch=1,EE,E0010101,extended,00467464
+patch=1,EE,00112D80,extended,3C013F05 //zoom
 
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,003C8A04,word,00000000 //1040FFFA
-patch=1,EE,001BE7AC,word,00000000 //1440FFFA
+description=Might need EE Overclock at 130%.
+patch=1,EE,001BE788,word,1460000A //1060000A

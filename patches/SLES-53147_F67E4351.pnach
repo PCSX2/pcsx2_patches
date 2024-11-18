@@ -1,12 +1,20 @@
-gametitle=4 Fantásticos, Los [PAL-S] SLES-53147 F67E4351
+gametitle=4 Fantásticos, Los (PAL-S) SLES-53147 F67E4351
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-comment=Widescreen Hack 16:9
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,0031DA70,word,3FB8E369
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
-patch=1,EE,00177A70,word,1000000C //1462000C bne v1,v0,0x00177AA4
+description=Might need EE Overclock at 180%.
+patch=1,EE,00177A6C,word,24020000 //24020001
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0026ACEC,word,24110000
+patch=1,EE,0026ACF0,word,24120050
+patch=1,EE,0026ACFC,word,24130001

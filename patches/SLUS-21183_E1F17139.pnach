@@ -2,7 +2,7 @@ gametitle=Teen Titans (NTSC-U) (SLUS-21183)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht, also works with NTSC-U
+author=ElHecht, also works with NTSC-U
 
 // 16:9
 patch=1,EE,00205784,word,080f1e0c // 4600ab06 jump to 003c7830

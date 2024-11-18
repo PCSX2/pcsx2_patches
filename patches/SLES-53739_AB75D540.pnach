@@ -1,9 +1,9 @@
-gametitle=Disney's: Chicken Little [PAL] (SLES_537.39)
+gametitle=Disney's: Chicken Little [PAL] (SLES_537.39) AB75D540
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 
 //Gameplay 16:9 (Memory Hack)
 patch=1,EE,205D27AC,extended,3FE38E32 //3FAAAAAB (Increases hor. axis)
@@ -13,5 +13,5 @@ patch=1,EE,00287DE0,word,3C014455 //3C014420
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,005294A8,word,00000001 //00000002

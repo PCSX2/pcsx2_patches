@@ -1,6 +1,20 @@
 gametitle=Spawn - Armageddon (NTSC-U) SLUS-20707 B7E7D66F
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,E0020005,extended,00370440
+patch=1,EE,002D1200,extended,00000001
+patch=1,EE,00333CE4,extended,00000001
+patch=1,EE,00121C6C,extended,3C013F01 //3C013F00 fix border
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,0031F3F4,extended,00000001
+
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock (130%).
 patch=1,EE,202EEEC8,extended,00000001

@@ -2,7 +2,7 @@ gametitle=Seek and Destroy (PAL-M5) (SLES_516.03)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 // 16:9
 patch=1,EE,001BCD0C,word,3C013F40 //00000000 hor fov

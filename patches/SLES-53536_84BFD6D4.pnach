@@ -1,0 +1,6 @@
+gametitle=London Racer - Police Madness PAL-M SLES-53536 84BFD6D4
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00144BD0,word,24020000 //24020001

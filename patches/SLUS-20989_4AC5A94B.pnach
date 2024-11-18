@@ -1,8 +1,8 @@
-gametitle=Polar Express, The (U)(SLUS-20989)
+gametitle=The Polar Express NTSC-U SLUS-20989 4AC5A94B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -18,4 +18,7 @@ patch=1,EE,002f1760,word,461e0843 // 00000000
 patch=1,EE,002f1764,word,e6010068 // 00000000
 patch=1,EE,002f1768,word,080d1e19 // 00000000
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,00352AB8,word,24020002 //24020001

@@ -2,7 +2,7 @@ gametitle=Naruto - Uzumaki Chronicles 2 (NTSC-K) (SLKA_25366)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Widescreen Hack (16:9) by ElHecht (NTSC-K by Arapapa)
+author=ElHecht (NTSC-K by Arapapa)
 
 // 16:9
 // 613f023c af474234 (search twice)

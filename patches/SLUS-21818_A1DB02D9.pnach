@@ -1,0 +1,8 @@
+gametitle=Spongebob SquarePants Featuring Nicktoons - Globs of Doom (NTSC-U)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,20413CB4,extended,3F9F49F4 //3F6EEEEE
+patch=1,EE,204B4684,extended,00000001 //00000000

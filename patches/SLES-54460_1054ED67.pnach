@@ -12,7 +12,7 @@ patch=1,EE,00252bf8,word,3c013f40 // 3c013f80 hor fov
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Disable interlacing hack by ElHecht
+author=ElHecht
 
 // disable interlacing
 patch=1,EE,002405D0,word,00000000 // 8f84b3d4

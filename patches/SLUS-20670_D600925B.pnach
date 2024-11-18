@@ -1,21 +1,20 @@
-gametitle=The Great Escape (U)(SLUS-20670)
+//gametitle=The Great Escape (U)(SLUS-20670)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Arapapa
+// Disabled due causing issues with objects and black bars appearing at the edges of the screen.
 
 //Widescreen hack 16:9
 
 //Zoom
-patch=1,EE,002b89cc,word,3c013b01 //3c013acc
-patch=1,EE,002b89d0,word,34210000 //3421cccd
+//patch=1,EE,002b89cc,word,3c013b01 //3c013acc
+//patch=1,EE,002b89d0,word,34210000 //3421cccd
 
 //Y-Fov
-patch=1,EE,002b8a54,word,3c013b35 //3c013b08
-patch=1,EE,002b8a58,word,3421fe54 //34218889
+//patch=1,EE,002b8a54,word,3c013b35 //3c013b08
+//patch=1,EE,002b8a58,word,3421fe54 //34218889
 
 //Render fix
-patch=1,EE,002ca178,word,3c013d00 //3c013c8e
-patch=1,EE,002ca17c,word,34210000 //3421fa36
-
-
+//patch=1,EE,002ca178,word,3c013d00 //3c013c8e
+//patch=1,EE,002ca17c,word,34210000 //3421fa36

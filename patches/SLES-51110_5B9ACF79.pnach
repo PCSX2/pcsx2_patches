@@ -2,7 +2,7 @@ gametitle=Hitman 2 - Silent Assassin (PAL-S) (SLES-51110) (v1.01 and 2.00)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,00313f7c,word,3c013f10 // 3c013f40 ver fov
@@ -22,9 +22,9 @@ author=Gabominated
 description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,20508090,extended,00000001 //00000002
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=Gabominated
-description=Unlocked at 60fps + progressive scan. Might need enable EE Overclock to be stable.
-patch=1,EE,20508090,extended,00000000 //00000002
+description=Forces progressive scan mode 480p at startup.
 patch=1,EE,20415930,extended,24120050 //00069403
 patch=1,EE,201016c8,extended,24060050 //24060003

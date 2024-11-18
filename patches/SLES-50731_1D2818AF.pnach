@@ -1,4 +1,4 @@
-gametitle=Need for Speed - Hot Pursuit 2 (PAL-M6) (SLES-50731)
+gametitle=Need for Speed - Hot Pursuit 2 (PAL-M6) (SLES-50731) 1D2818AF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -9,18 +9,18 @@ patch=1,EE,0032f6fc,word,3f400000 // 3f800000 hor fov
 patch=1,EE,0032f850,word,3f2aaaab // 3f000000 increase hor fov
 patch=1,EE,0010e840,word,3c013f2b // 3c013f00 renderfix
 
-[50 FPS]
+[50/60 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,00113E2C,word,2C420001
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
+description=SDTV 480p mode at start.
 patch=1,EE,00280754,word,24110000
-patch=1,EE,00280758,word,24120052
+patch=1,EE,00280758,word,24120050
 patch=1,EE,00280764,word,24130001
-patch=1,EE,002C79C4,word,0000001E
 
 [Trigger control mapppings]
 author=Silent

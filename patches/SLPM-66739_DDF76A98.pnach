@@ -2,7 +2,7 @@ gametitle=Burnout Dominator (J) (SLPM_667.39)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by Arapapa
+author=Arapapa
 
 //Force turn on Internal Widescreen (Full boot bypassing)
 patch=1,EE,0038b128,word,24020002 //30420003

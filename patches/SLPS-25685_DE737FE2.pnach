@@ -2,7 +2,7 @@ gametitle=Rurouni Kenshin - Enjou! Kyoto Rinne [NTSC-J] (SLPS-25685)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Little Giant
+author=Little Giant
 
 //16:9
 patch=1,EE,00120c70,word,3c013f53 // 3c013f8c vert

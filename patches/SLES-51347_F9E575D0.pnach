@@ -1,0 +1,6 @@
+gametitle=Die Hard - Vendetta PAL-M SLES-51347 F9E575D0
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,00283428,word,AF829A90 //AF849A90

@@ -2,7 +2,7 @@ gametitle=Mana Khemia - Alchemists of Al-Revis (PAL-E) (SLES-55443)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by nemesis2000
+author=nemesis2000
 // ported to PAL (elhecht)
 //3D scenes
 patch=1,EE,0046d834,word,3c013f40 //hor value

@@ -1,0 +1,24 @@
+gametitle=Resident Evil 4 SLUS-21134 013E349D
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Widescreen improvement.
+patch=1,EE,20326d78,extended,3f5ced91 //x-fov
+patch=1,EE,20250564,extended,3c013f5c
+patch=1,EE,20250568,extended,3421ed91
+patch=1,EE,20326d7c,extended,3faaaaab //y-fov
+patch=1,EE,20250574,extended,3c013faa
+patch=1,EE,20250578,extended,3421aaab
+patch=1,EE,2021d26c,extended,3c013f00
+patch=1,EE,202810e0,extended,3c013f80
+patch=1,EE,20430F60,extended,48000000
+patch=1,EE,E0080000,extended,004175AC
+patch=1,EE,20326d78,extended,3f25b22d //3f5ced91
+patch=1,EE,20250564,extended,3c013f25 //3c013f5c
+patch=1,EE,20250568,extended,3421b22d //3421ed91
+patch=1,EE,20326d7c,extended,3f800000 //3faaaaab
+patch=1,EE,20250574,extended,3c013f80 //3c013faa
+patch=1,EE,20250578,extended,34210000 //3421aaab
+patch=1,EE,2021d26c,extended,3c013f25 //3c013f00
+patch=1,EE,202810e0,extended,3c013f80 //3c013f00 render fix

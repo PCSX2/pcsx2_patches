@@ -1,24 +1,24 @@
 gametitle=Monster House (NTSC-U)(SLUS-21400)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Arapapa
-comment=Widescreen Hack
-//Widescreen hack 16:9
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Arapapa
+//comment=Widescreen Hack
+//After the first mission the game breaks on the other levels
 
 //Y-Fov + Zoom in
 //00000000 00000000 03150146 00000000
 //763f013c 00f88144 42081f46 46011503
-patch=1,EE,001c610c,word,3c013f76 //00000000
-patch=1,EE,001c6110,word,4481f800 //00000000
-patch=1,EE,001c6114,word,461f0842 //46011503
-patch=1,EE,001c6118,word,46011503 //00000000
+//patch=1,EE,001c610c,word,3c013f76 //00000000
+//patch=1,EE,001c6110,word,4481f800 //00000000
+//patch=1,EE,001c6114,word,461f0842 //46011503
+//patch=1,EE,001c6118,word,46011503 //00000000
 
 //Zoom out
 //0040023c 00008244 3c00a2c7
 //dd3f023c 00008244 3c00a2c7
 //Zoom value adjust : NTSC-K(3c023fdd), NTSC-U and PAL(3c023fe0)
-patch=1,EE,001c60f8,word,3c023fe0 //3c024000
+//patch=1,EE,001c60f8,word,3c023fe0 //3c024000
 
 //////////////////////////////////////
 //zoom

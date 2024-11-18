@@ -1,18 +1,21 @@
-gametitle=Total Overdose (E)(SLES-53492)
+gametitle=Total Overdose (PAL-M) (SLES-53492) 4C380F8B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=koozka
-comment=Widescreen Hack
-
-//00 00 80 3F 83 F9 22 3F DB 0F C9 3F 00 00 00 BF
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,20692A2C,word,3F47AE14 // Zoom
-
-//00 00 80 3F 00 00 00 00 00 00 00 00 2F 00 00 00
 patch=1,EE,206C64C4,word,3F400000 // Vert fov
 
-
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,01B71FC0,word,00000001 //00000002
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,005F5F14,word,24110000
+patch=1,EE,005F5F18,word,24120050
+patch=1,EE,005F5F24,word,24130001

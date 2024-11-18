@@ -1,8 +1,8 @@
-gametitle=Home Alone (E)(SLES-54469)
+gametitle=Home Alone PAL-M SLES-54469 E1FCDA9D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -15,4 +15,7 @@ patch=1,EE,000c000c,word,4481f000
 patch=1,EE,000c0010,word,461ea502
 patch=1,EE,000c0014,word,08060519
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,005B03F4,word,00000001 //00000002

@@ -1,0 +1,14 @@
+gametitle=Project - Snowblind SLUS-21037 2BDA8ADB secundary crc 7849F069
+//Game changes ELF when select single player to BO3GM.ELF with active CRC 7849F069
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Widescreen Hack
+patch=1,EE,0090E9F4,word,3Fe38e39 //3FAAAAAB //x-fov
+patch=1,EE,00B764F4,word,3Fe38e39 //3FAAAAAB //cutscenes
+
+[60 FPS]
+author=asasega & Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,002d4c04,word,2c620000 //0062102B

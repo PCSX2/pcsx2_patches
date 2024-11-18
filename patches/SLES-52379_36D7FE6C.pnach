@@ -1,0 +1,15 @@
+gametitle=DreamWorks Shrek 2 (PAL-E) SLES-52379 36D7FE6C
+//Corresponds to the main crc to activate the secondary crc CFAB11B7 called SHREK2.ELF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.

@@ -2,7 +2,7 @@ gametitle=Crimson Tears (NTSC-J)(SLPM-65575)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht (NTSC-J by Arapapa)
+author=ElHecht (NTSC-J by Arapapa)
 
 //Widescreen hack 16:9
 //aabf023c 00008544 abaa4334

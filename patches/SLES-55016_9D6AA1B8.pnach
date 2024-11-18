@@ -1,4 +1,4 @@
-gametitle=Bee Movie Game (E)(SLES-55016) 9D6AA1B8
+gametitle=DreamWorks Bee Movie Game (PAL-M) (SLES-55016) 9D6AA1B8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -17,7 +17,15 @@ patch=1,EE,0022eb6c,word,4481f000
 patch=1,EE,0022eb70,word,461e0002
 patch=1,EE,0022eb74,word,0806194c
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock at 180%.
 patch=1,EE,00209798,word,28420001 //28420002
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0010621C,word,24110000
+patch=1,EE,00106220,word,24120050
+patch=1,EE,0010622C,word,24130001

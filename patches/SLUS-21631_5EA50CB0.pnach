@@ -2,7 +2,7 @@ gametitle=Phantasy Star Universe - Ambition of the Illuminus (NTSC-U) (SLUS-2163
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Patch by TechieSaru
+author=TechieSaru
 
 //Widescreen
 patch=1,EE,E008FF90,extended,0026CE80

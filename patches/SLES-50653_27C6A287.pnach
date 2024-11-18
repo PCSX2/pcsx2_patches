@@ -2,7 +2,7 @@ gametitle=Gitaroo Man [PAL-M3] (SLES_506.53)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,2027FFA0,extended,3F400000 //3F800000 (Increases hor. axis, causes HUD moved to left)

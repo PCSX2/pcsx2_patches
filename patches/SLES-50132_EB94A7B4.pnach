@@ -1,8 +1,8 @@
-gametitle=MXRider (E)(SLES-50132)
+gametitle=MX Rider PAL-M SLES-50132 EB94A7B4
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -10,4 +10,7 @@ comment=Widescreen hack by Arapapa
 //003f013c 00008144 8e3c013c (2nd)
 patch=1,EE,002ce274,word,3c013f20 //3c013f00
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,003229F0,word,C6400030 //C6400034

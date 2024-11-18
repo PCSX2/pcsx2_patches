@@ -87,17 +87,17 @@ patch=1,EE,2072421C,word,42340000  //gauge_hero_01 42700000
 //patch=1,EE,208831D8,word,440cd000  //gauge_boss_icon_rhino 440EC000
 //patch=1,EE,208831EC,word,440cd000  //gauge_boss_icon_rhino 440EC000
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta + CRASHARKI
-description=Patches the game to run at 50 FPS (Might need 130% EE Overclock to be stable on heavy scenes).
+description=Might need EE Overclock at 130%.
 patch=1,EE,0060AD20,word,00000001 //00000002
 patch=1,EE,E0010001,extended,005E3C90
 patch=1,EE,0060AD20,extended,00000002
 
-[Mode 480p]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan mode 480p at startup
+description=SDTV 480p mode at start.
 patch=1,EE,00578864,word,3C050000
 patch=1,EE,0057886C,word,3C060050
 patch=1,EE,00578874,word,3C070001
-patch=1,EE,1060AD04,extended,01E0

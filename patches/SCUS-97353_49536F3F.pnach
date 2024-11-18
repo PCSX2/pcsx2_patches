@@ -1,8 +1,13 @@
 gametitle=Ratchet & Clank - Up Your Arsenal
 
+[60 FPS split-screen]
+author=SuperSamus
+comment=Makes all split-screen modes render at 60 FPS. Needs enable 180% EE Overclock to be stable.
+dpatch=0,4,5,48,24022D00,4C,0044180B,50,00A3182A,60,0000202D,0,00000000,78,00000000,F0,00000000,5C,00000000,B4,24032470
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by PsxFan107
+author=PsxFan107
 
 // Code patching routine  DWORD
 patch=1,EE,200C0000,extended,3C1B000C

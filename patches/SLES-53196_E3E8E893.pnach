@@ -1,6 +1,13 @@
 gametitle=Destroy All Humans (PAL-M) SLES-53196 E3E8E893
 
-[50 FPS]
+[Widescreen 16:9]
+gsaspectratio=16:9
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Enable native widescreen
+patch=1,EE,003F0404,word,3FE38E38 //3FAAAAAA
+patch=1,EE,003F0408,word,00000002 //00000000
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
 patch=1,EE,003F048C,word,00000001 //00000002

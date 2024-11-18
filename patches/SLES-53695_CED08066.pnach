@@ -1,11 +1,14 @@
-gametitle=Tak: The Great Juju Challenge [PAL] (SLES_536.95)
+gametitle=Tak: The Great Juju Challenge (PAL-E-G) SLES-53695 CED08066
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,003E3C20,word,3C013FE3 //3C013FAA
 patch=1,EE,003E3C24,word,3421388E //3421AAAB
 
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock 
+patch=1,EE,005AE718,extended,01

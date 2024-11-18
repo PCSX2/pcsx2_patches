@@ -2,7 +2,7 @@ gametitle=Devil May Cry 3 (K) (SLKA_25265)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Acem (pnach NTSC-K by Arapapa)
+author=Acem (pnach NTSC-K by Arapapa)
 
 //16:9 (0000803f 5555153f)
 patch=1,EE,21CAF990,word,3F400000 // 3f800000

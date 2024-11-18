@@ -1,8 +1,8 @@
-gametitle=George of the Jungle and the Search for the Secret (U)(SLUS-21668)
+gametitle=George of the Jungle and the Search for the Secret NTSC-U SLUS-21668 028AAFC8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen 16:9
 
@@ -10,4 +10,9 @@ comment=Widescreen hack by Arapapa
 //A8 AA AA 3F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B0 84 4D 00 78 01 00 00 C0 AA 47 00 80 B6 42 00
 patch=1,EE,206F2A08,extended,3fe38e39 //3faaaaa8
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,20286928,extended,00000000
+patch=1,EE,E0010001,extended,00469BD0
+patch=1,EE,20286928,extended,0C0DE852

@@ -170,8 +170,8 @@ patch=1,EE,00132e68,word,3C013F12
 patch=1,EE,00132fd0,word,3C013F64
 
 [60 FPS]
-author=asasega and PeterDelta
+author=asasega & PeterDelta
 comment=Might need EE overclocking to be stable (130%).
-patch=1,EE,001D78F0,word,28420001
-patch=1,EE,E0010000,extended,004DC874
-patch=1,EE,201D78F0,extended,28420004
+patch=1,EE,001D78F0,extended,28420002
+patch=1,EE,E0010001,extended,004DC8A0
+patch=1,EE,001D78F0,extended,28420004

@@ -2,7 +2,7 @@ gametitle=Maxxed Out Racing (PAL-E) [SLES-51622]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by FlatOut
+author=FlatOut
 
 patch=1,EE,20194F44,extended,3F400000
 

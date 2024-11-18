@@ -9,7 +9,7 @@ gsaspectratio=16:9
 
 // ==========
 comment=RTX - Red Rock * SLES-51069 * PAL/Europe * E349C1D4
-comment=- Widescreen hack by pgert.
+author=pgert
 patch=1,EE,205F1840,extended,3F400000 // 3F800000 - X-axis
 // ==========
 // comment=- 16:10 support by pgert.

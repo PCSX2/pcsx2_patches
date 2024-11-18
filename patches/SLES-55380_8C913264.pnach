@@ -3,21 +3,22 @@ gametitle=Sonic Unleashed (PAL-M5) (SLES-55380) 8C913264
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00872D50,word,3FD21DA8 //3F9D9643
-patch=1,EE,00ED1AD8,word,00000000 //42600000 fmv
-patch=1,EE,00ED1AE8,word,43E00000 //43C40000
+patch=1,EE,E0020002,extended,00780A7C //avoid crashes
+patch=1,EE,20ED1AD8,extended,00000000 //42600000 fmv
+patch=1,EE,20ED1AE8,extended,43E00000 //43C40000
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,0087C3B4,word,00000032 //00000019
-patch=1,EE,00870A2C,word,3F99999A //3F800000
+patch=1,EE,00870A2C,word,3F99999A //4019999A
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan mode at 60 fps
+description=SDTV 480p mode at start.
 patch=1,EE,00671CFC,word,3C050000
-patch=1,EE,00671D04,word,3C060052
+patch=1,EE,00671D04,word,3C060050
 patch=1,EE,00671D0C,word,3C070001
-patch=1,EE,00671FCC,word,3C090010

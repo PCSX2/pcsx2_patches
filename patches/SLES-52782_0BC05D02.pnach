@@ -2,7 +2,7 @@ gametitle=Call of Duty: Finest Hour (SLES-52782)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000 )
+author=nemesis2000
 
 patch=1,EE,0024b57c,word,00000000
 

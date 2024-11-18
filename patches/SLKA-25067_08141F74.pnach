@@ -2,7 +2,7 @@ gametitle=Unlimited Saga (K) (SLKA-25067)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 // 16:9 battles
 //00000000 00000000 43ad1346 00000000 00000000

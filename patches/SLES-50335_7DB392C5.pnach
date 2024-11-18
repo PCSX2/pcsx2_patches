@@ -1,6 +1,11 @@
-gametitle=Rune - Viking Warlord (PAL-E) SLES-50335 7DB392C5 secondary crc 52638022
+gametitle=Rune - Viking Warlord (PAL-E) SLES-50335 7DB392C5
 //Corresponds to the main crc to activate the secondary crc 52638022 called GAME.ELF
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock at 180%.
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.

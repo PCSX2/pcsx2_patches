@@ -1,0 +1,7 @@
+gametitle=Tom & Jerry's War of the Wiskers (PAL-M)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,20219D3C,word,00000001 //00000000

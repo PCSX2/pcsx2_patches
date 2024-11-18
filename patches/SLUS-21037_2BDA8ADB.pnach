@@ -1,15 +1,11 @@
-gametitle=Project - Snowblind (NTSC-U)
+gametitle=Project - Snowblind SLUS-21037 2BDA8ADB secundary crc 7849F069
+//Corresponds to the main crc to activate the secondary crc 7849F069 called B03GM.ELF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht
-comment=Widescreen Hack
-// 16:9 single player mode
-//patch=1,EE,001d87b8,word,3c013fe3 //3c013faa
-//patch=1,EE,001d87bc,word,34218e39 //3421aaab
-//patch=1,EE,003327f0,word,3c013fe3 //3c013faa
-//patch=1,EE,003327f4,word,34218e39 //3421aaab
+author=Gabominated
+description=Widescreen Hack
 
-//Causes a crash on Level 2.
-
-
+[60 FPS]
+author=asasega & Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.

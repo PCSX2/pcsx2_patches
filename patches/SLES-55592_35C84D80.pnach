@@ -6,9 +6,17 @@ author=El_Patas
 comment=Renders the game in 16:9 aspect ratio
 patch=1,EE,2073DD54,extended,3FE38E38 //3FAAAAAB (Increases hor. axis)
 
-[50 FPS]
-author=asasega and PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+[50/60 FPS]
+author=asasega & PeterDelta
+description=Might need EE Overclock at 130%.
 patch=1,EE,201002F4,extended,10000011
 patch=1,EE,E0010001,extended,004D114C
 patch=1,EE,201002F4,extended,45000011
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,00434FD4,word,3C050000
+patch=1,EE,00434FDC,word,3C060050
+patch=1,EE,00434FE4,word,3C070001

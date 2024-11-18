@@ -2,7 +2,7 @@ gametitle=Asterix & Obelix XXL 2 (PAL-M5) (SLES-53725)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa/ElHecht
+author=Arapapa/ElHecht
 
 // 16:9
 patch=1,EE,0012a268,word,0811687c // 3c023f40 jump to code-inject 0045a1f0

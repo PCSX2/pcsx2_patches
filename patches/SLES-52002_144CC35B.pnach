@@ -9,7 +9,7 @@ gsaspectratio=16:9
 
 // ==========
 comment= Rogue Ops * SLES-52002 * PAL-M6 * 144CC35B
-comment=- Widescreen hack by pgert.
+author=pgert
 comment=- Might not work with all BIOS types & configurations.
 patch=1,EE,2065A190,extended,3F400000 // 3F800000 - X-Axis - 16:9
 // patch=1,EE,2065A190,extended,3F555555 // - 16:10

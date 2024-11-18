@@ -43,5 +43,5 @@ patch=1,EE,004607B8,short,52D4
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. It is not recommended to enable overclock.
+description=It is not recommended to enable overclock.
 patch=1,EE,004E77E8,word,24020001 //24020002

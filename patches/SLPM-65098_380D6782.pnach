@@ -2,7 +2,7 @@ gametitle=Silent Hill 2 - Saigo no Uta [NTSC-J] (SLPM-65098)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by  nemesis2000 and synce
+author=nemesis2000 and synce
 
 //patch=1,EE,210DDF14,extended,43A8F5C2
 patch=1,EE,002d6730,word,3f28f5c3 //3f6147ae

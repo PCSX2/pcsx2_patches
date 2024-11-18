@@ -1,8 +1,8 @@
-gametitle=Jeep Thrills (U)(SLUS 21760)
+gametitle=Jeep Thrills NTSC-U SLUS-21760 3DDBDB2C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -20,4 +20,8 @@ patch=1,EE,000c000c,word,4481f000
 patch=1,EE,000c0010,word,461e6b42
 patch=1,EE,000c0014,word,0805a141
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,0019E3E0,word,14600007 //10600007
+patch=1,EE,00144A44,word,24420003 //24420001

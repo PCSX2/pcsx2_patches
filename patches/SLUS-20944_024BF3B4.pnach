@@ -1,0 +1,10 @@
+gametitle=Power Rangers - Dino Thunder NTSC-U SLUS-20944 024BF3B4
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,20532110,extended,00000001
+patch=1,EE,E0010001,extended,003F8878
+patch=1,EE,20532110,extended,00000002
+patch=1,EE,E0010001,extended,0053AA10
+patch=1,EE,20532110,extended,00000002

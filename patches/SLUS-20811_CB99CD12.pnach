@@ -1,20 +1,31 @@
-gametitle=Need for Speed Underground (SLUS-20811)
+gametitle=Need for Speed Underground (SLUS-20811) CB99CD12
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
-
-patch=1,EE,004ff434,word,3f400000
-patch=1,EE,004ff628,word,3f2aaaaa
-patch=1,EE,004ff630,word,3f2aaaaa
-
-//FMV's fix
-patch=1,EE,00229da8,word,3c01bf2a
-patch=1,EE,00229dac,word,44816800
-patch=1,EE,00229ddc,word,46007307
-patch=1,EE,00229de0,word,46006bc7
+author=nemesis2000, ElHecht & PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00438adc,word,3f400000 // 3f800000
+patch=1,EE,00438a14,word,3f400000 // 3f800000
+patch=1,EE,004ff628,word,3f2aaaab // 3f000000
+patch=1,EE,004ff630,word,3f2aaaab // 3f000000
+patch=1,EE,204378E4,extended,3F400000
+patch=1,EE,20437FEC,extended,3F400000
+patch=1,EE,20229DA8,extended,3C01BF28
+patch=1,EE,20229DAC,extended,44816800
+patch=1,EE,20229DDC,extended,46007307
+patch=1,EE,20229DE0,extended,46006BC7
+patch=1,EE,E0040109,extended,01BDED80
+patch=1,EE,20229DA8,extended,3C01BF00
+patch=1,EE,20229DAC,extended,44816000
+patch=1,EE,20229DDC,extended,46006346
+patch=1,EE,20229DE0,extended,460073C6
 
 [60 FPS]
 author=asasega
-comment=Patches the game to run at 60 FPS.
-patch=1,EE,2011060C,word,2C420001 
+description=Might need EE Overclock at 130%.
+patch=1,EE,2011060C,word,2C420001
+
+[Remove blur]
+author=PeterDelta
+description=Remove blur effect
+patch=1,EE,204D9D10,word,00000000

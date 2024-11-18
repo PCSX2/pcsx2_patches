@@ -3,7 +3,7 @@ gametitle=Splinter Cell - Pandora Tomorrow (NTSC-U) SLUS-20958 0277247B SC2A.ELF
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001b771c,word,14400005
 patch=1,EE,001b7720,word,3c040048
 patch=1,EE,001b7724,word,0c088178
@@ -92,7 +92,7 @@ patch=1,EE,001b786c,word,ae03008c
 patch=1,EE,001b7870,word,3c033f80
 patch=1,EE,001b7874,word,ae030090
 
-[50 FPS]
+[60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,0018D7AC,word,00000000 //1440FFFA
+description=Might need EE Overclock at 130%.
+patch=1,EE,0018D778,word,24030001 //24030002

@@ -2,7 +2,7 @@ gametitle=Hudson Selction Vol.4 - Adventure Island (J)(SLPM_62422)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by gamemasterplc
+author=gamemasterplc
 
 patch=1,EE,001448EC,word,08030000 //Jump to Custom Code
 patch=1,EE,001448F0,word,C44D0030 //Load Original Aspect into f13 (Delay Slot)

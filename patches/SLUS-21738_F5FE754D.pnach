@@ -1,8 +1,8 @@
-gametitle=Nitrobike (U)(SLUS-21738)
+gametitle=Nitro Bike NTSC-U SLUS-21738 F5FE754D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -20,4 +20,8 @@ patch=1,EE,0039bf14,word,3c013f16 //3c013f00
 //patch=1,EE,00429eb0,word,44810000 //00000000
 //patch=1,EE,00429eb8,word,4600c602 //00000000
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0039C584,word,10400003 //14400003
+patch=1,EE,003816d0,word,3c013c88 //3c013d08

@@ -3,7 +3,7 @@ gametitle=Kingdom Hearts II (PAL-S) SLES-54235 C398F477
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00106d30,word,3c013f4c //c480004c
 patch=1,EE,00106d48,word,3421cccc //4600a7c6
 patch=1,EE,00106d4c,word,4481f800 //00000000
@@ -16,14 +16,18 @@ patch=1,EE,00378574,word,43f90000 //43d00000 zoom for cutscenes (hides sudden po
 patch=1,EE,0037b2c4,word,3f400000 //3f800000 font fix
 patch=1,EE,0037b2c8,word,3f400000 //3f800000
 patch=1,EE,0037b2cc,word,3f400000 //3f800000
-patch=1,EE,0014aac8,word,24050000 //24050200 black border fix
+
+[Remove Blackbars]
+author=ElHecht
+description=Removes black bars in cutscenes
+patch=1,EE,0014aac8,word,24050000 //24050200
 patch=1,EE,0014aaf0,word,24050000 //24050200
 patch=1,EE,0014ab18,word,24050000 //24050200
 patch=1,EE,0014ab48,word,24050000 //24050200
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,2035744C,extended,00000000
 patch=1,EE,E0010005,extended,0033EC84 //fmv
 patch=1,EE,2035744C,extended,00000001
@@ -31,5 +35,6 @@ patch=1,EE,203795E8,extended,3F99999A
 patch=1,EE,2037D318,extended,3F99999A
 
 [Subtitles off]
-comment=Disable subtitles during scenes
+author=ElHecht
+description=Disable subtitles during scenes
 patch=1,EE,00227774,word,11e00019 //15e00019

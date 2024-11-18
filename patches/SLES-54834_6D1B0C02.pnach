@@ -1,9 +1,9 @@
 gametitle=Juiced 2 (PAL-M) SLES-54834 6D1B0C02
 
-[Mode 480p]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan mode 480p at 60 fps
+description=SDTV 480p mode at start.
 patch=1,EE,0040E524,word,3C050000
 patch=1,EE,0040E52C,word,3C060050
 patch=1,EE,0040E534,word,3C070001
-patch=1,EE,11A75D3C,extended,01E2
