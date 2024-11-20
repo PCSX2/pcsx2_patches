@@ -31,4 +31,9 @@ patch=1,EE,201E9C60,extended,0807A71B
 patch=1,EE,2012B838,extended,0804AE17
 patch=1,EE,2015F47C,extended,24060000
 
+[No Fog]
+comment=No Fog by Murugo
+
+//No Fog
+patch=1,EE,201434F0,extended,44800000
 
