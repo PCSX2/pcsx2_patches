@@ -1,4 +1,4 @@
-gametitle=Fatal Frame II: Crimson Butterfly (Undub) * SLUS-20766 * NTSC-U * 1C6C1DB6
+gametitle=Fatal Frame II: Crimson Butterfly (Undub v1.0.2) * SLUS-20766 * NTSC-U * 1C6C1B71
 // same serial-code as 9A51B627 - the regular version.
 // Project Zero II: Crimson Butterfly
 // Zero2Undub: https://github.com/wagrenier/Zero2Undub
@@ -120,12 +120,6 @@ patch=1,EE,0019EDD4,word,10000012 // 54400012
 author=pgert
 description=Puts the Y-axis value to that of 50 Hz-mode (PAL).
 patch=1,EE,00337610,word,3F800000 // 3F600000 - Y-axis of GamePlay (including Cutscenes).
-
-[60 FPS]
-author=asasega
-comment=Everything is double speed - Might need EE overclocking to be stable.
-patch=1,EE,2021B7E4,word,10000007
-patch=1,EE,201F798C,word,2C42003C // gametime fix
 
 // ==========
 // Patches by pgert
