@@ -16,4 +16,7 @@ patch=1,EE,0039a2e8,word,4481f000 //00000000
 patch=1,EE,0039a2ec,word,461e6302 //00000000
 patch=1,EE,0039a2f0,word,080b96a4 //00000000
 
-
+[60 FPS]
+author=asasega
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,00516304,word,42700000 //41F00000

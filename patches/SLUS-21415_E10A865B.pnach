@@ -1,0 +1,6 @@
+gametitle=The Ant Bully (U)(SLUS-21415)
+
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS.
+patch=1,EE,0015CCD4,word,2C620000

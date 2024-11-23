@@ -1,0 +1,13 @@
+gametitle=Rugrats: Royal Ransom (U)(SLUS-20443)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ICUP321
+comment=Widescreen hack
+patch=1,EE,002D6EF0,word,3c013fe3 //3c013faa
+patch=1,EE,002D6EF4,word,34218e38 //3421aaab
+
+[60 FPS]
+author=asasega
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,0041A4A0,word,00000001 //00000002
