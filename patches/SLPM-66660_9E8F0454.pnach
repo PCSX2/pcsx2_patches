@@ -1,0 +1,18 @@
+gametitle=Hokuto no Ken - Shinpan no Sousousei - Kengou Retsuden 北斗の拳 審判の双蒼星 拳豪列伝 (Japan) SLPM_666.60
+
+author=FelixTheCat1970
+[No-Interlacing]
+description=Autoboot in progressive scan video mode and 640x480 pixels-lines
+gsinterlacemode=1
+gsaspectratio=4:3
+
+patch=0,EE,20123050,extended,241B0001
+patch=0,EE,2029832C,extended,A39B86E8
+patch=0,EE,00292D00,extended,24030000
+patch=0,EE,202A2E70,extended,AC4024CC
+patch=0,EE,202B3EB8,extended,0000102D
+patch=0,EE,202B4068,extended,0000102D
+patch=0,EE,202A2EB0,extended,AC612568
+patch=0,EE,002A2E88,extended,2403005A
+patch=0,EE,002A2E74,extended,2406005F
+patch=0,EE,002A2E34,extended,24040003

@@ -90,3 +90,4 @@ author=PeterDelta
 description=SDTV 480p mode at start.
 patch=1,EE,003B905C,extended,00000001
 patch=1,EE,20392208,extended,3F800000
+patch=1,EE,20124A94,extended,240301C0

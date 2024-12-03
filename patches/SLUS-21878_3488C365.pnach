@@ -1,0 +1,8 @@
+gametitle=Ice Age 3 - Dawn of the Dinosaurs NTSC-U SLUS-21878 3488C365
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,20582290,extended,0000003c
+patch=1,EE,E0010001,extended,00580E90
+patch=1,EE,20582290,extended,0000001e

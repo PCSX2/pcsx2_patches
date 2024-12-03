@@ -1,0 +1,8 @@
+gametitle=Ice Age 2 - The Meltdown NTSC-U SLUS-21307 EEC195CA
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,003B4330,extended,0000003c //0000001e
+patch=1,EE,E0010001,extended,003CFABC
+patch=1,EE,203B4330,extended,0000001E

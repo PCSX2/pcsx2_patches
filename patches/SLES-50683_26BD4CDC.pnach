@@ -1,0 +1,10 @@
+gametitle=Sled Storm (PAL-M) SLES-50683 26BD4CDC
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,002C3324,word,24110000
+patch=1,EE,002C3328,word,24120050
+patch=1,EE,002C3334,word,24130001
+patch=1,EE,002F9818,word,3D088889

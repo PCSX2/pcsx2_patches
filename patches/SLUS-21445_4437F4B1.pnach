@@ -21,4 +21,9 @@ patch=1,EE,001a3648,word,e6810090
 patch=1,EE,001a364c,word,3c014480 //vert value
 patch=1,EE,001a3650,word,44810800
 
-
+[No-Interlacing]
+author=NineKain
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//Remove Interlacing
+patch=1,EE,00340864,word,00000000

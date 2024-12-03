@@ -4,17 +4,19 @@ gametitle=SpongeBob SquarePants - Creature from the Krusty Krab (K)(SCKA-20098)
 gsaspectratio=16:9
 author=Arapapa & ICUP321
 
-//Widescreen 16:9
+//Widescreen hack 16:9
 
 //X-Fov
-//00000000 00000000 83ad0046 00000000
-//403f013c 00f08144 83ad0046 82b51e46
+//000000000000000083ad004600000000
 patch=1,EE,0043cb1c,word,3c013f40
 patch=1,EE,0043cb20,word,4481f000
 patch=1,EE,0043cb28,word,461eb582
 
-//Render fix by ICUP321
+//Render fix
 //003f013c 00a08144 98000cc6 (1st)
 patch=1,EE,0041e428,word,3c013f20 //3c013f00
 
-
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS.
+patch=1,EE,21FAFC98,word,42700000 //41F00000

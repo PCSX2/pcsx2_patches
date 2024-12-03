@@ -1,0 +1,6 @@
+gametitle=The Golden Compass NTSC-U SLUS-21677 E514BA51
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0021D794,word,28630001 //28630002

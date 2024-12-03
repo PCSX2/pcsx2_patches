@@ -22,3 +22,8 @@ description=SDTV 480p mode at start.
 patch=1,EE,0049529C,word,24110000
 patch=1,EE,004952A0,word,24120050
 patch=1,EE,004952AC,word,24130001
+
+[Unlock PSP Exclusive Content]
+author=CRASHARKI
+description=Unlocks the PSP Exclusive Content (Cars, Battle Arenas and Co-op mode).
+patch=1,EE,209DFB8C,byte,1 //0

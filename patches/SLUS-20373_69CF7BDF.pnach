@@ -1,4 +1,4 @@
-gametitle=Men in Black II - Alien Escape (U)(SLUS-20373)
+gametitle=Men in Black II - Alien Escape NTSC-U SLUS-20373 69CF7BDF
 
 //[Widescreen 16:9]
 //gsaspectratio=16:9
@@ -14,3 +14,11 @@ gametitle=Men in Black II - Alien Escape (U)(SLUS-20373)
 //patch=1,EE,001a7018,word,3c033f2b //3c033f00
 //causes glitches in textures
 
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,003CB5C0,word,24420002 //24420001
+patch=1,EE,008E1F34,word,3C898889 //3d088889
+patch=1,EE,00288cc8,word,3c023f40 //3c023f80
+patch=1,EE,00288CB0,word,3c02BF40 //3c023f80
+patch=1,EE,002F77A4,word,3C023F40 //3C023F80
