@@ -4,11 +4,17 @@ gametitle=Midnight Club - Street Racing (PAL-M) SLES-50071 831078BD
 gsaspectratio=16:9
 author=PeterDelta
 description=Renders the game in 16:9 aspect ratio
-patch=1,EE,0047B580,word,3F471C97 //3F800000 
-patch=1,EE,0047B594,word,3F471C97 //3F800000
-patch=1,EE,0047B5BC,word,3F471C97 //3F800000
+patch=1,EE,2047B580,extended,3F400000
+patch=1,EE,20428F20,extended,3FAB0000
+patch=1,EE,2047B594,extended,3F800000
+patch=1,EE,2047B5BC,extended,3F800000
+patch=1,EE,20428F60,extended,3F800000
+patch=1,EE,E0030003,extended,003290A0
+patch=1,EE,2047B594,extended,3F400000
+patch=1,EE,2047B5BC,extended,3F400000
+patch=1,EE,20428F60,extended,3F400000
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,003054C4,word,00000001
+description=Might need EE Overclock (130%).
+patch=1,EE,003054C4,extended,00000001
