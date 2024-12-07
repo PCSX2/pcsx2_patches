@@ -19,3 +19,8 @@ patch=1,EE,002e5854,word,3c013f40
 patch=1,EE,002e5858,word,4481f000
 patch=1,EE,002e585c,word,461e0002
 patch=1,EE,002e5860,word,080d56ad
+
+[Remove Blackbars]
+author=BlackNRoses, pgert, Arapapa (original)
+description=No blackbars in cutscenes. Made by suggestion from pgert.
+patch=1,EE,006617B8,word,00000001
