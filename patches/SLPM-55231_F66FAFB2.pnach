@@ -3,6 +3,7 @@ gametitle=Silent Hill - Shattered Memories (J)(SLPM-55231)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000 (NTSC-J by Arapapa)
+comment=Widescreen hack
 
 //widescreen fix
 patch=1,EE,002c4a0c,word,3c013faa //3c013fe3
@@ -20,12 +21,13 @@ patch=1,EE,002c4a40,word,3421aaab //00000000
 patch=1,EE,002c4a44,word,44810000 //00000000
 
 //fastboot widescreen
-//03004230 1000bfdf
 patch=1,EE,003895c8,word,24020002
 
+
+[No noise filter]
+author=IWILLCRAFT
+comment=Noise filter removal
 //noise off
-patch=1,EE,002b67ec,word,24040000 //03e00008
-patch=1,EE,002b67f0,word,03e00008 //ac44b0c0
-patch=1,EE,002b67f4,word,ac44b0c0 //00000000 NTSC-U ac44abc0
+patch=1,EE,2047B0C0,extended,00000000
 
 
