@@ -1,8 +1,8 @@
-gametitle=Another Century's Episode 3 - The Final (J)(SLPS-25784)
+//gametitle=Another Century's Episode 3 - The Final (J)(SLPS-25784)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Arapapa
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -18,16 +18,7 @@ author=Arapapa
 //Render Fix
 //patch=1,EE,0020f3fc,word,3c033e20 //3c033df0
 
-patch=1,EE,0014dc90,word,3c0243d6 //3c0243a0 rfix
-patch=1,EE,0020f5dc,word,3c023f40 //hor
-patch=1,EE,0020F304,word,3C034099 //3C0340cc rfix
-patch=1,EE,0020F308,word,34648666 //3464b333
-
-
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-//Interlace Fix
-patch=1,EE,00101184,word,00000000 //64420008
-
-
+//patch=1,EE,0014dc90,word,3c0243d6 //3c0243a0 rfix
+//patch=1,EE,0020f5dc,word,3c023f40 //hor
+//patch=1,EE,0020F304,word,3C034099 //3C0340cc rfix
+//patch=1,EE,0020F308,word,34648666 //3464b333
