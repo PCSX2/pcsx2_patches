@@ -3,7 +3,7 @@ gametitle=Tekken Tag Tournament [NTSC-J] (SLPS-20015)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-patch=1,EE,0034b004,word,3c013f4E
+patch=1,EE,0034b004,word,3c013f4e
 patch=1,EE,0034b008,word,44810000
 patch=1,EE,0034b010,word,4600c602
 
