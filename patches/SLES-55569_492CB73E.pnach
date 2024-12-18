@@ -24,10 +24,15 @@ patch=1,EE,002c4744,word,44810000
 patch=1,EE,003892B8,word,24020002
 
 
-[No noise filter]
+[No Noise Filter]
 author=IWILLCRAFT
 comment=Noise filter removal
 //noise off
 patch=1,EE,2047ADC0,extended,00000000
 
 
+[Remove Blackbars]
+author=Maori-Jigglypuff (PAL by IWILLCRAFT)
+description=Removes black bars in cutscenes
+// No black Borders
+patch=1,EE,0019E3D0,word,3C010000
