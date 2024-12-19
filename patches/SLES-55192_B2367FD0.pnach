@@ -1,4 +1,4 @@
-gametitle=Nitrobike (E)(SLES-55192)
+gametitle=Nitro Bike PAL-M SLES-55192 B2367FD0
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -16,4 +16,8 @@ patch=1,EE,00429fac,word,461ebdc2 //00000000
 //003f013c 00608144 00009344 00000000 20008046
 patch=1,EE,0039c03c,word,3c013f16 //3c013f00
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0039C6AC,word,10400003 //14400003
+patch=1,EE,00361e50,word,3c013ca3 //3c013d23

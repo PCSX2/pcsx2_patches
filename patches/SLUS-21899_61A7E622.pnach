@@ -3,6 +3,7 @@ gametitle=Silent Hill: Shattered Memories (SLUS-21899)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
+comment=Widescreen hack
 
 //widescreen fix
 patch=1,EE,002c4524,word,3c013faa
@@ -22,7 +23,16 @@ patch=1,EE,002c455c,word,44810000
 //fastboot widescreen
 patch=1,EE,003890E0,word,24020002
 
+
+[No Noise Filter]
+author=nemesis2000
+comment=Noise filter removal
 //noise off
 patch=1,EE,2047ABC0,extended,00000000
 
 
+[Remove Blackbars]
+author=Maori-Jigglypuff
+description=Removes black bars in cutscenes
+// No black Borders
+patch=1,EE,0019E3B0,word,3C010000

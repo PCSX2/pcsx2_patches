@@ -1,4 +1,4 @@
-gametitle=Reign of Fire (E)(SLES-50873)
+gametitle=Reign of Fire PAL-M SLES-50873 79464D5E
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -12,4 +12,8 @@ patch=1,EE,001353b0,word,3c023fab //3c023f80
 //Zoom
 patch=1,EE,00135348,word,3c023f24 //3c023f00
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00265C70,word,00000001 //00000002
+patch=1,EE,00140A50,word,24020032 //24020019

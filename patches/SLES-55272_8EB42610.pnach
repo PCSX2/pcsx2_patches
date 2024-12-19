@@ -1,0 +1,8 @@
+gametitle=Spongebob SquarePants Featuring Nicktoons - Globs of Doom (PAL-M)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,204142B4,extended,3FB60B60 //3F888888
+patch=1,EE,204B4C84,extended,00000001 //00000000

@@ -2,8 +2,8 @@ gametitle=Spyro: A Hero's Tail (SLES-52569)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen
-
-//Widescreen + Extra Perspective
-patch=1,EE,003B28C8,extended,3C013F10
-patch=2,EE,003B28DC,extended,3C013F10
+author=CRASHARKI
+description=Patches the game to run at 16:9 Widescreen Aspect Ratio.
+patch=1,EE,003B2878,extended,3C013F40 //3C013F80 // Fix some 3D HUD elements
+patch=1,EE,003B28C8,extended,3C013F10 //3C013F40
+patch=2,EE,003B28DC,extended,3C013F10 //3C013F40

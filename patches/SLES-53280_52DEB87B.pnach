@@ -1,4 +1,4 @@
-gametitle=7 Sins (Pal-M3)(SLES-53280)
+gametitle=7 Sins PAL-M SLES-53280 52DEB87B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -23,3 +23,13 @@ patch=1,EE,002fd714,word,3c013f40 //00000000
 patch=1,EE,002fd718,word,4481f000 //00000000
 patch=1,EE,002fd71c,word,461e0002 //00000000
 patch=1,EE,002fd720,word,08089aba //00000000
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00428390,word,24020002 //24020001
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=1,EE,001008f4,word,240201c0 //24020200

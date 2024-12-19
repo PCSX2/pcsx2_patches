@@ -1,4 +1,4 @@
-gametitle=World Racing 2 (E)(SLES-53646)
+gametitle=World Racing 2 PAL-M SLES-53646 2A4A9916
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -14,4 +14,7 @@ patch=1,EE,00297460,word,4600c602 //00000000
 //Render fix
 patch=1,EE,0028bc14,word,3c013f2b //3c013f00
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0028724C,word,14400008 //10400008

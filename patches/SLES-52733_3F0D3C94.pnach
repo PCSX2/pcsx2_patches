@@ -1,0 +1,15 @@
+gametitle=Driven to Destruction (PAL-M) SLES-52733 3F0D3C94
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,003DD54C,word,00000001 //00000000
+patch=1,EE,003DD558,word,3F400000 //3F800000
+patch=1,EE,003DD560,word,00000001 //00000000
+patch=1,EE,004A7F7C,word,00000001 //00000000
+patch=1,EE,004A7F84,word,00000001 //00000000
+patch=1,EE,00524078,word,00000001 //00000000
+patch=1,EE,0052407C,word,00000001 //00000000
+patch=1,EE,00524080,word,3F800000 //00000000
+patch=1,EE,00524084,word,E3E30031 //E3E30030

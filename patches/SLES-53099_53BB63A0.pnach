@@ -1,0 +1,16 @@
+gametitle=Pilot Down - Behind Enemy Lines (PAL-M) SLES-53099 53BB63A0
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0041CAA8,word,3C023F1D
+patch=1,EE,0021BD68,word,3C033F22
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0010281C,word,24110000
+patch=1,EE,00102820,word,24120050
+patch=1,EE,0010282C,word,24130001
