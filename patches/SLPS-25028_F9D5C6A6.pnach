@@ -101,4 +101,37 @@ patch=1,EE,20263518,extended,34022000
 patch=1,EE,D06452A0,extended,01000001
 patch=1,EE,20263518,extended,30422000
 
+/**
+All the Inputs for the controller are here:
+===========================================
+
+0x4 =  X Button (accel)
+0x8 =  Square Button (brake)
+0xC =  L1 Button (shift down)
+0x10 = R1 Button (shift up)
+0x14 = Circle Button (Reverse)
+0x18 = L2 Button (Look Back)
+0x1C = R2 Button (Challenge Rival)
+0x20 = Triangle Button
+0x24 = L3 Left Stick (Left Signal)
+0x28 = L3 Right Stick (Right Signal)
+0x2C = R3 Button (Warning Signals)
+0x30 = L3 Button (Horn)
+**\
+
+[Controller Config Change (Type A)]
+author=JakeMR2
+comment=Changes the controller scheme to match TXR2's
+patch=1,EE,0014d08c,word,8E240018 //Accel Button (R2)
+patch=1,EE,0014d070,word,8E24001C //Brake Button (L2)
+patch=1,EE,0014cefc,word,8E240004 //Shift Down (Square)
+patch=1,EE,0014cf1c,word,8E240008 //Shift Up (X)
+patch=1,EE,0014cf5c,word,8E240010 //L1 Button (look back)
+patch=1,EE,0014cf7c,word,8E24000C //R1 Button (Flash Beams)
+patch=1,EE,0014cf3c,word,8E240014 //Circle Button (Reverse)
+patch=1,EE,0014cf9c,word,8E240020 //Triangle Button
+patch=1,EE,0014cfbc,word,8E240024 //L3 Left Stick (Left Signal)
+patch=1,EE,0014cfdc,word,8E240028 //L3 Right Stick (Right Stick)
+patch=1,EE,0014cffc,word,8E24002C //R3 Button (Warning Signals)
+patch=1,EE,0014d01c,word,8E240030 //L3 Button (Horn)
 
