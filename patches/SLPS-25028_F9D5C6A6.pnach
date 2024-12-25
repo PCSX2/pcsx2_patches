@@ -101,6 +101,7 @@ patch=1,EE,20263518,extended,34022000
 patch=1,EE,D06452A0,extended,01000001
 patch=1,EE,20263518,extended,30422000
 
+//Controller Mappings
 //0x4 =  X Button (accel)
 //0x8 =  Square Button (brake)
 //0xC =  L1 Button (shift down)
