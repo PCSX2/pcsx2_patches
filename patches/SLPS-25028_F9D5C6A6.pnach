@@ -101,23 +101,18 @@ patch=1,EE,20263518,extended,34022000
 patch=1,EE,D06452A0,extended,01000001
 patch=1,EE,20263518,extended,30422000
 
-/**
-All the Inputs for the controller are here:
-===========================================
-
-0x4 =  X Button (accel)
-0x8 =  Square Button (brake)
-0xC =  L1 Button (shift down)
-0x10 = R1 Button (shift up)
-0x14 = Circle Button (Reverse)
-0x18 = L2 Button (Look Back)
-0x1C = R2 Button (Challenge Rival)
-0x20 = Triangle Button
-0x24 = L3 Left Stick (Left Signal)
-0x28 = L3 Right Stick (Right Signal)
-0x2C = R3 Button (Warning Signals)
-0x30 = L3 Button (Horn)
-**\
+//0x4 =  X Button (accel)
+//0x8 =  Square Button (brake)
+//0xC =  L1 Button (shift down)
+//0x10 = R1 Button (shift up)
+//0x14 = Circle Button (Reverse)
+//0x18 = L2 Button (Look Back)
+//0x1C = R2 Button (Challenge Rival)
+//0x20 = Triangle Button
+//0x24 = L3 Left Stick (Left Signal)
+//0x28 = L3 Right Stick (Right Signal)
+//0x2C = R3 Button (Warning Signals)
+//0x30 = L3 Button (Horn)
 
 [Controller Config Change (Type A)]
 author=JakeMR2
