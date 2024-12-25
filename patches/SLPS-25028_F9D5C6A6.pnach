@@ -101,6 +101,10 @@ patch=1,EE,20263518,extended,34022000
 patch=1,EE,D06452A0,extended,01000001
 patch=1,EE,20263518,extended,30422000
 
+[Controller Config Change (Type A)]
+author=JakeMR2
+comment=Changes the controller scheme to match TXR2's
+
 //Controller Mappings
 //0x4 =  X Button (accel)
 //0x8 =  Square Button (brake)
@@ -115,9 +119,6 @@ patch=1,EE,20263518,extended,30422000
 //0x2C = R3 Button (Warning Signals)
 //0x30 = L3 Button (Horn)
 
-[Controller Config Change (Type A)]
-author=JakeMR2
-comment=Changes the controller scheme to match TXR2's
 patch=1,EE,0014d08c,word,8E240018 //Accel Button (R2)
 patch=1,EE,0014d070,word,8E24001C //Brake Button (L2)
 patch=1,EE,0014cefc,word,8E240004 //Shift Down (Square)
