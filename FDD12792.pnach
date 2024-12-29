@@ -1,7 +1,9 @@
 gametitle=Ultimate Spider-Man (U)(SLUS-20870) // Ultimate Spider-Man [Limited Edition] (U)(SLUS-21285) 
 
-[Widescreen 16:9]
+[Widescreen 16:9 & FOV]
 gsaspectratio=16:9
+author=RatedRGamer
+comment=Widescreen Hack
 
 patch=1,EE,000c0000,word,3c030074
 patch=1,EE,000c0004,word,3c013faa
@@ -9,6 +11,6 @@ patch=1,EE,000c0008,word,3421aaab
 patch=1,EE,000c000c,word,4481f000
 patch=1,EE,000c0010,word,461e18c2
 patch=1,EE,000c0014,word,08162c85
-[X-Fov]
 //7400033c 3c10e14b
 patch=1,EE,0058b210,word,08030000
+
