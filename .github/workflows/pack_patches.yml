@@ -4,37 +4,42 @@ on: [push, pull_request]
 
 jobs:
   pack:
-    name: Pack patches
+    name: Pack and publish patches
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Create archives
         run: |
           7z a -r patches.zip ./patches/*
 
       - name: Upload archives
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cheats
           path: ./patches.zip
           if-no-files-found: error
 
-  release:
-    needs: [pack]
-    name: Publish release
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
-
-      - name: Create a new release
-        uses: marvinpinto/action-automatic-releases@latest
+      - name: Update tag
+        uses: actions/github-script@v7
+        if: github.ref == 'refs/heads/main'
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: latest
-          prerelease: false
-          title: Latest Build
-          files: ./cheats/patches.zip
+          script: |
+            github.rest.git.updateRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: 'refs/tags/latest',
+              sha: context.sha,
+              force: true
+            })
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          make_latest: true
+          tag_name: latest
+          fail_on_unmatched_files: true
+          name: Latest Build
+          files: ./patches.zip
