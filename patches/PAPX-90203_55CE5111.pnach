@@ -4,4 +4,5 @@ description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,2023FF70,word,00000000
 
+// Rip
 
