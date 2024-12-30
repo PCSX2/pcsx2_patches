@@ -13,4 +13,69 @@ gsinterlacemode=1
 patch=1,EE,201381B8,word,24027900
 patch=1,EE,201018D4,word,64420000
 
+[Undub]
+author=BloodRaynare
+description=Forces the use of the original Japanese voices at all times.
+//In-game voices
+patch=1,EE,203ef4c4,word,0016a9a0
+patch=1,EE,203ef4c8,word,0016aa00
+patch=1,EE,203ef4cc,word,0016aa00
+patch=1,EE,203ef4d0,word,0016aa00
+patch=1,EE,203ef4d4,word,0016aa00
+patch=1,EE,203ef4d8,word,0016aa00
+patch=1,EE,203ef4dc,word,0016aa00
 
+//In-game cutscenes
+patch=1,EE,203ef524,word,0016abb8
+patch=1,EE,203ef528,word,0016ac3c
+patch=1,EE,203ef52c,word,0016ac3c
+patch=1,EE,203ef530,word,0016ac3c
+patch=1,EE,203ef534,word,0016ac3c
+patch=1,EE,203ef538,word,0016ac3c
+patch=1,EE,203ef53c,word,0016ac3c
+
+//Enemy voices
+patch=1,EE,203ef5e4,word,0016aea0
+patch=1,EE,203ef5e8,word,0016af04
+patch=1,EE,203ef5ec,word,0016af04
+patch=1,EE,203ef5f0,word,0016af04
+patch=1,EE,203ef5f4,word,0016af04
+patch=1,EE,203ef5f8,word,0016af04
+patch=1,EE,203ef5fc,word,0016af04
+
+//FMV cutscenes
+patch=1,EE,202c26d8,word,5c4a415c
+patch=1,EE,202c2728,word,454e5c4a
+patch=1,EE,202c2774,word,5c4a415c
+patch=1,EE,202c27c4,word,454e5c4a
+patch=1,EE,202c2810,word,5c4a415c
+patch=1,EE,202c2860,word,454e5c4a
+patch=1,EE,202c28ac,word,5c4a415c
+patch=1,EE,202c28fc,word,454e5c4a
+patch=1,EE,202c2948,word,5c4a415c
+patch=1,EE,202c2998,word,454e5c4a
+patch=1,EE,202c29e4,word,5c4a415c
+patch=1,EE,202c2a34,word,454e5c4a
+patch=1,EE,202c2a80,word,5c4a415c
+patch=1,EE,202c2ad0,word,454e5c4a
+patch=1,EE,202c2b1c,word,5c4a415c
+patch=1,EE,202c2b6c,word,454e5c4a
+patch=1,EE,202c2bb8,word,5c4a415c
+patch=1,EE,202c2c08,word,414e5c4a
+patch=1,EE,202c2c54,word,5c4a415c
+patch=1,EE,202c2ca4,word,414e5c4a
+patch=1,EE,202c2cf0,word,5c4a415c
+patch=1,EE,202c2d40,word,414e5c4a
+patch=1,EE,202c2d8c,word,5c4a415c
+patch=1,EE,202c2ddc,word,414e5c4a
+patch=1,EE,202c2e28,word,5c4a415c
+patch=1,EE,202c2e78,word,414e5c4a
+patch=1,EE,202c2ec4,word,5c4a415c
+patch=1,EE,202c2f14,word,414e5c4a
+patch=1,EE,202c2f60,word,5c4a415c
+patch=1,EE,202c2fb0,word,414e5c4a
+patch=1,EE,202c2ffc,word,5c4a415c
+patch=1,EE,202c304c,word,414e5c4a
+patch=1,EE,202c3098,word,5c4a415c
+patch=1,EE,202c30e8,word,414e5c4a
+patch=1,EE,202c3134,word,5c4a415c
