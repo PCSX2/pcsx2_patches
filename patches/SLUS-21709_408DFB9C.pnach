@@ -21,19 +21,8 @@ patch=1,EE,00211be8,word,1000ffdf
 //rfix by ElHecht
 patch=1,EE,00256234,word,3c033f2b
 
-//black borders fix
-patch=1,EE,001f4b58,word,3c020000
-patch=1,EE,001f4a68,word,3c030000
-patch=1,EE,001f4ad8,word,3c020000
-
 //resolution fix (upped from 512x448 to 640x448) by nemesis2000
 patch=1,EE,002125b4,word,24020280
-
-//480p
-patch=1,EE,0010cedc,word,3c050000
-patch=1,EE,0010cee4,word,3c060050
-patch=1,EE,0010ceec,word,3c070001
-patch=1,EE,0010d1ac,word,3c090010
 
 //FMV's fix  by nemesis2000
 patch=1,EE,0021114c,word,24020188
@@ -67,4 +56,15 @@ patch=1,EE,002111b8,word,468000e0
 patch=1,EE,002111bc,word,8c8301e8
 patch=1,EE,002111c0,word,46021043
 
+[480p Mode]
+description=Forces progressive scan mode
+patch=1,EE,0010cedc,word,3c050000
+patch=1,EE,0010cee4,word,3c060050
+patch=1,EE,0010ceec,word,3c070001
+patch=1,EE,0010d1ac,word,3c090010
 
+[Remove Blackbars]
+description=Removes black bars in cutscenes
+patch=1,EE,001f4b58,word,3c020000
+patch=1,EE,001f4a68,word,3c030000
+patch=1,EE,001f4ad8,word,3c020000

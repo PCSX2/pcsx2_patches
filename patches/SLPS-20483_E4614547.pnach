@@ -2,7 +2,7 @@ gametitle=Kamen Rider Kabuto (J)(SLPS-20483)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -10,7 +10,7 @@ comment=Widescreen hack by Arapapa
 //803f013c 00a88144 01a50046
 patch=1,EE,0011b54c,word,3c013fab //3c013f80
 
-/Cutscene Y-Fov
+//Cutscene Y-Fov
 //00008044 32d00046
 patch=1,EE,0011b590,word,08030008
 patch=1,EE,000c0020,word,44800000
@@ -28,7 +28,7 @@ patch=1,EE,000c004c,word,461e6b42
 patch=1,EE,000c0050,word,08066032
 
 ///////////////////////////////////
-/Gameplay Zoom
+//Gameplay Zoom
 //patch=1,EE,00108f30,word,3c014400 //3c01447a
 //Menu Zoom
 //patch=1,EE,00143f54,word,3c014400 //3c01447a

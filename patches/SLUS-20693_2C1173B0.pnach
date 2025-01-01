@@ -2,11 +2,11 @@ gametitle=F1 Career Challenge (PAL & NTSC-U)(SLUS-20693 & SLES-51584)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00328744,word,01010101
 
-//Widescreen hack 16:9
-
-//X-Fov
-patch=1,EE,002ba160,word,3c013f40 //3c013f80
-
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0033DF50,extended,00000001

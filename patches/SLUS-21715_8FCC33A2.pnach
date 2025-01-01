@@ -2,10 +2,9 @@ gametitle=Cabela's Monster Bass (U)(SLUS-21715)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
-s
 //Zoom
 patch=1,EE,002ef4ac,word,3c023f20 //3c023f00
 

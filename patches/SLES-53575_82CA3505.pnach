@@ -1,0 +1,19 @@
+gametitle=Bratz - Rock Angelz (PAL-S) SLES-53575 82CA3505
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,002FAF64,word,3C013F40
+patch=1,EE,002FAF68,word,4481F000
+patch=1,EE,002FAF70,word,461EB582
+patch=1,EE,0035BFD4,word,3C013F2B
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0031C7D4,extended,03E00004
+patch=1,EE,0034C5B4,extended,3C013F00
+patch=1,EE,E0020001,extended,003E3F50
+patch=1,EE,0031C7D4,extended,03E00008
+patch=1,EE,0034C5B4,extended,3C013F80

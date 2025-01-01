@@ -1,17 +1,14 @@
-gametitle=Looney Tunes - Space Race (E)(SLES-50487)
+gametitle=Looney Tunes - Space Race (PAL-M) (SLES-50487) 5E641834
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen hack
-
-//Widescreen hack 16:9
-
+description=Renders the game in 16:9 aspect ratio
 //X-Fov
 //80bf023c e001b027
 patch=1,EE,002ac728,word,3c02bf40 //3c02bf80
 
 [50/60 FPS]
 author=PeterDelta
-comment=Patches the game to run at 50/60 FPS (Might need 130% EE Overclock to be stable).
+description=Might need EE Overclock at 130%.
 patch=1,EE,003881F4,word,00000001

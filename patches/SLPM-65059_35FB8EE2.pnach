@@ -2,7 +2,7 @@ gametitle=Gun Survivor 2 - BioHazard Code - Veronica (with GunCon2) [NTSC-J] (SL
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht (pnach by Little Giant)
+author=ElHecht (pnach by Little Giant)
 
 // 16:9
 patch=1,EE,00333af8,word,3c023f61 // 3c023f96 hor fov

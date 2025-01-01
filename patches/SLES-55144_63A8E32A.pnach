@@ -1,0 +1,14 @@
+gametitle=The Chronicles of Narnia - Prince Caspian (PAL-M) SLES-55144 63A8E32A
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,003C3590,word,00000000
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0043DD7C,word,24110000
+patch=1,EE,0043DD80,word,24120050
+patch=1,EE,0043DD8C,word,24130001

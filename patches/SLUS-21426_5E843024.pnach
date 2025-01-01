@@ -1,0 +1,8 @@
+gametitle=Call of Duty 3 SLUS-21426 5E843024
+
+[60 FPS]
+author=asasega & Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2053CF04,extended,00000001 //00000002
+patch=1,EE,E0010001,extended,00543176
+patch=1,EE,2053CF04,extended,00000002

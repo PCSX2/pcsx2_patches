@@ -1,0 +1,13 @@
+gametitle=Star Wars - Bounty Hunter (PAL-F) (SLES_508.32)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack Conversion
+
+patch=1,EE,20450DE0,extended,3F400000 // 3F800000  hor +
+//20450df8  bf800000  zoom
+//20450e04  3f800000  vert -
+patch=1,EE,203CDB50,extended,3Fb00000 // 3F800000    render fix?
+
+

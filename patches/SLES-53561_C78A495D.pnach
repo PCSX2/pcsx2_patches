@@ -1,8 +1,9 @@
-gametitle=Canis Canem Edit (SLES-53561)
+gametitle=Canis Canem Edit (Bully) PAL (SLES-53561) CRC C78A495D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
+description=Widescreen fix
 
 //Widescreen fix
 patch=1,EE,004720d0,word,14640007
@@ -33,22 +34,22 @@ patch=1,EE,2072a3c8,extended,432b0000
 patch=1,EE,e001aaab,extended,005e1638
 patch=1,EE,2072a3cc,extended,432b0000
 
-//patch=1,EE,e001aaab,extended,005e1638
-//patch=1,EE,204720cc,extended,24030000
+[Disable Depth of Field]
+author=refraction
+description=Removes depth of field effect
 
-//patch=1,EE,e001aaab,extended,005e1638
-//patch=1,EE,20222dec,extended,3c01bec0
+patch=1,EE,003DA2D4,word,5000021A //Skips DoF code block.
 
-//patch=1,EE,e001aaab,extended,005e1638
-//patch=1,EE,201d5124,extended,3c023fc0
+[50 FPS]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,201F3EF8,extended,28420001 //28420002
 
-//patch=1,EE,e0010000,extended,005e1638
-//patch=1,EE,204720cc,extended,90637c9e
-
-//patch=1,EE,e0010000,extended,005e1638
-//patch=1,EE,20222dec,extended,3c01bf00
-
-//patch=1,EE,e0010000,extended,005e1638
-//patch=1,EE,201d5124,extended,3c024000
-
-
+[480p Mode]
+gsinterlacemode=1
+author=Gabominated
+description=SDTV 480p mode at start, use Software renderer for FMVs. Might need enable EE Overclock to be stable.
+patch=1,EE,D1C9C84E,extended,00000002
+patch=1,EE,20112320,extended,24120050
+patch=1,EE,D1C9C84E,extended,00000001
+patch=1,EE,20112320,extended,00069403

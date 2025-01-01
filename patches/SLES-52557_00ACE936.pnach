@@ -1,0 +1,25 @@
+gametitle=Crimson Sea 2 (PAL-F) (SLES-52557)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack Conversion
+
+// orginal NTSC-patch by sergx12
+// ported to PAL F, added widescreen support for 2player mode by elhecht
+
+// gameplay
+patch=1,EE,00445778,word,3c024328 // 3c024360 zoom
+patch=1,EE,00445788,word,3c023f1f // 3c023eee ver fov
+patch=1,EE,0044578c,word,344349fc // 3443eeef ver fov
+
+// 2-player game
+patch=1,EE,00445818,word,3c0242a8 // 3c0242e0 zoom player1
+patch=1,EE,00445830,word,3c023f1f // 3c023eee ver fov player1
+patch=1,EE,00445834,word,344349fc // 3443eeef ver fov player1
+
+patch=1,EE,004458b4,word,3c0242a8 // 3c0242e0 zoom player2
+patch=1,EE,004458cc,word,3c023f1f // 3c023eee ver fov player2
+patch=1,EE,004458d0,word,344249fc // 3443eeef ver fov player2
+
+

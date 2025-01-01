@@ -1,8 +1,8 @@
-gametitle=Knights Of The Temple II (PAL-M5) (SLES-53645)
+gametitle=Knights of the Temple II PAL-M SLES-53645 9637D496
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,001034e4,word,3c013f40 // 00000000 hor fov
@@ -21,4 +21,7 @@ patch=1,EE,006c4984,word,3faaaaab // 00000000 inventory screen fix1
 patch=1,EE,0018a254,word,3c013faa // c4730000 inventory screen fix2
 patch=1,EE,0018a274,word,afa10000 // e7b30000
 
-
+[50 FPS]
+author=Gabominated & PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0010AF04,word,2C620001 //2C620002

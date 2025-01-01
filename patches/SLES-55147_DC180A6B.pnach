@@ -1,10 +1,27 @@
-gametitle=Silent Hill Origins (SLES-55147)
+gametitle=Silent Hill Origins (PAL-M) (SLES-55147)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
+description=Widescreen fix
+patch=1,EE,001DA9EC,word,3C013FE3
+patch=1,EE,001DA9F0,word,34218E39
+patch=1,EE,001E4938,word,AC40EC80 //noise off
+patch=1,EE,00338F9C,word,43F00000 //43B90000 sub y-pos
+patch=1,EE,00338FA8,word,41A80000 //41600000 sub size
 
-patch=1,EE,001da9ec,word,3c013fe3
-patch=1,EE,001da9f0,word,34218e39
+[50 FPS]
+author=PeterDelta
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,006B3974,extended,04000001 //04000002
 
+[Remove Blackbars]
+author=nemesis2000
+description=Removes black bars in cutscenes
+patch=1,EE,001832d4,word,3c010000 //3c014220
 
+[No Noise Filter]
+comment=Noise filter removal
+author=Maori-Jigglypuff (PAL by IWILLCRAFT)
+patch=1,EE,0034E6D4,word,00000000
+patch=1,EE,0033EC80,word,00000000

@@ -1,13 +1,14 @@
-gametitle=Sniper Elite [PAL-M5] (SLES-51820)
+gametitle=Sniper Elite [PAL-M5] (SLES-51820) EF47C233
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen Hack ported from NTSC hack by Arapapa
-//Zoom
-patch=1,EE,005015d0,word,3f9faaab //3eaaaaab
+comment=Renders the game in 16:9 aspect ratio
+//Widescreen Hack ported from NTSC hack by Arapapa
+patch=1,EE,005015d0,word,3f9faaab //3eaaaaab Zoom
+patch=1,EE,00502848,word,3fe38e2a //3faaaaab Y-FOV
 
-//Y-FOV
-patch=1,EE,00502848,word,3fe38e2a //3faaaaab
-
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,00198FA8,word,1460000A //1060000A

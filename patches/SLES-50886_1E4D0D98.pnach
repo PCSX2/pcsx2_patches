@@ -1,8 +1,8 @@
-gametitle=TransWorld Surf (E)(SLES-50886)
+gametitle=TransWorld Surf PAL-M SLES-50886 1E4D0D98
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -10,4 +10,11 @@ comment=Widescreen hack by Arapapa
 patch=1,EE,001857b8,word,3c013fe2 //3c013faa
 patch=1,EE,001857bc,word,342193fc //34213d71
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,1027EA54,extended,00000001 //00000002
+patch=1,EE,202818D8,extended,3c888889 //3d088889
+patch=1,EE,E0020001,extended,003A5244
+patch=1,EE,1027EA54,extended,00000002
+patch=1,EE,202818D8,extended,3d088889

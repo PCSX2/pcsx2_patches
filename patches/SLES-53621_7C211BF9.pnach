@@ -1,17 +1,13 @@
-gametitle=Wallace & Gromit - The Curse of the Were-Rabbit (E)(SLES-53621)
+gametitle=Wallace & Gromit - The Curse of the Were-Rabbit (E)(SLES-53621) 7C211BF9
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,0011a4f4,word,3c013f1d //3c013f00 Zoom
+patch=1,EE,0011a598,word,3c014080 //3c014040 Y-Fov
 
-//Widescreen hack 16:9
-
-//Zoom
-//003f013c 00008144 7000b07f
-patch=1,EE,0011a4f4,word,3c013f1d //3c013f00
-
-//Y-Fov
-//4040013c 00008144 803e013c 00088144 (2nd)
-patch=1,EE,0011a598,word,3c014080 //3c014040
-
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,004349D5,word,00000000 //4500004D

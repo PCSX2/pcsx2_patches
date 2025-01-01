@@ -1,0 +1,10 @@
+gametitle=Star Wars - Battlefront 2 (NTSC-U) SLUS-21240 02F4B541 secondary SWBFRNT2.ELF=24954053
+//Corresponds to the main crc to activate the secondary crc 24954053 called SWBFRNT2.ELF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000 and Arapapa
+
+[60 FPS]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overlooked to be stable. 

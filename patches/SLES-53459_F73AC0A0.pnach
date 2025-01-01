@@ -1,8 +1,12 @@
-gametitle=Marc Ecko's Getting Up - Contents Under Pressure SLES_534.59
+gametitle=Marc Ecko's Getting Up - Contents Under Pressure (PAL-M) SLES_534.59 F73AC0A0
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+author=sergx12
+comment=Renders the game in 16:9 aspect ratio
 patch=1,EE,0056768c,word,3c023f40
 
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,001CC7A8,word,00000001 //00000002

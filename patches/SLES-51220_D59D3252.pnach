@@ -1,0 +1,8 @@
+gametitle=TY the Tasmanian Tiger (PAL-M) SLES-51220 D59D3252
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Widescreen Hack
+patch=1,EE,00228FC8,word,3C013F40 //3C013F80
+

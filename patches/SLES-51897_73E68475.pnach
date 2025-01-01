@@ -1,4 +1,4 @@
-gametitle=The Simpsons - Hit & Run (PAL-M4) (SLES-51897)
+gametitle=The Simpsons - Hit & Run (PAL-M4) (SLES-51897) 73E68475
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -12,4 +12,10 @@ patch=1,EE,002a1f88,word,00000000 // 10400004
 patch=1,EE,0031e0b8,word,00000000 // 10400004
 patch=1,EE,0031eea4,word,00000000 // 10400004
 
-
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start. Might need EE Overclock (130%)
+patch=1,EE,00406524,word,24110000
+patch=1,EE,00406528,word,24120050
+patch=1,EE,00406534,word,24130001

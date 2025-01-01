@@ -1,0 +1,6 @@
+gametitle=Chroniken von Narnia, Die - Der König von Narnia (PAL-G) SLES-53707 F29FA505
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,001721D8,word,28420001 //28420002

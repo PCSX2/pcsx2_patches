@@ -1,0 +1,15 @@
+gametitle=Tokyo Xtreme Racer 3 (SLUS-20831)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+patch=1,EE,00141248,word,3c043f53
+patch=1,EE,00141250,word,34883333
+
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,20131684,extended,00000000
+
+

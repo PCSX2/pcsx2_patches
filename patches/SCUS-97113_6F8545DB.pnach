@@ -1,29 +1,97 @@
-gametitle=ICO (SCUS-97113)
+gametitle=ICO * NTSC-U * SCUS-97113 * 6F8545DB
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
-//widescreen
+// 16:9 widescreen
 patch=1,EE,001146c8,word,3c013f40
 patch=1,EE,001146cc,word,44813800
 patch=1,EE,001146d8,word,46071082
 patch=1,EE,001146dc,word,c78780dc
 
-//render fix
-patch=1,EE,001141a4,word,240302ab
-patch=1,EE,00554790,word,44800000 //optional
+// 16:9 Render fix
+patch=1,EE,001141a4,word,240302ab  
+patch=1,EE,00554790,word,44fa0000
 
-//black borders fix
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000 & pgert
+patch=1,EE,001146c8,word,3c013f55
+patch=1,EE,001146cc,word,44813800
+patch=1,EE,001146d8,word,46071082
+patch=1,EE,001146dc,word,c78780dc
+patch=1,EE,001141a4,word,240302ab  
+patch=1,EE,00554790,word,44e10000
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000 & pgert
+patch=1,EE,001146c8,word,3c013f64
+patch=1,EE,001146cc,word,44813800
+patch=1,EE,001146d8,word,46071082
+patch=1,EE,001146dc,word,c78780dc
+patch=1,EE,001141a4,word,240302ab  
+patch=1,EE,00554790,word,44d2f000
+
+[Widescreen 20:9]
+gsaspectratio=Stretch
+author=nemesis2000, kripkrop, Devina & pgert
+comment=Imperfections might show up.
+patch=1,EE,001146c8,word,3c013f1a
+patch=1,EE,001146cc,word,44813800
+patch=1,EE,001146d8,word,46071082
+patch=1,EE,001146dc,word,c78780dc
+patch=1,EE,001141a4,word,24030aaa
+patch=1,EE,00554790,word,451c4000
+
+[Widescreen 21:9]
+gsaspectratio=Stretch
+author=nemesis2000, kripkrop, Devina & pgert
+comment=Imperfections might show up.
+patch=1,EE,001146c8,word,3c013f12
+patch=1,EE,001146cc,word,44813800
+patch=1,EE,001146d8,word,46071082
+patch=1,EE,001146dc,word,c78780dc
+patch=1,EE,001141a4,word,24030aaa
+patch=1,EE,00554790,word,45241000
+
+[Remove Blackbars]
+author=nemesis2000
+description=Removes black bars in cutscenes
 patch=1,EE,00113030,word,3c010000
 
+///////////////////
+
+[Slow Motion (60 fps)]
+author=synce
+patch=1,EE,20274EC4,extended,00000001
+
+[Wireframe]
+author=synce
+patch=1,EE,20632CC8,extended,00000001
+
+///////////////////
+
+[60 fps]
+author=synce & Agrippa
+// 60 fps hack Agrippa based on the NTSC-U hack by synce
+// - restores the original value in the cutscenes
+comment=Might need EE overclocking to be stable.
+patch=1,EE,E0010000,extended,006325B4
+patch=1,EE,00274EC4,extended,00000001
+patch=1,EE,E0010001,extended,006325B4
+patch=1,EE,00274EC4,extended,00000002
+
+///////////////////
 
 [No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
+author=asasega
+description=Attempts to disable interlaced offset rendering.
 patch=1,EE,00274EF8,extended,00000001
 patch=1,EE,00274F20,extended,00000001
 patch=1,EE,00274F00,extended,00000040
 patch=1,EE,00274F28,extended,00000040
 
-
+///////////////////

@@ -1,0 +1,18 @@
+gametitle=Bad Boys II (PAL-M) SLES-52362 5D0235B7
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Renders the game in 16:9 aspect ratio
+author=Arapapa
+//X-Fov
+patch=1,EE,002ea1bc,word,080e9f64 //46166302
+patch=1,EE,003a7d90,word,46166302 //00000000
+patch=1,EE,003a7d94,word,3c013fa3 //00000000
+patch=1,EE,003a7d98,word,4481f000 //00000000
+patch=1,EE,003a7d9c,word,461e6302 //00000000
+patch=1,EE,003a7da0,word,080ba870 //00000000
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0051C4C4,word,42480000 //41C80000

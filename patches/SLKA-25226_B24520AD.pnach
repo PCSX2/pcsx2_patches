@@ -2,7 +2,7 @@ gametitle=The Incredibles (K)(SLKA-25226)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Sergx12 (NTSC-K by Arpapa)
+author=sergx12 (NTSC-K by Arpapa)
 
 //Gameplay 16:9
 //003f023c 00008244 8e3c033c

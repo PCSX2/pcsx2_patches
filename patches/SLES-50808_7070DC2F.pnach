@@ -1,6 +1,6 @@
-gametitle=Deus Ex SLES-50808 PAL-S 3AC738AA. ELF secondary 7070DC2F
+gametitle=Deus Ex (PAL-S) SLES-50808 7070DC2F DEUSEX.ELF
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 180%.
 patch=1,EE,0030F8B4,word,28420001 //28420002

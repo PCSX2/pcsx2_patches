@@ -2,13 +2,13 @@ gametitle=Simple 2000 Series Vol. 108 - The Nippon Tokushubutai (J)(SLPS-20476)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
 //X-Fov
 //803f043c 7f4b023c
-patch=1,EE,001996a0`,word,3c043f40 //3c043f80
+patch=1,EE,001996a0,word,3c043f40 //3c043f80
 
 //Zoom
 //323f043c 6c0745ac c3b88234  3F6E4BA9

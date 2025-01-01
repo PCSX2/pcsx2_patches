@@ -1,0 +1,17 @@
+gametitle=Sengoku Basara X (Japan) SLPM-55008
+
+author=FelixTheCat1970
+[No-Interlacing]
+description=Autoboot in progressive scan video mode and 640x480 pixels-lines
+gsinterlacemode=1
+gsaspectratio=4:3
+
+patch=0,EE,202FAF80,extended,0000102D
+patch=0,EE,2019CF00,extended,A2120016
+patch=0,EE,2010CF00,extended,0000202D
+patch=0,EE,001EA6B4,extended,24060000
+patch=0,EE,20386720,extended,002A0640
+patch=0,EE,20386740,extended,002A0640
+patch=0,EE,002A0550,extended,24020000
+patch=0,EE,201EA7D0,extended,AE0AFCB4
+patch=0,EE,001EA6B8,extended,24020003

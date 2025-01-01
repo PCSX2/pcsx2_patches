@@ -1,8 +1,8 @@
-gametitle=Cars Race-O-Rama (U)(SLUS-21883)
+gametitle=Disney/Pixar Cars - Race-O-Rama NTSC-U SLUS-21883 E4278493
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -28,4 +28,9 @@ patch=1,EE,00313360,word,08051d51
 //patch=1,EE,00112edc,word,3c033cae //3c033c8e
 //patch=1,EE,00112ee0,word,34633000 //3c033c8e
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,201A07D4,extended,0060102D //0060202D
+patch=1,EE,E0010001,extended,003FCD38
+patch=1,EE,201A07D4,extended,0060202D

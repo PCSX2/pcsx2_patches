@@ -2,7 +2,7 @@ gametitle=Kamen Rider Hibiki (J)(SLPS-20447)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -23,7 +23,7 @@ comment=Widescreen hack by Arapapa
 //803f013c 00a88144 01a50046
 patch=1,EE,00130894,word,3c013fab //3c013f80
 
-/Cutscene Y-Fov
+//Cutscene Y-Fov
 //00008044 32d00046
 patch=1,EE,001308d8,word,08030008
 patch=1,EE,000c0020,word,44800000

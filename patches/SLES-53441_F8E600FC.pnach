@@ -2,7 +2,7 @@ gametitle=Heroes of the Pacific (E)(SLES-53441)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -17,4 +17,17 @@ patch=1,EE,00148770,word,461e0843 // 00000000
 patch=1,EE,00148774,word,e6010068 // 00000000
 patch=1,EE,00148778,word,0806ede4 // 00000000
 
-
+[50/60 FPS]
+author=Gabominated
+description=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,201CADD4,extended,10000007 //10400007 fps
+patch=1,EE,E0043D23,extended,0067F2BA //condition 50herz
+patch=1,EE,1067F2B2,extended,00003CA3
+patch=1,EE,1067F2B6,extended,00003CA3
+patch=1,EE,1067F2BA,extended,00003CA3
+patch=1,EE,1067F2BE,extended,00003CA3
+patch=1,EE,E0043D08,extended,0067F2BA //condition 60herz
+patch=1,EE,1067F2B2,extended,00003C88
+patch=1,EE,1067F2B6,extended,00003C88
+patch=1,EE,1067F2BA,extended,00003C88
+patch=1,EE,1067F2BE,extended,00003C88

@@ -1,0 +1,10 @@
+gametitle=Monster Hunter (J) (SLPM-65495) (English patched) 
+
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+
+author=nemesis2000 (NTSC-J by Arapapa)
+
+patch=1,EE,00169d24,word,3c023ff3 //3c023fb6
+patch=1,EE,00169d2c,word,3442cf35 //3442db6e

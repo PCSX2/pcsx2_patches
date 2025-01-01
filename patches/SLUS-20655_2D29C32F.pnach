@@ -1,18 +1,18 @@
-gametitle=Hobbit, The (U)(SLUS-20655)
+gametitle=Hobbit, The (U) (SLUS-20655) 2D29C32F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00389B30,word,3C013ED5 //3C013F00 Y-Fov
+patch=1,EE,00389C44,word,3C013F49 //3C013F00 Render fix
+patch=1,EE,003887C8,word,3C013F1D
 
-//Widescreen hack 16:9
-
-//Zoom
-patch=1,EE,002f9434,word,3c013ec0 //3c013f00
-
-//Y-Fov
-patch=1,EE,00389b30,word,3c013ec0 //3c013f00
-
-//Render fix
-patch=1,EE,00389c44,word,3c013f40 //3c013f00
-
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,004033DC,extended,00000001
+patch=1,EE,E0010000,extended,003E7410
+patch=1,EE,004033DC,extended,00000002
+patch=1,EE,E0010001,extended,00471A34
+patch=1,EE,004033DC,extended,00000002

@@ -2,7 +2,7 @@ gametitle=Grandia II (PAL-E) (SLES-50498)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by ElHecht
+author=ElHecht
 //
 // jump to code-inject
 patch=1,EE,0025ca80,word,0c101c0d // 3c013f80

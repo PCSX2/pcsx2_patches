@@ -1,0 +1,6 @@
+gametitle=London Racer - Destruction Madness (PAL-M) SLES-53654 2E66AAEA
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0021C828,word,44020000 //44820800

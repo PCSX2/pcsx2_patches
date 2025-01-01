@@ -1,0 +1,15 @@
+gametitle=Stuntman Ignition (PAL-M) SLES-54820 9454F864
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,002AA174,word,3C023F10 //3C023F40
+patch=1,EE,005AC8E0,word,3F0BC36F //3F3A59EA
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0033FC7C,extended,24A20001
+patch=1,EE,E0010001,extended,0059D170
+patch=1,EE,0033FC7C,extended,24A20002

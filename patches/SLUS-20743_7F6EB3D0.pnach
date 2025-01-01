@@ -3,7 +3,7 @@ gametitle=Prince of Persia: The Sands of Time (SLUS-20743)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen hack
+description=Renders the game in 16:9 aspect ratio
 
 //gameplay
 patch=1,EE,004b5114,word,3c033f40
@@ -29,7 +29,14 @@ patch=1,EE,001d8c88,word,3464dddd
 patch=1,EE,00253110,word,00000000
 patch=1,EE,002bd92c,word,00000000
 
+
 [60 FPS]
 author=asasega
 comment=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
 patch=1,EE,0066D044,word,00000001
+
+
+[Remove Blur/Bloom]
+author=fobes
+description=Removes the post-processing blur/bloom effect
+patch=1,EE,004A95D4,word,00000000

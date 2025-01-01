@@ -2,7 +2,7 @@ gametitle=Viewtiful Joe 2 [PAL-M5] (SLES_528.68)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,002DFBD0,word,3C013FD3 //3C013FAA (Increases hor. axis)

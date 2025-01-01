@@ -1,12 +1,14 @@
-gametitle=Urban Chaos - Riot Response (NTSC-U) (SLUS-21390)
+//gametitle=Urban Chaos - Riot Response (NTSC-U) (SLUS-21390)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=ElHecht
+
+//Disabled due to causing SPS.
 
 // 16:9
-patch=1,EE,00655260,word,3c013f40 // 00000000 hor fov
-patch=1,EE,00655264,word,34210000 // 00000000 hor fov
+//patch=1,EE,00655260,word,3c013f40 // 00000000 hor fov
+//patch=1,EE,00655264,word,34210000 // 00000000 hor fov
 
 // 16:10
 //patch=1,EE,00655260,word,3c013f55 // 00000000 hor fov
@@ -15,12 +17,10 @@ patch=1,EE,00655264,word,34210000 // 00000000 hor fov
 // 16:9 and 16:10 modifications
 // no need to change anything here! all modifications are calculated
 // based on the hor fov value in the upper 16:9/16:10 section
-patch=1,EE,0018f548,word,08195498 // e7a40000
-patch=1,EE,0018f54c,word,00000000 // c7b40070
-patch=1,EE,00655268,word,4481f000 // 00000000
-patch=1,EE,0065526c,word,461e2102 // 00000000
-patch=1,EE,00655270,word,e7a40000 // 00000000
-patch=1,EE,00655274,word,c7b40070 // 00000000
-patch=1,EE,00655278,word,08063d53 // 00000000
-
-
+//patch=1,EE,0018f548,word,08195498 // e7a40000
+//patch=1,EE,0018f54c,word,00000000 // c7b40070
+//patch=1,EE,00655268,word,4481f000 // 00000000
+//patch=1,EE,0065526c,word,461e2102 // 00000000
+//patch=1,EE,00655270,word,e7a40000 // 00000000
+//patch=1,EE,00655274,word,c7b40070 // 00000000
+//patch=1,EE,00655278,word,08063d53 // 00000000

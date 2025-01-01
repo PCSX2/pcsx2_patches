@@ -2,7 +2,7 @@ gametitle=Tekken 5 (SLUS-21059)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 patch=1,EE,0032b448,word,3c013f40 // both fov+
 
@@ -31,3 +31,7 @@ patch=1,EE,00222494,word,44810000
 patch=1,EE,00222498,word,46006302
 
 
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,003EF450,extended,01

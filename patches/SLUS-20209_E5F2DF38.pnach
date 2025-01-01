@@ -1,13 +1,13 @@
-gametitle=Midnight Club II (U)(SLUS-20209)
+gametitle=Midnight Club II (U)(SLUS-20209) E5F2DF38
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-comment=Widescreen hack 16:9
-patch=1,EE,0042FAB4,word,3FCE38BC
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,0042FAB4,word,3FC71CEA //3F955553
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,2042FAB8,word,00000001 //FPS
 patch=1,EE,20432164,word,3C888889

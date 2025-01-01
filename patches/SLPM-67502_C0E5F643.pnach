@@ -2,7 +2,7 @@ gametitle=Devil May Cry (K) (SLPM-67502)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach NTSC-K by Arapapa)
+author=nemesis2000 (pnach NTSC-K by Arapapa)
 //NTSC-K is a little diffrent to NTSC-U
 //NOTICE... After you run the new game, rectangle appears in the upper-left of the screen.
 //NOTICE... Entering the options menu, it does not go out after.

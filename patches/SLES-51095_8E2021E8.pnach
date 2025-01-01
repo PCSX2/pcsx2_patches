@@ -1,0 +1,41 @@
+gametitle=Dino Stalker [PAL-F] (SLES_510.95)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen Hack Conversion
+
+//Gameplay 16:9
+patch=1,EE,002b0144,word,3f199999 //3f4ccccd (Increases hor. axis)
+patch=1,EE,002b0184,word,3f199999 //3f4ccccd
+patch=1,EE,003e32d4,word,3f199999 //3f4ccccd
+patch=1,EE,003e3314,word,3f199999 //3f4ccccd
+patch=1,EE,003e3b74,word,3f199999 //3f4ccccd
+patch=1,EE,003e3bb4,word,3f199999 //3f4ccccd
+patch=1,EE,003e4e34,word,3f199999 //3f4ccccd
+patch=1,EE,003e4e74,word,3f199999 //3f4ccccd
+patch=1,EE,003e5304,word,3f199999 //3f4ccccd
+patch=1,EE,003e5344,word,3f199999 //3f4ccccd
+patch=1,EE,003e5824,word,3f199999 //3f4ccccd
+patch=1,EE,003e5864,word,3f199999 //3f4ccccd
+patch=1,EE,003e61b4,word,3f199999 //3f4ccccd
+patch=1,EE,003e61f4,word,3f199999 //3f4ccccd
+patch=1,EE,003e66e4,word,3f199999 //3f4ccccd
+patch=1,EE,003e6724,word,3f199999 //3f4ccccd
+patch=1,EE,003e6ab4,word,3f199999 //3f4ccccd
+patch=1,EE,003e6af4,word,3f199999 //3f4ccccd
+patch=1,EE,003e70e4,word,3f199999 //3f4ccccd
+patch=1,EE,003e7124,word,3f199999 //3f4ccccd
+patch=1,EE,003ec8c4,word,3f199999 //3f4ccccd
+patch=1,EE,00527c24,word,3f199999 //3f4ccccd
+patch=1,EE,00603654,word,3f199999 //3f4ccccd
+patch=1,EE,006099b4,word,3f199999 //3f4ccccd
+patch=1,EE,00619604,word,3f199999 //3f4ccccd
+patch=1,EE,00626144,word,3f199999 //3f4ccccd
+patch=1,EE,002b0144,word,3f199999 //3f4ccccd
+
+//Render fix
+patch=1,EE,0012D4FC,word,3C0143D6 //3C0143A0
+patch=1,EE,00117740,word,3C0143D6 //3C0143A0
+
+

@@ -5,4 +5,7 @@ gsaspectratio=16:9
 comment=Widescreen Hack
 patch=1,EE,00162068,word,3c033f40
 
-
+[50 FPS]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=0,EE,005FD520,word,00000000 //00000001

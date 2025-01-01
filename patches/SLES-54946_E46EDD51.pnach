@@ -1,0 +1,8 @@
+gametitle=Sega Superstars Tennis (PAL-M5) SLES-54946 E46EDD51
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00234A0C,word,3C013FE3
+patch=1,EE,003D75EC,word,00000001

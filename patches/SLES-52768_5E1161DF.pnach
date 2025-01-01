@@ -1,0 +1,10 @@
+gametitle=Commandos - Strike Force (PAL-M) SLES-52768 5E1161DF
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,00100DA0,word,34050050
+patch=1,EE,00100DA4,word,24030002
+patch=1,EE,00100DA8,word,0000000C
+patch=1,EE,00100DAC,word,03E00008

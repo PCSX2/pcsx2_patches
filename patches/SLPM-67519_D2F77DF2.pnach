@@ -30,7 +30,7 @@ patch=1,EE,0011811c,word,461e6303 // 00000000 renderfix calculation
 //patch=1,EE,0018c7d0,word,3c013ed5 // 00000000 hor fov
 //patch=1,EE,0018c7d4,word,3421c28f // 00000000 hor fov
 
-
 [60 FPS]
-description=Patches the game to run at 60 FPS.
-patch=1,EE,2010121C,extended,00000000
+author=PeterDelta
+description=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,001011FC,word,24030000 //24030001

@@ -3,15 +3,16 @@ gametitle=Half-Life (PAL-I) SLES-50508 F9E3CF90
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen Hack. Select aspect ratio standard 4:3 in game
+description=Widescreen Hack. Select aspect ratio standard 4:3 in game
 patch=1,EE,002aa624,word,3c013fe3
 patch=1,EE,002aa628,word,34218e38
 patch=1,EE,002a9e60,word,3c013f2b
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
-patch=1,EE,002EEFA0,word,34050052
+description=SDTV 480p mode at start.
+patch=1,EE,002EEFA0,word,34050050
 patch=1,EE,002EEFA4,word,24030002
 patch=1,EE,002EEFA8,word,0000000C
 patch=1,EE,002EEFAC,word,03E00008

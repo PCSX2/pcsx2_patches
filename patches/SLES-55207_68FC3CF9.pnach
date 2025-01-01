@@ -1,10 +1,9 @@
-gametitle=Alone in the Dark (SLES-55207)
+gametitle=Alone in the Dark (PAL-M) SLES-55207 68FC3CF9
 
 [Widescreen 16:9]
+gsaspectratio=16:9
 author=nemesis2000
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
-gsaspectratio=16:9
-
 patch=1,EE,0035033c,word,46000003
 patch=1,EE,00350340,word,7fb00010
 patch=1,EE,00350344,word,ffbf0000
@@ -33,4 +32,11 @@ patch=1,EE,0035039c,word,27bd0020
 
 patch=1,EE,0042b3fc,word,3c033f2b
 
-
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,00117B60,word,34050050
+patch=1,EE,00117B64,word,24030002
+patch=1,EE,00117B68,word,0000000C
+patch=1,EE,00117B6C,word,03E00008

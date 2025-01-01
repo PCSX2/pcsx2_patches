@@ -1,8 +1,8 @@
-gametitle=The Polar Express (E)(SLES-52685)
+gametitle=The Polar Express PAL-M SLES-52685 C72FEF17
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -17,4 +17,7 @@ patch=1,EE,002f15a0,word,461e0843 // 00000000
 patch=1,EE,002f15a4,word,e6010068 // 00000000
 patch=1,EE,002f15a8,word,080d1daa // 00000000
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,003528F8,word,24020002 //24020001

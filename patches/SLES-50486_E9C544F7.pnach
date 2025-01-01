@@ -1,9 +1,9 @@
-gametitle=Splashdown [PAL-M5] (SLES_504.86)
+gametitle=Splashdown [PAL-M5] (SLES_504.86) E9C544F7
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Sergx12 and El_Patas
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 //Gameplay 16:9
 patch=1,EE,00213EB4,word,3C023FE4 //3C023FAA Y-FOV
 patch=1,EE,00213EB8,word,34428E39 //3442AAAB
@@ -13,7 +13,15 @@ patch=1,EE,002D94FC,word,3C023CAC //3C023C8E Water fix
 patch=1,EE,002D9500,word,3442A21D //3442FA34
 patch=1,EE,00214E00,word,3C033F2B //3C033F00 Fix graphical glitch 2 player vertical split screen
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,0062A090,word,00000002 //00000001
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,00397524,word,24110000
+patch=1,EE,00397528,word,24120050
+patch=1,EE,00397530,word,24130001

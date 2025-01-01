@@ -1,0 +1,14 @@
+gametitle=Judge Dredd - Dredd vs. Death (NTSC-U) SLUS-20869 759F05CB
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,0033D400,word,3FE38E39
+patch=1,EE,0033D404,word,00000001
+patch=1,EE,0033EDB4,word,00010000
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,00194F3C,word,14600009 //10600009

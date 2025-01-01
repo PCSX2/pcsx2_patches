@@ -1,0 +1,112 @@
+gametitle=Test Drive: Eve of Destruction (NTSC-U) (SLUS-20910)(5D0244D3)
+
+[Disable 16:9 Edge Borders]
+author=Virjoinga
+description=Disables the edge border when using 16:9 (from game options). WARNING, menus don't have a skybox so expect artifacts on edges of screen.
+patch=1,EE,203DD64C,extended,00000000 //16:9 Edge Border (0 = off, 1 = on)
+
+[Aspect Ratio - 3xStretch]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3E800000
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 3x15:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3E888889
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 3x16:10]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3E8E38E4
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 3x4:3]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3EAAAAAB
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 3x5:4]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3EB60B61
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 32:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3EC00000
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 21:9 (3840x1600)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3F0E38E4
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 21:9 (3440x1440)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3F0EE23C //Aspect Ratio
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Aspect Ratio - 21:9 (2560x1080)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,203DD658,extended,3F100000
+patch=1,EE,204A807C,extended,00000001 //Aspect Ratio Option (0 = 4:3, 1 = 16:9)
+patch=1,EE,202A419C,extended,00000000 //Right Button
+patch=1,EE,202A41C0,extended,00000000 //Left Button
+
+[Shoulders control mapping]
+description=Modify Type 2 controls to use analog triggers for throttle/brake
+author=Silent
+
+patch=0,EE,202AA84C,extended,26460808 // Joy DY- - throttle
+patch=0,EE,202AA85C,extended,26460810 // Joy DX- - braking
+patch=0,EE,102AA8D4,extended,5F28 // Button 7 - dig_braking
+patch=0,EE,102AA8EC,extended,5F00 // Button 8 - dig_throttle
+patch=0,EE,102AA904,extended,5EE8 // Button 6 - view
+patch=0,EE,102AA924,extended,5D48 // Button 5 - horn
+
+// Patch the control scheme in menu
+patch=0,EE,102AB748,extended,0038 // L2
+patch=0,EE,102AB760,extended,0034 // R1
+patch=0,EE,102AB76C,extended,003C // R2
+patch=0,EE,102AB778,extended,0030 // L1
+
+// Enable analog throttle and analog brake by default
+patch=0,EE,202AAE58,extended,AE000000
+patch=0,EE,202AAE5C,extended,AE000004
+
+// Do not load digital_throttle and digital_braking from the memory card
+patch=0,EE,202A8FD8,extended,00000000
+patch=0,EE,202A8FEC,extended,00000000

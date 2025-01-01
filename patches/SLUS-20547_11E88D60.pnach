@@ -1,0 +1,6 @@
+gametitle=Cubix Robots for Everyone: Showdown (U)(SLUS-20547)
+
+[60 FPS]
+author=asasega
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,002DF734,word,42700000 //41F00000

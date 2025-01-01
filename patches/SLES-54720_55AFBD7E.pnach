@@ -1,0 +1,6 @@
+gametitle=Shield - The Game, The (PAL-M) SLES-54720 55AFBD7E
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0036AFFC,word,00000001 //00000002

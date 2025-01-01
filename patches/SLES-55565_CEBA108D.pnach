@@ -1,0 +1,8 @@
+gametitle=Teenage Mutant Ninja Turtles - Smash-Up (PAL-M) SLES-55565 CEBA108D
+comment=50fps toggle on by Gabominated
+
+[50 FPS]
+author=Gabominated
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,202DA024,extended,00000001 //00000002 fps
+patch=1,EE,20496A94,extended,3F19999A //3F99999A speed

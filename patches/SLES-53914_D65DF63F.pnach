@@ -1,10 +1,15 @@
-gametitle=The Plan [PAL-Spain] (SLES_539.14)
+gametitle=The Plan [PAL-Spain] (SLES_539.14) D65DF63F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0010E324,word,3C033F40 //3C033F80
+patch=1,EE,001719A8,word,3C013F40 //hud cross x-fov
+patch=1,EE,0025CF18,word,3C023F40 //hud cross y-fov
+patch=1,EE,0026C0B8,word,3C023FA0 //hud health
 
-//Gameplay 16:9
-patch=1,EE,001126B8,word,3C033FAB //3C033F80 (Increases hor. axis)
-
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,001B1B68,word,24040001 //24040002

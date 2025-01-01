@@ -1,12 +1,15 @@
-gametitle=Disney's Dinosaur (E)(SLES-50042 & SLES-50043)
+gametitle=Disney's Dinosaur PAL-M SLES-50043 238B189C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
 patch=1,EE,0026b274,word,3fe38e32 //3faaaaab
 patch=1,EE,0026b27c,word,3fe38e32 //3faaaaab
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0015EF14,word,3C023F0C //3C023F8C

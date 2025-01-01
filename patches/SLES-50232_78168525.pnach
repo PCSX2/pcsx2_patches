@@ -1,0 +1,12 @@
+gametitle=Off-Road - Wide Open (PAL-M5) [SLES-50232]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen hack conversion
+
+//hor fov (default = 3F800000)
+
+patch=1,EE,202C1880,extended,3FC00000
+
+

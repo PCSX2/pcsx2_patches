@@ -1,9 +1,9 @@
-gametitle=Cars [PAL-Spain] (SLES_540.07)
+gametitle=Cars [PAL-Spain] (SLES_540.07) B8435BF4
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 
 //Gameplay 16:9
 patch=1,EE,00116D50,word,3C033CAE //3C033C8E Zoom
@@ -19,17 +19,17 @@ patch=1,EE,001D5D78,word,3C023FAB //3C023F80
 //patch=1,EE,00116D54,word,34635555 //3463FA34
 //patch=1,EE,00116D48,word,3C023FAB //3C023F80 Y-FOV
 
-
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,001B0F88,word,28630001 //0072182A slt v1,s2
-patch=1,EE,E0010000,extended,008B86A4 //004976B8 00000001
+description=Might need EE Overclock at 130%.
+patch=1,EE,001B0F88,word,28630001 //0072182A
+patch=1,EE,E0010000,extended,008B86A4
 patch=1,EE,201B0F88,extended,0072182A
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
+description=SDTV 480p mode at start.
 patch=1,EE,00458B0C,word,3C050000
 patch=1,EE,00458B14,word,3C060050
 patch=1,EE,00458B1C,word,3C070001

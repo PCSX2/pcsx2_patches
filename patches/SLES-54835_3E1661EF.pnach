@@ -1,0 +1,9 @@
+gametitle=Power Rangers - Super Legends (PAL-M) SLES-54835 3E1661EF
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0010FE8C,word,3C050000
+patch=1,EE,0010FE94,word,3C060050
+patch=1,EE,0010FE9C,word,3C070001

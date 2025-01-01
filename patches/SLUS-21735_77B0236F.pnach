@@ -2,7 +2,7 @@ gametitle=Mana Khemia: Alchemists of Al-Revis (SLUS-21735)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 //3D scenes
 patch=1,EE,0046cc7c,word,3c013f40 //hor value

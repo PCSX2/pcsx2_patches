@@ -1,12 +1,15 @@
-gametitle=DreamWorks Madagascar 2 - Escape 2 Africa (E)(SLES-55374)
+gametitle=DreamWorks Madagascar 2 - Escape 2 Africa (PAL-M) (SLES-55374) 76B70CCE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
-
-//Widescreen hack 16:9
-
-//X-Fov
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001ff07c,word,3c023f1e //3c023f00
 
-
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,00465124,word,3C050000
+patch=1,EE,0046512C,word,3C060050
+patch=1,EE,00465134,word,3C070001

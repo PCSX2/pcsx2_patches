@@ -1,0 +1,7 @@
+gametitle=Syberia SLES-51393 D1ACD489
+
+[480p Mode]
+gsinterlacemode=1
+author=Gabominated
+description=SDTV 480p mode at start. Use Software renderer for FMVs to avoid shake at videos
+patch=1,EE,001e6314,word,24060050 //24060003

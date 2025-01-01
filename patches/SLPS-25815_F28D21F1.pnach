@@ -1,17 +1,10 @@
+gametitle=Dragon Ball Z: Sparking! Meteor * NTSC-J * SLPS-25815 * F28D21F1
+
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Dragon Ball Z: Sparking! Meteor [SLPS-25815] WS patch
-//Widescreen Y(decreases height a bit)
-patch=1,EE,21948794,extended,4410553E
-patch=1,EE,21948EB4,extended,4410553E
-patch=1,EE,21949144,extended,4410553E
-patch=1,EE,21949434,extended,4410553E
-patch=1,EE,219487D4,extended,3E90674C
-patch=1,EE,21948EF4,extended,3E90674C
-patch=1,EE,21949184,extended,3E90674C
-patch=1,EE,21949474,extended,3E90674C
-//zoom fix
-patch=1,EE,202FD054,extended,404CCCCD
-patch=1,EE,202FD058,extended,3A831CD5
 
-
+author=RashFaustinho
+comment=based on sergx12's & 99skull's patches for the NTSC-U/NTSC-K versions
+patch=1,EE,002fe4c8,word,3FC71C76 // 3F955555
+patch=1,EE,002fe590,word,43C71C71 // 43955555
+patch=1,EE,00130be8,word,3C013F10 // 3C013F40

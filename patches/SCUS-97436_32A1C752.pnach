@@ -8,4 +8,59 @@ author=Aero_
 patch=1,EE,2033D7DC,extended,3C013F40 // lui at, 0x3F40
 patch=1,EE,2033D7E0,extended,34210000 // ori at, 0x0000
 
+[No-Interlacing]
+description=Autoboot in 480p
+author=Silent
 
+patch=1,EE,20312544,extended,34080001
+patch=1,EE,20312558,extended,AE481718
+
+[Adjusted triggers sensitivity]
+description=Makes throttle/brake more precise when using triggers, like on PS3
+author=Silent & Aero_
+
+// Throttle
+patch=1,EE,10319114,extended,0000005A
+patch=1,EE,20319194,extended,00000000
+// Brake
+patch=1,EE,1031911C,extended,0000005A
+patch=1,EE,203191F0,extended,00000000
+
+[GT3 Chase Camera]
+description=GT3-like camera from GT4 First Preview
+author=Silent
+
+// Values changed by this cheat are hexadecimal.
+// They are 1-byte each, repeated 4 times - so a value of 30 (0x1E)
+// corresponds to 1E1E1E1E etc,
+
+// Default parameters in this cheat correspond to the values from GT4 First Preview,
+// but you may freely customize them. For example, if you want to make the camera
+// even stiffer (like in GT5/6), increase the damper value.
+
+// Camera damper, default - 120
+// Higher values make the camera center quicker
+patch=1,EE,106635DA,extended,1E1E // 30
+patch=1,EE,106635DC,extended,1E1E // 30
+
+// Camera max angle, default - 15
+// Higher values make the camera lean further to the sides
+patch=1,EE,106635DE,extended,0A0A // 10
+patch=1,EE,106635E0,extended,0A0A // 10
+
+[Far chase camera]
+description=Added GT4 First Preview camera mode
+author=Silent
+
+// Swap 4-byte instructions to 2-byte ones to make space
+patch=1,EE,2023F37C,extended,84E30000
+patch=1,EE,1023F380,extended,0002
+patch=1,EE,1023F390,extended,0004
+patch=1,EE,2023F3A0,extended,84E30000
+
+patch=1,EE,1023F3B0,extended,0004
+patch=1,EE,0023F3C8,extended,40
+patch=1,EE,1023F3DA,extended,8442
+
+patch=1,EE,20662B30,extended,00010000
+patch=1,EE,20662B34,extended,00060014

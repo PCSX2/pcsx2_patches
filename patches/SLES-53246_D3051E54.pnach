@@ -1,8 +1,36 @@
-gametitle=Madagascar (PAL-S) SLES-53246 D3051E54
+gametitle=DreamWorks Madagascar (PAL-S) SLES-53246 D3051E54
 
-[50 FPS]
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa, ported by PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0014A0E0,word,3C013F1F
+patch=1,EE,00288500,word,08045CA0
+patch=1,EE,00117280,word,46010043
+patch=1,EE,00117284,word,3C013F40
+patch=1,EE,00117288,word,4481F000
+patch=1,EE,0011728C,word,461E1082
+patch=1,EE,00117290,word,080A2141
+
+[Remove Blackbars]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,004B0604,byte,0001 //0002
-patch=1,EE,00346D24,word,00000064 //00000032
-patch=1,EE,01ADA8F4,word,3F000000 //3F800000 animations
+description=Removes black bars in cutscenes
+patch=1,EE,00C77F3C,word,00000000
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,004B0604,byte,01 //02
+patch=1,EE,00346D24,byte,64 //32
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,002F8AE0,word,34050050
+patch=1,EE,002F8AE4,word,24030002
+patch=1,EE,002F8AE8,word,0000000C
+patch=1,EE,002F8AEC,word,03E00008
+patch=1,EE,00346D24,byte,38
+patch=1,EE,E0010001,extended,004B0604
+patch=1,EE,00346D24,extended,76

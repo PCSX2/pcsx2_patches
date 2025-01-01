@@ -1,0 +1,6 @@
+gametitle=The Chronicles of Narnia The Lion Witch and The Wardrobe (PAL-M) SLES-53712 37718361
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,001721D8,word,28420001 //28420002

@@ -1,8 +1,8 @@
-gametitle=The BIGS (NTSC-U)(SLUS-21623)
+gametitle=The Bigs NTSC-U SLUS-21623 81FF8198
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -17,4 +17,7 @@ patch=1,EE,20BDF5C4,extended,3FE38E32 //3FAAAAAB
 patch=1,EE,20BDF67C,extended,3FE38E32 //3FAAAAAB
 patch=1,EE,20BDF730,extended,3FE38E32 //3FAAAAAB
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,003F490C,word,2c420001 //2c420002

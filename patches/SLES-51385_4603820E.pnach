@@ -1,0 +1,6 @@
+gametitle=Rugrats Rescate Real (PAL-S) SLES-51385 4603820E
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0042D820,word,00000001 //00000002

@@ -1,8 +1,8 @@
-gametitle=Barnyard (U)(SLUS-21277)
+gametitle=Barnyard (U)(SLUS-21277) EC8EF2DE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -18,3 +18,9 @@ patch=1,EE,0053d748,word,3fd50000 //3eaaaaab
 //patch=1,EE,21A1DF7C,extended,00000000 //42300000
 
 
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,00546FA4,extended,00000001
+patch=1,EE,E0010010,extended,004F4734
+patch=1,EE,00546FA4,extended,00000002

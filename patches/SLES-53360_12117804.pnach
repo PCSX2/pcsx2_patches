@@ -1,0 +1,16 @@
+gametitle=Alarm for Cobra 11 Vol.2 - Hot Pursuit PAL-E SLES-53360 12117804
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+comment=Widescreen hack conversion
+
+//Widescreen 16:9
+
+//X-Fov
+patch=1,EE,003934c0,word,3c07bf55 //3c07bf00
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,00136430,word,24020000 //24020001

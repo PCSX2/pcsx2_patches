@@ -1,0 +1,8 @@
+gametitle=Mercenaries 2 - World in Flames SLUS-21650 D14CB5F0
+
+[60 FPS]
+author=asasega & Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,003FD4F8,word,2C420001 //2C420002
+patch=1,EE,E0010001,extended,004FB450
+patch=1,EE,203FD4F8,extended,2C420002

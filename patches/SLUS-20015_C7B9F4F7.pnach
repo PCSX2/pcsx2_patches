@@ -2,7 +2,7 @@ gametitle=Eternal Ring (U)(SLUS-20015)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //X-Fov - ELF hack
 //803f013c 00a88144 0045013c

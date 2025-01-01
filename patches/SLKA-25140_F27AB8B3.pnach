@@ -2,7 +2,7 @@ gametitle=Medal of Honor - Rising Sun (NTSC-K)(SLKA-25140)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (NTSC-K by Arapapa)
+author=nemesis2000 (NTSC-K by Arapapa)
 
 //Widescreen hack 16:9
 patch=1,EE,003a42a0,word,3f100000 //3f400000

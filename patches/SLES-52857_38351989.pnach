@@ -1,0 +1,18 @@
+gametitle=Fairly OddParents, The - Shadow Showdown (PAL-E) SLES-52857 38351989
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa, ported by PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00361D8C,word,080F09E8
+patch=1,EE,003C27A0,word,46166302
+patch=1,EE,003C27A4,word,3C013F9D
+patch=1,EE,003C27A8,word,3421AAAB
+patch=1,EE,003C27AC,word,4481F000
+patch=1,EE,003C27B0,word,461E6302
+patch=1,EE,003C27B4,word,080D8764
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,004D1414,word,42700000 //41F00000

@@ -2,7 +2,7 @@ gametitle=Sengoku Musou: Moushouden [NTSC-J] (SLPM-65718)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht (Pnach by Little Giant)
+author=ElHecht (Pnach by Little Giant)
 
 // 16:9
 patch=1,EE,00141008,word,3c024328 // 3c024360 zoom

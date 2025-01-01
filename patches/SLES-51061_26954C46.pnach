@@ -16,10 +16,6 @@ patch=1,EE,002485dc,word,0C04C92F
 patch=1,EE,002764AC,word,0C04C932
 patch=1,EE,00276A7C,word,0C04C932
 
-[No-Interlacing]
-gsinterlacemode=1
-patch=1,EE,20112444,extended,00000000
-
 [50 FPS]
 author=Snake356
 comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).

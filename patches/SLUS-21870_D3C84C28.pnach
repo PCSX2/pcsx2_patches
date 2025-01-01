@@ -1,16 +1,14 @@
-gametitle=Monsters vs. Aliens (U)(SLUS-21870)
+gametitle=Monsters vs. Aliens (NTSC-U) (SLUS-21870) D3C84C28
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
-
-//Widescreen hack 16:9
-
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio
 //Zoom (Menu and Cutscenes)
 //003f023c ec0081c6
 patch=1,EE,001abcf0,word,3c023f1b //3c023f00
 
-////Y-Fov (Menu and Cutscenes)
+//Y-Fov (Menu and Cutscenes)
 //03081546 1401a0e7
 patch=1,EE,001abd6c,word,080a06f0
 
@@ -20,7 +18,6 @@ patch=1,EE,00281bc8,word,3421aaab
 patch=1,EE,00281bcc,word,4481f800
 patch=1,EE,00281bd0,word,461f0002
 patch=1,EE,00281bd4,word,0806af5c
-
 
 //Zoom (Gameplay)
 //003f023c 00008244 f00097c4
@@ -35,4 +32,7 @@ patch=1,EE,00281ba8,word,4481f000
 patch=1,EE,00281bac,word,461ebdc2
 patch=1,EE,00281bb0,word,0808cdd0
 
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,002338EC,word,28420001 //28420002

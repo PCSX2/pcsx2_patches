@@ -15,10 +15,6 @@ patch=1,EE,001130CC,word,E78C9A90
 patch=1,EE,0021DFE4,word,0C044C2F //0C044C30
 patch=1,EE,00242DB4,word,0C044C32 //0C044C30
 
-[No-Interlacing]
-gsinterlacemode=1
-patch=1,EE,2054A06C,extended,00000000
-
 [Remove Radiosity Filter]
 description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
 patch=1,EE,2051A7C8,extended,00000000

@@ -2,7 +2,7 @@ gametitle=Raw Danger! [PAL] (SLES_545.87)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
+author=El_Patas
 
 //Gameplay 16:9
 patch=1,EE,003A8360,word,43E00000 //43A00000 (Increases hor. axis)

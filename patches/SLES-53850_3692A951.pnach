@@ -1,30 +1,30 @@
-gametitle=Teenage Mutant Ninja Turtles 3 - Mutant Nightmare (PAL-M5) (SLES-53850)
+gametitle=Teenage Mutant Ninja Turtles 3 - Mutant Nightmare (PAL-M5) (SLES-53850) 3692A951
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack 16:9
-//
-// 16:9
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,0028ff90,word,3c023fe3 // 3c023faa ver fov
 patch=1,EE,0028ff98,word,34428e38 // 3442aaab ver fov
 patch=1,EE,0028fe50,word,3c013f40 // 00000000 zoom
 patch=1,EE,0028fe54,word,44810000 // 00000000
 patch=1,EE,0028fe58,word,46006303 // 00000000
 
-
 [50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,10750C44,extended,04000001 //04000002
-patch=1,EE,E001D70A,extended,005B3190
+patch=1,EE,E002D70A,extended,005B3190
 patch=1,EE,205B3190,extended,3CA3D70A //3D23D70A 50hz
-patch=1,EE,E0018889,extended,005B3190
+patch=1,EE,205B3188,extended,42480000
+patch=1,EE,E0028889,extended,005B3190
 patch=1,EE,205B3190,extended,3C888889 //3D088889 60hz
+patch=1,EE,205B3188,extended,42700000
 
-[Mode 480p]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Force progressive scan when selecting 60hz
+description=SDTV 480p mode when selecting 60 Hz
 patch=1,EE,E0030000,extended,005B30C0
 patch=1,EE,201009F4,extended,24110000
 patch=1,EE,201009F8,extended,24120050

@@ -2,7 +2,7 @@ gametitle=The Fairly OddParents! Shadow Showdown (U)(SLUS-20880)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -17,4 +17,7 @@ patch=1,EE,003e295c,word,4481f000
 patch=1,EE,003e2960,word,461e6302
 patch=1,EE,003e2964,word,080e07d2
 
-
+[60 FPS]
+author=PeterDelta and ICUP321
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,004D1814,word,42700000 //41F00000

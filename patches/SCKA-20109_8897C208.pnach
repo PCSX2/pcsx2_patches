@@ -2,7 +2,7 @@ gametitle=Shin Megami Tensei - Persona 3 FES (K) (SCKA-20109)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000, devina, sergx12, Arapapa
+author=nemesis2000, devina, sergx12, Arapapa
 comment=Controllable party members by TGE (NTSC-K by Arapapa)
 
 //Widescreen 16:9
@@ -31,30 +31,8 @@ patch=1,EE,0010aec0,word,00000000
 patch=1,EE,001148cc,word,3c033ec0 // 3c033f00
 patch=1,EE,001148dc,word,3c023f90 // 3c023f80
 
-//480p by asmodean
-//0012023c 001042dc
-patch=1,EE,0019d1e0,word,3c040010
-patch=1,EE,0019d1e4,word,348426dc // 2d28e000 80000624 xxxxxx0c 2nd
-patch=1,EE,0019d1e8,word,8c820000
-patch=1,EE,0019d1ec,word,38420001
-patch=1,EE,0019d1f0,word,ac820000
-patch=1,EE,0019d1f4,word,000217fc
-patch=1,EE,0019d1f8,word,000217ff
-patch=1,EE,0019d1fc,word,0000000f
-patch=1,EE,0019d200,word,42000038
-patch=1,EE,0019d204,word,03e00008
-patch=1,EE,0019d208,word,00000000
-patch=1,EE,0019d20c,word,00000001
-
-//038c0500 03940600
-patch=1,EE,004f93ec,word,24110000
-patch=1,EE,004f93f0,word,24120050
-patch=1,EE,004f93f4,word,24020001
-patch=1,EE,004f93f8,word,10820031
-patch=1,EE,004f93fc,word,24130001
-
 ///////////////////////////////////////////////////////
-/In-Game Menu Portraits fix by Arapapa
+//In-Game Menu Portraits fix by Arapapa
 //74008224 21104500 00004284
 //74008224 21104500 00004294
 //patch=1,EE,00112a44,word,0803002c
@@ -250,7 +228,7 @@ patch=1,EE,005a22e8,word,080d1ddd
 ///////////////////////////////////////////////////////
 //Head Portraits (Right, In the Battles) fix by Arapapa
 //10004426 7000a527 (1st)
-patch=1,EE,0022d764,word,08030000 #1
+patch=1,EE,0022d764,word,08030000 //#1
 patch=1,EE,000c0000,word,26440010
 patch=1,EE,000c0004,word,c7bf0078
 patch=1,EE,000c0008,word,3c013f40
@@ -260,7 +238,7 @@ patch=1,EE,000c0014,word,e7bf0078
 patch=1,EE,000c0018,word,0808b5da
 
 //10014426 7000a527 (1st)
-patch=1,EE,0022d864,word,08030008 #2
+patch=1,EE,0022d864,word,08030008 //#2
 patch=1,EE,000c0020,word,26440110
 patch=1,EE,000c0024,word,c7bf0078
 patch=1,EE,000c0028,word,3c013f40
@@ -341,72 +319,6 @@ patch=1,EE,003b1090,word,82970003 //00000000
 //21904202 2800948e xxxxxxxx 15001324
 patch=1,EE,003b11dc,word,24130013 //00000000
 //////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////
-//Controllable party members by TGE (NTSC-K by Arapapa)
-
-patch=1,EE,0029ad78,word,00000000 // nop check for if battle unit is not mc -> ai
-patch=1,EE,00201eac,word,00000000 // #1load proper unit id for battle menu skill list
-
-patch=1,EE,00201ebc,word,8F84BA0C // #1 + 0x10
-patch=1,EE,00201ec0,word,8C840254
-patch=1,EE,00201ec4,word,8C840030
-patch=1,EE,00201ec8,word,8C8400A4
-
-patch=1,EE,0028dbc4,word,2405001B // fix escape
-patch=1,EE,002966dc,word,00000000
-
-patch=1,EE,0028aa7c,word,9683001A // disable persona menu for non-mc
-
-patch=1,EE,0028aa80,word,3063FFBF
-patch=1,EE,0028aa84,word,A683001A
-
-patch=1,EE,0028aa88,word,96830018
-patch=1,EE,0028aa8c,word,00000000
-patch=1,EE,0028aa90,word,081a6ab8
-patch=1,EE,0028aa94,word,00000000
-
-patch=1,EE,2069AAE0,word,8F82BA0C
-patch=1,EE,2069AAE4,word,8C420148
-patch=1,EE,2069AAE8,word,14540004
-patch=1,EE,2069AAEC,word,00000000
-patch=1,EE,2069AAF0,word,34630400
-patch=1,EE,2069AAF4,word,A6830018
-patch=1,EE,2069AAF8,word,34630400
-patch=1,EE,2069AAFC,word,080a2aa5
-patch=1,EE,2069AB00,word,00000000
-
-patch=1,EE,001ff3c8,word,8E300254 // fix skill requirements
-patch=1,EE,001ff3cc,word,8E100030
-patch=1,EE,001ff3d0,word,8E1000A4
-patch=1,EE,001ff3d4,word,00000000
-patch=1,EE,001ff3d8,word,00000000
-patch=1,EE,001ff3dc,word,00000000
-
-patch=1,EE,002d7e50,word,00000000 // fix items
-patch=1,EE,002d7e60,word,00000000
-patch=1,EE,002d7e64,word,00000000
-patch=1,EE,002d7e7c,word,00000000
-
-patch=1,EE,002a3694,word,081a6ac1 // fix boss battle camera  jump ##1
-
-patch=1,EE,2069AB04,word,1240000B //##1
-patch=1,EE,2069AB08,word,00000000
-patch=1,EE,2069AB0C,word,8E420030
-patch=1,EE,2069AB10,word,844700A2
-patch=1,EE,2069AB14,word,20030001
-patch=1,EE,2069AB18,word,14E00006
-patch=1,EE,2069AB1C,word,00000000
-patch=1,EE,2069AB20,word,844200A4
-patch=1,EE,2069AB24,word,10430003
-patch=1,EE,2069AB28,word,00001021
-patch=1,EE,2069AB2C,word,080a8da7
-patch=1,EE,2069AB30,word,00000000
-patch=1,EE,2069AB34,word,0c0be118
-patch=1,EE,2069AB38,word,00000000
-patch=1,EE,2069AB3C,word,080a8da7
-patch=1,EE,2069AB40,word,00000000
 
 ////////////////////////////////////////////////////
 //CH Icon position
@@ -515,4 +427,68 @@ patch=1,EE,2069AB40,word,00000000
 //patch=1,EE,000c0110,word,e7a0009c
 //patch=1,EE,000c0114,word,08044a8d //jump to 2011322c +4
 
+[Controllable party members]
+description=Controllable party members by TGE (NTSC-K by Arapapa)
+
+patch=1,EE,0029ad78,word,00000000 // nop check for if battle unit is not mc -> ai
+patch=1,EE,00201eac,word,00000000 // #1load proper unit id for battle menu skill list
+
+patch=1,EE,00201ebc,word,8F84BA0C // #1 + 0x10
+patch=1,EE,00201ec0,word,8C840254
+patch=1,EE,00201ec4,word,8C840030
+patch=1,EE,00201ec8,word,8C8400A4
+
+patch=1,EE,0028dbc4,word,2405001B // fix escape
+patch=1,EE,002966dc,word,00000000
+
+patch=1,EE,0028aa7c,word,9683001A // disable persona menu for non-mc
+
+patch=1,EE,0028aa80,word,3063FFBF
+patch=1,EE,0028aa84,word,A683001A
+
+patch=1,EE,0028aa88,word,96830018
+patch=1,EE,0028aa8c,word,00000000
+patch=1,EE,0028aa90,word,081a6ab8
+patch=1,EE,0028aa94,word,00000000
+
+patch=1,EE,2069AAE0,word,8F82BA0C
+patch=1,EE,2069AAE4,word,8C420148
+patch=1,EE,2069AAE8,word,14540004
+patch=1,EE,2069AAEC,word,00000000
+patch=1,EE,2069AAF0,word,34630400
+patch=1,EE,2069AAF4,word,A6830018
+patch=1,EE,2069AAF8,word,34630400
+patch=1,EE,2069AAFC,word,080a2aa5
+patch=1,EE,2069AB00,word,00000000
+
+patch=1,EE,001ff3c8,word,8E300254 // fix skill requirements
+patch=1,EE,001ff3cc,word,8E100030
+patch=1,EE,001ff3d0,word,8E1000A4
+patch=1,EE,001ff3d4,word,00000000
+patch=1,EE,001ff3d8,word,00000000
+patch=1,EE,001ff3dc,word,00000000
+
+patch=1,EE,002d7e50,word,00000000 // fix items
+patch=1,EE,002d7e60,word,00000000
+patch=1,EE,002d7e64,word,00000000
+patch=1,EE,002d7e7c,word,00000000
+
+patch=1,EE,002a3694,word,081a6ac1 // fix boss battle camera  jump ##1
+
+patch=1,EE,2069AB04,word,1240000B //##1
+patch=1,EE,2069AB08,word,00000000
+patch=1,EE,2069AB0C,word,8E420030
+patch=1,EE,2069AB10,word,844700A2
+patch=1,EE,2069AB14,word,20030001
+patch=1,EE,2069AB18,word,14E00006
+patch=1,EE,2069AB1C,word,00000000
+patch=1,EE,2069AB20,word,844200A4
+patch=1,EE,2069AB24,word,10430003
+patch=1,EE,2069AB28,word,00001021
+patch=1,EE,2069AB2C,word,080a8da7
+patch=1,EE,2069AB30,word,00000000
+patch=1,EE,2069AB34,word,0c0be118
+patch=1,EE,2069AB38,word,00000000
+patch=1,EE,2069AB3C,word,080a8da7
+patch=1,EE,2069AB40,word,00000000
 

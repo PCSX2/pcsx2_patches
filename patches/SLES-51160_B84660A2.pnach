@@ -2,7 +2,7 @@ gametitle=Sub Rebellion (PAL-E) (SLES-51160)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa / Ported to PAL by ElHecht
+author=Arapapa / Ported to PAL by ElHecht
 
 // 16:9
 patch=1,EE,00100dd8,word,3c0143d5 // 3c0143a0 hor fov 60Hz

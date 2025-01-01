@@ -1,8 +1,8 @@
-gametitle=Dora the Explorer - Dora Saves the Crystal Kingdom (U)(SLUS-21923)
+gametitle=Dora the Explorer - Dora Saves the Crystal Kingdom NTSC-U SLUS-21923 643BED21
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -15,4 +15,7 @@ patch=1,EE,000c0008,word,4481f000
 patch=1,EE,000c000c,word,461e1082
 patch=1,EE,000c0010,word,0804688a
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,003EBC78,word,00000001 //00000002

@@ -1,14 +1,14 @@
-gametitle=Bratz: Forever Diamondz [PAL-M3] (SLES_543.43)
+gametitle=Bratz: Forever Diamondz [PAL-M3] (SLES_543.43) A90A973D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
-
-//Gameplay 16:9
+author=El_Patas
+comment=Renders the game in 16:9 aspect ratio
 patch=1,EE,0031F5D8,word,3C013F1E //3C013F00 Zoom
 patch=1,EE,00300934,word,3C013ED3 //3C013F00 Y-FOV
+patch=1,EE,00300848,word,3C013F2B //3C013F00 Render fix
 
-//Render fix
-patch=1,EE,00300848,word,3C013F2B //3C013F00
-
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,01FAFD9C,word,00000000 //00000001

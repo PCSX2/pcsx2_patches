@@ -1,11 +1,22 @@
-gametitle=Ben 10: Protector of Earth [PAL-M5] (SLES_549.52)
+gametitle=Ben 10: Protector of Earth [PAL-M5] (SLES_549.52) 1712E9F9
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas
-
-//Gameplay 16:9
+author=El_Patas
+comment=Renders the game in 16:9 aspect ratio
 patch=1,EE,0011940C,word,3C013F4D //3C013F89
 patch=1,EE,00119410,word,3421B6E0 //34212493
 
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,00268658,word,00000001 //00000002
+patch=1,EE,001637AC,word,3C013F30
 
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,001BEED4,word,24110000
+patch=1,EE,001BEED8,word,24120050
+patch=1,EE,001BEEE4,word,24130001

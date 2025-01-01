@@ -1,14 +1,91 @@
-gametitle=Burnout - Dominator (U)(SLUS-21596)
+gametitle=Burnout Dominator (U) (SLUS-21596)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) by Arapapa
+author=SuperType1/remco
+description=Fixes the game and the HUD to run in a 16:9 Scale (only enable one and not both of them).
 
-//Force turn on Internal Widescreen (Full boot bypassing)
-patch=1,EE,0038b128,word,24020002 //30420003
+//Force 16:9
+patch=1,EE,001A2798,word,00000000
+//FOV
+patch=1,EE,001F60FC,word,3C013C9A
+//Hud Width
+patch=1,EE,0022BE50,extended,3C013A9D
+//Hud Elements
+patch=1,EE,21C91FB8,extended,3F28F5C3//score offset
+patch=1,EE,21C91FF8,extended,3FAA3D71//timer race pos offset
+patch=1,EE,21C91FE0,extended,3FAA3D71//speedometer offset
+patch=1,EE,21C92000,extended,3f28f5c3//pop up offset
+patch=1,EE,21C91AA0,extended,44610000//offscreen popup offset
+patch=1,EE,21C91FF0,extended,3FAA3D71//unlock car text pos
+patch=1,EE,203C5314,extended,41500000//chevron spacing
+patch=1,EE,21C91980,extended,41A00000//chevron spacing
+patch=1,EE,21C91690,extended,434E0000//boost bar fire width
+patch=1,EE,21C91988,extended,41A00000//black chevron spacing
+patch=1,EE,21CADE10,extended,41A00000//yellow chevron spacing
+patch=1,EE,21C9BD40,extended,43C80000//maniac star counter score add end pos
+patch=1,EE,21C9BD48,extended,43C80000//maniac star counter score add end pos
+patch=1,EE,21C9BD50,extended,43C80000//maniac star counter score add end pos
+patch=1,EE,21C91A78,extended,43AA0000//maniac boost chain combo score pos
+patch=1,EE,21C91A70,extended,43AA0000//maniac boost chain combo score pos
+patch=1,EE,21C91F60,extended,C4430000//crashbreaker text offset
+patch=1,EE,20441078,extended,438C0000//ea trax pop up width
 
-//Zoom fix
-//9A 99 99 3F 39 8E E3 3F 80 02 00 00
-patch=1,EE,2043E8F0,extended,3FAAAAAB // 3F800000
+[Widescreen 21:9]
+gsaspectratio=Stretch
+author=SuperType1/remco
+description=Fixes the game and the HUD to run in a 21:9 Scale (only enable one and not both of them).
 
+//Force 21:9
+patch=1,EE,001A2798,word,00000000
+patch=1,EE,001A27A0,word,3C014017
+//FOV
+patch=1,EE,001F60FC,word,3C013CA3
+//Hud Width
+patch=1,EE,0022BE50,extended,3C013A83
+patch=1,EE,0022BE54,extended,34211AF4
+//Hud Elements
+patch=1,EE,21C91FB8,extended,3F4CCCCD//score offset
+patch=1,EE,21C91FF8,extended,3FD1EB85//timer offset
+patch=1,EE,21C91FE0,extended,3FD1EB85//speedometer offset
+patch=1,EE,21C92000,extended,3F51EB85//pop up offset
+patch=1,EE,21C91AA0,extended,44610000//offscreen popup offset
+patch=1,EE,21C919A8,extended,C1C80000//pop up offset
+patch=1,EE,203C5314,extended,41400000//chevron spacing
+patch=1,EE,21C91980,extended,41880000//chevron spacing
+patch=1,EE,21C91690,extended,43340000//boost bar fire width
+patch=1,EE,21C91988,extended,41B00000//black chevron spacing
+patch=1,EE,21CADE10,extended,41B00000//yellow chevron spacing
+patch=1,EE,21C91FF0,extended,3FD1EB85//car unlock text pos
+patch=1,EE,21C9BD40,extended,43FA0000//maniac star counter score add end pos
+patch=1,EE,21C9BD48,extended,43FA0000//maniac star counter score add end pos
+patch=1,EE,21C9BD50,extended,43FA0000//maniac star counter score add end pos
+patch=1,EE,21C91A78,extended,43D20000//maniac boost chain combo score pos
+patch=1,EE,21C91A70,extended,43D20000//maniac boost chain combo score pos
+patch=1,EE,203DCEA8,extended,40c00000//maniac boost chain combo score pos
+patch=1,EE,21C91F60,extended,C4610000//crashbreaker text offset
+patch=1,EE,20441078,extended,43340000//ea trax width
 
+[60 FPS Menus and Crashes]
+author=SuperType1/remco
+description=Makes the entire game run in 60 FPS.
+//60 FPS Front End
+patch=1,EE,202159AC,extended,24040001
+patch=1,EE,202159A4,extended,00108002
+//60 FPS Crashes
+patch=1,EE,20209070,word,908523E8
+
+[Extra particles while driving]
+author=Nehalem
+description=Render all extra particles while driving
+patch=0,EE,202E30DC,extended,24030001
+
+[Falling car parts]
+author=Nehalem
+description=Enable falling car parts of other vehicles while driving
+patch=0,EE,202847D8,extended,00000000
+
+[Progressive Scan]
+author=Nehalem
+description=Always ask for 480p mode during boot
+patch=0,EE,20183F1C,extended,10000015

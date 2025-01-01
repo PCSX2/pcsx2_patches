@@ -1,0 +1,6 @@
+gametitle=Freestyle Metal X PAL-M SLES-50720 C8AB1868
+
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,003E9634,word,00000001 //00000002

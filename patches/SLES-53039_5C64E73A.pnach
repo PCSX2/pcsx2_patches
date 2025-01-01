@@ -1,46 +1,58 @@
-gametitle=Champions - Return to Arms (PAl-M4) (SLES-53039)
+gametitle=Champions: Return to Arms * PAL-M4 * SLES-53039 * 5C64E73A
+
+// ==========
+// This game gains a minor speed-up by "EE Cyclerate" to 2
+//  under Config > Emulation Settings > Speedhacks.
+// ==========
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht
-comment=Widescreen Hack
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0018AAB0,word,3C013F19 // 3C013F4C
+patch=1,EE,001952B4,word,3C013F19 // 3C013F4C
+patch=1,EE,0019A50C,word,3C013FE3 // 3C013FAA - render fix menu
+patch=1,EE,0019A90C,word,3C013FE3 // 3C013FAA - render fix
 
-// 16:9
-patch=1,EE,0016595c,word,3c013f40 // 460c7382 hor fov
-patch=1,EE,00165974,word,34210000 // e48e0000 hor fov
-patch=1,EE,00165978,word,4481f000 // 00000000
-patch=1,EE,0016597c,word,461e6302 // 00000000
-patch=1,EE,001659a0,word,460c7382 // 00000000
-patch=1,EE,001659a4,word,e48e0000 // 00000000
-patch=1,EE,0018ac2c,word,00000000 // 4600d306
-patch=1,EE,0018ac80,word,00000000 // 4600d306
-patch=1,EE,001869d0,word,3c193f40 // 00000000 renderfix
-patch=1,EE,001869d4,word,4499f000 // 00000000 renderfix
-patch=1,EE,001869ec,word,4600b047 // 3c01bf80
-patch=1,EE,001869f0,word,461ece43 // 44810800
+[Widescreen/16:10]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0018AAB0,word,3C013F2A
+patch=1,EE,001952B4,word,3C013F2A
+patch=1,EE,0019A50C,word,3C013FCC
+patch=1,EE,0019A90C,word,3C013FCC
 
-// 16:10
-//patch=1,EE,0016595c,word,3c013f55 // 460c7382 hor fov
-//patch=1,EE,00165974,word,34215555 // e48e0000 hor fov
-//patch=1,EE,00165978,word,4481f000 // 00000000
-//patch=1,EE,0016597c,word,461e6302 // 00000000
-//patch=1,EE,001659a0,word,460c7382 // 00000000
-//patch=1,EE,001659a4,word,e48e0000 // 00000000
-//patch=1,EE,0018ac2c,word,00000000 // 4600d306
-//patch=1,EE,0018ac80,word,00000000 // 4600d306
-//patch=1,EE,0018698c,word,4617bd80 // 3c013f80
-//patch=1,EE,00186990,word,3c193f55 // 4481b000 renderfix
-//patch=1,EE,001869d0,word,37395555 // 00000000 renderfix
-//patch=1,EE,001869d4,word,4499f000 // 00000000
-//patch=1,EE,001869ec,word,4600b047 // 3c01bf80
-//patch=1,EE,001869f0,word,461ece43 // 44810800
+[Widescreen/15:10]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0018AAB0,word,3C013F35
+patch=1,EE,001952B4,word,3C013F35
+patch=1,EE,0019A50C,word,3C013FBF
+patch=1,EE,0019A90C,word,3C013FBF
 
+[Widescreen/20:9]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0018AAB0,word,3C013EF5
+patch=1,EE,001952B4,word,3C013EF5
+patch=1,EE,0019A50C,word,3C01400E
+patch=1,EE,0019A90C,word,3C01400E
+
+[Widescreen/21:9]
+gsaspectratio=Stretch
+author=PeterDelta, converted by pgert
+patch=1,EE,0018AAB0,word,3C013EE9
+patch=1,EE,001952B4,word,3C013EE9
+patch=1,EE,0019A50C,word,3C014015
+patch=1,EE,0019A90C,word,3C014015
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Disable interlacing hack by ElHecht
-
-// disable interlacing
-patch=1,EE,0019e2e8,word,aca00008 // aca60008
-
-
+author=Agrippa
+comment=EE overclocking is needed to avoid infrequent frame rate drops.
+patch=1,EE,20451640,extended,00000000
+patch=1,EE,20451644,extended,00000001
+patch=1,EE,204516B4,extended,00000001
+patch=1,EE,2019E41C,extended,10000010
+patch=1,EE,2019E47C,extended,10000004
+patch=1,EE,2019ED0C,extended,24020001

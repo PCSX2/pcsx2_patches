@@ -1,13 +1,19 @@
-gametitle=FlatOut [PAL-M4] (SLES_527.53)
+gametitle=FlatOut [PAL-M4] (SLES_527.53) E98B1B2A
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas
-comment=Widescreen Hack
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00191084,extended,3C013F40
+patch=1,EE,00191F34,extended,3C013F40
+patch=1,EE,001D8E20,extended,3C013F40
+patch=1,EE,00236510,extended,3C013F1C
 
-//Gameplay 16:9
-patch=1,EE,0019E924,word,3C013FAB //3C013F80 Y-FOV
-patch=1,EE,00180CC0,word,3C013FAB //3C013F80
-patch=1,EE,002B2F74,word,3EE90000 //3F000000 Zoom
-
-
+[50/60 FPS]
+author=FlatOut & PeterDelta 
+description=Might need EE Overclock at 130%.
+patch=1,EE,002D9608,extended,00000001
+patch=1,EE,E0010008,extended,0028C540
+patch=1,EE,002D9608,extended,00000002
+patch=1,EE,E0016310,extended,00315B64
+patch=1,EE,002EB510,extended,00000000

@@ -1,0 +1,19 @@
+gametitle=Brave - The Search for Spirit Dancer (NTSC-U) SLUS-21127 17E7E24E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,00465BE4,extended,00000001
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,20402460,extended,00000000
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,20465C80,extended,3C88888A
+patch=1,EE,E0010000,extended,003C6D68
+patch=1,EE,20465C80,extended,3D088889

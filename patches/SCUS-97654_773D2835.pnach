@@ -1,0 +1,8 @@
+gametitle=MotorStorm - Arctic Edge (NTSC-U) (SCUS-97654)
+
+[60FPS Hack]
+author=asasega
+comment=Patches the game to run at 60FPS. Requires 180% EE Overclock
+
+//60FPS
+patch=1,EE,2039BAF8,extended,00000000

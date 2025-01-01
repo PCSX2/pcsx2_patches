@@ -2,7 +2,7 @@ gametitle=PaRappa the Rapper 2 (NTSC-J) (SCPS-15017)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Parotaku
+author=Parotaku
 
 // 16:9
 patch=1,EE,0016066c,word,3c013f40

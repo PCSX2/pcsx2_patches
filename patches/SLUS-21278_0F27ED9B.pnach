@@ -1,0 +1,12 @@
+gametitle=SSX On Tour (U)(SLUS-21278)
+
+[60 FPS]
+comment=Forces 60 frames per second
+author=MelA
+
+// Forces the FrameHalver variable to 1
+// 1 = 60fps, 2 = 30fps, and probably 3 = 15fps.
+patch=1,EE,003132b4,extended,01001124
+
+// Skipping some nonsense code that's probably no longer needed
+patch=1,EE,003132b8,extended,15000010

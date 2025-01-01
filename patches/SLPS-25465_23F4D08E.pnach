@@ -2,7 +2,7 @@ gametitle=Azumi (NTSC-J)(SLPS-25465)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa/Elhecht
+author=Arapapa/Elhecht
 
 // 16:9 gameplay
 patch=1,EE,0021b0e8,word,10000012 // 10000013

@@ -1,32 +1,40 @@
-gametitle=Need for Speed - Underground (PAL-M7) (SLES-51967)
+gametitle=Need for Speed - Underground (PAL-M7) (SLES-51967) FDA10318
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht
-comment=Widescreen Hack 16:9
-// 16:9
+author=nemesis2000, ElHecht & PeterDelta
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00438adc,word,3f400000 // 3f800000
 patch=1,EE,00438a14,word,3f400000 // 3f800000
 patch=1,EE,004ff628,word,3f2aaaab // 3f000000
 patch=1,EE,004ff630,word,3f2aaaab // 3f000000
+patch=1,EE,204378E4,extended,3F400000
+patch=1,EE,20437FEC,extended,3F400000
+patch=1,EE,20229DA8,extended,3C01BF28
+patch=1,EE,20229DAC,extended,44816800
+patch=1,EE,20229DDC,extended,46007307
+patch=1,EE,20229DE0,extended,46006BC7
+patch=1,EE,E0040109,extended,01BDED80
+patch=1,EE,20229DA8,extended,3C01BF00
+patch=1,EE,20229DAC,extended,44816000
+patch=1,EE,20229DDC,extended,46006346
+patch=1,EE,20229DE0,extended,460073C6
 
-// 16:10
-//patch=1,EE,00438adc,word,3f555555 // 3f800000
-//patch=1,EE,00438a14,word,3f555555 // 3f800000
-//patch=1,EE,004ff628,word,3f19999a // 3f000000
-//patch=1,EE,004ff630,word,3f19999a // 3f000000
-
-
-[50 FPS]
+[50/60 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,2011060C,extended,2C420001 //2C420002
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
+description=SDTV 480p mode at start.
 patch=1,EE,003AF874,word,24110000
-patch=1,EE,003AF878,word,24120052
+patch=1,EE,003AF878,word,24120050
 patch=1,EE,003AF884,word,24130001
 patch=1,EE,004FEFF8,word,3C888889
-patch=1,EE,0042EE04,word,0000001E
+
+[Remove blur]
+author=PeterDelta
+description=Remove blur effect
+patch=1,EE,204D9D10,word,00000000

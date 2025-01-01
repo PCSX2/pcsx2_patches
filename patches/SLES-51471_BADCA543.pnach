@@ -1,0 +1,11 @@
+gametitle=Freedom Fighters (PAL-S) SLES-51471 BADCA543
+//Corresponds to the main crc to activate the secondary crc 6EEE06DD called FF.ELF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.

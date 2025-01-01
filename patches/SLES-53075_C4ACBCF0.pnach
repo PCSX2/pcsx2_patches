@@ -1,8 +1,8 @@
-gametitle=Area 51 (PAL-M5) (SLES-53075)
+gametitle=Area 51 (PAL-M5) (SLES-53075) C4ACBCF0
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,00392a10,word,3c193f40 // 00000000 hor fov
@@ -19,10 +19,9 @@ patch=1,EE,003930e4,word,461eab83 // 00000000 renderfix calculation
 //patch=1,EE,003930f8,word,461ebb03 // 00000000 renderfix calculation
 //patch=1,EE,003930e4,word,461eab83 // 00000000 renderfix calculation
 
-
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,00382DB8,word,28620001 //28620002 slti v0,v1,0x0002
+description=Might need EE Overclock at 180%.
+patch=1,EE,00382DB8,extended,28620001
 patch=1,EE,E0010001,extended,005BF0C4
-patch=1,EE,20382DB8,extended,28620002
+patch=1,EE,00382DB8,extended,28620002

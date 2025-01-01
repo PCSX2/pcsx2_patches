@@ -3,14 +3,15 @@ gametitle=Crash - Mind Over Mutant (NTSC-U)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=CRASHARKI
-comment=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
 patch=1,EE,21A2A3B8,byte,1 //00000000 //HUD
 patch=1,EE,21A2A3F2,byte,10 //40 //Zoom 1
-patch=1,EE,21A2A3F8,word,3F066666 //3F333333 //Zoom 2
+patch=1,EE,21A2A3F8,extended,3F100000 //3F066666 //Y-Axis
+patch=1,EE,21A2A3F4,extended,3F7FA68A //3F63F7CD //X-Axis
 
 [Progressive Scan]
 author=CRASHARKI
-comment=Run the game with Progressive Scan enabled from the start.
+description=Run the game with Progressive Scan enabled from the start.
 patch=1,EE,207155B0,byte,1 //00000000 //Progressive Scan from the beginning
 
 [60 FPS]

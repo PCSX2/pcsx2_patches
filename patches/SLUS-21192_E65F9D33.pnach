@@ -2,10 +2,9 @@ gametitle=Cabela's Outdoor Adventures (2005) (U)(SLUS-21192)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
-s
 //Zoom
 patch=1,EE,00317bc4,word,3c023f20 //3c023f00
 

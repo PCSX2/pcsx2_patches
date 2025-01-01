@@ -1,9 +1,6 @@
-gametitle=Sonic Gems collection (pal)(SLES-53350)
+gametitle=Sonic Gems Collection (PAL-M) SLES-53350 4A198252 Main CRC
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-comment=Widescreen hack by Esppiral
-patch=1,EE,00290960,word,3FAAAAAB
-patch=1,EE,216CC190,word,3F400000
-
-
+[Sonic CD 60 FPS]
+author=PeterDelta
+description=SDTV 480p mode when starting Sonic CD
+//Used to enable SLES-53350_82DB1E89.pnach elf: S1.DAT Sonic CD

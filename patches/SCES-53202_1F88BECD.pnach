@@ -1,23 +1,32 @@
-gametitle=Tekken 5 (PAL-M5) (SCES-53202)
+gametitle=Tekken 5 (PAL-M5) (SCES-53202) 1F88BECD
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht
-comment=Widescreen ported from NTSC hack by nemesis2000
+author=ElHecht & PeterDelta
+description=Widescreen fix. Based on NTSC version of nemesis2000
 
-patch=1,EE,00340bb0,word,3c013f40 // both fov+
+patch=1,EE,003F8ADB,extended,01 //widescreen option enable
 
-//applies both fov+ only for widescreen mode
-patch=1,EE,00340be0,word,3c010015
+patch=1,EE,00340bb0,word,3c013f40 //both fov+
+
+patch=1,EE,00340be0,word,3c010015 //applies both fov+ only for widescreen mode
 patch=1,EE,00340be4,word,c62db7f4
 patch=1,EE,00340c04,word,46016b42
 patch=1,EE,00340c08,word,46010843
 patch=1,EE,00340c20,word,460d1083
 patch=1,EE,00340c24,word,460d0843
 
-//render fix
-patch=1,EE,0022db84,word,3c013f2b
+patch=1,EE,0022db84,word,3c013f2b //render fix
 patch=1,EE,0022db94,word,44810000
 patch=1,EE,0022db98,word,46006302
 
+patch=1,EE,0023D008,word,3C013F40 //fix yoshimitsu and xiaoyu
+patch=1,EE,0026437C,word,46160942
+patch=1,EE,002643D0,word,46160C63
+patch=1,EE,00264428,word,46160C63
+patch=1,EE,00264480,word,46160C63
 
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,004039F0,extended,00000002

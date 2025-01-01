@@ -2,7 +2,7 @@ gametitle=Capcom vs SNK 2 (NTSC) (SLUS-20246)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by gamemasterplc
+author=gamemasterplc
 
 // removed because  causes the image to be shifted to the right
 

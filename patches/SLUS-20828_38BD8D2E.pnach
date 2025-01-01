@@ -1,0 +1,7 @@
+gametitle=ShellShock - Nam '67 (NTSC-U) SLUS-20828 38BD8D2E
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,E0010001,extended,0013B5E8
+patch=1,EE,202994C8,extended,2C420001 //2C420002

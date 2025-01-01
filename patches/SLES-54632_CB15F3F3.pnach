@@ -1,0 +1,6 @@
+gametitle=MTV Pimp My Ride (PAL-M) SLES-54632 CB15F3F3
+
+[50 FPS]
+author=PeterDelta
+comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+patch=1,EE,002183CC,word,24040001 //24040002

@@ -1,0 +1,8 @@
+gametitle=Jikkyou Powerful Pro Yakyuu 2009(SLPM-55146)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Tokman5
+
+//X-Fov
+patch=1,EE,00355414,word,3F19999A //3F4CCCCD

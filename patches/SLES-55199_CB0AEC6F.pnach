@@ -1,0 +1,7 @@
+gametitle=NASCAR '09 (PAL-E) SLES-55199 CB0AEC6F
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+comment=Renders the game in 16:9 aspect ratio
+patch=1,EE,003EC430,word,3F400000 //3F800000

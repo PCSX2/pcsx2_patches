@@ -2,7 +2,7 @@ gametitle=One Piece - Grand Adventure (PAL-E) (SLES-54165)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by ElHecht
+author=ElHecht
 
 // 16:9
 patch=1,EE,002b56d8,word,3c013f40

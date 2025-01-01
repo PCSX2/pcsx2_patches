@@ -1,0 +1,19 @@
+gametitle=Echo Night - Beyond (PAL-E) SLES-53414 E078914A (spanish 1.0.1)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas and Arapapa
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,002b4001,byte,01 //Force turn on Internal Widescreen
+patch=1,EE,00146EA4,word,3C023F1F //3C023F00 Zoom
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%. Select 60 Hz
+patch=1,EE,E001001E,extended,0028A348
+patch=1,EE,0028A348,extended,0000003C
+
+[Performance Fix]
+author=PeterDelta
+description=Remove flashlight shadows improving performance.
+patch=1,EE,001471C4,word,3C020000 //3C023F80

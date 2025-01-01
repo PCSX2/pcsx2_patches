@@ -1,0 +1,6 @@
+gametitle=London Racer 2 (PAL-M) SLES-50955 0CEB8F2F
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0025481C,word,2C420000 //2C420001

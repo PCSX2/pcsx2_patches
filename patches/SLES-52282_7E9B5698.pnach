@@ -1,17 +1,19 @@
-gametitle=Mafia [PAL] (SLES_522.82)
+gametitle=Mafia [PAL] (SLES_522.82) 7E9B5698
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by El_Patas, Render fixes by arapapa
-
+author=El_Patas and Arapapa
+description=Renders the game in 16:9 aspect ratio
 //Gameplay 16:9
 patch=1,EE,20FFB6B4,extended,3FAB0000 //3F800000 Vertical axis
 patch=1,EE,20FFB79C,extended,3FAB0000 //3F800000 Horizontal axis
-
-//Render fix
+//Render fixes by arapapa
 patch=1,EE,20FFB704,extended,3D000000 //3D4CCCCD
-
 //Rendering distancce
 patch=1,EE,20FFB708,extended,44000000 //43660000
 
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 300%.
+patch=1,EE,0046F354,word,2C410001 //0052082B
+patch=1,EE,002A7748,word,8F889800 //8E284204

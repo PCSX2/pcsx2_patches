@@ -1,0 +1,6 @@
+gametitle=Call of Duty - World at War - Final Fronts (PAL-M) SLES-55367 B78A5F5A
+
+[50 FPS]
+author=Gabominated
+description=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,20583B50,extended,42480000 //41C80000

@@ -1,0 +1,6 @@
+gametitle=Unreal Tournament (PAL-E) SLES-50074 4A805DF1
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 180%.
+patch=1,EE,0012D394,word,28420001 //28420002

@@ -2,7 +2,7 @@ gametitle=Club Football 2005 - AC Milan and Others (PAL)(SLES-52656)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Menu 3D Fov and ETC
 patch=1,EE,001b85a4,word,3c013fe3 //3c013faa

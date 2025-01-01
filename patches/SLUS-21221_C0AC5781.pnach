@@ -5,4 +5,14 @@ comment=Magna Carta - Tears of Blood - Widescreen Hack (16:9) (NTSC-U)
 //16:9 (b002a427 00608044 803f023c 00688244 00000000 86630046 30c2050c)
 patch=1,EE,002bd948,word,3c023f40 //3c023f80
 
+[No-Interlacing]
+author=NineKain
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+//Remove Interlacing
+patch=1,EE,001E5668,word,00000000
 
+[60 FPS]
+author=Gabominated
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,201C69E4,extended,28410001 //28410002

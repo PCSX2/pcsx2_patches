@@ -1,12 +1,9 @@
-gametitle=Bratz - Girlz Really Rock (E)(SLES-55357)
+gametitle=Bratz - Girlz Really Rock (E)(SLES-55357) 26847412
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
-
-//Widescreen hack 16:9
-
-
+author=Arapapa
+comment=Renders the game in 16:9 aspect ratio
 //X-Fov
 //00000000 00000000 83ad0046 00000000
 //403f013c 00f08144 83ad0046 82b51e46
@@ -14,4 +11,9 @@ patch=1,EE,003baf8c,word,3c013f40
 patch=1,EE,003baf90,word,4481f000
 patch=1,EE,003baf98,word,461eb582
 
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,003F4324,extended,46010003
+patch=1,EE,E0010000,extended,004AD52C
+patch=1,EE,003D189C,extended,46010001

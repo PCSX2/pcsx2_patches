@@ -2,7 +2,7 @@ gametitle=Baroque (PAL-E) (SLES-55216)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by ElHecht
+author=ElHecht
 
 //Apepars to totally break rendering in both hardware and software currently.
 

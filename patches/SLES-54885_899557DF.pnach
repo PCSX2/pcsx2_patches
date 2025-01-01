@@ -2,7 +2,7 @@ gametitle=Moto X Maniac (E)(SLES-54885)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -15,4 +15,7 @@ patch=1,EE,00135e2c,word,3421aaab
 patch=1,EE,00135e34,word,4481f000
 patch=1,EE,00135e38,word,461ebdc2
 
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,0022B6C4,word,00000000

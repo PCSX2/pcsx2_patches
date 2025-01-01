@@ -1,9 +1,9 @@
-gametitle=The Suffering PAL (SLES_524.39)
+gametitle=The Suffering PAL (SLES_524.39) FB680748
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001E766C,word,E7B40010 //14E00004
 patch=1,EE,001E7670,word,8E020338 //E7B40010
 patch=1,EE,001E7674,word,AE020330 //8E020338
@@ -85,18 +85,19 @@ patch=1,EE,001E779C,word,00000000 //46000847
 //Font fix
 patch=1,EE,001f9cd0,word,3c013f40 //3c013f80
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock at 130%.
 patch=1,EE,001F92C0,extended,28420002
 patch=1,EE,001F92E0,extended,28420002
 patch=1,EE,E0020000,extended,00476E44
 patch=1,EE,001F92C0,extended,28420001
 patch=1,EE,001F92E0,extended,28420001
 
-[60 FPS]
+[480p Mode]
+gsinterlacemode=1
 author=PeterDelta
-comment=Forces progressive scan and run at 60 fps
+description=SDTV 480p mode at start.
 patch=1,EE,00418544,word,24110000
-patch=1,EE,00418548,word,24120052
+patch=1,EE,00418548,word,24120050
 patch=1,EE,00418554,word,24130001

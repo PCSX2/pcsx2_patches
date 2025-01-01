@@ -1,0 +1,6 @@
+gametitle=The Chronicles of Narnia - Prince Caspian (NTSC-U) SLUS-21756 E43E46E6
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,003BE188,word,00000000

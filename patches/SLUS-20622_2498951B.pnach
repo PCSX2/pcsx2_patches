@@ -2,7 +2,7 @@ gametitle=Silent Hill 3 (SLUS-20622)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by nemesis2000 (pnach by nemesis2000)
+author=nemesis2000
 
 //gameplay
 patch=1,EE,001b4a64,word,3c023f28 //hor val / ntsc mode
@@ -27,4 +27,7 @@ patch=1,EE,002b6200,word,24100000 //fmv black borders
 patch=1,EE,001ee320,word,03E00008
 patch=1,EE,001ee324,word,00000000
 
-
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS
+patch=1,EE,2013058C,extended,00000000

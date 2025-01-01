@@ -2,7 +2,7 @@ gametitle=Scooby-Doo! Night of 100 Frights (U)(SLUS-20349)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack by Arapapa
+author=Arapapa
 
 //Widescreen hack 16:9
 
@@ -18,4 +18,7 @@ patch=1,EE,002812c0,word,461e0843 // 00000000
 patch=1,EE,002812c4,word,e6010068 // 00000000
 patch=1,EE,002812c8,word,0807989c // 00000000
 
-
+[60 FPS]
+author=asasega
+comment=Patches the game to run at 60 FPS.
+patch=1,EE,00131DB0,word,2C420001

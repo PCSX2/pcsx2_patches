@@ -1,0 +1,14 @@
+gametitle=Ant Bully, The (PAL-M) SLES-54152 802F7B69
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0015CD54,word,2C620000 //0062102B
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0010E8DC,word,24110000
+patch=1,EE,0010E8E0,word,24120050
+patch=1,EE,0010E8EC,word,24130001

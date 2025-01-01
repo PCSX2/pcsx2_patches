@@ -1,0 +1,16 @@
+gametitle=Freedom Fighters (PAL-S) SLES-51471 6EEE06DD FF.ELF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,0056967C,byte,01
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0046CA84,word,3C050000
+patch=1,EE,0046CA8C,word,3C060050
+patch=1,EE,0046CA94,word,3C070001
+patch=1,EE,0056B808,word,00000000
