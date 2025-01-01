@@ -1,0 +1,69 @@
+gametitle=SSX 3 (SLUS-20772)
+
+[Aspect Ratio - 3xStretch]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3E800000 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 3x15:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3E888889 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 3x16:10]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3E8E38E4 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 3x4:3]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3EAAAAAB //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 3x5:4]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3EB60B61 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 32:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3EC00000 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 21:9 (3840x1600)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3F0E38E4 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 21:9 (3440x1440)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3F0EE23C //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+patch=1,EE,20622604,extended,3f800000 // 3f800000
+patch=1,EE,e0023f40,extended,006225FE // fix for vert- cutscenes
+patch=1,EE,20622600,extended,3f100000 //
+patch=1,EE,20622604,extended,3f400000 //
+
+[Aspect Ratio - 21:9 (2560x1080)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3F100000 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
