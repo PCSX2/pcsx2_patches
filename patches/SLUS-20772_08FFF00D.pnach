@@ -56,11 +56,6 @@ description=Changes aspect ratio.
 patch=1,EE,20622600,extended,3F0EE23C //Horizontal Aspect Ratio
 patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
 
-patch=1,EE,20622604,extended,3f800000 // 3f800000
-patch=1,EE,e0023f40,extended,006225FE // fix for vert- cutscenes
-patch=1,EE,20622600,extended,3f100000 //
-patch=1,EE,20622604,extended,3f400000 //
-
 [Aspect Ratio - 21:9 (2560x1080)]
 gsaspectratio=Stretch
 author=Virjoinga
