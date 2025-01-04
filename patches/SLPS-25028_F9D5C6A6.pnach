@@ -11,19 +11,19 @@ patch=0,EE,101DD0D0,extended,3F40 // Menus
 
 // 16:9 - Gameplay HUD
 patch=0,EE,101B06D8,extended,01FC // Move the entire cluster to the right
-patch=0,EE,101A915C,extended,0040 // Tacho needle
+patch=0,EE,101A915C,extended,0030 // Tacho needle
 patch=0,EE,101A9208,extended,0020 // Shift assist
-patch=0,EE,101A9188,extended,002A // Left indicator
-patch=0,EE,101A91B4,extended,003A // Right indicator
-patch=0,EE,101A9274,extended,005E // Current gear
+patch=0,EE,101A9188,extended,0020 // Left indicator
+patch=0,EE,101A91B4,extended,0031 // Right indicator
+patch=0,EE,101A9274,extended,004E // Current gear
 patch=0,EE,101A92AC,extended,0015 // Speed
 patch=0,EE,201A92BC,extended,010B4023 // Speed, distance between letters (19)
 patch=0,EE,101A9324,extended,0016 // Bottom left line
-patch=0,EE,101A91DC,extended,0040 // mph text
+patch=0,EE,101A91DC,extended,003F // kph text
 patch=0,EE,101A9350,extended,0056 // Bottom right line
-patch=0,EE,2033E390,extended,3F400000
+patch=0,EE,20336000,extended,3F400000
 patch=0,EE,20336048,extended,3F400000
-patch=0,EE,2033E4B0,extended,3F400000
+patch=0,EE,20336120,extended,3F400000
 patch=0,EE,20336168,extended,3F400000
 patch=0,EE,203361B0,extended,3F400000
 patch=0,EE,203361F8,extended,3F400000
