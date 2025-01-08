@@ -7,6 +7,7 @@ author=VIRGIN KLM, Silent
 
 // 16:9 - 3D Elements
 patch=0,EE,10168040,extended,3F40 // In-game
+patch=0,EE,1016818C,extended,3F40 // Split-screen
 patch=0,EE,101E5D50,extended,3F40 // Menus
 
 // 16:9 - Gameplay HUD
@@ -29,6 +30,14 @@ patch=0,EE,2032DE20,extended,3F400000
 patch=0,EE,2032DE68,extended,3F400000
 patch=0,EE,2032DEB0,extended,3F400000
 patch=0,EE,2032DEF8,extended,3F400000
+patch=0,EE,2032DFD0,extended,3F400000
+patch=0,EE,2032E018,extended,3F400000
+patch=0,EE,2032E0F0,extended,3F400000
+patch=0,EE,2032E138,extended,3F400000
+patch=0,EE,2032E180,extended,3F400000
+patch=0,EE,2032E1C8,extended,3F400000
+patch=0,EE,2032E210,extended,3F400000
+patch=0,EE,2032E258,extended,3F400000
 patch=0,EE,2032E330,extended,3F400000
 patch=0,EE,2032E378,extended,3F400000
 patch=0,EE,2032E3C0,extended,3F400000
