@@ -1,9 +1,12 @@
-gametitle=Splinter Cell - Pandora Tomorrow (NTSC-U) SLUS-20958 0277247B SC2A.ELF
+gametitle=Tom Clancy's Splinter Cell 2: Pandora Tomorrow * NTSC-U * SLUS-20958 * 0277247B
+// CRC shifts from AEE8FDC4 to 0277247B (SC2A.ELF)
+
+// This pnach is activated through the SLUS-20958_AEE8FDC4 pnach.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-description=Renders the game in 16:9 aspect ratio
+
 patch=1,EE,001b771c,word,14400005
 patch=1,EE,001b7720,word,3c040048
 patch=1,EE,001b7724,word,0c088178
@@ -70,7 +73,7 @@ patch=1,EE,001b7814,word,3c023fd4
 patch=1,EE,001b7818,word,ae0000c0
 patch=1,EE,001b781c,word,24040004
 patch=1,EE,001b7820,word,ae0000c4
-patch=1,EE,001b7824,word,3c033f40 //hor val
+patch=1,EE,001b7824,word,3c033f40 // X-FoV
 patch=1,EE,001b7828,word,ae0000c8
 patch=1,EE,001b782c,word,34427ae1
 patch=1,EE,001b7830,word,e61400cc
@@ -92,7 +95,19 @@ patch=1,EE,001b786c,word,ae03008c
 patch=1,EE,001b7870,word,3c033f80
 patch=1,EE,001b7874,word,ae030090
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+comment=Combine with 'Widescreen 16:9'
+patch=1,EE,001b7824,word,3c033f55
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+comment=Combine with 'Widescreen 16:9'
+patch=1,EE,001b7824,word,3c033f64
+
 [60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,0018D778,word,24030001 //24030002
+comment=Might need EE overclocking to be stable (130%).
+patch=1,EE,0018D778,word,24030001 // 24030002

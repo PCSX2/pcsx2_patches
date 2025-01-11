@@ -1,5 +1,5 @@
-gametitle=Tom Clancy's Splinter Cell - Chaos Theory (PAL-M) SLES-53287 4C4D7873
-//Corresponds to the main crc to activate the secondary crc DDAEB7A6 called SC3_OFF.ELF
+gametitle=Tom Clancy's Splinter Cell 3: Chaos Theory * PAL-M3 * SLES-53287 * 4C4D7873
+// CRC shifts from 4C4D7873 to DDAEB7A6 (SC3_OFF.ELF)
 
 [480p Mode]
 author=PeterDelta

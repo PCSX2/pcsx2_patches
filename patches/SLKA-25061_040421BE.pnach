@@ -1,12 +1,11 @@
-gametitle=Tom Clancy's Splinter Cell (NTSC-K)(SLKA-25061)
+gametitle=Tom Clancy's Splinter Cell * NTSC-K * SLKA-25061 * 040421BE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000 (NTSC-K by Arapapa)
+author=nemesis2000 & arapapa
+// Ported by arapapa from the NTSC-U hack by nemesis2000.
+// Search values are different than NTSC-U.
 
-//Search values are different than NTSC-U.
-
-//Widescreen hack 16:9
 patch=1,EE,001d0b14,word,8f828ff8
 patch=1,EE,001d0b18,word,14400005
 patch=1,EE,001d0b1c,word,3c040046
@@ -48,7 +47,7 @@ patch=1,EE,001d0b8c,word,3c023fd4
 patch=1,EE,001d0b90,word,34437ae1
 
 patch=1,EE,001d0b94,word,24050004
-patch=1,EE,001d0b98,word,3c043f40 //hor val
+patch=1,EE,001d0b98,word,3c043f40 // X-FoV
 patch=1,EE,001d0b9c,word,e4c00070
 patch=1,EE,001d0ba0,word,8fa2005c
 
@@ -102,4 +101,14 @@ patch=1,EE,001d0c38,word,8fa2005c
 patch=1,EE,001d0c3c,word,3c043f80
 patch=1,EE,001d0c40,word,ac44008c
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000 & arapapa, converted by pgert
+comment=Combine with 'Widescreen 16:9'
+patch=1,EE,001d0b98,word,3c043f55
 
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000 & arapapa, converted by pgert
+comment=Combine with 'Widescreen 16:9'
+patch=1,EE,001d0b98,word,3c043f64
