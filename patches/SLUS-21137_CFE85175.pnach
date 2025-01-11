@@ -1,4 +1,4 @@
-gametitle=Tom Clancy's Splinter Cell: Chaos Theory (SLUS_21137)
+gametitle=Tom Clancy's Splinter Cell 3: Chaos Theory * NTSC-U * SLUS-21137 * CFE85175
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -53,5 +53,3 @@ patch=1,EE,001f29b8,word,ae600094
 patch=1,EE,001f29bc,word,ae62009c
 patch=1,EE,001f29c0,word,3c023f80
 patch=1,EE,001f29c4,word,ae6200a0
-
-
