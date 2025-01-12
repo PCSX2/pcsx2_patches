@@ -2,8 +2,8 @@ gametitle=Pro Yakyuu Spirits 4 (SLPM_667.28) (NTSC-J)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=16:9 widescreen hack by 99skull (pnach by Arapapa)
-comment=Search values are apply to other series games
+description=16:9 widescreen hack by 99skull (pnach by Arapapa)
+description=Search values are apply to other series games
 
 //00000000 41b81946 803f083c
 patch=1,EE,00150448,word,3C013F2A //00000000 vert fov

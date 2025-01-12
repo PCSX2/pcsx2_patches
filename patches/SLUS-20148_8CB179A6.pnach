@@ -2,7 +2,7 @@ gametitle=Zone of the Enders (U)(SLUS-20148)
 
 //[Widescreen 16:9]
 //gsaspectratio=16:9
-//comment=Widescreen Hack
+//description=Widescreen Hack
 //16:9
 //Disabled due to graphical issues with heavy charged attacks causing striped effect on screen.
 

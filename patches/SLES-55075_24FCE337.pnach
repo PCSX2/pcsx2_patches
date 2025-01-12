@@ -3,7 +3,7 @@ gametitle=Speed Racer (PAL) SLES_550.75
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=pelvicthrustman
-comment= PAL Port by PuNkY_BoY
+description= PAL Port by PuNkY_BoY
 
 patch=1,EE,004c3fcc,word,3c013f00 //00000000
 patch=1,EE,004c3fec,word,4481f800 //00000000

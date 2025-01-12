@@ -8,14 +8,14 @@ gsaspectratio=16:9
 // ==========
 
 // ==========
-comment= Gauntlet - Seven Sorrows * SLES-53667 * PAL-M5 * BBB8392E
+description= Gauntlet - Seven Sorrows * SLES-53667 * PAL-M5 * BBB8392E
 author=nemesis2000
 patch=1,EE,00446620,word,24020002 // 8C4206EC
 // ==========
 
 // ==========
 // Alternative (and original) hack - less fps (do not use):
-// comment=- Widescreen hack by pelvicthrustman, ported by pgert.
+// description=- Widescreen hack by pelvicthrustman, ported by pgert.
 //  patch=1,EE,003B1510,word,3C013F40 // 00000000 (horizontal fov)
 //  patch=1,EE,003B151C,word,4481F800 // 00000000
 //  patch=1,EE,003B153C,word,AFA300F8 // 460C1043

@@ -2,7 +2,7 @@ gametitle=Nicktoons Unite! (NTSC-U) (SLUS_212.84)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by flameofrecca
+description=Widescreen fix by flameofrecca
 patch=1,EE,20b9e100,word,3f400000  // horizontal fov
 patch=1,EE,2086f71c,word,3f400000  // HUD, pause and main menus fix (horizontal)
 

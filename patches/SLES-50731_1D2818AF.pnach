@@ -3,7 +3,7 @@ gametitle=Need for Speed - Hot Pursuit 2 (PAL-M6) (SLES-50731) 1D2818AF
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen ported from NTSC hack by nemesis2000
+description=Widescreen ported from NTSC hack by nemesis2000
 // 16:9
 patch=1,EE,0032f6fc,word,3f400000 // 3f800000 hor fov
 patch=1,EE,0032f850,word,3f2aaaab // 3f000000 increase hor fov

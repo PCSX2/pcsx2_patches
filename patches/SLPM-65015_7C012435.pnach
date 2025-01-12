@@ -2,7 +2,7 @@ gametitle=Kessen II (J)(SLPM-65015)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack (NTSC-J by Arapapa)
+description=Widescreen hack (NTSC-J by Arapapa)
 
 //Widescreen hack 16:9
 
@@ -11,7 +11,7 @@ comment=Widescreen hack (NTSC-J by Arapapa)
 ////ac21e54b 00808430 3c2be74b
 //find serial SLPM-65015
 //[patches = 7C012435]
-//comment=COP2 flag instance patch by refraction
+//description=COP2 flag instance patch by refraction
 // a mac flag check just after a vsub which gets in the way, rearranging
 //patch=0,EE,0016ae90,word,48438800
 //patch=0,EE,0016ae94,word,4BE521AC

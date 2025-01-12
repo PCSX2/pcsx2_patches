@@ -21,7 +21,7 @@ description=Removes black bars in cutscenes
 patch=1,EE,001832d4,word,3c010000 //3c014220
 
 [No Noise Filter]
-comment=Noise filter removal
+description=Noise filter removal
 author=Maori-Jigglypuff (PAL by IWILLCRAFT)
 patch=1,EE,0034E6D4,word,00000000
 patch=1,EE,0033EC80,word,00000000

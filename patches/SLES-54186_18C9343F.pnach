@@ -3,7 +3,7 @@ gametitle=Devil May Cry 3: Dante's Awakening: Special Edition (SLES-54186)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //gameplay
 patch=1,EE,001ac7a4,word,3c013f40 //hor val 1

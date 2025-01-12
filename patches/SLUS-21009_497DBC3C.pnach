@@ -2,12 +2,12 @@ gametitle=Sega Classics Collection (NTSC-U) [SLUS-21009] [497DBC3C]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by...
-comment=-No.47 (NTSC-J Alien Syndrome/Virtua Racing)
-comment=-sergx12 (NTSC-J Out Run)
-comment=-FeRcHuLeS (original Golden Axe/Space Harrier hacks)
-comment=-Devina (NTSC-U ports of NTSC-J hacks)
-comment=-Aced14 (enable conditions, Golden Axe/Space Harrier ELF hacks)
+description=Widescreen hacks by...
+description=-No.47 (NTSC-J Alien Syndrome/Virtua Racing)
+description=-sergx12 (NTSC-J Out Run)
+description=-FeRcHuLeS (original Golden Axe/Space Harrier hacks)
+description=-Devina (NTSC-U ports of NTSC-J hacks)
+description=-Aced14 (enable conditions, Golden Axe/Space Harrier ELF hacks)
 
 //Alien Syndrome
 patch=1,EE,e0033f80,extended,0039fcfa //00003f80 - Enable condition

@@ -2,7 +2,7 @@ gametitle=Zombie Hunters 2 (PAL-E) (SLES-54569)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9)
+description=Widescreen Hack (16:9)
 // Original patch and value by No.47
 // Updated to ELf adresses by ElHecht
 

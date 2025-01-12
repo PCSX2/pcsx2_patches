@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Naruto - Ultimate Ninja (PAL-M5) (SLES-54163)
+description=Naruto - Ultimate Ninja (PAL-M5) (SLES-54163)
 author=ElHecht & Arapapa
 
 patch=1,EE,E0081100,extended,00100128 //Spanish

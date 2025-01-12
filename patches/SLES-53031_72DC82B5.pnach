@@ -3,7 +3,7 @@ gametitle=Hitman - Blood Money (PAL-I) (SLES-53031)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,00178c2c,word,3c013f40 // 00000000 hor fov
 patch=1,EE,00178c30,word,4481f000 // 00000000

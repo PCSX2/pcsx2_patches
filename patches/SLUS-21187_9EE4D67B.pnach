@@ -2,7 +2,7 @@ gametitle=Samurai Western (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 patch=1,EE,202D35A0,extended,3f400000
 patch=1,EE,0014cf5c,word,3c033fab

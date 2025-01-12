@@ -3,7 +3,7 @@ gametitle=Blowout [PAL] (SLES_529.89) 0158297B
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001D29AC,word,00000000 //AF80C5A8
 patch=1,EE,003BAA18,word,00000001 //00000000
 patch=1,EE,003B7DF0,word,C0222222 //BFF33333 HUD fix

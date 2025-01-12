@@ -2,7 +2,7 @@ gametitle=Spy Fiction SLUS_208.56
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,201df11c,extended,3F2AAAAA
 
 

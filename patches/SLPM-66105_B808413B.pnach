@@ -2,7 +2,7 @@ gametitle=Rhapsodia [NTSC-J] (SLPM-66105)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Original Widescreen Hack by nemesis2000 (pnach by nemesis2000 )
+description=Original Widescreen Hack by nemesis2000 (pnach by nemesis2000 )
 
 patch=1,EE,0037e62c,word,3c013f40 //hor value
 patch=1,EE,0037e630,word,44810000

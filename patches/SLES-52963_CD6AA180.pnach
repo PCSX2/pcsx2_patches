@@ -3,7 +3,7 @@ gametitle=Cold Winter [PAL-M4] (SLES_529.63)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Widescreen hack 16:9
+description=Widescreen hack 16:9
 
 patch=1,EE,003C6284,word,3C013F40 //00000000
 patch=1,EE,003C628C,word,44810800 //03E00008
@@ -29,7 +29,7 @@ patch=1,EE,001DC648,word,E7A20040 //8E440058
 
 [50 FPS]
 author=felixthecat1970
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=0,EE,201FE134,extended,24020001 //fps unlock reg 50fps
 patch=0,EE,2042BB4C,extended,24630000
 patch=0,EE,2042BB60,extended,24840000

@@ -2,7 +2,7 @@ gametitle=Baroque (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 
 // 16:9
 patch=1,EE,0039e744,word,3c033f40 // 3c033f80 hor fov

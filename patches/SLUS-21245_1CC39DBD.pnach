@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Suikoden Tactics (SLUS-21245)
+description=Suikoden Tactics (SLUS-21245)
 author=nemesis2000
 
 patch=1,EE,0037e94c,word,3c013f40 //hor value

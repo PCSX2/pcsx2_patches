@@ -2,7 +2,7 @@ gametitle=Zone of the Enders: The 2nd Runner SLES 511.13
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 //16:9
 patch=1,EE,0012af50,extended,3c013f40
 

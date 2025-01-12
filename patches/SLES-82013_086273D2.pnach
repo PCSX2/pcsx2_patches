@@ -3,12 +3,12 @@ gametitle=Metal Gear Solid 3 - Snake Eater (PAL-E) SLES-82013 086273D2
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Esppiral
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,20203FAC,extended,3F400000 // 3F800000
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,001D5E78,word,00000001 //00000002
 patch=1,EE,001D5E7C,word,00000000 //00000001
 patch=1,EE,001D4BA8,word,00000000 //00000040

@@ -42,7 +42,7 @@ patch=1,EE,002074AC,word,3421851F
 [60 FPS]
 author=Gabominated
 description=60 fps through HDTV 720p mode
-comment=Might need EE overclocking to be stable.
+description=Might need EE overclocking to be stable.
 patch=1,EE,20212b90,extended,00069403
 patch=1,EE,E0010002,extended,006F313C
 patch=1,EE,20212b90,extended,24120052

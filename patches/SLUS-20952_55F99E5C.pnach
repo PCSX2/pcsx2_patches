@@ -9,5 +9,5 @@ patch=1,EE,005A66EC,word,3FE38E38 //3FAAAAAB
 
 [60 FPS]
 author=Super David
-comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,005342E8,word,00000001

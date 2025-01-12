@@ -26,7 +26,7 @@ patch=1,EE,200C0020,word,03E00008
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=No Interlacing & No Motion Blur
+description=No Interlacing & No Motion Blur
 
 // No Interlacing by asasega
 patch=1,EE,20240B4C,word,00000000

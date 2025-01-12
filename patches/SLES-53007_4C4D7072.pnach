@@ -8,11 +8,11 @@ gsaspectratio=16:9
 // ==========
 
 // ==========
-comment= Splinter Cell 3 - Chaos Theory * SLES-53007 * PAL-M5 * 4C4D7072
+description= Splinter Cell 3 - Chaos Theory * SLES-53007 * PAL-M5 * 4C4D7072
 // ==========
 
 // ==========
-comment=- 16:9 Widescreen hack for Solo/Coop mode by ElHecht.
+description=- 16:9 Widescreen hack for Solo/Coop mode by ElHecht.
 patch=1,EE,001F2908,word,3C023F40 // 3C023F80 - X-axis
 // ==========
 

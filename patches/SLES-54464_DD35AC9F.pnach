@@ -2,7 +2,7 @@ gametitle=Global Defence Force (PAL-E) [SLES-54464] [DD35AC9F]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Yourgrandma (initial active X FOV hack) and Aced14 (ELF and 16:10 hacks)
+description=Widescreen hacks by Yourgrandma (initial active X FOV hack) and Aced14 (ELF and 16:10 hacks)
 
 //16:9 Widescreen
 patch=1,EE,10136434,extended,00003F40 //3C033F80 - Master X FOV #1

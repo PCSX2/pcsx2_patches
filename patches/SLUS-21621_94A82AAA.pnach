@@ -354,7 +354,7 @@ patch=1,EE,0026b534,word,461e0002 //c7808478
 
 [Mode 480p]
 author=felixthecat1970
-comment=Forces progressive scan at startup
+description=Forces progressive scan at startup
 patch=0,EE,00197AF0,extended,24040057
 patch=0,EE,1077EF3C,extended,000001C0
 patch=0,EE,204DFF34,extended,241B0050
@@ -366,7 +366,7 @@ patch=0,EE,2019D348,extended,241B0001
 
 [Controllable Party Members]
 author=TGE
-comment=The entire party is controllable like Persona 4/5
+description=The entire party is controllable like Persona 4/5
 patch=1,EE,0029AFC8,word,00000000 // nop check for if battle unit is not mc -> ai
 patch=1,EE,0020207C,word,00000000 // load proper unit id for battle menu skill list
 patch=1,EE,0020208C,word,8F84B6FC

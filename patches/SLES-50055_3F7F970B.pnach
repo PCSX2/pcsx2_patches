@@ -2,7 +2,7 @@ gametitle=Smuggler's Run (PAL-Unk) [SLES-50055] [3F7F970B]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Aced14
+description=Widescreen hacks by Aced14
 
 //16:9 widescreen
 patch=1,EE,102344AC,extended,00003FCC //3C013F99 - Master X FOV #1

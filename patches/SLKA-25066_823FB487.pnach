@@ -2,7 +2,7 @@ gametitle= ZOE2 - Widescreen Hack (16:9) (NTSC-K)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= cafe.naver.com/pscx2
+description= cafe.naver.com/pscx2
 patch=1,EE,0012AEB0,word,3C013F40
 
 

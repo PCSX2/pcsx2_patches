@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Alien Hominid Widescreen (NTSC-U)
+description=Alien Hominid Widescreen (NTSC-U)
 
 patch=1,EE,2017C7D8,extended,08030000 //Jump to Rectangle Scaling Code
 patch=1,EE,200C0000,extended,3C153F40 //Rectangle Scale

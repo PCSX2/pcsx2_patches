@@ -3,14 +3,14 @@ gametitle=Looney Tunes - Back in Action (SLUS-20853)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=CRASHARKI
-comment=Patches the game to run at 16:9 Widescreen Aspect Ratio.
+description=Patches the game to run at 16:9 Widescreen Aspect Ratio.
 patch=1,EE,202D1F3C,extended,4019999A //Viewport Width (Main Menu)
 patch=1,EE,E0010001,extended,00367370
 patch=1,EE,202D1F3C,extended,3FE66666 //4019999A Viewport Width
 
 [60 FPS]
 author=asasega + PeterDelta
-comment=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
+description=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,003738F8,word,00000002
 patch=1,EE,E0010001,extended,00367370
 patch=1,EE,203738F8,extended,00000001

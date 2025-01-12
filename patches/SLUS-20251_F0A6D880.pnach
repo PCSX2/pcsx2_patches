@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Harvest Moon - Save the Homeland - Widescreen Hack (16:9) (NTSC-U)
+description=Harvest Moon - Save the Homeland - Widescreen Hack (16:9) (NTSC-U)
 patch=1,EE,2026EED0,extended,3F400000
 
 

@@ -12,7 +12,7 @@ patch=1,EE,2079f728,extended,0015130c // 0014e5c4 force native 16:9 mode
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=No Interlacing & No Blur
+description=No Interlacing & No Blur
 
 // No Interlacing
 patch=1,EE,202B2174,word,24060000

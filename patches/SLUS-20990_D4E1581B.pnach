@@ -2,7 +2,7 @@ gametitle=Metal Slug 5 SLUS_209.90;1) Game CRC = 0xD4E1581B
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Enhancement test *dont use both code sections
+description=Enhancement test *dont use both code sections
 
 //Progressive mode 240p / No interleacing
 patch=0,EE,20426B7C,extended,3c050000

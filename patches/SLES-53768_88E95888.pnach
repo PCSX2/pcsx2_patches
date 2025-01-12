@@ -3,7 +3,7 @@ gametitle=The Sword of Etheria (SLES-53768)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen hack 16:9
+description=Widescreen hack 16:9
 
 //gameplay
 patch=1,EE,005161c0,word,46010082
@@ -49,5 +49,5 @@ patch=1,EE,00516594,word,e7a20068
 
 [50/60 FPS]
 author=asasega
-comment=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 50/60 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,00511F14,word,24020001 //24020002

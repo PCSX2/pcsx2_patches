@@ -3,7 +3,7 @@ gametitle=Grand Theft Auto: San Andreas [PAL-M5] (v2.01) (SLES-52541)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Select widescreen in game otherwise image is zoomed out 4:3
+description=Select widescreen in game otherwise image is zoomed out 4:3
 
 //Widescreen fix
 patch=1,EE,001130BC,word,3C013F9D
@@ -21,5 +21,5 @@ patch=1,EE,2051A7C8,extended,00000000
 
 [50 FPS]
 author=Snake356
-comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,0066814C,extended,00000001

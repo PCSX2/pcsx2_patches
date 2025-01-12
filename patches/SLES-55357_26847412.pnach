@@ -3,7 +3,7 @@ gametitle=Bratz - Girlz Really Rock (E)(SLES-55357) 26847412
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 //X-Fov
 //00000000 00000000 83ad0046 00000000
 //403f013c 00f08144 83ad0046 82b51e46

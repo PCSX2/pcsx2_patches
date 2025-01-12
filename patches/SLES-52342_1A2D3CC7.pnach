@@ -2,7 +2,7 @@ gametitle=Worms Forts - Under Siege (PAL-M2) (SLES-52342)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack Conversion
+description=Widescreen Hack Conversion
 author=Bigdemon
 
 //Widescreen hack 16:9

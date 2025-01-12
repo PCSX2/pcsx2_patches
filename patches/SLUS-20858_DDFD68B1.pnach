@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Corvette (NTSC-U)
+description=Corvette (NTSC-U)
 
 //widescreen patch
 patch=1,EE,214CDEF0,word,3FB60B60

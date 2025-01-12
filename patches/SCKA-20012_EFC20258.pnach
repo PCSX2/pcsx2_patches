@@ -2,7 +2,7 @@ gametitle=Arc the Lad - Twilight of the Spirits (K) (SCKA_20012)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack (pnach by Arapapa)
+description=Widescreen hack (pnach by Arapapa)
 
 //16:9
 patch=1,EE,20256884,extended,3F19999A // 3f4ccccd

@@ -2,7 +2,7 @@ gametitle=Digimon Data Squad (NTSC-U) (16:9)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Digimon Data Squad
+description=Digimon Data Squad
 
 // 16:9 hack
 patch=1,EE,2033A9C0,extended,3FAAAAAA // 3F800000

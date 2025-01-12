@@ -2,7 +2,7 @@ gametitle=Stretch Panic (NTSC-U) [SLUS-20182] [854D5885]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by sergx12 (ISO HEX codes) and Aced14 (pnach version - ELF and 16:10 hacks)
+description=Widescreen hacks by sergx12 (ISO HEX codes) and Aced14 (pnach version - ELF and 16:10 hacks)
 
 //16:9 widescreen
 patch=1,EE,2011FB4C,extended,08047EE0 //0441000C - j $0011fb80 - Jump over game logic for PADMAN.IRX debug error message to prevent conflicts

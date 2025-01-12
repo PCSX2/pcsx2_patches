@@ -2,7 +2,7 @@ gametitle=Siren [NTSC-J] (SCPS-15053)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 //gameplay by sergx12
 patch=1,EE,001fb3b8,word,3c023f40
 
