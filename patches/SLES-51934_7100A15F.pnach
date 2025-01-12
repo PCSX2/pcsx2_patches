@@ -3,7 +3,7 @@ gametitle=Curse - The Eye Of Isis (PAL-M6) (SLES-51934) 7100A15F
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=sergx12 and ElHecht
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,002b5890,word,3c013fe3 // 3c013faa ver fov
 patch=1,EE,002b5894,word,34218e39 // 3421aaab ver fov
 patch=1,EE,0011cef4,word,461e0003 // 00000000 zoom loading screen

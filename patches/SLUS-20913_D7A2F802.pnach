@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=InuYasha - Secret of the Cursed Mask(SLUS-20913) WS patch
+description=InuYasha - Secret of the Cursed Mask(SLUS-20913) WS patch
 //3D field models
 patch=1,EE,2020F680,extended,3F400000
 patch=1,EE,2020F688,extended,3F400000

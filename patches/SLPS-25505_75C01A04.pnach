@@ -2,7 +2,7 @@ gametitle=Namco x Capcom (NTSC-J)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 patch=1,EE,2048E604,word,3F400000
 patch=1,EE,2048FBE4,word,3F400000

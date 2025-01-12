@@ -3,7 +3,7 @@ gametitle=Dino Stalker [PAL-F] (SLES_510.95)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Bigdemon
-comment=Widescreen Hack Conversion
+description=Widescreen Hack Conversion
 
 //Gameplay 16:9
 patch=1,EE,002b0144,word,3f199999 //3f4ccccd (Increases hor. axis)

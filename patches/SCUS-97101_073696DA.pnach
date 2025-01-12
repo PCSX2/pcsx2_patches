@@ -2,7 +2,7 @@ gametitle=Twisted Metal: Black (NTSC-U) [SCUS-97101] [073696DA]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Aced14 (major updates) and No.47 (initial FOV hacks)
+description=Widescreen hacks by Aced14 (major updates) and No.47 (initial FOV hacks)
 
 //16:9 Widescreen
 
@@ -189,7 +189,7 @@ patch=1,EE,201C47B4,extended,00042140 //A4850014 - sll a0, a0, 5 - Restore overw
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=no interlacing hack someother1ne
+description=no interlacing hack someother1ne
 patch=1,EE,00203BCC,word,30420000
 
 

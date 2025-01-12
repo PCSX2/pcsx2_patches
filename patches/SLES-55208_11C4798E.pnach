@@ -2,7 +2,7 @@ gametitle=Incredible Hulk, The (SLES_552.08)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack conversion
+description=Widescreen hack conversion
 author=Bigdemon
 
 patch=1,EE,00368270,word,3c013fdf //3C013FA7

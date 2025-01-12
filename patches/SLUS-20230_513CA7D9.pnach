@@ -3,7 +3,7 @@ gametitle=Max Payne (NTSC-U)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 
 // 16:9
 // ELF file is called "MAIN.RUN"

@@ -2,7 +2,7 @@ gametitle=Sega Ages 2500 Series Vol.05 - Golden Axe (NTSC-J) [SLPM-62385] [578AC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by FeRcHuLeS (original hacks) and Aced14 (ELF hacks)
+description=Widescreen hacks by FeRcHuLeS (original hacks) and Aced14 (ELF hacks)
 
 patch=1,EE,101a1da0,extended,00003fe3 //3c023faa - HOR FOV (part 1)
 patch=1,EE,101a1da4,extended,00008e39 //3442aaab - HOR FOV (part 2)

@@ -2,7 +2,7 @@ gametitle=Hudson Selection Vol 3 PC Genjin [SLPM_624.18] [CEADAD75]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by gamemasterplc
+description=Widescreen hacks by gamemasterplc
 
 patch=1,EE,201602B0,extended,03E00008 //Return from FMV Playback Function
 patch=1,EE,201602B4,extended,00000000 //Delay Slot of Returning from FMV Playback Function

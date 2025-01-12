@@ -3,7 +3,7 @@ gametitle=ObsCure II (PAL-M5) (SLES-54782)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,00172924,word,08103ca7 // 46070202  jump to code-inject 0040f29c
 patch=1,EE,00172928,word,00000000 // 24430050
@@ -25,7 +25,7 @@ patch=1,EE,001f4b28,word,3c020000 // 3c023f80
 
 [50 FPS]
 author=Gabominated
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,2013D188,extended,2C420001 //2C420002
 
 [480p Mode]

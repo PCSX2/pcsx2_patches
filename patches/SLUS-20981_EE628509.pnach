@@ -2,7 +2,7 @@ gametitle=TMNT2 Battle Nexus SLUS_209.81
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00234ca4,extended,3c023f1e
 patch=1,EE,00234cb8,extended,3c023fe3
 patch=1,EE,00234cc0,extended,34428e38

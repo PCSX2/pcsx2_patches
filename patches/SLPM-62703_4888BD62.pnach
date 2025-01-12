@@ -3,7 +3,7 @@ gametitle=Sega Rally Championship (NTSC-J) [SLPM-62703] [4888BD62]
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=No.47 and Aced14
-comment=Widescreen hacks by No.47 (original codes) and Aced14 (leftover ELF hacks and car select additions)
+description=Widescreen hacks by No.47 (original codes) and Aced14 (leftover ELF hacks and car select additions)
 //16:9 widescreen
 patch=1,EE,2030F990,extended,43610000 //43960000 - In-game third person master X FOV
 patch=1,EE,2030F9E0,extended,42E10000 //43160000 - In-game first person rear master X FOV
@@ -22,7 +22,7 @@ patch=1,EE,2030F90C,extended,00000000 //3F800000 - In-game third person camera d
 [No-Interlacing]
 gsinterlacemode=1
 author=felixthecat1970
-comment=Autoenable progressive scan mode
+description=Autoenable progressive scan mode
 patch=0,EE,0030F310,extended,0000001D
 patch=0,EE,001758F4,extended,00000003
 patch=0,EE,20176F68,extended,01E0782D

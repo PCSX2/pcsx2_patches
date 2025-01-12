@@ -2,5 +2,5 @@ gametitle=Manhunt 2 (NTSC-U) (SLUS-21613)
 
 [60 FPS]
 author=asasega
-comment=Patches the game to run at 60 FPS.
+description=Patches the game to run at 60 FPS.
 patch=1,EE,20370DA8,word,24020001

@@ -3,7 +3,7 @@ gametitle=Marc Ecko's Getting Up - Contents Under Pressure (PAL-M) SLES_534.59 F
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=sergx12
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,0056768c,word,3c023f40
 
 [50 FPS]

@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Tekken Tag Tournament (Widescreen) NTSC-U
+description=Tekken Tag Tournament (Widescreen) NTSC-U
 // 16:9
 patch=1,EE,0034afbc,word,3c013f40
 patch=1,EE,0034afc0,word,44810000

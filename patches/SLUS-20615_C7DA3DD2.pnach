@@ -2,10 +2,10 @@ gametitle=Fantastic 4 SLUS_206.15 C7DA3DD2
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,2031D0F8,extended,3Faaaaab
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
 patch=1,EE,201777B0,extended,1000000C

@@ -2,7 +2,7 @@ gametitle=Ring of Red (U)(SLUS-20145)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack ElHecht and Arapapa
+description=Widescreen Hack ElHecht and Arapapa
 
 //patch=1,EE,001059bc,extended,3c013f60
 

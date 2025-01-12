@@ -2,7 +2,7 @@ gametitle=Frequency (NTSC-U) [SCUS-97125] [78F63595]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Aced14
+description=Widescreen hacks by Aced14
 
 //16:9 Widescreen
 patch=1,EE,204AFBDC,extended,081378DC //E6000120 - j $004de370 - Jump to injected MIPS instructions

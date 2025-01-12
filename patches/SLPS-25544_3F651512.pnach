@@ -55,7 +55,7 @@ patch=1,EE,20364FFC,word,3F400000 // 3F800000
 patch=1,EE,0015606c,word,00000000 // 0c0558ee
 
 [Disable All Bloom]
-comment=Speedup, but makes the game seem dull
+description=Speedup, but makes the game seem dull
 patch=1,EE,00156164,word,00000000 // 0c055942
 
 [Upscaling offset fix]

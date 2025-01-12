@@ -3,7 +3,7 @@ gametitle=Harry Potter and the Sorcerer's Stone (PAL-M)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,0018da74,word,3c013f40 // e494d5c4 hor fov gameplay
 patch=1,EE,0018da78,word,ac81d5c4 // 0c0c17e4
@@ -25,7 +25,7 @@ patch=1,EE,002af034,word,461e6302 // 00000000
 
 [50 FPS]
 author=asasega + PeterDelta
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 
 patch=1,EE,E0010002,extended,00081E90
 patch=1,EE,203A4FD8,extended,00000001 //24057530

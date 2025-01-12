@@ -2,7 +2,7 @@ gametitle=Sonic Riders (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 patch=1,EE,2044E6D8,word,43700000
 patch=1,EE,28008DA0,word,43700000 // store, character
 patch=1,EE,00134e4c,word,3c023fab // 3c023f80 renderfix

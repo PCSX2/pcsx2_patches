@@ -3,7 +3,7 @@ gametitle=Way of the Samurai 2 (PAL-M3) (SLES-52275)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,001de530,word,3c023f40 // 3c023f80 hor fov 50hz
 patch=1,EE,001de544,word,460c6343 // 46006346

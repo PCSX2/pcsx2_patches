@@ -3,14 +3,14 @@ gametitle=Trigger Man (U)(SLUS-20931)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen hack
+description=Widescreen hack
 //X-Fov
 //803f013c 00a88144 f0805624
 patch=1,EE,00132b70,word,3c013f40 //3c013f80
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,20115F80,extended,00000000
 patch=1,EE,201FC95C,extended,00000000
 patch=1,EE,201FC978,extended,00000000

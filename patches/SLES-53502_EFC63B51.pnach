@@ -3,7 +3,7 @@ gametitle=Star Wars: Battlefront 2 (F)(SLES-53502)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Bigdemon
-comment=Widescreen Hack Conversion
+description=Widescreen Hack Conversion
 
 //Game changes ELF on boot to SWBFRNT2.ELF with active CRC EFC63B51
 

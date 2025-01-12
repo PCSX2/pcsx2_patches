@@ -2,7 +2,7 @@ gametitle=Battle Stadium D.O.N. (NTSC-J) SLPS_256.75
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by flameofrecca
+description=Widescreen fix by flameofrecca
 patch=1,EE,00165924,word,3c023f20  //zoom value
 patch=1,EE,00165974,word,3c023f66  //vertical fov
 patch=1,EE,001b1210,word,3c023fa0 // logos and intro size fix

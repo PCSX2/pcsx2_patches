@@ -2,7 +2,7 @@ gametitle=Kuon [NTSC-J] (SLPS-25329)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 patch=1,EE,00138104,extended,3c023f19
 patch=1,EE,00138108,extended,3443999a
 

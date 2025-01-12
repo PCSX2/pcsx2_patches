@@ -2,7 +2,7 @@ gametitle=Naruto Shippuuden - Ultimate Ninja 4 (U)(SLUS-21862)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (NTSC-U by Arapapa)
+description=Widescreen Hack (NTSC-U by Arapapa)
 
 patch=1,EE,20AB3F94,extended,3F400000
 

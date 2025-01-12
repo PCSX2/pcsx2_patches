@@ -74,7 +74,7 @@ patch=0,EE,202630C4,extended,00000000
 
 [Controller Config Change (Type A)]
 author=JakeMR2
-comment=Changes the controller scheme to match TXR2's
+description=Changes the controller scheme to match TXR2's
 
 //Controller Mappings
 //0x4 =  X Button (accel)

@@ -2,7 +2,7 @@ gametitle=Shadow Hearts - From the New World  SLUS_213.26
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,00202d4c,word,3c013f40
 patch=1,EE,00202d50,word,44810000

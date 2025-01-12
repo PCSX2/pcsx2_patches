@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Shadow Hearts 2 Covenant (PAL-M3) (SLES-82030) Widescreen Hack (16:9) by ElHecht
+description=Shadow Hearts 2 Covenant (PAL-M3) (SLES-82030) Widescreen Hack (16:9) by ElHecht
 //
 // 16:9
 patch=1,EE,00202cac,word,3c013f40

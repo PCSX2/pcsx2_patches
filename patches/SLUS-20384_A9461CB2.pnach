@@ -2,7 +2,7 @@ gametitle=SkyGunner SLUS_203.84
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,2017df80,extended,3F400000
 patch=1,EE,202f1d10,extended,3F400000
 

@@ -2,8 +2,8 @@ gametitle=Kingdom Hearts 2 Final Mix + (NTSC-J) (SLPM 666 75)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Kingdom Hearts 2 Final Mix + (NTSC-J)
-comment=ENGLISH PATCH BY CRAZYCATZ00
+description=Kingdom Hearts 2 Final Mix + (NTSC-J)
+description=ENGLISH PATCH BY CRAZYCATZ00
 
 // old widescreen
 //patch=1,EE,203A7BBC,word,3F19999A // 3F4CCCCC (hor axis)

@@ -34,7 +34,7 @@ patch=1,EE,0054E478,word,44d2f000
 [Widescreen 20:9]
 gsaspectratio=Stretch
 author=nemesis2000, kripkrop, Devina & pgert
-comment=Imperfections might show up.
+description=Imperfections might show up.
 patch=1,EE,00114dd0,word,3c013f1a
 patch=1,EE,00114dd4,word,4481c000
 patch=1,EE,00114de0,word,46181082
@@ -44,7 +44,7 @@ patch=1,EE,0054E478,word,451c4000
 [Widescreen 21:9]
 gsaspectratio=Stretch
 author=nemesis2000, kripkrop, Devina & pgert
-comment=Imperfections might show up.
+description=Imperfections might show up.
 patch=1,EE,00114dd0,word,3c013f12
 patch=1,EE,00114dd4,word,4481c000
 patch=1,EE,00114de0,word,46181082
@@ -60,7 +60,7 @@ patch=1,EE,00113450,word,3c010000
 
 [60 fps & No Interlacing]
 author=Red_Tv
-comment=Might need EE overclocking to be stable.
+description=Might need EE overclocking to be stable.
 
 // 60 fps
 patch=1,EE,0028F4C4,word,00000001
@@ -78,7 +78,7 @@ patch=1,EE,001144AC,word,30420000
 [60 fps]
 author=synce & Agrippa
 // 60 fps hack by Agrippa based on the NTSC-U hack by synce
-comment=Set EE Cyclerate to 130% - 180% in combination with this.
+description=Set EE Cyclerate to 130% - 180% in combination with this.
 // - makes some animations run too fast
 patch=1,EE,E0010000,extended,0063AA08
 patch=1,EE,0028F4C4,extended,00000001
@@ -88,7 +88,7 @@ patch=1,EE,E0010001,extended,0063AA08
 patch=1,EE,0028F4C4,extended,00000002
 
 [No-Interlacing]
-comment=Don't combine with the 60 fps hacks.
+description=Don't combine with the 60 fps hacks.
 patch=1,EE,0013CAD0,word,30420000
 patch=1,EE,001144AC,word,30420000
 

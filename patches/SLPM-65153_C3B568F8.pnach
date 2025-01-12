@@ -2,7 +2,7 @@ gametitle=Gungrave [NTSC-J] (SLPM-65153)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 patch=1,EE,001bee9c,word,3c013f40
 patch=1,EE,001beea0,word,44810000

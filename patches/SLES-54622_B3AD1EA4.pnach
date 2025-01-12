@@ -3,7 +3,7 @@ gametitle=Grand Theft Auto: Vice City Stories (SLES_546.22)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Some Chump + CRASHARKI
-comment=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original widescreen fix by nemesis2000)
+description=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original widescreen fix by nemesis2000)
 
 //widescreen fix pal
 patch=1,EE,00265568,word,3c013f9d
@@ -22,5 +22,5 @@ patch=1,EE,21FB5830,byte,1
 
 [50 FPS]
 author=Snake356
-comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,203704F4,word,00000000 //14820019

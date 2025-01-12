@@ -3,7 +3,7 @@ gametitle=Rumble Roses (NTSC-J) (SLPM_658.85)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht Mod Pnach crc by Acem
-comment=Font fix by Arapapa
+description=Font fix by Arapapa
 
 //Widescreen hack 16:9
 
@@ -20,7 +20,7 @@ patch=1,EE,0030f1e0,word,34633333 //3463cccd
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Enhancement test
+description=Enhancement test
 
 //Framebuffer Display and no interleacing
 patch=1,EE,E0041100,extended,01D4ADA0

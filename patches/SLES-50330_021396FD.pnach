@@ -3,7 +3,7 @@ gametitle=Grand Theft Auto III (v1.40) (SLES_503.30)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Some Chump
-comment=Select widescreen in game otherwise image is zoomed out 4:3 (Original NTSC-U pnach by nemesis2000)
+description=Select widescreen in game otherwise image is zoomed out 4:3 (Original NTSC-U pnach by nemesis2000)
 
 //widescreen fix
 patch=1,EE,001849FC,word,3C013F9D
@@ -19,5 +19,5 @@ patch=1,EE,0027BE8C,word,0C061282
 
 [50 FPS]
 author=Snake356
-comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,2027D64C,extended,28420001

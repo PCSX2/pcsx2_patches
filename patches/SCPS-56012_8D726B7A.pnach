@@ -2,7 +2,7 @@ gametitle=Disaster Report (K) (SCPS-56012)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (pnach by Arapapa)
+description=Widescreen Hack (pnach by Arapapa)
 
 //16:9 gameplay
 //803f023c 00788344 3500013c

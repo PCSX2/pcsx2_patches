@@ -3,7 +3,7 @@ gametitle=Bloodrayne SLUS_204.61
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=pelvicthrustman
-comment=Widescreen hack
+description=Widescreen hack
 
 //Enable bult-in widescreen
 patch=1,EE,001ef324,word,3c040001 //10800020
@@ -38,5 +38,5 @@ patch=1,EE,0020c21c,word,46011042 //46011842 Offset correction
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,002C9640,word,28630001 //28630002

@@ -3,7 +3,7 @@ gametitle=Harry Potter y la Cámara Secreta (S)[SLES-51195] CRC C5473413
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen Hack
+description=Widescreen Hack
 //Widescreen hack 16:9
 //Zoom
 patch=1,EE,004ca798,word,3c013f24 //3c013f49
@@ -26,5 +26,5 @@ patch=1,EE,004e8eb4,word,34218e2a //3421aaab
 
 [50 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,00544168,word,00000001

@@ -135,7 +135,7 @@ patch=1,EE,2036B904,word,3F400000
 patch=1,EE,00156cfc,word,00000000
 
 [Disable All Bloom]
-comment=Speedup, but makes the game seem dull
+description=Speedup, but makes the game seem dull
 patch=1,EE,00156df4,word,00000000
 
 [Upscaling offset fix]
@@ -146,6 +146,6 @@ patch=1,EE,2036B914,word,43660000 // 43600000 - TC Y-offset
 
 [60 FPS]
 author=asasega
-comment=Everything is double speed - Might need EE overclocking to be stable.
+description=Everything is double speed - Might need EE overclocking to be stable.
 patch=1,EE,20258B80,word,00000000
 patch=1,EE,2025B4D8,word,240D003C // gametime fix

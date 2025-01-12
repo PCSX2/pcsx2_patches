@@ -4,7 +4,7 @@ gametitle=Tom Clancy's Splinter Cell - Double Agent PAL-M SLES-53827 ABE2FDE9 se
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=16:9 Widescreen hack for Solo/Coop mode by ElHecht.
+description=16:9 Widescreen hack for Solo/Coop mode by ElHecht.
 patch=1,EE,001F483C,word,3C0D3F40 // 3C0D3F80 - X-axis
 
 [480p Mode]

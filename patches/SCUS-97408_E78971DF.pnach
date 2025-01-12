@@ -2,5 +2,5 @@ gametitle=Getaway Black Monday [NTSC-U] SCUS-97408 E78971DF
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,20253FF0,extended,24020001

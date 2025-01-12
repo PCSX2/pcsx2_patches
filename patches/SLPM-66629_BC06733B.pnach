@@ -1,7 +1,7 @@
 gametitle=Dirge of Cerberus - Final Fantasy VII International [Ultimate Hits] (NTSC-J) [SLPM-66629]
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9)
+description=Widescreen Hack (16:9)
 
 patch=1,EE,0040c5f8,word,3C013FC9
 patch=1,EE,0040c5fc,word,342162D8

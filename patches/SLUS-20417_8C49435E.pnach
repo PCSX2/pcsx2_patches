@@ -2,7 +2,7 @@ gametitle=Grandia Xtreme (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Grandia Xtreme (NTSC-U) Widescreen Patches
+description=Grandia Xtreme (NTSC-U) Widescreen Patches
 
 // 16:9
 patch=1,EE,204B53A8,extended,3F400000

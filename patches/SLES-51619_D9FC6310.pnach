@@ -2,7 +2,7 @@ gametitle=Clock Tower 3 (PAL-M) SLES-51619 D9FC6310
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Clock Tower 3 - Widescreen Hack (16:9) (PAL-E) // strider3871
+description=Clock Tower 3 - Widescreen Hack (16:9) (PAL-E) // strider3871
 
 //gameplay by hyakki
 patch=1,EE,2193C0A8,extended,3F1FBE77 // 3F54FDF4

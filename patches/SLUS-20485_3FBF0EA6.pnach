@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Dino Stalker (SLUS-20485)
+description=Dino Stalker (SLUS-20485)
 author=nemesis2000
 patch=1,EE,202AF944,extended,3f199999
 patch=1,EE,202AF984,extended,3f199999

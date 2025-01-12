@@ -3,7 +3,7 @@ gametitle=50 Cent - Bulletproof (E)(SLES-53734) E3F32982
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001eb448,word,3c013f08 //3c013ee6 (2nd) X-Fov 4:3 fix
 patch=1,EE,001eb44c,word,34218883 //34218b1a
 patch=1,EE,001eb464,word,3c013F08 //3c013ecc X-Fov Wide screen fix

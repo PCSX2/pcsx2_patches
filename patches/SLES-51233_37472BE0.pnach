@@ -3,7 +3,7 @@ gametitle=DragonBall Z - Budokai (PAL-M5) (SLES-51233)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,00137410,word,3c013f40 // 00000000 hor fov
 patch=1,EE,0013741c,word,4481f000 // 00000000

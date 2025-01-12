@@ -2,7 +2,7 @@ gametitle=Mace Griffin - Bounty Hunter (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack By Some Chump
+description=Widescreen Hack By Some Chump
 patch=1,EE,0055C008,word,439991ec // 43ccc290
 
 

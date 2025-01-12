@@ -2,7 +2,7 @@ gametitle=Shin Megami Tensei: Persona 4  [PAL] (SLES-55474)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=16:9 Widescreen, 60fps, & Progressive Scan
+description=16:9 Widescreen, 60fps, & Progressive Scan
 //Personas art, Characters art, Partial HUD text & Zoom fix added by El_Patas
 
 //Gameplay 16:9

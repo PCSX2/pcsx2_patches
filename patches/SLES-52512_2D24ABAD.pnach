@@ -2,7 +2,7 @@ gametitle=Headhunter - Redemption (PAL-M) SLES-52512
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00190620,word,3c014310 //3C014334
 patch=1,EE,00190650,word,3c013fe3 //3C013FAA
 patch=1,EE,00190654,word,34218e38 //3421AAAB

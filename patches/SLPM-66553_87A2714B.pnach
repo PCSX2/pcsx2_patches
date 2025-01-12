@@ -2,7 +2,7 @@ gametitle=Chaos Wars (J) (SLPM_665.53)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (pnach by Arapapa)
+description=Widescreen Hack (pnach by Arapapa)
 
 patch=1,EE,00137494,word,3c033f19 // 4c3f033c
 patch=1,EE,00137498,word,3463999a // cdcc6334

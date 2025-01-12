@@ -2,7 +2,7 @@ gametitle=Castlevania: Lament of Innocence * NTSC-U * SLUS-20733 * 28270F7D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by arapapa and nemesis2000
+description=Widescreen hacks by arapapa and nemesis2000
 
 // Gameplay hack by arapapa
 patch=1,EE,00712378,word,3c014455 // 3c014420 - Zoom
