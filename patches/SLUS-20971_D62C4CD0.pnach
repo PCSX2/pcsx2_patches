@@ -2,7 +2,7 @@ gametitle=Metal Slug 4 SLUS_209.71;1) Game CRC = 0xD62C4CD0
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Enhancement test game extended lines to 640x480 *dont use both code sections
+description=Enhancement test game extended lines to 640x480 *dont use both code sections
 
 //Progressive mode extended 240p / No interlacing
 patch=0,EE,20100694,word,3c050000

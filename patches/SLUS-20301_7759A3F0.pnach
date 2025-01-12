@@ -2,7 +2,7 @@ gametitle=Hidden Invasion SLUS_203.01
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00124224,word,3c013f40
 
 

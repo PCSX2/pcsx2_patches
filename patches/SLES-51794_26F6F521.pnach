@@ -3,7 +3,7 @@ gametitle=Looney Tunes - Back in Action (PAL-M) (SLES-51794) 26F6F521
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=CRASHARKI
-comment=Patches the game to run at 16:9 Widescreen Aspect Ratio.
+description=Patches the game to run at 16:9 Widescreen Aspect Ratio.
 patch=1,EE,202D1FBC,extended,4019999A //Viewport Width (Main Menu)
 patch=1,EE,E0010001,extended,003673F0
 patch=1,EE,202D1FBC,extended,3FE66666 //4019999A Viewport Width

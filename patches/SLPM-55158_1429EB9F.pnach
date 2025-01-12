@@ -2,7 +2,7 @@ gametitle=Pro Yakyuu Spirits 6 (SLPM_551.58) (NTSC-J)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=16:9 widescreen hack
+description=16:9 widescreen hack
 //16:9 widescreen hack by 99skull
 patch=1,EE,0014CB88,word,3C013F2A //vert fov
 patch=1,EE,0014CBC0,word,44819800 //vert fov

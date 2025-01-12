@@ -2,7 +2,7 @@ gametitle=Devil May Cry 2 (SLKA_250.12/SLKA_250.13)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=widescreen 16:9 (NTSC-K) hack by 99skull
+description=widescreen 16:9 (NTSC-K) hack by 99skull
 //credit goes to nemesis2000
 patch=1,EE,0017F18C,word,3C013F1A //hor aspect value
 patch=1,EE,0017F194,word,44810000

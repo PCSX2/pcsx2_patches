@@ -3,7 +3,7 @@ gametitle=Silent Hill 3 (SLES-51434)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen Hack
+description=Widescreen Hack
 //gameplay
 patch=1,EE,003d6030,word,3f400000 //hor val / pal mode
 patch=1,EE,001d9ae8,word,3c023f28 //hor val / ntsc mode
@@ -32,5 +32,5 @@ patch=1,EE,002adf4c,word,3442999a //3442cccd
 
 [50 FPS]
 author=SeriMax
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,2013064C,extended,00000000

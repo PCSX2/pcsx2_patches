@@ -2,7 +2,7 @@ gametitle=Conflict - Desert Storm SLUS_205.49
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0013f45c,word,3c0142ae //3c01428c
 patch=1,EE,0021ef9c,word,3c013b36 //3c013b08
 patch=1,EE,0021efa0,word,342103ce //34218889

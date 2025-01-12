@@ -3,7 +3,7 @@ gametitle=Silent Hill: Shattered Memories (SLES-55569)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen hack
+description=Widescreen hack
 
 //widescreen fix
 patch=1,EE,002c470c,word,3c013faa
@@ -26,7 +26,7 @@ patch=1,EE,003892B8,word,24020002
 
 [No Noise Filter]
 author=IWILLCRAFT
-comment=Noise filter removal
+description=Noise filter removal
 //noise off
 patch=1,EE,2047ADC0,extended,00000000
 

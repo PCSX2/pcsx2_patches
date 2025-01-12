@@ -2,7 +2,7 @@ gametitle=Mat Hoffman's Pro BMX 2 NTSC-U SLUS-20335 A37C0344
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,001c5744,word,3c023fab
 patch=1,EE,0024d588,word,3c023c2e
 patch=1,EE,0036c108,word,3c033fc0

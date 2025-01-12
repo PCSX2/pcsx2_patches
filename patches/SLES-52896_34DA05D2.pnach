@@ -3,7 +3,7 @@ gametitle=Spongebob Squarepants Movie Game (PAL-E) (M2) (SLES-52896)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Bigdemon
-comment=Widescreen Hack Conversion
+description=Widescreen Hack Conversion
 
 patch=1,EE,00437f74,word,46010083 //Multiply Aspect
 patch=1,EE,00437f78,word,E7A20028 //Store Multiplied Aspect

@@ -2,7 +2,7 @@ gametitle=Cool Boarders 2001 SCUS_971.08
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 //credit goes to nemesis2000
 patch=1,EE,0011d2ac,word,3c01442b //r fix
 patch=1,EE,0011d2d0,word,3c01442b //r fix hor splitscreen

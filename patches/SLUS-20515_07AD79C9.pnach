@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Yu-Gi-Oh! The Duelist of the Roses NTSC-U patches
+description=Yu-Gi-Oh! The Duelist of the Roses NTSC-U patches
 //Widescreen 16:9
 //X 21FE0528 3F400000 - need render fix
 //Y -- works fine?

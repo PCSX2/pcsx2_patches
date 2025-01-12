@@ -2,13 +2,13 @@ gametitle=Sly 3 - Honour Among Thieves NTSC-U
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0016680c,word,3c014455
 
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=No Interlacing & No Motion Blur
+description=No Interlacing & No Motion Blur
 
 // No Interlacing by asasega
 patch=1,EE,20195D40,word,00000000

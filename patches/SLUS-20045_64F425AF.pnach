@@ -2,7 +2,7 @@ gametitle=Legend of Alon Dar SLUS_200.45
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00129d18,word,3C024400
 patch=1,EE,0014CCFC,word,3C024455
 patch=1,EE,00163A88,word,3C024455

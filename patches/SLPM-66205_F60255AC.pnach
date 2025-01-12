@@ -2,7 +2,7 @@ gametitle=Front Mission 5 (SLPM_662.05) (English patch CRC)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=widescreen
+description=widescreen
 //widescreen 16:9 hack by 99skull, thanks to miseru99
 patch=1,EE,203D1A18,word,3F19999A //3F4CCCCD, wide by miseru99
 patch=1,EE,0017BE54,word,3C023F19 //3C023F4C, battle floor render fix

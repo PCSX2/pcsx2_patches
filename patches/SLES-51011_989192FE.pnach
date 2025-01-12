@@ -3,7 +3,7 @@ gametitle=Knight Rider (PAL-M4)(SLES-51011) 989192FE
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ThirteenAG
-comment=Widescreen Fix
+description=Widescreen Fix
 //https://thirteenag.github.io/wfp#kr
 patch=1,EE,003E3600,short,3FE3
 patch=1,EE,003E3604,short,8E39

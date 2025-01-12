@@ -2,7 +2,7 @@ gametitle=Tetsujin 28 Go (NTSC-J) [SLPS-25362] [6C4641BC]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Eiji (initial active X FOV hack) and Aced14 (ELF and 16:10 hacks)
+description=Widescreen hacks by Eiji (initial active X FOV hack) and Aced14 (ELF and 16:10 hacks)
 
 //16:9 Widescreen
 patch=1,EE,1013B188,extended,00003F40 //3C023F80 - Master X FOV #1

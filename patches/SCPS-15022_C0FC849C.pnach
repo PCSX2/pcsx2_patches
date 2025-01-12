@@ -2,7 +2,7 @@ gametitle= Dual Hearts [NTSC-J] (SCPS-15022)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix (Pnach by Little Gaint)
+description=Widescreen fix (Pnach by Little Gaint)
 
 patch=1,EE,006F0D30,word,41400000  //horizontal fov
 

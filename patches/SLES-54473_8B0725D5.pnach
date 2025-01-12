@@ -3,7 +3,7 @@ gametitle=The Flintstones - Bedrock Racing (E)(SLES-54473) 8B0725D5
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa and PeterDelta
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00180684,word,3c013f21 //3c013f00 Zoom
 patch=1,EE,001806d4,word,08087fb8 //Y-Fov
 patch=1,EE,0021fee0,word,461505c2
@@ -17,5 +17,5 @@ patch=1,EE,00128F78,word,3C013F40 //3C013F80 hud
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
 patch=1,EE,005AEDE0,word,00000001 //00000002

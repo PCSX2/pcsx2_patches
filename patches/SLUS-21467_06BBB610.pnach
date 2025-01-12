@@ -3,7 +3,7 @@ gametitle=Open Season (U)(SLUS-21467) 06BBB610
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 //02100046 700120e6 X-Fov
 patch=1,EE,003f993c,word,08150c04
 patch=1,EE,00543010,word,46001002

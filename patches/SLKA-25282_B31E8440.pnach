@@ -2,7 +2,7 @@ gametitle=MX vs. ATV Unleashed (K)(SLKA-25282)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack (NTSC-K by Arapapa)
+description=Widescreen hack (NTSC-K by Arapapa)
 
 //Widescreen hack 16:9
 patch=1,EE,0018edf4,word,3c03bfab //3c03bf80

@@ -2,7 +2,7 @@ gametitle=Cy Girls SLES-82018 SLES-82019
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack Conversion
+description=Widescreen Hack Conversion
 author=Bigdemon
 patch=1,EE,2048f5f0,extended,43ab0000 
 patch=1,EE,2048f5f8,extended,3f400000

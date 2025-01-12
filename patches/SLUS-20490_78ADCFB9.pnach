@@ -2,7 +2,7 @@ gametitle=Gladius SLUS_204.90
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0035bf78,extended,3c023f40
 
 

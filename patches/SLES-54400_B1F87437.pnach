@@ -3,7 +3,7 @@ gametitle=SpongeBob SquarePants - Creature from the Krusty Krab (E)(SLES-54400)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa & ICUP321
-comment=Widescreen hack
+description=Widescreen hack
 
 //Widescreen hack 16:9
 
@@ -19,5 +19,5 @@ patch=1,EE,0041f1f0,word,3c013f20 //3c013f00
 
 [50 FPS]
 author=asasega
-comment=Patches the game to run at 50 FPS.
+description=Patches the game to run at 50 FPS.
 patch=1,EE,21FAFC98,word,42700000 //41F00000

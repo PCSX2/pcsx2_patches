@@ -2,7 +2,7 @@ gametitle=X2 - Wolverine's Revenge SLUS_203.37
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack patch is removed due to it causes crashes on level 3.
+description=Widescreen Hack patch is removed due to it causes crashes on level 3.
 //patch=1,EE,0017e23c,word,3c0140ab //3c014080  vert
 //patch=1,EE,0017e25c,word,3c014399 //3c0143cc  zoom
 //patch=1,EE,0017e260,word,3421999a //3421cccd

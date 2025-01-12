@@ -2,11 +2,11 @@ gametitle=Shin Megami Tensei - Nocturne (SLUS-20911) (CRC-E8FCF8EC)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack.
+description=Widescreen Hack.
 patch=1,EE,202F59B4,word,3FC6C6E7
 
 //Optional shadow alpha hack
-//comment=Shadow Override (Krisan Thyme)
+//description=Shadow Override (Krisan Thyme)
 //patch=1,EE,202FBD80,extended,00000000
 //patch=1,EE,202FBD84,extended,00000000
 //patch=1,EE,202FBD88,extended,00000000

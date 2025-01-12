@@ -2,7 +2,7 @@ gametitle=Test Drive - Off-Road - Wide Open (NTSC-U) [SLUS-20177]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 
 //hor fov (default = 3F800000, 21:9 = 3FC00000)
 

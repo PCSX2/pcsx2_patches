@@ -2,7 +2,7 @@ gametitle=Tales Of The Abyss (NTSC-U) (SLUS-21386)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Tales Of The Abyss (NTSC-U) (SLUS-21386) 16:9 Widescreen Hack
+description=Tales Of The Abyss (NTSC-U) (SLUS-21386) 16:9 Widescreen Hack
 patch=1,EE,0032E004,word,00000000 //Activate Internal Widescreen (Vert-)
 patch=1,EE,0019435C,word,3C013F40 //Camera Zoom
 patch=1,EE,0033E880,word,3C023F19 //Menu Graphics Scale

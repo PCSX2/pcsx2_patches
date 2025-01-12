@@ -3,7 +3,7 @@ gametitle=Castlevania: Lament of Innocence (SLES-52118)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //gameplay
 patch=1,EE,006ec304,word,23c013f40 //hor value

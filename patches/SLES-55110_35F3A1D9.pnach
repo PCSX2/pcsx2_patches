@@ -3,7 +3,7 @@ gametitle=Odin Sphere (E)(SLES-55110)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen Hack
+description=Widescreen Hack
 //Zoom
 //00108344 00000000 43d00246
 patch=1,EE,0017a214,word,080d9624 //44831000

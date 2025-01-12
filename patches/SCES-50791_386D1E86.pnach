@@ -2,7 +2,7 @@ gametitle=Frequency (PAL-Unk) [SCES-50791] [386D1E86]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Aced14
+description=Widescreen hacks by Aced14
 
 //16:9 Widescreen
 patch=1,EE,204EDDCC,extended,08147263 //E6000120 - j $0051c98c - Jump to injected MIPS instructions

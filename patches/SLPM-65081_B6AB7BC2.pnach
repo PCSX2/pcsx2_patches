@@ -2,7 +2,7 @@ gametitle=Grandia II (J) (SLPM_650.81)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9) (pnach NTSC-J by Arapapa)
+description=Widescreen Hack (16:9) (pnach NTSC-J by Arapapa)
 
 patch=1,EE,0025c9e8,word,3c013f40 //vert fov-
 patch=1,EE,0025cabc,word,3c01bf41 //both fov+

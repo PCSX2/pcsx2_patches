@@ -109,7 +109,7 @@ patch=1,EE,00350F1C,word,00000000
 
 [Disable Post-Process and Noise effect - menus]
 author=ported by br4zil from NTSC-U
-comment=Makes main menu bland looking
+description=Makes main menu bland looking
 patch=1,EE,0035905C,word,00000000
 
 // ==========

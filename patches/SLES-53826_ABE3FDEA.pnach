@@ -8,14 +8,14 @@ gsaspectratio=16:9
 // ==========
 
 // ==========
-comment= Splinter Cell 4 - Double Agent * SLES-53826 * PAL-M5 * ABE3FDEA
+description= Splinter Cell 4 - Double Agent * SLES-53826 * PAL-M5 * ABE3FDEA
 // ==========
 
 // ==========
-comment=- 16:9 Widescreen hack for Solo/Coop mode by ElHecht.
+description=- 16:9 Widescreen hack for Solo/Coop mode by ElHecht.
 patch=1,EE,001F483C,word,3C0D3F40 // 3C0D3F80 - X-axis
 // ==========
-// comment=- 16:10 Widescreen hack for Solo/Coop mode by ElHecht.
+// description=- 16:10 Widescreen hack for Solo/Coop mode by ElHecht.
 // patch=1,EE,001F483C,word,3C0D3F55 // 3C0D3F80 - X-axis
 // patch=1,EE,001F48AC,word,35AD5555 // AE6D00BC - X-axis
 // patch=1,EE,001F4980,word,AE6D00BC // 7BB30030

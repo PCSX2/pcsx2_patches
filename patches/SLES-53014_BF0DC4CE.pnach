@@ -2,7 +2,7 @@ gametitle=Tenchu - Fatal Shadows (PAL-G) (SLES-53014)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 
 // 16:9
 patch=1,EE,0012ef24,word,3c023f40 // 3c023f80 hor fov

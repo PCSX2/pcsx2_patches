@@ -2,7 +2,7 @@ gametitle=Colin McRae Rally 3 [SLUS 20502] (U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch
+description=Widescreen patch
 author=Silent
 
 // Enable a native Widescreen option from the PAL version

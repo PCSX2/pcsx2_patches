@@ -2,8 +2,8 @@ gametitle=Barbarian (K)(SLKA-15001)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (NTSC-K by Arapapa)
-comment=Needs FULL BOOT. (If do not FULL BOOT, will be crashed.)
+description=Widescreen Hack (NTSC-K by Arapapa)
+description=Needs FULL BOOT. (If do not FULL BOOT, will be crashed.)
 
 //Widescreen hack 16:9
 

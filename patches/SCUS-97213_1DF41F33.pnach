@@ -3,7 +3,7 @@ gametitle=Dark Cloud 2 (SCUS-97213)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00138d78,word,3f023f40
 
 

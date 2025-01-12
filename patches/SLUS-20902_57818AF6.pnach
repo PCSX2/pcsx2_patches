@@ -2,7 +2,7 @@ gametitle=Shadow of Rome SLUS_209.02
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00146bc8,word,3c023f1f
 patch=1,EE,00146bd0,word,344249f9
 patch=1,EE,00146de4,word,3c023f1f
@@ -12,5 +12,5 @@ patch=1,EE,001e746c,word,3c044328
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=No interleacing, videos still shake
+description=No interleacing, videos still shake
 patch=1,EE,201E9274,extended,30420000

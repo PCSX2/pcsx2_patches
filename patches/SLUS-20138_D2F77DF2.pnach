@@ -2,7 +2,7 @@ gametitle=Rayman 2: Revolution (NTSC-U & NTSC-K) (SLUS-20138 & SLPM-67519)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hacks by ElHecht & ICUP321
+description=Widescreen Hacks by ElHecht & ICUP321
 
 // 16:9
 patch=1,EE,0018c7d0,word,3c013f40 // 00000000 hor fov

@@ -2,7 +2,7 @@ gametitle=Blade II NTSC-U SLUS-20360 6D0E5F2D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0018B6B8,word,3C033F40
 patch=1,EE,0017e7d4,word,3c033f40
 

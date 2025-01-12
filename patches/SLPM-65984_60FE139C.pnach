@@ -2,7 +2,7 @@ gametitle=Grand Theft Auto - San Andreas (SLPM-65984)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by BloodRaynare
+description=Widescreen fix by BloodRaynare
 
 patch=1,EE,001130bc,word,3c013f9d
 patch=1,EE,001130c0,word,44810000

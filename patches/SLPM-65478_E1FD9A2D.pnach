@@ -2,7 +2,7 @@ gametitle=Final Fantasy X-2 NTSC-J International + Last Mission
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 patch=1,EE,001aabb8,word,3c013f19
 patch=1,EE,001aabbc,word,3421999a
 patch=1,EE,0011be04,word,3c014440

@@ -3,12 +3,12 @@ gametitle=Family Guy (SLES-54126)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Brandondorf9999
-comment=Widescreen update
+description=Widescreen update
 patch=1,EE,0011B3A8,word,00000000 //10400009
 patch=1,EE,0011B3BC,word,3C013F80 //3C013F59
 patch=1,EE,0011B3C0,word,34210000 //3421999A
 
 [50 FPS]
 author=CRASHARKI
-comment=Patches the game to run at 50 FPS. (Original NTSC-U pnach by asasega)
+description=Patches the game to run at 50 FPS. (Original NTSC-U pnach by asasega)
 patch=1,EE,2025989C,word,00000001 //00000002

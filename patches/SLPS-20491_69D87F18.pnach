@@ -2,7 +2,7 @@ gametitle=Simple 2000 Series Vol. 118 - The Ochimusha - Doemu Samurai Toujou [NT
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 patch=1,EE,0022e6f4,word,3c013f40
 patch=1,EE,0022e6f8,word,44810000

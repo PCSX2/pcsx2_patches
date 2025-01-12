@@ -2,7 +2,7 @@ gametitle=Freak Out (PAL-Unk) [SLES-50310] [FE191134]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by sergx12 (ISO HEX codes) and Aced14 (pnach version - ELF and 16:10 hacks)
+description=Widescreen hacks by sergx12 (ISO HEX codes) and Aced14 (pnach version - ELF and 16:10 hacks)
 
 //16:9 widescreen
 patch=1,EE,2011FB2C,extended,08047ED8 //0441000C - j $0011fb60 - Jump over game logic for PADMAN.IRX debug error message to prevent conflicts

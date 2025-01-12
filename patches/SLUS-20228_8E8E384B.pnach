@@ -2,7 +2,7 @@ gametitle=Silent Hill 2 (original version) SLUS_202.28
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //16:9
 patch=1,EE,002c99e0,word,3f28f5c3 //3f6147ae

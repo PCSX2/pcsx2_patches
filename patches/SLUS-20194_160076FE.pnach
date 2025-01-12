@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Grandia II (NTSC-U) (SLUS-20194) Widescreen Hack (16:9)
+description=Grandia II (NTSC-U) (SLUS-20194) Widescreen Hack (16:9)
 
 patch=1,EE,20213974,extended,3C013F40 //Main Camera FOV Fix
 

@@ -2,7 +2,7 @@ gametitle=Dawn of Mana (J) (SLPM_66576)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Widescreen Hack (16:9) (NTSC-U) (pavachan) (pnach NTSC-J by Arapapa)
+description= Widescreen Hack (16:9) (NTSC-U) (pavachan) (pnach NTSC-J by Arapapa)
 
 patch=1,EE,20A07740,extended,3F400000 // 3F800000
 

@@ -2,7 +2,7 @@ gametitle=Asterix & Obelix - Kick Buttix (U)(SLUS-20866)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack.
+description=Widescreen hack.
 author=ElHecht
 
 // 16:9
@@ -19,21 +19,21 @@ patch=1,EE,0040cbc8,word,e7a10020 // 00000000
 patch=1,EE,0040cbcc,word,08049b78 // 00000000 jump back to 00126de0
 
 [Font Fix]
-comment=Corrects the font size for widescreen.
+description=Corrects the font size for widescreen.
 author=Arapapa
 //Font fix
 patch=1,EE,00229c00,word,3c023f10 //3c023f40
 patch=1,EE,0022a99c,word,3c023f10 //3c023f40
 
 [No-Interlacing]
-comment=Disables screen shaking entirely.
+description=Disables screen shaking entirely.
 author=Martyste
 gsinterlacemode=1
 //no interlacing
 patch=1,EE,001AE890,extended,00000000 //00000002
 
 [Black Bar Fix]
-comment=Removes black bars from the Intro and Cutscenes.
+description=Removes black bars from the Intro and Cutscenes.
 author=ElHecht
 
 //Black Bar Fix

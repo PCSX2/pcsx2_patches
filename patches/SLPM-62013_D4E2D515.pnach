@@ -2,7 +2,7 @@ gametitle=Ring of Red (J) (SLPM_620.13)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack ElHecht and Arapapa
+description=Widescreen Hack ElHecht and Arapapa
 
 //16:9 (803f013c 00008144 b0ffbd27)
 //patch=1,EE,001059c4,extended,3c013f60 // 3c013f80

@@ -1,6 +1,6 @@
 gametitle=Enter the Matrix [PAL-M5] (SLES_512.03) V2.00
 
-comment=Widescreen hack conversion
+description=Widescreen hack conversion
 author=Bigdemon
 [Widescreen 16:9]
 gsaspectratio=16:9

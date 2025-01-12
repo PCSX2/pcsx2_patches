@@ -2,7 +2,7 @@ gametitle=Kakutou Bijin Wulong [NTSC-J] (SLPS-25657)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 
 patch=1,EE,203C9EB0,extended,3FE37FA9
 

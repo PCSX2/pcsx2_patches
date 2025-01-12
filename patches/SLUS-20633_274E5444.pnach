@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Clock Tower 3 (SLUS-20633)
+description=Clock Tower 3 (SLUS-20633)
 
 //gameplay by hyakki
 patch=1,EE,01939d28,word,3f1fbe77
