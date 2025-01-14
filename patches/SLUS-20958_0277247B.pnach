@@ -98,16 +98,16 @@ patch=1,EE,001b7874,word,ae030090
 [Widescreen 16:10]
 gsaspectratio=Stretch
 author=nemesis2000, converted by pgert
-comment=Combine with 'Widescreen 16:9'
+description=Combine with 'Widescreen 16:9'
 patch=1,EE,001b7824,word,3c033f55
 
 [Widescreen 15:10]
 gsaspectratio=Stretch
 author=nemesis2000, converted by pgert
-comment=Combine with 'Widescreen 16:9'
+description=Combine with 'Widescreen 16:9'
 patch=1,EE,001b7824,word,3c033f64
 
 [60 FPS]
 author=PeterDelta
-comment=Might need EE overclocking to be stable (130%).
+description=Might need EE overclocking to be stable (130%).
 patch=1,EE,0018D778,word,24030001 // 24030002

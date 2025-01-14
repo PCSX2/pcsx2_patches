@@ -84,11 +84,11 @@ patch=1,EE,001cf640,word,ac44008c
 [Widescreen 16:10]
 gsaspectratio=Stretch
 author=nemesis2000, converted by pgert
-comment=Combine with 'Widescreen 16:9'
+description=Combine with 'Widescreen 16:9'
 patch=1,EE,001cf598,word,3c043f55
 
 [Widescreen 15:10]
 gsaspectratio=Stretch
 author=nemesis2000, converted by pgert
-comment=Combine with 'Widescreen 16:9'
+description=Combine with 'Widescreen 16:9'
 patch=1,EE,001cf598,word,3c043f64

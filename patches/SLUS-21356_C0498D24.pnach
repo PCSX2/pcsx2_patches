@@ -58,13 +58,13 @@ patch=1,EE,001f4848,word,ae6c00c0
 [Widescreen 16:10]
 gsaspectratio=Stretch
 author=nemesis2000, converted by pgert
-comment=Combine with 'Widescreen 16:9'
+description=Combine with 'Widescreen 16:9'
 patch=1,EE,001f47d0,word,3c0c3f55
 
 [Widescreen 15:10]
 gsaspectratio=Stretch
 author=nemesis2000, converted by pgert
-comment=Combine with 'Widescreen 16:9'
+description=Combine with 'Widescreen 16:9'
 patch=1,EE,001f47d0,word,3c0c3f64
 
 // ==========

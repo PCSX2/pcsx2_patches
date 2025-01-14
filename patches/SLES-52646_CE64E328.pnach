@@ -14,7 +14,7 @@ patch=1,EE,20E966F8,extended,3F400000
 
 [50 FPS]
 author=PeterDelta
-comment=Might need EE overclocking to be stable (180%).
+description=Might need EE overclocking to be stable (180%).
 patch=1,EE,005D8B70,extended,00000000
 patch=1,EE,E0010001,extended,00722870
 patch=1,EE,005D8B70,extended,24420002

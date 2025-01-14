@@ -41,5 +41,5 @@ patch=1,EE,0053b150,word,3c0243b4
 
 [60 FPS]
 author=asasega
-comment=Might need EE overclocking to be stable.
+description=Might need EE overclocking to be stable.
 patch=1,EE,20271F14,word,1000000E

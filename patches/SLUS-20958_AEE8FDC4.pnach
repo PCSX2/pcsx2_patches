@@ -11,13 +11,13 @@ author=nemesis2000
 [Widescreen 16:10]
 gsaspectratio=Stretch
 author=nemesis2000, converted by pgert
-comment=Combine with 'Widescreen 16:9'
+description=Combine with 'Widescreen 16:9'
 
 [Widescreen 15:10]
 gsaspectratio=Stretch
 author=nemesis2000, converted by pgert
-comment=Combine with 'Widescreen 16:9'
+description=Combine with 'Widescreen 16:9'
 
 [60 FPS]
 author=PeterDelta
-comment=Might need EE overclocking to be stable (130%).
+description=Might need EE overclocking to be stable (130%).

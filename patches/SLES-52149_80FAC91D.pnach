@@ -36,5 +36,5 @@ patch=1,EE,001B7A0C,word,AE1B008C
 
 [50 FPS]
 author=PeterDelta
-comment=Might need EE overclocking to be stable (130%).
+description=Might need EE overclocking to be stable (130%).
 patch=1,EE,0018D7C8,word,24030001 // 24030002
