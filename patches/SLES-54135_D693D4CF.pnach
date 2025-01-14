@@ -3,7 +3,7 @@ gametitle=Grand Theft Auto: Liberty City Stories (SLES_541.35)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Some Chump + CRASHARKI
-comment=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original widescreen fix by nemesis2000)
+description=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original widescreen fix by nemesis2000)
 
 //widescreen fix
 patch=1,EE,00291990,word,468010a0
@@ -63,5 +63,5 @@ patch=1,EE,203D8DAA,byte,1
 
 [50 FPS]
 author=Snake356
-comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,202D9384,word,00000000 //14820017

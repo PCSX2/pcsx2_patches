@@ -2,7 +2,7 @@ gametitle=Freekstyle SLUS_203.67
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,001443a4,word,3c023f40
 
 

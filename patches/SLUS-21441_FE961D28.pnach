@@ -2,7 +2,7 @@ gametitle=DragonBall Z - Budokai Tenkaichi 2 SLUS_214.41
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0012ba08,word,3c013f10
 patch=1,EE,00386dc8,word,3FC71C55
 patch=1,EE,00386da4,word,3FC71C55

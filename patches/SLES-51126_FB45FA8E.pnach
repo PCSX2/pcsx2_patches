@@ -3,7 +3,7 @@ gametitle=Whirl Tour [PAL-M5] (SLES_511.26) FB45FA8E
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001B4334,word,3C014440 //3C014480 (Increases horiz. axis)
 patch=1,EE,001AA394,word,3C013C2E //3C013C0E Render fix
 

@@ -3,7 +3,7 @@ gametitle=Sniper Elite [PAL-M5] (SLES-51820) EF47C233
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 //Widescreen Hack ported from NTSC hack by Arapapa
 patch=1,EE,005015d0,word,3f9faaab //3eaaaaab Zoom
 patch=1,EE,00502848,word,3fe38e2a //3faaaaab Y-FOV

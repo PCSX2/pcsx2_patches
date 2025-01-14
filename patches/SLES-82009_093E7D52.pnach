@@ -3,12 +3,12 @@ gametitle=Metal Gear Solid 2 - Substance (PAL-M5) (SLES-82009)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,0011ffd0,word,3c013f40
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS in cutscenes. Might need enable EE Overclock to be stable.
+description=Unlocked at 50 FPS in cutscenes. Might need enable EE Overclock to be stable.
 patch=1,EE,E0010002,extended,00191A34
 patch=1,EE,00191A34,extended,00000000

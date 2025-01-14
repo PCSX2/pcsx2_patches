@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=dot Hack - Part 3 - Outbreak - Widescreen Hack (16:9) (NTSC-U) (pavachan)
+description=dot Hack - Part 3 - Outbreak - Widescreen Hack (16:9) (NTSC-U) (pavachan)
 patch=1,EE,20A750C0,extended,3F400000
 
 

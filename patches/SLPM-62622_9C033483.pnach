@@ -2,7 +2,7 @@ gametitle=SLPM_626.22;1) Game CRC = 0x9C033483
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=enhancement no interlacing
+description=enhancement no interlacing
 
 //no interlacing
 patch=1,EE,20100294,extended,3C070001

@@ -1,8 +1,8 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Final Fantasy XII (SLES-54356)
+description=Final Fantasy XII (SLES-54356)
 author=nemesis2000 (original pnach by nemesis2000)
-comment=Ported from PAL-E to PAL-G by theHOMER
+description=Ported from PAL-E to PAL-G by theHOMER
 
 //widescreen fix
 patch=1,EE,001803c8,word,3C013f80

@@ -8,9 +8,9 @@ gsaspectratio=16:9
 // ==========
 
 // ==========
-comment= RTX - Red Rock * SLES-51069 * PAL-M5 * E349C1D4
+description= RTX - Red Rock * SLES-51069 * PAL-M5 * E349C1D4
 author=pgert
-comment=- Might not work with all BIOS types & configurations.
+description=- Might not work with all BIOS types & configurations.
 patch=1,EE,205F1840,extended,3F400000 // 3F800000 - X-axis - 16:9
 // patch=1,EE,205F1840,extended,3F555555 // - 16:10
 // patch=1,EE,205F1840,extended,3F638E39 // - 15:10 (MS Surface Book)

@@ -2,10 +2,10 @@ gametitle=Hitman 2 - Silent Assassin, Jampack Demo Discs (? and up), KISOK Demo 
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Amplitude demo widescreen hacks by Aced14 (MIPS code injection) and 2007excalibur2007 (initial live memory discovery)
-comment=Frequency demos'/expansion widescreen hacks by Aced14
-comment=Hitman 2 - Silent Assassin widescreen hacks by No.47
-comment=War of the Monsters demo widescreen hacks by Aced14
+description=Amplitude demo widescreen hacks by Aced14 (MIPS code injection) and 2007excalibur2007 (initial live memory discovery)
+description=Frequency demos'/expansion widescreen hacks by Aced14
+description=Hitman 2 - Silent Assassin widescreen hacks by No.47
+description=War of the Monsters demo widescreen hacks by Aced14
 
 
 

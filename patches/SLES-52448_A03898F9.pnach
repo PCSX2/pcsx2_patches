@@ -3,7 +3,7 @@ gametitle=Knights of the Temple - Infernal Crusade (PAL-M4) (SLES-52448)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,002b83ac,word,3c013f40 // 00000000 hor fov
 patch=1,EE,002b83b0,word,4481f000 // 00000000

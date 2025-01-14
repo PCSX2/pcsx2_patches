@@ -3,7 +3,7 @@ gametitle=DragonBall Z - Budokai 3 - Collector's Edition (PAL-M6) (SLES-53346)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00131ba8,word,080c9a54 // 46000803 jump to code-inject 00326950
 patch=1,EE,00131bac,word,00000000 // e78087c4
 
@@ -16,7 +16,7 @@ patch=1,EE,00326964,word,0804c6eb // 00000000 jump back to 00131bac
 
 [Mode 480p]
 author=felixthecat1970
-comment=Forces progressive scan mode 480p at startup
+description=Forces progressive scan mode 480p at startup
 patch=0,EE,103BC300,extended,00000050
 patch=0,EE,003BC314,extended,00000040
 patch=0,EE,103BC328,extended,000001C0

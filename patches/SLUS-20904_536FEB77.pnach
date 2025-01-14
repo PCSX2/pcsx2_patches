@@ -3,7 +3,7 @@ gametitle=Spongebob Squarepants Movie Game (NTSC-U) (SLUS-20904)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000 & gamemasterplc
-comment=Forces the game to run at 16:9 aspect ratio
+description=Forces the game to run at 16:9 aspect ratio
 
 patch=1,EE,00437714,word,46010083 //Multiply Aspect
 patch=1,EE,00437718,word,E7A20028 //Store Multiplied Aspect

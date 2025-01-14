@@ -2,6 +2,6 @@ gametitle=Killzone (NTSC-U) SCUS-97402 CAAEC49C
 
 //[60 FPS]
 //author=asasega. Disabled due to causing double speed in menu and game FMVs and other game breaking issues.
-//comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+//description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
 //patch=1,EE,00152014,word,24420002 //fps
 //patch=1,EE,005DB004,word,3F000000 //speed

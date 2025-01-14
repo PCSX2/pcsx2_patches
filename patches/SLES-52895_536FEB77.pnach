@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Spongebob Squarepants Movie Game (PAL) (SLES-52895) Widescreen Hack (nemesis2000) (gamemasterplc)
+description=Spongebob Squarepants Movie Game (PAL) (SLES-52895) Widescreen Hack (nemesis2000) (gamemasterplc)
 patch=1,EE,00437714,word,46010083 //Multiply Aspect
 patch=1,EE,00437718,word,E7A20028 //Store Multiplied Aspect
 patch=1,EE,0043771C,word,46010002 //Set Height

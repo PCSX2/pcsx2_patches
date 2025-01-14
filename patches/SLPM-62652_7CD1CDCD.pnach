@@ -2,7 +2,7 @@ gametitle=Simple 2000 Series Vol.81 - The Chikyuu Boueigun 2 (NTSC-J) [SLPM-6265
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by ggxxtonghao (initial active X FOV hack) and Aced14 (ELF and 16:10 hacks)
+description=Widescreen hacks by ggxxtonghao (initial active X FOV hack) and Aced14 (ELF and 16:10 hacks)
 
 //16:9 Widescreen
 patch=1,EE,101363E4,extended,00003F40 //3C033F80 - Master X FOV #1

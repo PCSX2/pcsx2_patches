@@ -17,7 +17,7 @@ patch=1,EE,00184df0,word,3c023f06 // render fix
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Enhancement test
+description=Enhancement test
 
 //No interleacing
 patch=1,EE,20103604,extended,64420000

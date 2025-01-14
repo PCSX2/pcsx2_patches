@@ -2,7 +2,7 @@ gametitle=Metal saga SLUS_212.93
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 patch=1,EE,002c2bac,word,3c014455
 patch=1,EE,00293364,word,3c014455
 patch=1,EE,00100480,word,3c014455

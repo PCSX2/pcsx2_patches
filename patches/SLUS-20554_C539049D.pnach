@@ -2,7 +2,7 @@ gametitle=Metal Gear Solid 2 - Substance SLUS_205.54
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //Main Game
 patch=1,EE,e0010c28,extended,00100010

@@ -3,7 +3,7 @@ gametitle=The Mummy Returns (U)(SLUS-20253)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen hack
+description=Widescreen hack
 patch=1,EE,001f9794,word,08030000
 
 patch=1,EE,000c0000,word,c6150064
@@ -14,5 +14,5 @@ patch=1,EE,000c0010,word,0807e5e6
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,201617D0,word,3C014270

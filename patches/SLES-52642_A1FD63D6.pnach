@@ -3,7 +3,7 @@ gametitle=Leisure Suit Larry - Magna Cum Laude (PAL-F) (SLES-52642) A1FD63D6
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Conversion by Bigdemon
+description=Conversion by Bigdemon
 
 patch=1,EE,002e5fd0,word,080fb7cc // 46020082 jump to code-inject 003edf30
 patch=1,EE,002e5fd4,word,00000000 // 46020842

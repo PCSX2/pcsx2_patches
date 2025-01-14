@@ -3,7 +3,7 @@ gametitle=Evil Twin - Cyprien's Chronicles (PAL-M5) (SLES-50201)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=game still needs black bar fix/removal in cut-scenes
+description=game still needs black bar fix/removal in cut-scenes
 
 // 16:9
 patch=1,EE,00247644,word,3c013f40 // 00000000 hor fov

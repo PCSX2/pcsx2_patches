@@ -2,7 +2,7 @@ gametitle= Super Trucks Racing NTSC-U (SLUS-20748)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Super Trucks Racing NTSC-U (SLUS-20748) Widescreen Hack by VIRGIN KLM
+description= Super Trucks Racing NTSC-U (SLUS-20748) Widescreen Hack by VIRGIN KLM
 
 //Gameplay 3D Stuff
 patch=1,EE,008138E4,word,3F400000 // 3F800000

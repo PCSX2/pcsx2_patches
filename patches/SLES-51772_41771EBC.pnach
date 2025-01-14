@@ -3,7 +3,7 @@ gametitle=Bad Boys II (E)(SLES-51772) 41771EBC
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen hack
+description=Widescreen hack
 //X-Fov
 //02631646 540014c6
 patch=1,EE,002e860c,word,080e7748 //46166302
@@ -15,5 +15,5 @@ patch=1,EE,0039dd30,word,080ba184 //00000000
 
 [50 FPS]
 author=user234
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,0052D7C4,word,42480000 //41C80000

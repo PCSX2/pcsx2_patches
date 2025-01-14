@@ -2,7 +2,7 @@ gametitle=Ikki Tousen - Shining Dragon NTSC-J (SLPS-25798)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 
 //battle
 patch=1,EE,2046E050,extended,3FE37FA9

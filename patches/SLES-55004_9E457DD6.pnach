@@ -3,7 +3,7 @@ gametitle=Need for Speed - ProStreet (PAL-S-I) SLES-55004 9E457DD6
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Xan1242 & Aero_
-comment=Widescreen Mode 16:9
+description=Widescreen Mode 16:9
 patch=1,EE,20168A10,extended,24020001 //li v0, 1
 patch=1,EE,206828D8,extended,3F400000 //Horizontal: 0.75f Corrects Aspect Ratio
 patch=1,EE,206828DC,extended,3F8CCCCD //Vertical: 1.10f

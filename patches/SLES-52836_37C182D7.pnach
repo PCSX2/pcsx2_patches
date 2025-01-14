@@ -3,7 +3,7 @@ gametitle=Knight Rider: The Game 2 (PAL-M6)(SLES-52836)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ThirteenAG
-comment=Widescreen Fix
+description=Widescreen Fix
 //https://thirteenag.github.io/wfp
 patch=1,EE,0017F1EC,short,3FE3
 patch=1,EE,0017F204,short,8E39

@@ -2,7 +2,7 @@ gametitle=S.L.A.I. - Steel Lancer Arena International SLUS_209.69
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00267978,word,3c033f40
 
 

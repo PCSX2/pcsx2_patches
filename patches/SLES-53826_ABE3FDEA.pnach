@@ -33,6 +33,7 @@ patch=1,EE,001F498C,word,7BB10010
 patch=1,EE,001F4990,word,7BB00000
 patch=1,EE,001F4994,word,03E00008
 patch=1,EE,001F4998,word,27BD0070
+=======
 
 // ==========
 // - Alternative 16:10 Widescreen hack by pgert.

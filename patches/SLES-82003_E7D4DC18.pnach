@@ -3,7 +3,7 @@ gametitle=Summoner (PAL-F) (SLES-82003)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Ported by Bigdemon
+description=Ported by Bigdemon
 
 patch=1,EE,00136728,word,3c013f40 // 00000000 hor fov
 patch=1,EE,0013672c,word,4481f000 // 00000000

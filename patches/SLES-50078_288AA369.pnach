@@ -3,7 +3,7 @@ gametitle=TimeSplitters (SLES-50078)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0027e754,word,3c014340
 patch=1,EE,0027e758,word,44810000
 

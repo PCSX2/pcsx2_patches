@@ -2,7 +2,7 @@ gametitle=Silent Hill 3 [NTSC-J] (SLPM-65257)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=NTSC-J Widescreen Hack by nemesis2000
+description=NTSC-J Widescreen Hack by nemesis2000
 
 patch=1,EE,001b4a24,word,3c023f28 //3c023f61
 patch=1,EE,001b4a28,word,3442f5c3 //344247ae

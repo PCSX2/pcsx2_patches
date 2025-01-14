@@ -2,7 +2,7 @@ gametitle=Smuggler's Run (NTSC-U) [SLUS-20065] [0E7F91DA]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Devina (active X FOV discovery), sergx12 (render fixes) and Aced14 (ELF hacks/repositioning/revisions)
+description=Widescreen hacks by Devina (active X FOV discovery), sergx12 (render fixes) and Aced14 (ELF hacks/repositioning/revisions)
 
 //16:9 widescreen
 patch=1,EE,2023CA3C,extended,0809A2DB //3C04002C - j $00268b6c - Jump to injected MIPS instructions

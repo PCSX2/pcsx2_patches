@@ -2,7 +2,7 @@ gametitle=Barbarian (PAL-M5) SLES_509.72
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen port and menu hacks by dieSkaarj
+description=Widescreen port and menu hacks by dieSkaarj
 
 //Widescreen
 patch=1,EE,0012CD0C,word,3C013F40

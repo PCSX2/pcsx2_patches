@@ -354,7 +354,7 @@ patch=1,EE,0026b534,word,461e0002 //c7808478
 
 [Mode 480p]
 author=felixthecat1970
-comment=Forces progressive scan at startup
+description=Forces progressive scan at startup
 patch=0,EE,00197AF0,extended,24040057
 patch=0,EE,1077EF3C,extended,000001C0
 patch=0,EE,204DFF34,extended,241B0050

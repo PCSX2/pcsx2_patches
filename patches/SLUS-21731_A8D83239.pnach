@@ -9,7 +9,7 @@ patch=1,EE,001da9b8,word,34218e39
 
 [60 FPS]
 author=asasega
-comment=Patches the game to run at 60 FPS
+description=Patches the game to run at 60 FPS
 patch=1,EE,006B3474,extended,00000001
 
 [Remove Blackbars]
@@ -27,6 +27,6 @@ patch=0,EE,2029446C,extended,3C070001
 
 [No Noise Filter]
 author=Maori-Jigglypuff
-comment=Noise filter removal
+description=Noise filter removal
 patch=1,EE,00338998,word,00000000
 patch=1,EE,0033E700,word,00000000

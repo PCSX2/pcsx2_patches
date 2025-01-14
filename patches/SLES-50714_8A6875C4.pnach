@@ -3,7 +3,7 @@ gametitle=Defender (PAL-M) (SLES-50714) 8A6875C4
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 //X-Fov
 patch=1,EE,0010bc34,word,3c013fd5 //3c013fa0
 patch=1,EE,00137940,word,3c013fd5 //3c013fa0

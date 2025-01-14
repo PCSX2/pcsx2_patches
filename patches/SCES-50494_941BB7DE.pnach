@@ -2,7 +2,7 @@ gametitle=Final Fantasy X (PAL-Spain) [SCES-50494]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Final Fantasy X (PAL-S)
+description=Final Fantasy X (PAL-S)
 
 // 16:9
 patch=1,EE,001A5974,word,3C013F19

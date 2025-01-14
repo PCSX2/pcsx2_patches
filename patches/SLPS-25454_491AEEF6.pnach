@@ -2,7 +2,7 @@ gametitle=Yoshitsune Eiyuuden - The Story of Hero Yoshitsune [NTSC-J] (SLPS-2545
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //gameplay
 patch=1,EE,00139584,word,3c023f19

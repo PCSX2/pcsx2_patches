@@ -32,7 +32,7 @@ patch=1,EE,002bd92c,word,00000000
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
 patch=1,EE,0066D044,word,00000001
 
 

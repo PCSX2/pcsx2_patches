@@ -2,7 +2,7 @@ gametitle=Tales of Symphonia (NTSC-J)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by flameofrecca
+description=Widescreen fix by flameofrecca
 patch=1,EE,20481148,word,420e0000 //zoom value for towns and maps
 patch=1,EE,001dea60,word,3c023fab //vertical fov for everything
 patch=1,EE,001188dc,word,3c013fab //zoom value for battles

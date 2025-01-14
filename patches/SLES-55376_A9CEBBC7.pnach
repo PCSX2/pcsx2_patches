@@ -3,7 +3,7 @@ gametitle=Tak and the Guardians of Gross (E)(SLES-55376)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen hack
+description=Widescreen hack
 //X-Fov
 patch=1,EE,003c3ec0,word,08030000 //c60c0098
 patch=1,EE,000c0000,word,c60c0098
@@ -17,5 +17,5 @@ patch=1,EE,003a3d98,word,3c013f2b //3c013f00
 
 [50 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,01FAF278,word,42700000

@@ -3,7 +3,7 @@ gametitle=Suikoden V (SLUS-21291)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,001b8804,word,3c023f40 //hor val
 
 patch=1,EE,001b881c,word,46011083

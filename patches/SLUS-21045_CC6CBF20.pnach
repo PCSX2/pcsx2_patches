@@ -14,4 +14,6 @@ patch=1,EE,003095f0,word,34218cc1 //3421a993
 //patch=1,EE,0030962c,word,3c013f0e //3c013f0a
 //patch=1,EE,00309630,word,342190dd //342160dd
 
-
+[60 FPS]
+author=asasega
+patch=1,EE,20303570,word,2C420001

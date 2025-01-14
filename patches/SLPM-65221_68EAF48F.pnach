@@ -2,7 +2,7 @@ gametitle=Clock Tower 3 [NTSC-J] (SLPM-65221)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=NTSC-J Widescreen Hack by parotaku
+description=NTSC-J Widescreen Hack by parotaku
 patch=1,EE,21938FA8,extended,3F1FBE77 // 3F54FDF4
 
 //FMV's fix by nemesis2000

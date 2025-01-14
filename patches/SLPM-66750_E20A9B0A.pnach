@@ -1,8 +1,8 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Final Fantasy XII International: Zodiac Job System (SLPM-66750)
+description=Final Fantasy XII International: Zodiac Job System (SLPM-66750)
 author=nemesis2000
-comment=Original game
+description=Original game
 //widescreen fix
 patch=1,EE,001803c8,word,3C013f80
 patch=1,EE,001803cc,word,34210000

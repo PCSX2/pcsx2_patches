@@ -2,7 +2,7 @@ gametitle=Thrillville (SLUS-21413)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Patch (16:9) by Monsterjamp
+description=Widescreen Patch (16:9) by Monsterjamp
 
 //FOV
 patch=1,EE,20CC5540,word,3FE374BC

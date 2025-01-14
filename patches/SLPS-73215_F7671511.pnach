@@ -2,7 +2,7 @@ gametitle=Shadow Hearts II - Director's Cut (PlayStation2 the Best) [NTSC-J] (SL
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //black borders fix (optional)
 // (c843033c 803f023c to c843033c 0000023c)

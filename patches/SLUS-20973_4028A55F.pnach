@@ -25,7 +25,7 @@ patch=1,EE,002A894C,word,3421FC95 // 34213D70
 [No-Interlacing]
 gsinterlacemode=1
 author=Agrippa
-comment=EE overclock is needed to avoid infrequent frame rate drops.
+description=EE overclock is needed to avoid infrequent frame rate drops.
 patch=1,EE,2044FD40,extended,00000000
 patch=1,EE,2044FD44,extended,00000001
 patch=1,EE,2044FDB4,extended,00000001
