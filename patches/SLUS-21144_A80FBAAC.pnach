@@ -1,10 +1,9 @@
 gametitle=Tom Clancy's Rainbow Six: Lockdown * NTSC-U * SLUS-21144 * A80FBAAC
 // This disc has the same CRC as SLUS-20883.
 
-//[Widescreen 16:9]
-//gsaspectratio=16:9
-//author=Gabominated
-//patch=1,EE,002015A4,word,3C014115 // 3C0140e0 - Y-FoV
-//patch=1,EE,00132818,word,3c013F21 // 3c013f00 - Zoom
-//patch=1,EE,001af8bc,word,3c013f21 // 3c013f00 - Render fix
-// Graphics collaps in mission number 5 or 6.
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+patch=1,EE,002015A4,word,3C014115 // 3C0140e0 - Y-FoV
+patch=1,EE,00132818,word,3c013F21 // 3c013f00 - Zoom
+patch=1,EE,001af8bc,word,3c013f21 // 3c013f00 - Render fix

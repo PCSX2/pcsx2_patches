@@ -3,23 +3,11 @@ gametitle=Tom Clancy's Ghost Recon: Advanced Warfighter * NTSC-U * SLUS-21422 * 
 
 // This pnach is activated through the 433B0342 pnach.
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Gabominated
-patch=1,EE,0078DAAC,word,3F400000 // 3F800000 - X-FoV
-patch=1,EE,0066e97c,word,3fa00000 // 3f800000 - Render fix
-patch=1,EE,0066e978,word,bfa00000 // bf800000 - Render fix
-
-[Widescreen 16:10]
-gsaspectratio=Stretch
-author=Gabominated, converted by pgert
-patch=1,EE,0078DAAC,word,3F555555
-patch=1,EE,0066E97C,word,3F555555
-patch=1,EE,0066E978,word,BF955555
-
-[Widescreen 15:10]
-gsaspectratio=Stretch
-author=Gabominated, converted by pgert
-patch=1,EE,0078DAAC,word,3F638E39
-patch=1,EE,0066E97C,word,3F638E39
-patch=1,EE,0066E978,word,BF8E38E4
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Gabominated
+//patch=1,EE,0078DAAC,word,3F400000 // 3F800000 - X-FoV
+//patch=1,EE,0066e97c,word,3fa00000 // 3f800000 - Render fix
+//patch=1,EE,0066e978,word,bfa00000 // bf800000 - Render fix
+// Disabled since graphics collapse in mission number 5 or 6
+// https://github.com/PCSX2/pcsx2_patches/pull/483

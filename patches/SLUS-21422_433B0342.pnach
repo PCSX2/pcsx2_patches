@@ -4,14 +4,6 @@ gametitle=Tom Clancy's Ghost Recon: Advanced Warfighter * NTSC-U * SLUS-21422 * 
 // This pnach corresponds to the main CRC of the game,
 //  but it's just meant to activate the SLUS-21422_75A5436A pnach.
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Gabominated
-
-[Widescreen 16:10]
-gsaspectratio=Stretch
-author=Gabominated, converted by pgert
-
-[Widescreen 15:10]
-gsaspectratio=Stretch
-author=Gabominated, converted by pgert
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Gabominated
