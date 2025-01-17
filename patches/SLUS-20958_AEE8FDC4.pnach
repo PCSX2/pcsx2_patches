@@ -1,11 +1,23 @@
-gametitle=Tom Clancy's Splinter Cell: Pandora Tomorrow (SLUS_20958) AEE8FDC4
-//Corresponds to the main crc to activate the secondary crc 0277247B called SC2A.ELF
+gametitle=Tom Clancy's Splinter Cell 2: Pandora Tomorrow * NTSC-U * SLUS-20958 * AEE8FDC4
+// CRC shifts from AEE8FDC4 to 0277247B (SC2A.ELF)
+
+// This pnach corresponds to the main CRC of the game,
+//  but it's just meant to activate the SLUS-20958_0277247B pnach.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-description=Renders the game in 16:9 aspect ratio
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Combine with 'Widescreen 16:9'
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Combine with 'Widescreen 16:9'
 
 [60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
+description=Might need EE overclocking to be stable (130%).
