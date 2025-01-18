@@ -1,22 +1,75 @@
-gametitle=Grand Theft Auto: Vice City (v3.00) (SLES_510.61)
+gametitle=Grand Theft Auto - Vice City (PAL-M) (v3.00) SLES-51061 26954C46
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Some Chump
-description=Select widescreen in game otherwise image is zoomed out 4:3 (Original NTSC-U pnach by nemesis2000)
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,004BB9B8,extended,00000001
+patch=1,EE,002486BC,extended,3C0242CC
+patch=1,EE,00257E34,extended,3C0242AC
+patch=1,EE,00259F64,extended,3C0242AC
+patch=1,EE,0025A600,extended,3C0242AC
+patch=1,EE,003355E0,extended,3C044040
+patch=1,EE,00335634,extended,3C0240D0
+patch=1,EE,20246ADC,extended,3C023FC0
+patch=1,EE,003AF904,extended,3C013F80 //scenes zoom
+patch=1,EE,E0010001,extended,004BC5B0
+patch=1,EE,003AF904,extended,3C013F40
+patch=1,EE,00297DC4,word,3C044270
+patch=1,EE,00297978,word,3C024270
+patch=1,EE,00297AD0,word,3C024270
+patch=1,EE,0029A614,word,3C024270
+patch=1,EE,0029A858,word,3C024270
+patch=1,EE,0029A8EC,word,3C024270
+patch=1,EE,0029B074,word,3C024270
+patch=1,EE,0029B108,word,3C024270
+patch=1,EE,0029BE5C,word,3C034270
+patch=1,EE,0029C574,word,3C034270
+patch=1,EE,002DCBB4,word,3C03424C
+patch=1,EE,002DCC64,word,3C03424C
+patch=1,EE,002DCBC4,word,3C0242F6
+patch=1,EE,002DCC74,word,3C0242F6
+patch=1,EE,00298D40,word,3C023F40
+patch=1,EE,002DAAB4,word,3C034409
+patch=1,EE,002DAAC4,word,3C024415
+patch=1,EE,0031A518,word,34428000
+patch=1,EE,002DAA20,word,3C0341C7
+patch=1,EE,002DAFF4,word,3C0343F9
+patch=1,EE,002DB11C,word,3C0343F2
+patch=1,EE,002DB1A0,word,3C0343DE
+patch=1,EE,002DB470,word,3C03418B
+patch=1,EE,002DA768,word,3C034406
+patch=1,EE,002DAF68,word,3C034406
+patch=1,EE,002DB25C,word,3C034406
+patch=1,EE,002DC3C4,word,3C034406
+patch=1,EE,002D6220,word,3C013F40
+patch=1,EE,002D6224,word,44810000
+patch=1,EE,002D6228,word,46006302
+patch=1,EE,002D622C,word,3C01006A
+patch=1,EE,002D6230,word,E42C8CF4
+patch=1,EE,002D6234,word,3C01006A
+patch=1,EE,002D6238,word,03E00008
+patch=1,EE,002D623C,word,E42D8CF8
 
-//widescreen fix
-patch=1,EE,001324BC,word,3C013F9D
-patch=1,EE,001324C0,word,44810000
-patch=1,EE,001324C4,word,46006302
-patch=1,EE,001324C8,word,03E00008
-patch=1,EE,001324CC,word,E78C87F8
-
-patch=1,EE,002485dc,word,0C04C92F
-patch=1,EE,002764AC,word,0C04C932
-patch=1,EE,00276A7C,word,0C04C932
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,0024AE5C,word,3C02F380
+patch=1,EE,0024AECC,word,3C02F380
+patch=1,EE,002796A0,word,3C025380
 
 [50 FPS]
 author=Snake356
 description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,202788AC,extended,28420001
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,E0040001,extended,00447E40
+patch=1,EE,20112A60,extended,34050050
+patch=1,EE,20112A64,extended,24030002
+patch=1,EE,20112A68,extended,0000000C
+patch=1,EE,20112A6C,extended,03E00008
+patch=1,EE,00112444,extended,00000000
