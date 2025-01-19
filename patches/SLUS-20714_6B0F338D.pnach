@@ -29,8 +29,8 @@ patch=1,EE,2047b210,extended,00000001 //00000002 //fps
 patch=1,EE,205210a8,extended,3f800000 //40000000 //speed modifiers
 patch=1,EE,2015b274,extended,3c013f40 //3c013f80 //environment speed
 
-[Fix Camera Sensitivity]
+[Reduce Camera Sensitivity]
 author=TechieSaru
-description=Reduces the X-axis sensitivity
+description=Reduces the Y-axis sensitivity
 patch=1,EE,2016CC1C,word,3C01B7E0
 patch=1,EE,2016CC20,word,3421CCF7
