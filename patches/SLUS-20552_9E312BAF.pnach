@@ -1,18 +1,27 @@
-gametitle=Grand Theft Auto - Vice City (SLUS_20552) / Ver 2.01
+gametitle=Grand Theft Auto - Vice City (NTSC-U) (v2.01) SLUS-20552 9E312BAF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen hack
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,004BA0BC,extended,00000001
+patch=1,EE,0024854C,extended,3C0242CC
+patch=1,EE,00257CC4,extended,3C0242AC
+patch=1,EE,00259DF4,extended,3C0242AC
+patch=1,EE,0025A490,extended,3C0242AC
+patch=1,EE,00334250,extended,3C044040
+patch=1,EE,003342A4,extended,3C0240D0
+patch=1,EE,003AE3E4,extended,3C013F80 //scenes zoon
+patch=1,EE,E0010001,extended,004BACB0
+patch=1,EE,003AE3E4,extended,3C013F40
+patch=1,EE,2024696C,extended,3C023FC0
 
-patch=1,EE,0013233c,word,3c013f9d //00000000
-patch=1,EE,00132340,word,44810000 //03e00008
-patch=1,EE,00132344,word,46006302 //e78c86f8
-patch=1,EE,00132348,word,03e00008 //00000000
-patch=1,EE,0013234c,word,e78c86f8 //00000000
-
-patch=1,EE,0024846c,word,0c04c8cf //0c04c8d0
-patch=1,EE,0027541c,word,0c04c8d2 //0c04c8d0
-patch=1,EE,002759ec,word,0c04c8d2 //0c04c8d0
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,0024ACEC,word,3C02F060
+patch=1,EE,0024AD5C,word,3C02F060
+patch=1,EE,00278600,word,3C025380
 
 [60 FPS]
 author=Snake356
