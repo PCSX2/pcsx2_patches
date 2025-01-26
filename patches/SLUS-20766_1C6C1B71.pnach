@@ -123,7 +123,7 @@ patch=1,EE,00337610,word,3F800000 // 3F600000 - Y-axis of GamePlay (including Cu
 
 // [60 FPS]
 // author=asasega
-// comment=Everything is double speed - Might need EE overclocking to be stable.
+// description=Everything is double speed - Might need EE overclocking to be stable.
 // Patch disabled due to doubling the game speed
 // patch=1,EE,2021B7E4,word,10000007
 // patch=1,EE,201F798C,word,2C42003C // gametime fix

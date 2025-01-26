@@ -3,7 +3,7 @@ gametitle=Fallout: Brotherhood of Steel (SLES-51526)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Converted by Bigdemon
+description=Converted by Bigdemon
 
 patch=1,EE,001b1618,word,3c013f36
 patch=1,EE,001b161c,word,34210b5f

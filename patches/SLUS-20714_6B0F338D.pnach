@@ -2,7 +2,7 @@ gametitle=Red Ninja: End of Honor (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 
 // 16:9
 patch=1,EE,003695dc,word,3c013f40 // 3c013f80 hor fov1

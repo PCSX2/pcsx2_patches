@@ -2,7 +2,7 @@ gametitle=Gitaroo Man (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //hor fov (note: HUD is left)
 patch=1,EE,2026FC70,extended,3F400000

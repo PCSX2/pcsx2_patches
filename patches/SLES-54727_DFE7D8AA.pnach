@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Naruto - Uzumaki Chronicles (PAL-M5) (SLES-54727) Widescreen Hack (16:9) by ElHecht
+description=Naruto - Uzumaki Chronicles (PAL-M5) (SLES-54727) Widescreen Hack (16:9) by ElHecht
 //
 // 16:9
 patch=1,EE,002da2a0,word,3c023f13

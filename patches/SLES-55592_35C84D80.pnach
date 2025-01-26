@@ -3,7 +3,7 @@ gametitle=Ben 10: Alien Force Vilgax Attacks [PAL-M5] (SLES_555.92) 35C84D80
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,2073DD54,extended,3FE38E38 //3FAAAAAB (Increases hor. axis)
 
 [50/60 FPS]

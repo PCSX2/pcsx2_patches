@@ -2,7 +2,7 @@ gametitle=Dragon Sisters (PAL-E) (SLES-54460)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9)
+description=Widescreen Hack (16:9)
 // Original patch and value by sergx12
 // Updated to ELf address by ElHecht
 

@@ -2,7 +2,7 @@ gametitle=Musashi - Samurai Legend  SLUS_209.83
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,203DD108,extended,3F19999A // 3F4CCCCD
 
 

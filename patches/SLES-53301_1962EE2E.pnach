@@ -2,7 +2,7 @@ gametitle=Bomberman Hardball (E)(SLES-53301)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack Conversion
+description=Widescreen Hack Conversion
 author=Bigdemon
 //Widescreen hack 16:9
 

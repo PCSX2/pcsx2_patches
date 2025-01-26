@@ -3,12 +3,12 @@ gametitle=Iron Man [SLUS-21739]
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PsxFan107
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,20148FD0,extended,3C0C3FAA
 patch=1,EE,20148FD8,extended,358CAAAB
 
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
 patch=1,EE,00159354,word,2C620000

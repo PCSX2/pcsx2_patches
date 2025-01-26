@@ -2,7 +2,7 @@ gametitle=Teenage Mutant Ninja Turtles SLUS_207.16
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (Zoom fix by Arapapa)
+description=Widescreen Hack (Zoom fix by Arapapa)
 patch=1,EE,00164370,word,3c023fe3
 patch=1,EE,00164378,word,34428e38
 patch=1,EE,00164658,word,3c023fe3

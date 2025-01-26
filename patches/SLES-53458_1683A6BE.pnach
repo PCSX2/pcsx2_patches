@@ -2,13 +2,13 @@ gametitle=Shin Megami Tensei - Digital Devil Saga (SLES-53458) (CRC-1683A6BE)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9)
+description=Widescreen Hack (16:9)
 // 16:9
 patch=1,EE,00328864,word,3FC6E2B5 // 3f951eb8 hor fov
 patch=1,EE,00328c04,word,3FC6E2B5 // 3f951eb8 unknown
 
 //Optional shadow alpha hack
-//comment=Shadow Override (Krisan Thyme)
+//description=Shadow Override (Krisan Thyme)
 //patch=1,EE,20330B00,extended,00000000
 //patch=1,EE,20330B04,extended,00000000
 //patch=1,EE,20330B08,extended,00000000

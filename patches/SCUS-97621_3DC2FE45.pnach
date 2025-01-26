@@ -2,7 +2,7 @@ gametitle=Twisted Metal - Head-On [Extra Twisted Edition] (NTSC-U) [SCUS-97621] 
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Aced14 Font Fixes by gamemasterplc
+description=Widescreen hacks by Aced14 Font Fixes by gamemasterplc
 
 //16:9 Widescreen
 patch=1,EE,202D10A0,extended,4400A000 //442B8000 - Menu/Sweet Tour In-Game Cutscene Master X FOV
@@ -67,7 +67,7 @@ patch=1,EE,1013A594,extended,00000000 //34216666 - 2P Vert Master X Weapon #2
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=no interlacing hack someother1ne
+description=no interlacing hack someother1ne
 patch=1,EE,00264034,word,30420000
 
 

@@ -3,7 +3,7 @@ gametitle=Manhunt (U)(SLUS-20827)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen hack
+description=Widescreen hack
 
 //Widescreen hack 16:9
 
@@ -24,5 +24,5 @@ patch=1,EE,20548ecc,extended,3f0c0000
 
 [60 FPS]
 author=asasega
-comment=Patches the game to run at 60 FPS.
+description=Patches the game to run at 60 FPS.
 patch=1,EE,00548960,word,08000001 //08000002

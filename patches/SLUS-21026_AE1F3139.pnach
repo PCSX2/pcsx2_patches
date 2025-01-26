@@ -3,7 +3,7 @@ gametitle=Battlefield 2: Modern Combat (SLUS-21026)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Nemesis
-comment=Widescreen hack
+description=Widescreen hack
 
 patch=1,EE,0022d4b0,word,3c013fab
 patch=1,EE,0022d8e8,word,3c013fab
@@ -22,5 +22,5 @@ patch=1,EE,0022d8c8,word,3c013fab
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,0022DD7C,word,24630001

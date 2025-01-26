@@ -3,7 +3,7 @@ gametitle=Open Season (PAL-M) (SLES-54316) 30204F8E
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 //02100046 700120e6 X-Fov
 patch=1,EE,003f9d2c,word,08153acc
 patch=1,EE,0054eb30,word,46001002

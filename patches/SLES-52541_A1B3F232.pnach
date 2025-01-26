@@ -1,25 +1,97 @@
-gametitle=Grand Theft Auto: San Andreas (v1.03) (SLES-52541)
+gametitle=Grand Theft Auto - San Andreas (PAL-M5) (v1.03) SLES-52541 A1B3F232
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000 + shaolinassassin
-comment=Select widescreen in game otherwise image is zoomed out 4:3
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,006FFA8F,extended,00000001
+patch=1,EE,0021DFE0,extended,3C0242CC
+patch=1,EE,0020A498,extended,3C0242AC
+patch=1,EE,0020817C,extended,3C0342AC
+patch=1,EE,002ECAB0,extended,3C044040
+patch=1,EE,002ECB00,extended,3C0440D0
+patch=1,EE,0033DAB4,extended,3C013F80 //scenes zoom
+patch=1,EE,E0010001,extended,0066C17C
+patch=1,EE,0033DAB4,extended,3C013F40
+patch=1,EE,2021EDB4,extended,3C023FC0
+patch=1,EE,0026E12C,word,3C084280
+patch=1,EE,00269618,word,3C024280
+patch=1,EE,0026E748,word,3C024280
+patch=1,EE,0026EDF0,word,3C024280
+patch=1,EE,0026AF44,word,3C034280
+patch=1,EE,0026EF20,word,3C034280
+patch=1,EE,0026F008,word,3C034280
+patch=1,EE,002AC9E8,word,3C024258
+patch=1,EE,002ACA54,word,3C024270
+patch=1,EE,002ACD88,word,3C0342C6
+patch=1,EE,002ACE20,word,3C0342C6
+patch=1,EE,002ACD3C,word,3C0341E3
+patch=1,EE,002ACDD4,word,3C0341E3
+patch=1,EE,0026E13C,word,3C064280
+patch=1,EE,0026EF2C,word,3C044280
+patch=1,EE,0026F024,word,3C044280
+patch=1,EE,0026E764,word,3C024280
+patch=1,EE,0026EE00,word,3C024280
+patch=1,EE,0026AF5C,word,3C034280
+patch=1,EE,002AC9F0,word,3C034280
+patch=1,EE,002ACD50,word,3C034280
+patch=1,EE,002ACD9C,word,3C034280
+patch=1,EE,002ACDE8,word,3C034280
+patch=1,EE,002ACE34,word,3C034280
+patch=1,EE,002ACBA4,word,3C0341D4
+patch=1,EE,002ACCF0,word,3C034190
+patch=1,EE,002ACD00,word,3C0241E5
+patch=1,EE,0026D230,word,3C023F40
+patch=1,EE,002A9FE4,word,3C024210
+patch=1,EE,002A9F24,word,3C024190
+patch=1,EE,002ABB30,word,2405020D
+patch=1,EE,002ABB6C,word,2405020D
+patch=1,EE,00663848,word,3E800000
+patch=1,EE,002ABB80,word,2405021F
+patch=1,EE,002ABBBC,word,2405021F
+patch=1,EE,002A9C74,word,3C0242A8
+patch=1,EE,002A99F4,word,2404002F
+patch=1,EE,002A9AF4,word,2404002F
+patch=1,EE,002AB60C,word,24050231
+patch=1,EE,002AB650,word,24050231
+patch=1,EE,002AB7A0,word,24050231
+patch=1,EE,002AB7E8,word,24050231
+patch=1,EE,002AD38C,word,C78C8384
+patch=1,EE,002AD91C,word,3C023F40
+patch=1,EE,002A88F0,word,3C013F40
+patch=1,EE,002A88F4,word,44810000
+patch=1,EE,002A88F8,word,46006302
+patch=1,EE,002A88FC,word,3C01007C
+patch=1,EE,002A8900,word,E42C2414
+patch=1,EE,002A8904,word,3C01007C
+patch=1,EE,002A8908,word,03E00008
+patch=1,EE,002A890C,word,E42D2418
 
-//widescreen fix
-patch=1,EE,001130BC,word,3C013F9D
-patch=1,EE,001130C0,word,44810000
-patch=1,EE,001130C4,word,46006302
-patch=1,EE,001130C8,word,03E00008
-patch=1,EE,001130CC,word,E78C9A90
-
-patch=1,EE,0021DF84,word,0C044C2F
-patch=1,EE,00242D54,word,0C044C32
+[Remove ghosting effects]
+author=PeterDelta
+description=Removes the ghosting effect keeping radiosity.
+patch=1,EE,006685DC,extended,00000000
+patch=1,EE,00668668,extended,00000000
+patch=1,EE,E0010100,extended,006FFA80
+patch=1,EE,006FFA80,extended,00000130
 
 [Remove Radiosity Filter]
+author=refractionpcsx2
 description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
 patch=1,EE,2051A0C8,extended,00000000
 
 [50 FPS]
 author=Boludoz
-comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,006679CC,extended,00000001
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,E0040001,extended,0066CC58
+patch=1,EE,2053B4A0,extended,34050050
+patch=1,EE,2053B4A4,extended,24030002
+patch=1,EE,2053B4A8,extended,0000000C
+patch=1,EE,2053B4AC,extended,03E00008
+patch=1,EE,0054996C,extended,00000000

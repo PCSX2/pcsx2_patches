@@ -11,7 +11,7 @@ patch=1,EE,00469938,word,2411012A
 
 [60 FPS]
 author=Gabominated
-comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,2017AB28,extended,00000000 //1640FFE5 fps1
 
 [No-interlacing]

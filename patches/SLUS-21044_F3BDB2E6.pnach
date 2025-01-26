@@ -2,7 +2,7 @@ gametitle=Shadow Hearts Covenant SLUS_210.41
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,00202c94,word,3c013f40
 patch=1,EE,00202c98,word,44810000

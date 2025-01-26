@@ -2,7 +2,7 @@ gametitle=Shaman King - Power of Spirit SLUS_209.53
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,001dd764,word,3c023fab
 
 

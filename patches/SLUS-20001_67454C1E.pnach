@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Tekken Tag Tournament (Widescreen) NTSC-U
+description=Tekken Tag Tournament (Widescreen) NTSC-U
 // 16:9
 patch=1,EE,0034b014,word,3c013f4e
 patch=1,EE,0034b018,word,44810000
@@ -9,7 +9,7 @@ patch=1,EE,0034b020,word,4600c602
 
 [No-Interlacing]
 gsinterlacemode=1
-comment= original no interlace code by asasega. ported by someother1ne
+description= original no interlace code by asasega. ported by someother1ne
 
 patch=1,EE,208BD0C8,word,00000066  //00007F67
 patch=1,EE,208BD0D0,word,00000001  //00000003

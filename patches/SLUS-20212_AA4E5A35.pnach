@@ -2,7 +2,7 @@ gametitle=Bloody Roar 3 SLUS_202.12
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,201f4454,extended,3F400000
 
 

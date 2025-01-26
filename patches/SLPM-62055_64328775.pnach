@@ -7,7 +7,7 @@ gametitle=Bloody roar 3 jap SLPM_620.55 Game CRC = 0x64328775
 
 //[No-Interlacing]
 //sinterlacemode=1
-//comment=Enhancement test *480p mode + no interlacing
+//description=Enhancement test *480p mode + no interlacing
 
 //Progressive mode + No interlacing
 //patch=0,EE,201CE12C,extended,3c060050

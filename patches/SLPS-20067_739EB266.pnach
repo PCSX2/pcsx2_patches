@@ -2,7 +2,7 @@ gametitle=Crazy Bump's: Kattobi Car Battle (NTSC-J) [SLPS-20067] [739EB266]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Arapapa (original hack) and Aced14 (alternate hacks)
+description=Widescreen hacks by Arapapa (original hack) and Aced14 (alternate hacks)
 
 //16:9 widescreen
 patch=1,EE,202C6DA8,extended,3FAAAAAB

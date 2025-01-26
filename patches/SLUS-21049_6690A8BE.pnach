@@ -2,7 +2,7 @@ gametitle=Outlaw Volleyball SLUS_210.49
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,006128a0,word,3CBE95ED
 patch=1,EE,006128a4,word,3Fe38e38
 

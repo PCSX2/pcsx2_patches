@@ -3,7 +3,7 @@ gametitle=Xena: Warrior Princess (PAL)
 //Cannot confirm CRC, looks to be incorrect from both PAL editions. Disabling so it doesn't break other games until the serial can be checked.
 //[Widescreen 16:9]
 //gsaspectratio=16:9
-//comment=Widescreen Hack (60hz)
+//description=Widescreen Hack (60hz)
 //16:9
 //patch=1,EE,2037C2C8,extended,3F88F5C3 // 3F4CCCCD
 

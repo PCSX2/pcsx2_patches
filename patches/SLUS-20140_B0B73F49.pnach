@@ -2,7 +2,7 @@ gametitle=NHL Hitz 2002 Ver 2.00 [SLUS-20140]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 patch=1,EE,204E1528,word,3F248B44
 
 

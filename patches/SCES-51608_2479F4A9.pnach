@@ -3,7 +3,7 @@
 //[Widescreen 16:9]
 //gsaspectratio=16:9
 //author=ElHecht
-//comment=Widescreen Hack. Currently breaks text rendering when switching to 60hz or progressive scan.
+//description=Widescreen Hack. Currently breaks text rendering when switching to 60hz or progressive scan.
 // 16:9
 //patch=1,EE,00367be8,word,3c033f1f // 3c033f00 zoom
 //patch=1,EE,20826F10,extended,0014A709 // 001479C1 force native 16:9 mode

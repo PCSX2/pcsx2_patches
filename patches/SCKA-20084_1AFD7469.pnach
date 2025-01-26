@@ -3,7 +3,7 @@ gametitle=Monster House (NTSC-K)(SCKA-20084)
 //[Widescreen 16:9]
 //gsaspectratio=16:9
 //author=Arapapa
-//comment=Widescreen Hack
+//description=Widescreen Hack
 //After the first mission the game breaks on the other levels
 
 //Y-Fov + Zoom in
@@ -30,5 +30,5 @@ gametitle=Monster House (NTSC-K)(SCKA-20084)
 
 [50 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,0015BCC4,word,2C620000

@@ -3,7 +3,7 @@ gametitle=Shin Megami Tensei - Persona 3 FES (NTSC-U) SLUS-21621 060D795D (Spani
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=CeruleansBlue and nemesis2000
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,007cad1c,word,3fe38e38 //X-Fov by CeruleansBlue
 patch=1,EE,00106e30,word,3c043f40 //partial HUD fix
 patch=1,EE,00106e38,word,00701821
@@ -22,7 +22,7 @@ patch=1,EE,0010b010,word,00000000
 
 [Mode 480p]
 author=felixthecat1970
-comment=Forces progressive scan at startup
+description=Forces progressive scan at startup
 patch=0,EE,00197AF0,extended,24040057
 patch=0,EE,1077EF3C,extended,000001C0
 patch=0,EE,204DFF34,extended,241B0050

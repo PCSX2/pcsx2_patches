@@ -2,7 +2,7 @@ gametitle=Tokobot Plus - Mysteries of the Karakuri SLUS_214.71
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0012833c,word,3c013f40
 
 

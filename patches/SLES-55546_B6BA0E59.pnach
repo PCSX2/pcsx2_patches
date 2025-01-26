@@ -3,12 +3,12 @@ gametitle=The Secret Saturdays - Beasts of the 5th Sun (U&PAL)(SLUS-21896,SLES-5
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen hack
+description=Widescreen hack
 //893f013c 93242134
 patch=1,EE,0011a67c,word,3c013f4d //3c013f89
 patch=1,EE,0011a680,word,3421b6d4 //34212493
 
 [50 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,20285F78,extended,00000001

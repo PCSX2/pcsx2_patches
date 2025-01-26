@@ -2,7 +2,7 @@ gametitle=Maximo vs. Army of Zin SLES_517.59
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0019ddc8,word,3c023fef //render fix
 patch=1,EE,20345450,extended,3f400000 //hud
 //60hz

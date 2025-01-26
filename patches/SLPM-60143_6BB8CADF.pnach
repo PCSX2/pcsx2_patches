@@ -2,7 +2,7 @@ gametitle=Tekkoki Mikazuki: Trial Edition (NTSC-J) [SLPM-60143]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Aced14
+description=Widescreen hacks by Aced14
 
 //16:9 Widescreen
 patch=1,EE,10103B14,extended,00003F40 //3C023F80 - Master X FOV #1

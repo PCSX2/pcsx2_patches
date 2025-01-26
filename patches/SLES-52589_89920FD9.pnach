@@ -3,7 +3,7 @@ gametitle=Mercenaries - Playground of Destruction (PAL-F) (SLES-52589)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Converted by Bigdemon
+description=Converted by Bigdemon
 
 patch=1,EE,0033b038,word,3c013f40 // 00000000 hor fov
 

@@ -1,7 +1,7 @@
 gametitle=Pro Rally 2002 (E)(SLES-50637)
 
 author=Arapapa
-comment=Widescreen hack
+description=Widescreen hack
 
 [Widescreen 16:9]
 gsaspectratio=16:9

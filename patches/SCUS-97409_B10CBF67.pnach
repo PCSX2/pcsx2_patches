@@ -2,7 +2,7 @@ gametitle=Gretzky NHL 2005 SCUS_974.09
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,002bcfc0,word,3c013c2e
 patch=1,EE,002bcfd4,word,3c013f10
 

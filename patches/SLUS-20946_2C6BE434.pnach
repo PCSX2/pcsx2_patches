@@ -3,7 +3,7 @@ gametitle=Grand Theft Auto: San Andreas (SLUS-20946GH) 2C6BE434 / Ver 3.00
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-comment=Widescreen fix
+description=Widescreen fix
 patch=1,EE,001130BC,word,3C013F9D
 patch=1,EE,001130C0,word,44810000
 patch=1,EE,001130C4,word,46006302

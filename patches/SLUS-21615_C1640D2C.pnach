@@ -2,7 +2,7 @@ gametitle=Wild Arms 5 NTSC-U
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00153994,word,3C024500
 patch=1,EE,00153a30,word,3C023F40
 patch=1,EE,2015391C,word,3C02442B

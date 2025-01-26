@@ -2,7 +2,7 @@ gametitle=SkyGunner [NTSC-J] (SCPS-11006)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00126724,word,3c013f40
 patch=1,EE,00126728,word,44810000
 patch=1,EE,00126730,word,4600c602

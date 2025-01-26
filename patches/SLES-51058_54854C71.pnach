@@ -2,13 +2,13 @@ gametitle=Maken Shao (PAL) [SLES-51058]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,2034AC20,extended,3f533334
 
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Progressive scan
+description=Progressive scan
 
 //Override SetGsCrt syscall arguments.
 patch=1,EE,202000c0,extended,24040000

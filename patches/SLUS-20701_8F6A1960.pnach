@@ -3,7 +3,7 @@ gametitle=Scooby-Doo! Mystery Mayhem (U)(SLUS-20701) 8F6A1960
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001978a0,word,0809fa4c
 patch=1,EE,0027e930,word,46010043
 patch=1,EE,0027e934,word,3c013f40

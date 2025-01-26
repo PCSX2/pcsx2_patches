@@ -2,7 +2,7 @@
 
 //[Widescreen 16:9]
 //gsaspectratio=16:9
-//comment=Widescreen Hack
+//description=Widescreen Hack
 //Disabled due to graphical issues with heavy charged attacks causing striped effect on screen.
 
 //16:9

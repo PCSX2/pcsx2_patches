@@ -2,7 +2,7 @@ gametitle=Tenchu - Wrath of Heaven SLUS_203.97
 
 //[Widescreen 16:9]
 //gsaspectratio=16:9
-//comment=Widescreen Hack
+//description=Widescreen Hack
 //Disabled due to breaking blur and fog rendering in game.
 //patch=1,EE,2163aea4,extended,3F400000 //(gameplay)
 //patch=1,EE,00155168,word,3C024455 //3C024422 (render fix)

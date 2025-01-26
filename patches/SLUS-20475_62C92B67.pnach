@@ -2,7 +2,7 @@ gametitle=Dual Hearts (NTSC-U) SLUS 204.75
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen fix by flameofrecca
+description=Widescreen fix by flameofrecca
 patch=1,EE,206EF4E0,word,41400000  //horizontal fov
 
 //Partial HUD fix

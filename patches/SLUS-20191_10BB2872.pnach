@@ -3,7 +3,7 @@ gametitle=Defender (U)(SLUS-20191) 10BB2872
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen hack
+description=Widescreen hack
 //Render Fix
 //003f013c 00008144 50ffbd27
 patch=1,EE,001c8268,word,3c013f40 //3c013f00
@@ -31,5 +31,5 @@ patch=1,EE,002e8bc0,word,3ff6cf35 //3fb6db6e
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,20227458,extended,00000000

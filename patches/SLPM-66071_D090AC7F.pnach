@@ -2,7 +2,7 @@ gametitle=Shadow Hearts - From the New World [NTSC-J] (SLPM-66071)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (pnach NTSC-J by Arapapa)
+description=Widescreen Hack (pnach NTSC-J by Arapapa)
 
 //black borders fix (optional)
 // (c843033c 803f023c to c843033c 0000023c)

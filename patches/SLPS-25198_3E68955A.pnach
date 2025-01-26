@@ -2,7 +2,7 @@ gametitle=Kingdom Hearts: Final Mix
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch
+description=Widescreen patch
 patch=1,EE,00110644,word,3c0143d6 //render fix
 patch=1,EE,00110b30,word,3c013f19 //hor value first half
 patch=1,EE,00110898,word,3421999a //hor value second half

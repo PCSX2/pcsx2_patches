@@ -3,7 +3,7 @@ gametitle=DragonBall Z - Budokai Tenkaichi 2 (PAL-M6) (SLES-54164)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=sergx12
-comment=Ported to PAL by ElHecht
+description=Ported to PAL by ElHecht
 
 // 16:9
 patch=1,EE,0012bd38,word,3c013f10 // 3c013f40 sky fix

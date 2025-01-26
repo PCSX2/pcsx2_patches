@@ -2,7 +2,7 @@ gametitle=Amplitude (PAL-Unk) [SCES-51706] [F7DC0006]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by Aced14 (MIPS code injection/FMV experiment) and 2007excalibur2007 (initial live memory discovery)
+description=Widescreen hacks by Aced14 (MIPS code injection/FMV experiment) and 2007excalibur2007 (initial live memory discovery)
 
 //16:9 Widescreen
 patch=1,EE,E0FF0000,extended,001001E0 //00000000 - Enable condition

@@ -2,7 +2,7 @@ gametitle=Devil Kings SLUS_212.97
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 patch=1,EE,00130afc,word,3c013f19
 patch=1,EE,00130b00,word,3421999a
 patch=1,EE,001ba360,word,3c013f19

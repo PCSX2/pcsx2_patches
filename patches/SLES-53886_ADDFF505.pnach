@@ -3,7 +3,7 @@ gametitle=BLACK (PAL-M) (SLES_538.86) ADDFF505
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Some Chump
-comment=Widescreen Converted from NTSC hack by No.47
+description=Widescreen Converted from NTSC hack by No.47
 patch=1,EE,203BE8BC,word,00000001 //00000000
 patch=1,EE,204BC950,word,00000001 //00000000
 patch=1,EE,204BD98C,word,00000101 //00000000

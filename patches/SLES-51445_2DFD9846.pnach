@@ -3,7 +3,7 @@ gametitle=Rygar - The Legendary Adventure (PAL-M5) (SLES-51445)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,0020eb8c,word,3c013f40 // 00000000 hor fov
 patch=1,EE,0020eb90,word,4481f000 // 00000000

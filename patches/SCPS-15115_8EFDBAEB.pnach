@@ -2,7 +2,7 @@ gametitle=Saru Get You - Million Monkeys [NTSC-J] (SCPS-15115)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 patch=1,EE,2070D214,word,3F947ADF
 
 

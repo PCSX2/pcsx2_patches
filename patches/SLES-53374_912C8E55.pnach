@@ -3,7 +3,7 @@ gametitle=X-Men Legends II - Rise of Apocalypse (PAL-M3) (SLES-53374)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,00270964,word,3c033f40 // 3c033f80 hor fov
 patch=1,EE,0027097c,word,460318c3 // 00000000
