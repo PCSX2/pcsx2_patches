@@ -1,0 +1,6 @@
+gametitle=Lara Croft Tomb Raider - Anniversary (Japan)
+
+[50/60 FPS]
+author=PeterDelta & lanyer
+description=Might need EE Overclock at 180%.
+patch=1,EE,001278A4,word,14400003
