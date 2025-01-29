@@ -1,17 +1,19 @@
 gametitle=Tales of Destiny: Director's Cut (SLPS-25842)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=nemesis2000
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=nemesis2000
 
-patch=1,EE,0015DD04,word,3C013F20
-patch=1,EE,0015DD08,word,34216D3A
-patch=1,EE,0015E190,word,00000000
-patch=1,EE,0015E198,word,3C013F40
-patch=1,EE,0015E19C,word,4481C800
-patch=1,EE,0015E1A4,word,46196b42
-patch=1,EE,0015E1A8,word,E7AD0040
-patch=1,EE,0015E20C,word,3C0143D6
+
+// see issue #461
+//patch=1,EE,0015DD04,word,3C013F20
+//patch=1,EE,0015DD08,word,34216D3A
+//patch=1,EE,0015E190,word,00000000
+//patch=1,EE,0015E198,word,3C013F40
+//patch=1,EE,0015E19C,word,4481C800
+//patch=1,EE,0015E1A4,word,46196b42
+//patch=1,EE,0015E1A8,word,E7AD0040
+//patch=1,EE,0015E20C,word,3C0143D6
 
 //No interlacing by asasega
 //patch=1,EE,201A7054,word,00000000
