@@ -1,28 +1,39 @@
-[Widescreen 16:9]
-gsaspectratio=16:9
-description=Yu-Gi-Oh! The Duelist of the Roses NTSC-U patches
-//Widescreen 16:9
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=miseru99
 //X 21FE0528 3F400000 - need render fix
 //Y -- works fine?
-patch=1,EE,21FE052C,extended,3FA06D3A
+//patch=1,EE,21FE052C,extended,3FA06D3A
 //different Y 20326194 3FAAAAAA - works fine as well?
+//patch=1,EE,20326194,extended,3FAAAAAA
 //Zoom Correction for Y
 //doesn't work for cards when they fight, soo they fill up the screen(looks ok actually), but works for everything else
-patch=1,EE,21FE0524,extended,44160000
+//patch=1,EE,21FE0524,extended,44160000
 
-
-//Game fixes(workarounds):
-
-//fix for the zoom graphic glitch(you can additionally also change EE/IOP rounding to negative and clamping to extra+preserve sign, but I didn't really saw much if any improvement of doing it;p)
+[Zoom Glitch]
+author=miseru99
+description=Fixes the zoom graphical glitch
+//fix for the zoom graphic glitch(you can additionally also change EE/IOP rounding to negative and clamping to extra+preserve sign, but I didn't really see much if any improvement of doing it)
 patch=1,EE,D1FE04F0,extended,00000000
 patch=1,EE,21FE04F0,extended,3727C5AC
 
-//Duel Master(use only one code) in custom duel:
-//T
-//patch=1,EE,203173AC,extended,00000003
-//S
-//patch=1,EE,203173AC,extended,00000002
-//I
-//patch=1,EE,203173AC,extended,00000004
+//Deck Master (use only one code) in custom duel:
+[Deck Master K]
+author=miseru99
+description=Deck Master K in the custom duel. Incompatible with other Deck Master patches.
+patch=1,EE,203173AC,extended,00000001
 
+[Deck Master S]
+author=miseru99
+description=Deck Master S in the custom duel. Incompatible with other Deck Master patches.
+patch=1,EE,203173AC,extended,00000002
 
+[Deck Master T]
+author=miseru99
+description=Deck Master T in the custom duel. Incompatible with other Deck Master patches.
+patch=1,EE,203173AC,extended,00000003
+
+[Deck Master I]
+author=miseru99
+description=Deck Master I in the custom duel. Incompatible with other Deck Master patches.
+patch=1,EE,203173AC,extended,00000004
