@@ -1,0 +1,22 @@
+gametitle=Tom Clancy's Rainbow Six 3 * NTSC-U * SLUS-20883 * A80FBAAC
+// This disc has the same CRC as SLUS-21144.
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+patch=1,EE,0030f100,word,3c023f40
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+patch=1,EE,0030f100,word,3c023f55
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+patch=1,EE,0030f100,word,3c023f64
+
+[60 FPS]
+author=asasega
+description=Might need EE overclocking to be stable.
+patch=1,EE,20653778,word,00000001

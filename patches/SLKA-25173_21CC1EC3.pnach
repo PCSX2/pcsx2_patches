@@ -1,0 +1,17 @@
+gametitle=Tom Clancy's Rainbow Six 3 * NTSC-K * SLKA-25173 * 21CC1EC3
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000, ported by arapapa
+// 803f023c 9007a327 9407a2af
+patch=1,EE,20311150,extended,3c023f40
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000 & arapapa, converted by pgert
+patch=1,EE,20311150,extended,3c023f55
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000 & arapapa, converted by pgert
+patch=1,EE,20311150,extended,3c023f64
