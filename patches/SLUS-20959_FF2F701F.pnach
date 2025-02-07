@@ -1,12 +1,18 @@
-gametitle=Dukes of Hazzard, The - Return of the General Lee (U)(SLUS-20959)
+gametitle=Dukes of Hazzard, The - Return of the General Lee (NTSC-U) SLUS-20959 FF2F701F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hack (NTSC-U by Arapapa)
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0024E1EC,extended,A1
 
-//Gameplay 16:9
-
-patch=1,EE,003f8d00,word,3c013fc3 //3c013f92
-patch=1,EE,003f8d04,word,34210c2c //34214925
-
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,004BBD58,extended,00000001
+patch=1,EE,E0010000,extended,00877620
+patch=1,EE,004BBD58,extended,00000002
+patch=1,EE,E0018889,extended,0062CCF4
+patch=1,EE,2062CCF4,extended,3C088889
+patch=1,EE,2061C410,extended,3C888889
+patch=1,EE,2061C414,extended,3C888889

@@ -2,11 +2,18 @@ gametitle=Indigo Prophecy NTSC-U SLUS-21196 A7A37EB8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=sergx12
 description=Widescreen Hack
-patch=1,EE,20836500,extended,3FE38E38 // 3FAAAAAB
+patch=1,EE,20836500,extended,3FE38E39 // 3FAAAAAB
 
 [60 FPS]
 author=Gabominated
-description=Might need EE Overclock.
+description=Might need EE Overclock (130%).
 patch=1,EE,00209688,word,10400004 //14400004
 
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect
+patch=1,EE,0020DC50,word,00000000
+patch=1,EE,001A9144,word,00000000
+patch=1,EE,001A57D0,word,3C010000

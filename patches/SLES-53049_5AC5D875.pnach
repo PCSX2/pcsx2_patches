@@ -1,5 +1,14 @@
 gametitle=The Punisher (PAL-S-I) SLES-53049 5AC5D875
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=sergx12
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00192A9C,word,3C013F40 //00000000 X-FoV
+patch=1,EE,00192AA8,word,4481F000 //00000000
+patch=1,EE,00192D14,word,461EA783 //00000000
+patch=1,EE,00192D70,word,461E0083 //46140083
+
 [480p Mode]
 gsinterlacemode=1
 author=PeterDelta

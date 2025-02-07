@@ -1,16 +1,15 @@
-//gametitle=Pitfall - The Lost Expedition (U)(SLUS-20408)
+gametitle=Pitfall - The Lost Expedition (NTSC-U) SLUS-20408 394F402E
 
-//[Widescreen 16:9]
-//gsaspectratio=16:9
-//author=Arapapa. Disabled due to misplacing and cutting off text.
-
-//Widescreen hack 16:9
-
-//X-Fov
-//000018e6 280015e6
-//patch=1,EE,00371050,word,08113a78
-//patch=1,EE,0044e9e0,word,3c013f40
-//patch=1,EE,0044e9e4,word,4481f000
-//patch=1,EE,0044e9e8,word,461ec602
-//patch=1,EE,0044e9ec,word,e6180000
-//patch=1,EE,0044e9f0,word,080dc415
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00371050,word,08113A78
+patch=1,EE,0044E9E0,word,3C013F40
+patch=1,EE,0044E9E4,word,4481F000
+patch=1,EE,0044E9E8,word,461EC602
+patch=1,EE,0044E9EC,word,E6180000
+patch=1,EE,0044E9F0,word,080DC415
+patch=1,EE,00529FD8,word,3FF3AAAB //by PeterDelta
+patch=1,EE,0026329C,word,3C013F7B
+patch=1,EE,00263604,word,3C013F7B
