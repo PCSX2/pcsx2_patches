@@ -1,0 +1,14 @@
+gametitle=Driver - Parallel Lines (PAL-M) SLES-54027 D720770D
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,003246EC,word,24440002
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,004B5790,word,00000002
+patch=1,EE,004B03C8,word,00000003
+patch=1,EE,00403588,word,00000000

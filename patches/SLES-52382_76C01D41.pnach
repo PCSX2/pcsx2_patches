@@ -27,10 +27,15 @@ patch=1,EE,0014B7A8,extended,24040002
 patch=1,EE,20387280,extended,3F800000
 
 [480p Mode]
-gsinterlacemode=1
 author=PeterDelta
 description=SDTV 480p mode at start.
 patch=1,EE,00362E34,extended,00000001
 patch=1,EE,E0020005,extended,0037D870
 patch=1,EE,00387284,extended,00000001
 patch=1,EE,20387270,extended,00000050
+patch=1,EE,20387278,extended,000001E0
+patch=1,EE,20360AB8,extended,3F6147AE
+patch=1,EE,203679DC,extended,43F00000
+patch=1,EE,203679E4,extended,01C00260
+patch=1,EE,2037994C,extended,3F6147AE
+patch=1,EE,20379950,extended,3F8CCCCC

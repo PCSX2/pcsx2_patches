@@ -1,13 +1,19 @@
-gametitle=Dukes of Hazzard, The - Return of the General Lee SLES_527.47
+gametitle=Dukes of Hazzard, The - Return of the General Lee (PAL-E) SLES-52747 C46D7708
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hack
-patch=1,EE,003f8ef8,word,3c013fc3
-patch=1,EE,003f8efc,word,34210c2c
-//hex pattern
-//4000228e923f013c2549213400008144
-//to 16:9
-//4000228ec33f013c2c0c213400008144
+author=sergx12
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,003F8EF8,word,3C013FBA
+patch=1,EE,003F8EFC,word,34210C2C
 
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=1,EE,004BC078,extended,00000001
+patch=1,EE,E0010000,extended,00877620
+patch=1,EE,004BC078,extended,00000002
+patch=1,EE,E001D70A,extended,0062CCF4
+patch=1,EE,2062CCF4,extended,3C23D70A
+patch=1,EE,2061C410,extended,3CA3D70A
+patch=1,EE,2061C414,extended,3CA3D70A

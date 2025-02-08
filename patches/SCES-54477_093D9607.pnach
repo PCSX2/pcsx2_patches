@@ -1,0 +1,6 @@
+gametitle=SOCOM - US Navy Seals - Combined Assault (PAL-M) SCES-54477 093D9607
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=1,EE,006899C0,extended,00000032

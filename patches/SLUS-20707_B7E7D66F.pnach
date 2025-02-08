@@ -7,7 +7,6 @@ description=Enable native widescreen
 patch=1,EE,E0020005,extended,00370440
 patch=1,EE,002D1200,extended,00000001
 patch=1,EE,00333CE4,extended,00000001
-patch=1,EE,00121C6C,extended,3C013F01 //3C013F00 fix border
 
 [Remove Blackbars]
 author=PeterDelta
@@ -18,3 +17,8 @@ patch=1,EE,0031F3F4,extended,00000001
 author=asasega
 description=Might need EE Overclock (130%).
 patch=1,EE,202EEEC8,extended,00000001
+
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect
+patch=1,EE,0012658C,word,00000000

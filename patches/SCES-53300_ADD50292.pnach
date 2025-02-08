@@ -1,0 +1,6 @@
+gametitle=SOCOM 3 - U.S. Navy SEALs (PAL-M) SCES-53300 ADD50292
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=1,EE,005F8488,extended,00000032
