@@ -1,0 +1,23 @@
+gametitle=18 Wheeler - American Pro Trucker (USA)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=better enable "Show Overscan" to get the full picture and right ratio
+author=El_Patas
+// converted by lanyer & pgert
+patch=1,EE,001D4C3C,word,3C013F40 //3C013F80 (Increases hor. axis)
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+description=better enable "Show Overscan" to get the full picture and right ratio
+author=El_Patas
+// converted by lanyer & pgert
+description=better to enable "Show Overscan" at the same time to get the full picture and right ratio
+patch=1,EE,001D4C3C,word,3C013F55
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+description=better enable "Show Overscan" to get the full picture and right ratio
+author=El_Patas & lanyer
+// converted by lanyer & pgert
+patch=1,EE,001D4C3C,word,3C013F64
