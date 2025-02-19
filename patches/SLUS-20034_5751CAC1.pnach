@@ -1,0 +1,6 @@
+gametitle=Unreal Tournament (NTSC-U) SLUS-20034 5751CAC1
+
+[60 FPS]
+author=felixthecat1970
+description=Might need EE Overclock (180%).
+patch=1,EE,0012D134,extended,28420001
