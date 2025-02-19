@@ -1,24 +1,18 @@
-gametitle=Batman - Vengeance (E)(SLES-50355)
+gametitle=Batman - Vengeance (PAL-M) SLES-50355 A6F234C7
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-description=Widescreen Hack
-
-//Widescreen hack 16:9
-
-//Zoom
-//00000000 a80020c6 003f023c 00088244
-patch=1,EE,002a1e58,word,3c023f1e //3c023f00
-
-//Y-Fov
-//c2030146 06a40046
-patch=1,EE,002a1ea4,word,0813bd30
-
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,002a1e58,word,3c023f1e //3c023f00 Zoom
+patch=1,EE,002a1ea4,word,0813bd30 //Y-Fov
 patch=1,EE,004ef4c0,word,460103c2
 patch=1,EE,004ef4c4,word,3c013f40
 patch=1,EE,004ef4c8,word,4481f000
 patch=1,EE,004ef4cc,word,461e7bc2
 patch=1,EE,004ef4d0,word,080a87aa
 
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0049EBE0,extended,2C410001
