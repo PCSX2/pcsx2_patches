@@ -10,7 +10,7 @@ gsaspectratio=16:9
 author=El_Patas & No.47
 // somewhat corrected by pgert
 // ==========
-// Y-FoV- 
+// Y-FoV-
 patch=1,EE,00322460,word,3F1F49F4 // 3EEEEEF0
 patch=1,EE,00322418,word,3F360B62 // 3F088889
 patch=1,EE,003224F0,word,3F360B62 // 3F088889

@@ -191,7 +191,7 @@ patch=1,EE,006FF980,extended,00000130
 
 [60 FPS]
 author=asasega
-description=Make sure you set your EE Cycle Rate to 130-180% 
+description=Make sure you set your EE Cycle Rate to 130-180%
 patch=1,EE,006678CC,extended,00000001
 
 [Silentpatch Lite Fixes]
