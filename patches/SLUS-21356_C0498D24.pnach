@@ -1,4 +1,4 @@
-gametitle=Tom Clancy's Splinter Cell: Double Agent (SLUS_21356)
+gametitle=Tom Clancy's Splinter Cell 4: Double Agent * NTSC-U * SLUS-21356 * C0498D24
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -23,7 +23,7 @@ patch=1,EE,001f47c0,word,240d0004
 patch=1,EE,001f47c4,word,e66000f4
 patch=1,EE,001f47c8,word,3c03007f
 patch=1,EE,001f47cc,word,c44162c8
-patch=1,EE,001f47d0,word,3c0c3f40 //hor val
+patch=1,EE,001f47d0,word,3c0c3f40 // X-FoV
 patch=1,EE,001f47d4,word,e66100f8
 patch=1,EE,001f47d8,word,3c020080
 patch=1,EE,001f47dc,word,c56162cc
@@ -55,4 +55,19 @@ patch=1,EE,001f4840,word,ae6c00bc
 patch=1,EE,001f4844,word,3c0c3f80
 patch=1,EE,001f4848,word,ae6c00c0
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Combine with 'Widescreen 16:9'
+patch=1,EE,001f47d0,word,3c0c3f55
 
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Combine with 'Widescreen 16:9'
+patch=1,EE,001f47d0,word,3c0c3f64
+
+// ==========
+// Game can run at 60 FPS as opposed to 30 with an EE cycle rate of 300%.
+// Use at your own risk.
+// ==========
