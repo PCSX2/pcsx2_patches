@@ -13,5 +13,5 @@ description=Progressive scan
 //Override SetGsCrt syscall arguments.
 patch=1,EE,202000c0,extended,24040000
 // The next line activates 60 NTSC Progressive format but brings a slew of issues like immediate FMV desync and the game being out of frame unless using the overscan option
-// patch=1,EE,202000c4,extended,24050002 
+// patch=1,EE,202000c4,extended,24050002
 patch=1,EE,202000c8,extended,24060001
