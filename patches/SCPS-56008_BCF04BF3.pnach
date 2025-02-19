@@ -20,7 +20,7 @@ patch=1,EE,001822B8,word,24027100
 patch=1,EE,001822C8,word,24027100
 patch=1,EE,001822D0,word,24091E00
 
-// Lens Flare's fix - Modified based on PAL (0,875 instead of 0,75) - better.   
+// Lens Flare's fix - Modified based on PAL (0,875 instead of 0,75) - better.
 patch=1,EE,00137154,word,3C013F12 // 3c013f00
 patch=1,EE,00135b10,word,3C01428C // 3c0142a0
 patch=1,EE,00135bf4,word,3C01410C // 3c014120

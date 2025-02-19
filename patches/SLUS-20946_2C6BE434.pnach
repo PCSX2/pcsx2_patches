@@ -3,7 +3,7 @@ gametitle=Grand Theft Auto: San Andreas (SLUS-20946GH) 2C6BE434 / Ver 3.00
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta, DanielSantos, ThirteenAG, kesterstudios
-description=GTA San Andreas Modern Widescreen Fix for 3.00/GH 
+description=GTA San Andreas Modern Widescreen Fix for 3.00/GH
 
 patch=1,EE,207004EC,extended,01000101 //Widescreen fix by PeterDelta
 patch=1,EE,0021E040,extended,3C0242CC
@@ -118,7 +118,7 @@ description=Silentpatch Lite Fixes for 3.00
 //------------------------------------------------Fixes------------------------------------------------//
 
 //Linear Filtering for License Plates
-patch=0,EE,204A4D94,extended,34630002 //ori $v1, 2 //RWLINEARFILTER   
+patch=0,EE,204A4D94,extended,34630002 //ori $v1, 2 //RWLINEARFILTER
 
 //Fixed ammo for melee weapons in cheats
 patch=0,EE,2059DFEC,extended,24060001 //li $s2 1 //knife

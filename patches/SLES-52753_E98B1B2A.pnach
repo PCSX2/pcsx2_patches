@@ -10,7 +10,7 @@ patch=1,EE,001D8E20,extended,3C013F40
 patch=1,EE,00236510,extended,3C013F1C
 
 [50/60 FPS]
-author=FlatOut & PeterDelta 
+author=FlatOut & PeterDelta
 description=Might need EE Overclock at 130%.
 patch=1,EE,002D9608,extended,00000001
 patch=1,EE,E0010008,extended,0028C540

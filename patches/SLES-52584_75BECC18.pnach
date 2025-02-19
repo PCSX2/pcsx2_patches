@@ -9,8 +9,8 @@ patch=1,EE,204E0FB8,extended,3FAAAAAB
 patch=1,EE,204E11FC,extended,3FE38E39
 
 [50/60 FPS]
-author=PeterDelta 
-description=Might need EE Overclock 
+author=PeterDelta
+description=Might need EE Overclock
 patch=1,EE,E0051885,extended,0049B384 //50hz
 patch=1,EE,004E1D5C,extended,00000001
 patch=1,EE,2051C024,extended,00000001

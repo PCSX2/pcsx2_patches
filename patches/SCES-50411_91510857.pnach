@@ -3,7 +3,7 @@ gametitle=Vampire Night (PAL-M5) (SCES-50411) 91510857
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-description=Widescreen Hack 
+description=Widescreen Hack
 // 16:9
 patch=1,EE,002147e0,word,3c013f40 // 00000000 hor fov
 

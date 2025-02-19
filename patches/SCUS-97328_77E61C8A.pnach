@@ -105,7 +105,7 @@ description=Reduces the strength of the controller's vibration.
 author=Aero_
 patch=1,EE,2036D1C4,extended,3C014170 // lui at,0x4170 : Vibration Float
 
-[Disable Dynamic Race Text] 
+[Disable Dynamic Race Text]
 description=Disables the text that appears at the bottom of the screen. Example: "GET READY TO DRIVE"
 author=Aero_
 patch=1,EE,2039DA54,extended,00000000 // GET READY TO DRIVE

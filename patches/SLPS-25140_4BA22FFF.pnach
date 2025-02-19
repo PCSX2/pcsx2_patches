@@ -26,7 +26,7 @@ patch=1,EE,0014f668,word,3c014440
 patch=1,EE,001fab70,word,3c014440
 // ==========
 // Render fix value by No.47 (703daa3f 2 times) - ported by Arapapa.
-patch=1,EE,002c4238,word,3fe3d70a // 3faa3d70 (NTSC-U 3faa3d71) 
+patch=1,EE,002c4238,word,3fe3d70a // 3faa3d70 (NTSC-U 3faa3d71)
 patch=1,EE,002c4298,word,3fe3d70a
 // ==========
 

@@ -2,7 +2,7 @@ gametitle=Van Helsing NTSC-U SLUS-20738 901ECEFC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=paul_met & Gabominated 
+author=paul_met & Gabominated
 description=Widescreen hack
 patch=1,EE,002E7FA0,word,3FE38E39 //3FAAAAAA
 patch=1,EE,002E7FA4,word,C2D55554 //00000000
