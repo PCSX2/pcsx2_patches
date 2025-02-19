@@ -14,7 +14,7 @@ patch=1,EE,002D5F64,extended,3C013F40
 patch=1,EE,0020D4FC,extended,3C013FAB
 
 [50/60 FPS]
-author=PeterDelta 
+author=PeterDelta
 description=Might need EE Overclock at 130%.
 patch=1,EE,004A3494,extended,00000001
 patch=1,EE,004CCFD8,extended,00000000

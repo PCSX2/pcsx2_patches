@@ -13,8 +13,8 @@ patch=0,EE,00527e18,word,34218e34
 //[Widescreen 16:9 HUD]
 //author=SuperType1. Appears to cause extreme FPS issues when used.
 //description=Fixes HUD scaling when using Widescreen hack (Requires HW Renderer)
-//patch=1,EE,001D6DB0,byte,1e0 //480p geometry centering 
-//patch=1,EE,001D6DB0,byte,280 //480p geometry centering 
+//patch=1,EE,001D6DB0,byte,1e0 //480p geometry centering
+//patch=1,EE,001D6DB0,byte,280 //480p geometry centering
 //patch=1,EE,001C8310,byte,280 //480p post fx centering
 //patch=1,EE,001C8314,byte,1e0 //480p post fx centering
 //patch=1,EE,001C829C,word,0000000 //disable "hdr" glow cut off
@@ -23,7 +23,7 @@ patch=0,EE,00527e18,word,34218e34
 //patch=0,EE,204BF458,byte,01 //enable 480p
 
 [Disable motion blur]
-description= removes motion blur 
+description= removes motion blur
 patch=1,EE,001CA488,word,03e00008
 
 [60 FPS]
