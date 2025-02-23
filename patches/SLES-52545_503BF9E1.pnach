@@ -2,7 +2,12 @@ gametitle=Star Wars - Battlefront (PAL-M) SLES-52545 503BF9E1
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
+description=Might need EE Overclock (130%).
 patch=1,EE,00518D40,extended,00000001
 patch=1,EE,E0010000,extended,005171EC
 patch=1,EE,00518D40,extended,00000002
+
+[Disable Blur/Bloom]
+author=Gabominated
+description=Disable the post-processing blur/bloom effect
+patch=1,EE,005227FC,word,00000000
