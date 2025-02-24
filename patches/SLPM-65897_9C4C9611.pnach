@@ -5,26 +5,26 @@ gsaspectratio=16:9
 author=wxvu & igorciz777
 
 //Rendering: General
-patch=1,EE,20167318,extended,3C043F10 //3C043F40
+patch=0,EE,20167318,extended,3C043F10 //3C043F40
 
 //Rendering: Reflections
-patch=1,EE,2016783C,extended,3C033F10 //3C033F40
+patch=0,EE,2016783C,extended,3C033F10 //3C033F40
 
 //Rendering: Rear View Mirror
-patch=1,EE,20167A58,extended,3C043F10 //3C043F40
+patch=0,EE,20167A58,extended,3C043F10 //3C043F40
 
 [Widescreen 16:10]
 gsaspectratio=Stretch
 author=wxvu & igorciz777
 
 //Rendering: General
-patch=1,EE,20167318,extended,3C043F20 //3C043F40
+patch=0,EE,20167318,extended,3C043F20 //3C043F40
 
 //Rendering: Reflections
-patch=1,EE,2016783C,extended,3C033F20 //3C033F40
+patch=0,EE,2016783C,extended,3C033F20 //3C033F40
 
 //Rendering: Rear View Mirror
-patch=1,EE,20167A58,extended,3C043F20 //3C043F40
+patch=0,EE,20167A58,extended,3C043F20 //3C043F40
 
 [No-Interlacing]
 gsinterlacemode=1
