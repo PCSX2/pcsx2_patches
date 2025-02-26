@@ -1,0 +1,10 @@
+gametitle=Need for Speed - Carbon (NTSC-U) (SLUS-21493)
+
+[Fix Most Wanted Black Edition save detection]
+author=Silent
+description=Fixes the career cash bonus checking for an incorrect serial of Most Wanted: Black Edition.
+
+// BASLAJ-25075 -> BASLUS-21351
+patch=0,EE,205B0268,extended,4C534142
+patch=0,EE,205B026C,extended,322D5355
+patch=0,EE,205B0270,extended,31353331
