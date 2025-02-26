@@ -1,11 +1,14 @@
-gametitle=Harry Potter and the Goblet of Fire [PAL-M5] (SLES_537.28)
+gametitle=Harry Potter and the Goblet of Fire (PAL-M5) SLES-53728 B18DC525
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-description=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio
 //Gameplay 16:9
 patch=1,EE,0029FD74,word,3C013FE3 //3C013FAA
 patch=1,EE,0029FD78,word,34218E39 //3421AAAB
 
-
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,004DC4DC,word,00000000

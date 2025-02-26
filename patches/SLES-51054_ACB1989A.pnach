@@ -8,7 +8,6 @@ patch=1,EE,0042F134,word,3FC71C65 //3F955553
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,0042F138,word,00000001
+description=Might need EE Overclock (130%).
+patch=1,EE,00106F64,word,24070001
 patch=1,EE,00431804,word,3F000000 //3F800000
-patch=1,EE,004317D4,word,3CA08889 //3C888889

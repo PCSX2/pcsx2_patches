@@ -8,10 +8,7 @@ patch=1,EE,20168A10,extended,24020001 //li v0, 1
 patch=1,EE,206828D8,extended,3F400000 //Horizontal: 0.75f Corrects Aspect Ratio
 patch=1,EE,206828DC,extended,3F8CCCCD //Vertical: 1.10f
 
-[480p Mode]
-gsinterlacemode=1
+[NTSC Mode]
 author=PeterDelta
-description=SDTV 480p mode at start.
-patch=1,EE,00587054,word,24110000
-patch=1,EE,00587058,word,24120050
-patch=1,EE,00587064,word,24130001
+description=NTSC mode at start.
+patch=1,EE,0041900C,word,0000102D
