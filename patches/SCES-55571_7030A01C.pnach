@@ -21,10 +21,7 @@ description=Might need EE Overclock at 300%.
 patch=1,EE,E0010001,extended,00700EA0 //to avoid a bug if there is no profile
 patch=1,EE,203194C0,extended,00000000 //1440FFF5
 
-[480p Mode]
-gsinterlacemode=1
+[NTSC Mode]
 author=PeterDelta
-description=SDTV 480p mode at start.
-patch=1,EE,00412E2C,word,3C050000
-patch=1,EE,00412E34,word,3C060050
-patch=1,EE,00412E3C,word,3C070001
+description=NTSC mode at start.
+patch=1,EE,0058A9B4,extended,00000022

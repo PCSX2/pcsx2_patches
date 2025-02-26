@@ -1,4 +1,4 @@
-gametitle=Mercenaries - Playground of Destruction (PAL-E) (SLES-52588)
+gametitle=Mercenaries - Playground of Destruction (PAL-E) (SLES-52588) 85931FDF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -26,4 +26,7 @@ patch=1,EE,004f2f3c,word,46030002 // 00000000 hud-identification fix
 patch=1,EE,004f2f40,word,461e0002 // 00000000 hud-identification fix
 patch=1,EE,004f2f44,word,080ce663 // 00000000 hud-identification fix
 
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,003AD6B8,word,2C420001

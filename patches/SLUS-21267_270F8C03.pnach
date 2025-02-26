@@ -1,6 +1,18 @@
 gametitle=Need for Speed - Most Wanted [NTSC-U] [SLUS-21267]
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,00AAFDD4,word,00000001
+patch=1,EE,0054BA38,word,3F400000
+
 [Remove Brown Filter]
 author=fobes
 description=Disables the brownish yellow post processing filter
 patch=1,EE,00550D58,extended,20000001
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect
+patch=1,EE,0055014C,word,00000000
