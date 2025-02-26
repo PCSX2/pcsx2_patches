@@ -1,5 +1,5 @@
-gametitle=Star Wars - Battlefront 2 (NTSC-U) SLUS-21240 02F4B541 secondary SWBFRNT2.ELF=24954053
-//Corresponds to the main crc to activate the secondary crc 24954053 called SWBFRNT2.ELF
+gametitle=Star Wars - Battlefront II NTSC-U SLUS-21240 02F4B541 secondary SWBFRNT2.ELF=249540F3
+//Corresponds to the main crc to activate the secondary crc 249540F3 called SWBFRNT2.ELF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -7,4 +7,8 @@ author=nemesis2000 and Arapapa
 
 [60 FPS]
 author=Gabominated
-description=Unlocked at 60 FPS. Might need enable EE Overlooked to be stable.
+description=Might need EE Overclock (130%).
+
+[Disable Blur/Bloom]
+author=Gabominated
+description=Disable the post-processing blur/bloom effect.

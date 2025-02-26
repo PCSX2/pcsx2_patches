@@ -8,4 +8,8 @@ description=Renders the game in 16:9 aspect ratio
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
+description=Might need EE Overclock (130%).
+
+[Disable Blur/Bloom]
+author=Gabominated
+description=Disable the post-processing blur/bloom effect.
