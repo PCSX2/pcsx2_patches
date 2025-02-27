@@ -11,7 +11,7 @@ patch=1,EE,001146d8,word,46071082
 patch=1,EE,001146dc,word,c78780dc
 
 // 16:9 Render fix
-patch=1,EE,001141a4,word,240302ab  
+patch=1,EE,001141a4,word,240302ab
 patch=1,EE,00554790,word,44fa0000
 
 [Widescreen 16:10]
@@ -21,7 +21,7 @@ patch=1,EE,001146c8,word,3c013f55
 patch=1,EE,001146cc,word,44813800
 patch=1,EE,001146d8,word,46071082
 patch=1,EE,001146dc,word,c78780dc
-patch=1,EE,001141a4,word,240302ab  
+patch=1,EE,001141a4,word,240302ab
 patch=1,EE,00554790,word,44e10000
 
 [Widescreen 15:10]
@@ -31,7 +31,7 @@ patch=1,EE,001146c8,word,3c013f64
 patch=1,EE,001146cc,word,44813800
 patch=1,EE,001146d8,word,46071082
 patch=1,EE,001146dc,word,c78780dc
-patch=1,EE,001141a4,word,240302ab  
+patch=1,EE,001141a4,word,240302ab
 patch=1,EE,00554790,word,44d2f000
 
 [Widescreen 20:9]

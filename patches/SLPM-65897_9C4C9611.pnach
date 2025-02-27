@@ -1,0 +1,32 @@
+gametitle=Racing Battle C1 Grand Prix (J)(SLPM-65897) (English Patched)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=wxvu & igorciz777
+
+//Rendering: General
+patch=0,EE,20167318,extended,3C043F10 //3C043F40
+
+//Rendering: Reflections
+patch=0,EE,2016783C,extended,3C033F10 //3C033F40
+
+//Rendering: Rear View Mirror
+patch=0,EE,20167A58,extended,3C043F10 //3C043F40
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=wxvu & igorciz777
+
+//Rendering: General
+patch=0,EE,20167318,extended,3C043F20 //3C043F40
+
+//Rendering: Reflections
+patch=0,EE,2016783C,extended,3C033F20 //3C033F40
+
+//Rendering: Rear View Mirror
+patch=0,EE,20167A58,extended,3C043F20 //3C043F40
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Tokman5
+patch=1,EE,2014AC58,extended,24022000

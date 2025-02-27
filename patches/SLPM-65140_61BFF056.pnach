@@ -1,0 +1,15 @@
+gametitle=JoJo no Kimyou na Bouken Ougon no Kaze (NTSC-J) (SLPM_65140) [English Patched, v3.004]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=sergx12
+description=Widescreen Hack
+patch=1,EE,00124f64,word,3c023f22
+patch=1,EE,00361ae8,word,43f00000
+patch=1,EE,003d23c0,word,43700000
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Penguino118
+patch=1,EE,003DD724,byte,00
+patch=1,EE,003DD76C,byte,00

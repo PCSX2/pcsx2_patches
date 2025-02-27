@@ -36,5 +36,5 @@ patch=1,EE,0025739C,word,3C0143E0 //46800B20 vert val
 patch=1,EE,002573A8,word,44816800 //46800360
 
 //reflections fix by sergx12
-patch=1,EE,00265620,word,3c0241d5 //3c0241a0 
+patch=1,EE,00265620,word,3c0241d5 //3c0241a0
 patch=1,EE,0026562C,word,3c024135 //3c024172

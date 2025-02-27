@@ -10,5 +10,5 @@ patch=1,EE,003E3C24,word,3421388E //3421AAAB
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock 
+description=Might need EE Overclock
 patch=1,EE,005AE718,extended,01

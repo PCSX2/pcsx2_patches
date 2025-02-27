@@ -1,10 +1,11 @@
-gametitle=Spider-Man: Friend or Foe (PAL-M5) (SLES_549.01) 678BE0A5
+gametitle=Spider-Man - Friend or Foe (PAL-M5) SLES-54901 678BE0A5
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas
-description=Renders the game in 16:9 aspect ratio
-patch=1,EE,203EC6C8,extended,3FE38E38 //3FAAAAAB (Increases hor. axis)
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,003F0E54,word,00000100
+patch=1,EE,00407870,word,00000001
 
 [Remove Blackbars]
 author=PeterDelta
@@ -13,11 +14,15 @@ patch=1,EE,003F0604,extended,00000003
 
 [50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 180%.
+description=Might need EE Overclock (180%).
 patch=1,EE,0037DF20,word,00000001 //00000002
 
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=1,EE,0021DD64,word,24030001
+
 [480p Mode]
-gsinterlacemode=1
 author=PeterDelta
 description=SDTV 480p mode at start.
 patch=1,EE,0032F2D4,word,24110000

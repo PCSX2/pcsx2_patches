@@ -1,4 +1,4 @@
-gametitle=X-Men Legends (PAL-E) (SLES-52624)
+gametitle=X-Men Legends (PAL-E) (SLES-52624) 69094734
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -15,4 +15,8 @@ patch=1,EE,207214A0,word,3FE00000 // Gameplay screen fix 16:9
 //patch=1,EE,30231920,word,3F333333
 //patch=1,EE,206A81EC,word,3F7AE148 //character skill highlight beta fix - causes ring health to bug when applied
 
-
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,002DB0C4,extended,24060050

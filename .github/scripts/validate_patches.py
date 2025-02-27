@@ -12,16 +12,22 @@ def remove_comments(line):
 def clean_line(line):
     return remove_comments(line).strip()
 
+def remove_newlines(line):
+    return line.replace('\r', '').replace('\n', '')
+
 def log_error(file_path, line_number, message, line, shouldCleanLine = False):
-    line = line.replace("\n", "")
+    line = remove_newlines(line)
     line = (clean_line(line) if shouldCleanLine else line)
     print(f'Error in {file_path} (line {line_number}): {message}\n\t"{line}"')
 
 def is_file_valid(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         for line_number, line in enumerate(file, 1):
+            if remove_newlines(line) != line.strip():
+                log_error(file_path, line_number, "Excess whitespace.", line)
+                return False
             cleaned_line = clean_line(line)
-            if cleaned_line == "":
+            if not cleaned_line:
                 continue
             elif cleaned_line.startswith("["):
                 if not cleaned_line.endswith("]"):
@@ -66,7 +72,7 @@ def is_file_valid(file_path):
             else:
                 log_error(file_path, line_number, "Unknown line format.", line, True)
                 return False
-            
+
     return True
 
 def main():

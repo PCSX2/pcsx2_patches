@@ -1,22 +1,75 @@
-gametitle=Grand Theft Auto: Vice City (v2.03) (SLES_510.61)
+gametitle=Grand Theft Auto - Vice City (PAL-M) (v2.03) SLES-51061 CFCB0D20
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Snake356
-description=Select widescreen in game otherwise image is zoomed out 4:3
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,004B17B8,extended,00000001
+patch=1,EE,0024343C,extended,3C0242CC
+patch=1,EE,00252BA0,extended,3C0242AC
+patch=1,EE,00254B94,extended,3C0242AC
+patch=1,EE,00255230,extended,3C0242AC
+patch=1,EE,0032C1A0,extended,3C044040
+patch=1,EE,0032C1F4,extended,3C0240D0
+patch=1,EE,202418CC,extended,3C023FC0
+patch=1,EE,003A5814,extended,3C013F80 //scenes zoom
+patch=1,EE,E0010001,extended,004B23A0
+patch=1,EE,003A5814,extended,3C013F40
+patch=1,EE,002918A4,word,3C044270
+patch=1,EE,00291478,word,3C024270
+patch=1,EE,002915A8,word,3C024270
+patch=1,EE,002940A0,word,3C024270
+patch=1,EE,002942DC,word,3C024270
+patch=1,EE,0029434C,word,3C024270
+patch=1,EE,00294AD4,word,3C024270
+patch=1,EE,00294B44,word,3C024270
+patch=1,EE,002957F0,word,3C034270
+patch=1,EE,00295E88,word,3C034270
+patch=1,EE,002D48D4,word,3C03424C
+patch=1,EE,002D4984,word,3C03424C
+patch=1,EE,002D48E4,word,3C0242F6
+patch=1,EE,002D4994,word,3C0242F6
+patch=1,EE,002927F0,word,3C023F40
+patch=1,EE,002D2B90,word,3C034409
+patch=1,EE,002D2BA0,word,3C024415
+patch=1,EE,002D2BA4,word,34428000
+patch=1,EE,002D2B30,word,3C0341C7
+patch=1,EE,002D3060,word,3C0343F9
+patch=1,EE,002D3188,word,3C0343F2
+patch=1,EE,002D320C,word,3C0343DE
+patch=1,EE,002D3438,word,3C03418B
+patch=1,EE,002D2878,word,3C034406
+patch=1,EE,002D2FD4,word,3C034406
+patch=1,EE,002D32C8,word,3C034406
+patch=1,EE,002D40DC,word,3C034406
+patch=1,EE,002CE650,word,3C013F40
+patch=1,EE,002CE654,word,44810000
+patch=1,EE,002CE658,word,46006302
+patch=1,EE,002CE65C,word,3C010069
+patch=1,EE,002CE660,word,E42CEAF4
+patch=1,EE,002CE664,word,3C010069
+patch=1,EE,002CE668,word,03E00008
+patch=1,EE,002CE66C,word,E42DEAF8
 
-//widescreen fix
-patch=1,EE,001323AC,word,3C013F9D
-patch=1,EE,001323B0,word,44810000
-patch=1,EE,001323B4,word,46006302
-patch=1,EE,001323B8,word,03E00008
-patch=1,EE,001323BC,word,E78C87F8
-
-patch=1,EE,0024335C,word,0C04C8EB
-patch=1,EE,002706DC,word,0C04C8EE
-patch=1,EE,00270CB4,word,0C04C8EE
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,00245C0C,word,3C02F380
+patch=1,EE,00245C7C,word,3C02F380
+patch=1,EE,002738C0,word,3C025380
 
 [50 FPS]
 author=Snake356
 description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,20272AD4,extended,28420001
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,E0040001,extended,0043DDC0
+patch=1,EE,201129E0,extended,34050050
+patch=1,EE,201129E4,extended,24030002
+patch=1,EE,201129E8,extended,0000000C
+patch=1,EE,201129EC,extended,03E00008
+patch=1,EE,001123C4,extended,00000000
