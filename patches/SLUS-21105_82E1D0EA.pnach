@@ -5,7 +5,7 @@ gsaspectratio=16:9
 author=arapapa
 
 // X-FoV (Single Play)
-// 0000803fabaaaa3f 
+// 0000803f abaaaa3f
 patch=1,EE,E0013f80,extended,00E8EBFA
 patch=1,EE,20E8EBF8,extended,3f400000 // 3f800000
 
