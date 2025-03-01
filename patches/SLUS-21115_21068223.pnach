@@ -1,8 +1,9 @@
-gametitle=Okami (SLUS-21115)
+gametitle=Okami NTSC-U SLUS-21115 21068223
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
+description=Widescreen Hack
 patch=1,EE,0015c33c,word,3c0143a8
 patch=1,EE,0033ec38,word,3c013f9f
 patch=1,EE,0033ec3c,word,4481a800
@@ -12,4 +13,10 @@ patch=1,EE,0015c3ac,word,00000000
 patch=1,EE,0015c43c,word,3c014500
 patch=1,EE,0033ec20,word,3c014500
 
-
+[Disable post-processing effect]
+author=Gabominated
+description=Disable all post-processing effect.
+patch=1,EE,00190A84,word,00000000
+patch=1,EE,00190A4C,word,00000000
+patch=1,EE,00190B5C,word,00000000
+patch=1,EE,001916FC,word,00000000
