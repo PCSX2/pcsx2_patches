@@ -1,4 +1,5 @@
-gametitle=Tom Clancy's Splinter Cell - Chaos Theory (PAL-M) SLES-53287 4C4D7873 (DDAEB7A6 SC3_OFF.ELF)
+gametitle=Tom Clancy's Splinter Cell 3: Chaos Theory * PAL-M3 * SLES-53287 * DDAEB7A6
+// CRC shifts from 4C4D7873 to DDAEB7A6 (SC3_OFF.ELF)
 
 [480p Mode]
 gsinterlacemode=1
@@ -7,3 +8,8 @@ description=SDTV 480p mode at start.
 patch=1,EE,00110014,word,24110000
 patch=1,EE,00110018,word,24120050
 patch=1,EE,00110024,word,24130001
+
+// ==========
+// To unlock all single-player levels, navigate to the 'Solo Menu' and hold down L1, L2, R1, R2.
+// While holding these, press Square (x5) then Circle (x5).
+// ==========

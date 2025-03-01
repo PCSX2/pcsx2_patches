@@ -1,4 +1,4 @@
-gametitle=Tom Clancy's Splinter Cell (SLUS_20652)
+gametitle=Tom Clancy's Splinter Cell * NTSC-U * SLUS-20652 * A1B095EC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -37,7 +37,7 @@ patch=1,EE,001cf588,word,8fa6005c
 patch=1,EE,001cf58c,word,3c023fd4
 patch=1,EE,001cf590,word,34437ae1
 patch=1,EE,001cf594,word,24050004
-patch=1,EE,001cf598,word,3c043f40 //hor val
+patch=1,EE,001cf598,word,3c043f40 // X-FoV
 patch=1,EE,001cf59c,word,e4c00070
 patch=1,EE,001cf5a0,word,8fa2005c
 patch=1,EE,001cf5a4,word,ac4000c0
@@ -81,4 +81,14 @@ patch=1,EE,001cf638,word,8fa2005c
 patch=1,EE,001cf63c,word,3c043f80
 patch=1,EE,001cf640,word,ac44008c
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Combine with 'Widescreen 16:9'
+patch=1,EE,001cf598,word,3c043f55
 
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Combine with 'Widescreen 16:9'
+patch=1,EE,001cf598,word,3c043f64
