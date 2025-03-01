@@ -1,19 +1,45 @@
-gametitle=Tom Clancy's Ghost Recon (SLUS-20613)
+gametitle=Tom Clancy's Ghost Recon * NTSC-U * SLUS-20613 * 3E571E95
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
+description=Solo/Coop mode widescreen hack.
 
-//sp
+// Single Player mode
 patch=1,EE,003a7ef4,word,3c023f40
 patch=1,EE,003a7f14,word,3c0243d6
 
-//mp
+// Multi Player mode
 patch=1,EE,003a8014,word,3c023f40
 patch=1,EE,003a8034,word,3c0243d6
 
-//menu
+// Menu
 patch=1,EE,0053b144,word,3c043f40
 patch=1,EE,0053b150,word,3c0243d6
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Solo/Coop mode widescreen hack.
+patch=1,EE,003a7ef4,word,3c023f55
+patch=1,EE,003a7f14,word,3c0243c0
+patch=1,EE,003a8014,word,3c023f55
+patch=1,EE,003a8034,word,3c0243c0
+patch=1,EE,0053b144,word,3c043f55
+patch=1,EE,0053b150,word,3c0243c0
 
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Solo/Coop mode widescreen hack.
+patch=1,EE,003a7ef4,word,3c023f64
+patch=1,EE,003a7f14,word,3c0243b4
+patch=1,EE,003a8014,word,3c023f64
+patch=1,EE,003a8034,word,3c0243b4
+patch=1,EE,0053b144,word,3c043f64
+patch=1,EE,0053b150,word,3c0243b4
+
+[60 FPS]
+author=asasega
+description=Might need EE overclocking to be stable.
+patch=1,EE,20271F14,word,1000000E
