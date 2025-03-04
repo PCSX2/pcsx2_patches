@@ -1,0 +1,17 @@
+gametitle=Need for Speed - Undercover (PAL-R) SLES-55353 A2BFF202
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,00653630,word,3F400000
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,003D1824,word,0000102D
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect
+patch=1,EE,0065CCFC,word,00000000

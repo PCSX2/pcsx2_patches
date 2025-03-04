@@ -1,4 +1,4 @@
-gametitle=Midnight Club 3 - DUB Edition (PAL-M) (SLES-52942) EBE1972D
+gametitle=Midnight Club 3 - DUB Edition (PAL-M) SLES-52942 EBE1972D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -8,5 +8,12 @@ patch=1,EE,00617D30,word,3FC71C66 //3F955554
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 180%.
-patch=1,EE,00617D34,word,00000001 //00000002
+description=Might need EE Overclock (180%).
+patch=1,EE,001A7A74,word,24020001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,00617EC4,word,00000000
+patch=1,EE,00617DA8,word,000001C0
+patch=1,EE,001BE4B8,word,14A0002F

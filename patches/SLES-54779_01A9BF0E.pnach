@@ -1,16 +1,23 @@
-gametitle=Harry Potter and The Order of the Phoenix (E)(SLES-54779)
+gametitle=Harry Potter and the Order of the Phoenix (PAL-M) SLES-54779 01A9BF0E
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-description=Widescreen Hack
-//Widescreen hack 16:9
+description=Widescreen fix
+patch=1,EE,004C42C8,word,24020002 //30420003 Force turn on Internal Widescreen
+patch=1,EE,00354528,word,3C013F20 //3C013F00 Zoom fix
 
-//Force turn on Internal Widescreen
-patch=1,EE,004c42c8,word,24020002 //30420003
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0065AA04,word,00000001
 
-//Zoom fix
-//003f013c 00108144 02000146 (2nd)
-patch=1,EE,00354528,word,3c013f20 //3c013f00
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,005990EC,word,00000000
 
-
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect
+patch=1,EE,00324908,word,00000000
