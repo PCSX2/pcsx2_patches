@@ -1,12 +1,12 @@
 gametitle=Family Guy (SLUS-20718)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Brandondorf9999
-description=Widescreen update
-patch=1,EE,0011B3A8,word,00000000 //10400009
-patch=1,EE,0011B3BC,word,3C013F80 //3C013F59
-patch=1,EE,0011B3C0,word,34210000 //3421999A
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Brandondorf9999
+//description=Widescreen update. Breaks eye textures on models.
+//patch=1,EE,0011B3A8,word,00000000 //10400009
+//patch=1,EE,0011B3BC,word,3C013F80 //3C013F59
+//patch=1,EE,0011B3C0,word,34210000 //3421999A
 
 [60 FPS]
 author=asasega
