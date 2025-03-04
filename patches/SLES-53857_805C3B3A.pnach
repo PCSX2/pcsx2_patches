@@ -1,6 +1,32 @@
-gametitle=Need for Speed - Most Wanted [Black Edition] [PAL-M] [SLES-53857]
+gametitle=Need for Speed - Most Wanted [Black Edition] [PAL-M] [SLES-53857] 805C3B3A
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,00AAF954,word,00000001
+patch=1,EE,0054BD38,word,3F400000
+
+[Languages]
+author=Felixthecat1970
+description=Set language in BIOS: Italian, Spanish, Dutch.
+patch=0,EE,003862E4,extended,0C0C4A80
+patch=0,EE,202797D4,extended,0C14CF2C
+patch=0,EE,202797F0,extended,0C14CF2C
+patch=0,EE,20533CB0,extended,3C030057
+patch=0,EE,20533CB4,extended,8C62EE08
+patch=0,EE,20533CB8,extended,2C5B0003
+patch=0,EE,20533CBC,extended,13600002
+patch=0,EE,20533CC0,extended,00000000
+patch=0,EE,20533CC4,extended,0000102D
+patch=0,EE,20533CC8,extended,03E00008
 
 [Remove Brown Filter]
 author=fobes
 description=Disables the brownish yellow post processing filter
 patch=1,EE,00551058,extended,20000001
+
+[NTSC Mode]
+author=Felixthecat1970
+description=NTSC mode at start.
+patch=0,EE,20322DB4,extended,0000102D

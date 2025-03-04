@@ -1,0 +1,12 @@
+gametitle=Harry Potter and the Half-Blood Prince (PAL-M) SLES-55249 CA5F8BC1
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,003C8F60,word,3C013F17
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,005616B4,word,00000000
