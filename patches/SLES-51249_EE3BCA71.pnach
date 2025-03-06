@@ -3,7 +3,7 @@ gametitle=Castleween PAL-M SLES-51249 EE3BCA71
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-descriptionWidescreen hack 16:9
+description=Widescreen hack 16:9
 patch=1,EE,002b9c78,word,3c023f40 //3c023f80 //Y-fov
 patch=1,EE,002794b8,word,3c033f40 //3c033f80 //Zoom
 
