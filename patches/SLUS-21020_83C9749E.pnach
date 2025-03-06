@@ -13,5 +13,5 @@ patch=1,EE,00288910,word,4600c602 // 00000000
 author=Gabominated
 description=Might need EE Overclock (180%).
 patch=1,EE,20101B84,extended,28420001
-patch=1,EE,E0010019,extended,00431544 
+patch=1,EE,E0010019,extended,00431544
 patch=1,EE,20101B84,extended,28420002
