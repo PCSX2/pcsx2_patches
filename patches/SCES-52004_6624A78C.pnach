@@ -14,3 +14,8 @@ patch=1,EE,205DB004,extended,3F000000
 patch=1,EE,E0020000,extended,0055A7C4
 patch=1,EE,00152014,extended,24420001
 patch=1,EE,205DB004,extended,3F800000
+
+[NTSC Mode]
+author=Gabominated
+description=Enable native NTSC Mode at start instead PAL Mode..
+patch=1,EE,001BD6B4,word,38420001

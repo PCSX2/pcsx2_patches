@@ -1,0 +1,15 @@
+gametitle=Scarface - The World is Yours PAL-R SLES-54184 20F4FDF8
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,20DAFABC,extended,00000000 //00000001
+
+[480p Mode]
+author=Gabominated
+description=SDTV 480p mode at start.
+patch=1,EE,00DAFA1C,word,00000000 //00000001
+patch=1,EE,00DAFA20,word,00000001 //00000000
+patch=1,EE,00DAFA34,word,00000002 //00000003
+patch=1,EE,00DAFA38,word,00000001 //00000000
+patch=1,EE,00DAFA40,word,000001E0 //00000200

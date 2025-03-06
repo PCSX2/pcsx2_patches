@@ -1,15 +1,15 @@
-gametitle=KILL.SWITCH (E)(SCES-52124)
+gametitle=Kill.switch PAL-M SCES-52124 91A65EAE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
+Description=Widescreen hack
+patch=1,EE,2058A454,byte,00000001 //Force turn on Widescreen
+patch=1,EE,0024d854,word,3c013f25 //3c013f00 //Zoom fix
 
-//Widescreen hack 16:9
-
-//Force turn on Widescreen
-patch=1,EE,2058A454,byte,00000001
-
-//Zoom fix
-patch=1,EE,0024d854,word,3c013f25 //3c013f00
-
-
+[480p Mode]
+author=Gabominated
+description=SDTV 480p mode at start. FMVs remain in PAL.
+patch=1,EE,003513A4,word,10620005 //14620009
+patch=1,EE,0029e8d4,word,24050280 //24050200
+patch=1,EE,0029e8d8,word,240601C0 //24060200

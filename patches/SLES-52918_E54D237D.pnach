@@ -15,10 +15,7 @@ patch=1,EE,002f4c48,word,08086e78 // 00000000
 patch=1,EE,0020b274,word,3c023f40 // 3c023f80 renderfix left
 patch=1,EE,0020b290,word,3c02bf40 // 3c02bf80 renderfix right
 
-[480p Mode]
-gsinterlacemode=1
-author=PeterDelta
-description=SDTV 480p mode at start.
-patch=1,EE,0011CDEC,word,24110000
-patch=1,EE,0011CDF0,word,24120050
-patch=1,EE,0011CDFC,word,24130001
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=1,EE,0021D654,word,14400004 //10400004

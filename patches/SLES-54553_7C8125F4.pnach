@@ -1,15 +1,13 @@
-gametitle=DreamWorks Shrek Smash n' Crash Racing (E)(SLES-54553)
+gametitle=DreamWorks Shrek - Smash n' Crash Racing PAL-M SLES-54553 7C8125F4
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
 description=Widescreen Hack
 //Widescreen hack 16:9
-
 //X-Fov
 //02080046 5000a0e7 040040c4
 patch=1,EE,002789c0,word,08069cb4
-
 patch=1,EE,001a72d0,word,46000802
 patch=1,EE,001a72d4,word,3c013faa
 patch=1,EE,001a72d8,word,3421aaab
@@ -17,4 +15,7 @@ patch=1,EE,001a72dc,word,4481f000
 patch=1,EE,001a72e0,word,461e0002
 patch=1,EE,001a72e4,word,0809e271
 
-
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start. FMVs remain in PAL.
+patch=1,EE,0016E1F4,word,240201c0 //24030200

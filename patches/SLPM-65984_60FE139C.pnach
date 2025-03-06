@@ -1,9 +1,9 @@
-gametitle=Grand Theft Auto - San Andreas (SLPM-65984)
+gametitle=Grand Theft Auto - San Andreas NTSC-J SLPM-65984 60FE139C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen fix by BloodRaynare
-
+author=BloodRaynare
+description=Widescreen fix
 patch=1,EE,001130bc,word,3c013f9d
 patch=1,EE,001130c0,word,44810000
 patch=1,EE,001130c4,word,46006302
@@ -14,6 +14,10 @@ patch=1,EE,00242c94,word,0c044c32
 
 [Remove Radiosity Filter]
 description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
-
 //Remove Radiosity Filter
 patch=1,EE,2051B5E8,extended,00000000
+
+[60 FPS]
+author=Gabominated
+description=Might need EE overclock (130%).
+patch=1,EE,0034EA80,word,24020002 //24020001
