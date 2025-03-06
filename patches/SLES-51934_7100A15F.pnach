@@ -55,6 +55,6 @@ patch=1,EE,002b45b0,word,240201c0 //24020200
 
 [480p Mode]
 author=Gabominated
-description=SDTV 480p mode at start. FMVs remain in PAL. 
+description=SDTV 480p mode at start. FMVs remain in PAL.
 patch=1,EE,003B0A68,word,10620005 //14620005
 patch=1,EE,002b45b0,word,240201c0 //24020200
