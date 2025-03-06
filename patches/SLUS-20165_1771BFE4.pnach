@@ -13,6 +13,6 @@ patch=1,EE,0023E920,word,00000001 //00000000 debug ws mode
 
 [Remove black bars]
 author=pelvicthrustman
-description=Remove black bars in cutscenes. 
+description=Remove black bars in cutscenes.
 patch=1,EE,0013db5c,word,3C01BF80 //3C01BF40 
 patch=1,EE,0013db64,word,3c013f80 //3C013F40
