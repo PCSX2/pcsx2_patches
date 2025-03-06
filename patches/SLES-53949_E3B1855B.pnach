@@ -1,0 +1,6 @@
+gametitle=Magna Carta - Tears of Blood PAL-I SLES-53949 E3B1855B
+
+[50/60 FPS]
+author=Cloudn
+description=Port from NTSC-U version. Might need EE Overclock.
+patch=1,EE,001C6534,word,28410001 //28410002

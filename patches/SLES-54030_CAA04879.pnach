@@ -1,0 +1,27 @@
+gametitle=Black PAL-E SLES-54030 CAA04879
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Widescreen ported from NTSC-U version.
+patch=1,EE,003BE83C,word,00000001 //00000000
+patch=1,EE,004BC150,word,00000001 //00000000
+patch=1,EE,004BD18C,word,00000101 //00000000
+patch=1,EE,004CA554,word,3FE38E39 //3FAAAAAB
+patch=1,EE,004CA5F0,word,3FAAAAAB //3F99999A
+patch=1,EE,004CA5F4,word,3FE38E39 //3FAAAAAB
+patch=1,EE,004CA694,word,3FE38E39 //3FAAAAAB
+patch=1,EE,005BC390,word,3F400000 //3F800000
+
+[50/60 FPS]
+author=Gabominated
+description=Native 50/60 FPS. Might need EE Overclock (180%).
+patch=1,EE,001250BC,word,24040001 //24040002
+patch=1,EE,001c5b40,word,24040001 //24040002
+patch=1,EE,00102638,word,24040032 //24040019
+patch=1,EE,001250a8,word,2410003c //2410001e
+
+[Video Mode]
+author=Gabominated
+description=Always display standard-480p video selector.
+patch=1,EE,003BE7A4,word,00000001

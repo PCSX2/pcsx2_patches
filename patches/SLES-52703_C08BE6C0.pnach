@@ -1,0 +1,18 @@
+gametitle=Psi-Ops - The Mindgate Conspiracy PAL-G SLES-52703 C08BE6C0
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Widescreen hack ported from NTSC-U version.
+patch=1,EE,0047000C,word,241102AA
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,0017AC7C,word,3C043F20 //3C043FA0
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Gabominated
+description=Attempts to disable interlaced offset rendering..
+patch=1,EE,005684D4,word,3C051000

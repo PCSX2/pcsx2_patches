@@ -1,8 +1,22 @@
 gametitle=Smash Cars NTSC-U SLUS-20620 1E4F42FF
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=sergx12
+description=Widescreen Hack
+patch=1,EE,00123a5c,word,3c023cbe //3c023c8e fov singleplayer
+patch=1,EE,00123a64,word,3442a2d8 //3442fa35
+patch=1,EE,00123aa4,word,3c023cbe //
+patch=1,EE,00123aac,word,3442a2d8 //
+patch=1,EE,00123c3c,word,3c023cbe // fov multiplayer
+patch=1,EE,00123c44,word,3442a2d8 //
+patch=1,EE,00123c98,word,3c023cbe //
+patch=1,EE,00123ca0,word,3442a2d8 //
+patch=1,EE,001b06bc,word,3c033fab //3c033f80 vert fov
+
 [60 FPS]
 author=Gabominated
-description=Might need EE Overclock.
-patch=1,EE,201B0E7C,extended,2C410002 //2C410002
+description=Might need EE Overclock (130%).
+patch=1,EE,201B0E7C,extended,2C410002
 patch=1,EE,E0010001,extended,00394C30
 patch=1,EE,101B0E7C,extended,2C410001

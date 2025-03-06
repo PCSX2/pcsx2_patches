@@ -1,10 +1,12 @@
-gametitle=The Lord of the Rings - The Return of the King (PAL-M5) (SLES-52017)
+gametitle=Lord of the Ring, The - The Return of the King PAL-M SLES-52017 9771C478
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0014b13c,word,3c023f40 //3c023f80 hor fov
 
-// 16:9
-patch=1,EE,0014b13c,word,3c023f40 // 3c023f80 hor fov
-
-
+[50 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0014B334,word,3C030000 //3C033F80

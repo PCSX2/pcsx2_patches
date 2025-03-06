@@ -1,5 +1,12 @@
 gametitle=Bionicle Heroes NTSC-U SLUS-21428 EB6C8519
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Enable native widescreen.
+patch=1,EE,00388D04,word,3C013F10 //3C013F00 zoom fix
+patch=1,EE,0065F798,word,00000001 //00000000
+
 [60 FPS]
 author=Gabominated
 description=Might need EE Overclock.

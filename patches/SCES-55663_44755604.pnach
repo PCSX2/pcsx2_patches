@@ -1,0 +1,6 @@
+gametitle=Street Cricket Champions 2 PAL-IN SCES-55663 44755604
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,00399B64,word,2A0D0001 //2A0D0002
