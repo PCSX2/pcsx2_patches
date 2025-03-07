@@ -2,7 +2,7 @@ gametitle=Battlefield 2 - Modern Combat NTSC-U SLUS-21026 AE1F3139
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Nemesis
+author=nemesis2000
 description=Widescreen hack
 patch=1,EE,0022d4b0,word,3c013fab
 patch=1,EE,0022d8e8,word,3c013fab
