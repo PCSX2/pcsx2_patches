@@ -4,17 +4,17 @@ gametitle=Grand Theft Auto: San Andreas (SLUS-20946GH) 2C6BE434 / Ver 3.00
 gsaspectratio=16:9
 author=PeterDelta, DanielSantos, ThirteenAG, kesterstudios
 description=GTA San Andreas Modern Widescreen Fix for 3.00/GH
-
-patch=1,EE,207004EC,extended,01000101 //Widescreen fix by PeterDelta
-patch=1,EE,0021E040,extended,3C0242CC
-patch=1,EE,0020A4F8,extended,3C0242AC
-patch=1,EE,002081DC,extended,3C0342AC
-patch=1,EE,002ECAF0,extended,3C044040
-patch=1,EE,002ECB40,extended,3C0440D0
+patch=1,EE,007004EF,extended,01 //Widescreen fix by PeterDelta
+patch=1,EE,0021E040,extended,A2
+patch=1,EE,0020A4F8,extended,AC
+patch=1,EE,002081DC,extended,AC
+patch=1,EE,002ECAF0,extended,40
+patch=1,EE,002ECB40,extended,D0
 patch=1,EE,0033DB54,extended,3C013F80 //zoom in scenes
-patch=1,EE,E0010001,extended,0066C174
+patch=1,EE,E0020001,extended,0066C174
 patch=1,EE,0033DB54,extended,3C013F40
 patch=1,EE,2021EE14,extended,3C023FC0
+patch=1,EE,2021EE14,extended,3C024000
 //-------------------------------------------------HUD-------------------------------------------------//
 patch=0,EE,20664384,extended,3ecccccd //Wanted Width
 patch=0,EE,20664390,extended,3ef5c28f //Wanted Shadow Width
