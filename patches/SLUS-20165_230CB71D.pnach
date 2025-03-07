@@ -19,6 +19,7 @@ patch=1,EE,0013E14C,word,3c013f80 //3C013F40
 
 [No-Interlacing]
 gsinterlacemode=1
+author=Red-tv
 description=Origial patch by Red_Tv, offsets updated for v2.00
 patch=1,EE,201a9510,word,30420000
 patch=1,EE,00201574,word,00000000

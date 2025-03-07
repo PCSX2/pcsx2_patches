@@ -3,7 +3,7 @@ gametitle=Gauntlet - Seven Sorrows NTSC-U SLUS-21077 A8C4C0A9
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-description= Widescreen hack
+description=Widescreen hack
 patch=1,EE,00446200,word,24020002 //built in widescreen
 
 [480p Mode]

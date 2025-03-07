@@ -14,7 +14,7 @@ patch=1,EE,002a89b0,word,461e0843 // 00000000
 patch=1,EE,002a89b4,word,e6010068 // 00000000
 patch=1,EE,002a89b8,word,08076484 // 00000000
 
-[50/50 FPS]
+[50/60 FPS]
 author=Gabominated
 description=Might need EE Overclock.
 patch=1,EE,0012A9C8,word,2E420068 //2E420168
