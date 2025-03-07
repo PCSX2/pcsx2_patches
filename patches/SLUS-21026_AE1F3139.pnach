@@ -16,17 +16,8 @@ patch=1,EE,0027C1C8,word,24020002 // vert- widescreen turn on
 patch=1,EE,0022d490,word,3c013fab
 patch=1,EE,0022d8c8,word,3c013fab
 
+
 [60 FPS]
 author=asasega
-description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock.
 patch=1,EE,0022DD7C,word,24630001
-
-[Disable Blur]
-author=Gabominated
-description=Disable post-processing blur effect.
-patch=1,EE,00225010,word,0000B82B //00E0B82D
-
-[Disable Bloom]
-author=Gabominated
-description=Disable post-processing bloom effect.
-patch=1,EE,0022507C,word,AFA40140 //AFA50140
