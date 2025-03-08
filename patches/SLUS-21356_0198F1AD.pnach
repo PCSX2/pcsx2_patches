@@ -1,4 +1,4 @@
-gametitle=Tom Clancy's Splinter Cell 4: Double Agent * NTSC-U * SLUS-21356 * C0498D24
+gametitle=Tom Clancy's Splinter Cell 4: Double Agent * NTSC-U * SLUS-21356 * 0198F1AD
 // CRC shifts from C0498D24 to 0198F1AD (SC4_OFF.ELF) when selecting Single Player mode.
 
 [Widescreen 16:9]
