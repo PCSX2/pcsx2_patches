@@ -20,4 +20,8 @@ patch=1,EE,001292b8,word,240e02ab //240e0200
 //Removes blue shadows (PCSX2 hardware mode)
 //patch=1,EE,2112C014,word,00000000 //3f400000
 
-
+[60 FPS]
+author=Souzooka
+description=Runs game at 60 FPS
+patch=0,EE,20206BE0,extended,240E0001 // addiu t6,zero,0x1 // vblank divisor
+patch=0,EE,20369AC0,extended,3C88888A // minimum delta time // Changed from 1/30f to 1/60f
