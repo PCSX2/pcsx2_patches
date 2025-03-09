@@ -1,17 +1,30 @@
-gametitle=Nebula - Echo Night (J)(SLPS-25314)
+gametitle=Nebula - Echo Night NTSC-J SLPS-25314 B6AA81EE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-
-//Widescreen hack 16:9
-
+description=Widescreen hack 16:9
 //Force turn on Internal Widescreen
 //01 00 00 00 00 00 00 3F 01 01 00 00 18 EE 29 00
 patch=1,EE,202AD621,byte,00000001
-
 //703f033c 003f023c d7a36334
 //patch=1,EE,00143ed0,word,3c033fa0 //3c023f70 Y-Fov
 patch=1,EE,00143ed4,word,3c023f1f //3c023f00 Zoom
 
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,001401BC,word,14200014
 
+[Performance Fix]
+author=Gabominated
+description=Remove flashlight shadows to increase performance.
+patch=1,EE,001441f4,word,3c020000
+
+[Disable Flicker Filter]
+author=Gabominated
+description=Disable slightly blurry flicker filter.
+patch=1,EE,002835E8,word,00000000
+patch=1,EE,002835F0,word,00000000
+patch=1,EE,002835F8,word,00000000
+patch=1,EE,00283600,word,00000000

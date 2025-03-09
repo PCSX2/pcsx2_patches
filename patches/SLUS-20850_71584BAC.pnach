@@ -1,13 +1,16 @@
-gametitle=Blowout (SLUS-20850)
+gametitle=Blowout NTSC-U SLUS-20850 71584BAC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-
+description=Widescreen hack
 patch=1,EE,001D1A3C,word,00000000
 patch=1,EE,003BB878,word,00000001
 patch=1,EE,003B8C34,word,C0222222
 patch=1,EE,003B8C4C,word,40222222
 patch=1,EE,003B8C6C,word,40222222
 
-
+[60 FPS]
+author=asasega
+description=Might need EE overclock (130%).
+patch=1,EE,202B1578,extended,28630001 //28630002

@@ -1,8 +1,7 @@
-gametitle=TOCA Race Driver 3 (PAL-M) SLES-53087 EE0618ED
+gametitle=TOCA Race Driver 3 PAL-M SLES-53087 EE0618ED
 
-[480p Mode]
-gsinterlacemode=1
+[NTSC Mode]
 author=Gabominated
-description=SDTV 480p mode at start. Might need enable EE overclock to be stable
-patch=1,EE,204BA9A4,extended,3C888889 //3CA3D70A
-patch=1,EE,20465c10,extended,24120050
+description=NTSC Mode at start.
+patch=1,EE,003FA3AC,word,24040000 //24040001
+patch=1,EE,002563A8,word,14000008 //10000008

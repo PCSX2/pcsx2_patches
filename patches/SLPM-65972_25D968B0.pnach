@@ -1,14 +1,16 @@
-gametitle=Constantine (J)(SLPM-65972)
+gametitle=Constantine NTSC-J SLPM-65972 25D968B0
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-
+description=Widescreem hack
 //X-Fov - ELF hack
 //803f013c 00108144 0c00438e
 patch=1,EE,002b7b90,word,3c013f40 //3c013f80
-
 //Memory Hack
 //patch=1,EE,2081B7F4,extended,3F400000 // 3F800000
 
-
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,004BB330,word,00000000 //00000001
