@@ -1,0 +1,8 @@
+gametitle=Air Ranger 2 Plus - Rescue Helicopter (NTSC-J) (SLPM-65409)
+
+[Anti-Blur]
+author=Souzooka
+description=Removes depth-of-field effect (must be initially enabled outside mission)
+
+patch=0,EE,201DAD50,extended,00000000 // nop // removes call to gplEffeDepthSet when mission begins
+patch=0,EE,201DB014,extended,00000000 // nop // removes call to gplEffeDepthClr when mission ends
