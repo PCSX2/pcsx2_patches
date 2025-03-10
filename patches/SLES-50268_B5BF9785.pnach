@@ -1,0 +1,26 @@
+gametitle=Spy Hunter (PAL) (SLES-50268)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Souzooka
+description=16:9 3D
+
+// Replace a call to vkWindow::getPixelAspectRatio with our own constant value
+patch=0,EE,20285084,extended,3C013FF3   // lui at,0x3FF3 // 1.8984375f
+patch=0,EE,20285088,extended,44810000   // mtc1 at,f00
+
+[50 FPS]
+author=Souzooka
+description=Runs the game at 50 FPS; 180% EE Cycle Rate recommended
+
+// NOTE: Player car is slightly less grippy at 50fps
+
+// NOP out a wait loop
+patch=0,EE,202AC81C,extended,00000000   // nop
+
+// When on top of an enemy oil slick, the player's steering direction is multiplied by a constant value each frame
+// This is the multiplier and is modified to behave similarly to 30fps (this was the same original value on NTSC and PAL, so eh)
+patch=0,EE,20110C70,extended,3C013F9C   // lui at,0x3F9C
+patch=0,EE,20110C74,extended,3421CCCD   // ori at,at,0xCCCD
+patch=0,EE,20113FA4,extended,3C013F9C   // lui at,0x3F9C
+patch=0,EE,20113FA8,extended,3421CCCD   // ori at,at,0xCCCD
