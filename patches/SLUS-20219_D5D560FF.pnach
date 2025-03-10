@@ -10,3 +10,10 @@ author=kozarovv
 description=Sound fix for stuttering glitchy audio during FMV/cut-scenes
 patch=1,EE,00154954,extended,10000009
 //Fix code was posted at PCSX2 wiki. Additional info given was "Skip 1200000 cycles loop - fix audio."
+
+[No GunCon Flash]
+author=Souzooka
+description=Removes flash effect when using the GunCon2 Controller
+
+patch=0,EE,20120328,extended,03E00008 // jr ra  // Stub guncon2 flash function
+patch=0,EE,2012032C,extended,00000000 // nop
