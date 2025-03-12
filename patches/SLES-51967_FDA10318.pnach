@@ -140,3 +140,32 @@ patch=0,EE,204CBA80,extended,B2D0DA8B
 patch=0,EE,204CBA84,extended,B2D0DA8B
 patch=0,EE,204CBA88,extended,B2D0DA8B
 patch=0,EE,204CBA8C,extended,B2D0DA8B
+
+[SilentPatch]
+author=Silent
+description=Fixes the drift track record magazine unlock conditions, drift track high scores, and more.
+
+// Fix the drift score magazine taking a best lap score and dividing it by laps.
+// Also fix the high score in the menu displaying style points instead of the full score.
+patch=0,EE,2014A738,extended,46000840 // add.s f01,f01,f00
+patch=0,EE,201DB1D4,extended,00000000
+patch=0,EE,201DB1D8,extended,00000000
+patch=0,EE,201DB1E4,extended,E62000C4 // swc1 f00,0xC4(s1)
+
+patch=0,EE,201D78A4,extended,0C0F7F7C // jal 0x003DFDF0
+patch=0,EE,201D78A8,extended,C60C00C4 // lwc1 f12,0xC4(s0)
+
+patch=0,EE,203DFDF0,extended,46006324 // cvt.w.s f12,f12
+patch=0,EE,203DFDF4,extended,0809796C // j 0x0025E5B0
+patch=0,EE,203DFDF8,extended,44056000 // mfc1 a1,f12
+
+patch=0,EE,101D7584,extended,C4
+patch=0,EE,101D75D0,extended,C4
+patch=0,EE,101D743C,extended,C4
+patch=0,EE,201D75E0,extended,00000000 // Don't round up the score
+
+
+// Fix a buffer overflow in DriverInfo::DriverInfo because the OpponentDesc has 8 bytes for the driver name
+// and 'SAMANTHA' overflows it. Later PC and PS2 releases enlarged this buffer to 12 bytes, but we don't have this luxury.
+patch=0,EE,201482B4,extended,A0A00744 // sb zero,0x744(a1)
+patch=0,EE,201E32F4,extended,0C0520AD // jal 0x001482B4
