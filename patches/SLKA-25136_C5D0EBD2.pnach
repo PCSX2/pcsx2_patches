@@ -121,3 +121,26 @@ patch=0,EE,204D6C00,extended,B2D0DA8B
 patch=0,EE,204D6C04,extended,B2D0DA8B
 patch=0,EE,204D6C08,extended,B2D0DA8B
 patch=0,EE,204D6C0C,extended,B2D0DA8B
+
+[SilentPatch]
+author=Silent
+description=Fixes the drift track record magazine unlock conditions, drift track high scores, and more.
+
+// Fix the drift score magazine taking a best lap score and dividing it by laps.
+// Also fix the high score in the menu displaying style points instead of the full score.
+patch=0,EE,2014BC60,extended,46000840 // add.s f01,f01,f00
+patch=0,EE,201DCF6C,extended,00000000
+patch=0,EE,201DCF70,extended,00000000
+patch=0,EE,201DCF7C,extended,E62000C4 // swc1 f00,0xC4(s1)
+
+patch=0,EE,201D95EC,extended,0C0F9338 // jal 0x003E4CE0
+patch=0,EE,201D95F0,extended,C60C00C4 // lwc1 f12,0xC4(s0)
+
+patch=0,EE,203E4CE0,extended,46006324 // cvt.w.s f12,f12
+patch=0,EE,203E4CE4,extended,0809870C // j 0x00261C30
+patch=0,EE,203E4CE8,extended,44056000 // mfc1 a1,f12
+
+patch=0,EE,101D92CC,extended,C4
+patch=0,EE,101D9318,extended,C4
+patch=0,EE,101D9184,extended,C4
+patch=0,EE,201D9328,extended,00000000 // Don't round up the score
