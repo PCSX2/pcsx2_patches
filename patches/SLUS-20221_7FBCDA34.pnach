@@ -39,3 +39,9 @@ patch=1,EE,001aedc8,word,461b0842 // 46040842 crosshair/aiming fix unit vector
 [Remove Blackbars]
 description=Removes black bars in cutscenes
 patch=1,EE,001ffc38,word,3c030000 // 3c034420
+
+[No GunCon Flash]
+author=Souzooka
+description=Removes flash effect when using the GunCon2 Controller
+
+patch=0,EE,201EC410,extended,00000000 // nop // Removes call to DispGunFlash
