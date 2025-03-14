@@ -1,0 +1,24 @@
+gametitle=Air Ranger - Rescue Helicopter (PAL) (SLES-50953)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Souzooka
+description=16:9 3D (requires reset)
+
+// 3D Aspect correction
+patch=0,EE,2012E19C,extended,3C0243CF // lui v0,0x43CF
+patch=0,EE,2012E1A0,extended,34428C9D // ori v0,v0,0x8C9D
+patch=0,EE,2012E1B0,extended,3C023F1F // lui v0,0x3F1F
+
+// Direction arrow position
+patch=0,EE,2014EA0C,extended,3C03C417 // lui v1,0xC417
+
+// Wind sock position
+patch=0,EE,2014EC64,extended,3C024415 // lui v0,0x4415
+
+// 3D Object culling (e.g. buildings)
+// Culling is checked via a VU microprogram, which is called from the EE via SimDispChk at 130D00.
+// A condition flag is then checked in DispChkEnd at 130D10.
+// VU disasm is lost on me so this is a bit of a shot in the dark but this seems to create more conservative culling
+// without killing performance (as would be experienced by just removing the cull check on the CPU altogether)
+patch=0,EE,2016D398,extended,01ED0022 // Was 01ED0021
