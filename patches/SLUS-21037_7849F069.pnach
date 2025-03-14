@@ -1,4 +1,4 @@
-gametitle=Project - Snowblind SLUS-21037 2BDA8ADB secundary crc 7849F069
+gametitle=Project - Snowblind NTSC-U SLUS-21037 2BDA8ADB secondary crc 7849F069
 //Game changes ELF when select single player to BO3GM.ELF with active CRC 7849F069
 
 [Widescreen 16:9]
@@ -10,5 +10,10 @@ patch=1,EE,00B764F4,word,3Fe38e39 //3FAAAAAB //cutscenes
 
 [60 FPS]
 author=asasega & Gabominated
-description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Might need EE Overclock.
 patch=1,EE,002d4c04,word,2c620000 //0062102B
+
+[Disable Blur/Bloom]
+author=Gabominated
+description=Disable post-processing blur/bloom effect.
+patch=1,EE,004E97C8,word,00000000 //00000018

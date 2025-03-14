@@ -68,3 +68,8 @@ description=Removes black bars in cutscenes
 patch=1,EE,001f4b58,word,3c020000
 patch=1,EE,001f4a68,word,3c030000
 patch=1,EE,001f4ad8,word,3c020000
+
+[60 FPS]
+author=asasega
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,2013D168,extended,2C420001

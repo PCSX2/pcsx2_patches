@@ -1,4 +1,4 @@
-gametitle=BLACK (SLUS_21376)
+gametitle=Black NTSC-U SLUS-21376 5C891FF1
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -13,14 +13,13 @@ patch=1,EE,204CA5F4,word,3FE38E39
 patch=1,EE,204CA694,word,3FE38E39
 patch=1,EE,205BC390,word,3F400000
 
-
 [60 FPS]
-author=asasega and PeterDelta
-description=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
-patch=1,EE,1040DF74,extended,00000001 // 60 fps
-patch=1,EE,205A8A9C,extended,3C888889 // speed
-patch=1,EE,204BC13C,extended,3C888889
-patch=1,EE,2040EBAC,extended,3C888889
+author=Gabominated & PeterDelta
+description=Native 60 FPS. Might need EE Overclock (180%).
+patch=1,EE,001c5b10,word,24040001 //24040002
+patch=1,EE,0012508C,word,24040001 //24040002
+patch=1,EE,00102648,word,2404003c //2404001e
+patch=1,EE,00125078,word,2410003c //2410001e
 
 [Video Mode]
 author=Gabominated
