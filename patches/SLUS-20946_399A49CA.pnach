@@ -4,16 +4,17 @@ gametitle=Grand Theft Auto: San Andreas (SLUS-20946) / Ver 1.03
 gsaspectratio=16:9
 author=PeterDelta, DanielSantos, ThirteenAG, kesterstudios
 description=GTA San Andreas Modern Widescreen Fix for 1.03
-
-
-patch=1,EE,206FF98C,extended,01000101 //Widescreen fix by PeterDelta
-patch=1,EE,0021DFE0,extended,3C0242CC
-patch=1,EE,0020A498,extended,3C0242AC
-patch=1,EE,0020817C,extended,3C0342AC
+patch=1,EE,006FF98F,extended,01 //Widescreen fix by PeterDelta
+patch=1,EE,0021DFE0,extended,A2
+patch=1,EE,0020A498,extended,AC
+patch=1,EE,0020817C,extended,AC
+patch=1,EE,002EC9C0,extended,40
+patch=1,EE,002ECA10,extended,D0
 patch=1,EE,0033D9C4,extended,3C013F80 //zoom in scenes
-patch=1,EE,E0010001,extended,0066B9F4
+patch=1,EE,E0020001,extended,0066B9F4
 patch=1,EE,0033D9C4,extended,3C013F40
 patch=1,EE,2021EDB4,extended,3C023FC0
+patch=1,EE,2021EDB4,extended,3C024000
 //-------------------------------------------------HUD-------------------------------------------------//
 //patch=0,EE,20663C00,extended,3f666666 //Wanted Height
 patch=0,EE,20663C04,extended,3ecccccd //Wanted Width
