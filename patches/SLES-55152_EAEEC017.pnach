@@ -12,3 +12,11 @@ patch=1,EE,0025c240,word,3c013fab
 author=Gabominated
 description=Might need EE Overclock.
 patch=1,EE,0022AF9C,word,10400010 //14400010
+
+[60 FPS]
+author=Souzooka
+description=Runs game at 60fps (requires reset; cuts off dialogue in cutscenes early)
+patch=0,EE,202EB818,extended,1          // vblank divisor // basically same functionality as 50fps patch above
+patch=0,EE,20100FB4,extended,24020001   // addiu v0,zero,0x1 // Only code which originally resets divisor to 2, in unknown circumstance
+patch=0,EE,2030774C,extended,2          // use NTSC video mode upon boot
+patch=0,EE,20307758,extended,1C0        // use correct vertical resolution upon boot
