@@ -2,13 +2,14 @@ gametitle=Skyscraper PAL-M SLES-55152 EAEEC017
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=Souzooka
+description=16:9 Widescreen + aspect-corrected UI (requires reset)
 
-//Widescreen hack 16:9
-
-patch=1,EE,0025c240,word,3c013fab
+// Changes game resolution from 640x512 to 640x384
+// UI automatically scales to adjust to the new aspect ratio
+patch=0,EE,20307758,extended,180
 
 [50 FPS]
 author=Gabominated
 description=Might need EE Overclock.
-patch=1,EE,0022AF9C,word,10400010 //14400010
+patch=0,EE,0022AF9C,word,10400010 //14400010
