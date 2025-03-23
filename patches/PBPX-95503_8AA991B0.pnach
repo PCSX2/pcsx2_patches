@@ -165,11 +165,11 @@ description=Makes throttle/brake more precise when using triggers, like on the P
 author=Silent & Aero_
 
 // Throttle
-patch=1,EE,10211218,extended,00000062
+patch=1,EE,10211218,extended,0000005A
 // Brake
-patch=1,EE,10211260,extended,00000062
+patch=1,EE,10211260,extended,0000005A
 // Reverse
-patch=1,EE,102112F0,extended,00000062
+patch=1,EE,102112F0,extended,0000005A
 // Input multiplier
 patch=1,EE,20211014,extended,00000000
 
