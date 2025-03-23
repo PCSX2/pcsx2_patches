@@ -5,7 +5,6 @@ gsaspectratio=16:9
 author=nemesis2000 and Arapapa
 
 //Widescreen hack 16:9
-
 patch=1,EE,0030b8f0,word,3c013f9f
 patch=1,EE,0030b8f4,word,342149f1
 
@@ -16,10 +15,15 @@ patch=1,EE,002af4fc,word,3421cccd //34216666
 //Widescreen For Gauge
 patch=1,EE,0014300c,word,3c013F40 //3c013f80
 
-
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,2039697C,extended,34021070
 
-
+[Restore Dead Pan technique]
+description=Restores the Japanese/Korean-exclusive Dead Pan technique.
+author=The Cutting Room Floor
+patch=1,EE,201250A8,extended,00001021
+patch=1,EE,201251CC,extended,00001021
+patch=1,EE,20125264,extended,00002021
+patch=1,EE,20125338,extended,00001821

@@ -1,0 +1,108 @@
+gametitle=Gran Turismo 4 Prologue [SCES-52438] (E)
+
+[No-Interlacing]
+author=Silent
+
+// no interlacing
+patch=1,EE,D04FA620,extended,00000002
+patch=1,EE,2042B0C4,extended,34020001 // deinterlace races
+patch=1,EE,D04FA620,extended,00000000
+patch=1,EE,2042B0C4,extended,30420001
+patch=1,EE,2042408C,extended,00000000 // deinterlace menus
+
+[Remappable controls]
+description=Remap controls freely by modifying this patch
+author=Silent
+
+// NOTE: You may remap controls freely by modifying this patch
+// according to the documentation below. Please read carefully and rebind controls the way you wish.
+// You rebind actions by replacing the values of the code (not the address!) by the value corresponding
+// to the action you wish to bind. Values in brackets correspond to the internal IDs of actions and should
+// be ignored - use the values from the first column.
+// This cheat is pre-configured with stock game controls.
+// Remarks:
+// * Steering on DPad and Pause button may be remapped, but they are also hardcoded regardless
+// * Analog sticks may only be mapped to Steer Left (maps full steering) and Throttle (maps throttle/brake)
+
+// 83 (FF) - None
+// 80 (00) - Steer Left
+// 86 (01) - Steer Right
+// 8B (02) - Shift Down
+// 8C (03) - Shift Up
+// 8F (04) - Throttle
+// 88 (05) - Brake
+// 87 (06) - Handbrake
+// 85 (07) - Reverse
+// 89 (08) - Look Back
+// 8A (09) - Change Camera
+// 8E (0A) - Pause
+// 8D (0B) - Toggle Racing Line (in School Mode)
+
+patch=1,EE,0038092E,extended,80 // Left stick left/right
+patch=1,EE,00380932,extended,83 // Left stick up/down
+
+patch=1,EE,00380926,extended,83 // Right stick left/right
+patch=1,EE,0038092A,extended,8F // Right stick up/down
+
+patch=1,EE,00380936,extended,80 // DPad left
+patch=1,EE,003808FA,extended,86 // DPad right
+patch=1,EE,0038093A,extended,83 // DPad up
+patch=1,EE,0038093E,extended,83 // DPad down
+
+patch=1,EE,003808FE,extended,85 // Triangle
+patch=1,EE,00380902,extended,87 // Circle
+patch=1,EE,00380906,extended,8F // Cross
+patch=1,EE,0038090A,extended,88 // Square
+
+patch=1,EE,0038090E,extended,89 // L1
+patch=1,EE,00380912,extended,8A // R1
+patch=1,EE,00380916,extended,8B // L2
+patch=1,EE,0038091A,extended,8C // R2
+patch=1,EE,00380946,extended,83 // L3
+patch=1,EE,0038091E,extended,8D // R3
+
+patch=1,EE,00380922,extended,8E // Start
+patch=1,EE,003808F2,extended,83 // Select
+
+// DO NOT MODIFY CODES BELOW!
+
+// Do not load controls from the memory card, as they cannot be modified anyway
+patch=1,EE,20382468,extended,00000000
+
+[Adjusted triggers sensitivity]
+description=Makes throttle/brake more precise when using triggers, like on PS3
+author=Silent & Aero_
+
+// Throttle
+patch=1,EE,10380E0C,extended,0000005A
+patch=1,EE,20380E00,extended,00000000
+// Brake
+patch=1,EE,10380E6C,extended,0000005A
+patch=1,EE,20380E60,extended,00000000
+// Reverse
+patch=1,EE,10380F2C,extended,0000005A
+patch=1,EE,20380F20,extended,00000000
+
+[Adjustable units]
+description=Changes MPH to KMH, HP to PS, ft.lb to kgf.m
+author=Silent
+
+// Speed and distance units
+// 0 - KMH/KM
+// 1 - MPH/Miles
+patch=1,EE,204FE370,extended,0
+
+// Power units
+// 0 - PS
+// 1 - HP
+// 2 - BHP
+// 3 - CV
+// 4 - kW
+// 5 - PF
+patch=1,EE,204FE374,extended,0
+
+// Torque units
+// 0 - kgf.m
+// 1 - ft.lb
+// 2 - NM
+patch=1,EE,204FE378,extended,0
