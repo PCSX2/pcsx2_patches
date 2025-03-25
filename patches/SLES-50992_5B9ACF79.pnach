@@ -1,10 +1,9 @@
-gametitle=Hitman 2 - Silent Assassin (PAL-E) (SLES-50992) (v1.01 and 2.00)
+gametitle=Hitman 2 - Silent Assassin PAL-E SLES-50992 5B9ACF79
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-
-// 16:9
+description=Widescreen hack
 patch=1,EE,00313f7c,word,3c013f10 // 3c013f40 ver fov
 patch=1,EE,002bbe18,word,3c1b3f40 // 00000000 zoom
 patch=1,EE,002bc00c,word,3c013f00 // 3c013f80
@@ -17,4 +16,12 @@ patch=1,EE,002bc05c,word,4600a583 // e6200054
 patch=1,EE,002bc060,word,e6200054 // 3c01bf00
 patch=1,EE,002bc064,word,4600a807 // 44810000
 
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,20508090,extended,00000001 //00000002
 
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start. FMVs remain in PAL.
+patch=1,EE,003066B4,word,14A20057 //10A20057

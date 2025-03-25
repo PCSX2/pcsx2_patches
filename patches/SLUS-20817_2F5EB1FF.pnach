@@ -1,4 +1,4 @@
-gametitle=Headhunter - Redemption SLUS_208.17
+gametitle=Headhunter - Redemption NTSC-U SLUS-20817 2F5EB1FF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -7,4 +7,16 @@ patch=1,EE,00190618,word,3c014310
 patch=1,EE,00190648,word,3c013fe3
 patch=1,EE,0019064c,word,34218e38
 
+[60 FPS]
+author=Gabominated
+description=Might need EE overclock (180%).
+patch=1,EE,20157D70,extended,0042102a
+patch=1,EE,201670c0,extended,2403003c
+patch=1,EE,2043BAA4,extended,0000001E
+patch=1,EE,E0010001,extended,005CCFF8
+patch=1,EE,20157D70,extended,0043102a
 
+[Disable Blur]
+author=Gabominated
+description=Disable post-processing blur effect.
+patch=1,EE,001464AC,word,00000000

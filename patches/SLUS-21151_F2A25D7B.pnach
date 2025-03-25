@@ -1,18 +1,24 @@
-gametitle=Cars (U)(SLUS-21151)
+gametitle=Disney/Pixar Cars NTSC-U SLUS-21151 F2A25D7B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas (NTSC-U by Arapapa)
-
 //Gameplay 16:9
-
-
 patch=1,EE,00116d48,word,3c023fab //3c023f80
 patch=1,EE,00116d50,word,3C033CAE //3C033C8E
 patch=1,EE,00116d54,word,34635555 //3463FA34
-
 //Render fix
 patch=1,EE,001d5dc4,word,3c03bfab //3c03bf80
 patch=1,EE,001d5dc8,word,3c023fab //3c023f80
 
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (130%).
+patch=1,EE,001B1EE4,extended,24040001
+patch=1,EE,E0010001,extended,004956B8
+patch=1,EE,001B1EE4,extended,24040002
 
+[Disable Blur/Bloom]
+author=Gabominated
+description=Disable post-processing Blur/Bloom effect
+patch=1,EE,004F7B90,word,00000201

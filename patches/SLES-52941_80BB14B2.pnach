@@ -1,12 +1,16 @@
-gametitle=Gungrave: Overdose [PAL-M3] (SLES_529.41)
+gametitle=Gungrave - Overdose PAL-M SLES-52941 80BB14B2
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
-
-//Gameplay 16:9
+description=Widescreen hack
 patch=1,EE,0028B6C4,word,3C013F40 //00000000 (Increases hor. axis)
 patch=1,EE,0028B6C8,word,44810000 //00000000
 patch=1,EE,0028B6D0,word,4600C602 //00000000
 
-
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,20101C18,extended,28420001
+patch=1,EE,E0010019,extended,004455C4
+patch=1,EE,20101C18,extended,28420002

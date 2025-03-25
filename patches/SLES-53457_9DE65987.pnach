@@ -1,0 +1,6 @@
+gametitle=Evil Dead - Regeneration PAL-E SLES-53457 9DE65987
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,00377194,word,24020002 //24020001
