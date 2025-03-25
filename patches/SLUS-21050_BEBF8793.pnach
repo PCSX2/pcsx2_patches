@@ -121,28 +121,14 @@ patch=1,EE,204E0C3C,extended,3FE38E39 // Globe Aspect Ratio // 16:9 = 1.77777779
 patch=1,EE,204E0A94,extended,3FB8E38F // Globe Glow Aspect Ratio // 16:9 = 1.444444537
 
 [Disable Motion Blur]
-description=Disables Motion Blur (Emulation Speedhack + Cleaner Visibility)
+description=Disables Motion Blur (Performance Speedhack + Cleaner Visibility)
 author=UlsterRosé
-
 patch=1,EE,20665F2A,byte,00000000 // 00000001 // Motion blur, D3D11 hardware has problems with this
 
 [Disable Bloom]
-description=Disables Bloom (Biggest Emulation Speedhack)
+description=Disables Bloom (Performance Speedhack)
 author=UlsterRosé
-
 patch=1,EE,20665F28,byte,00000000 // 00000001 // Bloom, disabling this gives biggest performance boost
-
-[Disable Background Fog]
-description=Disables Background Fog (Emulation Speedhack)
-author=UlsterRosé
-
-patch=1,EE,20665F29,byte,00000000 // 00000001 // Background fog
-
-[Environment Maps]
-description=Make Cars have Reflections (Speedhack?)
-author=UlsterRosé
-
-patch=1,EE,20665F20,byte,00000000 // 00000001 // Environment maps (make cars have reflections)
 
 [60 FPS for Menus]
 author=Nehalem
