@@ -123,12 +123,12 @@ patch=1,EE,204E0A94,extended,3FB8E38F // Globe Glow Aspect Ratio // 16:9 = 1.444
 [Disable Motion Blur]
 description=Disables Motion Blur
 author=escape209
-patch=1,EE,20665F2A,byte,00000000 // 00000001 // Motion blur, D3D11 hardware has problems with this
+patch=1,EE,20665F2A,byte,00000000 // 00000001 // Disable Motion blur
 
 [Disable Bloom]
 description=Disables Bloom
 author=escape209
-patch=1,EE,20665F28,byte,00000000 // 00000001 // Bloom, disabling this gives biggest performance boost
+patch=1,EE,20665F28,byte,00000000 // 00000001 // Disable Bloom
 
 [60 FPS for Menus]
 author=Nehalem
