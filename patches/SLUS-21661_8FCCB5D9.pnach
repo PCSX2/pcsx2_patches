@@ -7,5 +7,6 @@ description=Patches the game to run at Widescreen 16:9 aspect ratio.
 patch=1,EE,0011940C,word,3C013F4d
 patch=1,EE,00119410,word,3421b6e0
 
-[60 FPS]
-patch=1,EE,20268558,extended,00000001
+//[60 FPS]
+// Breaks jumping.
+//patch=1,EE,20268558,extended,00000001
