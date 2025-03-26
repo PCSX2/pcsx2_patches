@@ -1,4 +1,4 @@
-gametitle=BLACK (PAL-M) (SLES_538.86) ADDFF505
+gametitle=Black PAL-M SLES-53886 ADDFF505
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -14,19 +14,12 @@ patch=1,EE,204CAE94,word,3FE38E39 //3FAAAAAB
 patch=1,EE,205BCB90,word,3F400000 //3F800000
 
 [50/60 FPS]
-author=PeterDelta
-description=Might need EE Overclock at 180%.
-patch=1,EE,1040DFF4,extended,02000001
-patch=1,EE,E0040007,extended,003BD274 //50hz
-patch=1,EE,E001D70A,extended,005A929C
-patch=1,EE,205A929C,extended,3CA3D70A
-patch=1,EE,204BC93C,extended,3CA3D70A
-patch=1,EE,2040EC2C,extended,3CA3D70A
-patch=1,EE,E004000E,extended,003BD274 //60hz
-patch=1,EE,E0018889,extended,005A929C
-patch=1,EE,205A929C,extended,3C888889
-patch=1,EE,204BC93C,extended,3C888889
-patch=1,EE,2040EC2C,extended,3C888889
+author=PerterDelta & Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,0012513C,word,24040001 //24040002
+patch=1,EE,001C5BC0,word,24040001 //24040002
+patch=1,EE,00102638,word,24040032 //24040019
+patch=1,EE,00125128,word,2410003C //2410001E
 
 [Video Mode]
 author=Gabominated

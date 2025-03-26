@@ -1,12 +1,15 @@
-gametitle=Scarface - The World is Yours (MULTI4) (SLES-54182)
+gametitle=Scarface - The World is Yours PAL-M SLES-54182 301A1B6E
 
-[50 FPS]
+[50/60 FPS]
 author=Gabominated
-description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
-patch=1,EE,00DAFCBC,word,00000000 //00000001
+description=Might need EE Overclock (130%).
+patch=1,EE,20DAFCBC,extended,00000000 //00000001
 
 [480p Mode]
-gsinterlacemode=1
 author=Gabominated
-description=SDTV 480p mode at start. Might need enable EE Overclock to be stable.
-patch=1,EE,2072dc38,extended,24120050
+description=SDTV 480p mode at start.
+patch=1,EE,00DAFC1C,word,00000000 //00000001
+patch=1,EE,00DAFC20,word,00000001 //00000000
+patch=1,EE,00DAFC34,word,00000002 //00000003
+patch=1,EE,00DAFC38,word,00000001 //00000000
+patch=1,EE,00DAFC40,word,000001E0 //00000200

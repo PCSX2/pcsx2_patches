@@ -1,9 +1,9 @@
-gametitle=BLACK (J) (SLPM-66354)
+gametitle=Black NTSC-J SLPM-66354 B3A9F9ED
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=No.47 (pnach by Arapapa)
-
+description=Widescreen hack
 patch=1,EE,203BF03C,word,00000001 //00000000
 patch=1,EE,204BC950,word,00000001 //00000000
 patch=1,EE,204BD98C,word,00000001 //00000000
@@ -13,4 +13,15 @@ patch=1,EE,204CADF4,word,3FE38E39 //3FAAAAAB
 patch=1,EE,204CAE94,word,3FE38E39 //3FAAAAAB
 patch=1,EE,205BC390,word,3F400000 //3F800000
 
+[60 FPS]
+author=Gabominated
+description=Native 60 FPS. Might need EE Overclock (180%).
+patch=1,EE,001c5c38,word,24040001 //24040002
+patch=1,EE,001251b4,word,24040001 //24040002
+patch=1,EE,00102648,word,2404003c //2404001e
+patch=1,EE,001251A0,word,2410003c //2410001e
 
+[Video Mode]
+author=Gabominated
+description=Always display standard-480p video selector.
+patch=1,EE,003BE924,word,00000001

@@ -1,13 +1,13 @@
-gametitle=Spider-Man: Friend or Foe (NTSC-U)
+gametitle=Spider-Man - Friend or Foe NTSC-U SLUS-21600 F52477F7
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hack
-
-//Gameplay 16:9
-patch=1,EE,203EC448,extended,3FE38E38 //3FAAAAAB (Increases hor. axis)
+author=Gabominated
+description=Enable native widescreen.
+patch=1,EE,003F0BD4,word,00000100
+patch=1,EE,004075F0,word,00000001
 
 [60 FPS]
 author=Gabominated
-description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,2037DCA0,extended,00000001 //00000002
+description=Might need EE Overclock (180%).
+patch=1,EE,0037DCA0,word,00000001 //00000002
