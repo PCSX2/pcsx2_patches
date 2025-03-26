@@ -64,3 +64,70 @@ patch=1,EE,1023F3DA,extended,8442
 
 patch=1,EE,20662B30,extended,00010000
 patch=1,EE,20662B34,extended,00060014
+
+[Rotate car turntable with the right stick]
+description=Rotate the turntable manually with the R3 stick (automatically stop with R2, restart with L2)
+author=Vyerq (ported by Nenkai)
+patch=1,EE,00528C98,word,0803C1CB
+patch=1,EE,00528C9C,word,00000000
+patch=1,EE,00528CA0,word,00000000
+patch=1,EE,00528CD8,word,0803C1C0
+patch=1,EE,00528CDC,word,00000000
+patch=1,EE,000F0700,word,3C08008A
+patch=1,EE,000F0704,word,9108B0DE
+patch=1,EE,000F0708,word,2508FF81
+patch=1,EE,000F070C,word,3C093D40
+patch=1,EE,000F0710,word,4488F000
+patch=1,EE,000F0714,word,4489F800
+patch=1,EE,000F0718,word,4680F7A0
+patch=1,EE,000F071C,word,461FF7C2
+patch=1,EE,000F0720,word,461F18C0
+patch=1,EE,000F0724,word,03E00008
+patch=1,EE,000F0728,word,E4830008
+patch=1,EE,000F072C,word,3C08000F
+patch=1,EE,000F0730,word,91080800
+patch=1,EE,000F0734,word,15000004
+patch=1,EE,000F073C,word,3C013C88
+patch=1,EE,000F0740,word,34218888
+patch=1,EE,000F0744,word,44811000
+patch=1,EE,000F0748,word,0814A328
+patch=1,EE,E10100FF,extended,0064C7A4
+patch=1,EE,000F0800,extended,00
+patch=1,EE,E10100FF,extended,0064C7A5
+patch=1,EE,000F0800,extended,01
+
+[360 Chase Cam]
+description=Rotate car camera with R3
+author=Nenkai (ported by Vyerq/unko)
+patch=1,EE,20206488,extended,0C03C440
+patch=1,EE,200F1100,extended,3C0F008A
+patch=1,EE,200F1104,extended,91EFB0DE
+patch=1,EE,200F1108,extended,25EFFF81
+patch=1,EE,200F110C,extended,448FF000
+patch=1,EE,200F1110,extended,4680F7A0
+patch=1,EE,200F1114,extended,3C0F3CC9
+patch=1,EE,200F1118,extended,448FF800
+patch=1,EE,200F111C,extended,461FF7C2
+patch=1,EE,200F1120,extended,0808C3C0
+patch=1,EE,200F1124,extended,460DFB40
+
+[B-Spec Progress Speed x16]
+author=TheAdmiester & Vyerq
+patch=1,EE,201F2D0C,extended,28420010 
+patch=1,EE,201F2D14,extended,24020010
+
+[Disable licence/mission assists]
+author=TheAdmiester
+patch=1,EE,1010C1FC,extended,0000
+patch=1,EE,1010C20C,extended,0000
+patch=1,EE,1010C254,extended,0000
+patch=1,EE,1010C264,extended,0000
+
+[Disable penalties from missions and special condition events]
+author=TheAdmiester
+patch=1,EE,20223300,extended,03E00008
+patch=1,EE,20223304,extended,00000000
+
+[60 FPS pit crew animation]
+author=Vyerq
+patch=1,EE,2ABEE4,byte,1
