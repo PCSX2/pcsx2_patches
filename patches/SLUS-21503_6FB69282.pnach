@@ -17,6 +17,7 @@ patch=1,EE,0014300c,word,3c013F40 //3c013f80
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
+author=umechan
 gsinterlacemode=1
 patch=1,EE,2039697C,extended,34021070
 
