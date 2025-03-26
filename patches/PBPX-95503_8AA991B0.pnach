@@ -174,7 +174,7 @@ patch=1,EE,102112F0,extended,0000005A
 patch=1,EE,20211014,extended,00000000
 
 [Metric units]
-description=Changes MPH to KMH, HP to PS, ft.lb to kgf.m
+description=Changes MPH to KMH, HP to PS, ft.lb to kgf.m. Units can be tweaked editing the patch file.
 author=Silent
 
 // Speed and distance units
