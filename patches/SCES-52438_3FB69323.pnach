@@ -11,7 +11,7 @@ patch=1,EE,2042B0C4,extended,30420001
 patch=1,EE,2042408C,extended,00000000 // deinterlace menus
 
 [Remappable controls]
-description=Remap controls freely by modifying this patch
+description=Remaps controls according to the bindings specified in the patch file.
 author=Silent
 
 // NOTE: You may remap controls freely by modifying this patch
@@ -83,8 +83,8 @@ patch=1,EE,20380E60,extended,00000000
 patch=1,EE,10380F2C,extended,0000005A
 patch=1,EE,20380F20,extended,00000000
 
-[Adjustable units]
-description=Changes MPH to KMH, HP to PS, ft.lb to kgf.m
+[Metric units]
+description=Changes MPH to KMH, HP to PS, ft.lb to kgf.m. Units can be tweaked editing the patch file.
 author=Silent
 
 // Speed and distance units
