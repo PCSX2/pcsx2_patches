@@ -12,7 +12,11 @@ description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 //Search pattern: 3829050008004264 (little endian)
 //Search mask:    ffffffffffffffff
-patch=1,EE,0020c8ec,word,00000000 //64420008
-patch=1,EE,0020ca84,word,00000000 //64420008
+patch=0,EE,2020c8ec,extended,00000000 //64420008
+patch=0,EE,2020ca84,extended,00000000 //64420008
 
+[NTSC Mode]
+author=Souzooka
+description=Forces game to run in NTSC mode (restart required).
 
+patch=0,EE,20118E58,extended,24060002 // addiu a2,zero,0x2
