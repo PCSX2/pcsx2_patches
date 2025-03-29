@@ -15,10 +15,12 @@ description=Removes black bars in cutscenes
 patch=1,EE,00100B88,word,24040000 //24040001 Upper
 patch=1,EE,00100C88,word,24040000 //24040001 Bottom
 
-[480p Mode]
-gsinterlacemode=1
+[NTSC Mode]
 author=PeterDelta
-description=Forces progressive scan mode 480p at startup.
-patch=1,EE,001CED74,word,24110000
-patch=1,EE,001CED78,word,24120050
-patch=1,EE,001CED84,word,24130001
+description=NTSC mode at start.
+patch=0,EE,00232A4C,word,14400007
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,00232A6C,word,24140002

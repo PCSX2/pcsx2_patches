@@ -4,20 +4,18 @@ gametitle=Dark Angel (PAL-M) SLES-51333 5BE3F481
 gsaspectratio=16:9
 author=PeterDelta
 description=Renders the game in 16:9 aspect ratio
-patch=1,EE,002504BC,word,3C013F30
-patch=1,EE,0034AB30,word,3C013F1A
-patch=1,EE,00280878,word,3C013FE3
-patch=1,EE,0028AB98,word,3C013F22
+patch=0,EE,002504BC,word,3C013F30
+patch=0,EE,0034AB30,word,3C013F1A
+patch=0,EE,00280878,word,3C013FE3
+patch=0,EE,0028AB98,word,3C013F22
 
 [50/60 FPS]
 author=PeterDelta
 description=Might need EE Overclock (130%).
-patch=1,EE,00280B74,word,1040000D
+patch=0,EE,00280B74,word,1040000D
 
-[480p Mode]
-gsinterlacemode=1
+[NTSC Mode]
 author=PeterDelta
-description=SDTV 480p mode at start.
-patch=1,EE,003B9B64,word,24110000
-patch=1,EE,003B9B68,word,24120050
-patch=1,EE,003B9B74,word,24130001
+description=NTSC mode at start.
+patch=0,EE,00338658,word,24040002
+patch=0,EE,00338668,word,240601C0

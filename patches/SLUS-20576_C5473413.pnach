@@ -32,4 +32,7 @@ description=Widescreen Hack
 
 // Commented out as it broke loading screen font and other stuff.
 
-
+[60 FPS]
+author=asasega
+description=Might need EE Overclock (130%).
+patch=1,EE,00544168,word,00000001

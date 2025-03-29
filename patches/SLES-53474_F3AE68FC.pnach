@@ -9,11 +9,7 @@ patch=1,EE,00218F50,word,3C023F10 //3C023F40 Y-FOV
 //Hang fix by Prafull (Only needed for pcsx2, is not needed for the PS2)
 //patch=1,EE,001110E0,word,00000000 //40036000
 
-[480p Mode]
-gsinterlacemode=1
+[NTSC Mode]
 author=PeterDelta
-description=SDTV 480p mode at start.
-patch=1,EE,00106C20,word,34050050
-patch=1,EE,00106C24,word,24030002
-patch=1,EE,00106C28,word,0000000C
-patch=1,EE,00106C2C,word,03E00008
+description=NTSC mode at start.
+patch=1,EE,00101380,word,14C00004

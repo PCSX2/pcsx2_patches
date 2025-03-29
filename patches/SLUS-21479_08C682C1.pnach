@@ -4,14 +4,13 @@ gametitle=Reservoir Dogs (NTSC-U) SLUS-21479 08C682C1
 gsaspectratio=16:9
 author=PeterDelta
 description=Widescreen fix
-patch=1,EE,00397770,extended,3C013F00
-patch=1,EE,00377030,extended,3C013F00
-patch=1,EE,E0010001,extended,004F1BEC
-patch=1,EE,00397770,extended,3C013F25
-patch=1,EE,00377030,extended,3C013F25
+patch=1,EE,004F1BEC,word,00000001
+patch=1,EE,00397770,word,3C013F25
+patch=1,EE,00377030,word,3C013F25
+patch=1,EE,01DE42C0,word,0000003C
 
 [60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,003A96F4,word,3C02000A //3C02004A
-patch=1,EE,00310FAC,word,3C013F00 //3C013F80
+description=Might need EE Overclock (130%).
+patch=0,EE,003A96F0,word,14800021
+patch=0,EE,00310FAC,word,3C013EAB

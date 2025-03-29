@@ -70,3 +70,8 @@ patch=1,EE,0029F904,word,31310000 //31310001
 patch=1,EE,002A1CAC,word,30B20000 //30B20001
 patch=1,EE,00326DBC,word,00000000 //64420008
 patch=1,EE,00326E44,word,00000000 //64420008
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,0010024C,word,240A0002

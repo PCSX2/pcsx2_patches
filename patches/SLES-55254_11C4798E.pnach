@@ -1,0 +1,8 @@
+gametitle=The Incredible Hulk (PAL-M) SLES-55254 11C4798E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0041042C,word,3C013F22
+patch=1,EE,00368284,word,3C013FEC
