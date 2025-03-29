@@ -1,0 +1,15 @@
+gametitle=Project Minerva Professional (PAL) (SLES_524.72)
+
+[No-Interlacing]
+author=Souzooka
+gsinterlacemode=1
+description=Attempts to disable interlaced offset rendering.
+
+patch=0,EE,201C21EC,extended,00000000 // nop
+
+[NTSC Mode]
+author=Souzooka
+description=Sets game to NTSC Mode upon startup (display mode can be changed in-game).
+
+// Changes code immediate used to set display mode setting from 1 -> 0
+patch=0,EE,201C00E0,extended,00008021 // addu s0,zero,zero
