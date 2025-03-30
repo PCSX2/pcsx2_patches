@@ -1,0 +1,24 @@
+gametitle=Jak and Daxter - The Precursor Legacy (NTSC-U) [SCUS-97124]
+// This CRC corresponds to an xdelta patched version of the game, needed for RetroAchievements. This is otherwise the exact same experience as the base game.
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+
+// 16:9
+patch=1,EE,202AF750,extended,3f1f3b64 // 3f000000 zoom
+patch=1,EE,202AF6FC,extended,bf1f3b64 // bf000000 hud fix for zoom
+patch=1,EE,2079F478,extended,0015120C // 0014E4C4 force native 16:9 mode
+
+
+[No-Interlacing]
+gsinterlacemode=1
+description=No Interlacing & No Blur
+
+// No Interlacing
+patch=1,EE,202B2014,word,24060000
+patch=1,EE,208781B4,word,AEE0ED00
+
+// No Blur
+patch=1,EE,007027A8,extended,000000E0
+patch=1,EE,2010FF6C,extended,30420000

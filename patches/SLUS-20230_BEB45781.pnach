@@ -1,0 +1,7 @@
+gametitle=Max Payne (NTSC-U)
+//These pnach files are derived from the user-applied xdelta patch version used for retroachievements, as a measure of anticheat. This is for the main ELF.
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+description=Widescreen Hack
