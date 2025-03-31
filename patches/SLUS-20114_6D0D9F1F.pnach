@@ -1,0 +1,10 @@
+gametitle=Simpsons Skateboarding, The (NTSC-U) (SLUS-20114)
+
+[60 FPS]
+author=Souzooka
+description=Removes framerate cap.
+
+// This makes a check that the framerate cap boolean is 0
+// always true -- this variable is initialized at 1918C4, but I've
+// just made this branch always true so it works without a restart.
+patch=0,EE,201011D8,extended,1000000F // beq zero,zero,0x00101218
