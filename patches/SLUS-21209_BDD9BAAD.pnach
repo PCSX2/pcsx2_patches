@@ -1,6 +1,6 @@
 [Force Progressive Scan]
 author=Michael
-description=Automatically boots the game in progressive scan mode (Fixes interlacing issues such as shaking and improves visual quality). Restart the game to make it work if you are already started it.
+description=Automatically boots the game in progressive scan mode (Fixes interlacing issues such as shaking and improves visual quality).
 
 //Force Progressive Scan
 patch=1,EE,201372e0,extended,0C04DCEC 
