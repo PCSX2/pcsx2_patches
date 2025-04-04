@@ -1,0 +1,6 @@
+gametitle=NBA Street 3 (PAL-M) SLES-53001 7A12BA1B
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,00353F7C,word,14000003

@@ -6,6 +6,10 @@ gsaspectratio=16:9
 author=PeterDelta
 description=Enable native widescreen
 
-[480p Mode]
+[50/60 FPS]
 author=PeterDelta
-description=SDTV 480p mode at start.
+description=Might need EE Overclock (130%).
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.

@@ -109,3 +109,8 @@ patch=1,EE,001C3EE0,word,3C013F40
 author=kozarovv
 description=Tones down all signal lights, such as traffic light orange/yellow sources.
 patch=1,EE,001C3260,word,3C013F50
+
+[Remove Bloom]
+author=PeterDelta
+description=Removes the post-processing bloom effect
+patch=1,EE,00570178,word,01000100

@@ -19,3 +19,10 @@ patch=1,EE,205DB004,extended,3F800000
 author=Gabominated
 description=Enable native NTSC Mode at start instead PAL Mode..
 patch=1,EE,001BD6B4,word,38420001
+
+[Disable Noise Effect]
+author=PeterDelta
+description=Disable noise filter in gameplay
+patch=1,EE,0055EBE8,extended,00000001
+patch=1,EE,E0010004,extended,0057C708
+patch=1,EE,0055EBE8,extended,00000002

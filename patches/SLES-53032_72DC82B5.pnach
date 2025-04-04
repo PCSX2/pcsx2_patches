@@ -19,7 +19,6 @@ patch=1,EE,E0010000,extended,01FECCF4
 patch=1,EE,0061C020,extended,00000002
 
 [480p Mode]
-gsinterlacemode=1
 author=PeterDelta
 description=Any Hz selection will output in 480p.
 patch=1,EE,0049AF94,word,00000003

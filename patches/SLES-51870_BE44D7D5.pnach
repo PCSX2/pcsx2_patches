@@ -1,0 +1,14 @@
+gametitle=Disney/Pixar Buscando a Nemo (PAL-S) SLES-51870 BE44D7D5
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0010AC6C,word,0C0857EA
+patch=1,EE,00215FA8,word,3C013F40
+patch=1,EE,00215FAC,word,4481F000
+patch=1,EE,00215FB0,word,461EB582
+patch=1,EE,00215FB4,word,4600A807
+patch=1,EE,00215FB8,word,0C042B1C
+patch=1,EE,0010ACB0,word,3C013F2B
+patch=1,EE,001A49C8,word,3C013F59

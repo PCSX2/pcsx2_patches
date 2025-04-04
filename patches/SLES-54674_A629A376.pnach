@@ -81,11 +81,10 @@ patch=1,EE,0016F380,word,3C013F80
 
 [50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 180%.
+description=Might need EE Overclock (180%).
 patch=1,EE,0012795C,word,14400003 //10400003
 
 [480p Mode]
-gsinterlacemode=1
 author=PeterDelta
 description=SDTV 480p mode at start.
 patch=1,EE,003BECEC,word,00000001

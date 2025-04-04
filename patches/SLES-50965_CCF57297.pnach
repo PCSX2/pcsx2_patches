@@ -1,4 +1,4 @@
-gametitle=Spider-Man - The Movie (S)(SLES-50965) CCF57297
+gametitle=Spider-Man (PAL-S) SLES-50965 CCF57297
 
 //[Widescreen 16:9]
 //gsaspectratio=16:9
@@ -9,3 +9,9 @@ gametitle=Spider-Man - The Movie (S)(SLES-50965) CCF57297
 //Zoom
 //patch=1,EE,002b5e64,word,3c013c28 //3c013c0e
 //Missing render fix
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,004CD0A0,word,00000001
+patch=1,EE,004CD0A8,word,000001C0

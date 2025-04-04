@@ -1,9 +1,6 @@
 gametitle=Alien Hominid (PAL-M) SLES-53139 14274DC3
 
 [480p Mode]
-gsinterlacemode=1
 author=PeterDelta
 description=SDTV 480p mode at start.
-patch=1,EE,00199C34,word,24110000
-patch=1,EE,00199C38,word,24120050
-patch=1,EE,00199C44,word,24130001
+patch=1,EE,00175278,word,1400000D

@@ -8,11 +8,7 @@ patch=1,EE,002aa624,word,3c013fe3
 patch=1,EE,002aa628,word,34218e38
 patch=1,EE,002a9e60,word,3c013f2b
 
-[480p Mode]
-gsinterlacemode=1
+[NTSC Mode]
 author=PeterDelta
-description=SDTV 480p mode at start.
-patch=1,EE,002EEFA0,word,34050050
-patch=1,EE,002EEFA4,word,24030002
-patch=1,EE,002EEFA8,word,0000000C
-patch=1,EE,002EEFAC,word,03E00008
+description=NTSC mode at start.
+patch=1,EE,0023CCD8,word,14000011

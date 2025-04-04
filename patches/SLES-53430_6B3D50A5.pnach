@@ -1,6 +1,12 @@
 gametitle=Incredible Hulk, The - Ultimate Destruction (PAL-M) SLES-53430 6B3D50A5
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 180%.
+description=Might need EE Overclock (180%).
 patch=1,EE,0046F3D0,word,24020001 //24020002
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,0046F6FC,word,240501C0
+patch=1,EE,0046F708,word,24060002

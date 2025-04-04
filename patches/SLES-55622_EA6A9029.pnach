@@ -9,10 +9,8 @@ description=Renders the game in 16:9 aspect ratio
 patch=1,EE,004f6ee8,word,3c033f80
 patch=1,EE,004f6ef0,word,34630000
 
-[480p Mode]
-gsinterlacemode=1
+[NTSC Mode]
 author=PeterDelta
-description=SDTV 480p mode at start.
-patch=1,EE,005346A4,word,24110000
-patch=1,EE,005346A8,word,24120050
-patch=1,EE,005346B4,word,24130001
+description=NTSC mode at start.
+patch=1,EE,0075158C,word,000001C0
+patch=1,EE,00752880,word,00067800

@@ -14,7 +14,12 @@ patch=1,EE,2047B594,extended,3F400000
 patch=1,EE,2047B5BC,extended,3F400000
 patch=1,EE,20428F60,extended,3F400000
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
 description=Might need EE Overclock (130%).
 patch=1,EE,003054C4,extended,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,00275CEC,word,0000102D
