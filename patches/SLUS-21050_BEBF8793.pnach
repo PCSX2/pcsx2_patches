@@ -120,6 +120,16 @@ patch=1,EE,204859B4,extended,080E9A78 // jumps back
 patch=1,EE,204E0C3C,extended,3FE38E39 // Globe Aspect Ratio // 16:9 = 1.777777791
 patch=1,EE,204E0A94,extended,3FB8E38F // Globe Glow Aspect Ratio // 16:9 = 1.444444537
 
+[Disable Motion Blur]
+description=Disables Motion Blur
+author=escape209
+patch=1,EE,20665F2A,byte,00000000 // 00000001 // Disable Motion blur
+
+[Disable Bloom]
+description=Disables Bloom
+author=escape209
+patch=1,EE,20665F28,byte,00000000 // 00000001 // Disable Bloom
+
 [60 FPS for Menus]
 author=Nehalem
 description=Menus will render at 60 FPS
