@@ -10,3 +10,10 @@ patch=1,EE,001828dc,word,3c013fc0 //3c014000
 
 //Y-Fov
 patch=1,EE,00237d30,word,3c013f10 //3c013f40
+
+[60 FPS]
+author=Souzooka
+description=Runs game at 60 FPS.
+
+// Changes wait for 2 vblanks to 1
+patch=0,EE,20244CB8,extended,2C420001 // sltiu v0,v0,0x0001
