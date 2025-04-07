@@ -34,6 +34,16 @@ patch=1,EE,20167844,extended,3C014F23
 patch=1,EE,21C02108,extended,43E60000
 patch=1,EE,2032677C,extended,3C013cb3
 
+[Disable Motion Blur]
+author=escape209
+description=Disables Motion Blur
+patch=1,EE,21BFE7BA,byte,00000000 // 00000001 // Disable Motion blur
+
+[Disable Bloom]
+author=escape209
+description=Disables Bloom
+patch=1,EE,21BFE7B8,byte,00000000 // 00000001 // Disable Bloom
+
 [60 FPS Menus]
 author=SuperType1/remco
 description=Makes the menus run in 60 FPS.
