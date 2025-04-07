@@ -63,7 +63,7 @@ description=Changes aspect ratio.
 patch=1,EE,20622600,extended,3F100000 //Horizontal Aspect Ratio
 patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
 
-[Disable intro videos (ea / thx / splash)]
+[Disable intro videos (EA/THX/Splash)]
 author=Meridian
 patch=0,EE,001A2840,word,0000202D
 patch=0,EE,001A2864,word,0000202D
