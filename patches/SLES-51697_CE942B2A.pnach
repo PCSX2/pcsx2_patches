@@ -1,6 +1,6 @@
 gametitle=SSX 3 (SLES-51697) (V1.0)
 
-[Disable intro videos (ea / thx / splash)]
+[Disable intro videos (EA/THX/Splash)]
 author=Meridian
 patch=0,EE,001A2878,word,0000202D
 patch=0,EE,001A289C,word,0000202D
