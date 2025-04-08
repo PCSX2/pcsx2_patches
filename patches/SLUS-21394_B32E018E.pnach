@@ -17,7 +17,7 @@ patch=1,EE,20153AB4,extended,DCC50008
 patch=1,EE,20153A9C,extended,DCC50020
 
 [Convert units from mph to km/h]
-comment=Changes the ingame speedometer and gear menu to km/h
+description=Changes the ingame speedometer and gear menu to km/h
 author=JakeMR2
 patch=1,EE,001DBD88,extended,00003f80 //In-Game
 patch=1,EE,002ECD14,extended,00003f80 //Gear menu
