@@ -1,0 +1,39 @@
+gametitle=Simpsons Skateboarding, The (NTSC-U) (SLUS-20114)
+
+[60 FPS]
+author=Souzooka
+description=Removes framerate cap.  Simulation runs at 60fps, but some elements such as UI run quick.
+
+// First of all, only patch if we're in the game ELF to avoid bugs
+// (the FMV player is a separate ELF)
+patch=1,EE,E00EFFF0,extended,00100FF0 // check 00100FF0 matches value xxxxFFF0 (arbitrary code address)
+
+// Removes framerate cap
+patch=1,EE,20508D18,extended,0 // 1
+
+// Sets timestep to 16ms (from 33ms) so the game updates 60 times a second.
+// This calculates some values as if SetLogicTimeStep(16) (macro?) (at 1266C0) was called;
+// This is part of the noreturn game loop so it would only get calculated at boot.
+
+// The actual timestep values (might not need to get changed)
+patch=1,EE,203343D0,extended,10 // 2
+patch=1,EE,203343D4,extended,10 // 3
+patch=1,EE,203343BC,extended,10 // 4
+patch=1,EE,203343A0,extended,10 // 5
+patch=1,EE,2033439C,extended,10 // 6
+
+// Misc. Gamespeed values (?)
+patch=1,EE,203343A4,extended,3C83126F // 7
+patch=1,EE,203343C4,extended,3C83126F // 8
+patch=1,EE,203343A8,extended,3AD1B717 // 9
+patch=1,EE,203343C8,extended,3AD1B717 // A
+
+// Animation speed
+patch=1,EE,204EA830,extended,3C872B02 // B
+
+// Affects gravity on slopes and such
+patch=1,EE,204BF1A0,extended,3C872B02 // C
+
+// Stationary turn speed
+patch=1,EE,1017B2C0,extended,3D0E     // D
+patch=1,EE,1017B30C,extended,BD0E     // E
