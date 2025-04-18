@@ -1,0 +1,6 @@
+gametitle=Tom Clancy's Splinter Cell - Pandora Tomorrow (PAL-M) SLES-52149 990E57D1 SC2B.ELF
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,00337EF0,word,00000000
