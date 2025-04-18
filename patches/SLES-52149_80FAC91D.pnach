@@ -1,7 +1,4 @@
-gametitle=Tom Clancy's Splinter Cell 2: Pandora Tomorrow * SLES-52149 * PAL-M5 * 80FAC91D
-// CRC shifts from AB82114E to 80FAC91D (SC2A.ELF)
-
-// This pnach is activated through the SLES-52149_AB82114E pnach.
+gametitle=Tom Clancy's Splinter Cell - Pandora Tomorrow (PAL-M) SLES-52149 80FAC91D SC2A.ELF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -36,5 +33,5 @@ patch=1,EE,001B7A0C,word,AE1B008C
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE overclocking to be stable (130%).
-patch=1,EE,0018D7C8,word,24030001 // 24030002
+description=Might need EE Overclock (130%).
+patch=1,EE,0018D7C8,word,24030001 //24030002

@@ -1,0 +1,26 @@
+gametitle=SSX On Tour (PAL-M) SLES-53552 686B786E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,005ADF80,word,00000002
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0031338C,word,26310002 //26310001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,003503C4,word,24020002
+patch=1,EE,007B2064,word,000001C0
+patch=1,EE,007B2090,word,000001C0
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,003503C4,word,24020050
+patch=1,EE,007B2064,word,000001E0
+patch=1,EE,007B2090,word,000001E0

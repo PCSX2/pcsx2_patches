@@ -1,6 +1,16 @@
-gametitle=Tom Clancy's Splinter Cell 3: Chaos Theory * PAL-M3 * SLES-53287 * 4C4D7873
-// CRC shifts from 4C4D7873 to DDAEB7A6 (SC3_OFF.ELF)
+gametitle=Tom Clancy's Splinter Cell - Chaos Theory (PAL-M) SLES-53287 4C4D7873
+//Main CRC to activate CRCs: DDAEB7A6 called SC3_OFF.ELF and A1C2614A called SC3_ON.ELF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%). For multiplayer
 
 [480p Mode]
+gsinterlacemode=1
 author=PeterDelta
 description=SDTV 480p mode at start.
