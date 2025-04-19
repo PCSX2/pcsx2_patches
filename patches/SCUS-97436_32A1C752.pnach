@@ -113,7 +113,7 @@ patch=1,EE,200F1124,extended,460DFB40
 
 [B-Spec Progress Speed x16]
 author=TheAdmiester & Vyerq
-patch=1,EE,201F2D0C,extended,28420010 
+patch=1,EE,201F2D0C,extended,28420010
 patch=1,EE,201F2D14,extended,24020010
 
 [Disable licence/mission assists]
