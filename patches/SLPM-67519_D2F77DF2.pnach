@@ -348,7 +348,7 @@ patch=1,EE,200C0100,extended,3EC00000
 
 // Incomplete 60 fps hack by asasega
 // - might need EE overclocking to be stable.
-//patch=1,EE,2010121C,word,00000000 
+//patch=1,EE,2010121C,word,00000000
 
 [60 FPS]
 author=PeterDelta
