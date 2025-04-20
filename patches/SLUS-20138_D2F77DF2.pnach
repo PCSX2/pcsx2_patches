@@ -1,27 +1,22 @@
-gametitle=Rayman 2: Revolution (NTSC-U & NTSC-K) (SLUS-20138 & SLPM-67519)
+gametitle=Rayman 2: Revolution * NTSC-U * SLUS-20138 * D2F77DF2
+// Same CRC as SLPM-67519 - the NTSC-K disc
+// - these discs seems identical - patches should work for both discs.
+// pnach & formating by pgert.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hacks by Rib, ElHecht & ICUP321
+author=RibShark (Rib)
 
-// 16:9
-patch=1,EE,200C0100,extended,3F400000 // hor fov
+//patch=1,EE,0018c7d0,word,3c013f40 // 00000000 - X-FoV - old hack by ElHecht & icup321
+patch=1,EE,200C0100,extended,3F400000 // X-FoV - new hack by RibShark (Rib)
 
-// 15:9
-//patch=1,EE,200C0100,extended,3F500000 // hor fov
+// Main Widescreen patches - old hack by ElHecht & icup321
+//patch=1,EE,0018c7e0,word,4481f000 // 00000000
+//patch=1,EE,0018c7e4,word,461e0842 // 00000000
+//patch=1,EE,0011811c,word,461e6303 // 00000000 - renderfix calculation
 
-// 16:10
-//patch=1,EE,200C0100,extended,3F555555 // hor fov
-
-// 21:9
-//patch=1,EE,200C0100,extended,3F100000 // hor fov
-
-// 25:16
-//patch=1,EE,200C0100,extended,3F5A740E // hor fov
-
-// 32:9
-//patch=1,EE,200C0100,extended,3ED5C28F // hor fov
-
+// Main Widescreen patches - new hack by RibShark (Rib)
+// Fixes all 2D elements, including light coronas.
 patch=1,EE,2018C7D0,extended,3C15000C
 patch=1,EE,2018C7D4,extended,8EB50100
 patch=1,EE,2018C7E0,extended,4495F000
@@ -295,7 +290,67 @@ patch=1,EE,200C0C40,extended,E4600018
 patch=1,EE,200C0C44,extended,080753E7
 patch=1,EE,200C0C48,extended,00000000
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f55 // 00000000 - X-FoV
+//patch=1,EE,0018c7d4,word,34215555 // 00000000 - X-FoV
+patch=1,EE,200C0100,extended,3F555555
+
+[Widescreen 15:9]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f50
+patch=1,EE,200C0100,extended,3F500000
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f63
+//patch=1,EE,0018c7d4,word,34218E39
+patch=1,EE,200C0100,extended,3F638E39
+
+[Widescreen 20:9]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013F19
+//patch=1,EE,0018c7d4,word,3421999A
+patch=1,EE,200C0100,extended,3F19999A
+
+[Widescreen 21:9]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f12
+//patch=1,EE,0018c7d4,word,34214925
+// 3F124925, not 3f100000 (pgert)
+patch=1,EE,200C0100,extended,3F124925
+
+[Widescreen 25:16]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f5a
+//patch=1,EE,0018c7d4,word,3421740e
+patch=1,EE,200C0100,extended,3F5A740E
+
+[Widescreen 32:9]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013EC0
+// 3EC00000, not 3ed5c28f (pgert)
+patch=1,EE,200C0100,extended,3EC00000
+
+// Incomplete 60 fps hack by asasega
+// - might need EE overclocking to be stable.
+//patch=1,EE,2010121C,word,00000000 
+
 [60 FPS]
 author=PeterDelta
-description=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,001011FC,word,24030000 //24030001
+description=Might need EE overclocking to be stable (130%).
+patch=1,EE,001011FC,word,24030000 // 24030001
