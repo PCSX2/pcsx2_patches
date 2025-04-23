@@ -12,12 +12,11 @@ patch=1,EE,2079f728,extended,0015130c // 0014e5c4 force native 16:9 mode
 
 [No-Interlacing]
 gsinterlacemode=1
+author=gladiator
 description=No Interlacing & No Blur
-
 // No Interlacing
 patch=1,EE,202B2174,word,24060000
 patch=1,EE,20878A04,word,AEE0ED00
-
 // No Blur
 patch=1,EE,00702998,extended,000000E0
 patch=1,EE,20110084,extended,30420000
