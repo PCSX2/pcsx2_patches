@@ -1,23 +1,30 @@
-gametitle=The Godfather [PAL-Spain] (SLES_539.71)
+gametitle=The Godfather PAL-S SLES-53971 9C593C78
 
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=Gabominated & Arapapa
+description=Widescreen hack port from SLUS-21385.
+patch=1,EE,00355AF0,word,080B9624
+patch=1,EE,002E5890,word,46140002
+patch=1,EE,002E5894,word,3c013f40
+patch=1,EE,002E5898,word,4481f000
+patch=1,EE,002E589C,word,461e0002
+patch=1,EE,002E58A0,word,080D56BD
+patch=1,EE,0035F2AC,word,3C013F20 //zoom by Arapapa
+
+[Remove Blackbars]
 author=Arapapa
-
-//Widescreen hack 16:9
-
-//Zoom
-//003f013c 00608144
-patch=1,EE,0035f2ac,word,3c013f20 //3c013f00
-
-//Y-Fov
-//403f013c 00108144
-patch=1,EE,0036f42c,word,3c013f10 //3c013f40
-
-//Cutscene Bars
+description=No blackbars in cutscenes.
 patch=1,EE,006617B8,word,00000001
 
-[50 FPS]
+[NTSC Mode]
 author=Gabominated
-description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,202E4ECC,extended,00000000 //14400008 //fps
+description=NTSC mode at start.
+patch=0,EE,0036F3FC,word,1440002A
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,2036f410,extended,3c0142C8
+patch=1,EE,E001C28F,extended,005C5D28
+patch=1,EE,205C5D28,extended,42EFC28F
