@@ -22,8 +22,7 @@ patch=1,EE,20301750,word,3f400000 //3f800000 menu & HUD
 
 
 [No-Interlacing]
+author=gladiator
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,2010155C,word,00000000
-
-
