@@ -1,4 +1,5 @@
-gametitle=Raw Danger! [PAL] SLES-54587 A98B5AD6 (NTSC Mode) (v1.0) (Souzooka)
+gametitle=Raw Danger! (UNDUB v1.0-beta & NTSC Mode) * SLES_545.87 * PAL * A98B5AD6
+// same serial-code as A98B5B22 & 8DD6DDA3 - the regular version & NTSC Mode + Performance.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -8,3 +9,9 @@ author=El_Patas
 patch=1,EE,003A8360,word,43E00000 //43A00000 (Increases hor. axis)
 patch=1,EE,003A8380,word,43E00000 //43A00000
 patch=1,EE,0048C12C,word,3F400000 //3F800000
+
+[Remove Colorgrading Filter]
+author=Souzooka
+comment=Removes a problematic color grading filter effect that causes an incredible performance increase on both software and hardware rendering modes and also gives a sharper image to the game.
+patch=0,EE,202283C0,extended,03E00008
+patch=0,EE,202283C4,extended,00000000
