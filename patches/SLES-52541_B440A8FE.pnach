@@ -10,11 +10,6 @@ patch=1,EE,0020A4F8,extended,AC
 patch=1,EE,002081DC,extended,AC
 patch=1,EE,002ECBE0,extended,40
 patch=1,EE,002ECC30,extended,D0
-patch=1,EE,0033DC44,extended,3C013F80 //scenes zoom
-patch=1,EE,E0020001,extended,0066C8FC
-patch=1,EE,0033DC44,extended,3C013F40
-patch=1,EE,2021EE14,extended,3C023FC0
-patch=1,EE,2021EE14,extended,3C024000
 patch=1,EE,0026E18C,word,3C084280
 patch=1,EE,00269678,word,3C024280
 patch=1,EE,0026E7A8,word,3C024280
@@ -71,10 +66,12 @@ patch=1,EE,002A8A1C,word,E42D2FA8
 [Remove ghosting effects]
 author=PeterDelta
 description=Removes the ghosting effect keeping radiosity.
-patch=1,EE,00668D5C,extended,00000000
-patch=1,EE,00668DE8,extended,00000000
-patch=1,EE,E0010100,extended,007005E0
-patch=1,EE,007005E0,extended,00000130
+patch=1,EE,00668D5C,extended,00
+patch=1,EE,00668DE4,extended,00
+patch=1,EE,00668E28,extended,00
+patch=1,EE,00668E2C,extended,00
+patch=1,EE,00668E30,extended,00
+patch=1,EE,00668E34,extended,00
 
 [Remove Radiosity Filter]
 author=refractionpcsx2
