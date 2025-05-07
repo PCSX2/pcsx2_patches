@@ -10,11 +10,6 @@ patch=1,EE,0020A4F8,extended,AC
 patch=1,EE,002081DC,extended,AC
 patch=1,EE,002ECAF0,extended,40
 patch=1,EE,002ECB40,extended,D0
-patch=1,EE,0033DB54,extended,3C013F80 //zoom in scenes
-patch=1,EE,E0020001,extended,0066C174
-patch=1,EE,0033DB54,extended,3C013F40
-patch=1,EE,2021EE14,extended,3C023FC0
-patch=1,EE,2021EE14,extended,3C024000
 //-------------------------------------------------HUD-------------------------------------------------//
 patch=0,EE,20664384,extended,3ecccccd //Wanted Width
 patch=0,EE,20664390,extended,3ef5c28f //Wanted Shadow Width
