@@ -1,6 +1,20 @@
-[Remove Radiosity Filter]
-description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
+gametitle=Grand Theft Auto: San Andreas (NTSC-J) (v1.00) SLPM-55292 9E18263C
 
-//Remove Radiosity Filter
-patch=1,EE,2051B1B8,extended,00000000
+[Remove Ghosting Effects]
+author=Silent, PeterDelta
+description=Removes the ghosting effect from radiosity and color filter post effects, preserving the slight bloom effect. Also disables the seam remover post effect.
 
+patch=0,EE,00669D54,extended,00 // CPostEffects::m_bSeamRemover
+patch=0,EE,20669DDC,extended,00000000 // CPostEffects::m_RadiosityFilterPasses
+
+// These values are read from stream.ini from the init overlay, so we have to patch them every frame
+patch=1,EE,20669E20,extended,00000000 // CPostEffects::m_colourLeftUOffset
+patch=1,EE,20669E24,extended,00000000 // CPostEffects::m_colourRightUOffset
+patch=1,EE,20669E28,extended,00000000 // CPostEffects::m_colourTopVOffset
+patch=1,EE,20669E2C,extended,00000000 // CPostEffects::m_colourBottomVOffset
+
+[Remove Color Filter]
+author=Silent
+description=Removes the color filter, making the game look more like the PC version, without the yellow tint.
+
+patch=0,EE,20516748,extended,00000000 // NOP CPostEffects::ColourFilter
