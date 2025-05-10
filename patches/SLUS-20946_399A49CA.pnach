@@ -176,11 +176,11 @@ description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,2054986C,word,00000000
 
-[Remove Radiosity Filter]
-description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
+[Remove Color Filter]
+author=Silent
+description=Removes the color filter, making the game look more like the PC version, without the yellow tint.
 
-//Remove Radiosity Filter
-patch=1,EE,20519FD8,extended,00000000
+patch=0,EE,20515568,extended,00000000 // NOP CPostEffects::ColourFilter
 
 [Remove Ghosting Effects]
 author=PeterDelta
@@ -189,6 +189,12 @@ patch=1,EE,006684DC,extended,00000000
 patch=1,EE,00668568,extended,00000000
 patch=1,EE,E0010100,extended,006FF980
 patch=1,EE,006FF980,extended,00000130
+
+[Remove Radiosity Filter Pass]
+author=Silent, PeterDelta
+description=Removes the ghosting effect from radiosity post effects, preserving the slight bloom effect.
+
+patch=0,EE,20668564,extended,00000000 // CPostEffects::m_RadiosityFilterPasses
 
 [60 FPS]
 author=asasega
