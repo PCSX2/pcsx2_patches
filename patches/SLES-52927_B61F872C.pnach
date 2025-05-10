@@ -1,4 +1,4 @@
-gametitle=Grand Theft Auto - San Andreas (PAL-G) (v2.01) SLES-52927 B61F872C
+gametitle=Grand Theft Auto: San Andreas (PAL-G) (v2.01) SLES-52927 B61F872C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -63,20 +63,24 @@ patch=1,EE,002A89B4,word,3C01007C
 patch=1,EE,002A89B8,word,03E00008
 patch=1,EE,002A89BC,word,E42D2F28
 
-[Remove ghosting effects]
-author=PeterDelta
-description=Removes the ghosting effect keeping radiosity.
-patch=1,EE,00668CDC,extended,00
-patch=1,EE,00668D64,extended,00
-patch=1,EE,00668DA8,extended,00
-patch=1,EE,00668DAC,extended,00
-patch=1,EE,00668DB0,extended,00
-patch=1,EE,00668DB4,extended,00
+[Remove Ghosting Effects]
+author=Silent, PeterDelta
+description=Removes the ghosting effect from radiosity and color filter post effects, preserving the slight bloom effect. Also disables the seam remover post effect.
 
-[Remove Radiosity Filter]
-author=PeterDelta
-description=Removes the radiosity filter.
-patch=1,EE,2051A758,extended,00000000
+patch=0,EE,00668CDC,extended,00 // CPostEffects::m_bSeamRemover
+patch=0,EE,20668D64,extended,00000000 // CPostEffects::m_RadiosityFilterPasses
+
+// These values are read from stream.ini from the init overlay, so we have to patch them every frame
+patch=1,EE,20668DA8,extended,00000000 // CPostEffects::m_colourLeftUOffset
+patch=1,EE,20668DAC,extended,00000000 // CPostEffects::m_colourRightUOffset
+patch=1,EE,20668DB0,extended,00000000 // CPostEffects::m_colourTopVOffset
+patch=1,EE,20668DB4,extended,00000000 // CPostEffects::m_colourBottomVOffset
+
+[Remove Color Filter]
+author=Silent
+description=Removes the color filter, making the game look more like the PC version, without the yellow tint.
+
+patch=0,EE,20515CE8,extended,00000000 // NOP CPostEffects::ColourFilter
 
 [50 FPS]
 author=PeterDelta
