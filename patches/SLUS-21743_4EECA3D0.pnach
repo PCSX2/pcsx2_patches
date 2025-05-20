@@ -19,3 +19,7 @@ patch=1,EE,0045b92c,word,3c03c340 //3c03c380
 patch=1,EE,0045b954,word,3c0243ab //3c024380
 
 
+[No-Interlacing]
+author=Switz0018
+//forces branch
+patch=1,EE,20476638,extended,10000020 //14c00020
