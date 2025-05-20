@@ -20,6 +20,6 @@ patch=1,EE,0045b954,word,3c0243ab //3c024380
 
 [No-Interlacing]
 author=Switz0018
-Description=Removes interlacing, issues with 16:9
-patch=1,EE,20463DEC,extended,2DA00000 // Load screens
-patch=1,EE,20476638,extended,10000020 // Gameplay, forces branch
+Description=Removes interlacing.
+patch=1,EE,20476638,extended,10000020//Gameplay,forces branch
+patch=1,EE,20463DEC,extended,0002A000//Fix the GIF,de-interlace load screens
