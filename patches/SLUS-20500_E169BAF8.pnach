@@ -24,3 +24,43 @@ patch=1,EE,2073C604,word,00000000
 description=Lowers the bottom parts of the HUD during gameplay. Should only be used in conjunction with Remove Black Bars.
 author=?
 patch=1,EE,2073BF14,word,3F866666
+
+[Aspect Ratio - 32:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20152D3C,extended,3C014063 //Horizontal (4:3)
+patch=1,EE,20152D40,extended,34218E39 //Vertical (4:3)
+
+patch=1,EE,20152D54,extended,3C014063 //Horizontal (16:9)
+patch=1,EE,20152D58,extended,34218E39 //Vertical (16:9)
+
+[Aspect Ratio - 21:9 (3840x1600)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20152D3C,extended,3C014019 //Horizontal (4:3)
+patch=1,EE,20152D40,extended,3421999A //Vertical (4:3)
+
+patch=1,EE,20152D54,extended,3C014019 //Horizontal (16:9)
+patch=1,EE,20152D58,extended,3421999A //Vertical (16:9)
+
+[Aspect Ratio - 21:9 (3440x1440)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20152D3C,extended,3C014018 //Horizontal (4:3)
+patch=1,EE,20152D40,extended,3421E38E //Vertical (4:3)
+
+patch=1,EE,20152D54,extended,3C014018 //Horizontal (16:9)
+patch=1,EE,20152D58,extended,3421E38E //Vertical (16:9)
+
+[Aspect Ratio - 21:9 (2560x1080)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20152D3C,extended,3C014017 //Horizontal (4:3)
+patch=1,EE,20152D40,extended,3421B426 //Vertical (4:3)
+
+patch=1,EE,20152D54,extended,3C014017 //Horizontal (16:9)
+patch=1,EE,20152D58,extended,3421B426 //Vertical (16:9)
