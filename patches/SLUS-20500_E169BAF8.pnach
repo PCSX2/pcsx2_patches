@@ -35,6 +35,8 @@ patch=1,EE,20152D40,extended,34218E39 //Vertical (4:3)
 patch=1,EE,20152D54,extended,3C014063 //Horizontal (16:9)
 patch=1,EE,20152D58,extended,34218E39 //Vertical (16:9)
 
+patch=1,EE,20CABB64,extended,40638E39 //Loading Screen
+
 [Aspect Ratio - 21:9 (3840x1600)]
 gsaspectratio=Stretch
 author=Virjoinga
@@ -44,6 +46,8 @@ patch=1,EE,20152D40,extended,3421999A //Vertical (4:3)
 
 patch=1,EE,20152D54,extended,3C014019 //Horizontal (16:9)
 patch=1,EE,20152D58,extended,3421999A //Vertical (16:9)
+
+patch=1,EE,20CABB64,extended,4019999A //Loading Screen
 
 [Aspect Ratio - 21:9 (3440x1440)]
 gsaspectratio=Stretch
@@ -55,6 +59,8 @@ patch=1,EE,20152D40,extended,3421E38E //Vertical (4:3)
 patch=1,EE,20152D54,extended,3C014018 //Horizontal (16:9)
 patch=1,EE,20152D58,extended,3421E38E //Vertical (16:9)
 
+patch=1,EE,20CABB64,extended,4018E38E //Loading Screen
+
 [Aspect Ratio - 21:9 (2560x1080)]
 gsaspectratio=Stretch
 author=Virjoinga
@@ -64,3 +70,5 @@ patch=1,EE,20152D40,extended,3421B426 //Vertical (4:3)
 
 patch=1,EE,20152D54,extended,3C014017 //Horizontal (16:9)
 patch=1,EE,20152D58,extended,3421B426 //Vertical (16:9)
+
+patch=1,EE,20CABB64,extended,4017B426 //Loading Screen
