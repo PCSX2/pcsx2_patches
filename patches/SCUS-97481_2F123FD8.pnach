@@ -6,3 +6,7 @@ author=nemesis2000
 patch=1,EE,00234A48,word,46000406
 
 
+[Skip Cutscenes]
+author=Ezedequias
+comment=With Any Action Button
+patch=1,EE,202D8194,byte,01
