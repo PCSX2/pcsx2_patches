@@ -1,6 +1,14 @@
-gametitle=The Mummy PAL-M SLES-52835 40033F92
+gametitle=The Mummy - The Animated Series PAL-M SLES-52835 40033F92
 
-[50 FPS]
+[50/60 FPS]
 author=Gabominated
 description=Might need EE Overclock.
 patch=1,EE,0021A59C,word,14600006
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC Mode at start.
+patch=0,EE,0021949C,word,30420000 //30420001
+patch=0,EE,00225010,word,30620000 //30620001
+patch=1,EE,005A3DD4,word,00000280 //00000200
+patch=1,EE,005A3DD8,word,000001C0 //00000200
