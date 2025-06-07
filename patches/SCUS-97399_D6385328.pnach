@@ -148,3 +148,8 @@ patch=1,EE,201692b8,extended,3c013f40
 patch=1,EE,e0020001,extended,0029cc50
 patch=1,EE,e0010000,extended,0029cc90
 patch=1,EE,201692b8,extended,3c013f40
+
+[Skip Cutscenes]
+author=Ezedequias
+description=With Any Action Button
+patch=1,EE,2029C83C,byte,01
