@@ -1,0 +1,6 @@
+gametitle= God of War 2 (NTSC-J) (SLPM-67013) E96E55BD
+
+[Skip Cutscenes]
+author=Ezedequias
+description=With Any Action Button
+patch=1,EE,002D9DB4,byte,01
