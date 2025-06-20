@@ -6,4 +6,7 @@ description=widescreen 16:9 (NTSC-K) hack by 99skull
 //credit goes to nemesis2000
 patch=1,EE,00169308,word,3C013F22 //3C013F00, zoom
 
-
+[Skip Cutscenes]
+author=Ezedequias
+description=With Any Action Button
+patch=1,EE,0029D4FC,byte,01
