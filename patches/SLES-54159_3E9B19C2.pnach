@@ -1,4 +1,4 @@
-gametitle=Eragon (E)(SLES-54159) 3E9B19C2
+gametitle=Eragon PAL-M SLES-54159 3E9B19C2
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -12,7 +12,14 @@ patch=1,EE,001b6348,word,461e0842 //4618a843
 //Render fix
 patch=1,EE,001afc44,word,3c023f2b //3c023f00
 
-[50 FPS]
+[50/60 FPS]
 author=user234
-description=Unlocked at 50 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock (180%).
 patch=1,EE,00399A30,word,00000000 //00000001
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=0,EE,001BD818,word,14400003 //10400003
+patch=0,EE,001BD52C,word,54400002 //50400002
+patch=0,EE,001BD538,word,54400002 //50400002

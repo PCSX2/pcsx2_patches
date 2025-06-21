@@ -1,0 +1,6 @@
+gametitle=FIFA Street 2 PAL-M SLES-53797 A0DC603B
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=0,EE,002A2BCC,word,24100000 //24100001
