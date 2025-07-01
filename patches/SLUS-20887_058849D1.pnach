@@ -20,4 +20,39 @@ patch=1,EE,000c0010,word,0809700f
 //003f023c 6000bfff 00008244
 patch=1,EE,00158dc4,word,3c023f2b //3c023f00
 
+[Skippable Cutscenes]
+author=Souzooka
+description=Press the START or X Button to skip cutscenes.
+// NOTE: This works by setting the cutscene length to 0, which is only checked every second or so.
 
+// Set up a call site to a code cave slightly above the cutscene length check
+// at this point in the code we know a cutscene is running,
+// and this code runs unconditonally every frame at that point
+patch=0,EE,202C3008,extended,C61400A4 // lwc1 f20,0xA4(s0) ; moved up one slot into branch delay
+patch=0,EE,202C300C,extended,4615A040 // add.s f01,f20,f21 ; moved up one slot
+patch=0,EE,202C3010,extended,E60100A4 // swc1 f01,0xA4(s0) ; moved up one slot
+patch=0,EE,202C3014,extended,0C040920 // jal z_un_00102480 ; Jump to sceDmaSendI (believed to be orphaned)
+patch=0,EE,202C3018,extended,02002021 // addu a0,s0,zero ; pointer variable used in code cave
+patch=0,EE,202C301C,extended,02002021 // addu a0,s0,zero ; restore spoiled a0
+patch=0,EE,202C3020,extended,14400119 // bne v0,zero,0x002C3488 ; Code cave now returns branch condition
+patch=0,EE,202C3024,extended,C60100A4 // lwc1 f01,0xA4(s0) ; restore spoiled f01
+
+// Code cave (at sceDmaSendI / 0x102480)
+patch=0,EE,20102480,extended,3C010049 // lui at,0x0049
+patch=0,EE,20102484,extended,8024B7C2 // lb a0,-0x483E(at)
+patch=0,EE,20102488,extended,30840008 // andi a0,a0,0x0008 ; check START Button
+patch=0,EE,2010248C,extended,00801021 // addu v0,a0,zero
+patch=0,EE,20102490,extended,8024B7C3 // lb a0,-0x483D(at)
+patch=0,EE,20102494,extended,30840040 // andi a0,a0,0x0040 ; check X Button
+patch=0,EE,20102498,extended,00441025 // or v0,v0,a0
+patch=0,EE,2010249C,extended,54400001 // bnel v0,zero,0x001024A4
+patch=0,EE,201024A0,extended,AE0000AC // sw zero,0xAC(s0) ; Set cutscene length to 0 if either were pressed. Checked every second or so.
+// The below recreates a condition overwritten at the call site
+patch=0,EE,201024A4,extended,C60100A4 // lwc1 f01,0xA4(s0)
+patch=0,EE,201024A8,extended,C60000A8 // lwc1 f00,0xA8(s0)
+patch=0,EE,201024AC,extended,46010036 // c.le.s f00,f01
+patch=0,EE,201024B0,extended,00001021 // addu v0,zero,zero
+patch=0,EE,201024B4,extended,45020001 // bc1fl 0x001024BC
+patch=0,EE,201024B8,extended,24020001 // addiu v0,zero,0x1
+patch=0,EE,201024BC,extended,03E00008 // jr ra
+patch=0,EE,201024C0,extended,00000000 // nop
