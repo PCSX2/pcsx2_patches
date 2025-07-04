@@ -7,7 +7,13 @@ description=Enable native widescreen.
 patch=1,EE,00388D04,word,3C013F10 //3C013F00 zoom fix
 patch=1,EE,0065F798,word,00000001 //00000000
 
-[50 FPS]
+[50/60 FPS]
 author=Gabominated
 description=Might need EE Overclock.
 patch=1,EE,001C9674,word,24020002 //24020004
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC Mode at start.
+patch=0,EE,0042CF00,word,24020005 //24020004
+patch=0,EE,0042CF08,word,240300E0 //24030100
