@@ -22,7 +22,7 @@ patch=1,EE,0045C880,word,40155555
 gsaspectratio=Stretch
 description=Widescreen Hack
 author=FelkonEXE
-patch=1,EE,0045C880,word,3FA20000
+patch=1,EE,0045C880,word,3FC00000
 
 [Widescreen 20:9]
 gsaspectratio=Stretch
