@@ -1,0 +1,7 @@
+gametitle= God of War 2 E3 Demo (NTSC-U) (SCUS-97467) 56EC00B5
+
+[Skip Cutscenes]
+author=Ezedequias
+description=With Any Action Button
+patch=1,EE,002B15BC,byte,01
+patch=1,EE,0018F7AC,word,0000
