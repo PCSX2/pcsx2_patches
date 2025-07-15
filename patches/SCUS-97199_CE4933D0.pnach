@@ -1,101 +1,77 @@
-//gametitle=Ratchet & Clank (NTSC-U)
+gametitle=Ratchet & Clank (NTSC-U)
 
-//[Widescreen 16:9]
-//gsaspectratio=16:9
-//author=PsxFan107. Currently it appears to break rendering of textures in some areas.
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=TechieSaru
 
-// DWORD Code patching routine
-//patch=1,EE,200C0000,extended,3C1B000C
-//patch=1,EE,200C0004,extended,DF710080
-//patch=1,EE,200C0008,extended,14510002
-//patch=1,EE,200C0010,extended,DF620088
-//patch=1,EE,200C0014,extended,DF710090
-//patch=1,EE,200C0018,extended,14510003
-//patch=1,EE,200C0020,extended,8F7200A0
-//patch=1,EE,200C0024,extended,AC72FFF0
-//patch=1,EE,200C0028,extended,DF710098
-//patch=1,EE,200C002C,extended,14510002
-//patch=1,EE,200C0034,extended,AC72FFF0
-//patch=1,EE,200C0038,extended,0804B657
-//patch=1,EE,200C003C,extended,FC62FFF8
+//Auto patch entrypoint
+patch=1,EE,2012D900,word,080569C0
 
-// WORD Code patching routine
-//patch=1,EE,200C0040,extended,3C1B000C
-//patch=1,EE,200C0044,extended,8F710080
-//patch=1,EE,200C0048,extended,14510002
-//patch=1,EE,200C0050,extended,8F620088
-//patch=1,EE,200C0054,extended,8F710090
-//patch=1,EE,200C0058,extended,14510003
-//patch=1,EE,200C0060,extended,8F7200A0
-//patch=1,EE,200C0064,extended,ACB2FFF4
-//patch=1,EE,200C0068,extended,8F71009C
-//patch=1,EE,200C006C,extended,14510002
-//patch=1,EE,200C0074,extended,ACB2FFF0
-//patch=1,EE,200C0078,extended,0804B663
-//patch=1,EE,200C007C,extended,ACA2FFFC
+//Auto patch routine
+patch=1,EE,2015A700,word,3C0101F1
+patch=1,EE,2015A704,word,34218FF0
+patch=1,EE,2015A708,word,5061001A
+patch=1,EE,2015A70C,word,00000000
+patch=1,EE,2015A710,word,3C01C460
+patch=1,EE,2015A714,word,342100B0
+patch=1,EE,2015A718,word,00602020
+patch=1,EE,2015A71C,word,8C870000
+patch=1,EE,2015A720,word,54E1FFFE
+patch=1,EE,2015A724,word,24840004
+patch=1,EE,2015A728,word,3C010C05
+patch=1,EE,2015A72C,word,342169DF
+patch=1,EE,2015A730,word,AC810008
+patch=1,EE,2015A734,word,3C019623
+patch=1,EE,2015A738,word,34210150
+patch=1,EE,2015A73C,word,00602020
+patch=1,EE,2015A740,word,8C870000
+patch=1,EE,2015A744,word,54E1FFFE
+patch=1,EE,2015A748,word,24840004
+patch=1,EE,2015A74C,word,240100AF
+patch=1,EE,2015A750,word,A081000C
+patch=1,EE,2015A754,word,3C01C441
+patch=1,EE,2015A758,word,342100B0
+patch=1,EE,2015A75C,word,00602020
+patch=1,EE,2015A760,word,8C870000
+patch=1,EE,2015A764,word,54E1FFFE
+patch=1,EE,2015A768,word,24840004
+patch=1,EE,2015A76C,word,240100AF
+patch=1,EE,2015A770,word,A0810010
+patch=1,EE,2015A774,word,0804B642
+patch=1,EE,2015A778,word,0000482D
 
-// Widescreen comparison  DWORD/WORD
-//patch=1,EE,200C0080,extended,C46000B0
-//patch=1,EE,200C0084,extended,46010002
+//Widescreen routine
+patch=1,EE,2015A77C,word,3C010016
+patch=1,EE,2015A780,word,C422A7E0
+patch=1,EE,2015A784,word,2421A7E4
+patch=1,EE,2015A788,word,8C6200B0
+patch=1,EE,2015A78C,word,3C043F21
+patch=1,EE,2015A790,word,348447AE
+patch=1,EE,2015A794,word,24850001
+patch=1,EE,2015A798,word,50A20004
+patch=1,EE,2015A79C,word,AC6400B0
+patch=1,EE,2015A7A0,word,3C043F80
+patch=1,EE,2015A7A4,word,14820003
+patch=1,EE,2015A7A8,word,00000000
+patch=1,EE,2015A7AC,word,1000000A
+patch=1,EE,2015A7B0,word,E46000B4
+patch=1,EE,2015A7B4,word,8C240000
+patch=1,EE,2015A7B8,word,10820007
+patch=1,EE,2015A7BC,word,00000000
+patch=1,EE,2015A7C0,word,E46000B4
+patch=1,EE,2015A7C4,word,44820000
+patch=1,EE,2015A7C8,word,46020003
+patch=1,EE,2015A7CC,word,E46000B0
+patch=1,EE,2015A7D0,word,44020000
+patch=1,EE,2015A7D4,word,AC220000
+patch=1,EE,2015A7D8,word,03E00008
+patch=1,EE,2015A7DC,word,00000000
+patch=1,EE,2015A7E0,word,3F400000
 
-// Widescreen replacement  DWORD/WORD
-//patch=1,EE,200C0088,extended,0C030029
-//patch=1,EE,200C008C,extended,46010002
-
-// Pause menu fix refrence  DWORD/WORD
-// Note: The injection routine works backwards from this.
-//patch=1,EE,200C0090,extended,00055443
-//patch=1,EE,200C0094,extended,00031C00
-
-// Gadgetron vendor fix refrence  DWORD/WORD
-// Note: The injection routine works backwards from this.
-//patch=1,EE,200C0098,extended,E60100E8
-//patch=1,EE,200C009C,extended,E44000B0
-
-// Pause menu / Gadgetron vendor fix replacement DWORD/WORD
-//patch=1,EE,200C00A0,extended,342147AF
-
-// HOR FOV Recalculation routine
-// This routine works by iterating through a list of unpatched FOV's.
-// If the HOR FOV in ram matches one these values, it gets recalculated.
-//patch=1,EE,200C00A4,extended,8C6100B0
-//patch=1,EE,200C00A8,extended,8F640110
-//patch=1,EE,200C00AC,extended,14240006
-//patch=1,EE,200C00B4,extended,C7620114
-//patch=1,EE,200C00B8,extended,E46200B0
-//patch=1,EE,200C00BC,extended,44810000
-//patch=1,EE,200C00C0,extended,1000000F
-//patch=1,EE,200C00C8,extended,C77E010C
-//patch=1,EE,200C00CC,extended,3C01000C
-//patch=1,EE,200C00D0,extended,3421011C
-//patch=1,EE,200C00D4,extended,277B0114
-//patch=1,EE,200C00D8,extended,C46000B0
-//patch=1,EE,200C00DC,extended,103B0007
-//patch=1,EE,200C00E0,extended,C7620000
-//patch=1,EE,200C00E4,extended,277B0004
-//patch=1,EE,200C00E8,extended,46020032
-//patch=1,EE,200C00EC,extended,4500FFFB
-//patch=1,EE,200C00F4,extended,461E0003
-//patch=1,EE,200C00F8,extended,E46000B0
-//patch=1,EE,200C00FC,extended,461E0002
-//patch=1,EE,200C0100,extended,46010002
-//patch=1,EE,200C0104,extended,03E00008
-//patch=1,EE,200C0108,extended,3C1B000C
-
-// Hor scale
-//patch=1,EE,200C010C,extended,3F400000
-
-// Pause menu and Gadgetron Hor FOV
-//patch=1,EE,200C0110,extended,3F2147AF
-
-// Unpatched Hor FOV values
-//patch=1,EE,200C0114,extended,3F2147AE
-//patch=1,EE,200C0118,extended,3ED40674
-
-// Jump to DWORD patching routine
-//patch=1,EE,2012D954,extended,08030000
-
-// Jump to WORD patching routine
-//patch=1,EE,2012D984,extended,08030010
-
-
+//FMV's fix
+patch=1,EE,E005EEB8,extended,001FAE7C
+patch=1,EE,201FAE84,extended,240202AA
+patch=1,EE,201FAE90,extended,2A05000C
+patch=1,EE,201FAECC,extended,240302AA
+patch=1,EE,201FADE4,extended,241375F8
+patch=1,EE,201FADEC,extended,241273F8
