@@ -26,5 +26,6 @@ gametitle=Urban Chaos - Riot Response (NTSC-U) (SLUS-21390)
 //patch=1,EE,00655278,word,08063d53 // 00000000
 
 [60 FPS]
+author=asasega
 description=60 fps patch (needs EE cylce rate overlock of at least 180%)
 patch=1,EE,2064E3B0,extended,00000001
