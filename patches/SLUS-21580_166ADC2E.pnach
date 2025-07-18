@@ -1,0 +1,31 @@
+gametitle=MTV Pimp My Ride NTSC-U SLUS-21580 166ADC2E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen Hack
+author=FelkonEXE
+patch=1,EE,0045C880,word,3FE38E39
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+description=Widescreen Hack
+author=FelkonEXE
+patch=1,EE,0045C880,word,3FCCCCCD
+
+[Widescreen 21:9]
+gsaspectratio=Stretch
+description=Widescreen Hack
+author=FelkonEXE
+patch=1,EE,0045C880,word,40155555
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+description=Widescreen Hack
+author=FelkonEXE
+patch=1,EE,0045C880,word,3FC00000
+
+[Widescreen 20:9]
+gsaspectratio=Stretch
+description=Widescreen Hack
+author=FelkonEXE
+patch=1,EE,0045C880,word,400E38E1
