@@ -72,3 +72,27 @@ patch=1,EE,20152D54,extended,3C014017 //Horizontal (16:9)
 patch=1,EE,20152D58,extended,3421B426 //Vertical (16:9)
 
 patch=1,EE,20CABB64,extended,4017B426 //Loading Screen
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=Virjoinga & pgert
+description=Changes aspect ratio.
+patch=1,EE,20152D3C,extended,3C033FCC //Horizontal (4:3)
+patch=1,EE,20152D40,extended,3463CCCD //Vertical (4:3)
+
+patch=1,EE,20152D54,extended,3C033FCC //Horizontal (16:9)
+patch=1,EE,20152D58,extended,3463CCCD //Vertical (16:9)
+
+patch=1,EE,20CABB64,extended,3FCCCCCD //Loading Screen
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=Virjoinga & pgert
+description=Changes aspect ratio.
+patch=1,EE,20152D3C,extended,3C033FC0 //Horizontal (4:3)
+patch=1,EE,20152D40,extended,34630000 //Vertical (4:3)
+
+patch=1,EE,20152D54,extended,3C033FC0 //Horizontal (16:9)
+patch=1,EE,20152D58,extended,34630000 //Vertical (16:9)
+
+patch=1,EE,20CABB64,extended,3FC00000 //Loading Screen
