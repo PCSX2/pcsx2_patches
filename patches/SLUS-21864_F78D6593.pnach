@@ -46,7 +46,7 @@ author=Virjoinga & pgert
 description=Changes aspect ratio.
 patch=1,EE,202272D8,extended,3C033FCC //Horizontal (4:3)
 patch=1,EE,202272DC,extended,3463CCCD //Vertical (4:3)
-                                      
+
 patch=1,EE,202272F0,extended,3C033FCC //Horizontal (16:9)
 patch=1,EE,202272F4,extended,3463CCCD //Vertical (16:9)
 
@@ -56,6 +56,6 @@ author=Virjoinga & pgert
 description=Changes aspect ratio.
 patch=1,EE,202272D8,extended,3C033FC0 //Horizontal (4:3)
 patch=1,EE,202272DC,extended,34630000 //Vertical (4:3)
-                                      
+
 patch=1,EE,202272F0,extended,3C033FC0 //Horizontal (16:9)
 patch=1,EE,202272F4,extended,34630000 //Vertical (16:9)
