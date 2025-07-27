@@ -1,4 +1,4 @@
-gametitle=Family Guy (SLES-54126)
+gametitle=Family Guy - The Video Game PAL-M SLES-54126 E393DFE5
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -8,7 +8,12 @@ patch=1,EE,0011B3A8,word,00000000 //10400009
 patch=1,EE,0011B3BC,word,3C013F80 //3C013F59
 patch=1,EE,0011B3C0,word,34210000 //3421999A
 
-[50 FPS]
+[50/60 FPS]
 author=CRASHARKI
 description=Patches the game to run at 50 FPS. (Original NTSC-U pnach by asasega)
 patch=1,EE,2025989C,word,00000001 //00000002
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=0,EE,0014E0D8,word,14600002 //10600002

@@ -1,0 +1,6 @@
+gametitle= God of War (NTSC-J) (SLPM-67010) CA052D22
+
+[Skip Cutscenes]
+author=Ezedequias
+description=With Any Action Button
+patch=1,EE,0029D91C,byte,01

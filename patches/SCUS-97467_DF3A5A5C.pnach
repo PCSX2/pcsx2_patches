@@ -1,0 +1,7 @@
+gametitle= God of War [Demo] (NTSC-U) (SCUS-97467) DF3A5A5C
+
+[Skip Cutscenes]
+author=Ezedequias
+description=With X
+patch=1,EE,0029358C,byte,01
+patch=1,EE,001885BC,word,0000
