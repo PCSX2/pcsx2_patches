@@ -8,6 +8,35 @@ patch=1,EE,002D6EF0,word,3c013fe3 //3c013faa
 patch=1,EE,002D6EF4,word,34218e38 //3421aaab
 
 [60 FPS]
-author=asasega
+author=asasega and Souzooka
 description=Unlocks internal FPS. Might need EE Overclock at 130%.
-patch=1,EE,0041A4A0,word,00000001 //00000002
+
+// Change framerate divisor 2 -> 1
+patch=1,EE,2041A4A0,extended,00000001 //00000002
+
+// Fix gravity so jump heights are the same as in 30fps
+// The issue with gravity at 60fps is that it's a fixed update, with a function (@ 0x00119DF8) processing gravity in 1/60th second chunks
+// (0.0166667f). The function iterates gravity until it's greater than the delta time provided to the function which, for some reason,
+// is rounded to the nearest thousandth (so for 60fps, this will be 0.017f). This means that gravity will always be processed twice a
+// frame at 60fps. We'll correct this by hooking at the end of the function to save the remaining time, and hooking at the beginning of the function
+// to start iterating from the remaining time rather than 0. This means that on most frames, gravity should only be processed once at 60fps, and will
+// make framerates which aren't divisors of 60 also more accurate.
+// Grab the extra time from the last time gravity was processed
+patch=0,EE,20119E58,extended,0C0ABAE6 // jal 0x2AEB98 // was mtc1 zero, f21
+// Save the extra time at end of function
+patch=0,EE,2011A280,extended,080ABAEA // j 0x002AEBA8 ($ra is already restored here) // was lwc1 f27, 0xE8(sp)
+
+// Now set up some code to handle the extra time left over from processing gravity
+// (This area seems to be junk code, just "sqc2 vf06,0x0(a0)" then "nop" over and over)
+// read extra time
+patch=0,EE,202AEB98,extended,3C01002B // lui at,0x002B
+patch=0,EE,202AEB9C,extended,03E00008 // jr ra
+patch=0,EE,202AEBA0,extended,C435EBA4 // lwc1 f21,-0x145C(at) // Read from 0x2AEBA4
+// initialize extra time
+patch=0,EE,202AEBA4,extended,00000000
+// write extra time
+patch=0,EE,202AEBA8,extended,C7BB00E8 // lwc1 f27,0xE8(sp) // Restore part of the epilogue we overwrote
+patch=0,EE,202AEBAC,extended,4619A801 // sub.s f00,f21,f25 // f0 = (sum of 1/60 second chunks) - deltatime
+patch=0,EE,202AEBB0,extended,3C01002B // lui at,0x002B
+patch=0,EE,202AEBB4,extended,080468A2 // j 0x0011A288 // Jump back to original function
+patch=0,EE,202AEBB8,extended,E420EBA4 // swc1 f00,-0x145C(at)
