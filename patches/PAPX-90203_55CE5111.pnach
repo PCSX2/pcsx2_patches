@@ -1,7 +1,245 @@
 gametitle=Gran Turismo 2000 [PAPX-90203]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=16:9 widescreen patch
+author=Silent
+
+// Change Vert- to Hor+
+patch=0,EE,2024589C,extended,3C033F40 // lui v1,0x3F40
+patch=0,EE,202458AC,extended,44836000 // mtc1 v1,f12
+
+// Fix the race HUD
+patch=0,EE,10219780,extended,0078 // Tachometer width
+patch=0,EE,10219788,extended,01E0 // Tachometer posX
+patch=0,EE,10219168,extended,005D // Speed text posX
+patch=0,EE,10219210,extended,0048 // km/h posX
+patch=0,EE,10219340,extended,005B // gear posX
+patch=0,EE,10219670,extended,01F4 // Position indicator posX
+patch=0,EE,10219678,extended,003C // Position indicator width
+
+// Slightly enlarge the gear background to account for stretched fonts
+patch=0,EE,2027DCB0,extended,41F00000 // 30.0f
+patch=0,EE,2027DCBC,extended,42600000 // 56.0f
+patch=0,EE,2027DCC8,extended,41F00000 // 30.0f
+patch=0,EE,2027DCD4,extended,42600000 // 56.0f
+
+// As we can't unstretch fonts easily, leave the pause menu background stretched
+
+// Fix menus
+//patch=0,EE,202A28C0,extended,42D64925 // Background movie width (fit)
+patch=0,EE,202A28C4,extended,42855555 // Background movie height (fill)
+patch=0,EE,202A26A8,extended,C2875B6E // Side ruler posX
+patch=0,EE,202A26B0,extended,40E00000 // Side ruler width
+patch=0,EE,202A1F90,extended,42430000 // 2000 logo width
+patch=0,EE,202A20B0,extended,40F00000 // Polyphony logo width
+patch=0,EE,202A2980,extended,425E0000 // GT logo width
+patch=0,EE,202A2A40,extended,41900000 // 'Game Start' text width
+patch=0,EE,202A2C18,extended,C1340000 // 'Game Start' peak light start pos
+patch=0,EE,202A2C48,extended,41340000 // 'Game Start' peak light end pos
+patch=0,EE,202A2F78,extended,C2620000 // Color sample posX
+patch=0,EE,202A2F80,extended,40900000 // Color sample width
+patch=0,EE,202A3008,extended,C2340000 // Color name posX
+patch=0,EE,202A3010,extended,41F00000 // Color name width
+patch=0,EE,202A31B8,extended,C2700000 // Color name peak light start pos
+patch=0,EE,202A31E8,extended,C1F00000 // Color name peak light end pos
+patch=0,EE,10207140,extended,3F90 // Color name peak light flash offset (high word)
+patch=0,EE,202A31E8,extended,C273C000 // Color name peak light posX
+patch=0,EE,202A31F0,extended,3FF00000 // Color name peak light width
+patch=0,EE,202A34E8,extended,42280000 // Car badge posX
+patch=0,EE,202A3638,extended,42280000 // Car badge posX
+patch=0,EE,202A34F0,extended,42160000 // Car badge width
+patch=0,EE,202A3640,extended,42160000 // Car badge width
+patch=0,EE,202A3758,extended,42390000 // '4WD' text posX
+patch=0,EE,202A3760,extended,41100000 // '4WD' text width
+patch=0,EE,202A3878,extended,42630000 // '280PS' text posX
+patch=0,EE,202A3880,extended,41280000 // '280PS' text width
+patch=0,EE,202A3D28,extended,426D0000 // Car specs #1 posX
+patch=0,EE,202A3DB8,extended,426D0000 // Car specs #2 posX
+patch=0,EE,202A3E48,extended,426D0000 // Car specs #3 posX
+patch=0,EE,202A3ED8,extended,42658000 // Car specs #5 posX
+patch=0,EE,202A3F68,extended,42658000 // Car specs #4 posX
+patch=0,EE,202A3D30,extended,40F00000 // Car specs #1 width
+patch=0,EE,202A3DC0,extended,40F00000 // Car specs #2 width
+patch=0,EE,202A3E50,extended,40F00000 // Car specs #3 width
+patch=0,EE,202A3EE0,extended,41340000 // Car specs #5 width
+patch=0,EE,202A3F70,extended,41340000 // Car specs #4 width
+patch=0,EE,202A3FF8,extended,C1B00000 // Racing handling posX
+patch=0,EE,202A4000,extended,41D80000 // Racing handling width
+patch=0,EE,202A4088,extended,41B00000 // Drift handling posX
+patch=0,EE,202A4090,extended,41D80000 // Drift handling width
+patch=0,EE,202A43B8,extended,C1B00000 // Automatic transmission posX
+patch=0,EE,202A43C0,extended,41D80000 // Automatic transmission width
+patch=0,EE,202A4448,extended,41B00000 // Manual transmission posX
+patch=0,EE,202A4450,extended,41D80000 // Manual transmission width
+patch=0,EE,202A4568,extended,41F00000 // Vibration enabled posX
+patch=0,EE,202A4570,extended,41580000 // Vibration enabled width
+patch=0,EE,202A45F8,extended,C1F00000 // Vibration disabled posX
+patch=0,EE,202A4600,extended,41580000 // Vibration disabled width
+patch=0,EE,202A4690,extended,42070000 // Vibration text width
+
+// Fix opening images
+patch=0,EE,20200908,extended,240C0003 // li t4,0x3
+patch=0,EE,2020090C,extended,240D0004 // li t5,0x4
+patch=0,EE,20200910,extended,240E0140 // li t6,0x140
+patch=0,EE,20200914,extended,008E7822 // sub t7,a0,t6
+patch=0,EE,20200918,extended,01EC7818 // mult t7,t7,t4
+patch=0,EE,2020091C,extended,01ED001A // div t7,t5
+patch=0,EE,20200920,extended,00007812 // mflo t7
+patch=0,EE,20200924,extended,01CF2020 // add a0,t6,t7
+patch=0,EE,20200928,extended,00CE7822 // sub t7,a2,t6
+patch=0,EE,2020092C,extended,01EC7818 // mult t7,t7,t4k
+patch=0,EE,20200930,extended,01ED001A // div t7,t5
+patch=0,EE,20200934,extended,00007812 // mflo t7
+patch=0,EE,20200938,extended,08090E82 // j sub_243A08
+patch=0,EE,2020093C,extended,01CF3020 // add a2,t6,t7
+
+patch=0,EE,20200778,extended,0C080242 // jal sub_200908
+
+// Set the opening movies to fill the screen (they're 16:9 letterboxed anyway)
+patch=0,EE,102368D4,extended,0140
+
+patch=0,EE,20200940,extended,00EC1821 // addu v1,a3,t4
+patch=0,EE,20200944,extended,0808E506 // j 0x00239418
+patch=0,EE,20200948,extended,2463FFF2 // addiu v1,v1,-0xE
+
+patch=0,EE,20239410,extended,08080250 // j z_un_00200940
+
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-patch=1,EE,2023FF70,word,00000000
+patch=0,EE,2023FF70,extended,00000000
 
+[Auto-activate analogs]
+description=Automatically put gamepads in an analog mode, like in later Gran Turismo games.
+author=Silent
 
+// Build ControlManagerClass::PSPort::TryPutInAnalogMode
+patch=0,EE,20231EF4,extended,1480003B // bne a0,zero,0x231FE4
+patch=0,EE,20231EF8,extended,27BDFFD0 // addiu sp,sp,-0x30
+patch=0,EE,20231EFC,extended,FFBF0000 // sd ra,0x0(sp)
+patch=0,EE,20231F00,extended,FFA60010 // sd a2,0x10(sp)
+patch=0,EE,20231F04,extended,FFB20020 // sd s2,0x20(sp)
+patch=0,EE,20231F08,extended,2407FFFF // li a3,-0x1
+patch=0,EE,20231F0C,extended,24060004 // li a2,0x4
+patch=0,EE,20231F10,extended,82050005 // lb a1,0x5(s0)
+patch=0,EE,20231F14,extended,0C09207E // jal scePadInfoMode
+patch=0,EE,20231F18,extended,82040004 // lb a0,0x4(s0)
+patch=0,EE,20231F1C,extended,0040902D // move s2,v0
+patch=0,EE,20231F20,extended,0000882D // move s1,zero
+patch=0,EE,20231F24,extended,0232102A // slt v0,s1,s2
+patch=0,EE,20231F28,extended,1060002B // beq v1,zero,0x0231FD8
+patch=0,EE,20231F2C,extended,0220382D // move a3,s1
+patch=0,EE,20231F30,extended,24060004 // li a2,0x4
+patch=0,EE,20231F34,extended,82050005 // lb a1,0x5(s0)
+patch=0,EE,20231F38,extended,0C09207E // jal scePadInfoMode
+patch=0,EE,20231F3C,extended,82040004 // lb a0,0x4(s0)
+patch=0,EE,20231F40,extended,24030007 // li v1,0x7
+patch=0,EE,20231F44,extended,1443FFF7 // bne v0,v1,0x00231F24
+patch=0,EE,20231F48,extended,26310001 // addiu s1,s1,0x1
+patch=0,EE,20231F4C,extended,24070003 // li a3,0x3
+patch=0,EE,20231F50,extended,24060001 // li a2,0x1
+patch=0,EE,20231F54,extended,82050005 // lb a1,0x5(s0)
+patch=0,EE,20231F58,extended,0C0920A0 // jal scePadSetMainMode
+patch=0,EE,20231F5C,extended,82040004 // lb a0,0x4(s0)
+patch=0,EE,20231F60,extended,82050005 // lb a1,0x5(s0)
+patch=0,EE,20231F64,extended,0C091FA6 // jal scePadGetState
+patch=0,EE,20231F68,extended,82040004 // lb a0,0x4(s0)
+patch=0,EE,20231F6C,extended,24030002 // li v1,0x2
+patch=0,EE,20231F70,extended,10430019 // beq v0,v1,z_0x00231fdc
+patch=0,EE,20231F74,extended,00000000 // nop
+patch=0,EE,20231F78,extended,10000016 // b 0x00231FD4
+patch=0,EE,20231F7C,extended,24030006 // li v1,0x6
+
+patch=0,EE,20231FD4,extended,1462FFE2 // bne v1,v0,0x00231F60
+patch=0,EE,20231FD8,extended,DFB20020 // ld s2,0x20(sp)
+patch=0,EE,20231FDC,extended,DFA60010 // ld a2,0x10(sp)
+patch=0,EE,20231FE0,extended,DFBF0000 // ld ra,0x0(sp)
+patch=0,EE,20231FE4,extended,27BD0030 // addiu sp,sp,0x30
+patch=0,EE,20231FE8,extended,30C400FF // andi a0,a2,0x00FF
+patch=0,EE,20231FEC,extended,03E00008 // jr ra
+patch=0,EE,20231FF0,extended,3C02002B // lui v0,0x002B
+
+// s1 is unused by the calling function at this point yet but it preserves it
+// so we don't need to
+patch=0,EE,2023287C,extended,0C08C7BD // jal ControlManagerClass::PSPort::TryPutInAnalogMode
+patch=0,EE,20232880,extended,00000000 // nop
+
+[Trigger control mappings]
+description=Maps throttle and brake to triggers, like in modern GT games.
+author=Silent
+
+// Create a function to scale the input by 256/255
+// ScaleTriggerInputs
+patch=0,EE,20215FD0,extended,00042A00 // sll a1,a0,0x08
+patch=0,EE,20215FD4,extended,000433C0 // sll a2,a0,0x0F
+patch=0,EE,20215FD8,extended,00C52821 // addu a1,a2,a1
+patch=0,EE,20215FDC,extended,000435C0 // sll a2,a0,0x17
+patch=0,EE,20215FE0,extended,00C52821 // addu a1,a2,a1
+patch=0,EE,20215FE4,extended,03E00008 // jr ra
+patch=0,EE,20215FE8,extended,000515C2 // srl v0,a1,0x17
+
+patch=0,EE,202166D0,extended,0C0857F4 // jal ScaleTriggerInputs
+patch=0,EE,102166D4,extended,9222002F // lbu ?,0x2F(?)
+patch=0,EE,202166E0,extended,0C0857F4 // jal ScaleTriggerInputs
+patch=0,EE,102166E4,extended,9222002E // lbu ?,0x2E(?)
+
+patch=0,EE,1021670C,extended,0080 // andi ?,?,0x0080
+patch=0,EE,20216718,extended,00121183 // sra v0,s2,0x06
+
+[Throttle/brake on right stick]
+description=Maps the right stick up/down as an additional throttle/brake control, like in most other GT games.
+author=Silent
+
+patch=0,EE,20215F5C,extended,27BDFFF0 // addiu sp,sp,-0x10
+patch=0,EE,20215F60,extended,FFBF0000 // sd ra,0x0(sp)
+patch=0,EE,20215F64,extended,0C0857E8 // jal TryGetAnalogInput
+patch=0,EE,20215F68,extended,92230021 // lbu v1,0x21(s1)
+patch=0,EE,20215F6C,extended,A6020004 // sh v0,0x4(s0)
+patch=0,EE,20215F70,extended,DFBF0000 // ld ra,0x0(sp)
+patch=0,EE,20215F74,extended,03E00008 // jr ra
+patch=0,EE,20215F78,extended,27BD0010 // addiu sp,sp,0x10
+
+patch=0,EE,20215F7C,extended,27BDFFF0 // addiu sp,sp,-0x10
+patch=0,EE,20215F80,extended,FFBF0000 // sd ra,0x0(sp)
+patch=0,EE,20215F84,extended,92230021 // lbu v1,0x21(s1)
+patch=0,EE,20215F88,extended,0C0857E8 // jal TryGetAnalogInput
+patch=0,EE,20215F8C,extended,386300FF // xori v1,v1,0x00FF
+patch=0,EE,20215F90,extended,A6020002 // sh v0,0x2(s0)
+patch=0,EE,20215F94,extended,DFBF0000 // ld ra,0x0(sp)
+patch=0,EE,20215F98,extended,03E00008 // jr ra
+patch=0,EE,20215F9C,extended,27BD0010 // addiu sp,sp,0x10
+
+// TryGetAnalogInput
+patch=0,EE,20215FA0,extended,14400009 // bne v0,zero,0x00215FC8
+patch=0,EE,20215FA4,extended,3C04002B // lui a0,0x002B
+patch=0,EE,20215FA8,extended,2484B858 // addiu a0,a0,-0x47A8
+patch=0,EE,20215FAC,extended,00831821 // addu v1,a0,v1
+patch=0,EE,20215FB0,extended,90630000 // lbu v1,0x0(v1)
+patch=0,EE,20215FB4,extended,00031840 // sll v1,v1,0x01
+patch=0,EE,20215FB8,extended,24040100 // addiu a0,zero,0x100
+patch=0,EE,20215FBC,extended,00832023 // subu a0,a0,v1
+patch=0,EE,20215FC0,extended,0080182A // slt v1,a0,zero
+patch=0,EE,20215FC4,extended,0083100A // movz v0,a0,v1
+patch=0,EE,20215FC8,extended,03E00008 // jr ra
+patch=0,EE,20215FCC,extended,00021100 // sll v0,v0,0x04
+
+patch=0,EE,202166D8,extended,0C0857D7 // jal 0x00215F5C
+patch=0,EE,202166DC,extended,00000000 // nop
+
+patch=0,EE,202166E8,extended,0C0857DF // jal 0x00215F7C
+patch=0,EE,202166EC,extended,00000000 // nop
+
+[No time limit]
+description=Disables the demo time limit.
+author=Silent, krat0s
+
+// Set the UI timer to 0 seconds, which disables it.
+patch=0,EE,20216130,extended,00000000 // nop
+
+// Disable "Time limit xxx" drawing.
+patch=0,EE,20219844,extended,00000000 // nop
+
+// Disable a 121s replay check that's active during the race
+patch=0,EE,20216518,extended,03E00008 // jr ra
+patch=0,EE,2021651C,extended,0000102D // daddu v0,zero,zero
