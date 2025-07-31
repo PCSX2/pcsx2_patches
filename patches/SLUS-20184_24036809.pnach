@@ -18,8 +18,10 @@ patch=1,EE,00133D54,word,00000000 // remove door animation completed check
 author=illusion
 patch=1,EE,001324D4,word,34640008
 
+[Fix time in computers]
 // Custom sceScfGetLocalTimefromRTC. Adapted from configConvertToLocalTime in PS2SDK.
 author=VelpaChallenger
+description=Fixes time shown when using computers either as Claire or Chris (shows local instead of JP).
 patch=1,EE,001147E8,word,3c19000f	// Save time (sceCdCLOCK) before it's lost. Will be used after we inject. Overwrites printf but meh.
 patch=1,EE,001147EC,word,27391010
 patch=1,EE,001147F0,word,af320000
