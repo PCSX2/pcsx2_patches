@@ -21,8 +21,8 @@ patch=1,EE,001324D4,word,34640008
 // Custom sceScfGetLocalTimefromRTC. Adapted from configConvertToLocalTime in PS2SDK.
 author=VelpaChallenger
 patch=1,EE,001147E8,word,3c19000f	// Save time (sceCdCLOCK) before it's lost. Will be used after we inject. Overwrites printf but meh.
-patch=1,EE,001147EC,word,27391010	
-patch=1,EE,001147F0,word,af320000	
+patch=1,EE,001147EC,word,27391010
+patch=1,EE,001147F0,word,af320000
 
 patch=1,EE,000F1000,word,1E1F1C1F       // gDaysInMonths array. Used for adddate and subdate.
 patch=1,EE,000F1004,word,1F1F1E1F
