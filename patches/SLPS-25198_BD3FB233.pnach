@@ -1,7 +1,8 @@
-gametitle=Kingdom Hearts: Final Mix (English patch) [SLPS-25198]
+gametitle=Kingdom Hearts: Final Mix (English patch) (Crazycatz00)
+comment=Widescreen patch + 60FPS toggle cheat by Michael P converted to NTSC-J by E.Mecenate
 
 [Widescreen 16:9]
-gsaspectratio=16:9
+gsapectratio=16:9
 description=Widescreen patch
 patch=1,EE,00110644,word,3c0143d6 //render fix
 patch=1,EE,00110b30,word,3c013f19 //hor value first half
@@ -64,74 +65,74 @@ patch=1,EE,2044bfa0,extended,0000001b
 patch=1,EE,2044b760,extended,00000005
 patch=1,EE,2044b820,extended,00000005
 
+[60 FPS]
+description=Toggle 60FPS. Automatically turns off when needed for game not to crash.
 //60fps toggle on (game play)
 //60fps normal mode
-//patch=1,EE,d02c5958,extended,00000000
-//patch=1,EE,002bbe0c,extended,00000000
+patch=1,EE,d02c5958,extended,00000000
+patch=1,EE,002bbe0c,extended,00000000
 
 //60fps normal mode alt
-//patch=1,EE,d02c5958,extended,00001000
-//patch=1,EE,002BBE0C,extended,00000000
+patch=1,EE,d02c5958,extended,00001000
+patch=1,EE,002BBE0C,extended,00000000
 
 //60fps normal mode alt (big ben)
-//patch=1,EE,d02c5958,extended,00000020
-//patch=1,EE,002BBE0C,extended,00000000
+patch=1,EE,d02c5958,extended,00000020
+patch=1,EE,002BBE0C,extended,00000000
 
 //60fps battle mode
-//patch=1,EE,d02c5958,extended,00000001
-//patch=1,EE,002BBE0C,extended,00000000
+patch=1,EE,d02c5958,extended,00000001
+patch=1,EE,002BBE0C,extended,00000000
 
 //60fps battle mode (boss)
-//patch=1,EE,d02c5958,extended,00000011
-//patch=1,EE,002BBE0C,extended,00000000
+patch=1,EE,d02c5958,extended,00000011
+patch=1,EE,002BBE0C,extended,00000000
 
 //60fps battle mode (boss) alt
-//patch=1,EE,d02c5958,extended,00000031
-//patch=1,EE,002BBE0C,extended,00000000
+patch=1,EE,d02c5958,extended,00000031
+patch=1,EE,002BBE0C,extended,00000000
 
 //60fps toggle off (cutscenes, fmv and other scripted events)
 //60fpsoff fmv
-//patch=1,EE,d02c5958,extended,00000040
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,00000040
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff fmv alt
-//patch=1,EE,d02c5958,extended,0000004E
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,0000004E
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff no hud (world map)
-//patch=1,EE,d02c5958,extended,00000004
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,00000004
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff no hud (tutorial, gummi ship)
-//patch=1,EE,d02c5958,extended,0000000C
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,0000000C
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff ingame cutscene
-//patch=1,EE,d02c5958,extended,0000000E
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,0000000E
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff ingame cutscene alt
-//patch=1,EE,d02c5958,extended,0000002E
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,0000002E
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff ingame cutscene alt (white trinity)
-//patch=1,EE,d02c5958,extended,0000100E
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,0000100E
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff ingame cutscene alt
-//patch=1,EE,d02c5958,extended,0000000F
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,0000000F
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff ingame cutscene (boss)
-//patch=1,EE,d02c5958,extended,0000001F
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,0000001F
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff ingame cutscene (boss) alt
-//patch=1,EE,d02c5958,extended,0000003F
-//patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,d02c5958,extended,0000003F
+patch=1,EE,002BBE0C,extended,00000001
 
 //60fpsoff ingame cutscene (red trinity)
-//patch=1,EE,d02c5958,extended,0000100C
-//patch=1,EE,002BBE0C,extended,00000001
-
-
+patch=1,EE,d02c5958,extended,0000100C
+patch=1,EE,002BBE0C,extended,00000001
