@@ -53,15 +53,12 @@ patch=1,EE,0014ADA8,word,24050000
 patch=1,EE,0014ADD0,word,24050000
 patch=1,EE,0014AE00,word,24050000
 
+
 [60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
 patch=1,EE,00349E1C,extended,00000000
-
-//60 FPS toggle on (game play, cutscenes ect)
-patch=1,EE,D034dca8,extended,00000003
-patch=1,EE,00349E1C,extended,00000000
-patch=1,EE,00349E2c,extended,00000000
-
-//60 FPS toggle off (FMV's)
-patch=1,EE,D034dca8,extended,00000001
+patch=1,EE,E0010005,extended,0032BA24
 patch=1,EE,00349E1C,extended,00000001
-patch=1,EE,00349E2c,extended,00000001
+patch=1,EE,2036B0F8,extended,3F800000
+patch=1,EE,2036EF20,extended,3F800000
