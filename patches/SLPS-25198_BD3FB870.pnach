@@ -87,73 +87,26 @@ patch=1,EE,000fd08c,word,03e00008
 patch=1,EE,000fd090,word,a7250000
 
 [60 FPS]
-description=Toggle 60FPS. Automatically turns off when needed for game not to crash.
-//60fps toggle on (game play)
-//60fps normal mode
-patch=1,EE,d02c5958,extended,00000000
-patch=1,EE,002bbe0c,extended,00000000
-
-//60fps normal mode alt
-patch=1,EE,d02c5958,extended,00001000
+author=PeterDelta
+description=Might need EE Overclock (130%).
 patch=1,EE,002BBE0C,extended,00000000
-
-//60fps normal mode alt (big ben)
-patch=1,EE,d02c5958,extended,00000020
-patch=1,EE,002BBE0C,extended,00000000
-
-//60fps battle mode
-patch=1,EE,d02c5958,extended,00000001
-patch=1,EE,002BBE0C,extended,00000000
-
-//60fps battle mode (boss)
-patch=1,EE,d02c5958,extended,00000011
-patch=1,EE,002BBE0C,extended,00000000
-
-//60fps battle mode (boss) alt
-patch=1,EE,d02c5958,extended,00000031
-patch=1,EE,002BBE0C,extended,00000000
-
-//60fps toggle off (cutscenes, fmv and other scripted events)
-//60fpsoff fmv
-patch=1,EE,d02c5958,extended,00000040
+patch=1,EE,202BBDEC,extended,3F800000
+patch=1,EE,E0010001,extended,002A6344
 patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff fmv alt
-patch=1,EE,d02c5958,extended,0000004E
+patch=1,EE,0010CFAC,extended,00
+patch=1,EE,1018198C,extended,3F80
+patch=1,EE,10181A34,extended,3F80
+patch=1,EE,E0010080,extended,002BC0BC
 patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff no hud (world map)
-patch=1,EE,d02c5958,extended,00000004
+patch=1,EE,E0010004,extended,002C5958
+patch=1,EE,202BBDEC,extended,3F000000
+patch=1,EE,E0037000,extended,002A3F38
+patch=1,EE,E0020001,extended,002C8054
 patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff no hud (tutorial, gummi ship)
-patch=1,EE,d02c5958,extended,0000000C
+patch=1,EE,0010CFAC,extended,80
+patch=1,EE,E0010008,extended,002C5958
 patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene
-patch=1,EE,d02c5958,extended,0000000E
+patch=1,EE,E0011008,extended,002C5958
 patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene alt
-patch=1,EE,d02c5958,extended,0000002E
-patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene alt (white trinity)
-patch=1,EE,d02c5958,extended,0000100E
-patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene alt
-patch=1,EE,d02c5958,extended,0000000F
-patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene (boss)
-patch=1,EE,d02c5958,extended,0000001F
-patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene (boss) alt
-patch=1,EE,d02c5958,extended,0000003F
-patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene (red trinity)
-patch=1,EE,d02c5958,extended,0000100C
+patch=1,EE,E0010009,extended,002C5958
 patch=1,EE,002BBE0C,extended,00000001
