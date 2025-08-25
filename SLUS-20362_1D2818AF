@@ -1,5 +1,7 @@
 gametitle=Need for Speed: Hot Pursuit 2 (SLUS-20362)
 
+[Widescreen 21:9]
+author=sathvik989
 
 patch=1,EE,00330188,word,44555555
 patch=1,EE,0010e994,word,46011702
