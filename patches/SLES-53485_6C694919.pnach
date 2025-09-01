@@ -1,13 +1,59 @@
 gametitle=Car Racing Challenge (E)(SLES-53485)
 
 [Widescreen 16:9]
+author=Souzooka
 gsaspectratio=16:9
-author=Arapapa
 
-//Widescreen hack 16:9
+// Horizontal FOV
+patch=0,EE,0017B460,word,3C013F40 // lui at,0x3F40
 
-patch=1,EE,0018b4f4,word,3c013f40 //00000000
-patch=1,EE,0018b4f8,word,44810000 //00000000
-patch=1,EE,0018b500,word,4600c602 //00000000
+[No Interlacing]
+author=Souzooka
+description=Removes interlacing artefacts.
+gsinterlacemode=1
 
+// Took a bit to find this one -- the field index is multiplied by 8 using sll 3 then added to vertical position in some custom code
+// instead of the typical daddiu 8 operation
+patch=0,EE,20164904,extended,00003021 // addu a2,zero,zero ; Replaces andi a2,a1,1
 
+[Increased Draw Distance]
+author=Souzooka
+description=Slightly increases draw distance for entities/cars
+
+// Some notes:
+// I wanted to make it so all entities are visible within the geometry (the fog culling is also nice on cars)
+// You can basically increase draw distance very very far, but some oddities occur (road, in particular, is loaded in a strip of 150 chunks,
+// a chunk being around 3-5 car lengths, I think, but at a point you can see the existing strip end and a new one loaded in,
+// probably visible at a distance of ~400 or so). Cars also only spawn so far in front of the player as well
+// (even though they spawn much further than the 100f default), but the real issue with cars is that some effects
+// (like the speed lines when near a target line) as actually triggered by those cars being visible so it's very odd
+// if that occurs when the player is very very far away.
+
+// Increased geometry distance
+// Reduce forced fog-based culling effect on main lanes
+// If desired, this can be set to 0, then all objects will be visible simply based on distance checks regardless of distance.
+patch=0,EE,202A36D0,extended,bf68f5c3 // Was -1.2f
+// Reduce forced fog-based culling effect on exits
+patch=0,EE,202A36D4,extended,bf68f5c3 // Was -2.0f
+// Forward lane (left)
+patch=0,EE,20147A78,extended,3C01438A // 276f (def=200f)
+// Opposite lane (right)
+patch=0,EE,20149EAC,extended,3C01438A // 276f (def=200f)
+// Shrubbery along road
+patch=0,EE,2014C5A4,extended,3C01438A // 276f (def=200f)
+// Exits/SAs/etc.
+patch=0,EE,2014B270,extended,3C01438A // 276f (def=140f (roadway (normal?)))
+patch=0,EE,2014B288,extended,3C01438A // 276f (def=200f)
+patch=0,EE,2014B164,extended,3C01438A // 276f (def=100f)
+patch=0,EE,2014B9C0,extended,3C140001 // lui s4,0x0001 (was lui s4,0x0002; lower values better -- affects walls/road markings/props)
+
+// Entitites
+// Police officers (+peds?)
+patch=0,EE,201407EC,extended,3C01438A // 276f (def=80f)
+
+// Vehicles
+// Low LOD
+patch=0,EE,2012DA60,extended,3C01438A // 276f (default seems to depend on actual car instance, but capped at 100f)
+patch=0,EE,2012DA68,extended,44816800 // mtc1 at,f13 (use hardcoded 250f)
+// Show wheels
+patch=0,EE,2012DAEC,extended,3C01438A // 276f (def=60f)
