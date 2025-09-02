@@ -1,0 +1,6 @@
+gametitle=187 - Ride or Die PAL-M SLES-52276 83BE7C8E
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=0,EE,005924E4,word,3C75C28F //3CF5C28F

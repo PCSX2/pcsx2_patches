@@ -8,5 +8,5 @@ patch=1,EE,0014b13c,word,3c023f40 //3c023f80 hor fov
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,0014B318,word,10000013 //14400003
+description=Might need EE Overclock (130%).
+patch=1,EE,0014B350,word,00000000

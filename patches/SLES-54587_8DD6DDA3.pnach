@@ -1,4 +1,5 @@
-gametitle=Raw Danger! [PAL] SLES-54587 8DD6DDA3 (NTSC Mode + Performance) (v1.0) (Souzooka)
+gametitle=Raw Danger! (NTSC Mode + Performance) * SLES_545.87 * PAL * 8DD6DDA3
+// same serial-code as A98B5B22 & A98B5AD6 - the regular version & UNDUB v1.0-beta & NTSC Mode.
 
 [Widescreen 16:9]
 gsaspectratio=16:9

@@ -1,0 +1,85 @@
+gametitle=Kingdom Hearts 2 Final Mix + (NTSC-J) (SLPM 666 75) (Crazycatz00 patch)
+// Patched using xdelta file from RetroAchievments
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Kingdom Hearts 2 Final Mix + (NTSC-J) - ENGLISH PATCH BY CRAZYCATZ00
+author=ElHecht
+
+// old widescreen
+//patch=1,EE,203A7BBC,word,3F19999A // 3F4CCCCC (hor axis)
+//patch=1,EE,2036A0B8,word,43C00000 // 44000000 (zoom)
+//patch=1,EE,2037153C,word,3F19999A // 3F4CCCCC (character menu proportions)
+//patch=1,EE,2036A0F0,word,3F19999A // 3F4CCCCC (continue screen proportions)
+//patch=1,EE,203761BC,word,3F19999A // 3F4CCCCC (world map cutscene proportions)
+
+// new 16:9 hack by - ElHecht
+patch=1,EE,00106e10,word,3c013f4c // c480004c
+patch=1,EE,00106e28,word,3421cccc // 4600a7c6
+patch=1,EE,00106e2c,word,4481f800 // 00000000
+patch=1,EE,00106e30,word,461fa503 // 4600a503
+patch=1,EE,00106e54,word,3c1b3f40 // 00000000 hor fov
+patch=1,EE,00106e58,word,449bf000 // 00000000
+patch=1,EE,00106e70,word,461effc2 // 00000000
+patch=1,EE,00106e74,word,e61f004c // 00000000
+
+//zoom for cutscenes (hides sudden pop-in)
+patch=1,EE,2036a0bc,word,43f90000 // 43d00000
+
+//disable depth of field (disables poor cutscene scaling)
+patch=1,EE,00166db6,extended,000000EF
+
+//font fix
+patch=1,EE,2036CE94,word,3F400000 // 3F800000
+patch=1,EE,2036CE98,word,3F400000 // 3F800000
+patch=1,EE,2036CE9C,word,3F400000 // 3F800000
+
+//lower subtitles
+patch=1,EE,001ac8d8,word,240a0190
+
+//Disable image map names
+//patch=1,EE,00149B52,extended,00000000
+//patch=1,EE,2036B3B0,extended,00000000 // Fallback text duration, in frames (float; 60 frames = 1 sec)
+
+[Subtitles off]
+author=ElHecht
+description=Disable subtitles during scenes
+patch=1,EE,0022d8d4,word,11e00019
+
+[Remove Blackbars]
+author=ElHecht
+description=Removes black bars in cutscenes
+patch=1,EE,0014AD80,word,24050000
+patch=1,EE,0014ADA8,word,24050000
+patch=1,EE,0014ADD0,word,24050000
+patch=1,EE,0014AE00,word,24050000
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,00349E1C,extended,00000000
+patch=1,EE,E0010005,extended,0032BA24
+patch=1,EE,00349E1C,extended,00000001
+patch=1,EE,2036B0F8,extended,3F800000
+patch=1,EE,2036EF20,extended,3F800000
+
+[Swap X and O]
+patch=1,EE,002f5e7c,word,0803f414
+patch=1,EE,000fd050,word,00a0c821
+patch=1,EE,000fd054,word,080bd7a1
+patch=1,EE,000fd058,word,24020334
+patch=1,EE,002f5f44,word,0803f417
+patch=1,EE,000fd05c,word,87240000
+patch=1,EE,000fd060,word,30859fff
+patch=1,EE,000fd064,word,9326000c
+patch=1,EE,000fd068,word,9327000b
+patch=1,EE,000fd06c,word,30814000
+patch=1,EE,000fd070,word,34a32000
+patch=1,EE,000fd074,word,0061280b
+patch=1,EE,000fd078,word,a326000b
+patch=1,EE,000fd07c,word,30812000
+patch=1,EE,000fd080,word,34a34000
+patch=1,EE,000fd084,word,0061280b
+patch=1,EE,000fd088,word,a327000c
+patch=1,EE,000fd08c,word,03e00008
+patch=1,EE,000fd090,word,a7250000

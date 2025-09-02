@@ -1,0 +1,24 @@
+gametitle=007 - Quantum Of Solace (NTSC-U) (SLUS-21813)
+
+[60 FPS]
+author=Souzooka and asasega
+description=60 FPS; recommend using 180% EE Cycle Overclock
+
+// Framerate
+patch=1,EE,203CA748,extended,3C // 60 FPS
+patch=1,EE,E0010001,extended,003DDB84 // Check 003DDB84 is XXXX0001, indicating a .pss is playing
+patch=1,EE,203CA748,extended,1E // 30 FPS (normal .pss speed)
+patch=1,EE,E0010000,extended,003CAA98 // Check 003CAA98 is XXXX0000, workaround for softlock after subduing first opera house enemy
+patch=1,EE,203CA748,extended,1E // 30 FPS (softlock prevention)
+// Prevent softlock in cave level (Sink Hole) after shooting 2 guys in helicopter
+patch=1,EE,E0030132,extended,003CD020 // Map is that cave level
+patch=1,EE,E002BF7B,extended,0037DA62 // Camera position? Who knows
+patch=1,EE,E0010001,extended,003CA80C // In cutscene? Who knows
+patch=1,EE,203CA748,extended,1E // 30 FPS (softlock prevention)
+
+// Reduce recoil compensation (affected by framerate)
+patch=1,EE,203C5C84,extended,3D7CCCCD
+
+[Onscreen FPS Display]
+author=asasega
+patch=1,EE,003CD06E,word,00000001

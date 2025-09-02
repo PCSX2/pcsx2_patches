@@ -1,25 +1,23 @@
-gametitle=Ultimate Spider-Man (J)(SLPM-66404)
+gametitle=Ultimate Spider-Man (NTSC-J) SLPM-66404 ADFF13DF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=0,EE,0058B7A0,word,081820D4
+patch=0,EE,00608350,word,3C030074
+patch=0,EE,00608354,word,3C013FAA
+patch=0,EE,00608358,word,3421AAAB
+patch=0,EE,0060835C,word,4481F000
+patch=0,EE,00608360,word,461E18C2
+patch=0,EE,00608364,word,08162DE9
+patch=0,EE,002EF7DC,word,3C013FB0
 
-//Widescreen hack 16:9
-
-
-//X-Fov
-//7400033c 3c10e14b
-patch=1,EE,0058b7a0,word,081820d4
-
-patch=1,EE,00608350,word,3c030074
-patch=1,EE,00608354,word,3c013faa
-patch=1,EE,00608358,word,3421aaab
-patch=1,EE,0060835c,word,4481f000
-patch=1,EE,00608360,word,461e18c2
-patch=1,EE,00608364,word,08162de9
-
-////////////////////
-//Zoom
-//patch=1,EE,005f8d60,word,3c013f40 //3c013f80
-
-
+[60 FPS]
+author=PeterDelta & asasega
+description=Might need EE Overclock (130%).
+patch=1,EE,20311FB4,extended,4501FFE5
+patch=1,EE,206A0C20,extended,00000002
+patch=1,EE,E0020880,extended,007F06E4
+patch=1,EE,20311FB4,extended,00000000
+patch=1,EE,206A0C20,extended,00000001

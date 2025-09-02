@@ -7,3 +7,7 @@ description=Widescreen Converted from NTSC hack by nemesis2000
 patch=1,EE,002348a0,word,46000406
 
 
+[Skip Cutscenes]
+author=Ezedequias
+description=With Any Action Button
+patch=1,EE,002D7B24,byte,01

@@ -12,10 +12,17 @@ patch=1,EE,2061E810,extended,3F400000
 [NTSC Mode]
 author=PeterDelta
 description=NTSC mode at start.
-patch=1,EE,00394A9C,word,0000102D
+patch=0,EE,00394A9C,word,0000102D
 
 [Remove Blur/Bloom]
 author=PeterDelta
 description=Removes the post-processing blur/bloom effect
-patch=1,EE,00624344,word,00000000
-patch=1,EE,00624470,word,01000000
+patch=0,EE,00624344,word,00000000
+patch=0,EE,00254470,word,24020000
+patch=0,EE,00254474,word,10620004
+patch=0,EE,00624470,word,01000000
+
+[Disable Speed Effect]
+author=PeterDelta
+description=Removes the speed effect in race
+patch=0,EE,00402610,word,14A0003C

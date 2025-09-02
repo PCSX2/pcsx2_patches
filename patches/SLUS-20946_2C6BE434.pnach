@@ -10,11 +10,6 @@ patch=1,EE,0020A4F8,extended,AC
 patch=1,EE,002081DC,extended,AC
 patch=1,EE,002ECAF0,extended,40
 patch=1,EE,002ECB40,extended,D0
-patch=1,EE,0033DB54,extended,3C013F80 //zoom in scenes
-patch=1,EE,E0020001,extended,0066C174
-patch=1,EE,0033DB54,extended,3C013F40
-patch=1,EE,2021EE14,extended,3C023FC0
-patch=1,EE,2021EE14,extended,3C024000
 //-------------------------------------------------HUD-------------------------------------------------//
 patch=0,EE,20664384,extended,3ecccccd //Wanted Width
 patch=0,EE,20664390,extended,3ef5c28f //Wanted Shadow Width
@@ -92,18 +87,24 @@ patch=0,EE,20234A74,extended,c78c8b68 //Hook Menu Items Width to Subtitles width
 patch=0,EE,20235558,extended,c78c8b68 //Hook Menu Items Width to Subtitles width
 patch=0,EE,202421F0,extended,3c023ecc //Set Menu Labels Width
 
-[Remove Radiosity Filter]
-description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
-//Remove Radiosity Filter
-patch=1,EE,2051A6D8,extended,00000000
-
 [Remove Ghosting Effects]
-author=PeterDelta
-description=Removes the ghosting effect without affecting the lighting
-patch=1,EE,00668C5C,extended,00000000
-patch=1,EE,00668CE8,extended,00000000
-patch=1,EE,E0010100,extended,007004E0
-patch=1,EE,007004E0,extended,00000130
+author=Silent, PeterDelta
+description=Removes the ghosting effect from radiosity and color filter post effects, preserving the slight bloom effect. Also disables the seam remover post effect.
+
+patch=0,EE,00668C5C,extended,00 // CPostEffects::m_bSeamRemover
+patch=0,EE,20668CE4,extended,00000000 // CPostEffects::m_RadiosityFilterPasses
+
+// These values are read from stream.ini from the init overlay, so we have to patch them every frame
+patch=1,EE,20668D28,extended,00000000 // CPostEffects::m_colourLeftUOffset
+patch=1,EE,20668D2C,extended,00000000 // CPostEffects::m_colourRightUOffset
+patch=1,EE,20668D30,extended,00000000 // CPostEffects::m_colourTopVOffset
+patch=1,EE,20668D34,extended,00000000 // CPostEffects::m_colourBottomVOffset
+
+[Remove Color Filter]
+author=Silent
+description=Removes the color filter, making the game look more like the PC version, without the yellow tint.
+
+patch=0,EE,20515C68,extended,00000000 // NOP CPostEffects::ColourFilter
 
 [60 FPS]
 author=someother1ne

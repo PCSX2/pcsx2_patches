@@ -1,0 +1,31 @@
+gametitle=The Godfather - Collector's Edition NTSC-U SLUS-21406 D850707E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Widescreen hack.
+
+//Widescreen hack 16:9
+
+//Zoom
+//003f013c 00608144
+patch=1,EE,0035f26c,word,3c013f20 //3c013f00
+
+//Y-Fov
+//02001446 3000a527
+patch=1,EE,00355ab0,word,080b9614 //08164b44
+patch=1,EE,002e5850,word,46140002
+patch=1,EE,002e5854,word,3c013f40
+patch=1,EE,002e5858,word,4481f000
+patch=1,EE,002e585c,word,461e0002
+patch=1,EE,002e5860,word,080d56ad
+
+[Remove Blackbars]
+author=Arapapa
+description=No blackbars in cutscenes.
+patch=1,EE,006617B8,word,00000001
+
+[60 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,005C5D28,word,42EFC28F //426FC28F

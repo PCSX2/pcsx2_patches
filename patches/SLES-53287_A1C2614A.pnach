@@ -1,0 +1,12 @@
+gametitle=Tom Clancy's Splinter Cell - Chaos Theory (PAL-M) SLES-53287 A1C2614A SC3_ON.ELF
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,00338100,word,00000000
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,001383DC,extended,50

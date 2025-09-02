@@ -19,3 +19,14 @@ patch=1,EE,00405638,word,dfbf0040 //c7b40060
 patch=1,EE,0040563c,word,c7b40060 //03e00008
 patch=1,EE,00405640,word,03e00008 //27bd0070
 patch=1,EE,00405644,word,27bd0070 //00000000
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=0,EE,002e266c,word,240201c0 //24020200
+
+[480p Mode]
+author=Gabominated
+description=SDTV 480p mode at start.
+patch=0,EE,00335D10,word,10640005 //14640005
+patch=0,EE,002e266c,word,240201c0 //24020200

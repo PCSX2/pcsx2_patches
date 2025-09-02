@@ -2,5 +2,11 @@ gametitle=Spiderwick Chronicles, The (PAL-M) SLES-55109 D5D1D002
 
 [50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
+description=Might need EE Overclock (130%).
 patch=1,EE,0040E820,word,00000000 //00000001
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0040E6F4,word,00000001
+patch=1,EE,00439384,word,00000001

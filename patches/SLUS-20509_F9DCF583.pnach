@@ -1,12 +1,11 @@
-gametitle=Sega Soccer Slam (U)(SLUS-20509)
+//gametitle=Sega Soccer Slam (U)(SLUS-20509)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Arapapa
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Arapapa
+// Currently breaks depth on players and the crowd.
 
 //Widescreen hack 16:9
 
 //803f013c 00088144 4000b027 (1st)
-patch=1,EE,00231f2c,word,3c013f40
-
-
+//patch=1,EE,00231f2c,word,3c013f40

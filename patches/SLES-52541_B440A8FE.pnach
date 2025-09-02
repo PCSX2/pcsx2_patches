@@ -1,4 +1,4 @@
-gametitle=Grand Theft Auto - San Andreas (PAL-M5) (v2.01) SLES-52541 B440A8FE
+gametitle=Grand Theft Auto: San Andreas (PAL-M5) (v2.01) SLES-52541 B440A8FE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -10,11 +10,6 @@ patch=1,EE,0020A4F8,extended,AC
 patch=1,EE,002081DC,extended,AC
 patch=1,EE,002ECBE0,extended,40
 patch=1,EE,002ECC30,extended,D0
-patch=1,EE,0033DC44,extended,3C013F80 //scenes zoom
-patch=1,EE,E0020001,extended,0066C8FC
-patch=1,EE,0033DC44,extended,3C013F40
-patch=1,EE,2021EE14,extended,3C023FC0
-patch=1,EE,2021EE14,extended,3C024000
 patch=1,EE,0026E18C,word,3C084280
 patch=1,EE,00269678,word,3C024280
 patch=1,EE,0026E7A8,word,3C024280
@@ -68,18 +63,24 @@ patch=1,EE,002A8A14,word,3C01007C
 patch=1,EE,002A8A18,word,03E00008
 patch=1,EE,002A8A1C,word,E42D2FA8
 
-[Remove ghosting effects]
-author=PeterDelta
-description=Removes the ghosting effect keeping radiosity.
-patch=1,EE,00668D5C,extended,00000000
-patch=1,EE,00668DE8,extended,00000000
-patch=1,EE,E0010100,extended,007005E0
-patch=1,EE,007005E0,extended,00000130
+[Remove Ghosting Effects]
+author=Silent, PeterDelta
+description=Removes the ghosting effect from radiosity and color filter post effects, preserving the slight bloom effect. Also disables the seam remover post effect.
 
-[Remove Radiosity Filter]
-author=refractionpcsx2
-description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
-patch=1,EE,2051A7C8,extended,00000000
+patch=0,EE,00668D5C,extended,00 // CPostEffects::m_bSeamRemover
+patch=0,EE,20668DE4,extended,00000000 // CPostEffects::m_RadiosityFilterPasses
+
+// These values are read from stream.ini from the init overlay, so we have to patch them every frame
+patch=1,EE,20668E28,extended,00000000 // CPostEffects::m_colourLeftUOffset
+patch=1,EE,20668E2C,extended,00000000 // CPostEffects::m_colourRightUOffset
+patch=1,EE,20668E30,extended,00000000 // CPostEffects::m_colourTopVOffset
+patch=1,EE,20668E34,extended,00000000 // CPostEffects::m_colourBottomVOffset
+
+[Remove Color Filter]
+author=Silent
+description=Removes the color filter, making the game look more like the PC version, without the yellow tint.
+
+patch=0,EE,20515D58,extended,00000000 // NOP CPostEffects::ColourFilter
 
 [50 FPS]
 author=Snake356

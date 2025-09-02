@@ -1,0 +1,28 @@
+gametitle=Max Payne 2 - The Fall of Max Payne (PAL-I) SLES-52338 D03BE12A
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,005814C8,extended,00000010 //00000004
+patch=1,EE,005814D0,extended,00000009 //00000003
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes
+patch=1,EE,20729AE8,extended,3F800000
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (300%).
+patch=1,EE,005C0DF8,word,00000001 //00000002
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,002C8074,word,0000102D
+patch=1,EE,002C80A0,word,240200E0
+patch=1,EE,00153A14,word,10620004
+patch=1,EE,0010D1EC,word,00000000
+patch=1,EE,006D94F0,word,00000000

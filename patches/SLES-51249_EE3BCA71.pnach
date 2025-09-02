@@ -7,7 +7,7 @@ description=Widescreen hack 16:9
 patch=1,EE,002b9c78,word,3c023f40 //3c023f80 //Y-fov
 patch=1,EE,002794b8,word,3c033f40 //3c033f80 //Zoom
 
-[50 FPS]
+[50/60 FPS]
 author=Gabominated
 description=Might need EE Overclock.
 patch=1,EE,00217344,word,3C030000 //3C030001
@@ -16,3 +16,9 @@ patch=1,EE,00217344,word,3C030000 //3C030001
 author=Gabominated
 description=Disable post-processing blur effect.
 patch=1,EE,0049B5C8,word,00000000 //00080040
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC Mode at start.
+patch=0,EE,0021561C,word,10450006 //14450006
+patch=1,EE,0049B5C0,word,000001c0 //00000200

@@ -1,36 +1,356 @@
-gametitle=Rayman 2: Revolution (NTSC-U & NTSC-K) (SLUS-20138 & SLPM-67519)
+gametitle=Rayman 2: Revolution * NTSC-U * SLUS-20138 * D2F77DF2
+// Same CRC as SLPM-67519 - the NTSC-K disc
+// - these discs seems identical - patches should work for both discs.
+// pnach & formating by pgert.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hacks by ElHecht & ICUP321
+author=RibShark (Rib)
 
-// 16:9
-patch=1,EE,0018c7d0,word,3c013f40 // 00000000 hor fov
+//patch=1,EE,0018c7d0,word,3c013f40 // 00000000 - X-FoV - old hack by ElHecht & icup321
+patch=1,EE,200C0100,extended,3F400000 // X-FoV - new hack by RibShark (Rib)
 
-// General Widescreen Fixes
-patch=1,EE,0018c7e0,word,4481f000 // 00000000
-patch=1,EE,0018c7e4,word,461e0842 // 00000000
-patch=1,EE,0011811c,word,461e6303 // 00000000 renderfix calculation
+// Main Widescreen patches - old hack by ElHecht & icup321
+//patch=1,EE,0018c7e0,word,4481f000 // 00000000
+//patch=1,EE,0018c7e4,word,461e0842 // 00000000
+//patch=1,EE,0011811c,word,461e6303 // 00000000 - renderfix calculation
 
-// 15:9
-//patch=1,EE,0018c7d0,word,3c013f50 // 00000000 hor fov
+// Main Widescreen patches - new hack by RibShark (Rib)
+// Fixes all 2D elements, including light coronas.
+patch=1,EE,2018C7D0,extended,3C15000C
+patch=1,EE,2018C7D4,extended,8EB50100
+patch=1,EE,2018C7E0,extended,4495F000
+patch=1,EE,2018C7E4,extended,461E0842
+patch=1,EE,201180F4,extended,3C15000C
+patch=1,EE,201180F8,extended,8EB50100
+patch=1,EE,20118118,extended,4495F000
+patch=1,EE,2011811C,extended,461E6303
+patch=1,EE,201DD768,extended,08030080
+patch=1,EE,200C0200,extended,3C15000C
+patch=1,EE,200C0204,extended,8EB50100
+patch=1,EE,200C0208,extended,4495F000
+patch=1,EE,200C020C,extended,4600F002
+patch=1,EE,200C0210,extended,8FA20014
+patch=1,EE,200C0214,extended,26300001
+patch=1,EE,200C0218,extended,080775DB
+patch=1,EE,200C021C,extended,00000000
+patch=1,EE,201DD744,extended,080300C0
+patch=1,EE,201DD748,extended,00000000
+patch=1,EE,200C0300,extended,3C15000C
+patch=1,EE,200C0304,extended,8EB50100
+patch=1,EE,200C0308,extended,4495F000
+patch=1,EE,200C030C,extended,460EF382
+patch=1,EE,200C0310,extended,460EA380
+patch=1,EE,200C0314,extended,46167BC0
+patch=1,EE,200C0318,extended,080775D2
+patch=1,EE,200C031C,extended,00000000
+patch=1,EE,201DD4B4,extended,08030100
+patch=1,EE,201DD4B8,extended,00000000
+patch=1,EE,200C0400,extended,3C15000C
+patch=1,EE,200C0404,extended,8EB50100
+patch=1,EE,200C0408,extended,4495F000
+patch=1,EE,200C040C,extended,240303E8
+patch=1,EE,200C0410,extended,4483F800
+patch=1,EE,200C0414,extended,4680FFE0
+patch=1,EE,200C0418,extended,4482A000
+patch=1,EE,200C041C,extended,4680A520
+patch=1,EE,200C0420,extended,4614F502
+patch=1,EE,200C0424,extended,4614FD01
+patch=1,EE,200C0428,extended,24030002
+patch=1,EE,200C042C,extended,4483F800
+patch=1,EE,200C0430,extended,4680FFE0
+patch=1,EE,200C0434,extended,461FA503
+patch=1,EE,200C0438,extended,08077532
+patch=1,EE,200C043C,extended,00000000
+patch=1,EE,201DD324,extended,08030140
+patch=1,EE,201DD328,extended,00000000
+patch=1,EE,200C0500,extended,3C15000C
+patch=1,EE,200C0504,extended,8EB50100
+patch=1,EE,200C0508,extended,4495F000
+patch=1,EE,200C050C,extended,240303E8
+patch=1,EE,200C0510,extended,4483F800
+patch=1,EE,200C0514,extended,4680FFE0
+patch=1,EE,200C0518,extended,4482A000
+patch=1,EE,200C051C,extended,4680A520
+patch=1,EE,200C0520,extended,4614F502
+patch=1,EE,200C0524,extended,4614FD01
+patch=1,EE,200C0528,extended,24030002
+patch=1,EE,200C052C,extended,4483F800
+patch=1,EE,200C0530,extended,4680FFE0
+patch=1,EE,200C0534,extended,461FA503
+patch=1,EE,200C0538,extended,080774CE
+patch=1,EE,200C053C,extended,00000000
+patch=1,EE,201DD298,extended,08030180
+patch=1,EE,201DD29C,extended,00000000
+patch=1,EE,200C0600,extended,3C15000C
+patch=1,EE,200C0604,extended,8EB50100
+patch=1,EE,200C0608,extended,4495F000
+patch=1,EE,200C060C,extended,240303E8
+patch=1,EE,200C0610,extended,4483F800
+patch=1,EE,200C0614,extended,4680FFE0
+patch=1,EE,200C0618,extended,24030002
+patch=1,EE,200C061C,extended,4483D000
+patch=1,EE,200C0620,extended,4680D6A0
+patch=1,EE,200C0624,extended,2403012C
+patch=1,EE,200C0628,extended,4483D800
+patch=1,EE,200C062C,extended,4680DEE0
+patch=1,EE,200C0630,extended,24030258
+patch=1,EE,200C0634,extended,4483E000
+patch=1,EE,200C0638,extended,4680E720
+patch=1,EE,200C063C,extended,4600A646
+patch=1,EE,200C0640,extended,4614F502
+patch=1,EE,200C0644,extended,461BC834
+patch=1,EE,200C0648,extended,45010009
+patch=1,EE,200C064C,extended,00000000
+patch=1,EE,200C0650,extended,461FF742
+patch=1,EE,200C0654,extended,461DFF41
+patch=1,EE,200C0658,extended,461AEF43
+patch=1,EE,200C065C,extended,4614ED00
+patch=1,EE,200C0660,extended,4619E034
+patch=1,EE,200C0664,extended,45000002
+patch=1,EE,200C0668,extended,00000000
+patch=1,EE,200C066C,extended,4614ED00
+patch=1,EE,200C0670,extended,44826000
+patch=1,EE,200C0674,extended,46806320
+patch=1,EE,200C0678,extended,080774A7
+patch=1,EE,200C067C,extended,00000000
+patch=1,EE,201DD340,extended,080301C0
+patch=1,EE,200C0700,extended,C6940004
+patch=1,EE,200C0704,extended,3C15000C
+patch=1,EE,200C0708,extended,8EB50100
+patch=1,EE,200C070C,extended,4495F000
+patch=1,EE,200C0710,extended,240303E8
+patch=1,EE,200C0714,extended,4483F800
+patch=1,EE,200C0718,extended,4680FFE0
+patch=1,EE,200C071C,extended,24030002
+patch=1,EE,200C0720,extended,4483D000
+patch=1,EE,200C0724,extended,4680D6A0
+patch=1,EE,200C0728,extended,2403012C
+patch=1,EE,200C072C,extended,4483D800
+patch=1,EE,200C0730,extended,4680DEE0
+patch=1,EE,200C0734,extended,24030258
+patch=1,EE,200C0738,extended,4483E000
+patch=1,EE,200C073C,extended,4680E720
+patch=1,EE,200C0740,extended,4600A646
+patch=1,EE,200C0744,extended,4614F502
+patch=1,EE,200C0748,extended,461BC834
+patch=1,EE,200C074C,extended,45010009
+patch=1,EE,200C0750,extended,00000000
+patch=1,EE,200C0754,extended,461FF742
+patch=1,EE,200C0758,extended,461DFF41
+patch=1,EE,200C075C,extended,461AEF43
+patch=1,EE,200C0760,extended,4614ED00
+patch=1,EE,200C0764,extended,4619E034
+patch=1,EE,200C0768,extended,45000002
+patch=1,EE,200C076C,extended,00000000
+patch=1,EE,200C0770,extended,4614ED00
+patch=1,EE,200C0774,extended,080774D2
+patch=1,EE,200C0778,extended,00000000
+patch=1,EE,201D4FEC,extended,08030200
+patch=1,EE,201D4FF0,extended,00000000
+patch=1,EE,200C0800,extended,3C15000C
+patch=1,EE,200C0804,extended,8EB50100
+patch=1,EE,200C0808,extended,4495F000
+patch=1,EE,200C080C,extended,24170064
+patch=1,EE,200C0810,extended,4497D800
+patch=1,EE,200C0814,extended,4680DEE0
+patch=1,EE,200C0818,extended,461B0032
+patch=1,EE,200C081C,extended,45010024
+patch=1,EE,200C0820,extended,00000000
+patch=1,EE,200C0824,extended,C4FF0000
+patch=1,EE,200C0828,extended,2417001E
+patch=1,EE,200C082C,extended,4497D800
+patch=1,EE,200C0830,extended,4680DEE0
+patch=1,EE,200C0834,extended,24170046
+patch=1,EE,200C0838,extended,4497E000
+patch=1,EE,200C083C,extended,4680E720
+patch=1,EE,200C0840,extended,461F0741
+patch=1,EE,200C0844,extended,461DF682
+patch=1,EE,200C0848,extended,461BF834
+patch=1,EE,200C084C,extended,4501000D
+patch=1,EE,200C0850,extended,00000000
+patch=1,EE,200C0854,extended,461CF834
+patch=1,EE,200C0858,extended,4501000D
+patch=1,EE,200C085C,extended,00000000
+patch=1,EE,200C0860,extended,461FF7C2
+patch=1,EE,200C0864,extended,24170064
+patch=1,EE,200C0868,extended,4497D800
+patch=1,EE,200C086C,extended,4680DEE0
+patch=1,EE,200C0870,extended,461BF742
+patch=1,EE,200C0874,extended,461DDF41
+patch=1,EE,200C0878,extended,461FEFC0
+patch=1,EE,200C087C,extended,1000000A
+patch=1,EE,200C0880,extended,00000000
+patch=1,EE,200C0884,extended,461FF7C2
+patch=1,EE,200C0888,extended,10000007
+patch=1,EE,200C088C,extended,00000000
+patch=1,EE,200C0890,extended,461AEF01
+patch=1,EE,200C0894,extended,24170002
+patch=1,EE,200C0898,extended,4497D800
+patch=1,EE,200C089C,extended,4680DEE0
+patch=1,EE,200C08A0,extended,461BE703
+patch=1,EE,200C08A4,extended,461FE7C0
+patch=1,EE,200C08A8,extended,461FD000
+patch=1,EE,200C08AC,extended,E4FF0000
+patch=1,EE,200C08B0,extended,E5200008
+patch=1,EE,200C08B4,extended,C4A10004
+patch=1,EE,200C08B8,extended,080753FC
+patch=1,EE,200C08BC,extended,00000000
+patch=1,EE,20155730,extended,08030240
+patch=1,EE,20155734,extended,00000000
+patch=1,EE,200C0900,extended,3C15000C
+patch=1,EE,200C0904,extended,8EB50100
+patch=1,EE,200C0908,extended,4495F000
+patch=1,EE,200C090C,extended,241B0064
+patch=1,EE,200C0910,extended,449BF800
+patch=1,EE,200C0914,extended,4680FFE0
+patch=1,EE,200C0918,extended,461F0832
+patch=1,EE,200C091C,extended,4501000A
+patch=1,EE,200C0920,extended,00000000
+patch=1,EE,200C0924,extended,241B005A
+patch=1,EE,200C0928,extended,449BF800
+patch=1,EE,200C092C,extended,4680FFE0
+patch=1,EE,200C0930,extended,461F0834
+patch=1,EE,200C0934,extended,45010004
+patch=1,EE,200C0938,extended,00000000
+patch=1,EE,200C093C,extended,4601FF41
+patch=1,EE,200C0940,extended,461EEF43
+patch=1,EE,200C0944,extended,461DF841
+patch=1,EE,200C0948,extended,46020842
+patch=1,EE,200C094C,extended,E4410250
+patch=1,EE,200C0950,extended,E46100C0
+patch=1,EE,200C0954,extended,C4800004
+patch=1,EE,200C0958,extended,46030002
+patch=1,EE,200C095C,extended,E4600004
+patch=1,EE,200C0960,extended,E4600044
+patch=1,EE,200C0964,extended,C4810000
+patch=1,EE,200C0968,extended,45010002
+patch=1,EE,200C096C,extended,00000000
+patch=1,EE,200C0970,extended,4601F042
+patch=1,EE,200C0974,extended,080555D4
+patch=1,EE,200C0978,extended,00000000
+patch=1,EE,201555C8,extended,08030280
+patch=1,EE,201555CC,extended,00000000
+patch=1,EE,200C0A00,extended,C4810000
+patch=1,EE,200C0A04,extended,3C15000C
+patch=1,EE,200C0A08,extended,8EB50100
+patch=1,EE,200C0A0C,extended,4495F000
+patch=1,EE,200C0A10,extended,24170001
+patch=1,EE,200C0A14,extended,4497F800
+patch=1,EE,200C0A18,extended,4680FFE0
+patch=1,EE,200C0A1C,extended,461FF742
+patch=1,EE,200C0A20,extended,461DFF41
+patch=1,EE,200C0A24,extended,461FFFC0
+patch=1,EE,200C0A28,extended,461FEF43
+patch=1,EE,200C0A2C,extended,460CF302
+patch=1,EE,200C0A30,extended,460CEB00
+patch=1,EE,200C0A34,extended,460EF382
+patch=1,EE,200C0A38,extended,460EEB80
+patch=1,EE,200C0A3C,extended,27BDFFE0
+patch=1,EE,200C0A40,extended,3C030037
+patch=1,EE,200C0A44,extended,08055573
+patch=1,EE,200C0A48,extended,00000000
+patch=1,EE,2014E5DC,extended,080302C0
+patch=1,EE,2014E5E0,extended,00000000
+patch=1,EE,200C0B00,extended,3C15000C
+patch=1,EE,200C0B04,extended,8EB50100
+patch=1,EE,200C0B08,extended,4495F000
+patch=1,EE,200C0B0C,extended,4480D000
+patch=1,EE,200C0B10,extended,4615AD80
+patch=1,EE,200C0B14,extended,461EADC3
+patch=1,EE,200C0B18,extended,4615BDC1
+patch=1,EE,200C0B1C,extended,4616BDC3
+patch=1,EE,200C0B20,extended,4617D601
+patch=1,EE,200C0B24,extended,4617AE40
+patch=1,EE,200C0B28,extended,4604C834
+patch=1,EE,200C0B2C,extended,C6200008
+patch=1,EE,200C0B30,extended,46010042
+patch=1,EE,200C0B34,extended,08053978
+patch=1,EE,200C0B38,extended,00000000
+patch=1,EE,2014E5F0,extended,46182034
+patch=1,EE,201D4F6C,extended,08030300
+patch=1,EE,201D4F70,extended,00000000
+patch=1,EE,200C0C00,extended,3C15000C
+patch=1,EE,200C0C04,extended,8EB50100
+patch=1,EE,200C0C08,extended,4495F000
+patch=1,EE,200C0C0C,extended,C4800000
+patch=1,EE,200C0C10,extended,461E0002
+patch=1,EE,200C0C14,extended,E4600000
+patch=1,EE,200C0C18,extended,C4810004
+patch=1,EE,200C0C1C,extended,E4610004
+patch=1,EE,200C0C20,extended,C4A00000
+patch=1,EE,200C0C24,extended,461E0002
+patch=1,EE,200C0C28,extended,E4600008
+patch=1,EE,200C0C2C,extended,C4A10004
+patch=1,EE,200C0C30,extended,AC660010
+patch=1,EE,200C0C34,extended,E461000C
+patch=1,EE,200C0C38,extended,AC670014
+patch=1,EE,200C0C3C,extended,C4800008
+patch=1,EE,200C0C40,extended,E4600018
+patch=1,EE,200C0C44,extended,080753E7
+patch=1,EE,200C0C48,extended,00000000
 
-// 16:10
-//patch=1,EE,0018c7d0,word,3c013f55 // 00000000 hor fov
-//patch=1,EE,0018c7d4,word,34215555 // 00000000 hor fov
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f55 // 00000000 - X-FoV
+//patch=1,EE,0018c7d4,word,34215555 // 00000000 - X-FoV
+patch=1,EE,200C0100,extended,3F555555
 
-// 21:9
-//patch=1,EE,0018c7d0,word,3c013f10 // 00000000 hor fov
+[Widescreen 15:9]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f50
+patch=1,EE,200C0100,extended,3F500000
 
-// 25:16
-//patch=1,EE,0018c7d0,word,3c013f5a // 00000000 hor fov
-//patch=1,EE,0018c7d4,word,3421740e // 00000000 hor fov
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f63
+//patch=1,EE,0018c7d4,word,34218E39
+patch=1,EE,200C0100,extended,3F638E39
 
-// 32:9
-//patch=1,EE,0018c7d0,word,3c013ed5 // 00000000 hor fov
-//patch=1,EE,0018c7d4,word,3421c28f // 00000000 hor fov
+[Widescreen 20:9]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013F19
+//patch=1,EE,0018c7d4,word,3421999A
+patch=1,EE,200C0100,extended,3F19999A
+
+[Widescreen 21:9]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f12
+//patch=1,EE,0018c7d4,word,34214925
+// 3F124925, not 3f100000 (pgert)
+patch=1,EE,200C0100,extended,3F124925
+
+[Widescreen 25:16]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013f5a
+//patch=1,EE,0018c7d4,word,3421740e
+patch=1,EE,200C0100,extended,3F5A740E
+
+[Widescreen 32:9]
+gsaspectratio=Stretch
+author=RibShark (Rib)
+description=Combine with 'Widescreen 16:9'.
+//patch=1,EE,0018c7d0,word,3c013EC0
+// 3EC00000, not 3ed5c28f (pgert)
+patch=1,EE,200C0100,extended,3EC00000
+
+// Incomplete 60 fps hack by asasega
+// - might need EE overclocking to be stable.
+//patch=1,EE,2010121C,word,00000000
 
 [60 FPS]
 author=PeterDelta
-description=Unlocked at 60 FPS. Might need enable 130% EE Overclock to be stable.
-patch=1,EE,001011FC,word,24030000 //24030001
+description=Might need EE overclocking to be stable (130%).
+patch=1,EE,001011FC,word,24030000 // 24030001
