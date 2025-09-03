@@ -198,7 +198,7 @@ patch=1,EE,205A8B00,extended,0808FF62 // j 0x0023FD88
 comment=Allow B-Spec's speedup mode to go to 16x
 author=TheAdmiester, Vyerq
 // Change limiter check from 3 to 16
-patch=1,EE,201F2D0C,extended,28420010 
+patch=1,EE,201F2D0C,extended,28420010
 // Change override value from 3 to 16 if somehow over limiter
 patch=1,EE,201F2D14,extended,24020010
 
