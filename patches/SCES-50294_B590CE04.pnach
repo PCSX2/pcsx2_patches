@@ -1,10 +1,4 @@
-gametitle=Gran Turismo 3 - A-Spec (PAL-M) SCES-50294 B590CE04
-
-[No-Interlacing]
-gsinterlacemode=1
-author=PeterDelta
-description=Enable progressive interlacing.
-patch=1,EE,0028F81C,word,3C050000
+gametitle=Gran Turismo 3 - A-Spec (PAL - 2.00) (SCES-50294)
 
 [60 FPS]
 author=PeterDelta
@@ -16,3 +10,44 @@ patch=1,EE,20351980,extended,3C888889 //speed icon ilumination
 patch=1,EE,203519D4,extended,3C888889 //speed icon menu principal
 patch=1,EE,201F0D30,extended,24420032 //speed timer
 patch=1,EE,204A840C,extended,00080000
+
+[Adjusted triggers senstivity]
+description=Adjusted triggers sensitivity, makes throttle/brake more precise when using triggers, like on PS3
+author=Silent, Aero_
+// Throttle
+patch=1,EE,10212160,extended,0000005A
+// Brake
+patch=1,EE,102121A8,extended,0000005A
+// Reverse
+patch=1,EE,10212238,extended,0000005A
+// Input multiplier
+patch=1,EE,20211F5C,extended,00000000
+
+[Adjustable units]
+description=Allows the usage of units used in different regions
+author=Silent
+
+// Speed and distance units
+// 0 - KMH/KM
+// 1 - MPH/Miles
+patch=1,EE,202F7008,extended,0
+
+// Power units
+// 0 - PS
+// 1 - HP
+// 2 - BHP
+// 3 - CV
+// 4 - kW
+patch=1,EE,202F700C,extended,3
+
+// Torque units
+// 0 - kgf.m
+// 1 - ft.lb
+// 2 - NM
+patch=1,EE,202F7010,extended,0
+
+[No-Interlacing]
+gsinterlacemode=1
+author=PeterDelta
+description=Enable progressive interlacing.
+patch=1,EE,0028F81C,word,3C050000

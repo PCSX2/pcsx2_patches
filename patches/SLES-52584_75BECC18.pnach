@@ -1,4 +1,4 @@
-gametitle=Burnout 3 - Takedown (Europe, Australia) (En,Es,Nl,Sv) SLES-52584 crc 75BECC18
+gametitle=Burnout 3 - Takedown (PAL) (SLES-52584)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -32,3 +32,17 @@ patch=0,EE,20437118,extended,241B0003
 patch=0,EE,20437120,extended,A07B09A4
 patch=0,EE,00228154,extended,24020001
 patch=0,EE,20228170,extended,00000000
+
+[Progressive Scan Menu]
+author=Nehalem
+description=Show the Progressive Scan (480p) menu instead of the Interlacing (50Hz/60Hz) menu
+patch=0,EE,004373F8,extended,0000009D
+patch=0,EE,00437418,extended,0000009E
+patch=0,EE,0043742C,extended,0000009A
+patch=0,EE,00437128,extended,0000009F
+patch=0,EE,00437144,extended,000000A0
+patch=0,EE,00437158,extended,0000009C
+patch=0,EE,0043716C,extended,0000009B
+patch=0,EE,2043733C,extended,24050001
+patch=0,EE,20437364,extended,24050001
+patch=0,EE,00437386,extended,00000085

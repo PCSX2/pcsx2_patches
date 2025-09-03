@@ -1,4 +1,102 @@
-gametitle=Gran Turismo 4 [SCES-51719] (E)
+gametitle=Gran Turismo 4 (PAL) (SCES-51719)
+
+[Adjusted triggers sensitivity]
+description=Makes throttle/brake more precise when using triggers, like on PS3
+author=Silent, Aero_
+// Throttle
+patch=1,EE,1043C274,extended,0000005A
+patch=1,EE,2043C268,extended,00000000
+// Brake
+patch=1,EE,1043C2D4,extended,0000005A
+patch=1,EE,2043C2C8,extended,00000000
+// Reverse
+patch=1,EE,1043C394,extended,0000005A
+patch=1,EE,2043C388,extended,00000000
+
+[Analog HUD for all camera views]
+comment=The analog tachometer will be used for the chase camera.
+author=Aero_
+patch=1,EE,2039D178,extended,1000000D
+patch=1,EE,2039D1B0,extended,24020000
+
+[Digital HUD for all camera views]
+comment=The digital tachometer will be used for the bumper camera and roof camera.
+author=Aero_
+patch=1,EE,2039D178,extended,1000000D
+patch=1,EE,2039D1B0,extended,24020001
+
+[Disable animated track flares]
+comment=Disables the lens flares cast from animated track objects. Useful for PCSX2 performance.
+author=TheAdmiester
+// Return early from CourseData::setFlare
+patch=1,EE,20397580,extended,03E00008
+patch=1,EE,20397584,extended,00000000
+
+[Disable car lights lens flares]
+comment=Disables the lens flares cast from all cars' brake/headlights. Useful for PCSX2 performance.
+author=TheAdmiester
+// Return early from RaceCarModel::setLampFlare
+patch=1,EE,203914C8,extended,03E00008
+patch=1,EE,203914CC,extended,00000000
+
+[Disable dynamic race text] 
+comment=Disables the text that appears at the bottom of the screen. Example: "GET READY TO DRIVE"
+author=Aero_
+patch=1,EE,2039DD4C,extended,00000000 // GET READY TO DRIVE
+patch=1,EE,2039DA74,extended,00000000 // Penalty timer
+
+[Disable Sun lens flare]
+comment=Disables the lens flare that appears on some tracks when facing the sun. Useful for PCSX2 performance.
+author=TheAdmiester
+// Return early from CourseEnvPtr::setSun
+patch=1,EE,20398898,extended,03E00008
+patch=1,EE,2039889C,extended,00000000
+
+[Gran Turismo 3 camera placement]
+comment=Moves the exterior camera closer to the ground like Gran Turismo 3.
+author=Aero_
+patch=1,EE,2037B5D4,extended,08125654 // j 00495950
+patch=1,EE,20495950,extended,8E180008 // lw t8,0x8(s0)
+patch=1,EE,20495954,extended,3C19C0C0 // lui t9,0xC0C0
+patch=1,EE,20495958,extended,17380006 // bne t9,t8,0x00495974 : jumps if Z-Axis does not equal -6.0 float
+patch=1,EE,2049595C,extended,3C19BFC0 // lui t9,0xBFC0 : Y-Axis 1st-Half of Float Value
+patch=1,EE,20495960,extended,37390000 // ori t9,0x0000 : Y-Axis 2nd-Half of Float Value
+patch=1,EE,20495964,extended,AE190004 // sw t9,0x4(s0)
+patch=1,EE,20495968,extended,3C19C0C0 // lui t9,0xC0C0 : Z-Axis 1st-Half of Float Value
+patch=1,EE,2049596C,extended,37390000 // ori t9,0x0000 : Z-Axis 2nd-Half of Float Value
+patch=1,EE,20495970,extended,AE190008 // sw t9,0x8(s0)
+patch=1,EE,20495974,extended,C60C0000 // lwc1 f12,0x0(s0)
+patch=1,EE,20495978,extended,C60D0004 // lwc1 f13,0x4(s0)
+patch=1,EE,2049597C,extended,0C129E11 // jal 0x004A7844
+patch=1,EE,20495980,extended,C60E0008 // lwc1 f14,0x8(s0)
+patch=1,EE,20495984,extended,080DED79 // j 0037B5E4
+
+[Gran Turismo 5 camera placement]
+author=Aero_
+description=Moves the exterior camera further from the ground like Gran Turismo 5.
+patch=1,EE,2037B5D4,extended,08125654 // j 00495950
+patch=1,EE,20495950,extended,8E180008 // lw t8,0x8(s0)
+patch=1,EE,20495954,extended,3C19C0C0 // lui t9,0xC0C0
+patch=1,EE,20495958,extended,17380006 // bne t9,t8,0x00495974 : jumps if Z-Axis does not equal -6.0 float
+patch=1,EE,2049595C,extended,3C19BFF3 // lui t9,0xBFF3 : Y-Axis 1st-Half of Float Value
+patch=1,EE,20495960,extended,37393333 // ori t9,0x3333 : Y-Axis 2nd-Half of Float Value
+patch=1,EE,20495964,extended,AE190004 // sw t9,0x4(s0)
+patch=1,EE,20495968,extended,3C19C0E0 // lui t9,0xC0E0 : Z-Axis 1st-Half of Float Value
+patch=1,EE,2049596C,extended,37390000 // ori t9,0x0000 : Z-Axis 2nd-Half of Float Value
+patch=1,EE,20495970,extended,AE190008 // sw t9,0x8(s0)
+patch=1,EE,20495974,extended,C60C0000 // lwc1 f12,0x0(s0)
+patch=1,EE,20495978,extended,C60D0004 // lwc1 f13,0x4(s0)
+patch=1,EE,2049597C,extended,0C129E11 // jal 0x004A7844
+patch=1,EE,20495980,extended,C60E0008 // lwc1 f14,0x8(s0)
+patch=1,EE,20495984,extended,080DED79 // j 0037B5E4
+
+[No-Interlacing]
+author=gladiator
+description=Attempts to disable offset rendering
+gsinterlacemode=1
+patch=1,EE,204A2A2C,extended,0000102D //Remove Interlacing
+patch=1,EE,20A57E70,extended,00000001 //Force progressive scan
+patch=1,EE,20618690,extended,00000003 //In mode 1 (Progressive), switch to PAL double strike instead of SDTV 480p
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -17,4 +115,3 @@ patch=1,EE,204959B4,extended,4481A000 // mtc1 at,f20
 patch=1,EE,204959B8,extended,4614D682 // mul.s f26, f26, f20
 patch=1,EE,204959BC,extended,08124B83 // j 00492E0C
 patch=1,EE,2044DF60,extended,00000000 // nop
-
