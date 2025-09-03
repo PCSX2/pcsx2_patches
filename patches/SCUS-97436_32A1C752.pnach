@@ -55,7 +55,7 @@ patch=1,EE,2020B594,extended,03E00008
 patch=1,EE,2020B744,extended,14000006
 
 
-[Disable dynamic race text] 
+[Disable dynamic race text]
 comment=Disables the text that appears at the bottom of the screen. Example: "GET READY TO DRIVE"
 author=Aero_
 patch=1,EE,201C3474,extended,00000000 // GET READY TO DRIVE
