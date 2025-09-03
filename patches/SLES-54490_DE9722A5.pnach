@@ -24,7 +24,7 @@ patch=1,EE,200FFFF8,extended,341B1070
 patch=1,EE,2039B078,extended,0C03FFF8
 
 [Restore Dead Pan technique]
-description=Restores the Japanese/Korean-exclusive Dead Pan technique.
+description=Restores the Japanese/Korean-exclusive Dead Pan technique (it shows automatically in the roulette). If the language is not set to English, the name will be shown in Japanese.
 author=The Cutting Room Floor
 patch=1,EE,201250A8,extended,00001021
 patch=1,EE,201251CC,extended,00001021
