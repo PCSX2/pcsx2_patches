@@ -1,4 +1,4 @@
-gametitle=God Hand (PAL - SLES-54490)
+gametitle=God Hand (PAL) (SLES-54490)
 
 //[Widescreen 16:9]
 //gsaspectratio=16:9
@@ -22,3 +22,11 @@ patch=1,EE,200FFFF0,extended,FCC20000
 patch=1,EE,200FFFF4,extended,03E00008
 patch=1,EE,200FFFF8,extended,341B1070
 patch=1,EE,2039B078,extended,0C03FFF8
+
+[Restore Dead Pan technique]
+description=Restores the Japanese/Korean-exclusive Dead Pan technique.
+author=The Cutting Room Floor
+patch=1,EE,201250A8,extended,00001021
+patch=1,EE,201251CC,extended,00001021
+patch=1,EE,20125264,extended,00002021
+patch=1,EE,20125338,extended,00001821

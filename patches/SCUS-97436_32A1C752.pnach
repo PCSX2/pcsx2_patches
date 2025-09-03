@@ -1,4 +1,4 @@
-gametitle=Gran Turismo 4 Online Public Beta [SCUS-97436] (U)
+gametitle=Gran Turismo 4 Online Public Beta (NTSC-U) (SCUS-97436)
 
 [32-Bit color depth]
 description=Color depth will remain 32-bit while using 480p.
@@ -157,7 +157,7 @@ patch=1,EE,205A8B00,extended,0808FF62 // j 0x0023FD88
 
 
 [Gran Turismo 3 chase camera]
-description=GT3-like camera from Gran Turismo 4First Preview
+description=GT3-like camera from Gran Turismo 4 First Preview
 author=Silent
 // Values changed by this cheat are hexadecimal.
 // They are 1-byte each, repeated 4 times - so a value of 30 (0x1E)
@@ -165,10 +165,12 @@ author=Silent
 // Default parameters in this cheat correspond to the values from GT4 First Preview,
 // but you may freely customize them. For example, if you want to make the camera
 // even stiffer (like in GT5/6), increase the damper value.
+
 // Camera damper, default - 120
 // Higher values make the camera center quicker
 patch=1,EE,106635DA,extended,1E1E // 30
 patch=1,EE,106635DC,extended,1E1E // 30
+
 // Camera max angle, default - 15
 // Higher values make the camera lean further to the sides
 patch=1,EE,106635DE,extended,0A0A // 10

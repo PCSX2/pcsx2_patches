@@ -23,29 +23,6 @@ patch=1,EE,10212238,extended,0000005A
 // Input multiplier
 patch=1,EE,20211F5C,extended,00000000
 
-[Adjustable units]
-description=Allows the usage of units used in different regions
-author=Silent
-
-// Speed and distance units
-// 0 - KMH/KM
-// 1 - MPH/Miles
-patch=1,EE,202F7008,extended,0
-
-// Power units
-// 0 - PS
-// 1 - HP
-// 2 - BHP
-// 3 - CV
-// 4 - kW
-patch=1,EE,202F700C,extended,3
-
-// Torque units
-// 0 - kgf.m
-// 1 - ft.lb
-// 2 - NM
-patch=1,EE,202F7010,extended,0
-
 [No-Interlacing]
 gsinterlacemode=1
 author=PeterDelta
