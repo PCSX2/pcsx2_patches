@@ -2,7 +2,7 @@ gametitle=Gran Turismo 3 - A-Spec (PAL - 2.00) (SCES-50294)
 
 [60 FPS]
 author=PeterDelta
-description=Forces progressive scan and run at 60 fps
+description=Forces progressive scan and run at 60 fps. The MIDI songs play at the wrong speed.
 patch=1,EE,2028F840,extended,24120052
 patch=1,EE,2035163C,extended,3C888889 //speed flags
 patch=1,EE,20351F1C,extended,3C888889 //speed cars
@@ -22,9 +22,3 @@ patch=1,EE,102121A8,extended,0000005A
 patch=1,EE,10212238,extended,0000005A
 // Input multiplier
 patch=1,EE,20211F5C,extended,00000000
-
-[No-Interlacing]
-gsinterlacemode=1
-author=PeterDelta
-description=Enable progressive interlacing.
-patch=1,EE,0028F81C,word,3C050000
