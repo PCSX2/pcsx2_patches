@@ -1,15 +1,15 @@
 gametitle=Gran Turismo 3 - A-Spec (PAL - 2.00) (SCES-50294)
 
-[60 FPS]
-author=PeterDelta
-description=Forces progressive scan and run at 60 fps. The MIDI songs play at the wrong speed.
-patch=1,EE,2028F840,extended,24120052
-patch=1,EE,2035163C,extended,3C888889 //speed flags
-patch=1,EE,20351F1C,extended,3C888889 //speed cars
-patch=1,EE,20351980,extended,3C888889 //speed icon ilumination
-patch=1,EE,203519D4,extended,3C888889 //speed icon menu principal
-patch=1,EE,201F0D30,extended,24420032 //speed timer
-patch=1,EE,204A840C,extended,00080000
+//[60 FPS]
+//author=PeterDelta
+//description=Forces progressive scan and run at 60 fps. The MIDI songs play at the wrong speed.
+//patch=1,EE,2028F840,extended,24120052
+//patch=1,EE,2035163C,extended,3C888889 //speed flags
+//patch=1,EE,20351F1C,extended,3C888889 //speed cars
+//patch=1,EE,20351980,extended,3C888889 //speed icon ilumination
+//patch=1,EE,203519D4,extended,3C888889 //speed icon menu principal
+//patch=1,EE,201F0D30,extended,24420032 //speed timer
+//patch=1,EE,204A840C,extended,00080000
 
 [Adjusted triggers senstivity]
 description=Adjusted triggers sensitivity, makes throttle/brake more precise when using triggers, like on PS3
