@@ -1,0 +1,6 @@
+[No Interlacing]
+author=Souzooka
+description=Removes interlacing artefacts.
+gsinterlacemode=1
+
+patch=0,EE,2016F97C,extended,0 // nop
