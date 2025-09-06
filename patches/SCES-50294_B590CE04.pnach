@@ -2,7 +2,7 @@ gametitle=Gran Turismo 3 - A-Spec (PAL - 2.00) (SCES-50294)
 
 //[60 FPS]
 //author=PeterDelta
-//description=Forces progressive scan and run at 60 fps. The MIDI songs play at the wrong speed.
+//description=Forces progressive scan and run at 60 fps. The MIDI songs play at the wrong speed and the demo replays for license tests don't play out correctly.
 //patch=1,EE,2028F840,extended,24120052
 //patch=1,EE,2035163C,extended,3C888889 //speed flags
 //patch=1,EE,20351F1C,extended,3C888889 //speed cars

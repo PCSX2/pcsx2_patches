@@ -90,14 +90,6 @@ patch=1,EE,2049597C,extended,0C129E11 // jal 0x004A7844
 patch=1,EE,20495980,extended,C60E0008 // lwc1 f14,0x8(s0)
 patch=1,EE,20495984,extended,080DED79 // j 0037B5E4
 
-[No-Interlacing]
-author=gladiator
-description=Attempts to disable offset rendering
-gsinterlacemode=1
-patch=1,EE,204A2A2C,extended,0000102D //Remove Interlacing
-patch=1,EE,20A57E70,extended,00000001 //Force progressive scan
-patch=1,EE,20618690,extended,00000003 //In mode 1 (Progressive), switch to PAL double strike instead of SDTV 480p
-
 [Widescreen 16:9]
 gsaspectratio=16:9
 description=Widescreen Text
