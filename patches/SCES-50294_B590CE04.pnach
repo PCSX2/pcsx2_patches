@@ -22,3 +22,9 @@ patch=1,EE,102121A8,extended,0000005A
 patch=1,EE,10212238,extended,0000005A
 // Input multiplier
 patch=1,EE,20211F5C,extended,00000000
+
+[No-Interlacing]
+gsinterlacemode=1
+author=PeterDelta
+description=Enables progressive interlacing.
+patch=1,EE,0028F81C,word,3C050000
