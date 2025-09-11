@@ -1,0 +1,30 @@
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,00AAFD54,word,00000001
+patch=1,EE,0054BD38,word,3F400000
+
+[Remove Brown Filter]
+author=fobes
+description=Disables the brownish yellow post processing filter
+patch=1,EE,00551058,extended,20000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,00322DB4,word,0000102D
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect
+patch=0,EE,00550424,word,00000000
+patch=0,EE,001FEDB8,word,24020000
+patch=0,EE,001FEDBC,word,10620004
+
+[Enable Black Edition]
+description=Black Edition content, Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574940,byte,1
+patch=1,EE,20574528,byte,1
+patch=1,EE,20574564,byte,1
