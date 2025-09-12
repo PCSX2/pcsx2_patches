@@ -1,3 +1,5 @@
+gametitle= R-C Sports Copter Challenge (PAL) (SLES-50981)
+
 [No Interlacing]
 author=Souzooka
 description=Removes interlacing artefacts.
