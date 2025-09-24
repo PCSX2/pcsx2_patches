@@ -1,0 +1,9 @@
+gametitle=MN - Mystic Nights (K)(SCKA-20055)
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+author=NineKain
+
+//Remove Interlacing
+patch=1,EE,001015B4,extended,00000000
