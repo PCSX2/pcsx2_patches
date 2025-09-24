@@ -1,9 +1,9 @@
-gametitle=Curse - The Eye Of Isis (PAL-M6) (SLES-51934) 7100A15F
+gametitle=Curse - The Eye of Isis PAL-M SLES-51934 7100A15F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=sergx12 and ElHecht
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,002b5890,word,3c013fe3 // 3c013faa ver fov
 patch=1,EE,002b5894,word,34218e39 // 3421aaab ver fov
 patch=1,EE,0011cef4,word,461e0003 // 00000000 zoom loading screen
@@ -43,12 +43,18 @@ patch=1,EE,0050fd64,word,3c1b3f80 // 00000000
 patch=1,EE,0050fd68,word,0804d1f0 // 00000000
 patch=1,EE,0011e8b4,word,461ef783 // 00000000 inventory-to-documents function
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
+description=Might need EE Overclock (130)%.
 patch=1,EE,00510300,byte,01
 
 [NTSC Mode]
 author=Gabominated
 description=NTSC mode at startup, FMVs remain in PAL.
+patch=1,EE,002b45b0,word,240201c0 //24020200
+
+[480p Mode]
+author=Gabominated
+description=SDTV 480p mode at start. FMVs remain in PAL.
+patch=1,EE,003B0A68,word,10620005 //14620005
 patch=1,EE,002b45b0,word,240201c0 //24020200

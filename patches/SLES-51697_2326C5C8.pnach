@@ -1,0 +1,13 @@
+gametitle=SSX 3 (SLES-51697) (V2.0)
+
+[Disable intro videos (EA/THX/Splash)]
+author=Meridian
+patch=0,EE,001A28A0,word,0000202D
+patch=0,EE,001A28C4,word,0000202D
+patch=0,EE,001A293C,word,0000202D
+
+[Fix Metro Slowdown]
+author=Meridian
+description=Disable perf frame skip
+patch=0,EE,00230794,word,00000000
+patch=0,EE,002307A0,word,00000000

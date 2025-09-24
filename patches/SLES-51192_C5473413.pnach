@@ -3,7 +3,7 @@ gametitle=Harry Potter and The Chamber of Secrets (E)[SLES-51192]
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen Hack
+description=Widescreen Hack
 //Widescreen hack 16:9
 
 //Zoom
@@ -32,4 +32,12 @@ comment=Widescreen Hack
 
 // Commented out as it broke loading screen font and other stuff.
 
+[50/60 FPS]
+author=asasega
+description=Might need EE Overclock (130%).
+patch=1,EE,00544168,word,00000001
 
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,001BDAD4,word,241001C0

@@ -141,11 +141,13 @@ patch=1,EE,202FF9B0,extended,3FE38E39
 patch=1,EE,202FF9E8,extended,3FE38E39
 patch=1,EE,20331330,extended,3FE38E39
 
-[480p Mode]
-gsinterlacemode=1
-author=PeterDelta
-description=SDTV 480p mode at start.
-patch=1,EE,0029DACC,extended,00000001
-patch=1,EE,E0019680,extended,0029D114
-patch=1,EE,0029DACC,extended,00000000
-patch=1,EE,2029D284,extended,3F555550
+//[480p Mode]
+//author=PeterDelta
+//description=SDTV 480p mode at start. Cannot be conditioned, FMV no sync, gameplay is fine
+//patch=1,EE,0029DACC,extended,00000001
+//patch=1,EE,2029D284,extended,3F555550
+
+[Skip Cutscenes]
+author=Ezedequias
+description=With Any Action button
+patch=1,EE,0029D47C,byte,01

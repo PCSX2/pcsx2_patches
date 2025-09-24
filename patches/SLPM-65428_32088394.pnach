@@ -2,7 +2,7 @@ gametitle=BioHazard Outbreak [NTSC-J] (SLPM-65428) (ENGLISH PATCHED)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=FMV's fix will cause abnormal collection interface
+description=FMV's fix will cause abnormal collection interface
 
 //gameplay by synce
 patch=1,EE,20239d48,extended,3fe38e38

@@ -2,7 +2,7 @@ gametitle=K-1 World Grand Prix SLUS_206.82
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack
+description=Widescreen hack
 patch=1,EE,2080143c,extended,3f2ccccd //3f666666
 
 

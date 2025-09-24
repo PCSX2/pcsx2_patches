@@ -3,7 +3,7 @@ gametitle=Garfield - Saving Arlene (PAL)(SLES-53587)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen Hack
+description=Widescreen Hack
 //Widescreen hack 16:9
 
 //Zoom
@@ -17,5 +17,5 @@ patch=1,EE,0010ee8c,word,3c033f40 //3c033f80
 
 [50 FPS]
 author=someother1ne
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,20223050,extended,00000001

@@ -1,0 +1,9 @@
+gametitle=Hot Shots Golf 3 (U)(v2.00)(SCUS-97130)
+
+[No Interlacing]
+author=Souzooka
+description=Removes interlacing artefacts (does not affect FMVs).
+gsinterlacemode=1
+
+// In-game/menus
+patch=0,EE,2010413C,extended,0 // daddiu v0,v0,0x8

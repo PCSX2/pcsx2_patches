@@ -2,7 +2,7 @@ gametitle=Naruto - Uzumaki Chronicles (NTSC-K) (SLKA-25313)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Widescreen Hack (16:9) (NTSC-K by Arapapa)
+description= Widescreen Hack (16:9) (NTSC-K by Arapapa)
 
 // 16:9
 // 613f023c af474234 (search twice)

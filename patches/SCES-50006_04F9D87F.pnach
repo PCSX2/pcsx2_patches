@@ -138,7 +138,7 @@ patch=1,EE,0013303C,word,46030842 // 46141082
 [Widescreen/16:10]
 gsaspectratio=Stretch
 author=Dreadmoth, converted by pgert
-comment=Combine with 'Widescreen 16:9'.
+description=Combine with 'Widescreen 16:9'.
 patch=1,EE,00132934,word,3C013F55
 patch=1,EE,00132EC8,word,3C013F55
 patch=1,EE,00133030,word,3C013F65
@@ -146,7 +146,7 @@ patch=1,EE,00133030,word,3C013F65
 [Widescreen/15:10]
 gsaspectratio=Stretch
 author=Dreadmoth, converted by pgert
-comment=Combine with 'Widescreen 16:9'.
+description=Combine with 'Widescreen 16:9'.
 patch=1,EE,00132934,word,3C013F64
 patch=1,EE,00132EC8,word,3C013F64
 patch=1,EE,00133030,word,3C013F65
@@ -154,7 +154,7 @@ patch=1,EE,00133030,word,3C013F65
 [Widescreen/20:9]
 gsaspectratio=Stretch
 author=Dreadmoth, converted by pgert
-comment=Combine with 'Widescreen 16:9'.
+description=Combine with 'Widescreen 16:9'.
 patch=1,EE,00132934,word,3C013F1A
 patch=1,EE,00132EC8,word,3C013F1A
 patch=1,EE,00133030,word,3C013F64
@@ -162,7 +162,7 @@ patch=1,EE,00133030,word,3C013F64
 [Widescreen/21:9]
 gsaspectratio=Stretch
 author=Dreadmoth, converted by pgert
-comment=Combine with 'Widescreen 16:9'.
+description=Combine with 'Widescreen 16:9'.
 patch=1,EE,00132934,word,3C013F12
 patch=1,EE,00132EC8,word,3C013F12
 patch=1,EE,00133030,word,3C013F64
@@ -175,7 +175,7 @@ patch=1,EE,001C228C,word,3C013E10 // 3C013F00
 
 [50 FPS]
 author=PeterDelta
-comment=Might need EE overclocking to be stable (130%).
-patch=1,EE,001D7950,word,28420001 // 28420004 
+description=Might need EE overclocking to be stable (130%).
+patch=1,EE,001D7950,word,28420001 // 28420004
 patch=1,EE,E0010001,extended,004DBA28
 patch=1,EE,201D7950,extended,28420004

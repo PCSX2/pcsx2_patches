@@ -1,13 +1,11 @@
 gametitle=Project Zero * SLES-50821 * PAL-M5 * 22E91837
 // Fatal Frame
 
-// Due to missing renderingfixes, black stripes can show up on ghosts, spirits and photos.
-
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000 & pgert
 
-patch=1,EE,00185B40,word,3C0145C0 // 3C014500 - HD-rendering fix for 00185B4C.
+//patch=1,EE,00185B40,word,3C0145C0 // 3C014500 - HD-rendering fix for 00185B4C.
 patch=1,EE,00185B4C,word,3C013F40 // 3C013F80 - X-axis of Cutscenes (including IntroCutscenes).
 patch=1,EE,0018A2CC,word,3C013F40 // 3C013F80 - X-axis of GamePlay.
 
@@ -29,11 +27,11 @@ patch=1,EE,00182748,word,24091E00 // 24092800 - width of Cinematics.
 
 // ==========
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
 author=nemesis2000 & pgert
 
-patch=1,EE,00185B40,word,3C0145C0 // can't be set to 3C0145AD.
+//patch=1,EE,00185B40,word,3C0145C0 // can't be set to 3C0145AD.
 patch=1,EE,00185B4C,word,3C013F55
 patch=1,EE,0018A2CC,word,3C013F55
 
@@ -55,11 +53,11 @@ patch=1,EE,00182748,word,24091F00 // 24092800 - width of Cinematics.
 
 // ==========
 
-[Widescreen/15:10]
+[Widescreen 15:10]
 gsaspectratio=Stretch
 author=nemesis2000 & pgert
 
-patch=1,EE,00185B40,word,3C0145C0
+//patch=1,EE,00185B40,word,3C0145C0
 patch=1,EE,00185B4C,word,3C013F64
 patch=1,EE,0018A2CC,word,3C013F64
 
@@ -88,7 +86,7 @@ author=a_NUb_iS
 //  Search mask:    ffffffffffffffff
 patch=1,EE,00235664,word,00000000 // 64420008
 
-[No-Interlacing]
+[No-Interlacing alternative]
 author=wagrenier
 patch=1,EE,0010ba94,word,00000000
 patch=1,EE,0010bac0,word,00000000
@@ -109,7 +107,7 @@ patch=1,EE,00350F1C,word,00000000
 
 [Disable Post-Process and Noise effect - menus]
 author=ported by br4zil from NTSC-U
-comment=Makes main menu bland looking
+description=Makes main menu bland looking
 patch=1,EE,0035905C,word,00000000
 
 // ==========
@@ -135,6 +133,10 @@ patch=1,EE,0035905C,word,00000000
 // patch=1,EE,001B5F84,word,3C013C82 // 3C013C80 - corrects the display of the Camera TargetTracker (due to 0011D604).
 // patch=1,EE,002039B4,word,3C014410 // 3C0143A0 - X-axis placement of photos (affected by 0011D604).
 // patch=1,EE,002039C0,word,3C014438 // 3C014360 - Y-axis placement of photos (affected by 0011D604).
-// - An unfixed side-effect of 0011D604 is that the graining-effect (dark filtering)
-//    in GameMenu & CameraView disappears.
+// - A side-effect of 0011D604 is that the Post-Process graining-effect
+//    in GameMenu & CameraView gets disabled.
+// ==========
+// The HD-rendering fix for 00185B4C (00185B40) appears not to be needed on later builds.
+// It also wracks up the mirror rendering in the Cutscenes:
+//  https://github.com/PCSX2/pcsx2_patches/pull/588
 // ==========

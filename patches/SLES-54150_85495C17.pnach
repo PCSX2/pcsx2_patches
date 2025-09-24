@@ -2,17 +2,18 @@ gametitle=Bionicle Heroes PAL-M SLES-54150 85495C17
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=Gabominated
+description=Enable native widescreen.
+patch=1,EE,00388D04,word,3C013F10 //3C013F00 zoom fix
+patch=1,EE,0065F798,word,00000001 //00000000
 
-//Widescreen hack 16:9
-
-// Zoom fix (Internal Widescreen Option)
-patch=1,EE,00388cf8,word,3c013f80 //3c013f40
-
-//X-Fov
-patch=1,EE,00388d28,word,3c013f10 //3c013f40
-
-[50 FPS]
+[50/60 FPS]
 author=Gabominated
 description=Might need EE Overclock.
 patch=1,EE,001C9674,word,24020002 //24020004
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC Mode at start.
+patch=0,EE,0042CF00,word,24020005 //24020004
+patch=0,EE,0042CF08,word,240300E0 //24030100

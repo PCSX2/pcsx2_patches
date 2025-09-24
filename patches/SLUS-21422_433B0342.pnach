@@ -1,0 +1,9 @@
+gametitle=Tom Clancy's Ghost Recon - Advanced Warfighter NTSC-U SLUS-21422 75A5436A
+// CRC shifts from 433B0342 to 75A5436A (SP.IMG)
+// This pnach corresponds to the main CRC of the game,
+// but it's just meant to activate the SLUS-21422_75A5436A pnach.
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Widescreen hack

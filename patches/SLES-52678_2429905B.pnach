@@ -1,11 +1,8 @@
-gametitle=Viewtiful Joe [PAL-M5] (SLES_526.78)
+gametitle=Viewtiful Joe (PAL-M) SLES-52678 2429905B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas
-
-//Gameplay 16:9
-patch=1,EE,002B8304,word,3C01BF27 //3C01BF00 Y-FOV
-patch=1,EE,002C1458,word,3C013F20 //3C013F00 Zoom
-
-
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00100E88,word,3C013FD2
+patch=1,EE,002AD2AC,word,10400039

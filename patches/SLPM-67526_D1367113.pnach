@@ -2,7 +2,7 @@ gametitle=Ghost Vibration(K) (SLPM_675.26)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (pnach by Arapapa)
+description=Widescreen Hack (pnach by Arapapa)
 
 patch=1,EE,001d7380,word,3F400000 // 3F800000
 

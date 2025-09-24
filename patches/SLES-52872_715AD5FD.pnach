@@ -9,16 +9,11 @@ description=Renders the game in 16:9 aspect ratio
 patch=1,EE,002b5118,word,3c013f40 //3c013f80
 
 [50/60 FPS]
-author=PeterDelta
-description=Might need EE Overclock at 180%.
+author=Snake356
+description=Might need EE Overclock (180%).
 patch=1,EE,004B70F8,word,00000000 //00000001
 
 [NTSC Mode]
-author=PeterDelta
+author=Gabominated & PeterDelta
 description=NTSC mode at start.
-patch=1,EE,0040E3E0,word,34050002
-patch=1,EE,0040E3E4,word,24030002
-patch=1,EE,0040E3E8,word,0000000C 
-patch=1,EE,0040E3EC,word,03E00008
-patch=1,EE,002B505C,word,24050280
-patch=1,EE,002B5060,word,240601C0
+patch=1,EE,002B5040,word,10930017

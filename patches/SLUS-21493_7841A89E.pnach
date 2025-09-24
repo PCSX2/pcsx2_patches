@@ -1,0 +1,27 @@
+gametitle=Need for Speed - Carbon (NTSC-U) (SLUS-21493) 7841A89E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,E0010000,extended,00A6E994
+patch=1,EE,00A6E994,extended,00000001
+patch=1,EE,2061E4F8,extended,3F400000
+patch=1,EE,2061E510,extended,3F400000
+
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect
+patch=0,EE,00624044,word,00000000
+patch=0,EE,00254470,word,24020000
+patch=0,EE,00254474,word,10620004
+patch=0,EE,00624170,word,01000000
+
+[Fix Most Wanted Black Edition save detection]
+author=Silent
+description=Fixes the career cash bonus checking for an incorrect serial of Most Wanted: Black Edition.
+
+// BASLAJ-25075 -> BASLUS-21351
+patch=0,EE,205B0268,extended,4C534142
+patch=0,EE,205B026C,extended,322D5355
+patch=0,EE,205B0270,extended,31353331

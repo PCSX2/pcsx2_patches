@@ -17,7 +17,7 @@ patch=1,EE,20453E94,extended,3f800000 //3f8f5c29
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=No Interlacing
+description=No Interlacing
 
 //480p
 patch=1,EE,0026EBC8,extended,00000002

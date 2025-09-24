@@ -3,7 +3,7 @@ gametitle=Resident Evil - Code Veronica X (PAL-M4) (SLES-50306) A5434CCF
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen hack 16:9 
+description=Widescreen hack 16:9
 patch=1,EE,21140300,extended,3f400000 // 3f800000 hor fov
 patch=1,EE,21E394C0,extended,01aa0280 // 01400280 fmv fix
 patch=1,EE,21E394C4,extended,000c0000 // 00400000 fmv fix
@@ -11,7 +11,7 @@ patch=1,EE,21E394C4,extended,000c0000 // 00400000 fmv fix
 [No-Interlacing]
 gsinterlacemode=1
 author=felixthecat1970
-comment=480p enable progressive scan mode v1
+description=480p enable progressive scan mode v1
 patch=1,EE,002D25D4,extended,24060050
 patch=1,EE,202D25D0,extended,0000282D
 patch=1,EE,202D25E0,extended,00000000

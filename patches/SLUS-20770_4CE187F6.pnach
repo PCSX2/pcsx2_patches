@@ -1,13 +1,14 @@
-gametitle=LotR The - The Return of the King  SLUS_207.70
+gametitle=Lord of the Rings, The - The Return of the King NTSC-U SLUS-20770 4CE187F6
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+author=sergx12
+description=Widescreen Hack
 patch=1,EE,21019110,extended,3F400000 // 3F800000
 patch=1,EE,21019120,extended,442b0000 // 44000000
 patch=1,EE,21019128,extended,3Fab0000 // 3F800000
 
 [60 FPS]
 author=Gabominated
-description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,2014B768,extended,10000013 //14400003
+description=Might need EE Overclock.
+patch=1,EE,0014B784,word,3C030000 //3C033F80

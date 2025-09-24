@@ -3,7 +3,7 @@ gametitle=10,000 bullets SLES_534.81
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=sergx12 and Red-tv
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,005eded4,extended,3c013faa
 patch=1,EE,005ee0ec,extended,3c013faa
 

@@ -1,11 +1,21 @@
-gametitle=Splinter Cell - Pandora Tomorrow (PAL-M) SLES-52149 AB82114E
-//Corresponds to the main crc to activate the secondary crc 80FAC91D called SC2A.ELF
+gametitle=Tom Clancy's Splinter Cell - Pandora Tomorrow (PAL-M) SLES-52149 AB82114E
+//Main CRC to activate CRCs: 80FAC91D called SC2A.ELF and 990E57D1 called SC2B.ELF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-description=Renders the game in 16:9 aspect ratio
+description=Solo mode widescreen hack.
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=ElHecht
+description=Solo mode widescreen hack.
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=ElHecht, converted by pgert
+description=Solo mode widescreen hack.
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
+description=Might need EE Overclock (130%).

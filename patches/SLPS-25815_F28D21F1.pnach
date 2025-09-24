@@ -4,7 +4,7 @@ gametitle=Dragon Ball Z: Sparking! Meteor * NTSC-J * SLPS-25815 * F28D21F1
 gsaspectratio=16:9
 
 author=RashFaustinho
-comment=based on sergx12's & 99skull's patches for the NTSC-U/NTSC-K versions
+description=based on sergx12's & 99skull's patches for the NTSC-U/NTSC-K versions
 patch=1,EE,002fe4c8,word,3FC71C76 // 3F955555
 patch=1,EE,002fe590,word,43C71C71 // 43955555
 patch=1,EE,00130be8,word,3C013F10 // 3C013F40

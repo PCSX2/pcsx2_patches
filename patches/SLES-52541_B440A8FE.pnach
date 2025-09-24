@@ -1,25 +1,99 @@
-gametitle=Grand Theft Auto: San Andreas [PAL-M5] (v2.01) (SLES-52541)
+gametitle=Grand Theft Auto: San Andreas (PAL-M5) (v2.01) SLES-52541 B440A8FE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas
-comment=Select widescreen in game otherwise image is zoomed out 4:3
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,007005EF,extended,01
+patch=1,EE,0020C7BC,extended,A2
+patch=1,EE,0020A4F8,extended,AC
+patch=1,EE,002081DC,extended,AC
+patch=1,EE,002ECBE0,extended,40
+patch=1,EE,002ECC30,extended,D0
+patch=1,EE,0026E18C,word,3C084280
+patch=1,EE,00269678,word,3C024280
+patch=1,EE,0026E7A8,word,3C024280
+patch=1,EE,0026EE50,word,3C024280
+patch=1,EE,0026AFA4,word,3C034280
+patch=1,EE,0026EF80,word,3C034280
+patch=1,EE,0026F068,word,3C034280
+patch=1,EE,002ACAF8,word,3C024258
+patch=1,EE,002ACB64,word,3C024270
+patch=1,EE,002ACE98,word,3C0342C6
+patch=1,EE,002ACF30,word,3C0342C6
+patch=1,EE,002ACE4C,word,3C0341E3
+patch=1,EE,002ACEE4,word,3C0341E3
+patch=1,EE,0026E19C,word,3C064280
+patch=1,EE,0026EF8C,word,3C044280
+patch=1,EE,0026F084,word,3C044280
+patch=1,EE,0026E7C4,word,3C024280
+patch=1,EE,0026EE60,word,3C024280
+patch=1,EE,0026AFBC,word,3C034280
+patch=1,EE,002ACB00,word,3C034280
+patch=1,EE,002ACE60,word,3C034280
+patch=1,EE,002ACEAC,word,3C034280
+patch=1,EE,002ACEF8,word,3C034280
+patch=1,EE,002ACF44,word,3C034280
+patch=1,EE,002ACCB4,word,3C0341D4
+patch=1,EE,002ACE00,word,3C034190
+patch=1,EE,002ACE10,word,3C0241E5
+patch=1,EE,0026D290,word,3C023F40
+patch=1,EE,002AA0F4,word,3C024210
+patch=1,EE,002AA034,word,3C024190
+patch=1,EE,002ABC40,word,2405020D
+patch=1,EE,002ABC7C,word,2405020D
+patch=1,EE,00663FC8,word,3E800000
+patch=1,EE,002ABC90,word,2405021F
+patch=1,EE,002ABCCC,word,2405021F
+patch=1,EE,002A9D84,word,3C0242A8
+patch=1,EE,002A9B04,word,2404002F
+patch=1,EE,002A9C04,word,2404002F
+patch=1,EE,002AB71C,word,24050231
+patch=1,EE,002AB760,word,24050231
+patch=1,EE,002AB8B0,word,24050231
+patch=1,EE,002AB8F8,word,24050231
+patch=1,EE,002AD49C,word,C78C8384
+patch=1,EE,002ADA2C,word,3C023F40
+patch=1,EE,002A8A00,word,3C013F40
+patch=1,EE,002A8A04,word,44810000
+patch=1,EE,002A8A08,word,46006302
+patch=1,EE,002A8A0C,word,3C01007C
+patch=1,EE,002A8A10,word,E42C2FA4
+patch=1,EE,002A8A14,word,3C01007C
+patch=1,EE,002A8A18,word,03E00008
+patch=1,EE,002A8A1C,word,E42D2FA8
 
-//Widescreen fix
-patch=1,EE,001130BC,word,3C013F9D
-patch=1,EE,001130C0,word,44810000
-patch=1,EE,001130C4,word,46006302
-patch=1,EE,001130C8,word,03E00008
-patch=1,EE,001130CC,word,E78C9A90
+[Remove Ghosting Effects]
+author=Silent, PeterDelta
+description=Removes the ghosting effect from radiosity and color filter post effects, preserving the slight bloom effect. Also disables the seam remover post effect.
 
-patch=1,EE,0021DFE4,word,0C044C2F //0C044C30
-patch=1,EE,00242DB4,word,0C044C32 //0C044C30
+patch=0,EE,00668D5C,extended,00 // CPostEffects::m_bSeamRemover
+patch=0,EE,20668DE4,extended,00000000 // CPostEffects::m_RadiosityFilterPasses
 
-[Remove Radiosity Filter]
-description=Removes the radiosity filter which causes a ghosting effect on the people and environment.
-patch=1,EE,2051A7C8,extended,00000000
+// These values are read from stream.ini from the init overlay, so we have to patch them every frame
+patch=1,EE,20668E28,extended,00000000 // CPostEffects::m_colourLeftUOffset
+patch=1,EE,20668E2C,extended,00000000 // CPostEffects::m_colourRightUOffset
+patch=1,EE,20668E30,extended,00000000 // CPostEffects::m_colourTopVOffset
+patch=1,EE,20668E34,extended,00000000 // CPostEffects::m_colourBottomVOffset
+
+[Remove Color Filter]
+author=Silent
+description=Removes the color filter, making the game look more like the PC version, without the yellow tint.
+
+patch=0,EE,20515D58,extended,00000000 // NOP CPostEffects::ColourFilter
 
 [50 FPS]
 author=Snake356
-comment=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,0066814C,extended,00000001
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,E0040001,extended,0066D3D8
+patch=1,EE,2053BBA0,extended,34050050
+patch=1,EE,2053BBA4,extended,24030002
+patch=1,EE,2053BBA8,extended,0000000C
+patch=1,EE,2053BBAC,extended,03E00008
+patch=1,EE,0054A06C,extended,00000000

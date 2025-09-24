@@ -14,21 +14,15 @@ patch=1,EE,20729AE8,extended,3F800000
 
 [50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 300%.
+description=Might need EE Overclock (300%).
 patch=1,EE,005C0DF8,word,00000001 //00000002
 
 [480p Mode]
 gsinterlacemode=1
 author=PeterDelta
 description=SDTV 480p mode at start.
-patch=1,EE,E0040000,extended,005C0E0C
-patch=1,EE,2010D1E0,extended,34050050
-patch=1,EE,2010D1E4,extended,24030002
-patch=1,EE,2010D1E8,extended,0000000C
-patch=1,EE,2010D1EC,extended,03E00008
-patch=1,EE,E0040000,extended,01FFF89C
-patch=1,EE,2010D1E0,extended,24030002
-patch=1,EE,2010D1E4,extended,0000000C
-patch=1,EE,2010D1E8,extended,03E00008
-patch=1,EE,2010D1EC,extended,00000000
-patch=1,EE,006D94F0,extended,00000000
+patch=1,EE,002C8074,word,0000102D
+patch=1,EE,002C80A0,word,240200E0
+patch=1,EE,00153A14,word,10620004
+patch=1,EE,0010D1EC,word,00000000
+patch=1,EE,006D94F0,word,00000000

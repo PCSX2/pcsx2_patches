@@ -16,5 +16,5 @@ patch=1,EE,201427D0,word,30420000
 
 
 [Load original (Enables Musou and Free modes)]
-comment=Dw5xl contains all files required to play Musou/Free modes, This mod unhides Musou/Free mode. 
+description=Dw5xl contains all files required to play Musou/Free modes, This mod unhides Musou/Free mode.
 patch=1,EE,001abed4,word,24020001

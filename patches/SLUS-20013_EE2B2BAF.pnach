@@ -2,7 +2,7 @@ gametitle=Tony Hawk's Pro Skater 3 (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 patch=1,EE,0017BEB8,word,3C013FF3 //3C013FB6
 patch=1,EE,0017BEBC,word,3421CF00 //3421DB40

@@ -3,7 +3,7 @@ gametitle=Need for Speed - Hot Pursuit 2 (PAL-M6) (SLES-50731) 1D2818AF
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen ported from NTSC hack by nemesis2000
+description=Widescreen ported from NTSC hack by nemesis2000
 // 16:9
 patch=1,EE,0032f6fc,word,3f400000 // 3f800000 hor fov
 patch=1,EE,0032f850,word,3f2aaaab // 3f000000 increase hor fov
@@ -14,13 +14,14 @@ author=asasega
 description=Might need EE Overclock at 130%.
 patch=1,EE,00113E2C,word,2C420001
 
-[480p Mode]
-gsinterlacemode=1
-author=PeterDelta
-description=SDTV 480p mode at start.
-patch=1,EE,00280754,word,24110000
-patch=1,EE,00280758,word,24120050
-patch=1,EE,00280764,word,24130001
+[NTSC Mode]
+author=Felixthecat1970
+description=NTSC mode at start.
+patch=0,EE,2032F290,extended,4353544E
+patch=0,EE,2032F294,extended,4741542E
+patch=0,EE,2032F298,extended,72723C2E
+patch=0,EE,2016F908,extended,0000102D
+patch=0,EE,201EEC0C,extended,0000102D
 
 [Trigger control mapppings]
 author=Silent

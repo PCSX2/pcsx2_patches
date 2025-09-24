@@ -2,7 +2,7 @@ gametitle=Tekken4 (SCPS_560.06) (NTSC-K)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=16:9 widescreen hack
+description=16:9 widescreen hack
 
 //16:9 widescreen hack by nemesis2000, porting by 99skull
 patch=1,EE,00216C60,word,3C013F40 //gameplay

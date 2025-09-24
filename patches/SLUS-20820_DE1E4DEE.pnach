@@ -1,23 +1,53 @@
-gametitle=Tom Clancy's Ghost Recon: Jungle Storm (SLUS-20820)
+gametitle=Tom Clancy's Ghost Recon: Jungle Storm * NTSC-U * SLUS-20820 * DE1E4DEE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
+description=Solo/Coop mode widescreen hack.
 
-//sp
+// Single Player mode
 patch=1,EE,0051f798,word,3c023f40
 patch=1,EE,0051f7d8,word,3c0243d6
 
-//menu
-patch=1,EE,0051da50,word,3c023f40
-patch=1,EE,0051da70,word,3c0243d6
-
-//mp
+// Multi Player mode
 patch=1,EE,00387c54,word,3c023f40
 patch=1,EE,00387c80,word,3c0243d6
 
-//unk
+// Menu
+patch=1,EE,0051da50,word,3c023f40
+patch=1,EE,0051da70,word,3c0243d6
+
+// Unknown
 patch=1,EE,0051f704,word,3C023f40
 patch=1,EE,0051f748,word,3C0243d6
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Solo/Coop mode widescreen hack.
+patch=1,EE,0051f798,word,3c023f55
+patch=1,EE,0051f7d8,word,3c0243c0
+patch=1,EE,0051da50,word,3c023f55
+patch=1,EE,0051da70,word,3c0243c0
+patch=1,EE,00387c54,word,3c023f55
+patch=1,EE,00387c80,word,3c0243c0
+patch=1,EE,0051f704,word,3C023f55
+patch=1,EE,0051f748,word,3C0243c0
 
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000, converted by pgert
+description=Solo/Coop mode widescreen hack.
+patch=1,EE,0051f798,word,3c023f64
+patch=1,EE,0051f7d8,word,3c0243b4
+patch=1,EE,0051da50,word,3c023f64
+patch=1,EE,0051da70,word,3c0243b4
+patch=1,EE,00387c54,word,3c023f64
+patch=1,EE,00387c80,word,3c0243b4
+patch=1,EE,0051f704,word,3C023f64
+patch=1,EE,0051f748,word,3C0243b4
+
+[60 FPS]
+author=asasega
+description=Might need EE overclocking to be stable.
+patch=1,EE,20159E9C,word,1000000B

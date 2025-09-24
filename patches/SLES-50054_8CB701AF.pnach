@@ -1,0 +1,25 @@
+gametitle=Midnight Club - Street Racing (PAL-M) SLES-50054 8CB701AF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,2047A700,extended,3F400000
+patch=1,EE,204280A0,extended,3FAB0000
+patch=1,EE,2047A714,extended,3F800000
+patch=1,EE,2047A73C,extended,3F800000
+patch=1,EE,204280E0,extended,3F800000
+patch=1,EE,E0030003,extended,00328220
+patch=1,EE,2047A714,extended,3F400000
+patch=1,EE,2047A73C,extended,3F400000
+patch=1,EE,204280E0,extended,3F400000
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,00304844,extended,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,00275180,word,0000102D

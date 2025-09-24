@@ -1,18 +1,45 @@
-gametitle=Tom Clancy's Ghost Recon: Jungle Storm (PAL-M) (SLES_519.76) FE1720F1
+gametitle=Tom Clancy's Ghost Recon: Jungle Storm * PAL-M5 * SLES-51976 * FE1720F1
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Somechump
-comment=Renders the game in 16:9 aspect ratio
-//Converted from NTSC Widescreen hack by nemesis2000 (PAL by Somechump)
-patch=1,EE,0051d978,word,3c023f40 //sp
+author=nemesis2000, ported by Some Chump
+description=Solo/Coop mode widescreen hack.
+
+// Single Player mode
+patch=1,EE,0051d978,word,3c023f40
 patch=1,EE,0051d9b8,word,3c0243b6
-patch=1,EE,00387324,word,3c023f40 //mp
+
+// Multi Player mode
+patch=1,EE,00387324,word,3c023f40
 patch=1,EE,00387350,word,3c0243b6
-patch=1,EE,0051d8e4,word,3C053f40 //unk
+
+// Unknown
+patch=1,EE,0051d8e4,word,3C053f40
 patch=1,EE,0051d928,word,3C0243b6
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000 & Some Chump, converted by pgert
+description=Solo/Coop mode widescreen hack.
+patch=1,EE,0051d978,word,3c023f55
+patch=1,EE,0051d9b8,word,3c0243c0
+patch=1,EE,00387324,word,3c023f55
+patch=1,EE,00387350,word,3c0243c0
+patch=1,EE,0051d8e4,word,3c043f55
+patch=1,EE,0051d928,word,3c0243c0
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000 & Some Chump, converted by pgert
+description=Solo/Coop mode widescreen hack.
+patch=1,EE,0051d978,word,3c023f64
+patch=1,EE,0051d9b8,word,3c0243b4
+patch=1,EE,00387324,word,3c023f64
+patch=1,EE,00387350,word,3c0243b4
+patch=1,EE,0051d8e4,word,3c043f64
+patch=1,EE,0051d928,word,3c0243b4
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,00159E9C,word,24020000 //24020001
+description=Might need EE overclocking to be stable (130%).
+patch=1,EE,00159E9C,word,24020000 // 24020001

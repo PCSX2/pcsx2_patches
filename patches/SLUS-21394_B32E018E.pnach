@@ -1,10 +1,9 @@
-gametitle=Tokyo Xtreme Racer: Drift 2 (SLUS-21394)
+gametitle=Tokyo Xtreme Racer: Drift 2 (NTSC-U - SLUS-21394)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
 patch=1,EE,203f59d0,extended,3f400000
-
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
@@ -17,4 +16,8 @@ patch=1,EE,E002FFFA,extended,0065581C
 patch=1,EE,20153AB4,extended,DCC50008
 patch=1,EE,20153A9C,extended,DCC50020
 
-
+[Convert units from mph to km/h]
+description=Changes the ingame speedometer and gear menu to km/h
+author=JakeMR2
+patch=1,EE,001DBD88,extended,00003f80 //In-Game
+patch=1,EE,002ECD14,extended,00003f80 //Gear menu

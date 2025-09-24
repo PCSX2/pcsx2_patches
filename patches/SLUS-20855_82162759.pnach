@@ -2,7 +2,7 @@ gametitle=Destruction Derby Arenas SLUS_208.55
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00204738,word,3c013fab //3c013f80
 patch=1,EE,002f29b4,word,4399999a //43cccccd
 patch=1,EE,002f29bc,word,4399999a //43cccccd

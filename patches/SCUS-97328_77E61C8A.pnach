@@ -2,7 +2,7 @@ gametitle=Gran Turismo 4 [SCUS-97328] (U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Text
+description=Widescreen Text
 author=Aero_
 
 // Corrects Text Aspect Ratio for Widescreen
@@ -53,7 +53,7 @@ patch=1,EE,2069F4C8,extended,41F00000 // 30.0
 patch=1,EE,2069F4D0,extended,41200000 // 10.0
 
 [GT5 Camera Placement]
-comment=Moves the exterior camera further from the ground like Gran Turismo 5.
+description=Moves the exterior camera further from the ground like Gran Turismo 5.
 author=Aero_
 patch=1,EE,2037B304,extended,0812555E // j 00495578
 patch=1,EE,20495578,extended,8E180008 // lw t8,0x8(s0)
@@ -89,30 +89,30 @@ patch=1,EE,206211E8,extended,00010000
 patch=1,EE,206211EC,extended,00060014
 
 [Analog HUD For All Camera Views]
-comment=The analog tachometer will be used for the chase camera.
+description=The analog tachometer will be used for the chase camera.
 author=Aero_
 patch=1,EE,2039CE80,extended,1000000D
 patch=1,EE,2039CEB8,extended,24020000
 
 [Digital HUD For All Camera Views]
-comment=The digital tachometer will be used for the bumper camera and roof camera.
+description=The digital tachometer will be used for the bumper camera and roof camera.
 author=Aero_
 patch=1,EE,2039CE80,extended,1000000D
 patch=1,EE,2039CEB8,extended,24020001
 
 [Reduce Vibration]
-comment=Reduces the strength of the controller's vibration.
+description=Reduces the strength of the controller's vibration.
 author=Aero_
 patch=1,EE,2036D1C4,extended,3C014170 // lui at,0x4170 : Vibration Float
 
-[Disable Dynamic Race Text] 
-comment=Disables the text that appears at the bottom of the screen. Example: "GET READY TO DRIVE"
+[Disable Dynamic Race Text]
+description=Disables the text that appears at the bottom of the screen. Example: "GET READY TO DRIVE"
 author=Aero_
 patch=1,EE,2039DA54,extended,00000000 // GET READY TO DRIVE
 patch=1,EE,2039D77C,extended,00000000 // Penalty Timer
 
 [Autoboot in 480p]
-comment=The game will always start in 480p instead of 480i.
+description=The game will always start in 480p instead of 480i.
 author=Silent
 patch=1,EE,204364A8,extended,AE0516B0
 patch=1,EE,10436598,extended,10E8

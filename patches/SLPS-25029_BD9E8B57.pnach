@@ -2,7 +2,7 @@ gametitle=Rayman Revolution (NTSC-J) (SLPS-25029)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hacks by ElHecht & ICUP321
+description=Widescreen Hacks by ElHecht & ICUP321
 
 // General Widescreen Fixes
 patch=1,EE,00190098,word,4481f000 // 00000000

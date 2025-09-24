@@ -1,0 +1,23 @@
+gametitle=Harry Potter und die Kammer des Schreckens (G)[SLES-51194] CRC C5473413
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=arapapa
+
+// Zoom
+patch=1,EE,004CA798,word,3C013F24 // 3C013F49
+patch=1,EE,004CA79C,word,34210000 // 34210FDA
+
+// Y-FOV
+patch=1,EE,004E8EB0,word,3C013FE3 // 3C013FAA
+patch=1,EE,004E8EB4,word,34218E2A // 3421AAAB
+
+[50/60 FPS]
+author=asasega
+description=Might need EE Overclock (130%).
+patch=1,EE,00544168,word,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,001BDAD4,word,241001C0

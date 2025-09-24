@@ -1,6 +1,11 @@
 gametitle=Indiana Jones and the Staff of Kings (PAL-M) SLES-55448 528C8054
 
-[50 FPS]
+[50/60 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock (130%).
 patch=1,EE,201505B4,extended,2C620000
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=0,EE,0014E964,word,3C040002 //3C040001

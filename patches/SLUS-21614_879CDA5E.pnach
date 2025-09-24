@@ -1,0 +1,8 @@
+gametitle=Star Wars - The Force Unleashed (NTSC-U) SLUS-21614 879CDA5E
+
+[60 FPS]
+author=asasega and PeterDelta
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00125948,word,28420001  //28420002
+patch=1,EE,E0010000,extended,01FFFA70
+patch=1,EE,00125948,extended,28420002

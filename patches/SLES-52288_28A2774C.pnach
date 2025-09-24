@@ -1,11 +1,20 @@
-gametitle=Tom Clancy's Rainbow Six 3 (PAL-M) SLES-52288 28A2774C
+gametitle=Tom Clancy's Rainbow Six 3 * PAL-M5 * SLES-52288 * 28A2774C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Renders the game in 16:9 aspect ratio
 patch=1,EE,001400ec,word,3c063f40
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+// converted by pgert
+patch=1,EE,001400ec,word,3c063f55
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+// converted by pgert
+patch=1,EE,001400ec,word,3c063f64
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,00653878,word,00000001 //00000002
+description=Might need EE overclocking to be stable (130%).
+patch=1,EE,00653878,word,00000001 // 00000002

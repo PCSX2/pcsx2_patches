@@ -1,8 +1,15 @@
-gametitle=Vexx SLUS_203.83
+gametitle=Vexx (NTSC-U) SLUS-20383 B6580DA4
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
+
+//Widescreen
 patch=1,EE,0035d74c,word,3c033f40
 
+[60 FPS]
+author=FrankyBuster.
+description=Unlocks the dynamic framerate cap to 60FPS. Requires 180% overclock to be stable.
 
+//60FPS
+patch=1,EE,00431BC6,short,00003F91

@@ -2,7 +2,7 @@ gametitle=tsugunai
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0017cf94,extended,3c013f40
 patch=1,EE,001c1f30,extended,3c013f40
 

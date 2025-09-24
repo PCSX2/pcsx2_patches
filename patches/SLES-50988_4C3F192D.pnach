@@ -3,7 +3,7 @@ gametitle=The Lord of the Rings - The Fellowship of the Ring (PAL-M5) (SLES-5098
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00147618,word,08102677 // e6000228
 patch=1,EE,0014761c,word,00000000 // e601022c
 patch=1,EE,004099dc,word,3c013f40 // 00000000 hor fov

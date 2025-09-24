@@ -1,21 +1,49 @@
-gametitle= Sega Rally 2006 (NTSC-J SLPM-66212)
+gametitle= Sega Rally 2006 (NTSC-J - SLPM-66212)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment= Sega Rally 2006 (NTSC-J SLPM-66212) Widescreen Hack by VIRGIN KLM
-
-//Widescreen
+description= 16:9 proper widescreen
+author=VIRGIN KLM, Racer_S
 patch=1,EE,20383AF8,word,3FC71C71
 patch=1,EE,20356EA0,word,3FC71C71
 patch=1,EE,20356EC0,word,3FC71C71
 patch=1,EE,2038445C,word,00000001
 patch=1,EE,20383C3C,word,3FC00000
 
+[No-Interlacing (Option 1)]
+description=Attempts to disable interlaced offset rendering
+author=felixthecat1970
+gsinterlacemode=1
+patch=1,EE,1015AB9C,extended,240601C0
+patch=1,EE,10161338,extended,240401C0
+patch=1,EE,10161368,extended,240401C0
 
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
+[No-Interlacing (Option 2)]
+description=Attempts to disable interlaced offset rendering
+author=asasega
 gsinterlacemode=1
 patch=1,EE,20106FA0,extended,34030001
 patch=1,EE,20106FB4,extended,34021040
 
+[Render distance increase (+25%)]
+description=Increases the rendering distance by 25% from the default value
+author=Racer_S
+patch=1,EE,2017B150,extended,00000000
 
+[Render distance increase (+50%)]
+description=Increases the rendering distance by 50% from the default value
+author=Racer_S
+patch=1,EE,2017B150,extended,00000000
+patch=1,EE,203832EC,word,3F19999A
+
+[Render distance increase (+75%)]
+description=Increases the rendering distance by 75% from the default value
+author=Racer_S
+patch=1,EE,2017B150,extended,00000000
+patch=1,EE,203832EC,word,3F000000
+
+[Render distance increase (+100%)]
+description=Increases the rendering distance by 100% from the default value
+author=Racer_S
+patch=1,EE,2017B150,extended,00000000
+patch=1,EE,203832EC,word,3EB33333

@@ -1,0 +1,7 @@
+gametitle= God of War 2 The Colossus Battle [Demo] (SCUS-97482) 174F7EC0
+
+[Skip Cutscenes]
+author=Ezedequias
+description=With Any Action Button
+patch=1,EE,002D7B94,byte,01
+patch=1,EE,001916A4,word,0000

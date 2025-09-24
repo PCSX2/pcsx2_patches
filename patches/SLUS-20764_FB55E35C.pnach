@@ -2,7 +2,7 @@ gametitle=Bombastic SLUS_207.64
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,001581bc,word,3c013f40 //hor menu
 patch=1,EE,00158244,word,3c0143d6 //render fix menu
 patch=1,EE,001aa03c,word,3c013f40 //hor gameplay

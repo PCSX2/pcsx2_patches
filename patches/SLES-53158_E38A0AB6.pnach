@@ -1,6 +1,24 @@
-gametitle=Cold Fear (PAL-M) SLES-53158 E38A0AB6 
+gametitle=Cold Fear (PAL-M) SLES-53158 E38A0AB6
 
-[50 FPS]
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Enable native widescreen.
+patch=1,EE,0046EF34,word,00000001
+patch=1,EE,004F9480,word,01000000
+
+[50/60 FPS]
 author=Snake356
-comment=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,0046E404,extended,00000001
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=1,EE,001449c8,word,240301c0 //24030200
+
+[480p Mode]
+author=Gabominated
+description=SDTV 480p mode at start.
+patch=1,EE,0025FA24,word,10620005 //14620005
+patch=1,EE,001449c8,word,240301c0 //24030200

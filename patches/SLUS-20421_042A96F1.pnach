@@ -2,7 +2,7 @@ gametitle=Battlestar Galactica (NTSC-U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00102354,word,3c013f66 //3c013f99 gameplay hor
 patch=1,EE,00102358,word,34216666 //3421999a
 patch=1,EE,001cb3a0,word,3c013f66 //menu

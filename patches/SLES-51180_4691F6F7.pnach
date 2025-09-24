@@ -1,15 +1,19 @@
-gametitle=The Sum of All Fears (E)(SLES-51180)
+gametitle=Tom Clancy's The Sum of All Fears * PAL-M5 * SLES-51180 * 4691F6F7
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=arapapa
+patch=1,EE,004d6f40,word,3c023f40 // 3c023f80 - X-FoV
+patch=1,EE,004d6f58,word,3c0243ab // 3c024380 - Render fix
 
-//Widescreen hack 16:9
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=arapapa, converted by pgert
+patch=1,EE,004d6f40,word,3c023f55
+patch=1,EE,004d6f58,word,3c02439A
 
-//X-Fov
-patch=1,EE,004d6f40,word,3c023f40
-
-//Render fix
-patch=1,EE,004d6f58,word,3c0243ab
-
-
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=arapapa, converted by pgert
+patch=1,EE,004d6f40,word,3c023f64
+patch=1,EE,004d6f58,word,3c024390

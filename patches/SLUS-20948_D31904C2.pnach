@@ -2,7 +2,7 @@ gametitle=Crimson Tears SLUS_209.48
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //aabf023c 00008544 abaa4334
 patch=1,EE,001bcb98,word,3c02bfe3 //3c02bfaa hor fov

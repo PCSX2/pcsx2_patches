@@ -2,7 +2,7 @@ gametitle=Ready 2 Rumble Boxing - Round 2 SLES_500.10
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00203a90,word,3fe38e39
 patch=1,EE,0011723c,word,3c013f22
 

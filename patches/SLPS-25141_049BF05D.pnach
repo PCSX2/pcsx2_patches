@@ -2,7 +2,7 @@ gametitle=Pac-Man World 2 (J)(SLPS-25141)
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=No Interlacing
+description=No Interlacing
 
 //480p
 patch=1,EE,00347808,extended,00000002

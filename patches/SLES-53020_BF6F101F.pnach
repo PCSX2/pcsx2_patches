@@ -1,0 +1,12 @@
+gametitle=Ghost in the Shell - Stand Alone Complex (PAL-M) SLES-53020 BF6F101F
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,00265820,word,24020001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,00265804,word,24060002
+patch=1,EE,002655A0,word,240401C0

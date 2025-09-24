@@ -1,0 +1,13 @@
+gametitle=Shox - Rally Reinvented (PAL-A) SLES-51251 DDAC3815
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,0035BBF8,extended,16280001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,00227880,word,1440000C
+patch=1,EE,003570D4,word,00000000

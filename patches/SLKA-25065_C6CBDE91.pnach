@@ -2,7 +2,7 @@ gametitle=Silent Hill 3 (SLKA_250.65)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack (NTSC-K by Arapapa)
+description=Widescreen hack (NTSC-K by Arapapa)
 
 //Wide Screen 16:9
 patch=1,EE,0012165c,word,3c013f40 //00000000

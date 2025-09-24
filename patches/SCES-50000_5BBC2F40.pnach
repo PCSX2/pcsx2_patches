@@ -3,7 +3,7 @@ gametitle=Ridge Racer 5 (SCES_50000) 5BBC2F40
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=No.47
-comment=Widescreen Hack
+description=Widescreen Hack
 //single player
 patch=1,EE,2033AC94,word,43C6C000 // 44048000 - both fov, bumper camera
 patch=1,EE,2033ACB4,word,43960000 // 44048000 - both fov, chase camera (*)
@@ -19,6 +19,6 @@ patch=1,EE,2033B580,word,3F066666 // 3F333333 - horizontal FOV
 
 [No-Interlacing]
 author=PeterDelta
-comment=Attempts to disable interlaced offset rendering.
+description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,00220738,word,24020000

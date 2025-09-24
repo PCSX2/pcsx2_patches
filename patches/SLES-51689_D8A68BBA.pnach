@@ -1,0 +1,15 @@
+gametitle=Pitfall - The Lost Expedition (PAL-I) SLES-51689 D8A68BBA
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0036E1C0,word,08112ED4
+patch=1,EE,0044BB50,word,3C013F40
+patch=1,EE,0044BB54,word,4481F000
+patch=1,EE,0044BB58,word,461EC602
+patch=1,EE,0044BB5C,word,E6180000
+patch=1,EE,0044BB60,word,080DB871
+patch=1,EE,00526488,word,3FF3AAAB //by PeterDelta
+patch=1,EE,002606A4,word,3C013F7B
+patch=1,EE,00260A0C,word,3C013F7B

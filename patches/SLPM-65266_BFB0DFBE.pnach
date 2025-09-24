@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Drakengard (J) (SLPM_652.66)
+description=Drakengard (J) (SLPM_652.66)
 author=Hyakki (pnach by Arapapa)
 
 patch=1,EE,203A5090,extended,3F400000 //3F800000
@@ -8,7 +8,7 @@ patch=1,EE,203A5090,extended,3F400000 //3F800000
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Enhacement by Felixthecat1970
+description=Enhacement by Felixthecat1970
 
 patch=0,EE,00277664,extended,24050000 //memory
 patch=0,EE,00277668,extended,24060050 //memory

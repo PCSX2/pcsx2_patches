@@ -1,0 +1,33 @@
+gametitle=Need for Speed - Carbon [Collector's Edition] (PAL-F-G) SLES-54402 2BB7BA40
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,E0010000,extended,00A6E894
+patch=1,EE,00A6E894,extended,00000001
+patch=1,EE,2061E7F8,extended,3F400000
+patch=1,EE,2061E810,extended,3F400000
+
+//[Languages]
+//author=PeterDelta
+//description=Set language in BIOS: Spanish, Italian, Dutch, English. FMV skip
+//patch=1,EE,003F9AC4,word,10400018
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,00394A7C,word,0000102D
+
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect
+patch=0,EE,00624344,word,00000000
+patch=0,EE,00254370,word,24020000
+patch=0,EE,00254374,word,10620004
+patch=0,EE,00624470,word,01000000
+
+[Disable Speed Effect]
+author=PeterDelta
+description=Removes the speed effect in race
+patch=0,EE,004025E8,word,14A0003C

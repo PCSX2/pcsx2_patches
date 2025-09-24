@@ -12,20 +12,26 @@ def remove_comments(line):
 def clean_line(line):
     return remove_comments(line).strip()
 
+def remove_newlines(line):
+    return line.replace('\r', '').replace('\n', '')
+
 def log_error(file_path, line_number, message, line, shouldCleanLine = False):
-    line = line.replace("\n", "")
+    line = remove_newlines(line)
     line = (clean_line(line) if shouldCleanLine else line)
     print(f'Error in {file_path} (line {line_number}): {message}\n\t"{line}"')
 
 def is_file_valid(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         for line_number, line in enumerate(file, 1):
+            if remove_newlines(line) != line.strip():
+                log_error(file_path, line_number, "Excess whitespace.", line)
+                return False
             cleaned_line = clean_line(line)
-            if cleaned_line == "":
+            if not cleaned_line:
                 continue
             elif cleaned_line.startswith("["):
                 if not cleaned_line.endswith("]"):
-                    print(f'Error in {file_path} group format (line {line_number}): Unclosed brackets for group.\n\T"{line}"')
+                    print(f'Error in {file_path} group format (line {line_number}): Unclosed brackets for group.\n\t"{line}"')
                     return False
                 continue
             elif re.match(r'^(\s*(gametitle|comment|gsaspectratio|gsinterlacemode|author|description)\s*=)', line, re.IGNORECASE):
@@ -41,7 +47,7 @@ def is_file_valid(file_path):
                 if not re.match(r'^patch=(0|1|2),(EE|IOP),[0-9A-Fa-f]{1,8},(byte|short|word|double|extended|beshort|beword|bedouble|bytes),[0-9A-Fa-f]{1,8}', line):
                     log_error(file_path, line_number, "Invalid patch format.", line, True)
                     return False
-                if re.match(",\d{8}(\n|\s*(//.*)*)+(?!.)", line):
+                if re.match(r",\d{8}(\n|\s*(//.*)*)+(?!.)", line):
                     log_error(file_path, line_number, "Invalid comment syntax at end of patch line.", line, False)
                     return False
             elif cleaned_line.startswith("dpatch"):
@@ -66,12 +72,12 @@ def is_file_valid(file_path):
             else:
                 log_error(file_path, line_number, "Unknown line format.", line, True)
                 return False
-            
+
     return True
 
 def main():
     error_found = False
-    print('Started validating patches files')
+    print('Started validating patch files')
 
     files = glob.glob(patches_glob_path)
     file_count = len(files)

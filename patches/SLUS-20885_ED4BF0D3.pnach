@@ -2,7 +2,7 @@ gametitle=The Red Star SLUS_208.85
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00233c9c,word,3c033f40
 
 

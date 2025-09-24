@@ -2,7 +2,7 @@ gametitle=Dragonball Z 2 (K) (SLKA-25062)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hack (NTSC-K by Arapapa)
+description=Widescreen hack (NTSC-K by Arapapa)
 
 //Widescreen hack 16:9
 //cdcc4c3f efee6e3f

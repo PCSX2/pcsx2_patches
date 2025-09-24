@@ -1,28 +1,34 @@
-gametitle=Cold Winter (SLUS-20845)
+gametitle=Cold Winter NTSC-U SLUS-20845 D6D704BB
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-
+description=Widescreen hack
 patch=1,EE,003c4cf4,word,3c013f40
 patch=1,EE,003c4cfc,word,44810800
 patch=1,EE,003c4d00,word,03e00008
 patch=1,EE,003c4d04,word,4601a083
-
 //weapon
 patch=1,EE,00310f4c,word,c6740330
 patch=1,EE,00310f54,word,c7a30048
 patch=1,EE,00310f60,word,e7a20050
 patch=1,EE,00310f64,word,c6620330
-
 //gameplay
 patch=1,EE,001dcc34,word,8E440058
 patch=1,EE,001dcc40,word,e7a20040
 
-//480p
-patch=1,EE,004f677c,word,3c050000
-patch=1,EE,004f6784,word,3c060050
-patch=1,EE,004f678c,word,3c070001
-patch=1,EE,004f69e4,word,3c090010
+[60 FPS]
+author=felixthecat1970
+description=Might need EE Overclock
+patch=0,EE,201FE694,extended,24020001
+patch=0,EE,2042A534,extended,24630000
+patch=0,EE,2042A548,extended,24840000
 
-
+[480p Mode]
+author=felixthecat1970
+description=SDTV 480p mode at start.
+patch=0,EE,10107C60,extended,00000001
+patch=0,EE,10679C0C,extended,000001C0
+patch=0,EE,1042983C,extended,240201C0
+patch=0,EE,10106858,extended,00000001
+patch=0,EE,203C0018,extended,080F000C

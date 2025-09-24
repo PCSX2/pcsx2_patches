@@ -3,12 +3,12 @@ gametitle=Metal Gear Solid 2 - Sons Of Liberty (S) (SLES-50385) A633A4BF
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 //16:9
 patch=1,EE,0011F230,word,3C013F40
 
 [50 FPS]
 author=PeterDelta
-comment=Unlocked at 50 FPS in cutscenes. Might need enable EE Overclock to be stable.
+description=Unlocked at 50 FPS in cutscenes. Might need enable EE Overclock to be stable.
 patch=1,EE,E0010002,extended,0018DB74
 patch=1,EE,0018DB74,extended,00000000

@@ -2,7 +2,7 @@ gametitle=Yoshitsune Eiyuuden Shura - The Story of Hero Yoshitsune Shura [NTSC-J
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //gameplay
 patch=1,EE,0013d504,word,3c023f19

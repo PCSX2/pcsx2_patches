@@ -2,6 +2,11 @@ gametitle=Transformers - The Game (PAL-S-F) SLES-54756 F453BCD9
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 180%.
-patch=1,EE,00382DA8,word,28420001 //28420002 
+description=Might need EE Overclock (180%).
+patch=1,EE,00382DA8,word,28420001 //28420002
 patch=1,EE,00434EBC,word,3C013F00 //3C013F80
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,004A4660,word,00000000

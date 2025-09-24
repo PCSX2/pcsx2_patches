@@ -1,14 +1,14 @@
-gametitle=Family Guy (SLUS-20718)
+gametitle=Family Guy - Video Game (SLUS-21560)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Brandondorf9999
-comment=Widescreen update
-patch=1,EE,0011B3A8,word,00000000 //10400009
-patch=1,EE,0011B3BC,word,3C013F80 //3C013F59
-patch=1,EE,0011B3C0,word,34210000 //3421999A
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Brandondorf9999
+//description=Widescreen update. Breaks eye textures on models.
+//patch=1,EE,0011B3A8,word,00000000 //10400009
+//patch=1,EE,0011B3BC,word,3C013F80 //3C013F59
+//patch=1,EE,0011B3C0,word,34210000 //3421999A
 
-[60 FPS]
-author=asasega
-comment=Patches the game to run at 60 FPS.
-patch=1,EE,20259698,word,00000001 //00000002
+//[60 FPS]
+//author=asasega
+//description=Patches the game to run at 60 FPS. Breaks collision in the Brian stages.
+//patch=1,EE,20259698,word,00000001 //00000002

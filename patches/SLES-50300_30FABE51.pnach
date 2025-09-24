@@ -3,7 +3,7 @@ gametitle=Time Crisis 2 SLES_503.00
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=dieSkaarj.
-comment=Aiming still in 4:3
+description=Aiming still in 4:3
 
 patch=1,EE,00298818,word,3c013f40 //3c013f80
 

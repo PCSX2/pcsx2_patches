@@ -8,7 +8,7 @@ patch=1,EE,204886FC,extended,00000001 // 00000000
 
 [50/60 FPS]
 author=Gabominated & PeterDelta
-comment=Might need EE overclocking to be stable (130%).
+description=Might need EE overclocking to be stable (130%).
 patch=1,EE,204877FC,extended,00000001
 // FMV fix by PeterDelta
 patch=1,EE,E0010000,extended,00485A2C

@@ -1,0 +1,6 @@
+gametitle=Golden Compass, The PAL-M SLES-55012 73351A86
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock.
+patch=1,EE,0021D644,word,28630001 //28630002

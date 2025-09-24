@@ -1,9 +1,9 @@
-gametitle=God of War (SCUS-97399)
+gametitle=God of War (NTSC-U) (SCUS-97399) D6385328
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
-
+description=Widescreen fix
 patch=1,EE,00169250,word,3c013f11
 patch=1,EE,00169254,word,342135fc
 patch=1,EE,00169258,word,44812000
@@ -30,7 +30,7 @@ patch=1,EE,001692a8,word,c605037c
 patch=1,EE,001692ac,word,e604037c
 patch=1,EE,001692b0,word,c605037c
 patch=1,EE,001692b4,word,3c020033
-patch=1,EE,001692b8,word,3c013f40
+//patch=1,EE,001692b8,word,3c013f40
 patch=1,EE,001692bc,word,44810800
 patch=1,EE,001692c0,word,c442f1b0
 patch=1,EE,001692c4,word,46020842
@@ -132,10 +132,24 @@ patch=1,EE,00169440,word,7ba20060
 patch=1,EE,00169444,word,7c820030
 patch=1,EE,00169448,word,03e00008
 patch=1,EE,0016944c,word,27bd0090
+patch=1,EE,e0020001,extended,0029cc90 //FMV_Fix
+patch=1,EE,20304d94,extended,00000002
+patch=1,EE,2021e4f0,extended,24070000
+patch=1,EE,e0010000,extended,0029cc90
+patch=1,EE,2021E4f0,extended,8c47cc90
+patch=1,EE,e0020001,extended,0029cc50 //Menu_Background_Fix
+patch=1,EE,e0010001,extended,0029cc90
+patch=1,EE,201692b8,extended,3c013f10
 
-patch=1,EE,e0010424,extended,0110f088
-patch=1,EE,2110f060,extended,be96e345
+patch=1,EE,e0020000,extended,0029cc50
+patch=1,EE,e0010001,extended,0029cc90
+patch=1,EE,201692b8,extended,3c013f40
 
-//patch=1,EE,00169268,word,3c013f22  //old value
+patch=1,EE,e0020001,extended,0029cc50
+patch=1,EE,e0010000,extended,0029cc90
+patch=1,EE,201692b8,extended,3c013f40
 
-
+[Skip Cutscenes]
+author=Ezedequias
+description=With Any Action Button
+patch=1,EE,2029C83C,byte,01

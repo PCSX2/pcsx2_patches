@@ -2,7 +2,7 @@ gametitle=Outlaw Golf 2 SLUS_210.30
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,006746c8,word,3f9c67c8 // 3f6aaaab
 
 

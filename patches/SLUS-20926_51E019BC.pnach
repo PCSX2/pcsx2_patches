@@ -1,0 +1,28 @@
+gametitle=Harry Potter and the Prisoner of Azkaban (NTSC-U) SLUS-20926 51E019BC
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0021ACAC,word,3C013F40
+patch=1,EE,003DB0C4,word,3C014458
+patch=1,EE,00134338,word,3C013B10
+patch=1,EE,004C73B0,word,3FF3AAAB
+patch=1,EE,00129E9C,word,3C013FAA
+patch=1,EE,E0010001,extended,004E3414
+patch=1,EE,00129E9C,extended,3C013FE3
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes. HUD keeps visible
+patch=1,EE,004D93C0,extended,00000000
+
+[60 FPS]
+author=asasega
+description=Might need EE Overclock (130%).
+patch=1,EE,2047B81C,word,00000001
+
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect
+patch=1,EE,003E3778,word,00000000

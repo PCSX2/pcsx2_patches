@@ -2,7 +2,7 @@ gametitle=Wild Arms: Alter Code: F (SLUS-20937)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=widescreen hack
+description=widescreen hack
 
 //widescreen by sergx12 (improved by nemesis 2000)
 patch=1,EE,00118af0,word,3c024455

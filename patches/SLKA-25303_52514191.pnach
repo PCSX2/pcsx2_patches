@@ -1,0 +1,7 @@
+gametitle=Matrix, The - Path of Neo (K)(SLKA-25303)
+
+[60 FPS]
+author=asasega
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+patch=1,EE,00464d88,word,3F800000
+patch=1,EE,00463E2C,word,42700000

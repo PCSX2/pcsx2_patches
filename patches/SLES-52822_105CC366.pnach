@@ -27,7 +27,7 @@ description=Might need EE Overclock at 180%.
 patch=1,EE,007B7554,word,00000001 //00000002
 
 
-[Remove Blur/Bloom]
-author=fobes
-description=Removes the post-processing blur/bloom effect
-patch=1,EE,00537344,word,00000000
+//[Remove Blur/Bloom]
+//author=fobes
+//description=Removes the post-processing blur/bloom effect. Disabled due to "Freezes the game on boot or at random points if enabled mid game."
+//patch=1,EE,00537344,word,00000000

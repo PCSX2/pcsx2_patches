@@ -1,19 +1,40 @@
-gametitle=Tom Clancy's Ghost Recon (K) (SLKA_250.31)
+gametitle=Tom Clancy's Ghost Recon * NTSC-K * SLKA-25031 * 9AB05FF8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000 (pnach by Arapapa)
+author=nemesis2000, ported by arapapa
+description=Solo/Coop mode widescreen hack.
 
-//sp
+// Single Player mode
 patch=1,EE,003a8b94,word,3c023f40
 patch=1,EE,003a8bb4,word,3c0243d6
 
-//mp
+// Multi Player mode
 patch=1,EE,003a8cb4,word,3c023f40
 patch=1,EE,003a8cd4,word,3c0243d6
 
-//menu
+// Menu
 patch=1,EE,0053c404,word,3c043f40
 patch=1,EE,0053c410,word,3c0243d6
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=nemesis2000 & arapapa, converted by pgert
+description=Solo/Coop mode widescreen hack.
+patch=1,EE,003a8b94,word,3c023f55
+patch=1,EE,003a8bb4,word,3c0243c0
+patch=1,EE,003a8cb4,word,3c023f55
+patch=1,EE,003a8cd4,word,3c0243c0
+patch=1,EE,0053c404,word,3c043f55
+patch=1,EE,0053c410,word,3c0243c0
 
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=nemesis2000 & arapapa, converted by pgert
+description=Solo/Coop mode widescreen hack.
+patch=1,EE,003a8b94,word,3c023f64
+patch=1,EE,003a8bb4,word,3c0243b4
+patch=1,EE,003a8cb4,word,3c023f64
+patch=1,EE,003a8cd4,word,3c0243b4
+patch=1,EE,0053c404,word,3c043f64
+patch=1,EE,0053c410,word,3c0243b4

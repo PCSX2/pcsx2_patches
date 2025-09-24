@@ -2,7 +2,7 @@ gametitle=Robot Alchemic Drive (NTSC-U) [SLUS-20445]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by ElHecht; updates by Aced14
+description=Widescreen hacks by ElHecht; updates by Aced14
 
 // 16:9
 patch=1,EE,001c63b4,word,3c033f00 // 3c033f80 menu meganite hor pos

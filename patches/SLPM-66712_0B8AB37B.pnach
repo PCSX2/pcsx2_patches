@@ -2,7 +2,7 @@ gametitle=Rozen Maiden: Gebetgarten [SLPM-66712]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 //battle
 patch=1,EE,2022DBE4,extended,3F4DDDDE // 3F800000
 //3d view

@@ -1,14 +1,19 @@
-gametitle=Iron Man SLUS_217.39
+gametitle=Iron Man (PAL-M) SLES-55198 37245C3F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PsxFan107
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,20148FD0,extended,3C0C3FAA
 patch=1,EE,20148FD8,extended,358CAAAB
 
-
-[60 FPS]
+[50/60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable 180% EE Overclock to be stable.
+description=Might need EE Overclock (180%).
 patch=1,EE,00159354,word,2C620000
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,00431D7C,word,4353544E
+patch=1,EE,00431D80,word,52454400

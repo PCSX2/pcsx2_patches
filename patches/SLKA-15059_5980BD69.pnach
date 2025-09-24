@@ -2,7 +2,7 @@ gametitle=Sega Rally Championship (NTSC-K)(SLKA-15059)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen hacks by No.47 (original codes) and Aced14 (leftover ELF hacks and car select additions)
+description=Widescreen hacks by No.47 (original codes) and Aced14 (leftover ELF hacks and car select additions)
 
 //16:9 widescreen
 patch=1,EE,2030F990,extended,43610000 //43960000 - In-game third person master X FOV

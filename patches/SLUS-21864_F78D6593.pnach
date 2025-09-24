@@ -1,0 +1,61 @@
+gametitle= Disney-Pixar's Up (U)(SLUS-21864_F78D6593)
+
+[Aspect Ratio - 32:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202272D8,extended,3C034063 //Horizontal (4:3)
+patch=1,EE,202272DC,extended,34638E39 //Vertical (4:3)
+
+patch=1,EE,202272F0,extended,3C034063 //Horizontal (16:9)
+patch=1,EE,202272F4,extended,34638E39 //Vertical (16:9)
+
+[Aspect Ratio - 21:9 (3840x1600)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202272D8,extended,3C034019 //Horizontal (4:3)
+patch=1,EE,202272DC,extended,3463999A //Vertical (4:3)
+
+patch=1,EE,202272F0,extended,3C034019 //Horizontal (16:9)
+patch=1,EE,202272F4,extended,3463999A //Vertical (16:9)
+
+[Aspect Ratio - 21:9 (3440x1440)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202272D8,extended,3C034018 //Horizontal (4:3)
+patch=1,EE,202272DC,extended,3463E38E //Vertical (4:3)
+
+patch=1,EE,202272F0,extended,3C034018 //Horizontal (16:9)
+patch=1,EE,202272F4,extended,3463E38E //Vertical (16:9)
+
+[Aspect Ratio - 21:9 (2560x1080)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202272D8,extended,3C034017 //Horizontal (4:3)
+patch=1,EE,202272DC,extended,3463B426 //Vertical (4:3)
+
+patch=1,EE,202272F0,extended,3C034017 //Horizontal (16:9)
+patch=1,EE,202272F4,extended,3463B426 //Vertical (16:9)
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=Virjoinga & pgert
+description=Changes aspect ratio.
+patch=1,EE,202272D8,extended,3C033FCC //Horizontal (4:3)
+patch=1,EE,202272DC,extended,3463CCCD //Vertical (4:3)
+
+patch=1,EE,202272F0,extended,3C033FCC //Horizontal (16:9)
+patch=1,EE,202272F4,extended,3463CCCD //Vertical (16:9)
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=Virjoinga & pgert
+description=Changes aspect ratio.
+patch=1,EE,202272D8,extended,3C033FC0 //Horizontal (4:3)
+patch=1,EE,202272DC,extended,34630000 //Vertical (4:3)
+
+patch=1,EE,202272F0,extended,3C033FC0 //Horizontal (16:9)
+patch=1,EE,202272F4,extended,34630000 //Vertical (16:9)

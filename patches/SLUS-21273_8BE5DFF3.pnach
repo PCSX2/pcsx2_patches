@@ -1,0 +1,7 @@
+//gametitle=Matrix, The - Path of Neo (U)(SLUS-21273)
+
+//[60 FPS]
+//author=asasega
+//description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable. Disabled due to causing instablility and soft locks.
+//patch=1,EE,00463E1C,word,3F800000
+//patch=1,EE,00463E2C,word,42700000

@@ -10,7 +10,7 @@ patch=1,EE,0011e968,word,4600c602
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=comment=no interlace by someother1ne
+description=description=no interlace by someother1ne
 patch=1,EE,2011A6E8,word,30630000
 patch=1,EE,2011d2d4,word,64420000
 patch=1,EE,2011d53c,word,64420000

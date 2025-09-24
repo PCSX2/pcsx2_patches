@@ -1,0 +1,76 @@
+gametitle=SSX 3 (SLUS-20772)
+
+[Aspect Ratio - 3xStretch]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3E800000 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 3x15:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3E888889 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 3x16:10]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3E8E38E4 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 3x4:3]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3EAAAAAB //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 3x5:4]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3EB60B61 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 32:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3EC00000 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 21:9 (3840x1600)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3F0E38E4 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 21:9 (3440x1440)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3F0EE23C //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Aspect Ratio - 21:9 (2560x1080)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,20622600,extended,3F100000 //Horizontal Aspect Ratio
+patch=1,EE,20622604,extended,3F800000 //Vertical Aspect Ratio
+
+[Disable intro videos (EA/THX/Splash)]
+author=Meridian
+patch=0,EE,001A2840,word,0000202D
+patch=0,EE,001A2864,word,0000202D
+patch=0,EE,001A28DC,word,0000202D
+
+[Fix Metro Slowdown]
+author=Meridian
+description=Disable perf frame skip
+patch=0,EE,00230704,word,00000000
+patch=0,EE,00230710,word,00000000

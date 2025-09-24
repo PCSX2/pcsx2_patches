@@ -3,12 +3,18 @@ gametitle=Midnight Club - Street Racing (NTSC-U) SLUS-20063 DFD26C76
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-comment=Widescreen hack 16:9
-patch=1,EE,004784C0,word,3F471C97
-patch=1,EE,004784D4,word,3F471C97
-patch=1,EE,004784FC,word,3F471C97
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,204784C0,extended,3F400000
+patch=1,EE,20426180,extended,3FAB0000
+patch=1,EE,204784D4,extended,3F800000
+patch=1,EE,204784FC,extended,3F800000
+patch=1,EE,204261C0,extended,3F800000
+patch=1,EE,E0030003,extended,00326300 //fix select cars
+patch=1,EE,204784D4,extended,3F400000
+patch=1,EE,204784FC,extended,3F400000
+patch=1,EE,204261C0,extended,3F400000
 
 [60 FPS]
 author=asasega
-comment=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
+description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,00302934,word,00000001

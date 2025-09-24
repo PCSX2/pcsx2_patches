@@ -31,3 +31,7 @@ patch=1,EE,00222494,word,44810000
 patch=1,EE,00222498,word,46006302
 
 
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,003EF450,extended,01

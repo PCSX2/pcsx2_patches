@@ -1,7 +1,24 @@
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-patch=1,EE,20161BCC,word,24091038
-patch=1,EE,20161C34,word,24030001
+patch=0,EE,20161BCC,word,24091038
+patch=0,EE,20161C34,word,24030001
 
+[Improved Performance]
+author=Souzooka
+description=Improves performance while camera is facing the sun, slight accuracy compromise
 
+// Jump to code cave (believed to be unused Sony SDK function)
+// instead of doing sun culling collision check, which is very slow
+patch=0,EE,20161D78,extended,0C0659EA
+
+// Only call the sun cull collision check once every 4 frames (15 times/second),
+// improving behavior and also pacing with minor frame latency
+patch=0,EE,201967A8,extended,8C810010 // lw at,0x10(a0) ; this is a frame counter
+patch=0,EE,201967AC,extended,30210003 // andi at,at,0x0003
+patch=0,EE,201967B0,extended,14200003 // bne at,zero,0x001967C0
+patch=0,EE,201967B4,extended,00000000 // nop
+patch=0,EE,201967B8,extended,08058950 // j z_un_00162540 ; tail call to original function
+patch=0,EE,201967BC,extended,00000000 // nop
+patch=0,EE,201967C0,extended,03E00008 // jr ra
+patch=0,EE,201967C4,extended,00000000 // nop

@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Arc - Twilight of the Spirits - Widescreen Hack (16:9) (NTSC-U)
+description=Arc - Twilight of the Spirits - Widescreen Hack (16:9) (NTSC-U)
 patch=1,EE,20256F84,extended,3F0cCCCD
 patch=1,EE,20257440,extended,3F0cCCCD
 patch=1,EE,20257978,extended,3F0cCCCD

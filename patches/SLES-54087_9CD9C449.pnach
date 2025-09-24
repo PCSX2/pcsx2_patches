@@ -3,7 +3,7 @@ gametitle=Suikoden V PAL (SLES_540.87)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas and sergx12
-comment=Widescreen Hack
+description=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,001B8804,word,3C023F40 //3C023F80 hor value
 
@@ -36,5 +36,5 @@ patch=1,EE,0025739C,word,3C0143E0 //46800B20 vert val
 patch=1,EE,002573A8,word,44816800 //46800360
 
 //reflections fix by sergx12
-patch=1,EE,00265620,word,3c0241d5 //3c0241a0 
+patch=1,EE,00265620,word,3c0241d5 //3c0241a0
 patch=1,EE,0026562C,word,3c024135 //3c024172

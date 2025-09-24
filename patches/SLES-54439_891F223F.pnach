@@ -1,11 +1,16 @@
-gametitle=Okami (PAL-M3) (SLES-54439)
+gametitle=Okami PAL-M SLES-54439 891F223F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
-// 16:9
+description=Widescreen Hack
 patch=1,EE,001974d4,word,3c014455
 patch=1,EE,00344864,word,3c014455
 
-
+[Disable post-processing effect]
+author=Gabominated
+description=Disable all post-processing effect.
+patch=1,EE,00190A5C,word,00000000 //0C06191A
+patch=1,EE,00190A24,word,00000000 //0C063A6C
+patch=1,EE,00190B34,word,00000000 //0C063710
+patch=1,EE,001916D4,word,00000000 //0C060E70

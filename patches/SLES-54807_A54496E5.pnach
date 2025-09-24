@@ -3,7 +3,7 @@ gametitle=Thrillville - Le Parc en Folie (PAL-F)(SLES-54807)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Bigdemon
-comment=Widescreen Hack Conversion
+description=Widescreen Hack Conversion
 
 //Zoom
 //003f013c 00608144 000099c4

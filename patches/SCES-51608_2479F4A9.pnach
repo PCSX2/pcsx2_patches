@@ -1,13 +1,21 @@
-//gametitle=Jak II - Renegade (PAL-M7) (SCES-51608)
+gametitle=Jak II - Renegade (PAL-M7) SCES-51608 2479F4A9
 
-//[Widescreen 16:9]
-//gsaspectratio=16:9
-//author=ElHecht
-//comment=Widescreen Hack. Currently breaks text rendering when switching to 60hz or progressive scan.
-// 16:9
-//patch=1,EE,00367be8,word,3c033f1f // 3c033f00 zoom
-//patch=1,EE,20826F10,extended,0014A709 // 001479C1 force native 16:9 mode
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=ElHecht
+description=Widescreen fix
+patch=1,EE,00367BE8,word,3C033F1F // 3C033F00 zoom
+patch=1,EE,20826F10,extended,0014A709 // 001479C1 force native 16:9 mode
+patch=1,EE,20B63FE0,extended,43A80000 // 436DE43C menu fix
+patch=1,EE,20B665B0,extended,43440000 // 4309CAD8
 
-// menu fix
-//patch=1,EE,20B63FE0,extended,43A80000 // 436DE43C
-//patch=1,EE,20B665B0,extended,43440000 // 4309CAD8
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,E0010002,extended,004A2A08
+patch=1,EE,10826F14,extended,00143305
+patch=1,EE,10A14B34,extended,00143305
+patch=1,EE,10826F0C,extended,001497E1
+patch=1,EE,E0012799,extended,00A14A88 //allows choose 50 Hz
+patch=1,EE,10826F0C,extended,00142799

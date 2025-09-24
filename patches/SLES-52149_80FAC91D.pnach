@@ -1,13 +1,37 @@
-gametitle=Splinter Cell - Pandora Tomorrow (PAL-M) SLES-52149 80FAC91D SC2A.ELF
+gametitle=Tom Clancy's Splinter Cell - Pandora Tomorrow (PAL-M) SLES-52149 80FAC91D SC2A.ELF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-description=Renders the game in 16:9 aspect ratio
-patch=1,EE,0017A200,word,3C1B3F40 //AE03008C - X-axis
-patch=1,EE,001B79F4,word,AE1B008C //AE03008C
+description=Solo mode widescreen hack.
+patch=1,EE,0017A200,word,3C1B3F40 // AE03008C - X-axis
+patch=1,EE,001B79F4,word,AE1B008C // AE03008C
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=ElHecht
+description=Solo mode widescreen hack.
+patch=1,EE,0017A200,word,3C1B3F55 // 00000000 - X-axis
+patch=1,EE,001B79F4,word,377B5555 // AE03008C - X-axis
+patch=1,EE,001B7A0C,word,AE1B008C // 8E02004C
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=ElHecht, converted by pgert
+description=Solo mode widescreen hack.
+patch=1,EE,0017A200,word,3C1B3F63
+patch=1,EE,001B79F4,word,377B8E39
+patch=1,EE,001B7A0C,word,AE1B008C
+
+// ==========
+// - Alternative 16:10 Widescreen hack by pgert.
+//   Might not work with all BIOS types & configurations.
+//   Fast boot recommended.
+// patch=1,EE,21628ABC,extended,3F400000 // 3F800000 - X-axis
+// patch=1,EE,21628AC0,extended,3F666666 // 3F800000 - Y-axis
+// ==========
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
+description=Might need EE Overclock (130%).
 patch=1,EE,0018D7C8,word,24030001 //24030002

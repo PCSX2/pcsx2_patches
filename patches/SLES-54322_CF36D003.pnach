@@ -1,0 +1,28 @@
+gametitle=Need for Speed - Carbon (PAL-E) SLES-54322 CF36D003
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Widescreen fix
+patch=1,EE,E0010000,extended,00A6E494
+patch=1,EE,00A6E494,extended,00000001
+patch=1,EE,2061E7F8,extended,3F400000
+patch=1,EE,2061E810,extended,3F400000
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,00394A9C,word,0000102D
+
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect
+patch=0,EE,00624344,word,00000000
+patch=0,EE,00254470,word,24020000
+patch=0,EE,00254474,word,10620004
+patch=0,EE,00624470,word,01000000
+
+[Disable Speed Effect]
+author=PeterDelta
+description=Removes the speed effect in race
+patch=0,EE,00402610,word,14A0003C

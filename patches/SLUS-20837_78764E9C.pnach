@@ -3,12 +3,12 @@ gametitle=Ribbit King (SLUS_20837)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Sergx12
-comment=Widescreen Hack Conversion
+description=Widescreen Hack Conversion
 
 // 16:9
 patch=1,EE,e0024500,extended,003C5132 //font fix for pcsx2 1.7+
 patch=1,EE,203C4C10,extended,3f280000 //gameplay
-patch=1,EE,203C5110,extended,43cddf6d // planet selection 
+patch=1,EE,203C5110,extended,43cddf6d // planet selection
 
 
 

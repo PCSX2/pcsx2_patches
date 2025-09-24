@@ -24,7 +24,7 @@ patch=1,EE,001E46EC,word,01C02820
 patch=1,EE,001E46F0,word,E4830030
 patch=1,EE,0033AA58,word,0000006A
 
-// Lens Flare's fix 
+// Lens Flare's fix
 // B000BD27 00000000 0c9a8b93
 patch=1,EE,0014f69c,word,3c013f40 // 00000000
 patch=1,EE,0014f70c,word,44810800 // 00000000

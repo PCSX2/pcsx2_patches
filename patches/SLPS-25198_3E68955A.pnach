@@ -2,7 +2,7 @@ gametitle=Kingdom Hearts: Final Mix
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen patch
+description=Widescreen patch
 patch=1,EE,00110644,word,3c0143d6 //render fix
 patch=1,EE,00110b30,word,3c013f19 //hor value first half
 patch=1,EE,00110898,word,3421999a //hor value second half
@@ -57,7 +57,7 @@ patch=1,EE,204951D0,word,3FAAAAAB //3f800000 (width)
 //position fix weapon select
 patch=1,EE,0020a170,word,3c0144fa //3c014500
 
-//HP/MP fix for PCSX2
+[HP/MP fix for PCSX2]
 patch=1,EE,2044d894,extended,00000003
 patch=1,EE,2044d890,extended,00000006
 patch=1,EE,2044d888,extended,000001A9
@@ -91,74 +91,48 @@ patch=1,EE,2044bfa0,extended,0000001b
 patch=1,EE,2044b760,extended,00000005
 patch=1,EE,2044b820,extended,00000005
 
-//60fps toggle on (game play)
-//60fps normal mode
-//patch=1,EE,d02c5958,extended,00000000
-//patch=1,EE,002bbe0c,extended,00000000
+[Swap X and O]
+patch=1,EE,00268cec,word,0803f414
+patch=1,EE,000fd050,word,00a0c821
+patch=1,EE,000fd054,word,0809a33d
+patch=1,EE,000fd058,word,24020330
+patch=1,EE,00268db4,word,0803f417
+patch=1,EE,000fd05c,word,87240000
+patch=1,EE,000fd060,word,30859fff
+patch=1,EE,000fd064,word,9326000c
+patch=1,EE,000fd068,word,9327000b
+patch=1,EE,000fd06c,word,30814000
+patch=1,EE,000fd070,word,34a32000
+patch=1,EE,000fd074,word,0061280b
+patch=1,EE,000fd078,word,a326000b
+patch=1,EE,000fd07c,word,30812000
+patch=1,EE,000fd080,word,34a34000
+patch=1,EE,000fd084,word,0061280b
+patch=1,EE,000fd088,word,a327000c
+patch=1,EE,000fd08c,word,03e00008
+patch=1,EE,000fd090,word,a7250000
 
-//60fps normal mode alt
-//patch=1,EE,d02c5958,extended,00001000
-//patch=1,EE,002BBE0C,extended,00000000
-
-//60fps normal mode alt (big ben)
-//patch=1,EE,d02c5958,extended,00000020
-//patch=1,EE,002BBE0C,extended,00000000
-
-//60fps battle mode
-//patch=1,EE,d02c5958,extended,00000001
-//patch=1,EE,002BBE0C,extended,00000000
-
-//60fps battle mode (boss)
-//patch=1,EE,d02c5958,extended,00000011
-//patch=1,EE,002BBE0C,extended,00000000
-
-//60fps battle mode (boss) alt
-//patch=1,EE,d02c5958,extended,00000031
-//patch=1,EE,002BBE0C,extended,00000000
-
-//60fps toggle off (cutscenes, fmv and other scripted events)
-//60fpsoff fmv
-//patch=1,EE,d02c5958,extended,00000040
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff fmv alt
-//patch=1,EE,d02c5958,extended,0000004E
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff no hud (world map)
-//patch=1,EE,d02c5958,extended,00000004
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff no hud (tutorial, gummi ship)
-//patch=1,EE,d02c5958,extended,0000000C
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene
-//patch=1,EE,d02c5958,extended,0000000E
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene alt
-//patch=1,EE,d02c5958,extended,0000002E
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene alt (white trinity)
-//patch=1,EE,d02c5958,extended,0000100E
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene alt
-//patch=1,EE,d02c5958,extended,0000000F
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene (boss)
-//patch=1,EE,d02c5958,extended,0000001F
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene (boss) alt
-//patch=1,EE,d02c5958,extended,0000003F
-//patch=1,EE,002BBE0C,extended,00000001
-
-//60fpsoff ingame cutscene (red trinity)
-//patch=1,EE,d02c5958,extended,0000100C
-//patch=1,EE,002BBE0C,extended,00000001
-
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,002BBE0C,extended,00000000
+patch=1,EE,202BBDEC,extended,3F800000
+patch=1,EE,E0010001,extended,002A6344
+patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,0010CFAC,extended,00
+patch=1,EE,1018198C,extended,3F80
+patch=1,EE,10181A34,extended,3F80
+patch=1,EE,E0010080,extended,002BC0BC
+patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,E0010004,extended,002C5958
+patch=1,EE,202BBDEC,extended,3F000000
+patch=1,EE,E0037000,extended,002A3F38
+patch=1,EE,E0020001,extended,002C8054
+patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,0010CFAC,extended,80
+patch=1,EE,E0010008,extended,002C5958
+patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,E0011008,extended,002C5958
+patch=1,EE,002BBE0C,extended,00000001
+patch=1,EE,E0010009,extended,002C5958
+patch=1,EE,002BBE0C,extended,00000001

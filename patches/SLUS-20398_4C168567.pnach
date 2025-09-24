@@ -1,11 +1,1262 @@
-gametitle=Road Trip (U)(SLUS-20398)
+gametitle=Road Trip (NTSC-U) (SLUS-20398)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=Souzooka
+description=16:9 3D with 16:9-optimized UI
 
-//Widescreen hack 16:9
+// 3D aspect ratio
+patch=0,EE,2021F798,extended,3C013F40 // lui $at, 0x3F40
 
-patch=1,EE,0021f798,word,3c013f40 //3c013f80
+// Fix culling of 3D environment mesh subdivisions on sides of screen
+// Also fixes the camera being able to slightly go through objects after changing 3D aspect
+patch=0,EE,2021F550,extended,0          // Removes a branch to PAL logic
+patch=0,EE,2021F558,extended,3C013F40   // lui $at, 0x3F40
+patch=0,EE,2021F55C,extended,4481B800   // mtc1 $at, $f23
+patch=0,EE,2021F560,extended,4617A082   // mul.s $f2, $f20, $f23
+patch=0,EE,2021F564,extended,C6010008   // lwc1 $f1, 0x8($s0)
+patch=0,EE,2021F568,extended,46010002   // mul.s $f0, $f0, $f1
+patch=0,EE,2021F56C,extended,0          // nop
+patch=0,EE,2021F570,extended,0          // nop
+patch=0,EE,2021F574,extended,46020003   // div.s $f0, $f0, $f2
+patch=0,EE,2021F578,extended,0          // nop
+patch=0,EE,2021F57C,extended,0          // nop
+patch=0,EE,2021F580,extended,0          // nop
+patch=0,EE,2021F584,extended,0          // nop
+patch=0,EE,2021F588,extended,0          // nop
+patch=0,EE,2021F58C,extended,E7A00050   // swc1 $f0, 0x50($sp)
+
+// Various UI Scaling Functions
+// Function 1
+// Known to affect the middle portion of the minimap border/transparent overlay
+patch=0,EE,20206160,extended,0          // nop
+patch=0,EE,2020616C,extended,22900      // sll a1,v0,0x04
+patch=0,EE,20206170,extended,20880      // sll at,v0,0x02
+patch=0,EE,20206174,extended,A11023     // subu v0,a1,at
+patch=0,EE,20206178,extended,32900      // sll a1,v1,0x04
+patch=0,EE,2020617C,extended,30880      // sll at,v1,0x02
+patch=0,EE,20206180,extended,A12823     // subu a1,a1,at
+patch=0,EE,20206184,extended,718C0      // sll v1,a3,0x03
+patch=0,EE,20206188,extended,EF3021     // addu a2,a3,t7
+patch=0,EE,2020618C,extended,630C0      // sll a2,a2,0x03
+patch=0,EE,20206190,extended,24637900   // addiu v1,v1,0x7900
+patch=0,EE,20206194,extended,24C67900   // addiu a2,a2,0x7900
+patch=0,EE,20206198,extended,24A56C00   // addiu a1,a1,0x6C00
+patch=0,EE,2020619C,extended,24426C00   // addiu v0,v0,0x6C00
+patch=0,EE,202061A0,extended,A5250000   // sh a1,0x0(t1)
+patch=0,EE,202061A4,extended,A5420000   // sh v0,0x0(t2)
+patch=0,EE,202061A8,extended,A5230002   // sh v1,0x2(t1)
+patch=0,EE,202061AC,extended,A5460002   // sh a2,0x2(t2)
+patch=0,EE,202061B0,extended,0          // nop
+patch=0,EE,202061B4,extended,0          // nop
+patch=0,EE,202061B8,extended,0          // nop
+patch=0,EE,202061BC,extended,10000010   // beq zero,zero,0x00206200
+patch=0,EE,202061C0,extended,0          // nop
+
+// Function 2
+// Known to affect most UI -- speedometer, minimap left/right borders, chat windows,
+// pause menus, etc.
+patch=0,EE,202064DC,extended,0          // nop
+patch=0,EE,202064E4,extended,25890040   // addiu t1,t4,0x40
+patch=0,EE,202064E8,extended,6D1021     // addu v0,v1,t5
+patch=0,EE,202064EC,extended,22900      // sll a1,v0,0x04
+patch=0,EE,202064F0,extended,20880      // sll at,v0,0x02
+patch=0,EE,202064F4,extended,A11023     // subu v0,a1,at
+patch=0,EE,202064F8,extended,32900      // sll a1,v1,0x04
+patch=0,EE,202064FC,extended,30880      // sll at,v1,0x02
+patch=0,EE,20206500,extended,A12823     // subu a1,a1,at
+patch=0,EE,20206504,extended,718C0      // sll v1,a3,0x03
+patch=0,EE,20206508,extended,EE3021     // addu a2,a3,t6
+patch=0,EE,2020650C,extended,630C0      // sll a2,a2,0x03
+patch=0,EE,20206510,extended,24637900   // addiu v1,v1,0x7900
+patch=0,EE,20206514,extended,24C67900   // addiu a2,a2,0x7900
+patch=0,EE,20206518,extended,24A56C00   // addiu a1,a1,0x6C00
+patch=0,EE,2020651C,extended,24426C00   // addiu v0,v0,0x6C00
+patch=0,EE,20206520,extended,A5050000   // sh a1,0x0(t0)
+patch=0,EE,20206524,extended,A5220000   // sh v0,0x0(t1)
+patch=0,EE,20206528,extended,A5030002   // sh v1,0x2(t0)
+patch=0,EE,2020652C,extended,A5260002   // sh a2,0x2(t1)
+patch=0,EE,20206530,extended,0          // nop
+patch=0,EE,20206534,extended,0          // nop
+patch=0,EE,20206538,extended,0          // nop
+patch=0,EE,2020653C,extended,1000000F   // beq zero,zero,0x2020657C
+patch=0,EE,20206540,extended,0          // nop
+
+// Function 3
+// Known to affect quick-pic photos, the small trophies in My Garage
+patch=0,EE,20206764,extended,25A90040   // addiu t1,t5,0x40
+patch=0,EE,20206768,extended,6E1021     // addu v0,v1,t6
+patch=0,EE,2020676C,extended,30880      // sll at,v1,0x02
+patch=0,EE,20206770,extended,31900      // sll v1,v1,0x04
+patch=0,EE,20206774,extended,611823     // subu v1,v1,at
+patch=0,EE,20206778,extended,20880      // sll at,v0,0x02
+patch=0,EE,2020677C,extended,21100      // sll v0,v0,0x04
+patch=0,EE,20206780,extended,411023     // subu v0,v0,at
+patch=0,EE,20206784,extended,EF3021     // addu a2,a3,t7
+patch=0,EE,20206788,extended,738C0      // sll a3,a3,0x03
+patch=0,EE,2020678C,extended,000630C0   // sll a2,a2,0x03
+patch=0,EE,20206790,extended,24636C00   // addiu v1,v1,0x6C00
+patch=0,EE,20206794,extended,24426C00   // addiu v0,v0,0x6C00
+patch=0,EE,20206798,extended,24E77900   // addiu a3,a3,0x7900
+patch=0,EE,2020679C,extended,24C67900   // addiu a2,a2,0x7900
+patch=0,EE,202067A0,extended,A5030000   // sh v1,0x0(t0)
+patch=0,EE,202067A4,extended,A5220000   // sh v0,0x0(t1)
+patch=0,EE,202067A8,extended,A5070002   // sh a3,0x2(t0)
+patch=0,EE,202067AC,extended,10000014   // beq zero,zero,0x00206800
+patch=0,EE,202067B0,extended,A5260002   // sh a2,0x2(t1)
+
+// Function 4
+// Affects the color bar widths in paint shop, the text for part names in shops I believe
+patch=0,EE,202075F0,extended,1064021    // addu t0,t0,a2
+patch=0,EE,202075F4,extended,61100      // sll v0,a2,0x04
+patch=0,EE,202075F8,extended,60880      // sll at,a2,0x02
+patch=0,EE,202075FC,extended,413023     // subu a2,v0,at
+patch=0,EE,20207600,extended,81100      // sll v0,t0,0x04
+patch=0,EE,20207604,extended,80880      // sll at,t0,0x02
+patch=0,EE,20207608,extended,414023     // subu t0,v0,at
+patch=0,EE,2020760C,extended,1274821    // addu t1,t1,a3
+patch=0,EE,20207610,extended,738C0      // sll a3,a3,0x03
+patch=0,EE,20207614,extended,948C0      // sll t1,t1,0x03
+patch=0,EE,20207618,extended,24C66C00   // addiu a2,a2,0x6C00
+patch=0,EE,2020761C,extended,25086C00   // addiu t0,t0,0x6C00
+patch=0,EE,20207620,extended,24E77900   // addiu a3,a3,0x7900
+patch=0,EE,20207624,extended,25297900   // addiu t1,t1,0x7900
+patch=0,EE,20207628,extended,A4860000   // sh a2,0x0(a0)
+patch=0,EE,2020762C,extended,A4A80000   // sh t0,0x0(a1)
+patch=0,EE,20207630,extended,A4870002   // sh a3,0x2(a0)
+patch=0,EE,20207634,extended,3E00008    // jr ra
+patch=0,EE,20207638,extended,A4A90002   // sh t1,0x2(a1)
+
+// Function 5
+// Affects the scale of the paint spray effect in the paint shop
+patch=0,EE,202079A8,extended,52940      // sll a1,a1,0x05
+patch=0,EE,202079AC,extended,852021     // addu a0,a0,a1
+patch=0,EE,202079B0,extended,60880      // sll at,a2,0x02
+patch=0,EE,202079B4,extended,63100      // sll a2,a2,0x04
+patch=0,EE,202079B8,extended,C13023     // subu a2,a2,at
+patch=0,EE,202079BC,extended,738C0      // sll a3,a3,0x03
+patch=0,EE,202079C0,extended,24C66C00   // addiu a2,a2,0x6C00
+patch=0,EE,202079C4,extended,24E77900   // addiu a3,a3,0x7900
+patch=0,EE,202079C8,extended,AC860030   // sw a2,0x30(a0)
+patch=0,EE,202079CC,extended,AC870034   // sw a3,0x34(a0)
+patch=0,EE,202079D0,extended,AC880038   // sw t0,0x38(a0)
+patch=0,EE,202079D4,extended,3E00008    // jr ra
+patch=0,EE,202079D8,extended,AC80003C   // sw zero,0x3C(a0)
+
+// Function 6
+// Affects the BG for part windows in the shop, BGs for courses in course select
+// in particular this calculates the four points of the rectangular BG
+// This also rolls up an unrolled loop so it leaves a lot of blank space afterwards
+patch=0,EE,20244200,extended,24840010   // addiu a0,a0,0x10
+patch=0,EE,20244204,extended,54400      // sll t0,a1,0x10
+patch=0,EE,20244208,extended,84403      // sra t0,t0,0x10
+patch=0,EE,2024420C,extended,55403      // sra t2,a1,0x10
+patch=0,EE,20244210,extended,5483F      // dsra32 t1,a1,0x00
+patch=0,EE,20244214,extended,94C00      // sll t1,t1,0x10
+patch=0,EE,20244218,extended,94C03      // sra t1,t1,0x10
+patch=0,EE,2024421C,extended,55C3F      // dsra32 t3,a1,0x10
+patch=0,EE,20244220,extended,80880      // sll at,t0,0x02
+patch=0,EE,20244224,extended,84100      // sll t0,t0,0x04
+patch=0,EE,20244228,extended,1014023    // subu t0,t0,at
+patch=0,EE,2024422C,extended,A0880      // sll at,t2,0x02
+patch=0,EE,20244230,extended,A5100      // sll t2,t2,0x04
+patch=0,EE,20244234,extended,1415023    // subu t2,t2,at
+patch=0,EE,20244238,extended,25086BF8   // addiu t0,t0,0x6BF8
+patch=0,EE,2024423C,extended,254A6BF8   // addiu t2,t2,0x6BF8
+patch=0,EE,20244240,extended,948C0      // sll t1,t1,0x03
+patch=0,EE,20244244,extended,B58C0      // sll t3,t3,0x03
+patch=0,EE,20244248,extended,252978F8   // addiu t1,t1,0x78F8
+patch=0,EE,2024424C,extended,256B78F8   // addiu t3,t3,0x78F8
+patch=0,EE,20244250,extended,63900      // sll a3,a2,0x04
+patch=0,EE,20244254,extended,7821       // addu t7,zero,zero
+patch=0,EE,20244258,extended,24180004   // addiu t8,zero,0x4
+patch=0,EE,2024425C,extended,31ED0001   // andi t5,t7,0x0001
+patch=0,EE,20244260,extended,31EE0002   // andi t6,t7,0x0002
+patch=0,EE,20244264,extended,1002821    // addu a1,t0,zero
+patch=0,EE,20244268,extended,1203021    // addu a2,t1,zero
+patch=0,EE,2024426C,extended,14D280B    // movn a1,t2,t5
+patch=0,EE,20244270,extended,16E300B    // movn a2,t3,t6
+patch=0,EE,20244274,extended,AC850020   // sw a1,0x20(a0)
+patch=0,EE,20244278,extended,AC860024   // sw a2,0x24(a0)
+patch=0,EE,2024427C,extended,AC870028   // sw a3,0x28(a0)
+patch=0,EE,20244280,extended,25EF0001   // addiu t7,t7,0x1
+patch=0,EE,20244284,extended,15F8FFF5   // bne t7,t8,0x0024425C
+patch=0,EE,20244288,extended,24840030   // addiu a0,a0,0x30
+patch=0,EE,2024428C,extended,3E00008    // jr ra
+patch=0,EE,20244290,extended,0          // nop
+
+// After function 6's correction we'll have to write some more custom code to correct the parts wheel in shops/map wheel in quick race
+patch=0,EE,20246D54,extended,3C014320   // lui at,0x4320    // h. scale of parts wheel
+patch=0,EE,20246D94,extended,245E0112   // addiu fp,v0,0x112    // h. position of parts wheel
+// And then this assembly corrects the positioning of 3D models for parts in the part select
+patch=0,EE,20246FB4,extended,E7A00048   // swc1 f00,0x48(sp)
+patch=0,EE,20246FB8,extended,1E2083     // sra a0,fp,0x02
+patch=0,EE,20246FBC,extended,3C42023    // subu a0,fp,a0
+patch=0,EE,20246FC0,extended,1317C2     // srl v0,s3,0x1F
+patch=0,EE,20246FC4,extended,2621021    // addu v0,s3,v0
+patch=0,EE,20246FC8,extended,21043      // sra v0,v0,0x01
+patch=0,EE,20246FCC,extended,2E21021    // addu v0,s7,v0
+patch=0,EE,20246FD0,extended,21FC2      // srl v1,v0,0x1F
+patch=0,EE,20246FD4,extended,431021     // addu v0,v0,v1
+patch=0,EE,20246FD8,extended,00021043   // sra v0,v0,0x01
+patch=0,EE,20246FDC,extended,2442078C   // addiu v0,v0,0x78C
+patch=0,EE,20246FE0,extended,44826800   // mtc1 v0,f13
+patch=0,EE,20246FE4,extended,0          // nop
+patch=0,EE,20246FE8,extended,46806B60   // cvt.s.w f13,f13
+patch=0,EE,20246FEC,extended,248406C0   // addiu a0,a0,0x6C0
+patch=0,EE,20246FF0,extended,44846000   // mtc1 a0,f12
+patch=0,EE,20246FF4,extended,C087E44    // jal 0x21f910
+patch=0,EE,20246FF8,extended,46806320   // cvt.s.w f12,f12
+patch=0,EE,20246FFC,extended,1000001A   // beq zero,zero,0x00247068
+patch=0,EE,20247000,extended,0          // nop
+
+// Changes to fix up the map select wheel for quick race
+patch=0,EE,20245BFC,extended,3C0143A0   // lui at,0x43A0 // h.scale of map wheel
+patch=0,EE,20245C18,extended,245201AB   // addiu s2,v0,0x1AB    // h. pos of map wheel
+patch=0,EE,20245D68,extended,240401AB   // addiu a0,zero,0x1AB  // h. position of map window after choice
+patch=0,EE,20245D98,extended,2451010B   // addiu s1,v0,0x10B    // h. position of map window before choice
+patch=0,EE,20245DA8,extended,2411010B   // addiu s1,zero,0x10B  // h. position of map window before choice
+patch=0,EE,20245DB8,extended,241101AB   // addiu s1,zero,0x1AB  // h. position of map window after choice
+// Fix 3D map clips
+patch=0,EE,20244A80,extended,100802D    // daddu s0,t0,zero
+patch=0,EE,20244A84,extended,30A3FFFF   // andi v1,a1,0xFFFF
+patch=0,EE,20244A88,extended,AD2824     // and a1,a1,t5
+patch=0,EE,20244A8C,extended,30883      // sra at,v1,0x02
+patch=0,EE,20244A90,extended,611823     // subu v1,v1,at
+patch=0,EE,20244A94,extended,3063FFFF   // andi v1,v1,0xFFFF
+patch=0,EE,20244A98,extended,A32825     // or a1,a1,v1
+patch=0,EE,20244A9C,extended,5103C      // dsll32 v0,a1,0x00
+patch=0,EE,20244AA0,extended,2103F      // dsra32 v0,v0,0x00
+patch=0,EE,20244AA4,extended,AC2824     // and a1,a1,t4
+patch=0,EE,20244AA8,extended,21403      // sra v0,v0,0x10
+patch=0,EE,20244AAC,extended,20883      // sra at,v0,0x02
+patch=0,EE,20244AB0,extended,411023     // subu v0,v0,at
+patch=0,EE,20244AB4,extended,3042FFFF   // andi v0,v0,0xFFFF
+patch=0,EE,20244AB8,extended,21438      // dsll v0,v0,0x10
+patch=0,EE,20244ABC,extended,10000008   // beq zero,zero,0x00244AE0
+patch=0,EE,20244AC0,extended,A22825     // or a1,a1,v0
+// Fix 3D map camera
+patch=0,EE,20244C68,extended,122083     // sra a0,s2,0x02
+patch=0,EE,20244C6C,extended,2442023    // subu a0,s2,a0
+patch=0,EE,20244C70,extended,1117C2     // srl v0,s1,0x1F
+patch=0,EE,20244C74,extended,2221021    // addu v0,s1,v0
+patch=0,EE,20244C78,extended,21043      // sra v0,v0,0x01
+patch=0,EE,20244C7C,extended,2621021    // addu v0,s3,v0
+patch=0,EE,20244C80,extended,21FC2      // srl v1,v0,0x1F
+patch=0,EE,20244C84,extended,431021     // addu v0,v0,v1
+patch=0,EE,20244C88,extended,21043      // sra v0,v0,0x01
+patch=0,EE,20244C8C,extended,24420790   // addiu v0,v0,0x790
+patch=0,EE,20244C90,extended,44826800   // mtc1 v0,f13
+patch=0,EE,20244C94,extended,0          // nop
+patch=0,EE,20244C98,extended,46806B60   // cvt.s.w f13,f13
+patch=0,EE,20244C9C,extended,248406C0   // addiu a0,a0,0x6C0
+patch=0,EE,20244CA0,extended,44846000   // mtc1 a0,f12
+patch=0,EE,20244CA4,extended,C087E44    // jal 0x21f910
+patch=0,EE,20244CA8,extended,46806320   // cvt.s.w f12,f12
+patch=0,EE,20244CAC,extended,1000001B   // beq zero,zero,0x00244D1C
+patch=0,EE,20244CB0,extended,0          // nop
+
+// Function 7
+// Corrects scale of speedometer needle/gas gauge (normal meter), some other random UI
+patch=0,EE,2024ED34,extended,24E70600   // addiu a3,a3,0x600  // Adjusts x position of UI
+patch=0,EE,2024ED64,extended,C09CB56    // jal 0x272D58   // Jump to sceVu0CameraMatrix (unused) where we'll write some scaling code
+
+patch=0,EE,20272D58,extended,3C013F40   // lui at,0x3F40
+patch=0,EE,20272D5C,extended,44815000   // mtc1 at,f10
+patch=0,EE,20272D60,extended,C7AB0000   // lwc1 f11,0x0(sp)
+patch=0,EE,20272D64,extended,460A5AC2   // mul.s f11,f11,f10
+patch=0,EE,20272D68,extended,E7AB0000   // swc1 f11,0x0(sp)
+patch=0,EE,20272D6C,extended,C7AB0010   // lwc1 f11,0x10(sp)
+patch=0,EE,20272D70,extended,460A5AC2   // mul.s f11,f11,f10
+patch=0,EE,20272D74,extended,E7AB0010   // swc1 f11,0x10(sp)
+patch=0,EE,20272D78,extended,C7AB0020   // lwc1 f11,0x20(sp)
+patch=0,EE,20272D7C,extended,460A5AC2   // mul.s f11,f11,f10
+patch=0,EE,20272D80,extended,3E00008    // jr ra
+patch=0,EE,20272D84,extended,E7AB0020   // swc1 f11,0x20(sp)
+
+// Function 8
+// Corrects position of the button indicator in controls settings
+patch=0,EE,20207AB8,extended,50900      // sll at,a1,0x04
+patch=0,EE,20207ABC,extended,52880      // sll a1,a1,0x02
+patch=0,EE,20207AC0,extended,252823     // subu a1,at,a1
+patch=0,EE,20207AC4,extended,24A56C00   // addiu a1,a1,0x6C00
+patch=0,EE,20207AC8,extended,24C67900   // addiu a2,a2,0x7900
+patch=0,EE,20207ACC,extended,AC800004   // sw zero,0x4(a0)
+patch=0,EE,20207AD0,extended,73827      // nor a3,zero,a3
+patch=0,EE,20207AD4,extended,A4850010   // sh a1,0x10(a0)
+patch=0,EE,20207AD8,extended,1000000B   // beq zero,zero,0x00207B08
+patch=0,EE,20207ADC,extended,A4860012   // sh a2,0x12(a0)
 
 
+// At this point for the most part UI should be aspect corrected, but all left-aligned and using up a 4:3 space
+// So the positions of all UI elements will have to be changed
+// In general, approximately 0x6B units needs to be added to center-aligned elements, while 0xD6 needs to be added to right-aligned elements
+
+// Speedometers
+patch=0,EE,202A8FF0,extended,2B9    // Normal Meter h. pos
+patch=0,EE,202A8FF8,extended,2B9    // Normal Meter h. pos (2 player)
+patch=0,EE,202A9000,extended,2B9    // Normal Meter h. pos (2 player)
+patch=0,EE,202A9038,extended,2BA    // Chronometer h. pos
+patch=0,EE,202A9040,extended,2BA    // Chronometer h. pos (2 player)
+patch=0,EE,202A9048,extended,2BA    // Chronometer h. pos (2 player)
+patch=0,EE,2024A3E0,extended,2402002F   // addiu v0,zero,0x2F // Correct gas meter needle position for Chronometer
+patch=0,EE,202A9060,extended,2AF    // Rainbow Meter h. pos
+patch=0,EE,202A9068,extended,2AF    // Rainbow Meter h. pos (2 player)
+patch=0,EE,202A9070,extended,2AF    // Rainbow Meter h. pos (2 player)
+patch=0,EE,202A9218,extended,2C1    // Space Meter h. pos
+patch=0,EE,202A9220,extended,2C1    // Space Meter h. pos (2 player)
+patch=0,EE,202A9228,extended,2C1    // Space Meter h. pos (2 player)
+patch=0,EE,202A9260,extended,27D    // Triangle Meter h. pos
+patch=0,EE,202A9268,extended,27D    // Triangle Meter h. pos (2 player)
+patch=0,EE,202A9270,extended,27D    // Triangle Meter h. pos (2 player)
+patch=0,EE,202A9478,extended,2AD    // Love Sick Meter h. pos
+patch=0,EE,202A9480,extended,2AD    // Love Sick Meter h. pos (2 player)
+patch=0,EE,202A9488,extended,2AD    // Love Sick Meter h. pos (2 player)
+patch=0,EE,202A9778,extended,29D    // Cherry Meter h. pos
+patch=0,EE,202A9780,extended,29D    // Cherry Meter h. pos (2 player)
+patch=0,EE,202A9788,extended,29D    // Cherry Meter h. pos (2 player)
+patch=0,EE,202A9850,extended,28E    // Duck Meter h. pos
+patch=0,EE,202A9858,extended,28E    // Duck Meter h. pos (2 player)
+patch=0,EE,202A9860,extended,28E    // Duck Meter h. pos (2 player)
+patch=0,EE,202A9AB8,extended,2AB    // Devil Meter h. pos
+patch=0,EE,202A9AC0,extended,2AB    // Devil Meter h. pos (2 player)
+patch=0,EE,202A9AC8,extended,2AB    // Devil Meter h. pos (2 player)
+patch=0,EE,202A9AF0,extended,2C2    // Digital Meter h. pos
+patch=0,EE,202A9AF8,extended,2C2    // Digital Meter h. pos (2 player)
+patch=0,EE,202A9B00,extended,2C2    // Digital Meter h. pos (2 player)
+
+// Most text
+patch=0,EE,2020433C,extended,24480075   // addiu t0,v0,0x75
+
+// Chat textbox
+patch=0,EE,2020295C,extended,2405008A   // addiu a1,zero,0x8A // Chat box left border
+patch=0,EE,202029A8,extended,2405008A   // addiu a1,zero,0x8A // Chat box left border
+patch=0,EE,202029F0,extended,240500B2   // addiu a1,zero,0xB2 // Chat box middle
+patch=0,EE,20202A48,extended,240500B2   // addiu a1,zero,0xB2 // Chat box middle
+patch=0,EE,20202AA4,extended,240502A2   // addiu a1,zero,0x2A2 // Chat box right border
+patch=0,EE,20202ADC,extended,240502A2   // addiu a1,zero,0x2A2 // Chat box right border
+patch=0,EE,20202B24,extended,2405019A   // addiu a1,zero,0x19A // Little circle at bottom of chat box where arrow goes
+patch=0,EE,2023B4C8,extended,240401A1   // addiu a0,zero,0x1A1 // Arrow at bottom of chat box
+patch=0,EE,2023B67C,extended,240401A1   // addiu a0,zero,0x1A1 // Arrow at bottom of chat box
+patch=0,EE,2023B734,extended,240401A1   // addiu a0,zero,0x1A1 // Arrow at bottom of chat box
+patch=0,EE,2023B7A4,extended,240401A1   // addiu a0,zero,0x1A1 // Arrow at bottom of chat box
+patch=0,EE,2023B8A4,extended,240401A1   // addiu a0,zero,0x1A1 // Arrow at bottom of chat box
+patch=0,EE,2023B8F4,extended,240401A1   // addiu a0,zero,0x1A1 // Arrow at bottom of chat box
+patch=0,EE,2023B944,extended,240401A1   // addiu a0,zero,0x1A1 // Arrow at bottom of chat box (these are all branch delay slots for the same function call)
+patch=0,EE,20202BF0,extended,2402029C   // addiu v0,zero,0x29C // Chat nametag piece left
+patch=0,EE,20202C48,extended,240202A4   // addiu v0,zero,0x2A4 // Chat nametag piece middle
+patch=0,EE,20202CD8,extended,240502A8   // addiu a1,zero,0x2A8 // Chat nametag piece right
+patch=0,EE,2023AA04,extended,241200B0   // addiu s2,zero,0xB0 // Chat text
+patch=0,EE,2023B454,extended,240402A8   // addiu a0,zero,0x2A8 // Chat nametag text
+
+// minimap
+patch=0,EE,2021F96C,extended,3C013F40   // lui at,0x3F40 // Horizontal scale of minimap
+patch=0,EE,20332EF4,extended,3F400000   // Fixes bug where overworld minimap shifts gradually horizontally when travelling horizontally along terrain mesh
+patch=0,EE,202424CC,extended,0          // nop // overwrite branch to use PAL logic for overworld minimap
+patch=0,EE,20242530,extended,3C0144F2   // lui at,0x44F2 // 3d Minimap model vertical position
+patch=0,EE,2024253C,extended,3C0144D8   // lui at,0x44D8 // 3d Minimap model horizontal position
+patch=0,EE,102A4420,extended,21         // overworld minimap model clip left
+patch=0,EE,102A4422,extended,76         // overworld minimap model clip right
+patch=0,EE,102A4424,extended,9C         // overworld minimap model clip top
+patch=0,EE,102A4426,extended,CE         // overworld minimap model clip bottom
+patch=0,EE,102A4440,extended,20         // Figure 8 minimap model clip left
+patch=0,EE,2024294C,extended,0          // nop // overwrite branch to use PAL logic for race minimap
+patch=0,EE,20242964,extended,3C0144D8   // lui at,0x44D8 // 3d Minimap model horizontal position (in race)
+patch=0,EE,20242C18,extended,0          // nop // overwrite branch to use PAL logic for golf minimap
+patch=0,EE,20242C2C,extended,3C0144D8   // lui at,0x44D8 // 3d Minimap model horizontal position (in golf)
+
+// Title menu items
+patch=0,EE,2020326C,extended,24040219   // addiu a0,zero,0x219 // BG for "button Enter" text
+patch=0,EE,20203290,extended,24040219   // addiu a0,zero,0x219 // BG for "button Enter" and "button Back" text
+patch=0,EE,20205C88,extended,240301AB   // addiu v1,zero,0x1AB // Default h. pos parameter for dark blue UI windows
+patch=0,EE,20205CA8,extended,240301AB   // addiu v1,zero,0x1AB // Same as above but technically unreachable *shrug*
+patch=0,EE,202045B4,extended,24840089   // addiu a0,a0,0x89 // Default h. pos parameter for brown/greenish UI windows (like which contains the save data info)
+patch=0,EE,20209668,extended,240201FB   // addiu v0,zero,0x1FB // "New Game"/"Continue" dialog window
+patch=0,EE,20205B40,extended,240202B7   // addiu v0,zero,0x2B7 // "Adventure"/"Quick Race"/"2 Player"/"Options"/"Results" dialog window
+patch=0,EE,202032C4,extended,24080221   // addiu t0,zero,0x221 // "button Enter" text ?? (for ??)
+patch=0,EE,202033C8,extended,24080221   // addiu t0,zero,0x221 // "button Enter" text (for everything)
+patch=0,EE,20203500,extended,24080221   // addiu t0,zero,0x221 // "button Exit" text (after selecting "Adventure" or "2 Player")
+patch=0,EE,20203600,extended,24090221   // addiu t1,zero,0x221 // "button Exit" text (after selecting "Options")
+patch=0,EE,20203704,extended,24090221   // addiu t1,zero,0x221 // Something similar to the above 4
+patch=0,EE,20228060,extended,24040165   // addiu a0,zero,0x165 // Mile number counter in save statistics when loading
+patch=0,EE,202280A0,extended,240401F1   // addiu a0,zero,0x1F1 // Currency number counter in save statistics when loading
+patch=0,EE,2026A498,extended,24020093   // addiu v0,zero,0x93 // In "Results"->"Course", course select BG window h. pos
+patch=0,EE,2026A4E0,extended,24040093   // addiu a0,zero,0x93 // In "Results"->"Course", race statistics BG window h. pos
+patch=0,EE,2026A190,extended,2404018D   // addiu a0,zero,0x18D // In "Results", h.pos of red "Oppose" text
+patch=0,EE,2026A500,extended,240400F7   // addiu a0,zero,0xF7 // "BEST LAP" text (on results statistics window)
+patch=0,EE,2026A520,extended,240400A7   // addiu a0,zero,0xA7 // "1ST" text (this and following changes are in order under "BEST LAP")
+patch=0,EE,2026A530,extended,240400A7   // addiu a0,zero,0xA7 // "NAME" text
+patch=0,EE,2026A548,extended,240400A7   // addiu a0,zero,0xA7 // "2ND" text
+patch=0,EE,2026A560,extended,240400A7   // addiu a0,zero,0xA7 // "NAME" text
+patch=0,EE,2026A578,extended,240400A7   // addiu a0,zero,0xA7 // "3RD" text
+patch=0,EE,2026A590,extended,240400A7   // addiu a0,zero,0xA7 // "NAME" text
+patch=0,EE,2026A5F8,extended,240400F7   // addiu a0,zero,0xF7 // Player names
+patch=0,EE,2026A628,extended,240400F7   // addiu a0,zero,0xF7 // Player names
+patch=0,EE,2026A674,extended,240400F7   // addiu a0,zero,0xF7 // 1ST result time
+patch=0,EE,2026A698,extended,240400F7   // addiu a0,zero,0xF7 // 2ND result time
+patch=0,EE,2026A6BC,extended,240400F7   // addiu a0,zero,0xF7 // 3RD result time
+patch=0,EE,2026A6D8,extended,2404020F   // addiu a0,zero,0x20F // "BEST TIME" text
+patch=0,EE,2026A6F4,extended,240401BF   // addiu a0,zero,0x1BF // "1ST" text (this and following changes are in order under "BEST TIME")
+patch=0,EE,2026A70C,extended,240401BF   // addiu a0,zero,0x1BF // "NAME" text
+patch=0,EE,2026A72C,extended,240401BF   // addiu a0,zero,0x1BF // "2ND" text
+patch=0,EE,2026A744,extended,240401BF   // addiu a0,zero,0x1BF // "NAME" text
+patch=0,EE,2026A75C,extended,240401BF   // addiu a0,zero,0x1BF // "3RD" text
+patch=0,EE,2026A774,extended,240401BF   // addiu a0,zero,0x1BF // "NAME" text
+patch=0,EE,2026A7D8,extended,2404020F   // addiu a0,zero,0x20F // Player names
+patch=0,EE,2026A800,extended,2404020F   // addiu a0,zero,0x20F // Player names
+patch=0,EE,2026A85C,extended,2404020F   // addiu a0,zero,0x20F // 1ST result time
+patch=0,EE,2026A880,extended,2404020F   // addiu a0,zero,0x20F // 2ND result time
+patch=0,EE,2026A8A4,extended,2404020F   // addiu a0,zero,0x20F // 3RD result time
+patch=0,EE,202087B8,extended,240500E9   // addiu a1,zero,0xE9 // Conspiracy Entertainment Logo h. pos
+
+// Quick Race select (slightly stretch clouds in background (by about ~6%) to leave no empty spots)
+patch=0,EE,202458A4,extended,241700D4   // addiu s7,zero,0xD4 // Was addiu s7,zero,0xC8 -- fixes offsets/wrapping
+patch=0,EE,20245924,extended,2610FFFF   // addiu s0,s0,-0x1
+patch=0,EE,20245928,extended,7FAB0020   // sq t3,0x20(sp)
+patch=0,EE,2024592C,extended,7FAC0030   // sq t4,0x30(sp)
+patch=0,EE,20245930,extended,26520050   // addiu s2,s2,0x50
+patch=0,EE,20245934,extended,2810       // mfhi a1
+patch=0,EE,20245938,extended,2A52823    // subu a1,s5,a1
+patch=0,EE,2024593C,extended,C0818F2    // jal 0x2063c8
+patch=0,EE,20245940,extended,26B500D4   // addiu s5,s5,0xD4 // Was addiu s5,0xC8 -- fixes offsets/wrapping
+patch=0,EE,20245944,extended,0          // nop
+patch=0,EE,20245948,extended,8641FFF0   // lh at,-0x10(s2) // These 3 is the actual magic, the above rearranges some instructions
+patch=0,EE,2024594C,extended,242100C0   // addiu at,at,0xC0
+patch=0,EE,20245950,extended,A641FFF0   // sh at,-0x10(s2)
+patch=0,EE,20248320,extended,24040269   // addiu a0,zero,0x269
+// Quick Race/2 Player text/elements
+patch=0,EE,2024835C,extended,24040269   // addiu a0,zero,0x269  // h. position of right button prompt after choice
+patch=0,EE,2024836C,extended,2404020F   // addiu a0,zero,0x20F  // h. position of left button prompt after choice
+patch=0,EE,20247828,extended,2404027D   // addiu a0,zero,0x27D  // Number of miles
+patch=0,EE,202478C8,extended,2404027D   // addiu a0,zero,0x27D  // Number of laps
+patch=0,EE,2024791C,extended,2404027D   // addiu a0,zero,0x27D  // Number of cars
+patch=0,EE,20247B44,extended,24040291   // addiu a0,zero,0x291  // Number of challenge attempts
+patch=0,EE,20247B8C,extended,24040101   // addiu a0,zero,0x101  // 2 Player -- Player 1 challenge attempts
+patch=0,EE,20247BD0,extended,24040269   // addiu a0,zero,0x269  // 2 Player -- Player 2 challenge attempts
+patch=0,EE,20247C88,extended,24040241   // addiu a0,zero,0x241  // Best total time
+patch=0,EE,20247CC0,extended,240400C5   // addiu a0,zero,0xC5   // Unused 2-player total time display ?
+patch=0,EE,20247CE4,extended,2404022D   // addiu a0,zero,0x22D  // Unused 2-player total time display ?
+patch=0,EE,20247D2C,extended,24040241   // addiu a0,zero,0x241  // Best lap time
+patch=0,EE,20247D58,extended,240400C5   // addiu a0,zero,0xC5   // Unused 2-player lap time display ?
+patch=0,EE,20247D78,extended,2404022D   // addiu a0,zero,0x22D  // Unused 2-player lap time display ?
+patch=0,EE,20247F04,extended,24040241   // addiu a0,zero,0x241  // 2 Player -- Unused 1 player total time display ?
+patch=0,EE,20247F38,extended,240400C5   // addiu a0,zero,0xC5   // 2 Player -- Player 1 best total time
+patch=0,EE,20247F5C,extended,2404022D   // addiu a0,zero,0x22D  // 2 Player -- Player 2 best total time
+patch=0,EE,20247FC4,extended,24040241   // addiu a0,zero,0x241  // 2 Player -- Unused 1 player lap time display ?
+patch=0,EE,20247FF0,extended,240400C5   // addiu a0,zero,0xC5   // 2 Player -- Player 1 best lap time
+patch=0,EE,20248010,extended,2404022D   // addiu a0,zero,0x22D  // 2 Player -- Player 2 best lap time
+patch=0,EE,20248064,extended,24040101   // addiu a0,zero,0x101  // 2 Player -- Player 1 course score
+patch=0,EE,20248098,extended,24040269   // addiu a0,zero,0x269  // 2 Player -- Player 2 course score
+patch=0,EE,202480FC,extended,24040101   // addiu a0,zero,0x101  // 2 Player -- Player 1 total score
+patch=0,EE,20248150,extended,24040269   // addiu a0,zero,0x269  // 2 Player -- Player 2 total score
+patch=0,EE,2022EDBC,extended,24040216   // addiu a0,zero,0x216  // 2 Player -- Player 1 cash when trading parts
+patch=0,EE,2022EDE0,extended,2404028E   // addiu a0,zero,0x28E  // 2 Player -- Player 2 cash when trading parts
+patch=0,EE,20247394,extended,24040015   // addiu a0,zero,0x15   // 2 Player -- "Selling" menu BG left bound when trading parts
+patch=0,EE,2024739C,extended,24060023   // addiu a2,zero,0x23   // 2 Player -- "Selling" menu BG right bound when trading parts
+patch=0,EE,20247514,extended,24040016   // addiu a0,zero,0x16   // 2 Player -- Player 1 name when trading parts
+patch=0,EE,202473B8,extended,24040016   // addiu a0,zero,0x16   // 2 Player -- Player 2 name when trading parts
+patch=0,EE,20247534,extended,24040017   // addiu a0,zero,0x17   // 2 Player -- "Selling" when trading parts
+patch=0,EE,20247564,extended,240402E0   // addiu a0,zero,0x2E0  // 2 Player -- Sell price when trading parts
+patch=0,EE,20269390,extended,24040093   // addiu a0,zero,0x93   // 2 Player -- Bottom top left money indicator during part trade confirmation
+patch=0,EE,202693B8,extended,24040093   // addiu a0,zero,0x93   // 2 Player -- Bottom bottom left money indicator during part trade confirmation
+patch=0,EE,202693D0,extended,240400DF   // addiu a0,zero,0xDF   // 2 Player -- Arrow between bottom left money indicators during part trade confirmation
+patch=0,EE,202693FC,extended,24040223   // addiu a0,zero,0x223  // 2 Player -- Bottom top right money indicator during part trade confirmation
+patch=0,EE,20269410,extended,24040223   // addiu a0,zero,0x223  // 2 Player -- Bottom bottom right money indicator during part trade confirmation
+patch=0,EE,2026942C,extended,2404026F   // addiu a0,zero,0x26F  // 2 Player -- Arrow between bottom right money indicators during part trade confirmation
+
+// Debug menu
+patch=0,EE,2026B270,extended,2404009D   // addiu a0,zero,0x9D // Left trumpet cursor on race stage select
+patch=0,EE,2026B29C,extended,240401C9   // addiu a0,zero,0x1C9 // Right trumpet cursor on race stage select
+patch=0,EE,2026B678,extended,24040089   // addiu a0,zero,0x89 // Left trumpet cursor on action stage select
+patch=0,EE,2026B6A4,extended,240401B5   // addiu a0,zero,0x1B5 // Right trumpet cursor on action stage select
+
+// New Game screen
+patch=0,EE,2025B5BC,extended,24040094   // addiu a0,zero,0x94 // Character select BG
+patch=0,EE,2025B6BC,extended,2484009E   // addiu a0,a0,0x9E // Character select highlight
+patch=0,EE,2025B75C,extended,2484009E   // addiu a0,a0,0x9E // Character select text
+patch=0,EE,2025BB34,extended,241502DB   // addiu s5,zero,0x2DB // "Enter your name." BG and text
+
+// Pause menus
+patch=0,EE,20212A10,extended,2403030D   // addiu v1,zero,0x30D // Final position of top car in pause menu
+patch=0,EE,20212A60,extended,2409034F   // addiu t1,zero,0x34F // Adjusts position of lower cars in pause menu
+patch=0,EE,20214B48,extended,2401006B   // addiu at,zero,0x6B  // Main pause menu -- BG h.pos
+patch=0,EE,20214B50,extended,ACA10004   // sw at,0x4(a1)       // Main pause menu -- BG h.pos
+patch=0,EE,20214B78,extended,240C0223   // addiu t4,zero,0x223 // Main pause menu -- Signpost h.pos
+patch=0,EE,20214BF8,extended,2401006B   // addiu at,zero,0x6B  // Main pause menu -- Menu top/bottom borders
+patch=0,EE,20214BFC,extended,ACE10004   // sw at,0x4(a1)       // Main pause menu -- Menu top/bottom borders
+patch=0,EE,20214F7C,extended,2401006B   // addiu at,zero,0x6B  // Warp menu -- BG h.pos
+patch=0,EE,20214F88,extended,ACC10004   // sw at,0x4(a1)       // Warp menu -- BG h.pos
+patch=0,EE,20214F8C,extended,240B0223   // addiu t4,zero,0x223 // Warp menu -- Signpost h.pos
+patch=0,EE,20214FC4,extended,2001006B   // addiu at,zero,0x6B  // Warp menu -- Arrows
+patch=0,EE,20214FC8,extended,AC610004   // sw at,0x4(a1)       // Warp menu -- Top arrow h. pos
+patch=0,EE,20214FD8,extended,AC61001C   // sw at,0x1C(a1)      // Warp menu -- Bottom arrow h. pos
+patch=0,EE,20215014,extended,2401006B   // addiu at,zero,0x6B  // Warp menu -- Menu top/bottom borders
+patch=0,EE,20215018,extended,AC810004   // sw at,0x4(a1)       // Warp menu -- Menu top/bottom borders
+patch=0,EE,202152B0,extended,2401006B   // addiu at,zero,0x6B  // Notebook menu -- BG h.pos
+patch=0,EE,202152B8,extended,AC810004   // sw at,0x4(a1)       // Notebook menu -- BG h.pos
+patch=0,EE,202152D8,extended,2401006B   // addiu at,zero,0x6B  // Notebook menu -- Menu top/bottom borders
+patch=0,EE,202152DC,extended,ACA10004   // sw at,0x4(a1)       // Notebook menu -- Menu top/bottom borders
+patch=0,EE,2021543C,extended,240700E3   // addiu a3,zero,0xE3  // Notebook menu -- Notebook h. pos
+patch=0,EE,202154E4,extended,240700E3   // addiu a3,zero,0xE3  // Notebook menu -- license label h. pos
+patch=0,EE,20215588,extended,240700E3   // addiu a3,zero,0xE3  // Notebook menu -- tabs on right edge of notebook h. pos
+patch=0,EE,2021562C,extended,240700E3   // addiu a3,zero,0xE3  // Notebook menu -- labels (e.g. "Stamps" tag) h. pos
+patch=0,EE,20215768,extended,2401006B   // addiu at,zero,0x6B  // Radio menu -- BG h.pos
+patch=0,EE,2021576C,extended,AC810004   // sw at,0x4(a1)       // Radio menu -- BG h.pos
+patch=0,EE,2021578C,extended,2401006B   // addiu at,zero,0x6B  // Radio menu -- Menu top/bottom borders
+patch=0,EE,20215790,extended,ACA10004   // sw at,0x4(a1)       // Radio menu -- Menu top/bottom borders
+patch=0,EE,20215914,extended,24070110   // addiu a3,zero,0x110 // Radio menu -- radio BG left part
+patch=0,EE,2021598C,extended,24070110   // addiu a3,zero,0x110 // Radio menu -- radio BG middle part
+patch=0,EE,20215A1C,extended,24070110   // addiu a3,zero,0x110 // Radio menu -- radio BG right part
+patch=0,EE,20215AA8,extended,24070110   // addiu a3,zero,0x110 // Radio menu -- arrow
+patch=0,EE,20215BCC,extended,24070110   // addiu a3,zero,0x110 // Radio menu -- time display
+patch=0,EE,20215D54,extended,2407017E   // addiu a3,zero,0x17E // Radio menu -- volume indicator on knob
+patch=0,EE,20215DC0,extended,24070110   // addiu a3,zero,0x110 // Radio menu -- station name
+patch=0,EE,20215EBC,extended,24070110   // addiu a3,zero,0x110 // Radio menu -- music visualizer
+patch=0,EE,20215FE8,extended,24070110   // addiu a3,zero,0x110 // Radio menu -- radio station button BGs
+patch=0,EE,20216180,extended,24070110   // addiu a3,zero,0x110 // Radio menu -- radio station button text
+patch=0,EE,202162F0,extended,2401006B   // addiu at,zero,0x6B  // Items menu -- BG h.pos
+patch=0,EE,202162F8,extended,ACA10004   // sw at,0x4(a1)       // Items menu -- BG h.pos
+patch=0,EE,2021631C,extended,2401006B   // addiu at,zero,0x6B  // Items menu -- Menu top/bottom borders
+patch=0,EE,20216324,extended,ACC10004   // sw at,0x4(a1)       // Items menu -- Menu top/bottom borders
+patch=0,EE,20216340,extended,24030093   // addiu v1,zero,0x93  // Items menu -- Light blue top left window
+patch=0,EE,202164A8,extended,24040093   // addiu v1,zero,0x93  // Items menu -- Dark blue bottom left window BG
+patch=0,EE,202164C0,extended,240401BF   // addiu a0,zero,0x1BF // Items menu -- Dark blue right window BG
+patch=0,EE,20216574,extended,24040093   // addiu a0,zero,0x93  // Items menu -- Dark blue bottom left window text
+patch=0,EE,20216588,extended,240401F1   // addiu a0,zero,0x1F1 // Items menu -- Money indicator h. pos
+patch=0,EE,202165A8,extended,240401D3   // addiu a0,zero,0x1D3 // Items menu -- "Choro Q Coins"
+patch=0,EE,202165CC,extended,240402AF   // addiu a0,zero,0x2AF // Items menu -- Number of Choro Q Coins
+patch=0,EE,20216650,extended,240401D3   // addiu a0,zero,0x1D3 // Items menu -- "Advertisement"
+patch=0,EE,2021667C,extended,240401D3   // addiu a0,zero,0x1D3 // Items menu -- "Cafe"/"Noodle cafe"/etc. text
+patch=0,EE,202166AC,extended,240602AF   // addiu a2,zero,0x2AF // Items menu -- "Mile"
+patch=0,EE,202166CC,extended,240302AF   // addiu v1,zero,0x2AF // Items menu -- Number of miles
+patch=0,EE,202167C8,extended,2401006B   // addiu at,zero,0x6B  // Settings menu -- BG h.pos
+patch=0,EE,202167D0,extended,AC810004   // sw at,0x4(a0)       // Settings menu -- BG h.pos
+patch=0,EE,202167F0,extended,2401006B   // addiu at,zero,0x6B  // Settings menu -- Menu top/bottom borders
+patch=0,EE,202167F4,extended,ACA10004   // sw at,0x4(a0)       // Settings menu -- Menu top/bottom borders
+patch=0,EE,20216824,extended,24040093   // addiu a0,zero,0x93  // Settings menu -- Light blue window BG h.pos
+patch=0,EE,20216840,extended,240401BF   // addiu a0,zero,0x1BF // Settings menu -- Dark blue window BG h.pos
+patch=0,EE,20216894,extended,24840093   // addiu a0,a0,0x93    // Settings menu -- trumpet selection h.pos
+patch=0,EE,202168C8,extended,248400A7   // addiu a0,a0,0xA7    // Settings menu -- Light blue window text h.pos
+patch=0,EE,2021692C,extended,240401D3   // addiu a0,zero,0x1D3 // Settings menu -- Dark blue window text h.pos
+patch=0,EE,20216C00,extended,2407015B   // addiu a3,zero,0x15B // Settings menu -- Button icons h.pos
+patch=0,EE,20216DC4,extended,24E70273   // addiu a3,a3,0x273   // Settings menu -- Controller button indicator h.pos (the spinning square)
+patch=0,EE,20216F40,extended,2407006B   // addiu a3,zero,0x6B  // Map menu -- Map BG
+patch=0,EE,20216FCC,extended,248400ED   // addiu a0,a0,0xED    // Map menu -- Car icon h. pos
+
+// Stamp/photo/results book part h.positions
+// Background
+patch=0,EE,202DBDB8,extended,356 // Background width
+// Parts of the actual book
+patch=0,EE,202DBDD0,extended,73
+patch=0,EE,202DBDF8,extended,73
+patch=0,EE,202DBE20,extended,73
+patch=0,EE,202DBE48,extended,93
+patch=0,EE,202DBE70,extended,93
+patch=0,EE,202DBE98,extended,17B
+patch=0,EE,202DBEC0,extended,17B
+patch=0,EE,202DBEE8,extended,1AB
+patch=0,EE,202DBF10,extended,1AB
+patch=0,EE,202DBF38,extended,1DB
+patch=0,EE,202DBF60,extended,1DB
+patch=0,EE,202DBF88,extended,2C3
+patch=0,EE,202DBFB0,extended,2C3
+patch=0,EE,202DBFD8,extended,2C3
+patch=0,EE,202DC000,extended,19B
+patch=0,EE,202DC028,extended,19B
+patch=0,EE,202DC050,extended,19B
+patch=0,EE,202DC078,extended,93
+patch=0,EE,202DC0A0,extended,93
+patch=0,EE,202DC0C8,extended,93
+patch=0,EE,202DC0F0,extended,A3
+patch=0,EE,202DC118,extended,A3
+patch=0,EE,202DC140,extended,A3
+patch=0,EE,202DC168,extended,2B3
+patch=0,EE,202DC190,extended,2B3
+patch=0,EE,202DC1B8,extended,2B3
+patch=0,EE,202DC1E0,extended,1BB
+patch=0,EE,202DC208,extended,1BB
+patch=0,EE,202DC230,extended,1BB
+// Arrows
+patch=0,EE,2032F0A0,extended,6B
+patch=0,EE,2032F0C0,extended,6B
+// Re-center page turning effect
+patch=0,EE,20264E98,extended,240700C0 // addiu a3,zero,0xC0 // white part of 3D page turn
+patch=0,EE,20264FC0,extended,240700C0 // addiu a3,zero,0xC0 // green part of 3D page turn
+// Green text on top/bottom of page
+patch=0,EE,20265048,extended,240900A3 // addiu t1,zero,0xA3
+// Stamp border parts
+patch=0,EE,202DC258,extended,BB
+patch=0,EE,202DC280,extended,DB
+patch=0,EE,202DC2A8,extended,15B
+patch=0,EE,202DC2D0,extended,BB
+patch=0,EE,202DC2F8,extended,DB
+patch=0,EE,202DC320,extended,15B
+patch=0,EE,202DC348,extended,BB
+patch=0,EE,202DC370,extended,DB
+patch=0,EE,202DC398,extended,15B
+// Stamp page numbers
+patch=0,EE,20265308,extended,2405009B // addiu a1,zero,0x9B
+patch=0,EE,20265310,extended,2402027B // addiu v0,zero,0x27B
+patch=0,EE,202653A4,extended,240202AD // addiu v0,zero,0x242
+patch=0,EE,202653A8,extended,240200BF // addiu v0,zero,0xBF
+// Lines under stamp descriptions
+patch=0,EE,202653F8,extended,240200A3 // addiu v0,zero,0xA3
+patch=0,EE,202653FC,extended,240301C3 // addiu v1,zero,0x1C3
+// Stamp description text h. position
+patch=0,EE,202654D0,extended,248400A7 // addiu a0,a0,0xA7 // When viewing a stamp in the stamps page
+patch=0,EE,2026572C,extended,248400A7 // addiu a0,a0,0xA7 // This is for when a stamp is being initially awarded
+// Stamp positions
+patch=0,EE,202651E0,extended,32020001 // andi v0,s0,0x0001
+patch=0,EE,202651E8,extended,240100D8 // addiu at,zero,0xD8
+patch=0,EE,202651F0,extended,220018   // mult zero,at,v0
+patch=0,EE,202651F8,extended,0        // nop
+patch=0,EE,20265200,extended,0        // nop
+patch=0,EE,20265208,extended,0        // nop
+patch=0,EE,20265210,extended,0        // nop
+patch=0,EE,20265218,extended,1012     // mflo v0
+patch=0,EE,20265220,extended,24420194 // addiu v0,v0,0x194
+// Photo page numbers
+patch=0,EE,20266120,extended,2413027F // addiu s3,zero,0x27F
+patch=0,EE,20266154,extended,24050093 // addiu a1,zero,0x93
+patch=0,EE,20266168,extended,2402020F // addiu v0,zero,0x20F
+patch=0,EE,202661C0,extended,240200C3 // addiu v0,zero,0xC3
+// Correct small photo spacing in photos page
+patch=0,EE,20266570,extended,C09CB4C // jal 0x272d30 // jump to a code cave created by overwriting another UI function
+patch=0,EE,20272D30,extended,3C013F40 // lui at,0x3F40
+patch=0,EE,20272D34,extended,44810000 // mtc1 at,f00
+patch=0,EE,20272D38,extended,44870800 // mtc1 a3,f01
+patch=0,EE,20272D3C,extended,46800860 // cvt.s.w f01,f01
+patch=0,EE,20272D40,extended,46010002 // mul.s f00,f00,f01
+patch=0,EE,20272D44,extended,46000024 // cvt.w.s f00,f00
+patch=0,EE,20272D48,extended,44070000 // mfc1 a3,f00
+patch=0,EE,20272D4C,extended,8093AC4 // j 0x24eb10 // original function call -- this code corrected spacing between photos
+patch=0,EE,20272D50,extended,24E700C0 // addiu a3,a3,0xC0
+// Correct small photo positions in photos page
+patch=0,EE,202DBD34,extended,125
+patch=0,EE,202DBD40,extended,B3
+patch=0,EE,202DBD4C,extended,125
+patch=0,EE,202DBD58,extended,B3
+patch=0,EE,202DBD64,extended,125
+patch=0,EE,202DBD70,extended,1D3
+patch=0,EE,202DBD7C,extended,1D3
+patch=0,EE,202DBD88,extended,245
+patch=0,EE,202DBD94,extended,1D3
+patch=0,EE,202DBDA0,extended,245
+// Results
+patch=0,EE,202377B4,extended,26310115 // addiu s1,s1,0x115 // Race time text
+patch=0,EE,20267574,extended,2411009D // addiu s1,zero,0x9D // Event (e.g. Figure 8) left page text (when flipping page going right)
+patch=0,EE,202675F4,extended,241101C9 // addiu s1,zero,0x1C9 // Event (e.g. Figure 8) right page text (when flipping page going right)
+patch=0,EE,20267690,extended,2402009D // addiu v0,zero,0x32 // Event (e.g. Figure 8) left page text (when flipping page going left)
+patch=0,EE,20267694,extended,241101C9 // addiu s1,zero,0x1C9 // Event (e.g. Figure 8) right page text (when flipping page going left)
+patch=0,EE,2026778C,extended,2411009D // addiu s1,zero,0x9D // Event (e.g. Figure 8) left page text
+patch=0,EE,2026782C,extended,241101C9 // addiu s1,zero,0x1C9 // Event (e.g. Figure 8) right page text
+
+// Part Shops/Q's Factory
+patch=0,EE,2022E9A4,extended,24040016   // addiu a0,zero,0x16 // Parts description text
+patch=0,EE,2022E9CC,extended,24040015   // addiu a0,zero,0x15 // Parts description BG left bound
+patch=0,EE,2022E9D8,extended,24060023   // addiu a2,zero,0x23 // Parts description BG right bound
+patch=0,EE,20247260,extended,24040015   // addiu a0,zero,0x15 // Price BG left bound
+patch=0,EE,20247268,extended,24060023   // addiu a2,zero,0x23 // Price BG right bound
+patch=0,EE,20247294,extended,24040016   // addiu a0,zero,0x16 // "You have it." (??)
+patch=0,EE,202472B0,extended,2404022D   // addiu a0,zero,0x22D // "You have X"
+patch=0,EE,202473E4,extended,2404022D   // addiu a0,zero,0x22D // "You have X"
+patch=0,EE,202472E4,extended,24040016   // addiu a0,zero,0x16 // "You don't have it."
+patch=0,EE,2024741C,extended,24040016   // addiu a0,zero,0x16 // "You don't have it."
+patch=0,EE,20247300,extended,24040017   // addiu a0,zero,0x17 // "Price"
+patch=0,EE,20247320,extended,240402E0   // addiu a0,zero,0x2E0 // Numerical price h. pos
+patch=0,EE,20247338,extended,2404001F   // addiu a0,zero,0x1F // Currency unit h. pos
+patch=0,EE,2022E7D0,extended,24040294   // addiu a0,zero,0x294 // Top Top Right Money Indicator
+patch=0,EE,2022E818,extended,24040294   // addiu a0,zero,0x294 // Top Bottom Right Money Indicator
+patch=0,EE,2022E844,extended,24040294   // addiu a0,zero,0x294 // Bottom Bottom Right Money Indicator
+patch=0,EE,2022E880,extended,240402E0   // addiu a0,zero,0x2E0 // Arrow between bottom right money indicators
+patch=0,EE,2022E8D8,extended,24040294   // addiu a0,zero,0x294 // Bottom Top Right Money Indicator
+patch=0,EE,2022E928,extended,240402E0   // addiu a0,zero,0x2E0 // Arrow between top right money indicators
+patch=0,EE,20247434,extended,24040017   // addiu a0,zero,0x17 // Recycle Shop (??)
+patch=0,EE,202475E4,extended,24040017   // addiu a0,zero,0x17 // Recycle Shop (??)
+patch=0,EE,202474B0,extended,240402E0   // addiu a0,zero,0x2E0 // Numerical price when buying/selling
+patch=0,EE,202475F8,extended,240402E0   // addiu a0,zero,0x2E0 // Numerical price when buying/selling
+patch=0,EE,202474DC,extended,2404001F   // addiu a0,zero,0x1F // Currency unit when buying/selling
+patch=0,EE,20247614,extended,2404001F   // addiu a0,zero,0x1F // Currency unit when buying/selling
+patch=0,EE,202474F8,extended,24040015   // addiu a0,zero,0x15 // BG left bound for price box when buying/selling
+patch=0,EE,20247504,extended,24060023   // addiu a2,zero,0x23 // BG right bound for price box when buying/selling
+patch=0,EE,202475BC,extended,24040015   // addiu a0,zero,0x15 // BG left bound for price box when buying/selling
+patch=0,EE,202475CC,extended,24060023   // addiu a2,zero,0x23 // BG right bound for price box when buying/selling
+patch=0,EE,20268C08,extended,244201AB   // addiu v0,v0,0x1AB // Buy/sell prompt
+patch=0,EE,2023A274,extended,240401B5   // addiu a0,zero,0x1B5 // Number of miles driven when redeeming advertisement rewards
+patch=0,EE,2023A2A0,extended,240401DD   // addiu a0,zero,0x1DD // Dosh earned when redeeming advertisement rewards
+
+// Bank
+patch=0,EE,2023A564,extended,241001A3   // addiu s0,zero,0x1A3 // Flashing arrows
+patch=0,EE,2023A6E0,extended,240401B5   // addiu a0,zero,0x1B5 // Numbers
+
+// Paint shop
+patch=0,EE,202568F8,extended,240501E3   // addiu a1,zero,0x1E3 // Overhead sprayer
+patch=0,EE,20256A7C,extended,240501E3   // addiu a1,zero,0x1E3 // Overhead sprayer
+patch=0,EE,202556C8,extended,240601FB   // addiu a2,zero,0x1FB // Spray effect
+patch=0,EE,202556E4,extended,240602A1   // addiu a2,zero,0x2A1 // Spray effect
+patch=0,EE,20255700,extended,240601DB   // addiu a2,zero,0x1DB // Spray effect
+patch=0,EE,20255728,extended,240602C1   // addiu a2,zero,0x2C1 // Spray effect
+patch=0,EE,102AC600,extended,1D7        // Flashing lights
+patch=0,EE,102AC604,extended,1E8        // Flashing lights
+patch=0,EE,102AC608,extended,208        // Flashing lights
+patch=0,EE,102AC60C,extended,232        // Flashing lights
+patch=0,EE,102AC610,extended,25E        // Flashing lights
+patch=0,EE,102AC614,extended,284        // Flashing lights
+patch=0,EE,102AC618,extended,29B        // Flashing lights
+
+// Race UI
+patch=0,EE,202EC08C,extended,2C4    // Lap 1 time
+patch=0,EE,202EC0A4,extended,2C4    // Lap 2 time
+patch=0,EE,202EC0BC,extended,2C4    // Lap 3 time
+patch=0,EE,202EC104,extended,2C0    // "LAPTIME" label
+patch=0,EE,202EC11C,extended,2C4    // Lap 1 time (unknown condition)
+patch=0,EE,202EC134,extended,2C4    // Lap 2 time (unknown condition)
+patch=0,EE,202EC14C,extended,2C4    // Lap 3 time (unknown condition)
+patch=0,EE,20234260,extended,240301AB   // addiu v1,zero,0x1AB // "FINAL LAP" label
+patch=0,EE,20232C80,extended,241101AB   // addiu s1,zero,0x1AB // "WRONG WAY" label
+patch=0,EE,202EBCE0,extended,6B     // Signal lights BG texture left
+patch=0,EE,202EBD00,extended,10B    // Signal lights BG texture middle
+patch=0,EE,202EBD20,extended,7B     // Signal lights BG texture right
+patch=0,EE,2022F57C,extended,254A0073   // addiu t2,t2,0x73 // Signal lights texture
+patch=0,EE,2022F6BC,extended,2463006D   // addiu v1,v1,0x6D // Signal light highlights
+patch=0,EE,202378F8,extended,240400E3   // addiu a0,zero,0xE3 // Rank positions when paused -> "Ranking"
+patch=0,EE,20237938,extended,2404011F   // addiu a0,zero,0x11F // Names when paused -> "Ranking"
+patch=0,EE,20237978,extended,240401E7   // addiu a0,zero,0x1E7 // Locations when paused -> "Ranking" (NPCs)
+patch=0,EE,202379A8,extended,240401E7   // addiu a0,zero,0x1E7 // Locations when paused -> "Ranking" (Player)
+
+// Race Results (general)
+patch=0,EE,20235900,extended,240901AB   // addiu t1,zero,0x1AB // Fixes BG stretching
+patch=0,EE,20235910,extended,24080356   // addiu t0,zero,0x356 // Makes BG cover whole screen
+patch=0,EE,2023596C,extended,240500F7   // addiu a1,zero,0xF7 // Race name left border
+patch=0,EE,20235990,extended,24050137   // addiu a1,zero,0x137 // Race name middle border
+patch=0,EE,202359B4,extended,2405024F   // addiu a1,zero,0x24F // Race name right border
+
+// 2 Player Race Results
+patch=0,EE,20235CB0,extended,24040151   // addiu a0,zero,0x151 // Race name text
+patch=0,EE,20235A3C,extended,240400B1   // addiu a0,zero,0xB1  // Entry names
+patch=0,EE,20235A68,extended,24040183   // addiu a0,zero,0x183 // Rank ordinals
+patch=0,EE,20235A80,extended,2404016F   // addiu a0,zero,0x16F // "retire" text
+patch=0,EE,20235AB0,extended,240401DD   // addiu a0,zero,0x1DD // points
+patch=0,EE,20235AC8,extended,240401F1   // addiu a0,zero,0x1F1 // time
+patch=0,EE,20235B18,extended,2404024B   // addiu a0,zero,0x24B // best lap time
+patch=0,EE,20235E04,extended,24040197   // addiu a0,zero,0x197 // Player 1 total points
+patch=0,EE,20235E38,extended,240401DD   // addiu a0,zero,0x1DD // Player 2 total points
+
+// Race Results (not Grand Prix)
+patch=0,EE,20235F7C,extended,240400B1   // addiu a0,zero,0xB1  // Entry names
+patch=0,EE,20235FC0,extended,2404016F   // addiu a0,zero,0x16F // "retire"
+patch=0,EE,20235FF8,extended,24040183   // addiu a0,zero,0x183 // rank ordinals
+patch=0,EE,20236000,extended,24040179   // addiu a0,zero,0x179 // left parenthesis around record rank ordinals
+patch=0,EE,20236078,extended,24040183   // addiu a0,zero,0x183 // record rank ordinals
+patch=0,EE,2023608C,extended,240401AB   // addiu a0,zero,0x1AB // right parenthesis around record rank ordinals
+patch=0,EE,20236100,extended,240401D3   // addiu a0,zero,0x1D3 // time
+patch=0,EE,20236118,extended,240401C9   // addiu a0,zero,0x1C9 // left parenthesis around record time
+patch=0,EE,20236130,extended,240401D3   // addiu a0,zero,0x1D3 // record time
+patch=0,EE,20236148,extended,24040223   // addiu a0,zero,0x223 // right parenthesis around record time
+patch=0,EE,202361BC,extended,2404024B   // addiu a0,zero,0x24B // best lap time
+patch=0,EE,202361D4,extended,24040241   // addiu a0,zero,0x241 // left parenthesis around record best lap time
+patch=0,EE,202361E4,extended,2404024B   // addiu a0,zero,0x241 // record best lap time
+patch=0,EE,202361F8,extended,2404029B   // addiu a0,zero,0x241 // right parenthesis around record best lap time
+patch=0,EE,20236434,extended,24040205   // addiu a0,zero,0x205 // Prize amounts
+patch=0,EE,202364E8,extended,24040151   // addiu a0,zero,0x151 // Race name text
+
+// Race Results (Grand Prix)
+patch=0,EE,20236A5C,extended,240400BB   // addiu a0,zero,0xBB  // 4th screen after race -- rank ordinals column
+patch=0,EE,20236A68,extended,24040115   // addiu a0,zero,0x115 // 4th screen after race -- Team name column
+patch=0,EE,20236AA8,extended,2404027D   // addiu a0,zero,0x27D // 4th screen after race -- Total pts column
+patch=0,EE,20236BF4,extended,24040205   // addiu a0,zero,0x205 // 4th screen after race (final race) -- prize amount
+patch=0,EE,20236E20,extended,240400C5   // addiu a0,zero,0xC5  // 2nd screen after race -- Team names
+patch=0,EE,20236E88,extended,240401C9   // addiu a0,zero,0x1C9 // 2nd screen after race -- left rank column
+patch=0,EE,20236EB4,extended,24040205   // addiu a0,zero,0x205 // 2nd screen after race -- middle rank column
+patch=0,EE,20236EE4,extended,24040241   // addiu a0,zero,0x241 // 2nd screen after race -- right rank column
+patch=0,EE,20236F0C,extended,240401E7   // addiu a0,zero,0x1E7 // 3rd screen after race -- left points column
+patch=0,EE,20236F34,extended,240401F1   // addiu a0,zero,0x1F1 // 3rd screen after race -- left + column
+patch=0,EE,20236F4C,extended,24040223   // addiu a0,zero,0x223 // 3rd screen after race -- middle points column
+patch=0,EE,20236F74,extended,2404022D   // addiu a0,zero,0x22D // 3rd screen after race -- right + column
+patch=0,EE,20236F8C,extended,2404025F   // addiu a0,zero,0x25F // 3rd screen after race -- right points column
+patch=0,EE,20236FBC,extended,2404029B   // addiu a0,zero,0x29B // 3rd screen after race -- total points column
+patch=0,EE,202371BC,extended,240400BB   // addiu a0,zero,0xBB  // 1st screen after race -- left side rank ordinals
+patch=0,EE,202371EC,extended,24040101   // addiu a0,zero,0x101 // 1st screen after race -- left side names
+patch=0,EE,20237274,extended,240401BF   // addiu a0,zero,0x1BF // 1st screen after race -- right side rank ordinals
+patch=0,EE,202372A4,extended,24040205   // addiu a0,zero,0x205 // 1st screen after race -- right side names
+patch=0,EE,20237460,extended,2404013D   // addiu a0,zero,0x13D // 1st screen after race -- "World GPX Stage"
+patch=0,EE,20237474,extended,2404022D   // addiu a0,zero,0x22D // 1st screen after race -- stage number
+
+// Figure 8
+patch=0,EE,20328FF0,extended,356        // Makes instructions/results BG cover whole screen
+patch=0,EE,20329028,extended,9D         // Instructions - h.pos of "Figure 8" graphic
+patch=0,EE,20329048,extended,9D         // Instructions - h.pos of map graphic
+patch=0,EE,2025ABD8,extended,240301BF   // addiu v1,zero,0x1BF // Instructions - light blue window h.pos
+patch=0,EE,2025ACF8,extended,2404025F   // addiu a0,zero,0x25F // Instructions - Step times
+patch=0,EE,2025AD10,extended,240401BF   // addiu a0,zero,0x1BF // Instructions - Bottom-right dark blue window h.pos
+patch=0,EE,2025AD30,extended,240401D3   // addiu a0,zero,0x1D3 // Instructions - "Goal"
+patch=0,EE,2025AD4C,extended,2404025F   // addiu a0,zero,0x25F // Instructions - Goal time
+patch=0,EE,2025ADA4,extended,240401D3   // addiu a0,zero,0x1D3 // Instructions - Course description text (e.g. "Basic slalom course...")
+patch=0,EE,2025ADDC,extended,240401D3   // addiu a0,zero,0x1D3 // Instructions - "5 sec penalty"
+patch=0,EE,2025AE04,extended,240401D3   // addiu a0,zero,0x1D3 // Instructions - "for pylon hit"
+patch=0,EE,20234CC8,extended,240601AE   // addiu a2,zero,0x1AE // "Pylon touch!" graphic
+patch=0,EE,202331F4,extended,24020200   // addiu v0,zero,0x200 // unknown graphic
+patch=0,EE,202332C8,extended,24020200   // addiu v0,zero,0x200 // "Miss Course!" graphic
+patch=0,EE,20234194,extended,24030200   // addiu v1,zero,0x200 // "Finish!" graphic
+patch=0,EE,2025B24C,extended,240400CF   // addiu a0,zero,0xCF  // Results - Dark blue window h.pos
+patch=0,EE,2025B288,extended,240400E3   // addiu a0,zero,0xE3  // Results - Course name (e.g. "STEP1") h.pos
+patch=0,EE,2025B2B8,extended,240400E3   // addiu a0,zero,0xE3  // Results - "Course missed!"
+patch=0,EE,2025B2D8,extended,240400E3   // addiu a0,zero,0xE3  // Results - "Time"
+patch=0,EE,2025B2EC,extended,24040197   // addiu a0,zero,0x197 // Results - time value
+patch=0,EE,2025B308,extended,240400E3   // addiu a0,zero,0xE3  // Results - "Pylon hit"
+patch=0,EE,2025B344,extended,24040197   // addiu a0,zero,0x197 // Results - Pylon hit value text
+patch=0,EE,2025B364,extended,240400E3   // addiu a0,zero,0xE3  // Results - "Total time"
+patch=0,EE,2025B39C,extended,24040197   // addiu a0,zero,0x197 // Results - Total time value
+patch=0,EE,2025B3C0,extended,240400E3   // addiu a0,zero,0xE3  // Results - "Best time"
+patch=0,EE,2025B3EC,extended,24040197   // addiu a0,zero,0x197 // Results - Best time value
+patch=0,EE,2025B40C,extended,240400E3   // addiu a0,zero,0xE3  // Results - "Goal time"
+patch=0,EE,2025B42C,extended,24040197   // addiu a0,zero,0x197 // Results - Goal time value
+patch=0,EE,202A42E0,extended,43CC0000   // Step 1 Minimap h.pos
+patch=0,EE,202A42F0,extended,43E50000   // Step 2 Minimap h.pos
+patch=0,EE,202A4300,extended,C3340000   // Step 3 Minimap h.pos
+patch=0,EE,202A4310,extended,43830000   // Step 4 Minimap h.pos
+// Step 5 is fine as is
+
+// Ski Jump
+patch=0,EE,20231BB4,extended,241402BA // addiu s4,zero,0x2BA // digits top right
+patch=0,EE,202EBFF0,extended,2E2      // "M" icon top right
+
+// Soccer
+patch=0,EE,20235140,extended,24030306 // addiu v1,zero,0x306 // overhead score display (2 player)
+patch=0,EE,20235144,extended,240401AB // addiu v1,zero,0x1AB // overhead score display (1 player)
+patch=0,EE,20235174,extended,240301AB // addiu v1,zero,0x1AB // overhead score display (1 player)
+patch=0,EE,20230EF8,extended,26B50054 // addiu s5,s5,0x54 // h.pos of score after scoring goal
+patch=0,EE,20230F1C,extended,2A0382D  // daddu a3,s5,zero // h.pos of score after scoring goal
+
+// Q's Rally
+patch=0,EE,20243238,extended,24040151 // addiu a0,zero,0x151 // "+++ Q's Rally +++"
+patch=0,EE,20243294,extended,240402E8 // addiu a0,zero,0x2E8 // "TIME"
+patch=0,EE,202432E8,extended,240402E8 // addiu a0,zero,0x2E8 // Running time value
+
+// Roulette
+patch=0,EE,20261B58,extended,2407006B   // addiu a3,zero,0x6B  // Roulette board BG
+patch=0,EE,20261BF4,extended,2607006B   // addiu a3,s0,0x6B    // Flashing chip cursor h.pos
+patch=0,EE,20261E80,extended,2407006B   // addiu a3,zero,0x6B  // Roulette board BG (after playing round of roulette)
+patch=0,EE,20261F48,extended,2407006B   // addiu a3,zero,0x6B  // Position of flashing elements after playing round of roulette
+patch=0,EE,202620B8,extended,2607006B   // addiu a3,s0,0x6B    // Chip after playing round of roulette
+patch=0,EE,20262510,extended,240501AB   // addiu a1,zero,0x1AB // Window h.pos for "You don't have the money to play." window
+patch=0,EE,202625F4,extended,240501AB   // addiu a1,zero,0x1AB // Window h.pos for "Please make a bet." window
+patch=0,EE,20261574,extended,240501AB   // addiu a1,zero,0x1AB // Window h.pos for "Start?" window
+patch=0,EE,20261688,extended,240400E3   // addiu a0,zero,0xE3  // Window h.pos for "How much do you wish to bet?"
+patch=0,EE,2026169C,extended,240400E3   // addiu a0,zero,0xE3  // Window h.pos for "How much do you wish to bet?"
+patch=0,EE,20261910,extended,240400E3   // addiu a0,zero,0xE3  // Window h.pos for "How much do you wish to bet?"
+patch=0,EE,2026196C,extended,240400E3   // addiu a0,zero,0xE3  // Window h.pos for "How much do you wish to bet?"
+patch=0,EE,20261988,extended,240400E3   // addiu a0,zero,0xE3  // "How much do you wish to bet?"
+patch=0,EE,202619A0,extended,240401C3   // addiu a0,zero,0x1C3 // Currency unit h.pos on bet window
+patch=0,EE,202619CC,extended,240401C3   // addiu a0,zero,0x1C3 // Currency amount h.pos on bet window
+patch=0,EE,202619F4,extended,240400E3   // addiu a0,zero,0xE3  // Arrow under currency amount on bet window
+
+// Golf
+patch=0,EE,20328320,extended,3D6        // Makes instructions/results BG cover whole screen
+patch=0,EE,20328338,extended,9D         // Instructions/results - "Golf" graphic
+patch=0,EE,20328358,extended,B9         // Instructions - Map graphic
+patch=0,EE,20252984,extended,240401BF   // addiu a0,zero,0x1BF // Instructions -- Dark blue window BG
+patch=0,EE,202529AC,extended,240401D3   // addiu a0,zero,0x1D3 // Instructions -- hole name e.g. "1 HOLE"
+patch=0,EE,202529E0,extended,240401D3   // addiu a0,zero,0x1D3 // Instructions -- hole distance
+patch=0,EE,20252A14,extended,240401D3   // addiu a0,zero,0x1D3 // Instructions -- hole par
+patch=0,EE,20252A54,extended,240401D3   // addiu a0,zero,0x1D3 // Instructions -- hole description text
+patch=0,EE,202308F0,extended,247402C8   // addiu s4,v1,0x2C8   // Top-right HUD elements in-game
+patch=0,EE,202EC20C,extended,200        // BG splash for "HOLE IN ONE!" graphic
+patch=0,EE,202EC23C,extended,200        // "HOLE IN ONE!" graphic
+patch=0,EE,202EC26C,extended,200        // Albatross (?) graphic
+patch=0,EE,202EC29C,extended,200        // Eagle (?) graphic
+patch=0,EE,202EC2CC,extended,200        // Birdie graphic
+patch=0,EE,202EC2FC,extended,200        // Par graphic
+patch=0,EE,202EC32C,extended,200        // Bogey graphic
+patch=0,EE,202EC35C,extended,200        // Double Bogey (?) graphic
+patch=0,EE,202EC38C,extended,200        // Triple Bogey (?) graphic
+patch=0,EE,20252CD8,extended,2416011F   // addiu s6,zero,0x11F // Results - Hole numbers
+patch=0,EE,20252E3C,extended,240400CF   // addiu a0,zero,0xCF  // Results - Dark blue window BG
+patch=0,EE,20252E5C,extended,240400E3   // addiu a0,zero,0xE3  // Results - "Hole"/"Par"/"Score"/"Best" text
+patch=0,EE,20252E74,extended,240400E3   // addiu a0,zero,0xE3  // Results - "Total"
+patch=0,EE,20252EE8,extended,24160179   // addiu s6,zero,0x179 // Results - Par scores
+patch=0,EE,20252F8C,extended,241601F1   // addiu s6,zero,0x179 // Results - Scores
+patch=0,EE,20253070,extended,2416025F   // addiu s6,zero,0x179 // Results - Best scores
+
+// Curling
+patch=0,EE,20231580,extended,24070300   // addiu a3,zero,0x300 // Scores
+patch=0,EE,20231588,extended,26940017   // addiu s4,s4,0x17    // Spacing between digits in scores
+patch=0,EE,20231620,extended,241602A8   // addiu s6,zero,0x2A8 // Trial number graphics
+patch=0,EE,20231654,extended,24070316   // addiu a3,zero,0x316 // "Pts" graphic near scores
+patch=0,EE,20231760,extended,245201B4   // addiu s2,v0,0x1B4   // Big score shown on screen after attempt
+patch=0,EE,20231848,extended,2652FFC8   // addiu s2,s2,-0x38   // Spacing between digits in big score
+
+// Fishing
+patch=0,EE,20231E50,extended,24140300   // addiu s4,zero,0x300 // Fish caught digits graphic
+patch=0,EE,202EC010,extended,285        // Fish graphic
+patch=0,EE,202EC030,extended,2C0        // "X" graphic
+
+// Which Way Race
+patch=0,EE,20231FF8,extended,2407016D // addiu a3,zero,0x16D // "Time limit" graphic
+patch=0,EE,20232074,extended,245101E0 // addiu s1,v0,0x1E0 // Timer digits graphic
+patch=0,EE,20232144,extended,2631FFE9 // addiu s1,s1,-0x17 // Affects spacing between the digits in timer
+patch=0,EE,202EC074,extended,2BF      // ??
+
+// My Garage
+patch=0,EE,2022C6C4,extended,241200EB // addiu s2,zero,0xEB // h.pos of left-side small trophies
+patch=0,EE,2022C714,extended,241201F1 // addiu s2,zero,0x1F1 // h.pos of right-side small trophies
+patch=0,EE,2022C7B4,extended,2405015D // addiu a1,zero,0x15D // h.pos of large trophy
+patch=0,EE,2022C820,extended,24A5006B // addiu a1,a1,0x6B // Corrects h.pos of furniture
+patch=0,EE,2022C83C,extended,2610000C // addiu s0,s0,0xC // Rearranged original code for furniture correction
+patch=0,EE,2022C844,extended,220202D  // daddu a0,s1,zero // Rearranged original code for furniture correction
+
+// Email
+patch=0,EE,202645E0,extended,240400CF   // addiu a0,zero,0xCF  // Inbox main BG window
+patch=0,EE,20264620,extended,240400CF   // addiu a0,zero,0xCF  // Inbox header BG window
+patch=0,EE,20264664,extended,240400F7   // addiu a0,zero,0xF7  // "mail box"
+patch=0,EE,202646F0,extended,2404024B   // addiu a0,zero,0x24B // "mail" and mail count
+patch=0,EE,20264778,extended,240400E3   // addiu a0,zero,0xE3  // Mail read status
+patch=0,EE,20264834,extended,240400BB   // addiu a0,zero,0xBB  // E-mail contents header BG window
+patch=0,EE,20264854,extended,240400E3   // addiu a0,zero,0xE3  // "Subject"
+patch=0,EE,20264880,extended,240400E3   // addiu a0,zero,0xE3  // "From"
+patch=0,EE,202648A4,extended,24120273   // addiu s2,zero,0x273 // Subject/From text
+patch=0,EE,20264970,extended,240400BB   // addiu a0,zero,0xBB  // E-mail contents main BG window
+patch=0,EE,20264A54,extended,240400E3   // addiu a0,zero,0xE3  // E-mail body text
+patch=0,EE,20264BA4,extended,240401AB   // addiu a0,zero,0x1AB // Where the e-mail contents main BG window starts opening
+patch=0,EE,20264C3C,extended,240401AB   // addiu a0,zero,0x1AB // Where the e-mail contents main BG window starts closing
+
+// Uncategorized/unknown graphics horizontal positions
+patch=0,EE,2022C0B8,extended,240500AB   // addiu a1,zero,0xAB
+patch=0,EE,2022C0E0,extended,240600AB   // addiu a2,zero,0xAB
+patch=0,EE,20232CE0,extended,241101AB   // addiu s1,zero,0x1AB
+patch=0,EE,20232DEC,extended,24020200   // addiu v0,zero,0x200
+patch=0,EE,20232E98,extended,24020200   // addiu v0,zero,0x200
+patch=0,EE,20232FA8,extended,24020200   // addiu v0,zero,0x200
+patch=0,EE,20233050,extended,24020200   // addiu v0,zero,0x200
+patch=0,EE,202330DC,extended,24020200   // addiu v0,zero,0x200
+patch=0,EE,20233C08,extended,24040200   // addiu a0,zero,0x200
+patch=0,EE,20233C9C,extended,24040200   // addiu a0,zero,0x200
+patch=0,EE,20233D24,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,20233DA8,extended,24020200   // addiu v0,zero,0x200
+patch=0,EE,20233E70,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,20234328,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,202343E4,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,202344BC,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,202346A0,extended,24040200   // addiu a0,zero,0x200
+patch=0,EE,2023477C,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,20234864,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,20234950,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,20234A3C,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,20234B24,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,20234C0C,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,20234FC0,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,202351F4,extended,24030200   // addiu v1,zero,0x200
+patch=0,EE,20235290,extended,24030200   // addiu v1,zero,0x200
+
+[No-Interlacing]
+gsinterlacemode=1
+author=raceywacey
+description=Removes interlacing artefacts
+patch=0,EE,2026F3AC,extended,00000000   // nop
+patch=0,EE,2026F434,extended,00000000   // nop
+
+[Force Hi-Quality Car Models]
+author=Souzooka
+description=Forces the highest-quality LOD for car models in the overworld
+
+patch=0,EE,202217CC,extended,4480B000 // mtc1 zero,f22 // Use 0.0f as distance from camera for LOD calc (also causes 3D wheels to appear!)
+
+[Anti-Blur]
+author=Souzooka
+description=Disables after-image effect
+
+// Returns from blur function under normal circumstances (keeps blur when entering/leaving buildings)
+patch=0,EE,20208154,extended,14A00010 // bne $a1, $zero, 0x208198
+patch=0,EE,20208158,extended,24050009 // addiu $a1, $zero, 0x9
+patch=0,EE,2020815C,extended,03E00008 // jr $ra
+patch=0,EE,20208160,extended,27BD0010 // addiu $sp, $sp, 0x10
+
+[Analog Steering]
+author=Souzooka
+description=Enables analog steering with the left analog stick (WIP; breaks player 2, race replays, front wheels don't turn)
+
+// First, we'll patch out the normal code which calculates steering magnitude at 0x21A3AC
+// The original code behaves something like this and calculates steering for all cars, including NPCs:
+//#define INPUT_MASK_RIGHT 0x2000;
+//#define INPUT_MASK_LEFT 0x8000;
+//
+//Car *car;
+//int grip; // Potentially not the exact value of Car->m_grip, there is a small calculation beforehand
+//int input_mask;
+//int steering_direction = car->m_steering_direction; // +0x1CE
+//
+//if (input_mask & INPUT_MASK_LEFT)
+//{
+//	// Turn to the left
+//	if (steering_direction <= 0)
+//	{
+//		// Already steering left
+//		steering_direction -= 1;
+//		if (steering_direction < -0x20)
+//		{
+//			steering_direction = -0x20;
+//		}
+//	}
+//	else
+//	{
+//		// Was turning right, whip it over
+//		// Also save the calculated grip value in this case
+//		car->m_grip = grip; // +0x1D8
+//		steering_direction = -steering_direction;
+//	}
+//}
+//else if (input_mask & INPUT_MASK_RIGHT)
+//{
+//	// Turn to the right
+//	if (steering_direction <= 0)
+//	{
+//		// Already steering right
+//		steering_direction += 1;
+//		if (steering_direction > 0x20)
+//		{
+//			steering_direction = 0x20;
+//		}
+//	}
+//	else
+//	{
+//		// Was turning left, whip it over
+//		// Also save the calculated grip value in this case
+//		car->m_grip = grip;
+//		steering_direction = -steering_direction;
+//	}
+//}
+//else
+//{
+//	// No turn input, dampen steering towards 0
+//	if (grip)
+//	{
+//		if (steering_direction > 4)
+//		{
+//			steering_direction -= 4;
+//		}
+//		else if (steering_direction >= 0)
+//		{
+//			steering_direction = 0;
+//		}
+//		else if (steering_direction < -4)
+//		{
+//			steering_direction += 4;
+//		}
+//		else if (steering_direction <= 0)
+//		{
+//			steering_direction = 0;
+//		}
+//	}
+//	car->m_grip = grip;
+//}
+//
+//car->m_steering_direction = steering_direction;
+
+// Overwrite this code with a jump to the new code and also saving some variables
+patch=0,EE,2021A3AC,extended,00C0A021 // addu s4,a2,zero
+patch=0,EE,2021A3B0,extended,02002021 // addu a0,s0,zero
+patch=0,EE,2021A3B4,extended,0C09E08E // jal 0x278238 (this was sceCdLayerSearchFile, which is unused)
+patch=0,EE,2021A3B8,extended,02202821 // addu a1,s1,zero
+patch=0,EE,2021A3BC,extended,02803021 // addu a2,s4,zero
+patch=0,EE,2021A3C0,extended,00402821 // addu a1,v0,zero
+patch=0,EE,2021A3C4,extended,10000024 // beq zero,zero,0x0021A458
+patch=0,EE,2021A3C8,extended,86020242 // lh v0,0x242(s0)
+
+// Now at 0x278238 we'll write some assembly which roughly matches this C code:
+// Note scePadRead is at 00273B48 and might be useable to improve player 2 behavior later
+//#define INPUT_MASK_RIGHT 0x2000;
+//#define INPUT_MASK_LEFT 0x8000;
+//
+//int do_steer(Car *car, int input_bitmask, int grip)
+//{
+//	const float DEADZONE = 0.1f;
+//
+//	// Total range of steering
+//	float max = 32.0f;
+//	float min = -max;
+//
+//	// Range of steering as dictated by analog stick position
+//	float delta_max = max;
+//	float delta_min = min;
+//
+//	// The change in steering direction
+//	float delta = 0.0f;
+//
+//	float steering_direction = car->m_steering_direction;
+//
+//	if (input_bitmask & INPUT_MASK_LEFT)
+//	{
+//		delta = -1.0f;
+//	}
+//	else if (input_bitmask & INPUT_MASK_RIGHT)
+//	{
+//		delta = 1.0f;
+//	}
+//
+//	if (/* car is player */)
+//	{
+//		float axis = /* poll left analog stick X axis */;
+//		if (std::fabsf(axis) >= DEADZONE)
+//		{
+//			delta = axis;
+//		}
+//	}
+//
+//	delta_max *= std::fabsf(delta);
+//	delta_min *= std::fabsf(delta);
+//
+//	if (delta < 0.0f)
+//	{
+//		// Turning left
+//		if (steering_direction <= 0.0f)
+//		{
+//			// Already turning left
+//			if (steering_direction > delta_min)
+//			{
+//				steering_direction = std::fmaxf(steering_direction + delta, delta_min);
+//			}
+//		}
+//		else
+//		{
+//			// Was turning right
+//			car->m_grip = grip;
+//			steering_direction = -steering_direction;
+//		}
+//	}
+//	else if (delta > 0.0f)
+//	{
+//		// Turning right
+//		if (steering_direction >= 0.0f)
+//		{
+//			// Already turning right
+//			if (steering_direction < delta_max)
+//			{
+//				steering_direction = std::fminf(steering_direction + delta, delta_max);
+//			}
+//		}
+//		else
+//		{
+//			// Was turning left
+//			car->m_grip = grip;
+//			steering_direction = -steering_direction;
+//		}
+//	}
+//	else
+//	{
+//		// No turning
+//		car->m_grip = grip;
+//	}
+//
+//	// Apply dampening
+//	if (grip)
+//	{
+//		// Softer dampening if the analog stick is being held
+//		float damp_factor = 4.0f * (1.0f - std::fabsf(delta));
+//		if (steering_direction > delta_max)
+//		{
+//			steering_direction = std::fmaxf(steering_direction - damp_factor, delta_max);
+//		}
+//		else if (steering_direction < delta_min)
+//		{
+//			steering_direction = std::fminf(steering_direction + damp_factor, delta_min);
+//		}
+//	}
+//
+//	car->m_steering_direction = steering_direction;
+//	return (int)steering_direction;
+//}
+
+patch=0,EE,20278238,extended,3C014200 // lui at,0x4200      //max = 32f
+patch=0,EE,2027823C,extended,44810000 // mtc1 at,f00
+patch=0,EE,20278240,extended,46000047 // neg.s f01,f00
+patch=0,EE,20278244,extended,C48300AC // lwc1 f03,0xAC(a0)  //unused int vec4 component on Car, initialized to 0, used to store float steering magnitude
+patch=0,EE,20278248,extended,30A82000 // andi t0,a1,0x2000
+patch=0,EE,2027824C,extended,30A98000 // andi t1,a1,0x8000
+patch=0,EE,20278250,extended,3C0A3F80 // lui t2,0x3F80
+patch=0,EE,20278254,extended,3C0BBF80 // lui t3,0xBF80
+patch=0,EE,20278258,extended,00000821 // addu at,zero,zero  //delta = 0.0f
+patch=0,EE,2027825C,extended,0148080B // movn at,t2,t0      //delta = 1.0f if input_bitmask & INPUT_MASK_RIGHT
+patch=0,EE,20278260,extended,0169080B // movn at,t3,t1      //delta = -1.0f if input_bitmask & INPUT_MASK_LEFT
+patch=0,EE,20278264,extended,44811000 // mtc1 at,f02
+patch=0,EE,20278268,extended,3C080033 // lui t0,0x0033
+patch=0,EE,2027826C,extended,8D085928 // lw t0,0x5928(t0)   //bitset to help tell if car is player has control, prevents inputs in replays
+patch=0,EE,20278270,extended,31020040 // andi v0,t0,0x0040
+patch=0,EE,20278274,extended,14400019 // bne v0,zero,0x002782DC //branch if in replay
+patch=0,EE,20278278,extended,31020080 // andi v0,t0,0x0080
+patch=0,EE,2027827C,extended,14400017 // bne v0,zero,0x002782DC //branch if in replay
+patch=0,EE,20278280,extended,00000000 // nop
+patch=0,EE,20278284,extended,90880198 // lbu t0,0x198(a0)   //player controls this car if this == 2
+patch=0,EE,20278288,extended,24010002 // addiu at,zero,0x2
+patch=0,EE,2027828C,extended,15010013 // bne t0,at,0x002782DC   //branch if not player car
+patch=0,EE,20278290,extended,3C010033 // lui at,0x0033
+patch=0,EE,20278294,extended,90285A86 // lbu t0,0x5A86(at)  //left analog [0..255] from last scePadRead call
+patch=0,EE,20278298,extended,3C013C00 // lui at,0x3C00
+patch=0,EE,2027829C,extended,34218081 // ori at,at,0x8081   //nextafterf(1/127.5f, 1f) // next is used so that full right gives result of >=1 after mult, instead of ~0.9999
+patch=0,EE,202782A0,extended,44815800 // mtc1 at,f11
+patch=0,EE,202782A4,extended,44882000 // mtc1 t0,f04
+patch=0,EE,202782A8,extended,46802120 // cvt.s.w f04,f04
+patch=0,EE,202782AC,extended,460B2102 // mul.s f04,f04,f11
+patch=0,EE,202782B0,extended,3C013F80 // lui at,0x3F80
+patch=0,EE,202782B4,extended,44815800 // mtc1 at,f11
+patch=0,EE,202782B8,extended,460B2101 // sub.s f04,f04,f11  //axis now normalized to ~[-1.0..1.0f]
+patch=0,EE,202782BC,extended,3C013DCC // lui at,0x3DCC
+patch=0,EE,202782C0,extended,3421CCCD // ori at,at,0xCCCD   //DEADZONE (0.1f)
+patch=0,EE,202782C4,extended,44815800 // mtc1 at,f11
+patch=0,EE,202782C8,extended,46002285 // abs.s f10,f04
+patch=0,EE,202782CC,extended,460B5034 // c.lt.s f10,f11
+patch=0,EE,202782D0,extended,45010002 // bc1t 0x002782DC    //branch if abs(axis) < DEADZONE
+patch=0,EE,202782D4,extended,00000000 // nop
+patch=0,EE,202782D8,extended,46002086 // mov.s f02,f04      //delta = axis
+patch=0,EE,202782DC,extended,460012C5 // abs.s f11,f02
+patch=0,EE,202782E0,extended,460B0002 // mul.s f00,f00,f11  //delta_max *= std::fabsf(delta);
+patch=0,EE,202782E4,extended,460B0842 // mul.s f01,f01,f11  //delta_min *= std::fabsf(delta);
+patch=0,EE,202782E8,extended,44805800 // mtc1 zero,f11
+patch=0,EE,202782EC,extended,460B1034 // c.lt.s f02,f11
+patch=0,EE,202782F0,extended,45000007 // bc1f 0x00278310    //branch if not turning left
+patch=0,EE,202782F4,extended,460B1836 // c.le.s f03,f11
+patch=0,EE,202782F8,extended,4500000E // bc1f 0x00278334    //branch if car was turning right
+patch=0,EE,202782FC,extended,46030834 // c.lt.s f01,f03
+patch=0,EE,20278300,extended,4500000E // bc1f 0x0027833C    //branch if delta_min is gte our last steering direction (i.e. we're steering more than the stick is pushed)
+patch=0,EE,20278304,extended,46021AC0 // add.s f11,f03,f02
+patch=0,EE,20278308,extended,1000000C // b 0x0027833C       //branch to dampening code
+patch=0,EE,2027830C,extended,460158E8 // max.s f03,f11,f01  //steering_direction = std::fmaxf(steering_direction + delta, delta_min);
+patch=0,EE,20278310,extended,46025834 // c.lt.s f11,f02
+patch=0,EE,20278314,extended,45000008 // bc1f 0x00278338    //branch if not turning right
+patch=0,EE,20278318,extended,46035836 // c.le.s f11,f03
+patch=0,EE,2027831C,extended,45000005 // bc1f 0x00278334    //branch if car was turning left
+patch=0,EE,20278320,extended,46001834 // c.lt.s f03,f00
+patch=0,EE,20278324,extended,45000005 // bc1f 0x0027833C    //branch if delta_max is lte our last steering direction (i.e. we're steering more than the stick is pushed)
+patch=0,EE,20278328,extended,46021AC0 // add.s f11,f03,f02
+patch=0,EE,2027832C,extended,10000003 // b 0x0027833C       //branch to dampening code
+patch=0,EE,20278330,extended,460058E9 // min.s f03,f11,f00  //steering_direction = std::fminf(steering_direction + delta, delta_max);
+patch=0,EE,20278334,extended,460018C7 // neg.s f03,f03      //steering_direction = -steering_direction (when changing direction)
+patch=0,EE,20278338,extended,AC8601D8 // sw a2,0x1D8(a0)    //car->m_grip = grip (when not steering or when changing direction)
+patch=0,EE,2027833C,extended,10C00018 // beq a2,zero,0x002783A0 //skip dampening if grip is 0
+patch=0,EE,20278340,extended,460012C5 // abs.s f11,f02
+patch=0,EE,20278344,extended,3C013F80 // lui at,0x3F80
+patch=0,EE,20278348,extended,44815000 // mtc1 at,f10
+patch=0,EE,2027834C,extended,460B52C1 // sub.s f11,f10,f11
+patch=0,EE,20278350,extended,3C014080 // lui at,0x4080
+patch=0,EE,20278354,extended,44815000 // mtc1 at,f10
+patch=0,EE,20278358,extended,460B5142 // mul.s f05,f10,f11  //float damp_factor = 4.0f * (1.0f - std::fabsf(delta));
+patch=0,EE,2027835C,extended,44805800 // mtc1 zero,f11
+patch=0,EE,20278360,extended,00000000 // nop
+patch=0,EE,20278364,extended,00000000 // nop
+patch=0,EE,20278368,extended,00000000 // nop
+patch=0,EE,2027836C,extended,46030034 // c.lt.s f00,f03
+patch=0,EE,20278370,extended,45000003 // bc1f 0x00278380    //branch if delta_max >= steering_direction, no dampening needed
+patch=0,EE,20278374,extended,00000000 // nop
+patch=0,EE,20278378,extended,460518C1 // sub.s f03,f03,f05
+patch=0,EE,2027837C,extended,460018E8 // max.s f03,f03,f00  //steering_direction = std::fmaxf(steering_direction - damp_factor, delta_max);
+patch=0,EE,20278380,extended,00000000 // nop
+patch=0,EE,20278384,extended,00000000 // nop
+patch=0,EE,20278388,extended,46011834 // c.lt.s f03,f01
+patch=0,EE,2027838C,extended,45000004 // bc1f 0x002783A0    //branch if delta_min <= steering_direction, no dampening needed
+patch=0,EE,20278390,extended,00000000 // nop
+patch=0,EE,20278394,extended,460518C0 // add.s f03,f03,f05
+patch=0,EE,20278398,extended,460118E9 // min.s f03,f03,f01  //steering_direction = std::fminf(steering_direction + damp_factor, delta_min);
+patch=0,EE,2027839C,extended,00000000 // nop
+patch=0,EE,202783A0,extended,E48300AC // swc1 f03,0xAC(a0)  //Save current steering direction back to our hijacked float member
+patch=0,EE,202783A4,extended,460018E4 // cvt.w.s f03,f03
+patch=0,EE,202783A8,extended,03E00008 // jr ra
+patch=0,EE,202783AC,extended,44021800 // mfc1 v0,f03        //return (int)steering_direction

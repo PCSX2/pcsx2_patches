@@ -1,0 +1,20 @@
+gametitle=Star Trek Voyager - Elite Force PAL-M SLES-50738 624F11F1
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Widescreen hack 16:9
+//Zoom
+//80bf013c 00108144 c0b01446
+patch=1,EE,00217cd8,word,3c01bfab //3c01bf80
+//Y-Fov
+//803f013c 00108144 0040013c
+patch=1,EE,0029acec,word,3c013fab //3c013f80
+//Render fix
+//003f013c 00b08144 02001546
+patch=1,EE,00217e2c,word,3c013f2b //3c013f00
+
+[50/60 FPS]
+author=Gabominated
+description=Might need EE Overclock (180%).
+patch=1,EE,001FFD54,word,3C020036 //3C020037

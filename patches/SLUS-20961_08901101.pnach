@@ -3,7 +3,7 @@ gametitle=Neo Contra (NTSC-U) (SLUS-20961)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Widescreen Hack
+description=Widescreen Hack
 // 16:9
 patch=1,EE,00359e34,word,3c013f40 // 00000000 hor fov
 patch=1,EE,00359e40,word,44810000 // 00000000

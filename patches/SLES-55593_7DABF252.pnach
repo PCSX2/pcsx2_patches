@@ -3,7 +3,7 @@ gametitle=Astro Boy - The Video Game (PAL-M) SLES-55593 7DABF252
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0011a1dc,word,0804afdc
 patch=1,EE,0012bf70,word,46160083
 patch=1,EE,0012bf74,word,3c013f40
@@ -13,5 +13,5 @@ patch=1,EE,0012bf80,word,08046878
 
 [50 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
 patch=1,EE,00283678,word,00000001

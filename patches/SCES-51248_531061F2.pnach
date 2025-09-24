@@ -8,5 +8,10 @@ patch=1,EE,00AB51C0,byte,01
 
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
+description=Might need EE Overclock (130%).
 patch=1,EE,00791350,word,3CA3D70A
+
+[Disable Blur]
+author=Gabominated
+description=Disable DOF/blur post-processing effect.
+patch=1,EE,0081A198,word,00000000

@@ -1,16 +1,16 @@
-gametitle=Tekken Tag Tournament (PAL-M5) (SCES-50001) 0DD8941C v1.00 
+gametitle=Tekken Tag Tournament (PAL-M5) (SCES-50001) 0DD8941C v1.00
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-comment=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio
 patch=1,EE,0034b014,word,3c013f40
 patch=1,EE,0034b018,word,44810000
 patch=1,EE,0034b020,word,4600c602
 
 [No-Interlacing]
 author=felixthecat1970
-comment=full frame mode + sharp mode
+description=full frame mode + sharp mode
 gsinterlacemode=1
 patch=0,EE,203993D0,extended,0000382D
 patch=0,EE,10399580,extended,240700E0

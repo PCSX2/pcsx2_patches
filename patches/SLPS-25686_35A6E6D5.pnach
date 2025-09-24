@@ -1,0 +1,12 @@
+gametitle=JoJo no Kimyouna Bouken Phantom Blood (NTSC-J) (SLPS-25686) [English Patched, v1.1]
+
+[Widescreen 16:9]
+author=Hudgyn Sasdarl
+gsaspectratio=16:9
+patch=1,EE,0022ABC8,word,3F19CCCD
+patch=1,EE,0022ABD8,word,3F4CCCCD
+patch=1,EE,0022ABC0,word,3F300000
+patch=1,EE,00197190,word,24420400
+patch=1,EE,001971E4,word,24420400
+patch=1,EE,00197238,word,24420400
+patch=1,EE,0019728C,word,24420400

@@ -2,7 +2,7 @@ gametitle=Gene Troopers SLES_536.44
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,00264678,word,3c013f10
 patch=1,EE,0023466c,word,3c013f14
 

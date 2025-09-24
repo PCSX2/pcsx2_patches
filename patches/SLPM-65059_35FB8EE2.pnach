@@ -14,3 +14,9 @@ patch=1,EE,00333afc,word,34436873 // 344345a2 hor fov
 //patch=1,EE,20375c60,extended,41100000 // tori_z (distance)
 
 
+[No GunCon Flash]
+author=Souzooka
+description=Removes flash effect when using the GunCon2 Controller
+
+patch=0,EE,20359800,extended,03E00008 // jr ra  // Stub disp_flash function
+patch=0,EE,20359804,extended,00000000 // nop

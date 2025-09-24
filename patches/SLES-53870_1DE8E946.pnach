@@ -1,6 +1,6 @@
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Devil Kings (PAL-M5) (SLES-53870) Widescreen Hack (16:9) by ElHecht
+description=Devil Kings (PAL-M5) (SLES-53870) Widescreen Hack (16:9) by ElHecht
 //
 // 16:9
 patch=1,EE,00130d5c,word,3c013f19

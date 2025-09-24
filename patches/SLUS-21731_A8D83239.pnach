@@ -7,6 +7,14 @@ description=Widescreen fix
 patch=1,EE,001da9b4,word,3c013fe3
 patch=1,EE,001da9b8,word,34218e39
 
+[60 FPS]
+author=felixthecat1970, asasega, Szalay, CMX, Azagthoth, GodShin
+description=Requires "Cycle Rate" set to 180% or 300%
+patch=1,EE,E0010000,extended,006BFA48
+patch=1,EE,006B3474,extended,01
+patch=1,EE,E0010001,extended,006BFA48 //workaround videos
+patch=1,EE,006B3474,extended,02
+
 [Remove Blackbars]
 author=nemesis2000
 description=Removes black bars in cutscenes
@@ -20,7 +28,8 @@ patch=0,EE,2029445C,extended,3C050000
 patch=0,EE,20294464,extended,3C060050
 patch=0,EE,2029446C,extended,3C070001
 
-[60 FPS]
-author=asasega
-comment=Patches the game to run at 60 FPS
-patch=1,EE,006B3474,extended,00000001
+[No Noise Filter]
+author=Maori-Jigglypuff
+description=Noise filter removal
+patch=1,EE,00338998,word,00000000
+patch=1,EE,0033E700,word,00000000

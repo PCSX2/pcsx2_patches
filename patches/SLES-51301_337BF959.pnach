@@ -2,7 +2,7 @@ gametitle=SOS: The Final Escape [SLES-51301]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,0013d7e8,word,3c023f40
 patch=1,EE,0013e044,word,3c023f40
 patch=1,EE,0013e1c8,word,3c023f40

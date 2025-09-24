@@ -1,5 +1,5 @@
-gametitle=Max Payne [PAL-M4] (SLES_503.26) 52E0597D
-//This pnach corresponds to the main CRC of the game, but it's just meant to activate SLES-50326_C669B63C.pnach
+gametitle=Max Payne (PAL-M4) SLES-50326 52E0597D
+//Main CRC to activate CRC C669B63C called MAIN_P.RUN
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -10,7 +10,10 @@ description=Renders the game in 16:9 aspect ratio
 author=PeterDelta
 description=Removes black bars in cutscenes
 
-[480p Mode]
-gsinterlacemode=1
+[NTSC Mode]
 author=PeterDelta
-description=SDTV 480p mode at start. Might need EE Overclock at 300%
+description=NTSC mode at start.
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start. Might need EE Overclock (300%).

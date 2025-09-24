@@ -1,10 +1,13 @@
-gametitle=DragonBall Z - Sagas  SLUS_208.74
+gametitle=Dragon Ball Z: Sagas (U)(SLUS-20874)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,205F474C,extended,3Fe38e38
 patch=1,EE,205F4860,extended,3F031c93
 patch=1,EE,205F4880,extended,bF031c93
 
-
+[60 FPS]
+author=asasega
+description=Unlocks internal FPS. Might need EE Overclock at 130%.
+patch=1,EE,00582E98,word,00000001 //00000002

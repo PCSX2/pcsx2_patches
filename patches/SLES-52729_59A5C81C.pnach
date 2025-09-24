@@ -11,5 +11,5 @@ patch=1,EE,203018E0,extended,3F891A2A //3fb6cb8f
 author=asasega & PeterDelta
 description=Might need EE Overclock (130%).
 patch=1,EE,00343668,extended,00000001
-patch=1,EE,E0010000,extended,002DCE80
+patch=1,EE,E0010000,extended,0034CEC0
 patch=1,EE,00343668,extended,00000002

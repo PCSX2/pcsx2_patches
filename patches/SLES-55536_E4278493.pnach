@@ -3,23 +3,23 @@ gametitle=Disney/Pixar Cars - Race-O-Rama PAL-M SLES-55536 E4278493
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Bigdemon
-comment=Widescreen Hack Conversion
-//Widescreen hack 16:9
-
-//Zoom
-patch=1,EE,0014750c,word,3c063fc0 //3c064000
-
-//Y-Fov
-patch=1,EE,00147540,word,080c4cd4
+description=Widescreen Hack Conversion
+patch=1,EE,0014750c,word,3c063fc0 //3c064000 //Zoom
+patch=1,EE,00147540,word,080c4cd4 //Y-Fov
 patch=1,EE,00313350,word,460418c3
 patch=1,EE,00313354,word,3c013f40
 patch=1,EE,00313358,word,4481f000
 patch=1,EE,0031335c,word,461e18c3
 patch=1,EE,00313360,word,08051d51
 
-[50 FPS]
+[50/60 FPS]
 author=Gabominated
 description=Might need EE Overclock.
-patch=1,EE,201A07D4,extended,0060102D //0060202D
+patch=1,EE,201A07D4,extended,0060102D
 patch=1,EE,E0010001,extended,003FCD38
 patch=1,EE,201A07D4,extended,0060202D
+
+[NTSC/480p Mode]
+author=Gabominated
+description=Unlocked NTSC mode with 480p mode available at option menu.
+patch=1,EE,0015417c,word,24030003 //24030001

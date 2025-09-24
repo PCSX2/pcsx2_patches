@@ -1,0 +1,44 @@
+gametitle=Need for Speed - ProStreet (PAL-R) (SLES-55006)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen Mode (16:9)
+author=Xan1242 & Aero_, ported by Silent
+// Enables Widescreen Mode
+patch=0,EE,20168A10,extended,24020001 // li v0, 1
+// Corrects Aspect Ratio
+patch=0,EE,20682BF0,extended,3F400000 // Horizontal: 0.75f
+patch=0,EE,20682BF4,extended,3FA0EA0F // Vertical: 1.2571429f
+
+[Fix Most Wanted and Carbon save detection]
+author=Silent
+description=Fixes the career cash bonus not checking for Most Wanted and Carbon saves. Now the game checks for PAL-E saves.
+
+// Repurpose unused UG2 serials
+// BISLPM-65766 -> BESLES-54492
+patch=0,EE,2060E1E0,extended,4C534542
+patch=0,EE,2060E1E4,extended,352D5345
+patch=0,EE,2060E1E8,extended,32393434
+
+// BKSLKA-25241 -> BESLES-54324
+patch=0,EE,2060E1F0,extended,4C534542
+patch=0,EE,2060E1F4,extended,352D5345
+patch=0,EE,2060E1F8,extended,34323334
+
+// BISLAJ-25054 -> BESLES-53857
+patch=0,EE,2060E200,extended,4C534542
+patch=0,EE,2060E204,extended,352D5345
+patch=0,EE,2060E208,extended,37353833
+
+// BASLUS-21267 -> BESLES-53557
+patch=0,EE,2060E1C0,extended,4C534542
+patch=0,EE,2060E1C4,extended,352D5345
+patch=0,EE,2060E1C8,extended,37353533
+
+// Repurpose unused parts of PS2MemcardManager::GetUG2TitleId to return our serials
+patch=0,EE,2044D6E8,extended,03E00008 // jr ra
+patch=0,EE,2044D700,extended,03E00008 // jr ra
+patch=0,EE,2044D718,extended,03E00008 // jr ra
+patch=0,EE,2044D804,extended,0C1135B9 // jal 0x0044D6E4
+patch=0,EE,2044D834,extended,0C1135BF // jal 0x0044D6FC
+patch=0,EE,2044D864,extended,0C1135C5 // jal 0x0044D714

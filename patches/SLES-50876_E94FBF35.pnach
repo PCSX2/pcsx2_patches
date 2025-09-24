@@ -1,0 +1,12 @@
+gametitle=Driv3r (PAL-M) SLES-50876 E94FBF35
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,00297810,word,24440002
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,002862B0,word,14A00006
+patch=0,EE,0029D77C,word,24060002

@@ -1,62 +1,105 @@
-gametitle= Tokyo Extreme Racer - Zero (NTSC) (SLUS-20189)
+gametitle=Tokyo Extreme Racer - Zero (U) (SLUS-20189)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=VIRGIN KLM
+description=16:9 widescreen patch
+author=VIRGIN KLM, Silent
 
 // 16:9 - 3D Elements
-patch=1,EE,20748364,word,3F400000
+patch=0,EE,10168040,extended,3F40 // In-game
+patch=0,EE,1016818C,extended,3F40 // Split-screen
+patch=0,EE,101E5D50,extended,3F40 // Menus
 
 // 16:9 - Gameplay HUD
-patch=1,EE,2032DC70,word,3F400000
-patch=1,EE,2032DCA0,word,00000210
-patch=1,EE,2032DCB8,word,3F400000
-patch=1,EE,2032DD78,word,00000200
-patch=1,EE,2032DD90,word,3F400000
-patch=1,EE,2032DDC0,word,0000022E
-patch=1,EE,2032DDD8,word,3F400000
-patch=1,EE,2032DE08,word,000001F5
-patch=1,EE,2032DE20,word,3F400000
-patch=1,EE,2032DE50,word,00000208
-patch=1,EE,2032DE68,word,3F400000
-patch=1,EE,2032DE98,word,0000021B
-patch=1,EE,2032DEB0,word,3F400000
-patch=1,EE,2032DEF8,word,3F400000
-patch=1,EE,2032E330,word,3F400000
-patch=1,EE,2032E378,word,3F400000
-patch=1,EE,2032E3C0,word,3F400000
-patch=1,EE,2032E408,word,3F400000
-patch=1,EE,2032E450,word,3F400000
-patch=1,EE,2032E498,word,3F400000
-patch=1,EE,2032E4E0,word,3F400000
-patch=1,EE,2032E528,word,3F400000
-patch=1,EE,2032E570,word,3F400000
-patch=1,EE,2032E5B8,word,3F400000
-patch=1,EE,2032E600,word,3F400000
-patch=1,EE,2032E960,word,3F400000
-patch=1,EE,2032E9A8,word,3F400000
-patch=1,EE,2032E9F0,word,3F400000
-patch=1,EE,2032EA38,word,3F400000
-patch=1,EE,2032EA80,word,3F400000
-patch=1,EE,2032EAC8,word,3F400000
-patch=1,EE,2032EB10,word,3F400000
-patch=1,EE,2032EB58,word,3F400000
-patch=1,EE,2032EBA0,word,3F400000
-patch=1,EE,2032EBE8,word,3F400000
-
-
-
-//Menu (Car)
-//00 00 80 3F D9 EE 6E 3F 00 08 00 00 00 08 00 00 00 00 80 3F 00 24 74 4B 00 00 80 3F 00 00 FA 43
-patch=1,EE,D0740296,extended,00003F80
-patch=1,EE,20740294,extended,3F400000
-
+patch=0,EE,101BBD98,extended,01FC // Move the entire cluster to the right
+patch=0,EE,101B47EC,extended,0030 // Tacho needle
+patch=0,EE,101B4898,extended,0020 // Shift assist
+patch=0,EE,101B4818,extended,0020 // Left indicator
+patch=0,EE,101B4844,extended,0031 // Right indicator
+patch=0,EE,101B4904,extended,004E // Current gear
+patch=0,EE,101B493C,extended,0015 // Speed
+patch=0,EE,201B494C,extended,010B4023 // Speed, distance between letters (19)
+patch=0,EE,101B49B4,extended,0016 // Bottom left line
+patch=0,EE,101B486C,extended,0040 // mph text
+patch=0,EE,101B49E0,extended,0056 // Bottom right line
+patch=0,EE,2032DC70,extended,3F400000
+patch=0,EE,2032DCB8,extended,3F400000
+patch=0,EE,2032DD90,extended,3F400000
+patch=0,EE,2032DDD8,extended,3F400000
+patch=0,EE,2032DE20,extended,3F400000
+patch=0,EE,2032DE68,extended,3F400000
+patch=0,EE,2032DEB0,extended,3F400000
+patch=0,EE,2032DEF8,extended,3F400000
+patch=0,EE,2032DFD0,extended,3F400000
+patch=0,EE,2032E018,extended,3F400000
+patch=0,EE,2032E0F0,extended,3F400000
+patch=0,EE,2032E138,extended,3F400000
+patch=0,EE,2032E180,extended,3F400000
+patch=0,EE,2032E1C8,extended,3F400000
+patch=0,EE,2032E210,extended,3F400000
+patch=0,EE,2032E258,extended,3F400000
+patch=0,EE,2032E330,extended,3F400000
+patch=0,EE,2032E378,extended,3F400000
+patch=0,EE,2032E3C0,extended,3F400000
+patch=0,EE,2032E408,extended,3F400000
+patch=0,EE,2032E450,extended,3F400000
+patch=0,EE,2032E498,extended,3F400000
+patch=0,EE,2032E4E0,extended,3F400000
+patch=0,EE,2032E528,extended,3F400000
+patch=0,EE,2032E570,extended,3F400000
+patch=0,EE,2032E5B8,extended,3F400000
+patch=0,EE,2032E600,extended,3F400000
+patch=0,EE,2032E960,extended,3F400000
+patch=0,EE,2032E9A8,extended,3F400000
+patch=0,EE,2032E9F0,extended,3F400000
+patch=0,EE,2032EA38,extended,3F400000
+patch=0,EE,2032EA80,extended,3F400000
+patch=0,EE,2032EAC8,extended,3F400000
+patch=0,EE,2032EB10,extended,3F400000
+patch=0,EE,2032EB58,extended,3F400000
+patch=0,EE,2032EBA0,extended,3F400000
+patch=0,EE,2032EBE8,extended,3F400000
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-patch=1,EE,201686EC,extended,00005025
-patch=1,EE,201687AC,extended,00005025
-patch=1,EE,20149FF4,extended,00000000
+author=asasega, Silent
 
+patch=0,EE,201686EC,extended,00005025
+patch=0,EE,201687AC,extended,00005025
+patch=0,EE,20168600,extended,00005025 // Rear view mirror
+patch=0,EE,20168874,extended,00005025 // Unknown in race
+patch=0,EE,201E5C14,extended,00005025 // Car preview in menus
+patch=0,EE,20149FF4,extended,00000000
+
+[Controller Config Change (Type A)]
+author=JakeMR2
+description=Changes the controller scheme to match TXR2's
+
+//Controller Mappings
+//0x4 =  X Button (accel)
+//0x8 =  Square Button (brake)
+//0xC =  L1 Button (shift down)
+//0x10 = R1 Button (shift up)
+//0x14 = Circle Button (Reverse)
+//0x18 = L2 Button (Look Back)
+//0x1C = R2 Button (Challenge Rival)
+//0x20 = Triangle Button
+//0x24 = L3 Left Stick (Left Signal)
+//0x28 = L3 Right Stick (Right Signal)
+//0x2C = R3 Button (Warning Signals)
+//0x30 = L3 Button (Horn)
+
+patch=0,EE,001586DC,word,8E240018 //Accel Button (R2)
+patch=0,EE,001586C0,word,8E24001C //Brake Button (L2)
+patch=0,EE,0015854C,word,8E240004 //Shift Down (Square)
+patch=0,EE,0015856C,word,8E240008 //Shift Up (X)
+patch=0,EE,001585AC,word,8E240010 //L1 Button (look back)
+patch=0,EE,001585CC,word,8E24000C //R1 Button (Flash Beams)
+patch=0,EE,0015858C,word,8E240014 //Circle Button (Reverse)
+patch=0,EE,001585EC,word,8E240020 //Triangle Button
+patch=0,EE,0015860C,word,8E240024 //L3 Left Stick (Left Signal)
+patch=0,EE,0015862C,word,8E240028 //L3 Right Stick (Right Stick)
+patch=0,EE,0015864C,word,8E24002C //R3 Button (Warning Signals)
+patch=0,EE,0015866C,word,8E240030 //L3 Button (Horn)
 

@@ -11,3 +11,8 @@ patch=1,EE,20332BBC,extended,34218E39 //3421AAAB hor fov
 author=PeterDelta
 description=Might need EE Overclock at 130%.
 patch=1,EE,002D4D94,word,2C620000 //0062102B
+
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect
+patch=1,EE,004E9B28,word,00000000

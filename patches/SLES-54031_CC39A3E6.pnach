@@ -2,11 +2,17 @@ gametitle=The Da Vinci Code (PAL-M) SLES-54031 CC39A3E6
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=PeterDelta
-comment=Widescreen Hack
+author=sergx12
+description=Widescreen Hack
 patch=1,EE,003AE5D8,word,3C023F40 //3C023F80
 
-[50 FPS]
+[50/60 FPS]
 author=asasega
-comment=Unlocked at 50 FPS. Might need enable 130% EE Overclock to be stable.
+description=Might need EE Overclock (130%).
 patch=1,EE,001AD428,word,00000001
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=1,EE,003BC53C,word,24060002 //24060003
+patch=1,EE,003BBF50,word,240901c0 //24090200

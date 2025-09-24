@@ -1,0 +1,6 @@
+gametitle=Indiana Jones and the Staff of Kings (U)(SLUS-21885)
+
+[60 FPS]
+author=asasega
+description=Patches the game to run at 60 FPS.
+patch=1,EE,001505B4,word,2C620000

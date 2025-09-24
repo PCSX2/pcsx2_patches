@@ -2,7 +2,7 @@ gametitle=Crimson Sea 2 (PAL-E) (SLES-52556)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack (16:9)
+description=Widescreen Hack (16:9)
 
 // original NTSC-patch by sergx12
 // ported to PAL, added widescreen support for 2player mode by elhecht

@@ -17,10 +17,44 @@ patch=1,EE,00184df0,word,3c023f06 // render fix
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Enhancement test
+description=Enhancement test
 
 //No interleacing
 patch=1,EE,20103604,extended,64420000
 patch=1,EE,201038CC,extended,64420000
 
 
+[Fog Effect Restoration]
+author=Souzooka
+description=Restores fog effects which were removed from the PAL release
+
+//The game lacks the call to draw the fog effect in the update loop (in pBattle::Main).
+//Thankfully, the draw code still exists due to an (unused?) reference still existing to it in the code.
+//Adding the call back reveals that for an unknown reason, the effect is drawn 16 times more opaque than should be.
+//However, even without finding the underlying reason for this, we can work around it
+//(however this comes with the unfortunate caveat that fog alpha is 16x less precise than the JP version).
+
+//To restore the fog draw, we can remove an unnecessary signed division check for alpha (alpha = (alpha - 1) / 8),
+//and use it to draw fog if the alpha is not zero. We expect the range of alpha to be 0x0...0x800 here,
+//and the 0x0 case does not use this branch.
+//However we still need one extra instruction to preserve the alpha of the fog for the call to
+//nWorldFogGenerator::SetFogAlfa.
+patch=0,EE,201B1DD8,extended,3C110001 // lui s1,0x0001 // this has to be saved over a function call (s1 is saved, but unused at this point)
+
+//then at 1B1DE4 we can write some instructions to conditionally call the draw function
+//while preserving the alpha argument:
+patch=0,EE,201B1DE4,extended,02511021   // addu v0,s2,s1
+patch=0,EE,201B1DE8,extended,8C43D0A0   // lw v1,-0x2F60(v0)
+patch=0,EE,201B1DEC,extended,00031200   // sll v0,v1,0x08
+patch=0,EE,201B1DF0,extended,00431023   // subu v0,v0,v1
+patch=0,EE,201B1DF4,extended,10400003   // beq v0,zero,0x001B1E04
+patch=0,EE,201B1DF8,extended,00028AC3   // sra s1,v0,0x0B
+patch=0,EE,201B1DFC,extended,0C05DFC8   // jal z_un_00177f20 // (nWorldFogGenerator::Draw)
+patch=0,EE,201B1E00,extended,26440820   // addiu a0,s2,0x820
+patch=0,EE,201B1E04,extended,02202821   // addu a1,s1,zero
+
+//Now, the fog is 16 times as opaque due to the unknown bug mentioned previously,
+//but this can be worked around by modifying the return value of nWorldFogGenerator::GetAlpha.
+//Specifically at 00178064 replace `andi v0, 0xFF` with `sra v0, 4`.
+//If the underlying bug is found and fixed, this instruction can be restored to its original form.
+patch=0,EE,20178064,extended,00021103   // sra v0,v0,0x04

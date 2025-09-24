@@ -2,7 +2,7 @@ gametitle=Shadow Hearts (PlayStation2 the Best) [NTSC-J] [SLPS-73418]
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 
 //Widescreen hack 16:9
 patch=1,EE,0028cec0,word,3c043f40 //3c043f80

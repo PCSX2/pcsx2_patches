@@ -1,9 +1,13 @@
-gametitle=Tom Clancy's Splinter Cell - Chaos Theory (PAL-M) SLES-53287 4C4D7873 (DDAEB7A6 SC3_OFF.ELF)
+gametitle=Tom Clancy's Splinter Cell - Chaos Theory (PAL-M) SLES-53287 DDAEB7A6 SC3_OFF.ELF
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=0,EE,001F2908,extended,40
 
 [480p Mode]
 gsinterlacemode=1
 author=PeterDelta
 description=SDTV 480p mode at start.
-patch=1,EE,00110014,word,24110000
-patch=1,EE,00110018,word,24120050
-patch=1,EE,00110024,word,24130001
+patch=0,EE,001383DC,extended,50

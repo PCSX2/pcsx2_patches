@@ -2,7 +2,7 @@ gametitle=Spider-Man 3 SLUS_215.52
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-comment=Widescreen Hack
+description=Widescreen Hack
 patch=1,EE,003488c8,word,3c023f22
 patch=1,EE,0032a974,word,3c023f22
 //patch=1,EE,003488dc,word,3c023ec0 //vert-
