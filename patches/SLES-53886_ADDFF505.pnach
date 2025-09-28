@@ -25,3 +25,8 @@ patch=1,EE,00125128,word,2410003C //2410001E
 author=Gabominated
 description=Always display standard-480p video selector.
 patch=1,EE,003BE824,word,00000001
+
+[No Blur While Reload]
+author=Gabominated
+description=No blur while reloading weapons.
+patch=1,EE,005721D4,word,00000000
