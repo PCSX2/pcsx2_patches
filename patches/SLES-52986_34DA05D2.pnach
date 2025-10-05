@@ -1,0 +1,18 @@
+gametitle=Nickelodeon Bob Esponja - La Película (PAL-S) (SLES-52986)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Bigdemon
+description=Widescreen Hack Conversion
+
+patch=1,EE,00437f74,word,46010083 //Multiply Aspect
+patch=1,EE,00437f78,word,E7A20028 //Store Multiplied Aspect
+patch=1,EE,00437f7c,word,46010002 //Set Height
+patch=1,EE,00437f80,word,0C0655BC //Jump to RWCameraSetView
+patch=1,EE,00437f84,word,E7A0002C //Store Height (Delay Slot)
+patch=1,EE,00437f88,word,DFBF0010 //Restore RA
+patch=1,EE,00437f8c,word,7BB00000 //Restore S0
+patch=1,EE,00437f90,word,03E00008 //Jump to RA
+patch=1,EE,00437f94,word,27BD0030 //Restore Stack (Delay Slot)
+
+
