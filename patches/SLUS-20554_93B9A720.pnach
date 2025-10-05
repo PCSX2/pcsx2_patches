@@ -1,0 +1,10 @@
+gametitle=Metal Gear Solid 2 - Substance SLUS_205.54 93B9A720
+//Skateboarding Demo
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen Hack
+
+//Skateboard - Mini game
+patch=1,EE,2011fee0,extended,dfbf0030
+patch=1,EE,203c054c,extended,3f400000 //3f800000
