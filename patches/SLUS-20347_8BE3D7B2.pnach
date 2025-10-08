@@ -10,3 +10,12 @@ patch=1,EE,00282394,word,3c023f40
 patch=1,EE,0039fe08,word,3c023f40
 patch=1,EE,003d5704,word,3c023f40
 patch=1,EE,003eec44,word,3c023f40
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+author=pcsx480p60
+
+//Remove Interlacing
+patch=1,EE,202016EC,extended,00000000
+patch=1,EE,20305630,extended,A2200279
