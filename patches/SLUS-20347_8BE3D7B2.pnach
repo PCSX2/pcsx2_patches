@@ -1,13 +1,23 @@
-gametitle=Shadow Hearts (U)(SLUS-20347)
+gametitle=Shadow Hearts SLUS_203.47
 
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-author=pcsx480p60
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen Hack
+patch=1,EE,0028d4f0,word,3c043f40
+patch=1,EE,00282394,word,3c023f40
+//patch=1,EE,00324530,word,3c023f40 // field
+//patch=1,EE,0034a728,word,3c033f50 //3c033f80  font size
+patch=1,EE,0039fe08,word,3c023f40
+patch=1,EE,003d5704,word,3c023f40
+patch=1,EE,003eec44,word,3c023f40
 
-//Remove Interlacing
-patch=1,EE,202016EC,extended,00000000
-patch=1,EE,20305630,extended,A2200279
+
+
+
+
+
+
+
 
 
 
