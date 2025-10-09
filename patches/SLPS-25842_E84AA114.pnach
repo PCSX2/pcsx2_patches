@@ -1,0 +1,9 @@
+gametitle=MN - Tales of Destiny - Director's Cut (J)(SLUS-20347)
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+author=Unknown
+
+//Remove Interlacing
+patch=1,EE,20109FA8,extended,A620066C
