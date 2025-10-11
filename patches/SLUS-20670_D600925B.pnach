@@ -1,4 +1,4 @@
-//gametitle=The Great Escape (U)(SLUS-20670)
+gametitle=The Great Escape (NTSC-U) SLUS-20670 D600925B
 
 //[Widescreen 16:9]
 //gsaspectratio=16:9
@@ -18,3 +18,17 @@
 //Render fix
 //patch=1,EE,002ca178,word,3c013d00 //3c013c8e
 //patch=1,EE,002ca17c,word,34210000 //3421fa36
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PliskinDev
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,20425B16,extended,3FE38E39
+patch=1,EE,2047FAE8,extended,3FE38E39
+patch=1,EE,2047FAEC,extended,3FE38E39
+patch=1,EE,2047FAF8,extended,3FE38E39
+
+[60 FPS]
+author=asasega
+description=Make sure you set your EE Cycle Rate to 130-180%
+patch=1,EE,202B3948,extended,2C420001
