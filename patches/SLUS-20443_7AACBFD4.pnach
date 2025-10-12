@@ -64,3 +64,11 @@ patch=0,EE,202B61E4,extended,00831024 // and v0,a0,v1 ; combines a "daddu v0,a0,
 patch=0,EE,202B61E8,extended,C6A0001C // lwc1 f00,0x1C(s5) ; load dt
 patch=0,EE,202B61F0,extended,46000942 // mul.s f05,f01,f00 ; recreate dampen value in f5
 patch=0,EE,202B6234,extended,46051081 // sub.s f02,f02,f05 ; apply dampen value
+
+[Normal Camera]
+author=Souzooka
+description=Uninverts horizontal and vertical camera axes. Setting "Aiming" to Reversed inverts horizontal axis.
+patch=0,EE,002602E8,word,46006307 // neg.s f12,f12 ; horizontal axis
+patch=0,EE,002602CC,word,460C0301 // sub.s f12,f00,f12 ; vertical axis
+patch=0,EE,0025DD4C,word,00000000 // nop ; vertical axis (first-person); removes existing inversion
+// NOTE: First-person horizontal axis is already normal by default, regardless of "Aiming" setting.
