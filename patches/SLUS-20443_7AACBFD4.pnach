@@ -11,9 +11,11 @@ patch=1,EE,002D6EF4,word,34218e38 //3421aaab
 author=asasega and Souzooka
 description=Unlocks internal FPS. Might need EE Overclock at 130%.
 
+// ------------
 // Change framerate divisor 2 -> 1
 patch=1,EE,2041A4A0,extended,00000001 //00000002
 
+// ------------
 // Fix gravity so jump heights are the same as in 30fps
 // The issue with gravity at 60fps is that it's a fixed update, with a function (@ 0x00119DF8) processing gravity in 1/60th second chunks
 // (0.0166667f). The function iterates gravity until it's greater than the delta time provided to the function which, for some reason,
@@ -40,3 +42,25 @@ patch=0,EE,202AEBAC,extended,4619A801 // sub.s f00,f21,f25 // f0 = (sum of 1/60 
 patch=0,EE,202AEBB0,extended,3C01002B // lui at,0x002B
 patch=0,EE,202AEBB4,extended,080468A2 // j 0x0011A288 // Jump back to original function
 patch=0,EE,202AEBB8,extended,E420EBA4 // swc1 f00,-0x145C(at)
+
+// ------------
+// Fix horizontal camera speed (delta-time is applied twice by accident; vertical is fine)
+// Overwrite dt access for second application to a jump to a code cave
+// (we unfortunately can't just overwrite the pointer+access getting loaded,
+// as the pointer is used later in the function)
+patch=0,EE,202B61CC,extended,080ADA78 // j z_un_002b69e0; overwrites dt access
+
+// Code cave where we load (1f/30) into f0, where the dt access would have ended up
+// (These were just the instructions addiu sp, 0x80; nop; nop; nop; presumably junk)
+patch=0,EE,202B69E0,extended,3C013D08 // lui at,0x3D08
+patch=0,EE,202B69E4,extended,34218889 // ori at,at,0x8889
+patch=0,EE,202B69E8,extended,080AD875 // j 0x002B61D4
+patch=0,EE,202B69EC,extended,44810000 // mtc1 at,f00
+
+// The game dampens horizontal camera movement by subtracting the result of the 2nd dt application
+// from the movement speed. As such unchanged now the horizontal movement is dampened twice as fast at 60fps after above fix.
+// Optimize away an instruction to create a gap of two instructions
+patch=0,EE,202B61E4,extended,00831024 // and v0,a0,v1 ; combines a "daddu v0,a0,zero" and "and v0,v0,v1" instruction
+patch=0,EE,202B61E8,extended,C6A0001C // lwc1 f00,0x1C(s5) ; load dt
+patch=0,EE,202B61F0,extended,46000942 // mul.s f05,f01,f00 ; recreate dampen value in f5
+patch=0,EE,202B6234,extended,46051081 // sub.s f02,f02,f05 ; apply dampen value
