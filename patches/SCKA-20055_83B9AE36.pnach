@@ -1,0 +1,22 @@
+gametitle=MN - Mystic Nights (K)(SCKA-20055)
+
+[Widescreen 16:9]
+description=Widescreen Hack by Arapapa
+gsaspectratio=16:9
+author=Arapapa
+
+//Zoom
+patch=1,EE,0016aa5c,word,3c0243c0 //3c024400
+//patch=1,EE,00168dd0,word,3c023fe9 //3c023f80
+
+//Y-Fov
+patch=1,EE,0016aa74,word,3c023f36 //3c023f08
+patch=1,EE,0016aa78,word,34429cfe //3442f5c3
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+author=NineKain
+
+//Remove Interlacing
+patch=1,EE,001015B4,extended,00000000
