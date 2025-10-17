@@ -110,6 +110,753 @@ description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=0,EE,2023FF70,extended,00000000
 
+[Car select]
+description=Use dpad left/right to select the car in the menus.
+author=Silent, original research by Xenn765
+
+// NOTES:
+
+// Code caves:
+// 0200C8C - 0200D1C
+// 0200CF8 - 0200D1C - EXHAUSTED
+// 0201488 - 02014C4 - EXHAUSTED
+// 0204E08 - 0204E98 - free from 00204E88
+// 020AA04 - 020AA9C - free from 0020AA10
+// 020BBBC - 020BD00 - EXHAUSTED
+// 021617C - 02161C4 - EXHAUSTED
+// 02161DC - 0216204 - EXHAUSTED
+// 02181CC - 0218270
+// 022D5B0 - 022D77C - free from 0022D768
+// 022EC50 - 022EC74 - free from 0022EC5C
+
+// Unused functions that are used here (not suitable for code caves):
+// 020BB88 - gt2k_menu::SelectColorUnit::SetSampleGradient
+// 020BBBC - gt2k_menu::SelectColorUnit::StopAnimations (moved from 020BC00)
+// 020BD08 - gt2k_menu::SelectColorUnit::ApplyColorSampleAnimation
+// 020BD60 - gt2k_menu::SelectColorUnit::SelectColorUnit
+
+// 020BD04 - gt2k_menu::Transitive<1>::ApplyAnimation (recreated)
+
+// Expand gt2k_menu::TaikenSequence by 16 bytes to fit an extra menu entry
+patch=0,EE,10201334,extended,00E8
+
+// Shrink userSelections::colorIndex to 2 bytes
+patch=0,EE,1020928A,extended,84E2 // lh v0,(a3).colorIndex (0x0)
+patch=0,EE,1020A09E,extended,A483 // sh v1,(a0).colorIndex (0x0)
+
+// Shrink FrontendCarInfo::m_carColor to 2 bytes
+patch=0,EE,1020A246,extended,A602 // sh v0,(s0).m_carColor (0x4A0)
+patch=0,EE,1020EBA6,extended,8643 // lh v1,(s2).m_carColor (0x4A0)
+
+// Replace the hardcoded 0 model with FrontendCarInfo::m_carIndex
+// and populate it from the menu
+patch=0,EE,2020EB64,extended,848504A2 // lh a1,(a0).m_carIndex (0x4A2)
+patch=0,EE,2020A238,extended,8E0300D8 // lw v1,(s0).m_carSelect.value (0xD8)
+patch=0,EE,2020A240,extended,0C082A81 // jal CodeCave_SetCarIndex
+
+// Replace the hardcoded 0 model with FrontendCarInfo::m_carIndex
+// in FrontendCarInfo::Initialize
+patch=0,EE,2020E5EC,extended,848504A2 // lh a1,(a0).m_carIndex (0x4A2)
+
+// CodeCave_SetCarIndex:
+patch=0,EE,2020AA04,extended,A60304A2 // sh v1, (s0).m_carIndex (0x4A2)
+patch=0,EE,2020AA08,extended,0808C9BE // j Control::getButtons(void)
+patch=0,EE,2020AA0C,extended,0220202D // move a0,s1
+
+// Repurpose RaceEntryBase::field_4 (unused, set to 6 once, number of cars in the race?) as a current player car index
+patch=0,EE,2021740C,extended,00000000 // nop
+
+// Split PrepareRaceHolding into two functions - one initializing the race organization, the other initializing
+// the array of cars in RaceEntryBase
+
+// Prepare PrepareRaceHolding_split2
+patch=0,EE,2021617C,extended,27BDFFC0 // addiu sp,sp,-0x40
+patch=0,EE,20216180,extended,FFB20020 // sd s2,0x20(sp)
+patch=0,EE,20216184,extended,FFB10010 // sd s1,0x10(sp)
+patch=0,EE,20216188,extended,FFB00000 // sd s0,0x0(sp)
+patch=0,EE,2021618C,extended,FFBF0030 // sd ra,0x30(sp)
+patch=0,EE,20216190,extended,1000FFE9 // b 0x00216138
+patch=0,EE,20216194,extended,0000882D // move s1,zero
+
+// PrepareRaceHolding_split2_Call
+patch=0,EE,20216198,extended,27BDFFE0 // addiu sp,sp,-0x20
+patch=0,EE,2021619C,extended,FFB00000 // sd s0,0x0(sp)
+patch=0,EE,202161A0,extended,FFBF0010 // sd ra,0x10(sp)
+patch=0,EE,202161A4,extended,86700002 // lh s0,0x2(s3)
+patch=0,EE,202161A8,extended,0C085744 // jal RaceEntryBase::clear
+patch=0,EE,202161AC,extended,8E440000 // lw a0,(s2).m_raceEntry
+patch=0,EE,202161B0,extended,0C08585F // jal PrepareRaceHolding_split2
+patch=0,EE,202161B4,extended,00000000 // nop
+patch=0,EE,202161B8,extended,8C430000 // lw v1,(v0).m_raceEntry
+patch=0,EE,202161BC,extended,AC700004 // sw s0,(v1).m_playerCarIndex
+patch=0,EE,202161C0,extended,10000006 // beq zero,zero,0x002161DC
+patch=0,EE,202161C4,extended,8C620008 // lw v0,(v1).m_entries
+
+patch=0,EE,202161DC,extended,00101880 // sll v1,s0,0x02
+patch=0,EE,202161E0,extended,00431021 // addu v0,v0,v1
+patch=0,EE,202161E4,extended,24050002 // addiu a1,zero,0x2
+patch=0,EE,202161E8,extended,8C420000 // lw v0,0x0(v0)
+patch=0,EE,202161EC,extended,DFBF0010 // ld ra,0x10(sp)
+patch=0,EE,202161F0,extended,DFB00000 // ld s0,0x0(sp)
+patch=0,EE,202161F4,extended,03E00008 // jr ra
+patch=0,EE,202161F8,extended,27BD0020 // addiu sp,sp,0x20
+
+// raceOrganization->m_raceEntry->m_entries will be 0 at this point so NOP the access
+patch=0,EE,202003BC,extended,00000000 // nop
+
+// Call PrepareRaceHolding_split2 before dereferencing s1
+// and swap v0/s1 around so we don't need to save the return value of this 'function'
+// PrepareRaceHolding_split2 needs to return the current car in v0
+patch=0,EE,20200448,extended,0C085866 // jal PrepareRaceHolding_split2_Call
+patch=0,EE,2020044C,extended,87B100E0 // lh s1,0x140+userOptions(sp) (0xE0)
+patch=0,EE,10200452,extended,AC51 // sw s1,?(v0)
+patch=0,EE,10200456,extended,8FB1 // lw s1,?(sp)
+patch=0,EE,20200460,extended,0011882B // sltu s1,zero,s1
+patch=0,EE,1020046A,extended,AC51 // sw s1,?(v0)
+patch=0,EE,10200472,extended,AC43 // sw v1,?(v0)
+patch=0,EE,1020047A,extended,AC44 // sw a0,?(v0)
+
+// Prepare a new gt2k_menu::TaikenSequence::UpdateColorSelect(this) method
+patch=0,EE,2022D610,extended,27BDFFF0 // addiu sp,sp,-0x10
+patch=0,EE,2022D614,extended,FFBF0000 // sd ra,0x0(sp)
+
+patch=0,EE,2022D618,extended,8C8500D8 // lw a1,(a0).m_carSelect.value (0xD8)
+patch=0,EE,2022D61C,extended,3C06002A // lui a2,0x002A
+patch=0,EE,2022D620,extended,00053880 // sll a3,a1,0x02
+patch=0,EE,2022D624,extended,24C60858 // addiu a2,a2,0x858
+patch=0,EE,2022D628,extended,278883C0 // addiu t0,gp,-0x7C40
+patch=0,EE,2022D62C,extended,00C73021 // addu a2,a2,a3
+patch=0,EE,2022D630,extended,8CC60000 // lw a2,0x0(a2)
+patch=0,EE,2022D634,extended,8CC70000 // lw a3,0x0(a2)
+patch=0,EE,2022D638,extended,0000182D // move v1,zero
+patch=0,EE,2022D63C,extended,AC8700A0 // sw a3,(a0).m_colorSelect.maxValue (0xA0)
+patch=0,EE,2022D640,extended,24C60004 // addiu a2,a2,0x4
+patch=0,EE,2022D644,extended,240A0001 // li t2,0x1
+patch=0,EE,2022D648,extended,54A00001 // bnel a1,zero,UpdateColorSelect_SetTile
+patch=0,EE,2022D64C,extended,240A0003 // li t2,0x3
+
+// UpdateColorSelect_SetTile:
+patch=0,EE,2022D650,extended,0067102B // sltu v0,v1,a3
+patch=0,EE,2022D654,extended,1040000F // beq v0,zero,UpdateColorSelect_HideTile
+patch=0,EE,2022D658,extended,24090003 // li t1,0x3
+patch=0,EE,2022D65C,extended,C4CC0000 // lwc1 f12,0x0(a2)
+patch=0,EE,2022D660,extended,C4CD0004 // lwc1 f13,0x4(a2)
+patch=0,EE,2022D664,extended,C4CE0008 // lwc1 f14,0x8(a2)
+patch=0,EE,2022D668,extended,C4CF000C // lwc1 f15,0xC(a2)
+patch=0,EE,2022D66C,extended,C4D00010 // lwc1 f16,0x10(a2)
+patch=0,EE,2022D670,extended,C4D10014 // lwc1 f17,0x14(a2)
+patch=0,EE,2022D674,extended,0C082EE2 // jal gt2k_menu::SelectColorUnit::SetSampleGradient
+patch=0,EE,2022D678,extended,8D040000 // lw a0,0x0(t0)
+patch=0,EE,2022D67C,extended,AC800048 // sw zero,0x48(a0)
+patch=0,EE,2022D680,extended,AC8A0110 // sw t2,0x110(a0)
+patch=0,EE,2022D684,extended,25080004 // addiu t0,t0,0x4
+patch=0,EE,2022D688,extended,24C60018 // addiu a2,a2,0x18
+patch=0,EE,2022D68C,extended,1000FFF0 // b UpdateColorSelect_SetTile
+patch=0,EE,2022D690,extended,24630001 // addiu v1,v1,0x1
+
+// UpdateColorSelect_HideTile:
+patch=0,EE,2022D694,extended,2C62000C // sltiu v0,v1,0x000C
+patch=0,EE,2022D698,extended,10400006 // beq v0,zero,UpdateColorSelect_End
+patch=0,EE,2022D69C,extended,8D040000 // lw a0,0x0(t0)
+patch=0,EE,2022D6A0,extended,AC890048 // sw t1,0x48(a0)
+patch=0,EE,2022D6A4,extended,AC890110 // sw t1,0x110(a0)
+patch=0,EE,2022D6A8,extended,25080004 // addiu t0,t0,0x4
+patch=0,EE,2022D6AC,extended,1000FFF9 // b UpdateColorSelect_HideTile
+patch=0,EE,2022D6B0,extended,24630001 // addiu v1,v1,0x1
+
+// UpdateColorSelect_End
+patch=0,EE,2022D6B4,extended,DFBF0000 // ld ra,0x0(sp)
+patch=0,EE,2022D6B8,extended,03E00008 // jr ra
+patch=0,EE,2022D6BC,extended,27BD0010 // addiu sp,sp,0x10
+
+
+// Prepare a new gt2k_menu::TaikenSequence::UpdateBadgeVisibility(this) method
+patch=0,EE,2022D6C0,extended,8C8400D8 // lw a0,0xD8(a0)
+patch=0,EE,2022D6C4,extended,240A0001 // li t2,0x1
+patch=0,EE,2022D6C8,extended,0000582D // li t3,zero
+patch=0,EE,2022D6CC,extended,54800002 // bnel a0,zero,UpdateBadgeVisibility_ToggleCarBadge
+patch=0,EE,2022D6D0,extended,240A0003 // li t2,0x3
+patch=0,EE,2022D6D4,extended,240B0001 // li t3,0x1
+
+// UpdateBadgeVisibility_ToggleCarBadge
+patch=0,EE,2022D6D8,extended,8F848BB4 // lw a0,-0x744C(gp) (gCarBadgeTexture)
+patch=0,EE,2022D6DC,extended,AC8B00C4 // sw t3,0xC4(a0)
+patch=0,EE,2022D6E0,extended,8C840008 // lw a0,0x8(a0)
+
+// UpdateBadgeVisibility_ToggleCarBadge_Child:
+patch=0,EE,2022D6E4,extended,50800004 // beql a0,zero,UpdateBadgeVisibility_ToggleCarSpecs
+patch=0,EE,2022D6E8,extended,8F848BC0 // lw a0,-0x7440(gp) (gCarSpecsSlider)
+patch=0,EE,2022D6EC,extended,AC8A0024 // sw t2,0x24(a0)
+patch=0,EE,2022D6F0,extended,1000FFFC // b UpdateBadgeVisibility_ToggleCarBadge_Child
+patch=0,EE,2022D6F4,extended,8C840004 // lw a0,0x4(a0)
+
+// UpdateBadgeVisibility_ToggleCarSpecs
+patch=0,EE,2022D6F8,extended,AC8B00C4 // sw t3,0xC4(a0)
+patch=0,EE,2022D6FC,extended,8C840008 // lw a0,0x8(a0)
+
+// UpdateBadgeVisibility_ToggleCarSpecs_Child:
+patch=0,EE,2022D700,extended,50800004 // beql a0,zero,UpdateBadgeVisibility_ToggleCarSpecs_ToggleCarPower
+patch=0,EE,2022D704,extended,8F848BB8 // lw a0,-0x7448(gp) (g4WDText)
+patch=0,EE,2022D708,extended,AC8A0024 // sw t2,0x24(a0)
+patch=0,EE,2022D70C,extended,1000FFFC // b UpdateBadgeVisibility_ToggleCarSpecs_Child
+patch=0,EE,2022D710,extended,8C840004 // lw a0,0x4(a0)
+
+// UpdateBadgeVisibility_ToggleCarSpecs_ToggleCarPower
+patch=0,EE,2022D714,extended,AC8A0024 // sw t2,0x24(a0)
+patch=0,EE,2022D718,extended,8F848BBC // lw a0,-0x7444(gp) (gCarPowerText)
+
+// UpdateBadgeVisibility_ToggleCarSpecs_End
+patch=0,EE,2022D71C,extended,03E00008 // jr ra
+patch=0,EE,2022D720,extended,AC8A0024 // sw t2,0x24(a0)
+
+
+// Prepare a new gt2k_menu::TaikenSequence::FadeCarOnSelect() method
+patch=0,EE,2022D724,extended,27BDFFF0 // addiu sp,sp,-0x10
+patch=0,EE,2022D728,extended,FFBF0000 // sd ra,0x0(sp)
+
+patch=0,EE,2022D72C,extended,3C05002A // lui a1,0x002A
+patch=0,EE,2022D730,extended,8F8483B0 // lw a0,-0x7C50(gp) (gCameraMan)
+patch=0,EE,2022D734,extended,0C082F41 // jal gt2k_menu::Transitive<1>::ApplyAnimation
+patch=0,EE,2022D738,extended,24A52248 // addiu a1,a1,0x2248
+patch=0,EE,2022D73C,extended,3C05002A // lui a1,0x002A
+patch=0,EE,2022D740,extended,8F8483B8 // lw a0,-0x7C48(gp) (gCarModel)
+patch=0,EE,2022D744,extended,0C082F41 // jal jal gt2k_menu::Transitive<1>::ApplyAnimation
+patch=0,EE,2022D748,extended,24A52128 // addiu a1,a1,0x2128
+patch=0,EE,2022D74C,extended,3C05002A // lui a1,0x002A
+patch=0,EE,2022D750,extended,8F8483BC // lw a0,-0x7C44(gp) (gCarModelShadow)
+patch=0,EE,2022D754,extended,0C082F41 // jal jal gt2k_menu::Transitive<1>::ApplyAnimation
+patch=0,EE,2022D758,extended,24A521B8 // addiu a1,a1,0x21B8
+
+patch=0,EE,2022D75C,extended,DFBF0000 // ld ra,0x0(sp)
+patch=0,EE,2022D760,extended,100081EF // b gt2k_menu::CameraMan::ResetRotation
+patch=0,EE,2022D764,extended,27BD0010 // addiu sp,sp,0x10
+
+
+// Initialize the new menu option in gt2k_menu::TaikenSequence::PreMenu
+// Reuse the unwind code paths for this
+patch=0,EE,202092E0,extended,84E20002 // lh v0,(a3).carIndex (0x2)
+patch=0,EE,202092E8,extended,AE2200D8 // sw v0,(s1).m_carSelect.value (0xD8)
+patch=0,EE,202092EC,extended,AE2300E4 // sw v1,(s1).m_carSelect.clampValues (0xE4)
+patch=0,EE,202092F0,extended,24020006 // li v0,0x6
+patch=0,EE,202092F4,extended,AE2000DC // sw zero,(s1).m_carSelect.minValue (0xDC)
+patch=0,EE,202092F8,extended,AE2200E0 // sw v0,(s1).m_carSelect.maxValue (0xE0)
+
+patch=0,EE,202092FC,extended,0C08B584 // jal gt2k_menu::TaikenSequence::UpdateColorSelect
+patch=0,EE,20209300,extended,0220202D // move a0,s1
+patch=0,EE,20209304,extended,1000000F // b 0x00209344
+
+// Call gt2k_menu::TaikenSequence::UpdateBadgeVisibility when initializing badges
+patch=0,EE,2020620C,extended,0200202D // move a0,s0
+patch=0,EE,20206210,extended,0808B5B0 // j gt2k_menu::TaikenSequence::UpdateBadgeVisibility
+
+patch=0,EE,20206244,extended,1000FFF1 // b 0x0020620C
+
+
+// Update the race paramaters using the newly added menu option
+patch=0,EE,20201488,extended,8E0300D8 // lw v1,(s0).m_carSelect.value (0xD8)
+patch=0,EE,2020148C,extended,1000FF04 // b sub_2010A0
+patch=0,EE,20201490,extended,A4830002 // sh v1,(a0).carIndex (0x2)
+patch=0,EE,2020A0B4,extended,0C080522 // jal sub_201488
+
+// Change the color select sound to the "secondary selection" high pitched one,
+// as we'll use the "main selection" lower pitched one for the car selection
+patch=0,EE,10209580,extended,000A // li a0,0xA
+
+// Update the camera manager pan out animation not to destroy the object, but to loop it
+patch=0,EE,202A2368,extended,00000001 // SkipFrames
+
+// Store the pointer to the camera manager for later
+patch=0,EE,2020DF1C,extended,AF8483B0 // sw a0,-0x7C50(gp) (gCameraMan)
+patch=0,EE,202027C8,extended,0C0837C7 // jal gt2k_menu::CameraMan::SetPointerAndResetRotation
+
+// Instead, mark it for destruction when fading out the UI elements when backing out
+patch=0,EE,20204E78,extended,8F8483B0 // lw a0,-0x7C50(gp) (gCameraMan)
+patch=0,EE,20204E7C,extended,24020001 // addiu v0,zero,0x1
+patch=0,EE,20204E80,extended,1000F1B3 // b gt2k_menu::TaikenSequence::NotifyAnimationDone
+patch=0,EE,20204E84,extended,AC82001C // sw v0,0x1C(a0)
+
+patch=0,EE,202A3BCC,extended,00204E78 // NotifyAnimationDone_DestroyCameraMan
+
+// Add dpad left/dpad right menu navigation
+
+// CodeCave1:
+patch=0,EE,20201494,extended,0C08C9C0 // jal Control::getButtonDown(void)
+patch=0,EE,20201498,extended,0220202D // move a0,s1
+patch=0,EE,2020149C,extended,30432000 // andi v1,v0,0x2000
+patch=0,EE,202014A0,extended,10600003 // beq v1,zero,0x002014B0
+patch=0,EE,202014A4,extended,30428000 // andi v0,v0,0x8000
+patch=0,EE,202014A8,extended,10000003 // b 0x002014B8
+patch=0,EE,202014AC,extended,24050001 // li a1,0x1
+patch=0,EE,202014B0,extended,10402073 // beq v0,zero,0x00209680
+patch=0,EE,202014B4,extended,2405FFFF // li a1,-0x1
+patch=0,EE,202014B8,extended,0C0838E6 // jal AdvanceMenuOption
+patch=0,EE,202014BC,extended,260400D8 // addiu a0,s0.m_carSelect (0xD8)
+patch=0,EE,202014C0,extended,1000FE0D // b CodeCave2
+
+// CodeCave2:
+patch=0,EE,20200CF8,extended,14400005 // bne v0,zero,0x00200D10
+patch=0,EE,20200CFC,extended,24040005 // li a0,0x5
+patch=0,EE,20200D00,extended,0C080434 // jal PlayUISound
+patch=0,EE,20200D04,extended,24040006 // li a0,0x6
+patch=0,EE,20200D08,extended,1000225D // b 0x00209680
+patch=0,EE,20200D0C,extended,00000000 // nop
+patch=0,EE,20200D10,extended,0C08B56C // jal SwitchCarInMenu
+patch=0,EE,20200D14,extended,0200202D // move a0,s0
+patch=0,EE,20200D18,extended,10002259 // b 0x00209680
+patch=0,EE,20200D1C,extended,00000000 // nop
+
+patch=0,EE,20209610,extended,1040DFA0 // beq v0,zero,CodeCave1
+
+// Perform car switching in the menu
+
+// SwitchCarInMenu:
+// Falls through to gt2k_menu::TaikenSequence::UpdateColorSelect by design!
+patch=0,EE,2022D5B0,extended,27BDFFD0 // addiu sp,sp,-0x30
+patch=0,EE,2022D5B4,extended,FFB10020 // sd s1,0x20(sp)
+patch=0,EE,2022D5B8,extended,FFB00010 // sd s0,0x10(sp)
+patch=0,EE,2022D5BC,extended,FFBF0000 // sd ra,0x0(sp)
+patch=0,EE,2022D5C0,extended,0080802D // move s0,a0
+patch=0,EE,2022D5C4,extended,8C9100D8 // lw s1,(a0).m_carSelect.value (0xD8)
+patch=0,EE,2022D5C8,extended,0C080434 // jal PlayUISound
+patch=0,EE,2022D5CC,extended,24040005 // addiu a0,zero,0x5
+
+patch=0,EE,2022D5D0,extended,3C040027 // lui a0,0x0027
+patch=0,EE,2022D5D4,extended,0220282D // move a1,s1
+patch=0,EE,2022D5D8,extended,0C0867D2 // jal SetUpCarPartsDataForMenu
+patch=0,EE,2022D5DC,extended,248493B8 // addiu a0,a0,-0x6C48
+
+patch=0,EE,2022D5E0,extended,8F838B9C // lw v1,-0x7464(gp) (gSideRuler)
+patch=0,EE,2022D5E4,extended,2402000A // li v0,0xA
+patch=0,EE,2022D5E8,extended,AE000098 // sw zero,(s0).m_colorSelect.value (0x98)
+patch=0,EE,2022D5EC,extended,0C08B5B0 // jal gt2k_menu::TaikenSequence::UpdateBadgeVisibility
+patch=0,EE,2022D5F0,extended,0200202D // move a0,s0
+patch=0,EE,2022D5F4,extended,0C08B5C9 // jal gt2k_menu::TaikenSequence::FadeCarOnSelect
+patch=0,EE,2022D5F8,extended,AC6200D8 // sw v0,0xD8(v1)
+
+patch=0,EE,2022D5FC,extended,0200202D // move a0,s0
+patch=0,EE,2022D600,extended,DFBF0000 // ld ra,0x0(sp)
+patch=0,EE,2022D604,extended,DFB00010 // ld s0,0x10(sp)
+patch=0,EE,2022D608,extended,DFB10020 // ld s1,0x20(sp)
+patch=0,EE,2022D60C,extended,27BD0030 // addiu sp,sp,0x30
+
+
+// Switch cars in race
+patch=0,EE,20216A24,extended,26250048 // addiu a1,s1,0x48
+patch=0,EE,20216A28,extended,03E00008 // jr ra
+patch=0,EE,20216A2C,extended,AC82000C // sw v0,0xC(a0)
+
+patch=0,EE,202161FC,extended,8C660004 // lw a2,0x4(v1)
+patch=0,EE,20216200,extended,03E00008 // jr ra
+patch=0,EE,20216204,extended,00063080 // sll a2,a2,0x02
+
+patch=0,EE,202182DC,extended,0C08587F // jal 0x002161FC
+patch=0,EE,202182E8,extended,00C23021 // addu a2,a2,v0
+patch=0,EE,202182EC,extended,8CC30000 // lw v1,0x0(a2)
+patch=0,EE,202182F4,extended,AE230030 // sw v1,0x30(s1)
+
+patch=0,EE,2022E84C,extended,0C08BB14 // jal 0x0022EC50
+patch=0,EE,2022E850,extended,8C620000 // lw v0,0x0(v1)
+patch=0,EE,1022E856,extended,AE86 // sw a2,?(s4)
+
+patch=0,EE,2022EC50,extended,8C460004 // lw a2,0x4(v0)
+patch=0,EE,2022EC54,extended,03E00008 // jr ra
+patch=0,EE,2022EC58,extended,8C430000 // lw v1,0x0(v0)
+
+// Expand the color picker to have 12 entries max
+
+// Rebuild gt2k_menu::SelectColorUnit::StopAnimations in a different place so our code cave isn't split
+patch=0,EE,2020BBBC,extended,AC8001B0 // sw zero,0x1B0(a0)
+patch=0,EE,2020BBC0,extended,03E00008 // jr ra
+patch=0,EE,2020BBC4,extended,AC8000E8 // sw zero,0xE8(a0)
+
+// Build gt2k_menu::Transitive<1>::ApplyAnimation by offsetting a this pointer
+// into gt2k_menu::SelectColorUnit::ApplyColorSampleAnimation
+patch=0,EE,2020BD04,extended,2484FFDC // addiu a0,a0,-0x24
+
+// Build a helper function
+// gt2k_menu::SelectColorUnit::CreateNoColorName(gt2k_menu::Object* parent, int position)
+// and modify gt2k_menu::SelectColorUnit::SelectColorUnit for our needs
+patch=0,EE,1020BDD8,extended,0020
+patch=0,EE,1020BDF4,extended,3B30 // li ?, gt2k_menu::SideRuler::RectanglePreRender (0x00203B30)
+patch=0,EE,1020BF20,extended,3C60 // li ?, gt2k_menu::SideRuler::RectanglePreRender (0x00203C60)
+patch=0,EE,1020C018,extended,0003 // li ?,0x3
+
+patch=0,EE,2020BBC8,extended,27BDFFD0 // addiu sp,sp,-0x30
+patch=0,EE,2020BBCC,extended,FFB10000 // sd s1,0x0(sp)
+patch=0,EE,2020BBD0,extended,FFB00010 // sd s0,0x10(sp)
+patch=0,EE,2020BBD4,extended,FFBF0020 // sd ra,0x20(sp)
+patch=0,EE,2020BBD8,extended,00A0882D // move s1,a1
+patch=0,EE,2020BBDC,extended,0080802D // move s0,a0
+patch=0,EE,2020BBE0,extended,3C040026 // lui a0,0x0026
+patch=0,EE,2020BBE4,extended,240501BC // li a1,0x1BC (gGt2k_menu_allocator)
+patch=0,EE,2020BBE8,extended,24846BC8 // addiu a0,a0,0x6BC8
+patch=0,EE,2020BBEC,extended,0C0919C2 // jal pdistd::Allocator::allocate
+patch=0,EE,2020BBF0,extended,24060010 // li a2,0x10
+patch=0,EE,2020BBF4,extended,0040202D // move a0,v0
+patch=0,EE,2020BBF8,extended,0220402D // move a4,s1
+patch=0,EE,2020BBFC,extended,0200482D // move a5,s0
+patch=0,EE,2020BC00,extended,8F878B9C // lw a3,-0x7464(gp) (gSideRuler)
+patch=0,EE,2020BC04,extended,DFBF0020 // ld ra,0x20(sp)
+patch=0,EE,2020BC08,extended,DFB00010 // ld s0,0x10(sp)
+patch=0,EE,2020BC0C,extended,DFB10000 // ld s1,0x0(sp)
+patch=0,EE,2020BC10,extended,10000053 // b gt2k_menu::SelectColorUnit::SelectColorUnit
+patch=0,EE,2020BC14,extended,27BD0030 // addiu sp,sp,0x30
+
+// Expand InitializeSelectColorUnits
+patch=0,EE,20204E00,extended,2405000F // li a1,0xF
+
+patch=0,EE,20204E08,extended,0C082EF2 // jal gt2k_menu::SelectColorUnit::CreateNoColorName
+patch=0,EE,20204E0C,extended,0260202D // move a0,s3
+patch=0,EE,20204E10,extended,AF8283D4 // sw v0,-0x7C2C(gp)
+patch=0,EE,20204E14,extended,24050010 // li a1,0x10
+patch=0,EE,20204E18,extended,0C082EF2 // jal gt2k_menu::SelectColorUnit::CreateNoColorName
+patch=0,EE,20204E1C,extended,0260202D // move a0,s3
+patch=0,EE,20204E20,extended,AF8283D8 // sw v0,-0x7C28(gp)
+patch=0,EE,20204E24,extended,24050011 // li a1,0x11
+patch=0,EE,20204E28,extended,0C082EF2 // jal gt2k_menu::SelectColorUnit::CreateNoColorName
+patch=0,EE,20204E2C,extended,0260202D // move a0,s3
+patch=0,EE,20204E30,extended,AF8283DC // sw v0,-0x7C24(gp)
+patch=0,EE,20204E34,extended,24050012 // li a1,0x12
+patch=0,EE,20204E38,extended,0C082EF2 // jal gt2k_menu::SelectColorUnit::CreateNoColorName
+patch=0,EE,20204E3C,extended,0260202D // move a0,s3
+patch=0,EE,20204E40,extended,AF8283E0 // sw v0,-0x7C20(gp)
+patch=0,EE,20204E44,extended,24050013 // li a1,0x13
+patch=0,EE,20204E48,extended,0C082EF2 // jal gt2k_menu::SelectColorUnit::CreateNoColorName
+patch=0,EE,20204E4C,extended,0260202D // move a0,s3
+patch=0,EE,20204E50,extended,AF8283E4 // sw v0,-0x7C1C(gp)
+patch=0,EE,20204E54,extended,24050014 // li a1,0x14
+patch=0,EE,20204E58,extended,0C082EF2 // jal gt2k_menu::SelectColorUnit::CreateNoColorName
+patch=0,EE,20204E5C,extended,0260202D // move a0,s3
+patch=0,EE,20204E60,extended,AF8283E8 // sw v0,-0x7C18(gp)
+patch=0,EE,20204E64,extended,24050015 // li a1,0x15
+patch=0,EE,20204E68,extended,0C082EF2 // jal gt2k_menu::SelectColorUnit::CreateNoColorName
+patch=0,EE,20204E6C,extended,0260202D // move a0,s3
+patch=0,EE,20204E70,extended,1000000A // b 0x00204E9C
+patch=0,EE,20204E74,extended,AF8283EC // sw v0,-0x7C14(gp)
+
+// Expand ResetSelectColorUnits
+patch=0,EE,20205100,extended,10001AC5 // b 0x0020BC18
+
+patch=0,EE,2020BC18,extended,ACA001B0 // sw zero,0x1B0(a1)
+patch=0,EE,2020BC1C,extended,0280282D // daddu a1,s4,zero
+patch=0,EE,2020BC20,extended,0C082F42 // jal gt2k_menu::SelectColorUnit::ApplyColorSampleAnimation
+patch=0,EE,2020BC24,extended,8F8483D4 // lw a0,-0x7C2C(gp)
+patch=0,EE,2020BC28,extended,0280282D // daddu a1,s4,zero
+patch=0,EE,2020BC2C,extended,0C082F42 // jal gt2k_menu::SelectColorUnit::ApplyColorSampleAnimation
+patch=0,EE,2020BC30,extended,8F8483D8 // lw a0,-0x7C28(gp)
+patch=0,EE,2020BC34,extended,0280282D // daddu a1,s4,zero
+patch=0,EE,2020BC38,extended,0C082F42 // jal gt2k_menu::SelectColorUnit::ApplyColorSampleAnimation
+patch=0,EE,2020BC3C,extended,8F8483DC // lw a0,-0x7C24(gp)
+patch=0,EE,2020BC40,extended,0280282D // daddu a1,s4,zero
+patch=0,EE,2020BC44,extended,0C082F42 // jal gt2k_menu::SelectColorUnit::ApplyColorSampleAnimation
+patch=0,EE,2020BC48,extended,8F8483E0 // lw a0,-0x7C20(gp)
+patch=0,EE,2020BC4C,extended,0280282D // daddu a1,s4,zero
+patch=0,EE,2020BC50,extended,0C082F42 // jal gt2k_menu::SelectColorUnit::ApplyColorSampleAnimation
+patch=0,EE,2020BC54,extended,8F8483E4 // lw a0,-0x7C1C(gp)
+patch=0,EE,2020BC58,extended,0280282D // daddu a1,s4,zero
+patch=0,EE,2020BC5C,extended,0C082F42 // jal gt2k_menu::SelectColorUnit::ApplyColorSampleAnimation
+patch=0,EE,2020BC60,extended,8F8483E8 // lw a0,-0x7C18(gp)
+patch=0,EE,2020BC64,extended,0280282D // daddu a1,s4,zero
+patch=0,EE,2020BC68,extended,0C082F42 // jal gt2k_menu::SelectColorUnit::ApplyColorSampleAnimation
+patch=0,EE,2020BC6C,extended,8F8483EC // lw a0,-0x7C14(gp)
+patch=0,EE,2020BC70,extended,0C082EEF // jal gt2k_menu::SelectColorUnit::StopAnimations
+patch=0,EE,2020BC74,extended,8F8483D4 // lw a0,-0x7C2C(gp)
+patch=0,EE,2020BC78,extended,0C082EEF // jal gt2k_menu::SelectColorUnit::StopAnimations
+patch=0,EE,2020BC7C,extended,8F8483D8 // lw a0,-0x7C28(gp)
+patch=0,EE,2020BC80,extended,0C082EEF // jal gt2k_menu::SelectColorUnit::StopAnimations
+patch=0,EE,2020BC84,extended,8F8483DC // lw a0,-0x7C24(gp)
+patch=0,EE,2020BC88,extended,0C082EEF // jal gt2k_menu::SelectColorUnit::StopAnimations
+patch=0,EE,2020BC8C,extended,8F8483E0 // lw a0,-0x7C20(gp)
+patch=0,EE,2020BC90,extended,0C082EEF // jal gt2k_menu::SelectColorUnit::StopAnimations
+patch=0,EE,2020BC94,extended,8F8483E4 // lw a0,-0x7C1C(gp)
+patch=0,EE,2020BC98,extended,0C082EEF // jal gt2k_menu::SelectColorUnit::StopAnimations
+patch=0,EE,2020BC9C,extended,8F8483E8 // lw a0,-0x7C18(gp)
+patch=0,EE,2020BCA0,extended,0C082EEF // jal gt2k_menu::SelectColorUnit::StopAnimations
+patch=0,EE,2020BCA4,extended,8F8483EC // lw a0,-0x7C14(gp)
+patch=0,EE,2020BCA8,extended,1000E517 // b 0x00205108
+patch=0,EE,2020BCAC,extended,00000000 // nop
+
+// Move the remaining options down on the ruler so new colors don't overlap them
+patch=0,EE,10207604,extended,001B
+patch=0,EE,102077BC,extended,001B
+patch=0,EE,10209740,extended,001B
+patch=0,EE,10209A54,extended,001B
+patch=0,EE,1020803C,extended,0020
+patch=0,EE,102081F4,extended,0020
+patch=0,EE,10209958,extended,0020
+patch=0,EE,10209C58,extended,0020
+patch=0,EE,10208834,extended,0025
+patch=0,EE,102089EC,extended,0025
+patch=0,EE,10208BA4,extended,0025
+patch=0,EE,10209B58,extended,0025
+
+// Create the color tables
+patch=0,EE,202A0870,extended,00000005
+patch=0,EE,202A0874,extended,3F800000 // 1
+patch=0,EE,202A0878,extended,3F800000 // 1
+patch=0,EE,202A087C,extended,3F800000 // 1
+patch=0,EE,202A0880,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0884,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0888,extended,3F30B0B1 // 0.690196
+patch=0,EE,202A088C,extended,3F74275B // 0.953725
+patch=0,EE,202A0890,extended,3F74275B // 0.953725
+patch=0,EE,202A0894,extended,3F674DB4 // 0.903529
+patch=0,EE,202A0898,extended,3F189899 // 0.596078
+patch=0,EE,202A089C,extended,3F189899 // 0.596078
+patch=0,EE,202A08A0,extended,3F109091 // 0.564706
+patch=0,EE,202A08A4,extended,3E1A33CD // 0.150588
+patch=0,EE,202A08A8,extended,3E1A33CD // 0.150588
+patch=0,EE,202A08AC,extended,3E1A33CD // 0.150588
+patch=0,EE,202A08B0,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A08B4,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A08B8,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A08BC,extended,3F674DB4 // 0.903529
+patch=0,EE,202A08C0,extended,3D4D9A67 // 0.0501961
+patch=0,EE,202A08C4,extended,3D4D9A67 // 0.0501961
+patch=0,EE,202A08C8,extended,3F109091 // 0.564706
+patch=0,EE,202A08CC,extended,3D008081 // 0.0313725
+patch=0,EE,202A08D0,extended,3D008081 // 0.0313725
+patch=0,EE,202A08D4,extended,3F800000 // 1
+patch=0,EE,202A08D8,extended,3F5A740E // 0.853333
+patch=0,EE,202A08DC,extended,00000000 // 0
+patch=0,EE,202A08E0,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A08E4,extended,3F088889 // 0.533333
+patch=0,EE,202A08E8,extended,00000000 // 0
+patch=0,EE,202A08EC,extended,00000008
+patch=0,EE,202A08F0,extended,3F800000 // 1
+patch=0,EE,202A08F4,extended,3F800000 // 1
+patch=0,EE,202A08F8,extended,00000000 // 0
+patch=0,EE,202A08FC,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0900,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0904,extended,00000000 // 0
+patch=0,EE,202A0908,extended,00000000 // 0
+patch=0,EE,202A090C,extended,3E9A33CD // 0.301176
+patch=0,EE,202A0910,extended,3DCD9A67 // 0.100392
+patch=0,EE,202A0914,extended,00000000 // 0
+patch=0,EE,202A0918,extended,3E40C0C1 // 0.188235
+patch=0,EE,202A091C,extended,3D808081 // 0.0627451
+patch=0,EE,202A0920,extended,3DCD9A67 // 0.100392
+patch=0,EE,202A0924,extended,3E1A33CD // 0.150588
+patch=0,EE,202A0928,extended,3F008081 // 0.501961
+patch=0,EE,202A092C,extended,3D808081 // 0.0627451
+patch=0,EE,202A0930,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A0934,extended,3EA0A0A1 // 0.313725
+patch=0,EE,202A0938,extended,3F800000 // 1
+patch=0,EE,202A093C,extended,3F800000 // 1
+patch=0,EE,202A0940,extended,3F800000 // 1
+patch=0,EE,202A0944,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0948,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A094C,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0950,extended,3F800000 // 1
+patch=0,EE,202A0954,extended,3F800000 // 1
+patch=0,EE,202A0958,extended,3F800000 // 1
+patch=0,EE,202A095C,extended,3F20A0A1 // 0.627451
+patch=0,EE,202A0960,extended,3F20A0A1 // 0.627451
+patch=0,EE,202A0964,extended,3F20A0A1 // 0.627451
+patch=0,EE,202A0968,extended,3F1A33CD // 0.602353
+patch=0,EE,202A096C,extended,3F1A33CD // 0.602353
+patch=0,EE,202A0970,extended,3F1A33CD // 0.602353
+patch=0,EE,202A0974,extended,3EC0C0C1 // 0.376471
+patch=0,EE,202A0978,extended,3EC0C0C1 // 0.376471
+patch=0,EE,202A097C,extended,3EC0C0C1 // 0.376471
+patch=0,EE,202A0980,extended,3E808081 // 0.25098
+patch=0,EE,202A0984,extended,3E808081 // 0.25098
+patch=0,EE,202A0988,extended,3E808081 // 0.25098
+patch=0,EE,202A098C,extended,3E20A0A1 // 0.156863
+patch=0,EE,202A0990,extended,3E20A0A1 // 0.156863
+patch=0,EE,202A0994,extended,3E20A0A1 // 0.156863
+patch=0,EE,202A0998,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A099C,extended,3D4D9A67 // 0.0501961
+patch=0,EE,202A09A0,extended,3DCD9A67 // 0.100392
+patch=0,EE,202A09A4,extended,3EF0F0F1 // 0.470588
+patch=0,EE,202A09A8,extended,3D008081 // 0.0313725
+patch=0,EE,202A09AC,extended,3D808081 // 0.0627451
+patch=0,EE,202A09B0,extended,00000005
+patch=0,EE,202A09B4,extended,3F800000 // 1
+patch=0,EE,202A09B8,extended,3F800000 // 1
+patch=0,EE,202A09BC,extended,3F800000 // 1
+patch=0,EE,202A09C0,extended,3F20A0A1 // 0.627451
+patch=0,EE,202A09C4,extended,3F20A0A1 // 0.627451
+patch=0,EE,202A09C8,extended,3F20A0A1 // 0.627451
+patch=0,EE,202A09CC,extended,3E1A33CD // 0.150588
+patch=0,EE,202A09D0,extended,3E1A33CD // 0.150588
+patch=0,EE,202A09D4,extended,3E1A33CD // 0.150588
+patch=0,EE,202A09D8,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A09DC,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A09E0,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A09E4,extended,3F800000 // 1
+patch=0,EE,202A09E8,extended,3F4D9A67 // 0.803137
+patch=0,EE,202A09EC,extended,3E4D9A67 // 0.200784
+patch=0,EE,202A09F0,extended,3F28A8A9 // 0.658824
+patch=0,EE,202A09F4,extended,3F008081 // 0.501961
+patch=0,EE,202A09F8,extended,3E008081 // 0.12549
+patch=0,EE,202A09FC,extended,3E4D9A67 // 0.200784
+patch=0,EE,202A0A00,extended,3E4D9A67 // 0.200784
+patch=0,EE,202A0A04,extended,3ECD9A67 // 0.401569
+patch=0,EE,202A0A08,extended,3E008081 // 0.12549
+patch=0,EE,202A0A0C,extended,3E008081 // 0.12549
+patch=0,EE,202A0A10,extended,3E808081 // 0.25098
+patch=0,EE,202A0A14,extended,3F800000 // 1
+patch=0,EE,202A0A18,extended,3F800000 // 1
+patch=0,EE,202A0A1C,extended,3F800000 // 1
+patch=0,EE,202A0A20,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0A24,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0A28,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0A2C,extended,00000005
+patch=0,EE,202A0A30,extended,3F674DB4 // 0.903529
+patch=0,EE,202A0A34,extended,00000000 // 0
+patch=0,EE,202A0A38,extended,3E1A33CD // 0.150588
+patch=0,EE,202A0A3C,extended,3F109091 // 0.564706
+patch=0,EE,202A0A40,extended,00000000 // 0
+patch=0,EE,202A0A44,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A0A48,extended,3E1A33CD // 0.150588
+patch=0,EE,202A0A4C,extended,3E4D9A67 // 0.200784
+patch=0,EE,202A0A50,extended,3F1A33CD // 0.602353
+patch=0,EE,202A0A54,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A0A58,extended,3E008081 // 0.12549
+patch=0,EE,202A0A5C,extended,3EC0C0C1 // 0.376471
+patch=0,EE,202A0A60,extended,3F800000 // 1
+patch=0,EE,202A0A64,extended,3F800000 // 1
+patch=0,EE,202A0A68,extended,3F800000 // 1
+patch=0,EE,202A0A6C,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0A70,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0A74,extended,3F30B0B1 // 0.690196
+patch=0,EE,202A0A78,extended,3F74275B // 0.953725
+patch=0,EE,202A0A7C,extended,3F74275B // 0.953725
+patch=0,EE,202A0A80,extended,3F74275B // 0.953725
+patch=0,EE,202A0A84,extended,3F189899 // 0.596078
+patch=0,EE,202A0A88,extended,3F189899 // 0.596078
+patch=0,EE,202A0A8C,extended,3F189899 // 0.596078
+patch=0,EE,202A0A90,extended,3E808081 // 0.25098
+patch=0,EE,202A0A94,extended,3E808081 // 0.25098
+patch=0,EE,202A0A98,extended,3E808081 // 0.25098
+patch=0,EE,202A0A9C,extended,3E20A0A1 // 0.156863
+patch=0,EE,202A0AA0,extended,3E20A0A1 // 0.156863
+patch=0,EE,202A0AA4,extended,3E20A0A1 // 0.156863
+patch=0,EE,202A0AA8,extended,00000007
+patch=0,EE,202A0AAC,extended,3D4D9A67 // 0.0501961
+patch=0,EE,202A0AB0,extended,3E4D9A67 // 0.200784
+patch=0,EE,202A0AB4,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0AB8,extended,3D008081 // 0.0313725
+patch=0,EE,202A0ABC,extended,3E008081 // 0.12549
+patch=0,EE,202A0AC0,extended,3EF0F0F1 // 0.470588
+patch=0,EE,202A0AC4,extended,3F800000 // 1
+patch=0,EE,202A0AC8,extended,3F800000 // 1
+patch=0,EE,202A0ACC,extended,3F800000 // 1
+patch=0,EE,202A0AD0,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0AD4,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0AD8,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0ADC,extended,3F74275B // 0.953725
+patch=0,EE,202A0AE0,extended,3F74275B // 0.953725
+patch=0,EE,202A0AE4,extended,3F74275B // 0.953725
+patch=0,EE,202A0AE8,extended,3F189899 // 0.596078
+patch=0,EE,202A0AEC,extended,3F189899 // 0.596078
+patch=0,EE,202A0AF0,extended,3F189899 // 0.596078
+patch=0,EE,202A0AF4,extended,3F4D9A67 // 0.803137
+patch=0,EE,202A0AF8,extended,3F4D9A67 // 0.803137
+patch=0,EE,202A0AFC,extended,3F674DB4 // 0.903529
+patch=0,EE,202A0B00,extended,3F008081 // 0.501961
+patch=0,EE,202A0B04,extended,3F008081 // 0.501961
+patch=0,EE,202A0B08,extended,3F109091 // 0.564706
+patch=0,EE,202A0B0C,extended,3E1A33CD // 0.150588
+patch=0,EE,202A0B10,extended,3E1A33CD // 0.150588
+patch=0,EE,202A0B14,extended,3E1A33CD // 0.150588
+patch=0,EE,202A0B18,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A0B1C,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A0B20,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A0B24,extended,3F4D9A67 // 0.803137
+patch=0,EE,202A0B28,extended,3D4D9A67 // 0.0501961
+patch=0,EE,202A0B2C,extended,3DCD9A67 // 0.100392
+patch=0,EE,202A0B30,extended,3F008081 // 0.501961
+patch=0,EE,202A0B34,extended,3D008081 // 0.0313725
+patch=0,EE,202A0B38,extended,3D808081 // 0.0627451
+patch=0,EE,202A0B3C,extended,3F800000 // 1
+patch=0,EE,202A0B40,extended,3F800000 // 1
+patch=0,EE,202A0B44,extended,00000000 // 0
+patch=0,EE,202A0B48,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0B4C,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0B50,extended,00000000 // 0
+patch=0,EE,202A0B54,extended,0000000C
+patch=0,EE,202A0B58,extended,00000000 // 0
+patch=0,EE,202A0B5C,extended,3F0D5A27 // 0.552157
+patch=0,EE,202A0B60,extended,3EE74DB4 // 0.451765
+patch=0,EE,202A0B64,extended,00000000 // 0
+patch=0,EE,202A0B68,extended,3EB0B0B1 // 0.345098
+patch=0,EE,202A0B6C,extended,3E909091 // 0.282353
+patch=0,EE,202A0B70,extended,3DCD9A67 // 0.100392
+patch=0,EE,202A0B74,extended,3EB3E71A // 0.351373
+patch=0,EE,202A0B78,extended,3F270D74 // 0.652549
+patch=0,EE,202A0B7C,extended,3D808081 // 0.0627451
+patch=0,EE,202A0B80,extended,3E60E0E1 // 0.219608
+patch=0,EE,202A0B84,extended,3ED0D0D1 // 0.407843
+patch=0,EE,202A0B88,extended,3DCD9A67 // 0.100392
+patch=0,EE,202A0B8C,extended,3E4D9A67 // 0.200784
+patch=0,EE,202A0B90,extended,3ECD9A67 // 0.401569
+patch=0,EE,202A0B94,extended,3D808081 // 0.0627451
+patch=0,EE,202A0B98,extended,3E008081 // 0.12549
+patch=0,EE,202A0B9C,extended,3E808081 // 0.25098
+patch=0,EE,202A0BA0,extended,3F800000 // 1
+patch=0,EE,202A0BA4,extended,3F800000 // 1
+patch=0,EE,202A0BA8,extended,3F800000 // 1
+patch=0,EE,202A0BAC,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0BB0,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0BB4,extended,3F38B8B9 // 0.721569
+patch=0,EE,202A0BB8,extended,3F800000 // 1
+patch=0,EE,202A0BBC,extended,3F800000 // 1
+patch=0,EE,202A0BC0,extended,3F800000 // 1
+patch=0,EE,202A0BC4,extended,3F28A8A9 // 0.658824
+patch=0,EE,202A0BC8,extended,3F28A8A9 // 0.658824
+patch=0,EE,202A0BCC,extended,3F28A8A9 // 0.658824
+patch=0,EE,202A0BD0,extended,3F800000 // 1
+patch=0,EE,202A0BD4,extended,3F800000 // 1
+patch=0,EE,202A0BD8,extended,3F800000 // 1
+patch=0,EE,202A0BDC,extended,3F28A8A9 // 0.658824
+patch=0,EE,202A0BE0,extended,3F28A8A9 // 0.658824
+patch=0,EE,202A0BE4,extended,3F20A0A1 // 0.627451
+patch=0,EE,202A0BE8,extended,3F674DB4 // 0.903529
+patch=0,EE,202A0BEC,extended,3F674DB4 // 0.903529
+patch=0,EE,202A0BF0,extended,3F674DB4 // 0.903529
+patch=0,EE,202A0BF4,extended,3F109091 // 0.564706
+patch=0,EE,202A0BF8,extended,3F109091 // 0.564706
+patch=0,EE,202A0BFC,extended,3F109091 // 0.564706
+patch=0,EE,202A0C00,extended,3EB3E71A // 0.351373
+patch=0,EE,202A0C04,extended,3EB3E71A // 0.351373
+patch=0,EE,202A0C08,extended,3ECD9A67 // 0.401569
+patch=0,EE,202A0C0C,extended,3E60E0E1 // 0.219608
+patch=0,EE,202A0C10,extended,3E60E0E1 // 0.219608
+patch=0,EE,202A0C14,extended,3E808081 // 0.25098
+patch=0,EE,202A0C18,extended,3E1A33CD // 0.150588
+patch=0,EE,202A0C1C,extended,3E1A33CD // 0.150588
+patch=0,EE,202A0C20,extended,3E4D9A67 // 0.200784
+patch=0,EE,202A0C24,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A0C28,extended,3DC0C0C1 // 0.0941176
+patch=0,EE,202A0C2C,extended,3E008081 // 0.12549
+patch=0,EE,202A0C30,extended,3F40C0C1 // 0.752941
+patch=0,EE,202A0C34,extended,3D4D9A67 // 0.0501961
+patch=0,EE,202A0C38,extended,3E4D9A67 // 0.200784
+patch=0,EE,202A0C3C,extended,3EF0F0F1 // 0.470588
+patch=0,EE,202A0C40,extended,3D008081 // 0.0313725
+patch=0,EE,202A0C44,extended,3E008081 // 0.12549
+patch=0,EE,202A0C48,extended,3F4D9A67 // 0.803137
+patch=0,EE,202A0C4C,extended,3EE74DB4 // 0.451765
+patch=0,EE,202A0C50,extended,00000000 // 0
+patch=0,EE,202A0C54,extended,3F008081 // 0.501961
+patch=0,EE,202A0C58,extended,3E909091 // 0.282353
+patch=0,EE,202A0C5C,extended,00000000 // 0
+patch=0,EE,202A0C60,extended,3F800000 // 1
+patch=0,EE,202A0C64,extended,3F800000 // 1
+patch=0,EE,202A0C68,extended,00000000 // 0
+patch=0,EE,202A0C6C,extended,3F30B0B1 // 0.690196
+patch=0,EE,202A0C70,extended,3F20A0A1 // 0.627451
+patch=0,EE,202A0C74,extended,00000000 // 0
+
+patch=0,EE,202A0858,extended,002A0870
+patch=0,EE,202A085C,extended,002A08EC
+patch=0,EE,202A0860,extended,002A09B0
+patch=0,EE,202A0864,extended,002A0A2C
+patch=0,EE,202A0868,extended,002A0AA8
+patch=0,EE,202A086C,extended,002A0B54
+
 [Auto-activate analogs]
 description=Automatically put gamepads in an analog mode, like in later Gran Turismo games.
 author=Silent
