@@ -12,4 +12,10 @@ patch=1,EE,00153a38,word,3c014455
 patch=1,EE,002afc20,word,3c013f2c //3c013f66
 patch=1,EE,002afc24,word,3421cccd //34216666
 
-
+[Restore Dead Pan technique]
+description=Restores the Japanese/Korean-exclusive Dead Pan technique.
+author=The Cutting Room Floor
+patch=1,EE,201250A8,extended,00001021
+patch=1,EE,201251CC,extended,00001021
+patch=1,EE,20125264,extended,00002021
+patch=1,EE,20125338,extended,00001821
