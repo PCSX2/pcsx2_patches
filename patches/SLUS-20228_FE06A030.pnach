@@ -48,6 +48,7 @@ description=Patches the game to run at 60 FPS
 patch=1,EE,201A6F50,extended,10000009
 
 [No Noise Filter]
+author=Snake356
 description=Noise Filter will be deactivated
 patch=1,EE,001a7154,word,24030000
 patch=1,EE,0017e7c8,word,24070000
@@ -56,5 +57,6 @@ patch=1,EE,002382cc,word,24030000
 patch=1,EE,001f24e4,word,24030000
 
 [Map on the Screen]
+author=Snake356
 description=Activate auxiliary Map on the Screen!
 patch=1,EE,01236269,byte,00000001
