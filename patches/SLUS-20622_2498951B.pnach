@@ -33,12 +33,12 @@ description=Patches the game to run at 60 FPS
 patch=1,EE,2013058C,extended,00000000
 
 [Camera behind Heather]
-author=RODOLFO NUÑEZ
-description=RE4 Style Camera
+author=Snake356
+description=RE4 Style Camera for SH3
 patch=1,EE,21E7211C,extended,00000001
 
 [Camera Angle fix Press L3]
-author=RODOLFO NUÑEZ
-description=Fix Camera Angle with L3
+author=Snake356
+description=Fix Camera Angle with L3 (RE4 Style Camera)
 patch=1,EE,D03547DC,extended,0000FFFD
 patch=1,EE,01E72114,extended,00000000
