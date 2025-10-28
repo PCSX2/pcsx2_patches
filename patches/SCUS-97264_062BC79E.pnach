@@ -1,0 +1,17 @@
+gametitle=SFOS Prototype Review Code Mar 6 2004 (NTSC-U) (SCUS-97264) 062BC79E
+
+[Widescreen 16:9]
+author=YukiXXL
+gsaspectratio=16:9
+
+//Gameplay fix
+patch=1,EE,00397C10,extended,3C043F40
+patch=1,EE,20397C14,extended,44841800
+patch=1,EE,20397C18,extended,46030003
+patch=1,EE,20397C1C,extended,460318C3
+patch=1,EE,20397C20,extended,46031840
+patch=1,EE,20397C94,extended,E603007C
+
+//FMVs fix
+patch=1,EE,1041AF1C,extended,24127600
+patch=1,EE,1041AF24,extended,24101400
