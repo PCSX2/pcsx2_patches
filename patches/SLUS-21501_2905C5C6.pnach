@@ -61,7 +61,7 @@ patch=0,EE,20104E1C,extended,AE210044 // sw at,0x44(s1)
 patch=0,EE,2010518C,extended,3C033C88
 patch=0,EE,20105190,extended,34638889
 
-// MISSING_NOTE
+// Affects animation speed of some map objects (such as the chefs in the banquet hall)
 patch=0,EE,20109D1C,extended,3C024270
 
 // How long rubble objects (e.g. probably just the falling furniture when Ivan sails through an apartment - might be more a ZZT1 thing)
@@ -80,25 +80,28 @@ patch=0,EE,201104BC,extended,24420040
 // For normal items/survival points
 patch=0,EE,20110D3C,extended,24420040
 
-// Players
+// Players/npcs
 
 // MISSING_NOTE
 patch=0,EE,20129D30,extended,3C043C88
 patch=0,EE,20129D34,extended,34848889
 
-// MISSING_NOTE
+// Affects how long it takes character actors to rotate/pitch their head to look at something
+// (might also affect some other rotation stuff, not sure)
 patch=0,EE,20132F20,extended,3C034270
 
-// MISSING_NOTE
+// This prevents NPCs/player from sometimes getting stuck on ledges when trying to drop down
 patch=0,EE,2013C978,extended,3C033D4C
 
-// MISSING_NOTE
+// I think this affects the internal timers for some player animations
 patch=0,EE,201445B8,extended,3C024270
 
-// MISSING_NOTE
+// I think this affects the internal timers for some player animations
 patch=0,EE,20144E3C,extended,3C024270
 
-// MISSING_NOTE
+// I think this affects the internal timers for some player animations
+// (for example if you set this to a really high value, grab a handrail, and release the grab button, the animation will remain for the player grabbing the rail)
+// (20fps=20.0f, 30fps=30.0f, 60fps=60.0f)
 patch=0,EE,20145398,extended,3C034270
 
 // Movement speed divisor (used in player actor initialization)
@@ -112,7 +115,7 @@ patch=0,EE,201587A0,extended,3442F000
 // (and as such we'd move 2x slower at 60fps by default) -- we just correct that by multiplying the
 // left analog stick magnitude by 2 here.
 // (These replace a fabsf call -- but the result is just used for comparing against <= 0.0f anyways,
-// since the range of fabsf is [0..+inf) the comparison can only be true for 0.0f, and fabsf(0.0f) would be 0.0f) 
+// since the range of fabsf is [0..+inf) the comparison can only be true for 0.0f, and fabsf(0.0f) would be 0.0f)
 patch=0,EE,20162B4C,extended,3C014000 // lui at,0x4000
 patch=0,EE,20162B50,extended,44816000 // mtc1 at,f12
 patch=0,EE,20162B58,extended,460CAD42 // mtc1 zero,f01
@@ -157,7 +160,7 @@ patch=0,EE,20177038,extended,34428889
 patch=0,EE,2017B6F4,extended,3C023C88
 patch=0,EE,2017B6F8,extended,34428889
 
-// MISSING_NOTE
+// Affects transition speed to/from first person (when pressing Triangle)
 patch=0,EE,2017F7F0,extended,3C034270
 
 // Various menu stuff
@@ -251,7 +254,7 @@ patch=0,EE,2018A14C,extended,0
 patch=0,EE,2018A150,extended,00809021 // addu s2,a0,zero ; Replace original instruction at jumpsite
 patch=0,EE,2018A154,extended,8E440198 // lw a0,0x198(s2)
 patch=0,EE,2018A158,extended,24020002 // addiu v0,zero,0x2 ; Attempt to instantly print dialogue choices (seems to work but a bit of a shot in the dark)
-patch=0,EE,2018A15C,extended,14820008 // bne a0,v0,0x0018A180 
+patch=0,EE,2018A15C,extended,14820008 // bne a0,v0,0x0018A180
 patch=0,EE,2018A160,extended,3C010019 // lui at,0x0019
 patch=0,EE,2018A164,extended,8C22A14C // lw v0,-0x5EB4(at) ; Load timer
 patch=0,EE,2018A168,extended,30430001 // andi v1,v0,0x0001
@@ -443,8 +446,6 @@ patch=0,EE,201EEA64,extended,3C024270
 
 // MISSING_NOTE
 patch=0,EE,201EEAE4,extended,3C033C88
-
-// MISSING_NOTE
 patch=0,EE,201EEAEC,extended,34638889
 
 // MISSING_NOTE
@@ -472,16 +473,18 @@ patch=0,EE,201F0F74,extended,AF82B420
 patch=0,EE,201F0F98,extended,AF92B420
 patch=0,EE,201F0FA8,extended,AF80B420
 
-// MISSING_NOTE
+// I think this affects the internal timers for some animations
+// (20fps=20.0f, 30fps=30.0f, 60fps=60.0f)
 patch=0,EE,201F72E0,extended,3C024270
 
-// MISSING_NOTE
+// I think this affects the internal timers for some animations
+// (20fps=20.0f, 30fps=30.0f, 60fps=60.0f)
 patch=0,EE,201F7590,extended,3C034270
 
 // MISSING_NOTE
 patch=0,EE,202000B4,extended,3C034270
 
-// MISSING_NOTE
+// Affects how fast the game fades back in after picking up and equipping a new item
 patch=0,EE,20208648,extended,3C024120
 
 // Item?
@@ -496,18 +499,20 @@ patch=0,EE,2020CB8C,extended,3C024270
 
 // Compass UI?
 
-// MISSING_NOTE
+// Affects how fast the main player has to be moving per frame for the bottom right compass HUD to shrink
+// (20fps=0.048f, 30fps=0.032f, 60fps=0.016f)
 patch=0,EE,202173A4,extended,3C023C83
-
-// MISSING_NOTE
 patch=0,EE,202173AC,extended,3C023C83
 patch=0,EE,202173B0,extended,3442126F
 
-// MISSING_NOTE
+// Affects how fast the compass HUD shrinks when opening the map
 patch=0,EE,202175CC,extended,3C023D88
-
-// MISSING_NOTE
 patch=0,EE,202175D8,extended,34428889
+
+// Affects how fast compass HUD shrinks/grows when set to shrink/grow
+// (last initialization)
+patch=0,EE,20217624,extended,3C033D08
+patch=0,EE,20217630,extended,34628889
 
 // MISSING_NOTE
 patch=0,EE,202176EC,extended,3C023D88
@@ -525,7 +530,8 @@ patch=0,EE,20217860,extended,34428889
 patch=0,EE,2021792C,extended,3C023D88
 patch=0,EE,20217938,extended,34428889
 
-// MISSING_NOTE
+// Affects how fast compass HUD shrinks/grows when set to shrink/grow
+// (set when exiting the item menu)
 patch=0,EE,20217A14,extended,3C033D08
 patch=0,EE,20217A20,extended,34628889
 
@@ -549,7 +555,8 @@ patch=0,EE,20217CB8,extended,34428889
 patch=0,EE,20217D80,extended,3C033D08
 patch=0,EE,20217D8C,extended,34628889
 
-// MISSING_NOTE
+// Affects how fast compass HUD shrinks/grows when set to shrink/grow
+// (initial initialization -- see 217624)
 patch=0,EE,20217DE8,extended,3C023D08
 patch=0,EE,20217DF0,extended,34428889
 
@@ -559,43 +566,51 @@ patch=0,EE,20217DF0,extended,34428889
 patch=0,EE,20218774,extended,84630028 // lh v1,0x28(v1)
 patch=0,EE,20218780,extended,3187A // dsrl v1,v1,0x01
 
-// MISSING_NOTE
+// Affects how quickly the heat arrow rotates to upward position
 patch=0,EE,20218960,extended,3C023DA0
 patch=0,EE,20218968,extended,3442D97D
 
-// MISSING_NOTE
+// Affects how quickly the heat arrow rotates to neutral
 patch=0,EE,20218978,extended,3C023DA0
 patch=0,EE,20218980,extended,3442D97D
 
 // Doubles period of 2d animation on heat arrow from 13 frames -> 26 (see change at 218774)
 patch=0,EE,20218A84,extended,2842001A
 
-// MISSING_NOTE
+// Affects how quickly the heat arrow rotates to downward position
 patch=0,EE,20218B04,extended,3C023DA0
 patch=0,EE,20218B0C,extended,3442D97D
 
-// MISSING_NOTE
+// Affects how fast the main player has to be moving per frame for the bottom left wet/BT HUD to shrink
+// (20fps=0.048f, 30fps=0.032f, 60fps=0.016f)
 patch=0,EE,20218D64,extended,3C023C83
 patch=0,EE,20218D6C,extended,3C023C83
 patch=0,EE,20218D70,extended,3442126F
 
-// MISSING_NOTE
+// Affects how fast wetness HUD shrinks/grows when set to shrink/grow
+// (set when exiting the map)
 patch=0,EE,202191E8,extended,3C033D08
 patch=0,EE,202191EC,extended,34638889
 
 // MISSING_NOTE
-patch=0,EE,20219200,extended,3C033CF5
-patch=0,EE,20219208,extended,3463C28F
+// Not sure what exactly this is used for, but is executed when exiting map
+// (20fps~=0.2143f, 30fps=0.1f, 60fps=0.1f)
+patch=0,EE,20219200,extended,3C033DCC
+patch=0,EE,20219208,extended,3463CCCD
 
-// MISSING_NOTE
+// Affects how fast wetness HUD shrinks when opening map
 patch=0,EE,202193D8,extended,3C023D88
 patch=0,EE,202193E0,extended,34428889
 
 // MISSING_NOTE
-patch=0,EE,202193EC,extended,3C02BCF5
-patch=0,EE,202193F4,extended,3442C28F
+// Not sure what this affects exactly, but interpolating to 60fps
+// causes the wetness indicator to briefly still show when bringing up the map
+// (20fps~=-0.2143f, 30fps=-0.1f, 60fps=-0.1f)
+patch=0,EE,202193EC,extended,3C02BDCC
+patch=0,EE,202193F4,extended,3442CCCD
 
-// MISSING_NOTE
+// Affects how fast wetness HUD shrinks/grows when set to shrink/grow
+// (initial initialization)
 patch=0,EE,202194B4,extended,3C023D08
 patch=0,EE,202194BC,extended,34428889
 
@@ -617,24 +632,24 @@ patch=0,EE,20219F74,extended,248400CC
 // Affects speed of flashing cursor on game over screen (before selecting option)
 patch=0,EE,2021A030,extended,24E20044
 
-// MISSING_NOTE
+// Affects how fast the "Try Again? Yes No" text fades in on game over screen
 patch=0,EE,2021A124,extended,3C023D08
 patch=0,EE,2021A12C,extended,34438889
 
-// MISSING_NOTE
+// Affects how fast the game over screen fades in
 patch=0,EE,2021A2C4,extended,3C033D08
 patch=0,EE,2021A2CC,extended,34658889
 
-// MISSING_NOTE
+// Number of frames before the "Try Again? Yes No" text starts to fade in after game over screen fade finishes
 patch=0,EE,2021A304,extended,2402003C
 
 // Something to do with the game over menu
 
-// MISSING_NOTE
+// How long the fade out lasts when the player dies (health loss/instant death -- unknown case)
 patch=0,EE,2021A600,extended,3C023C36
 patch=0,EE,2021A604,extended,34420B61
 
-// MISSING_NOTE
+// How long the fade out lasts when the player dies (health loss/instant death -- normal case)
 patch=0,EE,2021A614,extended,3C023BB6
 patch=0,EE,2021A618,extended,34420B61
 
@@ -652,16 +667,16 @@ patch=0,EE,2021CD04,extended,3C024100
 // MISSING_NOTE
 patch=0,EE,2021CE74,extended,3C024100
 
-// MISSING_NOTE
+// Affects how long the game takes to fade back in after closing map
 patch=0,EE,2021CFB8,extended,3C024180
 
-// MISSING_NOTE
+// Affects how long the map screen takes to fade out
 patch=0,EE,2021D094,extended,3C024180
 
 // MISSING_NOTE
 patch=0,EE,2021D488,extended,3C024180
 
-// MISSING_NOTE
+// Affects how long the map screen takes to fade in (R3)
 patch=0,EE,2021D4B8,extended,3C024180
 patch=0,EE,2021D4BC,extended,3C024180
 
@@ -727,7 +742,7 @@ patch=0,EE,2023B594,extended,34648889
 
 //
 
-// MISSING_NOTE
+// Affects how quickly rain drops fall on the water in the <News> screen
 patch=0,EE,2024056C,extended,3C024270
 
 // MISSING_NOTE
@@ -1452,10 +1467,12 @@ patch=0,EE,202CBD14,extended,24040001
 patch=0,EE,202CBD18,extended,3E00008
 patch=0,EE,202CBD1C,extended,AC64024C
 
-// in-executable scripts
-
 // MISSING_NOTE
-patch=0,EE,20334EE8,extended,3C024270
+// Has something to with how rain (i.e. the slanted lines, not the straight rain textures) renders
+// (US=20, PAL=30, kept at 30 as rain was a lot less prevalent at 60)
+patch=0,EE,20334EE8,extended,3C0241F0
+
+// in-executable scripts
 
 // MISSING_NOTE
 patch=0,EE,203372C4,extended,3C034208
@@ -1475,6 +1492,21 @@ patch=0,EE,2033AA70,extended,34638889
 
 // Fade in speed when giving items?
 patch=0,EE,2033C28C,extended,3C0241A0
+
+// Affects how long it takes for the item menu background to fade out
+patch=0,EE,2033D0A0,extended,3C03BDAA
+
+// Affects how long it takes for the item menu background to fade in after pressing Square
+patch=0,EE,2033D138,extended,3C033DAA
+
+// Affects how fast item menu elements animate (e.g. when changing categories, or entering/exiting menu)
+patch=0,EE,2033DA08,extended,00052840 // sll a1,a1,0x01
+
+// Affects how fast weight squares flash when item is highlighted in item menu
+patch=0,EE,2033E760,extended,24630011
+
+// Affects the white outline pulse speed around player icon in item menu if player is under effect of Heating Pad, etc.
+patch=0,EE,2033EEA4,extended,24430011
 
 // MISSING_NOTE
 patch=0,EE,20348890,extended,2405003C
@@ -1534,8 +1566,8 @@ patch=0,EE,203A9574,extended,258
 patch=0,EE,203A957C,extended,3C
 patch=0,EE,203A9598,extended,3C
 
-// Something to do with items
-// MISSING_NOTE
+// Corrects how wet the player gets from events which instantly set how wet they are
+// (e.g. opening the door with a bunch of water behind it in the first level)
 patch=0,EE,203A9928,extended,42700000
 patch=0,EE,203A9930,extended,42700000
 patch=0,EE,203A993C,extended,43480000
@@ -2858,9 +2890,9 @@ patch=1,EE,20749F50,extended,200302D
 // IMENU.BIN (Item Menu + item pickup prompts)
 
 // String compare file name
-patch=1,EE,E04B4D49,extended,00718A20 // "IM"
-patch=1,EE,E04A4E45,extended,00718A22 // "EN"
-patch=1,EE,E0492E55,extended,00718A24 // "U."
+patch=1,EE,E04D4D49,extended,00718A20 // "IM"
+patch=1,EE,E04C4E45,extended,00718A22 // "EN"
+patch=1,EE,E04B2E55,extended,00718A24 // "U."
 
 // MISSING_NOTE
 patch=1,EE,2071A3D0,extended,3C033F80
@@ -2984,6 +3016,12 @@ patch=1,EE,20730EC0,extended,34428889
 // MISSING_NOTE
 patch=1,EE,20730EFC,extended,3C024208
 patch=1,EE,20730F00,extended,34428889
+
+// In equip screen, affect how fast player actor rotates
+patch=1,EE,20733F98,extended,3C023C0E
+// In equip screen, affect how fast selected item part pulses
+patch=1,EE,20733FD4,extended,3C023D8E
+
 // MISSING_NOTE
 patch=1,EE,20735B50,extended,3C024180
 
