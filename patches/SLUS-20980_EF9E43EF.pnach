@@ -1,3 +1,5 @@
+gametitle=Ys - The Ark of Napishtim (NTSC-U) (SLUS-20980)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
 description=Ys - The Ark of Napishtim - Widescreen Hack (16:9) (NTSC-U)
@@ -5,4 +7,16 @@ patch=1,EE,202E0A28,extended,3F19999A // hor
 //patch=1,EE,202E0A2C,extended,3F80EEEF //vert
 patch=1,EE,00215aa0,word,3c033faa // r fix
 
+[Fix Analog Deadspot]
+author=Souzooka
+description=Fixes an issue where the player will not move if the analog stick is held to the top left.
 
+// This game skips movement processing if the analog stick axes are both 0.
+// This causes the top left of the stick to be a deadzone if using increased sensitivity.
+// Likely, the programmer wished to skip this processing if the analog stick was neutral,
+// but erroneously thought that X=0,Y=0 was neutral (instead of top left).
+
+// Nop X=0 check
+patch=0,EE,2021FC28,extended,0
+// Nop Y=0 check
+patch=0,EE,2021FC30,extended,0
