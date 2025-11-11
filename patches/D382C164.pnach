@@ -1,0 +1,35 @@
+//comment=Shin Megami Tensei - Digital Devil Saga 2 NTSC-U-Widescreen Hack (16:9)
+patch=1,EE,2037F5E4,extended,3FC00000
+
+
+// NOP out old interlaced field switch
+patch=1,EE,0032A408,word,00000000
+
+// Another field switch here that needs to be NOP'd to prevent
+// post processing effects from getting misaligned when entering
+// and leaving menus.
+patch=1,EE,0032DF10,word,00000000
+
+// Patch sceGsResetGraph arguments to set 480p
+patch=1,EE,00348C24,word,24110000 // addiu $s1, 0, 0x00
+patch=1,EE,00348C28,word,24120050 // addiu $s2, 0, 0x50
+patch=1,EE,00348C2C,word,24020001 // addiu $s3, 0, 0x01
+
+
+// P1 Press L1+Select To Disable Random Battles 
+patch=1,EE,D0476282,extended,0000FBFE
+patch=1,EE,2011EA28,extended,00000000
+
+// P1 Press L2+Select To Enable Random Battles 
+patch=1,EE,D0476282,extended,0000FEFE
+patch=1,EE,2011EA28,extended, a4831444
+
+
+//enable both of these as a pair by removing the //
+
+// Atma Gain X2
+patch=1,EE,201b2040,extended,00118840
+
+// Random Battles Occurrence Halved
+patch=1,EE,1011EA0C,extended,00000003
+patch=1,EE,1011EA24,extended,00000001

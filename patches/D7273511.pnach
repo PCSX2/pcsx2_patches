@@ -1,0 +1,35 @@
+//comment=Shin Megami Tensei - Digital Devil Saga (SLUS-20974) (CRC-D7273511)
+//gametitle=Digital Devil Saga
+patch=1,EE,203245E4,word,3FD3A06D
+
+// NOP out old interlaced field switch
+patch=1,EE,002D1558,word,00000000
+
+// Another field switch here that needs to be NOP'd to prevent
+// post processing effects from getting misaligned when entering
+// and leaving menus.
+patch=1,EE,002D5060,word,00000000
+
+// Patch sceGsResetGraph arguments to set 480p
+patch=1,EE,002EFD7C,word,24110000 // addiu $s1, 0, 0x00
+patch=1,EE,002EFD80,word,24120050 // addiu $s2, 0, 0x50
+patch=1,EE,002EFD84,word,24020001 // addiu $s3, 0, 0x01
+
+
+// P1 Press L1+Select To Disable Random Battles 
+patch=1,EE,D03F9902,extended,0000FBFE
+patch=1,EE,2011CC88,extended,00000000
+
+// P1 Press L2+Select To Enable Random Battles 
+patch=1,EE,D03F9902,extended,0000FEFE
+patch=1,EE,2011CC88,extended,A4831364
+
+
+//enable both of these as a pair by removing the //
+
+// Atma Gain X2
+patch=1,EE,201A7B98,extended,00118840
+
+// Random Battles Occurrence Halved
+patch=1,EE,1011CC6C,extended,00000003
+patch=1,EE,1011CC84,extended,00000001

@@ -1,0 +1,33 @@
+gametitle=Shin Megami Tensei - Nocturne (SLUS-20911) (CRC-E8FCF8EC)
+comment=Widescreen Hack. 
+patch=1,EE,202F59B4,word,3FC6C6E7
+
+
+// No Random Battles 
+//patch=1,EE,0124A1F8,extended,00000000
+
+//Right Joystick Up Down Invert Fix
+patch=1,EE,002ca65c,word,0803f414
+patch=1,EE,000fd050,word,00c0c821
+patch=1,EE,000fd054,word,080b2999
+patch=1,EE,000fd058,word,24030070
+patch=1,EE,002ca6cc,word,0803f417
+patch=1,EE,000fd05c,word,93210005
+patch=1,EE,000fd060,word,382400ff
+patch=1,EE,000fd064,word,03e00008
+patch=1,EE,000fd068,word,a3240005
+
+//Progressive Scan Patches Below
+
+//NOP out old interlaced field switch
+patch=1,EE,002AA1B4,word,00000000
+
+//Another field switch here that needs to be NOP'd to prevent
+//post processing effects from getting misaligned when entering
+//and leaving menus.
+patch=1,EE,002ADBE0,word,00000000
+
+//Patch sceGsResetGraph arguments to set 480p
+patch=1,EE,002C81D4,word,24110000
+patch=1,EE,002C81D8,word,24120050
+patch=1,EE,002C81DC,word,24020001
