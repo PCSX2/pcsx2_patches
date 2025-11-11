@@ -80,7 +80,7 @@ patch=0,EE,201104BC,extended,24420040
 // For normal items/survival points
 patch=0,EE,20110D3C,extended,24420040
 
-// Players/npcs
+// Players/NPCs
 
 // MISSING_NOTE
 patch=0,EE,20129D30,extended,3C043C88
@@ -103,6 +103,13 @@ patch=0,EE,20144E3C,extended,3C024270
 // (for example if you set this to a really high value, grab a handrail, and release the grab button, the animation will remain for the player grabbing the rail)
 // (20fps=20.0f, 30fps=30.0f, 60fps=60.0f)
 patch=0,EE,20145398,extended,3C034270
+
+// Correctly pose the player/trash bin when opening/closing the recycle bin
+// This undoes a 30frames -> 60frames conversion necessary at 30fps
+patch=0,EE,20151FD8,extended,4600AB06 // mov.s f12,f21; correctly pose player (close bin start)
+patch=0,EE,2015200C,extended,4600AB06 // mov.s f12,f21; correctly pose bin (close bin start)
+patch=0,EE,201522F0,extended,4600AB06 // mov.s f12,f21; correctly pose player (open bin start)
+patch=0,EE,201523EC,extended,4600AB06 // mov.s f12,f21; correctly pose bin (open bin start)
 
 // Movement speed divisor (used in player actor initialization)
 // (US=72000f, PAL=108000f, 60fps=216000f)
@@ -438,6 +445,9 @@ patch=0,EE,201D1CB4,extended,3C023C88
 // MISSING_NOTE
 patch=0,EE,201DFCC8,extended,3C024270
 
+// Halves flashing arrow speed in survival point menu choice window
+patch=0,EE,201E9C00,extended,3C023D08
+
 // MISSING_NOTE
 patch=0,EE,201EEA50,extended,3C024270
 
@@ -702,23 +712,18 @@ patch=0,EE,2022D080,extended,00021143
 
 // More fade in/out stuff I think
 
-// MISSING_NOTE
+// Affects how fast the tutorial menu fades out
 patch=0,EE,20230584,extended,3C0241F0
 
-// MISSING_NOTE
+// Affects how fast the tutorial menu fades in
 patch=0,EE,20230634,extended,3C0241F0
 
-//
-
-// MISSING_NOTE
+// Affects how quickly the buttons on the tutorial menu pulse
 patch=0,EE,20230D90,extended,3C033C88
 patch=0,EE,20230D94,extended,34638889
-
-// MISSING_NOTE
 patch=0,EE,20230DB8,extended,3C043C88
 patch=0,EE,20230DC0,extended,34848889
-
-// MISSING_NOTE
+// Affects how quickly the tutorial picture fades in/out when changing to/from exit button
 patch=0,EE,20230E00,extended,3C033D88
 patch=0,EE,20230E04,extended,34638889
 
@@ -1455,10 +1460,10 @@ patch=0,EE,20298BC0,extended,3C064270
 
 //
 
-// MISSING_NOTE
+// How fast the game fades out when opening the save menu at survival point
 patch=0,EE,202A2264,extended,3C0241F0
 
-// MISSING_NOTE
+// How fast the the save menu fades in when opening the save menu at survival point
 patch=0,EE,202A2294,extended,3C0241F0
 
 // Force vsync divisor to 1
@@ -2557,7 +2562,14 @@ patch=0,EE,203B9810,extended,40000000
 patch=0,EE,203B9814,extended,3F800000
 patch=0,EE,203B98D0,extended,E10
 
-// ??
+// Change the frames in which the garbage bin (and player) are posed within animations when opening/closing the recycle bin
+// The game uses these as frame counters, so we have to change these. They also multiply these numbers by 2 elsewhere in order
+// to pose the player and the trash bin animations, so we'll have to remove that.
+// See 151FD8 for that change.
+//3D9B50 is the open start frame (0)
+patch=0,EE,103D9B52,extended,78 // 0x3C -> 0x78; end frame for opening bin
+patch=0,EE,103D9B54,extended,78 // 0x3C -> 0x78; start frame for closing bin
+patch=0,EE,103D9B56,extended,F0 // 0x78 -> 0xF0; end frame for closing bin
 
 // MISSING_NOTE
 patch=0,EE,203E13EC,extended,10
@@ -2596,6 +2608,83 @@ patch=0,EE,20404BD4,extended,64
 
 // MISSING_NOTE
 patch=0,EE,20404CC4,extended,64
+
+// Affects behavior of the smoke sprites above food window when cooking something at survival point
+// Affects various parameters used to randomly determine how the sprite is transformed/scaled
+//patch=0,EE,20418928,extended,41400000
+//patch=0,EE,2041892C,extended,40800000
+//patch=0,EE,20418930,extended,BE800000
+//patch=0,EE,20418934,extended,3E800000
+//patch=0,EE,20418938,extended,BE19999A
+//patch=0,EE,2041893C,extended,BECCCCCD
+patch=0,EE,20418940,extended,BCCCCCCD
+patch=0,EE,20418944,extended,3CCCCCCD
+patch=0,EE,20418954,extended,3D4CCCCD
+patch=0,EE,20418958,extended,3C23D70A
+patch=0,EE,2041895C,extended,3CA3D70A
+//patch=0,EE,20418968,extended,42000000
+//patch=0,EE,2041896C,extended,42800000
+patch=0,EE,20418970,extended,40000000
+patch=0,EE,20418974,extended,40800000
+patch=0,EE,20418988,extended,41700000
+patch=0,EE,2041898C,extended,42B40000 // Doubles lifetime of smoke sprites
+//patch=0,EE,20418994,extended,10 // Doubles delay between spawning smoke sprites
+// This is the same thing below for 3 other food types
+//patch=0,EE,204189A8,extended,41400000
+//patch=0,EE,204189AC,extended,40800000
+//patch=0,EE,204189B0,extended,BE800000
+//patch=0,EE,204189B4,extended,3E800000
+//patch=0,EE,204189B8,extended,BE19999A
+//patch=0,EE,204189BC,extended,BECCCCCD
+patch=0,EE,204189C0,extended,BCCCCCCD
+patch=0,EE,204189C4,extended,3CCCCCCD
+patch=0,EE,204189D4,extended,3D4CCCCD
+patch=0,EE,204189D8,extended,3C23D70A
+patch=0,EE,204189DC,extended,3CA3D70A
+//patch=0,EE,204189E8,extended,42000000
+//patch=0,EE,204189EC,extended,42800000
+patch=0,EE,204189F0,extended,40000000
+patch=0,EE,204189F4,extended,40800000
+patch=0,EE,20418A08,extended,41700000
+patch=0,EE,20418A0C,extended,42B40000
+//patch=0,EE,20418A14,extended,10
+//patch=0,EE,20418A28,extended,41400000
+//patch=0,EE,20418A2C,extended,40800000
+//patch=0,EE,20418A30,extended,BE800000
+//patch=0,EE,20418A34,extended,3E800000
+//patch=0,EE,20418A38,extended,BE19999A
+//patch=0,EE,20418A3C,extended,BECCCCCD
+patch=0,EE,20418A40,extended,BCCCCCCD
+patch=0,EE,20418A44,extended,3CCCCCCD
+patch=0,EE,20418A54,extended,3D4CCCCD
+patch=0,EE,20418A58,extended,3C23D70A
+patch=0,EE,20418A5C,extended,3CA3D70A
+//patch=0,EE,20418A68,extended,42000000
+//patch=0,EE,20418A6C,extended,42800000
+patch=0,EE,20418A70,extended,40000000
+patch=0,EE,20418A74,extended,40800000
+patch=0,EE,20418A88,extended,41700000
+patch=0,EE,20418A8C,extended,42B40000
+//patch=0,EE,20418A94,extended,10
+//patch=0,EE,20418AA8,extended,41400000
+//patch=0,EE,20418AAC,extended,40800000
+//patch=0,EE,20418AB0,extended,BE800000
+//patch=0,EE,20418AB4,extended,3E800000
+//patch=0,EE,20418AB8,extended,BE19999A
+//patch=0,EE,20418ABC,extended,BECCCCCD
+patch=0,EE,20418AC0,extended,BCCCCCCD
+patch=0,EE,20418AC4,extended,3CCCCCCD
+patch=0,EE,20418AD4,extended,3D4CCCCD
+patch=0,EE,20418AD8,extended,3C23D70A
+patch=0,EE,20418ADC,extended,3CA3D70A
+//patch=0,EE,20418AE8,extended,42000000
+//patch=0,EE,20418AEC,extended,42800000
+patch=0,EE,20418AF0,extended,40000000
+patch=0,EE,20418AF4,extended,40800000
+patch=0,EE,20418B08,extended,41700000
+patch=0,EE,20418B0C,extended,42B40000
+//patch=0,EE,20418B14,extended,10
+
 
 // Player gravity value
 patch=0,EE,20456E28,extended,3B9D4952
@@ -2744,6 +2833,9 @@ patch=0,EE,2048D78C,extended,5A
 
 // Affects how fast the taxi turns when using the handbrake.
 patch=0,EE,2048D9AC,extended,3D4CCCCD
+
+// Reduce radio scan speed when Isaac is listening to radio
+patch=0,EE,2048E1E4,extended,5
 
 // Overlays
 // Menu overlays
