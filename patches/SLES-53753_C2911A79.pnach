@@ -11,7 +11,7 @@ patch=1,EE,201B4DF8,extended,10400022
 patch=1,EE,205E0000,extended,00000000
 patch=1,EE,2038386C,extended,C4615880
 
-[Trigger controls mappping]
+[Trigger controls mapping]
 description=Throttle/brake mapped to triggers
 author=Silent
 
