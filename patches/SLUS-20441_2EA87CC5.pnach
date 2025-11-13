@@ -1,0 +1,61 @@
+gametitle=NASCAR - Dirt to Daytona [SLUS-20441] (U)
+
+[60 FPS]
+description=Use EE 180% overclock to minimize drops during big crashes
+author=Silent
+
+patch=0,EE,20155DB8,extended,00000000
+
+[Shoulders control mapping]
+comment=Replace Alternate2 controls mapping with Shoulders controls mapping from NASCAR Heat
+author=Silent
+
+// Patch controls
+patch=0,EE,10251108,extended,7D40 // throttle = Joy DY-
+patch=0,EE,20251110,extended,264600F8 // dig_throttle = Button 8
+patch=0,EE,10251134,extended,7D48 // braking = Joy DX-
+patch=0,EE,1025114C,extended,7D10 // dig_braking = Button 7
+patch=0,EE,1025117C,extended,7C38 // downshift = Button 1
+patch=0,EE,102511AC,extended,7C90 // mirror_control = Button 2
+patch=0,EE,102511C4,extended,7C00 // race_info = Button 5
+patch=0,EE,202511CC,extended,268600A8 // car_info = Button 6
+
+// Patch the control scheme in menu
+patch=0,EE,10252010,extended,0034 // L1
+patch=0,EE,1025201C,extended,001C // Cross
+patch=0,EE,10252028,extended,0038 // R1
+patch=0,EE,10252040,extended,0030 // L2
+patch=0,EE,10252044,extended,0020 // Square
+patch=0,EE,1025205C,extended,002C // R2
+
+// Rename the controls scheme to Shoulders
+patch=0,EE,00357A10,double,7265646C756F6853
+patch=0,EE,00357A18,short,0073
+
+[Analog camera control]
+description=Map camera controls to the right stick
+author=Silent
+
+patch=0,EE,10250E6C,extended,5C30 // reverse -> look_back
+
+// If you intend to unmap the camera controls, comment out the following lines with //
+// and re-save controller bindings by reopening the Controller menu.
+// Only then you may remove these codes safely.
+// DO NOT COMMENT OUT THE LINE ABOVE THIS COMMENT!
+patch=0,EE,10250DB0,extended,7630 // throttle2 = [nothing]
+patch=0,EE,10250DC8,extended,7630 // brake2 = [nothing]
+patch=0,EE,20250DEC,extended,26260720 // look_left = JB Left
+patch=0,EE,20250E00,extended,26260728 // look_right = JB Right
+patch=0,EE,20250E74,extended,26260518 // look_back = JB Down
+
+// Patch the control description in menu
+patch=0,EE,10251F2C,extended,76A8
+patch=0,EE,10251FD4,extended,76A8
+patch=0,EE,10252080,extended,76A8
+
+[Extended valid birth year range]
+description=Extended valid birth year range (1900 to 2100)
+author=Silent
+
+patch=0,EE,10266068,extended,0834
+patch=0,EE,1026606C,extended,076C
