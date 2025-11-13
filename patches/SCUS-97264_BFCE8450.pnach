@@ -1,0 +1,17 @@
+gametitle=Syphon Filter: The Omega Strain November Demo (NTSC-U) (SCUS-97264) BFCE8450
+
+[Widescreen 16:9]
+author=YukiXXL
+gsaspectratio=16:9
+
+//Gameplay fix
+patch=1,EE,003569D0,extended,3C043F40
+patch=1,EE,203569D4,extended,44841800
+patch=1,EE,203569D8,extended,46030003
+patch=1,EE,203569DC,extended,460318C3
+patch=1,EE,203569E0,extended,46031840
+patch=1,EE,20356A54,extended,E603007C
+
+//FMVs fix
+patch=1,EE,103D5BFC,extended,24127600
+patch=1,EE,103D5C04,extended,24101400
