@@ -22,7 +22,7 @@ author=asasega
 description=Patches the game to run at 60 FPS (EE Overclock should be set to 130%. Higher values are usable but may cause hanging).
 patch=1,EE,20113E2C,extended,2C420001
 
-[Trigger control mapppings]
+[Trigger control mappings]
 author=Silent
 description=Adds extra controller setups, mirroring the scrapped prototype trigger-based setup, two Underground-like setups, and an Xbox HP2-like setup.
 

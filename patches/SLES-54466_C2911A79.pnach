@@ -1,6 +1,6 @@
-gametitle=Test Drive Unlimited (NTSC-U) SLUS-21490 A4303F5A
+gametitle=Test Drive Unlimited (PAL-M) SLES-54466 C2911A79
 
-[60 FPS]
+[50/60 FPS]
 author=PeterDelta & ijandric97
 description=Might need EE Overclock (130%).
 patch=1,EE,201B4DF8,extended,0806D3A1

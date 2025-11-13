@@ -23,7 +23,7 @@ patch=0,EE,2032F298,extended,72723C2E
 patch=0,EE,2016F908,extended,0000102D
 patch=0,EE,201EEC0C,extended,0000102D
 
-[Trigger control mapppings]
+[Trigger control mappings]
 author=Silent
 description=Adds extra controller setups, mirroring the scrapped prototype trigger-based setup, two Underground-like setups, and an Xbox HP2-like setup.
 
