@@ -13,7 +13,9 @@ patch=1,EE,001828ec,word,3C013F40 // 3C013F80
 
 // Cut-scene Render fix
 // 0045013c 00208144 280040e6
-patch=1,EE,001828e0,word,3c0145C0 // 3c014500
+//patch=1,EE,001828e0,word,3c0145C0 // 3c014500
+// Appears not to be needed on later builds.
+// It also wracks up the mirror rendering in the Cutscenes.
 
 // FMV fix
 patch=1,EE,0017f520,word,24027100
