@@ -12,4 +12,22 @@ patch=1,EE,0016465c,word,34428e38
 //Zoom - ELF hack
 patch=1,EE,00180454,word,3c023f40 //3c023f80
 
+[Disable Attack Banter]
+author=Souzooka
+description=Disables most attack quips from the player character.
 
+// Raphael quips
+patch=0,EE,2014D6A4,extended,00000000 // nop
+// Leonardo "SLICE AND DICE"
+patch=0,EE,2014A9FC,extended,00000000 // nop
+// Raphael "HOW ABOUT THAT"
+patch=0,EE,2014D7A4,extended,00000000 // nop
+patch=0,EE,2020F8D8,extended,00000000 // nop
+// Some Leonardo lines
+patch=0,EE,202100C8,extended,00000000 // nop ; sword lunge lines
+patch=0,EE,2020FD7C,extended,00000000 // nop ; multiple X attack lines
+// Replace Michelangelo spin attack quips with generic sfx
+patch=0,EE,20221980,extended,1000FFEB // beq zero,zero,0x00221930 ; branch to the "spun next to no enemies" case
+// technically the above replaces a rand call so it affects some state but eh whatever
+// Donatello quips
+patch=0,EE,20204E00,extended,00000000 // nop
