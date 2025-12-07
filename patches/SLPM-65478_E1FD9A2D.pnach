@@ -1,17 +1,37 @@
-gametitle=Final Fantasy X-2 NTSC-J International + Last Mission
+gametitle=Final Fantasy X-2 International + Last Mission * NTSC-J * SLPM-65478 * E1FD9A2D
+// same serial-code as 8E868B5B - the English translated version.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen hack
 patch=1,EE,001aabb8,word,3c013f19
 patch=1,EE,001aabbc,word,3421999a
 patch=1,EE,0011be04,word,3c014440
 patch=1,EE,0017c22c,word,3c01442b
 
-//alternate values
-patch=1,EE,20367044,word,3F5EEEEF // y fov - HD remaster
+// alternate values
+//patch=1,EE,20367044,word,3F5EEEEF // Y-FoV - HD remaster
 
-//menu cursor width
+// menu cursor width
 patch=1,EE,00214124,word,3c013f40
 
+[4:3 Aspect Ratio correction]
+author=Dark Magician
+patch=1,EE,001aabb8,word,3c013f4c
+patch=1,EE,001aabbc,word,3421cccd
+//patch=1,EE,20367040,word,3F4CCCCD
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+patch=1,EE,001aabb8,word,3c013f2a
+patch=1,EE,001aabbc,word,3421aaab
+patch=1,EE,0011be04,word,3c014440
+patch=1,EE,0017c22c,word,3c01442b
+patch=1,EE,00214124,word,3c013f55
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+patch=1,EE,001aabb8,word,3c013f36
+patch=1,EE,001aabbc,word,34210b61
+patch=1,EE,0011be04,word,3c014440
+patch=1,EE,0017c22c,word,3c01442b
+patch=1,EE,00214124,word,3c013f64

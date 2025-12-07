@@ -1,4 +1,4 @@
-gametitle=Final Fantasy X-2 (SLUS-20672)
+gametitle=Final Fantasy X-2 * NTSC-U * SLUS-20672 * 48FE0C71
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -8,11 +8,35 @@ patch=1,EE,001b4f78,word,3421999a
 patch=1,EE,0012369c,word,3c014440
 patch=1,EE,0018645c,word,3c01442b
 
-//alternate values
-//patch=1,EE,203670C0,word,3F34CCCD // x fov
-patch=1,EE,203670C4,word,3F5EEEEF // y fov - HD remaster
+// alternate values
+//patch=1,EE,203670C0,word,3F34CCCD // X-FoV
+//patch=1,EE,203670C4,word,3F5EEEEF // Y-FoV - HD remaster
 
-//portraits, dressphere and cursor width on menu
+// portraits, dressphere and cursor width on menu
 patch=1,EE,002142cc,word,3c013f40
 
+[4:3 Aspect Ratio correction]
+author=Dark Magician
+patch=1,EE,001b4f74,word,3c013f4c
+patch=1,EE,001b4f78,word,3421cccd
+//patch=1,EE,203670C0,word,3F4CCCCD
 
+[Widescreen 16:10]
+gsaspectratio=Stretch
+patch=1,EE,001b4f74,word,3c013f2a
+patch=1,EE,001b4f78,word,3421aaab
+patch=1,EE,0012369c,word,3c014440
+patch=1,EE,0018645c,word,3c01442b
+patch=1,EE,002142cc,word,3c013f55
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+patch=1,EE,001b4f74,word,3c013f36
+patch=1,EE,001b4f78,word,34210b61
+patch=1,EE,0012369c,word,3c014440
+patch=1,EE,0018645c,word,3c01442b
+patch=1,EE,002142cc,word,3c013f64
+
+// Incomplete 60 fps hack by asasega
+// - might need EE overclocking to be stable.
+//patch=1,EE,20315478,extended,080C552E
