@@ -13,11 +13,14 @@ patch=0,EE,000C0010,word,461E18C2
 patch=0,EE,000C0014,word,08162C85
 patch=0,EE,002EF740,word,3C013FB0
 
-[60 FPS]
-author=PeterDelta & asasega
-description=Might need EE Overclock (130%).
-patch=1,EE,20311F18,extended,4501FFE5
-patch=1,EE,2069FE20,extended,00000002
-patch=1,EE,E002F880,extended,007EF6E4
-patch=1,EE,20311F18,extended,00000000
-patch=1,EE,2069FE20,extended,00000001
+
+
+//causes issues see https://github.com/PCSX2/pcsx2/issues/13679
+//[60 FPS]
+//author=PeterDelta & asasega
+//description=Might need EE Overclock (130%).
+//patch=1,EE,20311F18,extended,4501FFE5
+//patch=1,EE,2069FE20,extended,00000002
+//patch=1,EE,E002F880,extended,007EF6E4
+//patch=1,EE,20311F18,extended,00000000
+//patch=1,EE,2069FE20,extended,00000001
