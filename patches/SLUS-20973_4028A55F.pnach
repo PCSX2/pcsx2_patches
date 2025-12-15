@@ -32,3 +32,11 @@ patch=1,EE,2044FDB4,extended,00000001
 patch=1,EE,2019DB0C,extended,10000010
 patch=1,EE,2019DB6C,extended,10000004
 patch=1,EE,2019E3AC,extended,24020001
+
+[Widescreen Inventory Fix 16:9]
+author=Switz0018
+description=Fixes the position of the pedestal and player characters in the inventory screen.
+patch=1,EE,101C0A84,extended,0000425F // 0000423C Player1 X
+patch=1,EE,101C1008,extended,00004422 // 000043F6 Pedestal1 X
+patch=1,EE,101C0AEC,extended,0000C268 // 0000C22D Player2 X
+patch=1,EE,101C1040,extended,0000C423 // 0000C3F7 Pedestal2 X
