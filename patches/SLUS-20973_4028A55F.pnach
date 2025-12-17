@@ -42,7 +42,7 @@ patch=1,EE,2019E3AC,extended,24020001
 
 [No-Interlacing 2]
 author=Switz0018
-description=Disables interlacing. No EE overlclock needed.
+description=Disables interlacing. No EE overclock needed.
 gsinterlacemode=1
 patch=1,EE,2019D9B0,extended,0000102D // Don't load the vblankField Byte
 patch=1,EE,2044FD40,extended,00000001 // Tripple-buffering
