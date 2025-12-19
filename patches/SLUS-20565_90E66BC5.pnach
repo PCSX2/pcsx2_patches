@@ -12,6 +12,26 @@ patch=1,EE,204801C8,word,3FE2FC95
 patch=1,EE,204801CC,word,3FE2FC95
 patch=1,EE,204801D4,word,3FE2FC95
 
+[Widescreen 16:9 2]
+gsaspectratio=16:9
+author=No.47 & Switz0018
+description=Updated version from the forum.
+patch=1,EE,20480074,word,3F1A0000 // 3F7FFFFF
+patch=1,EE,204800E4,word,3F1A0000 // 3F7FFFFF
+patch=1,EE,204800C4,word,3FE38E39 // 3FAA3D70
+patch=1,EE,204801B8,word,3FE38E39 // 3FAA3D70
+patch=1,EE,204801C0,word,3FE38E39 // 3FAA3D70
+patch=1,EE,204801C8,word,3FE38E39 // 3FAA3D70
+patch=1,EE,204801CC,word,3FE38E39 // 3FAA3D70
+patch=1,EE,204801D4,word,3FE38E39 // 3FAA3D70
+
+// Widescreen Inventory Fix by Switz0018 (UnstableZero)
+// Fixes the position of the pedestal and player characters in the inventory screen.
+patch=1,EE,101AD2B8,extended,00004297 // 0000423C - Player1 X
+patch=1,EE,101AD77C,extended,00004452 // 000043F6 - Pedestal1 X
+patch=1,EE,20480568,extended,C296C8B4 // C22DC8B4 - Player2 X
+patch=1,EE,101AD7A8,extended,0000C452 // 0000C3F7 - Pedstal2 X
+
 [No-Interlacing]
 gsinterlacemode=1
 author=Agrippa
@@ -22,3 +42,11 @@ patch=1,EE,20484474,extended,00000001
 patch=1,EE,20190AE4,extended,10000010
 patch=1,EE,20190B48,extended,10000005
 patch=1,EE,201913D8,extended,24020001
+
+[No-Interlacing 2]
+author=Switz0018
+description=Removes interlacing. Does not Require EE overclock.
+patch=1,EE,001912CC,extended,0000102D // Don't load the vblankField byte.
+patch=1,EE,204843E0,extended,00000001 // Tripple-buffering
+patch=1,EE,204843E4,extended,00000000 // Progressive Mode (FullFrameMode internally)
+patch=1,EE,20484474,extended,00000001 // Another FullFrameMode internal flag, this does not do progressive.
