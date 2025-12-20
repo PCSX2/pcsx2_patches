@@ -1,4 +1,225 @@
-gametitle=Gran Turismo 4 [SCES-51719] (E)
+gametitle=Gran Turismo 4 (PAL) (SCES-51719)
+
+[Adjusted triggers sensitivity]
+description=Makes throttle/brake more precise when using triggers, like on PS3
+author=Silent, Aero_
+// Throttle
+patch=1,EE,1043C274,extended,0000005A
+patch=1,EE,2043C268,extended,00000000
+// Brake
+patch=1,EE,1043C2D4,extended,0000005A
+patch=1,EE,2043C2C8,extended,00000000
+// Reverse
+patch=1,EE,1043C394,extended,0000005A
+patch=1,EE,2043C388,extended,00000000
+
+
+[Analog HUD for all camera views]
+comment=The analog tachometer will be used for the chase camera.
+author=Aero_
+patch=1,EE,2039D178,extended,1000000D
+patch=1,EE,2039D1B0,extended,24020000
+
+
+[Car's turntable can be moved]
+comment=R2 makes the car turntable's auto-rotation to stop, L2 resumes it back and the R3 stick rotates it.
+author=Vyerq
+patch=1,EE,2057AFF8,extended,0803C1C0
+patch=1,EE,2057B030,extended,0803C1C6
+patch=1,EE,2057B034,extended,3C080087
+patch=1,EE,200F0700,extended,3C08000F
+patch=1,EE,200F0704,extended,91080800
+patch=1,EE,200F0708,extended,55000001
+patch=1,EE,200F070C,extended,70000BA9
+patch=1,EE,200F0710,extended,0815EC00
+patch=1,EE,200F0714,extended,44811000
+patch=1,EE,200F0718,extended,8108F99E
+patch=1,EE,200F071C,extended,3C0F3D80
+patch=1,EE,200F0720,extended,448FF800
+patch=1,EE,200F0724,extended,0503000B
+patch=1,EE,200F0728,extended,340E0080
+patch=1,EE,200F072C,extended,39080080
+patch=1,EE,200F0730,extended,310800FF
+patch=1,EE,200F0734,extended,2508FFE0
+patch=1,EE,200F0738,extended,05000004
+patch=1,EE,200F073C,extended,4488F000
+patch=1,EE,200F0740,extended,4680F7A0
+patch=1,EE,200F0744,extended,461EFFC2
+patch=1,EE,200F0748,extended,461F18C0
+patch=1,EE,200F074C,extended,03E00008
+patch=1,EE,200F0750,extended,E4830008
+patch=1,EE,200F0754,extended,2508FFA0
+patch=1,EE,200F0758,extended,05010005
+patch=1,EE,200F075C,extended,010E4027
+patch=1,EE,200F0760,extended,4488F000
+patch=1,EE,200F0764,extended,4680F7A0
+patch=1,EE,200F0768,extended,461EFFC2
+patch=1,EE,200F076C,extended,461F18C1
+patch=1,EE,200F0770,extended,03E00008
+patch=1,EE,200F0774,extended,E4830008
+patch=1,EE,E10100FF,extended,0064C7A4
+patch=1,EE,000F0800,extended,00000000
+patch=1,EE,E10100FF,extended,0064C7A5
+patch=1,EE,000F0800,extended,00000001
+
+
+[Digital HUD for all camera views]
+comment=The digital tachometer will be used for the bumper camera and roof camera.
+author=Aero_
+patch=1,EE,2039D178,extended,1000000D
+patch=1,EE,2039D1B0,extended,24020001
+
+
+[Disable animated track flares]
+comment=Disables the lens flares cast from animated track objects. Useful for PCSX2 performance.
+author=TheAdmiester
+// Return early from CourseData::setFlare
+patch=1,EE,20397580,extended,03E00008
+patch=1,EE,20397584,extended,00000000
+
+
+[Disable car lights lens flares]
+comment=Disables the lens flares cast from all cars' brake/headlights. Useful for PCSX2 performance.
+author=TheAdmiester
+// Return early from RaceCarModel::setLampFlare
+patch=1,EE,203914C8,extended,03E00008
+patch=1,EE,203914CC,extended,00000000
+
+
+[Disable dynamic race text]
+comment=Disables the text that appears at the bottom of the screen. Example: "GET READY TO DRIVE"
+author=Aero_
+patch=1,EE,2039DD4C,extended,00000000 // GET READY TO DRIVE
+patch=1,EE,2039DA74,extended,00000000 // Penalty timer
+
+
+[Disable screen effects when crashing with the front camera view]
+comment=Disables the special effects when crashing at a high speed with the front camera view.
+author=Vyerq
+patch=1,EE,33C898,short,0 //Blur effect
+patch=1,EE,3856EA,short,AC80 //Shake effect
+
+
+[Disable Sun lens flare]
+comment=Disables the lens flare that appears on some tracks when facing the sun. Useful for PCSX2 performance.
+author=TheAdmiester
+// Return early from CourseEnvPtr::setSun
+patch=1,EE,20398898,extended,03E00008
+patch=1,EE,2039889C,extended,00000000
+
+
+[Chase camera like in Gran Turismo 3]
+comment=Moves the chase camera closer to the ground like in Gran Turismo 3.
+author=Aero_
+patch=1,EE,2037B5D4,extended,08125654 // j 00495950
+patch=1,EE,20495950,extended,8E180008 // lw t8,0x8(s0)
+patch=1,EE,20495954,extended,3C19C0C0 // lui t9,0xC0C0
+patch=1,EE,20495958,extended,17380006 // bne t9,t8,0x00495974 : jumps if Z-Axis does not equal -6.0 float
+patch=1,EE,2049595C,extended,3C19BFC0 // lui t9,0xBFC0 : Y-Axis 1st-Half of Float Value
+patch=1,EE,20495960,extended,37390000 // ori t9,0x0000 : Y-Axis 2nd-Half of Float Value
+patch=1,EE,20495964,extended,AE190004 // sw t9,0x4(s0)
+patch=1,EE,20495968,extended,3C19C0C0 // lui t9,0xC0C0 : Z-Axis 1st-Half of Float Value
+patch=1,EE,2049596C,extended,37390000 // ori t9,0x0000 : Z-Axis 2nd-Half of Float Value
+patch=1,EE,20495970,extended,AE190008 // sw t9,0x8(s0)
+patch=1,EE,20495974,extended,C60C0000 // lwc1 f12,0x0(s0)
+patch=1,EE,20495978,extended,C60D0004 // lwc1 f13,0x4(s0)
+patch=1,EE,2049597C,extended,0C129E11 // jal 0x004A7844
+patch=1,EE,20495980,extended,C60E0008 // lwc1 f14,0x8(s0)
+patch=1,EE,20495984,extended,080DED79 // j 0037B5E4
+
+
+[Chase camera like in Gran Turismo 5]
+author=Aero_
+description=Moves the exterior camera further from the ground like in Gran Turismo 5.
+patch=1,EE,2037B5D4,extended,08125654 // j 00495950
+patch=1,EE,20495950,extended,8E180008 // lw t8,0x8(s0)
+patch=1,EE,20495954,extended,3C19C0C0 // lui t9,0xC0C0
+patch=1,EE,20495958,extended,17380006 // bne t9,t8,0x00495974 : jumps if Z-Axis does not equal -6.0 float
+patch=1,EE,2049595C,extended,3C19BFF3 // lui t9,0xBFF3 : Y-Axis 1st-Half of Float Value
+patch=1,EE,20495960,extended,37393333 // ori t9,0x3333 : Y-Axis 2nd-Half of Float Value
+patch=1,EE,20495964,extended,AE190004 // sw t9,0x4(s0)
+patch=1,EE,20495968,extended,3C19C0E0 // lui t9,0xC0E0 : Z-Axis 1st-Half of Float Value
+patch=1,EE,2049596C,extended,37390000 // ori t9,0x0000 : Z-Axis 2nd-Half of Float Value
+patch=1,EE,20495970,extended,AE190008 // sw t9,0x8(s0)
+patch=1,EE,20495974,extended,C60C0000 // lwc1 f12,0x0(s0)
+patch=1,EE,20495978,extended,C60D0004 // lwc1 f13,0x4(s0)
+patch=1,EE,2049597C,extended,0C129E11 // jal 0x004A7844
+patch=1,EE,20495980,extended,C60E0008 // lwc1 f14,0x8(s0)
+patch=1,EE,20495984,extended,080DED79 // j 0037B5E4
+
+
+[Chase camera rotatable]
+comment=When using the chase camera, the R3 stick will rotate the camera horizontally. Also, accelerating and braking with the R3 stick has been disabled.
+author=Vyerq
+patch=1,EE,345828,word,0C03C440
+patch=1,EE,F1100,word,3C0F0087
+patch=1,EE,F1104,word,91EFF99E
+patch=1,EE,F1108,word,25EFFF81
+patch=1,EE,F110C,word,448FF000
+patch=1,EE,F1110,word,4680F7A0
+patch=1,EE,F1114,word,3C0F3CC9
+patch=1,EE,F1118,word,448FF800
+patch=1,EE,F111C,word,461FF7C2
+patch=1,EE,F1120,word,080DB3BC
+patch=1,EE,F1124,word,460DFB40
+patch=1,EE,438B46,short,1000 //Disable acceleration through R3
+patch=1,EE,438B6E,short,1000 //Disable braking through R3
+
+
+[Disable G-meter]
+comment=Hides the G-meter from all views
+author=Vyerq
+patch=1,EE,3AB538,double,3E00008
+
+
+[Disable low LOD car models]
+comment=Vehicles that are far away won't load with their low-polygon count models, only their default in-game (not the ones in the garage).
+author=Vyerq
+patch=1,EE,20453D98,extended,10000009
+patch=1,EE,20455394,extended,1000000E
+
+
+[Pit crew animated at 50 fps]
+comment=The pit crew will be animated at 50 fps instead of 25 fps.
+author=Vyerq
+patch=1,EE,3D224C,byte,1
+
+
+[Race HUD toggle]
+comment=Press R3 and → to hide the HUD in-game, and R3 and ← to show it.
+author=Vyerq
+patch=1,EE,D086F99C,extended,0000FF7B
+patch=1,EE,2039F7C8,extended,14600069
+patch=1,EE,D086F99C,extended,0000FFDB
+patch=1,EE,2039F7C8,extended,10000069
+
+
+[Smaller icons on minimap]
+comment=Except when slipstreaming, the cars icons on the minimap is smaller. Also, the black outline around non-CPU cars has been removed.
+author=Vyerq
+patch=1,EE,203BF2B8,extended,00000000
+patch=1,EE,203BF530,extended,0C03069A
+patch=1,EE,200C1A68,extended,3C183F20
+patch=1,EE,200C1A6C,extended,8E3906A0
+patch=1,EE,200C1A70,extended,1B200004
+patch=1,EE,200C1A74,extended,4498F800
+patch=1,EE,200C1A78,extended,3C193FB0
+patch=1,EE,200C1A7C,extended,4499F000
+patch=1,EE,200C1A80,extended,461E7382
+patch=1,EE,200C1A84,extended,080EBC1A
+patch=1,EE,200C1A88,extended,461F7382
+
+[Trigger exhaust backfire]
+comment=By pressing R1 with cars that can backfire (mainly high-powered turbo ones), the current car will backfire. It won't work when accelerating nor braking.
+author=Vyerq
+patch=1,EE,E10300FF,extended,86F9AB
+patch=1,EE,3F36BE,extended,0
+patch=1,EE,203F36C0,extended,3C0F3F40
+patch=1,EE,203F36CC,extended,448F0000
+patch=1,EE,E10300FF,extended,1086F9AB
+patch=1,EE,3F36BE,extended,43
+patch=1,EE,203F36C0,extended,0
+patch=1,EE,203F36CC,extended,C44010DC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -17,4 +238,3 @@ patch=1,EE,204959B4,extended,4481A000 // mtc1 at,f20
 patch=1,EE,204959B8,extended,4614D682 // mul.s f26, f26, f20
 patch=1,EE,204959BC,extended,08124B83 // j 00492E0C
 patch=1,EE,2044DF60,extended,00000000 // nop
-
