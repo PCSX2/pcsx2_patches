@@ -19,6 +19,7 @@ patch=1,EE,00193ea0,word,3c0143d6 // 3c0143a0 renderfix
 
 
 [No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
+author=val
+description=Attempts to disable interlaced offset rendering.
 patch=1,EE,003107F4,word,00000000
