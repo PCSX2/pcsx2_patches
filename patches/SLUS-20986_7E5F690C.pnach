@@ -10,8 +10,9 @@ patch=1,EE,C1E16348,extended,3C023F80
 patch=1,EE,01E16348,extended,00000040 // 3C023F80 hor fov menu
 
 [No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
+author=Berylskid
+description=Attempts to disable interlaced offset rendering.
 patch=1,EE,D02C1050,extended,01001400
 patch=1,EE,0023C9AC,extended,00000001
 patch=1,EE,D02C1050,extended,01009000
