@@ -1,0 +1,6 @@
+gametitle=TimeSplitters (NTSC-U) (v2.00) SLUS-20090 8966730F
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,202CE91C,word,00000000
