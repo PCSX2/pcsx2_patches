@@ -30,17 +30,6 @@ patch=1,EE,101C0AEC,extended,0000C268 // 0000C22D - Player2 X
 patch=1,EE,101C1040,extended,0000C423 // 0000C3F7 - Pedestal2 X
 
 [No-Interlacing]
-gsinterlacemode=1
-author=Agrippa
-description=EE overclock is needed to avoid infrequent frame rate drops.
-patch=1,EE,2044FD40,extended,00000000
-patch=1,EE,2044FD44,extended,00000001
-patch=1,EE,2044FDB4,extended,00000001
-patch=1,EE,2019DB0C,extended,10000010
-patch=1,EE,2019DB6C,extended,10000004
-patch=1,EE,2019E3AC,extended,24020001
-
-[No-Interlacing 2]
 author=Switz0018
 description=Disables interlacing. No EE overclock needed.
 gsinterlacemode=1
