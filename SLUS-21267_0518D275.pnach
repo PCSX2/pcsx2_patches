@@ -1,6 +1,0 @@
-[Enable Black Edition]
-description=Black Edition content, Burger King Challenge and Castrol Ford GT always enabled
-author=Sal_89
-patch=1,EE,20574640,byte,1
-patch=1,EE,20574228,byte,1
-patch=1,EE,20574264,byte,1
