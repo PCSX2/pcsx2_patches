@@ -2,7 +2,7 @@ gametitle=Champions: Return to Arms * NTSC-U * SLUS-20973 * 4028A55F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=No.47
+author=No.47 & Switz0018
 patch=1,EE,0018A2F0,word,3C013F3F // 3C013F7F
 patch=1,EE,001949D4,word,3C013F3F // 3C013F7F
 patch=1,EE,0018A280,word,3C013FE2 // 3C013FAA
@@ -22,13 +22,18 @@ patch=1,EE,002A8918,word,3421FC95 // 34213D70
 patch=1,EE,002A8948,word,3C013FE2 // 3C013FAA
 patch=1,EE,002A894C,word,3421FC95 // 34213D70
 
+// Widescreen Inventory Fix by Switz0018 (UnstableZero)
+// Fixes the position of the pedestal and player characters in the inventory screen.
+patch=1,EE,101C0A84,extended,0000425F // 0000423C - Player1 X
+patch=1,EE,101C1008,extended,00004422 // 000043F6 - Pedestal1 X
+patch=1,EE,101C0AEC,extended,0000C268 // 0000C22D - Player2 X
+patch=1,EE,101C1040,extended,0000C423 // 0000C3F7 - Pedestal2 X
+
 [No-Interlacing]
+author=Switz0018
+description=Disables interlacing. No EE overclock needed.
 gsinterlacemode=1
-author=Agrippa
-description=EE overclock is needed to avoid infrequent frame rate drops.
-patch=1,EE,2044FD40,extended,00000000
-patch=1,EE,2044FD44,extended,00000001
-patch=1,EE,2044FDB4,extended,00000001
-patch=1,EE,2019DB0C,extended,10000010
-patch=1,EE,2019DB6C,extended,10000004
-patch=1,EE,2019E3AC,extended,24020001
+patch=1,EE,2019D9B0,extended,0000102D // Don't load the vblankField Byte
+patch=1,EE,2044FD40,extended,00000001 // Tripple-buffering
+patch=1,EE,2044FD44,extended,00000000 // Progressive Mode (FullFrameMode Internally)
+patch=1,EE,2044FDB4,extended,00000001 // Another FullFrameMode flag, does not do progressive.
