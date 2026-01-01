@@ -31,7 +31,7 @@ patch=1,EE,101C1040,extended,0000C423 // 0000C3F7 - Pedestal2 X
 
 [No-Interlacing]
 author=Agrippa & Switz0018
-description=Disables interlacing. Does not Require EE overclock.
+description=Disables interlacing.
 gsinterlacemode=1
 patch=1,EE,2019D9B0,extended,0000102D // Don't load the vblankField Byte
 patch=1,EE,2044FD40,extended,00000001 // Tripple-buffering
