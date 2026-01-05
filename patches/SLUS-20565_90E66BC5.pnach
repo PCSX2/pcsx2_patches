@@ -33,9 +33,8 @@ patch=1,EE,20480568,extended,C296C8B4 // C22DC8B4 - Player2 X
 patch=1,EE,101AD7A8,extended,0000C452 // 0000C3F7 - Pedstal2 X
 
 [No-Interlacing]
-author=Switz0018
-description=Removes interlacing. Does not Require EE overclock.
+author=Agrippa & Switz0018
+description=Disables interlacing.
+gsinterlacemode=1
 patch=1,EE,001912CC,extended,0000102D // Don't load the vblankField byte.
-patch=1,EE,204843E0,extended,00000001 // Tripple-buffering
-patch=1,EE,204843E4,extended,00000000 // Progressive Mode (FullFrameMode internally)
-patch=1,EE,20484474,extended,00000001 // Another FullFrameMode internal flag, this does not do progressive.
+patch=1,EE,20484474,extended,00000001 // Resolution flag
