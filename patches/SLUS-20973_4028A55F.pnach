@@ -34,5 +34,4 @@ author=Agrippa & Switz0018
 description=Disables interlacing.
 gsinterlacemode=1
 patch=1,EE,2019D9B0,extended,0000102D // Don't load the vblankField Byte
-patch=1,EE,2044FD40,extended,00000001 // Tripple-buffering
 patch=1,EE,2044FDB4,extended,00000001 // Resolution Flag
