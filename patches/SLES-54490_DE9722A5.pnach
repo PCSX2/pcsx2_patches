@@ -1,15 +1,32 @@
-gametitle=God Hand (PAL-M5) (SLES-54490)
+gametitle=God Hand (PAL) (SLES-54490)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=ElHecht and Arapapa
-description=Widescreen Hack
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=ElHecht, Arapapa
+//description=Widescreen Hack
 // 16:9
-patch=1,EE,00138814,word,3c014455
-patch=1,EE,00153a38,word,3c014455
-
+//patch=1,EE,00138814,word,3c014455
+//patch=1,EE,00153a38,word,3c014455
 //Font fix
-patch=1,EE,002afc20,word,3c013f2c //3c013f66
-patch=1,EE,002afc24,word,3421cccd //34216666
+//patch=1,EE,002afc20,word,3c013f2c //3c013f66
+//patch=1,EE,002afc24,word,3421cccd //34216666
 
+[No-Interlacing]
+gsinterlacemode=1
+author=gladiator
+description=Renders the game without interlacing
+patch=1,EE,200FFFE0,extended,341B1000
+patch=1,EE,200FFFE4,extended,145B0002
+patch=1,EE,200FFFEC,extended,34021070
+patch=1,EE,200FFFF0,extended,FCC20000
+patch=1,EE,200FFFF4,extended,03E00008
+patch=1,EE,200FFFF8,extended,341B1070
+patch=1,EE,2039B078,extended,0C03FFF8
 
+[Restore Dead Pan technique]
+description=Restores the Japanese/Korean-exclusive Dead Pan technique (it shows automatically in the roulette). If the language is not set to English, the name will be shown in Japanese.
+author=The Cutting Room Floor
+patch=1,EE,201250A8,extended,00001021
+patch=1,EE,201251CC,extended,00001021
+patch=1,EE,20125264,extended,00002021
+patch=1,EE,20125338,extended,00001821
