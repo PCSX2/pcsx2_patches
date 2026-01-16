@@ -2,12 +2,15 @@ gametitle=Armored Core 2 SLUS_200.14
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hack
-patch=1,EE,202B5880,extended,43f00000
-patch=1,EE,001b4508,extended,3c013f40
-patch=1,EE,001c54e4,extended,3c013f40
-patch=1,EE,001c5614,extended,3c013f40
-
+author=Elhecht, Berylskid
+patch=1,EE,201B3DDC,extended,3C013F4D // hor fov menu
+patch=1,EE,201B3DE0,extended,3421B6DC
+patch=1,EE,201B3DEC,extended,4481F000
+patch=1,EE,201B3DF0,extended,461E6B42
+patch=1,EE,2028ADAC,extended,3C013F4D // hor fov gameplay
+patch=1,EE,201BADB0,extended,3421B6DC
+patch=1,EE,2028ADB8,extended,44810000
+patch=1,EE,2028ADBC,extended,4600C602
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
