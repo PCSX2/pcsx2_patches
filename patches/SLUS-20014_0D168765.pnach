@@ -8,7 +8,7 @@ patch=1,EE,201B3DE0,extended,3421B6DC
 patch=1,EE,201B3DEC,extended,4481F000
 patch=1,EE,201B3DF0,extended,461E6B42
 patch=1,EE,2028ADAC,extended,3C013F4D // hor fov gameplay
-patch=1,EE,201BADB0,extended,3421B6DC
+patch=1,EE,2028ADB0,extended,3421B6DC
 patch=1,EE,2028ADB8,extended,44810000
 patch=1,EE,2028ADBC,extended,4600C602
 
