@@ -1,13 +1,23 @@
-gametitle=Kaido Battle 2 - Chain Reaction [NTSC-J] (SLPM-65514)
-
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=nemesis2000
-author=nemesis2000
-patch=1,EE,00149200,word,3c023f40
+gametitle=Kaido Battle 2 - Chain Reaction [NTSC-J] SLPM-65514 C37C1B76
 
 [No-Interlacing]
 gsinterlacemode=1
 author=val
 description=Attempts to disable interlaced offset rendering.
-patch=1,EE,0013A204,word,00000000
+patch=1,EE,0013A204,word,00000000 //DC241000
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=val
+patch=1,EE,00435492,short,3F40 //3F80 //3D General
+patch=1,EE,004365D2,short,3F40 //3F80 //3D Reflections
+patch=1,EE,00437712,short,3F40 //3F80 //3D Mirror
+patch=1,EE,00438292,short,3F40 //3F80 //3D Weather
+
+[Native 10:7]
+gsaspectratio=10:7
+author=val
+patch=1,EE,00435492,short,3F6F //3F80 //3D General
+patch=1,EE,004365D2,short,3F6F //3F80 //3D Reflections
+patch=1,EE,00437712,short,3F6F //3F80 //3D Mirror
+patch=1,EE,00438292,short,3F6F //3F80 //3D Weather

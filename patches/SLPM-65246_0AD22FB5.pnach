@@ -1,13 +1,23 @@
-gametitle=Drift Racer - Kaido Battle [NTSC-J] (SLPM-65246)
-
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=nemesis2000
-author=nemesis2000
-patch=1,EE,0013bd80,word,3c023f40
+gametitle=Kaido Battle [NTSC-J] SLPM-65246 0AD22FB5
 
 [No-Interlacing]
 gsinterlacemode=1
 author=val
 description=Attempts to disable interlaced offset rendering.
-patch=1,EE,00135ABC,word,00000000
+patch=1,EE,00135ABC,word,00000000 //DC221000
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=val
+patch=1,EE,003B3CCE,short,3F40 //3F80 //3D General
+patch=1,EE,003B53CE,short,3F40 //3F80 //3D Reflections
+patch=1,EE,003B598E,short,3F40 //3F80 //3D Mirror
+patch=1,EE,003B708E,short,3F40 //3F80 //3D Weather
+
+[Native 10:7]
+gsaspectratio=10:7
+author=val
+patch=1,EE,003B3CCE,short,3F6F //3F80 //3D General
+patch=1,EE,003B53CE,short,3F6F //3F80 //3D Reflections
+patch=1,EE,003B598E,short,3F6F //3F80 //3D Mirror
+patch=1,EE,003B708E,short,3F6F //3F80 //3D Weather
