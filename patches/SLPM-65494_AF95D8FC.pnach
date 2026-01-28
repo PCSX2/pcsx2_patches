@@ -1,10 +1,17 @@
-gametitle=Fuun Shinsengumi [NTSC-J] (SLPM-65494)
+gametitle=Fu-un Shinsen-gumi [NTSC-J] SLPM-65494 AF95D8FC
+
+[No-Interlacing]
+gsinterlacemode=1
+author=val
+description=Attempts to disable interlaced offset rendering.
+patch=1,EE,0013A494,word,00000000 //DC221000
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Little Giant
+author=val
+patch=1,EE,0033E4CE,short,3F40 //3F80 //3D General
 
-//16:9
-patch=1,EE,001476a0,word,3c023f40 //3c023f80
-
-
+[Native 10:7]
+gsaspectratio=10:7
+author=val
+patch=1,EE,0033E4CE,short,3F6F //3F80 //3D General
