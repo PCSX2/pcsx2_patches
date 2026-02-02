@@ -16,3 +16,28 @@ patch=1,EE,20351980,extended,3C888889 //speed icon ilumination
 patch=1,EE,203519D4,extended,3C888889 //speed icon menu principal
 patch=1,EE,201F0D30,extended,24420032 //speed timer
 patch=1,EE,204A840C,extended,00080000
+
+[Adjustable units]
+author=Silent
+description=Change units by modifying this patch
+patch=1,EE,202F7008,extended,0 //Speed and distance units
+//0 - KMH/KM
+//1 - MPH/Miles
+patch=1,EE,202F700C,extended,2 //Power units
+//0 - PS
+//1 - HP
+//2 - BHP
+//3 - CV
+//4 - kW
+patch=1,EE,202F7010,extended,0 //Torque units
+//0 - kgf.m
+//1 - ft.lb
+//2 - NM
+
+[Adjusted triggers sensitivity]
+author=Silent & Aero_
+description=Makes throttle/brake more precise when using triggers, like on the PS3
+patch=1,EE,10212160,extended,0000005A //Throttle
+patch=1,EE,102121A8,extended,0000005A //Brake
+patch=1,EE,10212238,extended,0000005A //Reverse
+patch=1,EE,20211F5C,extended,00000000 //Input multiplier
