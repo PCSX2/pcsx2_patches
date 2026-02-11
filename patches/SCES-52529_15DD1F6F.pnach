@@ -26,5 +26,10 @@ patch=1,EE,200C0020,word,03E00008
 [No-Interlacing]
 gsinterlacemode=1
 author=Meos
-description=No Motion Blur
+description=No Interlacing & No Motion Blur
+
+// No Interlacing
+patch=1,EE,2024150C,extended,00000000
+
+// No Motion Blur by Meos
 patch=1,EE,20160FC8,extended,00000000
