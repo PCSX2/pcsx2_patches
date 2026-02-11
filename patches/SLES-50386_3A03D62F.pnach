@@ -1,10 +1,15 @@
-gametitle=Crash Bandicoot Wrath Of Cortex (SLES 503.86) (PAL)
+gametitle=Crash Bandicoot Wrath Of Cortex (SLES-50386) (PAL) Ver 2.01
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Crash Bandicoot Wrath Of Cortex
+description=Patches the game to run at 16:9 Widescreen Aspect Ratio.
 
 // 16:9 hack
 patch=1,EE,21D43044,extended,3F100000 // 3F400000
 
-
+[No-Interlacing]
+author=asasega; ported by CRASHARKI
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,2016A368,extended,AF80E950 //AF82E950
+patch=1,EE,2016A374,extended,AF80E950 //AF82E950
