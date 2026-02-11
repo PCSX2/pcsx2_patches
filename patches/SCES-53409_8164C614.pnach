@@ -3,10 +3,16 @@ gametitle=Sly 3 - Honour Among Thieves SCES_534.09
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=sergx12
-description=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 patch=1,EE,00166804,word,3c014455
 
 [No-Interlacing]
 gsinterlacemode=1
-description=No Motion Blur by Meos
+author=asasega & Meos; ported by CRASHARKI
+description=No Interlacing & No Motion Blur
+
+// No Interlacing by asasega; ported by CRASHARKI
+patch=1,EE,20195F38,word,00000000
+
+// No Motion Blur by Meos
 patch=1,EE,201837D8,extended,00000000

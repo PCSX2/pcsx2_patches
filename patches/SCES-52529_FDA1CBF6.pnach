@@ -3,7 +3,7 @@ gametitle=Sly 2 - Band of Thieves (PAL-M11) (SCES-52529)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht and nemesis2000
-description=Widescreen Hack
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 // Widescreen by nemesis2000
 patch=1,EE,2014D778,word,3C013FDD
 patch=1,EE,2014D77C,word,3421A523
@@ -25,10 +25,10 @@ patch=1,EE,200C0020,word,03E00008
 
 [No-Interlacing]
 gsinterlacemode=1
-author=Meos
+author=asasega & Meos
 description=No Interlacing & No Motion Blur
 
-// No Interlacing
+// No Interlacing by asasega
 patch=1,EE,2024150C,extended,00000000
 
 // No Motion Blur by Meos
