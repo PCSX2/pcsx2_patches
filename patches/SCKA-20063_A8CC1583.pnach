@@ -2,9 +2,19 @@ gametitle=Sly Cooper 3 - Honour Among Thieves (K)(SCKA-20063)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hack (NTSC-K by Arapapa)
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 
 //X-Fov 16:9
 patch=1,EE,00166bec,word,3c014455 //3c014420
 
+[No-Interlacing]
+gsinterlacemode=1
+author=asasega & Meos
+description=No Interlacing & No Motion Blur
 
+// No Interlacing by asasega
+patch=1,EE,20293474,extended,00000000
+
+// No Motion Blur by Meos
+patch=1,EE,20183EF8,extended,00000000

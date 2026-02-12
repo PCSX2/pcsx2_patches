@@ -2,7 +2,8 @@ gametitle=Sly Cooper and the Thievius Raccoonus (K)(SCKA-20004)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen hack (NTSC-K by Arapapa)
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 
 //Widescreen hack 16:9
 
@@ -15,4 +16,17 @@ patch=1,EE,0015f66c,word,00000000 //0c057d56
 patch=1,EE,00190ce0,word,00000000 //0c064378
 patch=1,EE,001eb820,word,00000000 //0c07adae
 
+[No-Interlacing]
+gsinterlacemode=1
+author=asasega & Meos
+description=No Interlacing & No Motion Blur
 
+// No Interlacing by asasega
+patch=1,EE,20203F84,extended,00000000
+
+// No Motion Blur by Meos
+patch=1,EE,2015F604,extended,08057D85
+patch=1,EE,20190C20,extended,0806430C
+patch=1,EE,201EB7E8,extended,0807ADFD
+patch=1,EE,2012B958,extended,0804AE5F
+patch=1,EE,2015FC1C,extended,24060000
