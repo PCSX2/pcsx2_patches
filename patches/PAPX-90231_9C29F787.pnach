@@ -1,0 +1,12 @@
+gametitle=怪盗 スライ・クーパー [体験版] (PAPX-90231)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=asasega & Meos
+description=No Interlacing & No Motion Blur
+
+// No Interlacing by asasega
+patch=1,EE,20208ED4,extended,24060000
+
+// No Motion Blur by Meos
+patch=1,EE,201626CC,extended,24060000
