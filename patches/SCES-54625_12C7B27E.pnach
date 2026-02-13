@@ -1,0 +1,43 @@
+gametitle=Buzz! Junior - Monster Rumble (E)(SCES-54625_12C7B27E)
+
+[Aspect Ratio - 32:9]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202575CC,extended,00000000
+patch=1,EE,204BFAE0,extended,3E870000 //Aspect ratio
+
+[Aspect Ratio - 21:9 (3840x1600)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202575CC,extended,00000000
+patch=1,EE,204BFAE0,extended,3EC80000 //Aspect ratio
+
+[Aspect Ratio - 21:9 (3440x1440)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202575CC,extended,00000000
+patch=1,EE,204BFAE0,extended,3EC8EE24 //Aspect ratio
+
+[Aspect Ratio - 21:9 (2560x1080)]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202575CC,extended,00000000
+patch=1,EE,204BFAE0,extended,3ECA8000 //Aspect ratio
+
+[Aspect Ratio - 16:10]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202575CC,extended,00000000
+patch=1,EE,204BFAE0,extended,3F160000 //Aspect ratio
+
+[Aspect Ratio - 15:10]
+gsaspectratio=Stretch
+author=Virjoinga
+description=Changes aspect ratio.
+patch=1,EE,202575CC,extended,00000000
+patch=1,EE,204BFAE0,extended,3F200000 //Aspect ratio

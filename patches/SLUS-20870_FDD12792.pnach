@@ -1,23 +1,25 @@
 gametitle=Ultimate Spider-Man (NTSC-U) SLUS-20870 FDD12792
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=Arapapa & PeterDelta
-description=Renders the game in 16:9 aspect ratio
-patch=0,EE,0058B210,word,08030000
-patch=0,EE,000C0000,word,3C030074
-patch=0,EE,000C0004,word,3C013FAA
-patch=0,EE,000C0008,word,3421AAAB
-patch=0,EE,000C000C,word,4481F000
-patch=0,EE,000C0010,word,461E18C2
-patch=0,EE,000C0014,word,08162C85
-patch=0,EE,002EF740,word,3C013FB0
+//[Widescreen 16:9]
+//gsaspectratio=16:9
+//author=Arapapa & PeterDelta
+//description=Renders the game in 16:9 aspect ratio
+//patch=0,EE,0058B210,word,08030000
+//patch=0,EE,000C0000,word,3C030074
+//patch=0,EE,000C0004,word,3C013FAA
+//patch=0,EE,000C0008,word,3421AAAB
+//patch=0,EE,000C000C,word,4481F000
+//patch=0,EE,000C0010,word,461E18C2
+//patch=0,EE,000C0014,word,08162C85
+//patch=0,EE,002EF740,word,3C013FB0
+//Causes problems with some textures and movement when swaying.
+//One of those problems: https://github.com/PCSX2/pcsx2/issues/13679
 
 [60 FPS]
 author=PeterDelta & asasega
 description=Might need EE Overclock (130%).
 patch=1,EE,20311F18,extended,4501FFE5
 patch=1,EE,2069FE20,extended,00000002
-patch=1,EE,E002F880,extended,007EF6E4
+patch=1,EE,E0020000,extended,0066CA94
 patch=1,EE,20311F18,extended,00000000
 patch=1,EE,2069FE20,extended,00000001
