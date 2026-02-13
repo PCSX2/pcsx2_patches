@@ -2,8 +2,8 @@ gametitle=Sly 2 - Band of Thieves (SCUS-97316)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=PsxFan107
-
+author=PsxFan107 and nemesis2000
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 // Widescreen by nemesis2000
 patch=1,EE,2014D750,word,3C013FDD
 patch=1,EE,2014D754,word,3421A523
@@ -23,15 +23,13 @@ patch=1,EE,200C0018,word,4481F000
 patch=1,EE,200C001C,word,461EA502
 patch=1,EE,200C0020,word,03E00008
 
-
-[No-Interlacing (Option 1)]
-author=asasega
+[No-Interlacing]
 gsinterlacemode=1
+author=asasega & Meos
 description=No Interlacing & No Motion Blur
+
+// No Interlacing by asasega
 patch=1,EE,20240B4C,word,00000000
 
-[No-Interlacing (Option 2)]
-author=Meos
-gsinterlacemode=1
-description=No Interlacing & No Motion Blur
+// No Motion Blur by Meos
 patch=1,EE,20160FA0,extended,00000000
