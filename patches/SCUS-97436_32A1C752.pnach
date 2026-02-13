@@ -106,11 +106,6 @@ patch=1,EE,2029E758,extended,03E00008
 patch=1,EE,2029E75C,extended,00000000
 
 
-[Disable track lights lens flares]
-comment=Disables the lens flares that appear on light sources on evening/night tracks. Useful for PCSX2 performance.
-author=TheAdmiester
-
-
 [Disable wind noise]
 comment=Disables wind noise
 author=TheAdmiester
