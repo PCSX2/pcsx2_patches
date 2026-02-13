@@ -7,4 +7,3562 @@ patch=1,EE,003a83e0,word,43e00000
 patch=1,EE,003a8400,word,43e00000
 patch=1,EE,0048bfa8,word,3F400000
 
+[60 FPS]
+author=Souzooka
+description=[Restart required] Runs game at 60fps; 300%+ CPU overclock recommended.
 
+// Author note:
+// On March 2017, asaesga posted a message containing five patch lines
+// to the PCSX2 forums. These lines were for a 60fps patch for Raw Danger.
+// These lines modified addresses related to player/npc actor movement speed,
+// the framerate divisor, and the animation speed.
+// While none of the addresses in the original patch are touched in this patch,
+// those addresses (or related variables) are modified indirectly through
+// changes in code behavior in this patch. A more comprehensive and playable
+// 60fps patch for Raw Danger would take a few more patch lines,
+// but their contribution was inspirational nonetheless.
+
+// Other note:
+// The timings are based off the 30fps versions of the games (i.e. PAL and JP);
+// some timings were not corrected when changing the original JP game from 30fps to 20fps,
+// so US players may feel some things are too quick. For example, the animation of the background
+// behind an item when picking it up -- the rotation (and duration of the rotation) is 1.5x slower
+// in the US version, so it may feel a bit fast.
+
+// Code (main executable)
+
+// Map Objects
+
+// Affects the speed of objects which move along splines (a.k.a. "rails")
+// This (and the few other cases below) are for *most* non-player/non-camera objects which
+// move within a level, e.g. moving traffic cars.
+// Actual movement speed is calculated by the speed provided by the level script * (1f/game_fps) * map_fps,
+// at the time the script invokes the function to set the object's speed along the spline.
+// map_fps is always 30.0f (this is provided as a unique float variable inside each overlay), and game_fps is ofc 60.0f here.
+// Player actors are affected by their movement speed, and camera code is modified @ 17B6F4/174B9C for spline speed
+patch=0,EE,20104088,extended,3C023C88
+patch=0,EE,2010408C,extended,34438889
+
+// Another spline speed case
+patch=0,EE,20104410,extended,3C023C88
+patch=0,EE,20104414,extended,34438889
+
+// Another spline speed case
+patch=0,EE,201044D0,extended,3C023C88
+patch=0,EE,201044D4,extended,34438889
+
+// Default speed value for map objects attached to splines.
+// Most objects have a speed set after being attached, which is fine, but this default
+// is not FPS corrected -- I think this affects all instances of Trapp's police car moving.
+patch=0,EE,20104DE4,extended,3C013F00 // lui at,0x3F00
+patch=0,EE,20104E1C,extended,AE210044 // sw at,0x44(s1)
+
+// Another spline speed case
+patch=0,EE,2010518C,extended,3C033C88
+patch=0,EE,20105190,extended,34638889
+
+// Affects animation speed of some map objects (such as the chefs in the banquet hall)
+patch=0,EE,20109D1C,extended,3C024270
+
+// How long rubble objects (e.g. probably just the falling furniture when Ivan sails through an apartment - might be more a ZZT1 thing)
+// stays active after hitting the water in frames. We need these objects to stay alive for longer because they
+// emit the splash sound, which gets cut off when the object is no longer alive.
+// I've bumped this up past 1 second, as even though this matches the original game the splash SFX still gets cut off.
+patch=0,EE,2010CCDC,extended,240200A2 // addiu v0,zero,0xA2 ; 30 frames -> 162 (3.2 seconds)
+
+// MISSING_NOTE
+patch=0,EE,2010FB14,extended,3C034270
+
+// Fixes floating arrow speeds
+// (increments them "through" the fast sine table 0x40 indices instead of 0x80 per frame)
+// For pushables
+patch=0,EE,201104BC,extended,24420040
+// For normal items/survival points
+patch=0,EE,20110D3C,extended,24420040
+
+// Players/NPCs
+
+// MISSING_NOTE
+patch=0,EE,20129D30,extended,3C043C88
+patch=0,EE,20129D34,extended,34848889
+
+// Affects how long it takes character actors to rotate/pitch their head to look at something
+// (might also affect some other rotation stuff, not sure)
+patch=0,EE,20132F20,extended,3C034270
+
+// This prevents NPCs/player from sometimes getting stuck on ledges when trying to drop down
+patch=0,EE,2013C978,extended,3C033D4C
+
+// I think this affects the internal timers for some player animations
+patch=0,EE,201445B8,extended,3C024270
+
+// I think this affects the internal timers for some player animations
+patch=0,EE,20144E3C,extended,3C024270
+
+// I think this affects the internal timers for some player animations
+// (for example if you set this to a really high value, grab a handrail, and release the grab button, the animation will remain for the player grabbing the rail)
+// (20fps=20.0f, 30fps=30.0f, 60fps=60.0f)
+patch=0,EE,20145398,extended,3C034270
+
+// Correctly pose the player/trash bin when opening/closing the recycle bin
+// This undoes a 30frames -> 60frames conversion necessary at 30fps
+patch=0,EE,20151FD8,extended,4600AB06 // mov.s f12,f21; correctly pose player (close bin start)
+patch=0,EE,2015200C,extended,4600AB06 // mov.s f12,f21; correctly pose bin (close bin start)
+patch=0,EE,201522F0,extended,4600AB06 // mov.s f12,f21; correctly pose player (open bin start)
+patch=0,EE,201523EC,extended,4600AB06 // mov.s f12,f21; correctly pose bin (open bin start)
+
+// Movement speed divisor (used in player actor initialization)
+// (US=72000f, PAL=108000f, 60fps=216000f)
+patch=0,EE,2015879C,extended,3C024852
+patch=0,EE,201587A0,extended,3442F000
+
+// Corrects player movement while clinging and moving along a handrail
+// The speed at which the player moves is *over-corrected* by their actual movement speed multiplier,
+// which causes the player to move 1.5x faster along rails in the US version compared to PAL/JP
+// (and as such we'd move 2x slower at 60fps by default) -- we just correct that by multiplying the
+// left analog stick magnitude by 2 here.
+// (These replace a fabsf call -- but the result is just used for comparing against <= 0.0f anyways,
+// since the range of fabsf is [0..+inf) the comparison can only be true for 0.0f, and fabsf(0.0f) would be 0.0f)
+patch=0,EE,20162B4C,extended,3C014000 // lui at,0x4000
+patch=0,EE,20162B50,extended,44816000 // mtc1 at,f12
+patch=0,EE,20162B58,extended,460CAD42 // mtc1 zero,f01
+patch=0,EE,20162B5C,extended,4601A836 // mul.s f21,f21,f12
+
+// NPCs
+
+// Movement speed divisor (used in npc actor initialization)
+// (US=72000f, PAL=108000f, 60fps=216000f)
+patch=0,EE,2016ABC4,extended,3C024852
+patch=0,EE,2016ABC8,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2016B45C,extended,3C023DCC
+patch=0,EE,2016B460,extended,3442CCCD
+
+// Game bootup
+
+// Sets the animation speed for all models to 60frames/sec
+patch=0,EE,2016E800,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,2016E8F8,extended,2406003C
+
+// Camera
+
+// MISSING_NOTE
+patch=0,EE,201704A8,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,2017079C,extended,3C024270
+
+// Affects camera spline movement speed (usually the camera moves along a rail in certain cutscenes)
+patch=0,EE,20174B9C,extended,3C023C88
+patch=0,EE,20174BA0,extended,34428889
+
+// Vertical camera axis speed
+patch=0,EE,20177034,extended,3C023D88
+patch=0,EE,20177038,extended,34428889
+
+// Affects camera spline movement speed (first frame)
+patch=0,EE,2017B6F4,extended,3C023C88
+patch=0,EE,2017B6F8,extended,34428889
+
+// Affects transition speed to/from first person (when pressing Triangle)
+patch=0,EE,2017F7F0,extended,3C034270
+
+// Various menu stuff
+
+// MISSING_NOTE
+patch=0,EE,201847C4,extended,3C0241F0
+
+// Fixes beeping tone when exit prompt appears on large "Flood Watch" map between areas
+patch=0,EE,201848B4,extended,24030010
+patch=0,EE,201848FC,extended,2403003C
+
+// MISSING_NOTE
+patch=0,EE,20184A44,extended,3C0241F0
+
+// MISSING_NOTE
+patch=0,EE,20184B44,extended,3C0241F0
+
+// MISSING_NOTE
+patch=0,EE,20184D2C,extended,3C033C88
+patch=0,EE,20184D34,extended,34638889
+
+// MISSING_NOTE
+patch=0,EE,20184E1C,extended,2403003C
+
+// MISSING_NOTE
+patch=0,EE,20184E70,extended,2402003C
+
+// Affects speed of fade out transition for <News> transitions
+patch=0,EE,20184F84,extended,3C0241F0
+
+// MISSING_NOTE
+patch=0,EE,201850C0,extended,240300B4
+
+// Lifetime (in frames) of the news message (i.e. following "<News>") being shown on screen
+patch=0,EE,201850E4,extended,240200B4
+
+// MISSING_NOTE
+patch=0,EE,2018519C,extended,240300B4
+
+// Affects the pace of the beeping tone for the <News> transitions
+patch=0,EE,20185270,extended,24030010
+patch=0,EE,201852B8,extended,2402003C
+patch=0,EE,20185368,extended,24030010
+patch=0,EE,201853B0,extended,2402003C
+
+// Affects speed of fade in transition for <News> transitions
+patch=0,EE,20185490,extended,3C0241F0
+
+// MISSING_NOTE
+patch=0,EE,20185534,extended,3C024080
+
+// MISSING_NOTE
+patch=0,EE,201856C4,extended,3C0241F0
+
+// MISSING_NOTE
+patch=0,EE,20185704,extended,3C024080
+
+// MISSING_NOTE
+patch=0,EE,20185884,extended,3C024080
+
+// MISSING_NOTE
+patch=0,EE,20185A34,extended,3C0241F0
+
+// Affects speed of horizontal line moving down for <News> transitions
+patch=0,EE,20186038,extended,3C023F80
+
+// MISSING_NOTE
+patch=0,EE,20185F30,extended,3C024188
+patch=0,EE,20185F34,extended,34438889
+
+// Affects speed of horizontal beam moving up for <News> transitions
+// TODO: <News> waterplane is also managed by this function -- look into making it a bit calmer
+patch=0,EE,20186038,extended,3C02C040
+
+// Multiply the amount of time to wait for level script updates
+// by 60.0f instead of 20.0f
+patch=0,EE,201888A8,extended,3C034270
+
+// Code cave for putting in some custom code
+// Rewrite inefficient (for space) flag init loop to memset call
+patch=0,EE,2018A134,extended,248492F0
+patch=0,EE,2018A138,extended,2821
+patch=0,EE,2018A13C,extended,2406148F
+patch=0,EE,2018A140,extended,2403FFFF
+patch=0,EE,2018A144,extended,80B8D6E
+patch=0,EE,2018A148,extended,AF838480
+// Timer for below code
+patch=0,EE,2018A14C,extended,0
+// Put in some code here to manage halving the dialogue speed
+// (i.e. put out new text characters once every 2 frames)
+patch=0,EE,2018A150,extended,00809021 // addu s2,a0,zero ; Replace original instruction at jumpsite
+patch=0,EE,2018A154,extended,8E440198 // lw a0,0x198(s2)
+patch=0,EE,2018A158,extended,24020002 // addiu v0,zero,0x2 ; Attempt to instantly print dialogue choices (seems to work but a bit of a shot in the dark)
+patch=0,EE,2018A15C,extended,14820008 // bne a0,v0,0x0018A180
+patch=0,EE,2018A160,extended,3C010019 // lui at,0x0019
+patch=0,EE,2018A164,extended,8C22A14C // lw v0,-0x5EB4(at) ; Load timer
+patch=0,EE,2018A168,extended,30430001 // andi v1,v0,0x0001
+patch=0,EE,2018A16C,extended,24420001 // addiu v0,v0,0x1
+patch=0,EE,2018A170,extended,10600003 // beq v1,zero,0x0018A180 ; Resume text function if timer is even
+patch=0,EE,2018A174,extended,AC22A14C // sw v0,-0x5EB4(at) ; Update timer
+patch=0,EE,2018A178,extended,080652D8 // j 0x00194B60 ; Skip to end of original function
+patch=0,EE,2018A17C,extended,0
+patch=0,EE,2018A180,extended,0806512E // j 0x001944B8 ; Return to original function
+patch=0,EE,2018A184,extended,0
+patch=0,EE,2018A188,extended,0
+// Only update waterplane shaking every other frame
+patch=0,EE,2018A18C,extended,0 // Another timer
+patch=0,EE,2018A190,extended,3C010019 // lui at,0x0019
+patch=0,EE,2018A194,extended,8C22A18C // lw v0,-0x5E74(at)
+patch=0,EE,2018A198,extended,30430001 // andi v1,v0,0x0001
+patch=0,EE,2018A19C,extended,24420001 // addiu v0,v0,0x1
+patch=0,EE,2018A1A0,extended,14600003 // bne v1,zero,0x0018A1B0
+patch=0,EE,2018A1A4,extended,AC22A18C // sw v0,-0x5E74(at)
+patch=0,EE,2018A1A8,extended,0808ED3C // j z_un_0023b4f0
+patch=0,EE,2018A1AC,extended,0 // nop
+patch=0,EE,2018A1B0,extended,03E00008 // jr ra
+patch=0,EE,2018A1B4,extended,0 // nop
+patch=0,EE,2018A1B8,extended,0
+patch=0,EE,2018A1BC,extended,0
+patch=0,EE,2018A1C0,extended,0
+patch=0,EE,2018A1C4,extended,0
+patch=0,EE,2018A1C8,extended,0
+patch=0,EE,2018A1CC,extended,0
+
+// MISSING_NOTE
+patch=0,EE,2018D2E0,extended,3C023C88
+patch=0,EE,2018D2E8,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,2018D494,extended,3C023C88
+patch=0,EE,2018D498,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,2018DC00,extended,3C023C88
+patch=0,EE,2018DC18,extended,34428889
+
+// Attempts to slow down text scroll speed
+patch=0,EE,201944B0,extended,08062854 // j 0x0018A150 ; (See patch at 0x18A150)
+
+// Prevents audio dialogue from running over itself in intro when introducing the mayor
+patch=0,EE,201999C0,extended,42840
+patch=0,EE,201999C4,extended,4810002
+patch=0,EE,201999C8,extended,852021
+patch=0,EE,201999CC,extended,8F848AFC
+patch=0,EE,201999D0,extended,3C03003E
+patch=0,EE,201999D4,extended,3E00008
+patch=0,EE,201999D8,extended,A4641D9E
+patch=0,EE,201999DC,extended,0
+// Same as above
+patch=0,EE,201999F0,extended,42840
+patch=0,EE,201999F4,extended,4810002
+patch=0,EE,201999F8,extended,852021
+patch=0,EE,201999FC,extended,8F848AF8
+patch=0,EE,20199A00,extended,3C03003E
+patch=0,EE,20199A04,extended,3E00008
+patch=0,EE,20199A08,extended,A4641D70
+patch=0,EE,20199A0C,extended,0
+
+// Prevents certain dialogue without audio from advancing too quickly
+// (e.g. the news broadcast after escaping from the banquet hall)
+patch=0,EE,20199A54,extended,00042040 // sll a0,a0,0x01
+
+// MISSING_NOTE
+patch=0,EE,2019A788,extended,3C044270
+
+// MISSING_NOTE
+patch=0,EE,2019A824,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,2019A8D4,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,201ACA40,extended,2403003C
+
+// ScrEffHue
+
+// I think this extends the transition from one ScrEffHue configuration to another mid-level
+// (US=3.0f, PAL=2.0f, 60fps=1.0f)
+patch=0,EE,201CA414,extended,3C023F80
+// (US=20.0f, PAL=30.0f, 60fps=60.0f)
+patch=0,EE,201CA41C,extended,3C044270
+
+// Halve camera zoom in speed for cutscenes
+patch=0,EE,201CB000,extended,00048040
+
+// Correct player speed when turning (unknown case)
+patch=0,EE,201CC24C,extended,3C013F00
+patch=0,EE,201CC250,extended,44810000
+patch=0,EE,201CC258,extended,4600A502
+
+// Correct player speed when turning to face another player
+patch=0,EE,201CC6FC,extended,1440000B
+patch=0,EE,201CC700,extended,3C013F00
+patch=0,EE,201CC704,extended,44810000
+patch=0,EE,201CC708,extended,4600A502
+patch=0,EE,201CC70C,extended,00000000
+patch=0,EE,201CC710,extended,00000000
+patch=0,EE,201CC714,extended,24030001
+patch=0,EE,201CC718,extended,A6030C92
+patch=0,EE,201CC71C,extended,AE110C98
+patch=0,EE,201CC720,extended,E6140C9C
+patch=0,EE,201CC724,extended,1000000D
+patch=0,EE,201CC728,extended,DFBF0040
+patch=0,EE,201CC72C,extended,8E0403F4
+patch=0,EE,201CC750,extended,1000FFF4
+
+// Correct player speed when turning (unknown case)
+patch=0,EE,201CC7BC,extended,1440000C
+patch=0,EE,201CC7C0,extended,3C013F00
+patch=0,EE,201CC7C4,extended,44810000
+patch=0,EE,201CC7C8,extended,4600A502
+patch=0,EE,201CC7CC,extended,00000000
+patch=0,EE,201CC7D0,extended,00000000
+patch=0,EE,201CC7D4,extended,44910000
+patch=0,EE,201CC7D8,extended,A6000C92
+patch=0,EE,201CC7DC,extended,46800020
+patch=0,EE,201CC7E0,extended,E6000C94
+patch=0,EE,201CC7E4,extended,E6140C9C
+patch=0,EE,201CC7E8,extended,10000009
+patch=0,EE,201CC7EC,extended,DFBF0040
+patch=0,EE,201CC7F4,extended,8E0403F4
+patch=0,EE,201CC804,extended,1000FFF8
+
+// Correct player speed when turning to face a specific orientation
+patch=0,EE,201CC86C,extended,1440000C
+patch=0,EE,201CC870,extended,3C013F00
+patch=0,EE,201CC874,extended,44810000
+patch=0,EE,201CC878,extended,4600A502
+patch=0,EE,201CC87C,extended,00000000
+patch=0,EE,201CC880,extended,00000000
+patch=0,EE,201CC884,extended,44910000
+patch=0,EE,201CC888,extended,A6000C92
+patch=0,EE,201CC88C,extended,46800020
+patch=0,EE,201CC890,extended,E6000C94
+patch=0,EE,201CC894,extended,E6140C9C
+patch=0,EE,201CC898,extended,1000000E
+patch=0,EE,201CC89C,extended,DFBF0040
+patch=0,EE,201CC8A4,extended,8E0403F4
+patch=0,EE,201CC8C8,extended,1000FFF3
+
+// Correct player speed when turning (unknown case)
+patch=0,EE,201CC92C,extended,3C013F00
+patch=0,EE,201CC930,extended,44810000
+patch=0,EE,201CC934,extended,1040000D
+patch=0,EE,201CC938,extended,4600A502
+patch=0,EE,201CC93C,extended,0
+patch=0,EE,201CC940,extended,0
+patch=0,EE,201CC944,extended,0
+
+// Correct player speed when turning (unknown case)
+patch=0,EE,201CC9DC,extended,3C013F00
+patch=0,EE,201CC9E0,extended,44810000
+patch=0,EE,201CC9E4,extended,10400011
+patch=0,EE,201CC9E8,extended,4600A502
+patch=0,EE,201CC9EC,extended,0
+patch=0,EE,201CC9F0,extended,0
+patch=0,EE,201CC9F4,extended,0
+
+// Correct player speed when turning (unknown case)
+patch=0,EE,201CCF74,extended,3C013F00
+patch=0,EE,201CCF78,extended,44810000
+patch=0,EE,201CCF7C,extended,4600A502
+
+// WaterPlane
+
+patch=0,EE,201CE584,extended,3C023F80
+
+patch=0,EE,201CE58C,extended,3C034270
+
+//
+
+// Halve subtitle arrow flashing speed
+patch=0,EE,201D1CB4,extended,3C023C88
+
+// MISSING_NOTE
+patch=0,EE,201DFCC8,extended,3C024270
+
+// Halves flashing arrow speed in survival point menu choice window
+patch=0,EE,201E9C00,extended,3C023D08
+
+// MISSING_NOTE
+patch=0,EE,201EEA50,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,201EEA64,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,201EEAE4,extended,3C033C88
+patch=0,EE,201EEAEC,extended,34638889
+
+// MISSING_NOTE
+patch=0,EE,201EF4E0,extended,3C024270
+
+// This fixes a bug with the item menu where effectively there is no wait period when
+// scrolling up/down in the item menu. This is because the item menu (and really any
+// menu in the game as far as I know) use a variable to indicate how many frames to wait
+// when holding a button before doing some repeated action (such as moving up/down a dialog select)
+// When the relevant button(s) is released for a frame, the timer is reset when one of the functions
+// utilizing this timer is checked. This allows for tap pressing.
+// The item menu supports multidirectional movement (i.e. move left/right for category,
+// then up/down for a specific selection within a category).
+// If you're holding up/down in the item menu:
+// The item menu checks left/right first. This resets the timer.
+// Therefore, the up/down movement only waits for 1 frame each time.
+// However, it appears the intended wait time is 0.1 seconds (3 frames at 30fps).
+// We fix this bug by just using another variable for the timer for the up/down case.
+// See at 72B19C, 72B2C4 where we increase the item menu times.
+patch=0,EE,201F0F18,extended,8F82B420
+patch=0,EE,201F0F24,extended,AF82B420
+patch=0,EE,201F0F3C,extended,AF92B420
+patch=0,EE,201F0F68,extended,8F82B420
+patch=0,EE,201F0F74,extended,AF82B420
+patch=0,EE,201F0F98,extended,AF92B420
+patch=0,EE,201F0FA8,extended,AF80B420
+
+// I think this affects the internal timers for some animations
+// (20fps=20.0f, 30fps=30.0f, 60fps=60.0f)
+patch=0,EE,201F72E0,extended,3C024270
+
+// I think this affects the internal timers for some animations
+// (20fps=20.0f, 30fps=30.0f, 60fps=60.0f)
+patch=0,EE,201F7590,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,202000B4,extended,3C034270
+
+// Affects how fast the game fades back in after picking up and equipping a new item
+patch=0,EE,20208648,extended,3C024120
+
+// Item?
+
+// Affects how fast flashlights/lighters/etc. run out of battery/fuel/etc.
+// NOTE: This is actually completely unused (all light-emitting items have a fuel drain rate of 0.0f) lmao
+// (US=20.0f, PAL=30.0f, 60fps=60.0f)
+patch=0,EE,2020C428,extended,3C024270
+
+// Multiply heating pad/energy drink no BT loss effect timer by 60.0f (instead of 20.0f in US/30.0f in PAL)
+patch=0,EE,2020CB8C,extended,3C024270
+
+// Compass UI?
+
+// Affects how fast the main player has to be moving per frame for the bottom right compass HUD to shrink
+// (20fps=0.048f, 30fps=0.032f, 60fps=0.016f)
+patch=0,EE,202173A4,extended,3C023C83
+patch=0,EE,202173AC,extended,3C023C83
+patch=0,EE,202173B0,extended,3442126F
+
+// Affects how fast the compass HUD shrinks when opening the map
+patch=0,EE,202175CC,extended,3C023D88
+patch=0,EE,202175D8,extended,34428889
+
+// Affects how fast compass HUD shrinks/grows when set to shrink/grow
+// (last initialization)
+patch=0,EE,20217624,extended,3C033D08
+patch=0,EE,20217630,extended,34628889
+
+// MISSING_NOTE
+patch=0,EE,202176EC,extended,3C023D88
+patch=0,EE,202176F8,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,202177F0,extended,3C023D88
+patch=0,EE,202177FC,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20217858,extended,3C023D88
+patch=0,EE,20217860,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,2021792C,extended,3C023D88
+patch=0,EE,20217938,extended,34428889
+
+// Affects how fast compass HUD shrinks/grows when set to shrink/grow
+// (set when exiting the item menu)
+patch=0,EE,20217A14,extended,3C033D08
+patch=0,EE,20217A20,extended,34628889
+
+// MISSING_NOTE
+patch=0,EE,20217A8C,extended,3C023D88
+patch=0,EE,20217A98,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20217B34,extended,3C033D08
+patch=0,EE,20217B40,extended,34628889
+
+// MISSING_NOTE
+patch=0,EE,20217C48,extended,3C033D08
+patch=0,EE,20217C54,extended,34628889
+
+// MISSING_NOTE
+patch=0,EE,20217CAC,extended,3C02BD88
+patch=0,EE,20217CB8,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20217D80,extended,3C033D08
+patch=0,EE,20217D8C,extended,34628889
+
+// Affects how fast compass HUD shrinks/grows when set to shrink/grow
+// (initial initialization -- see 217624)
+patch=0,EE,20217DE8,extended,3C023D08
+patch=0,EE,20217DF0,extended,34428889
+
+// Wetness/Heat indicator?
+
+// Halves speed of 2d animation on heat arrow in bottom left
+patch=0,EE,20218774,extended,84630028 // lh v1,0x28(v1)
+patch=0,EE,20218780,extended,3187A // dsrl v1,v1,0x01
+
+// Affects how quickly the heat arrow rotates to upward position
+patch=0,EE,20218960,extended,3C023DA0
+patch=0,EE,20218968,extended,3442D97D
+
+// Affects how quickly the heat arrow rotates to neutral
+patch=0,EE,20218978,extended,3C023DA0
+patch=0,EE,20218980,extended,3442D97D
+
+// Doubles period of 2d animation on heat arrow from 13 frames -> 26 (see change at 218774)
+patch=0,EE,20218A84,extended,2842001A
+
+// Affects how quickly the heat arrow rotates to downward position
+patch=0,EE,20218B04,extended,3C023DA0
+patch=0,EE,20218B0C,extended,3442D97D
+
+// Affects how fast the main player has to be moving per frame for the bottom left wet/BT HUD to shrink
+// (20fps=0.048f, 30fps=0.032f, 60fps=0.016f)
+patch=0,EE,20218D64,extended,3C023C83
+patch=0,EE,20218D6C,extended,3C023C83
+patch=0,EE,20218D70,extended,3442126F
+
+// Affects how fast wetness HUD shrinks/grows when set to shrink/grow
+// (set when exiting the map)
+patch=0,EE,202191E8,extended,3C033D08
+patch=0,EE,202191EC,extended,34638889
+
+// MISSING_NOTE
+// Not sure what exactly this is used for, but is executed when exiting map
+// (20fps~=0.2143f, 30fps=0.1f, 60fps=0.1f)
+patch=0,EE,20219200,extended,3C033DCC
+patch=0,EE,20219208,extended,3463CCCD
+
+// Affects how fast wetness HUD shrinks when opening map
+patch=0,EE,202193D8,extended,3C023D88
+patch=0,EE,202193E0,extended,34428889
+
+// MISSING_NOTE
+// Not sure what this affects exactly, but interpolating to 60fps
+// causes the wetness indicator to briefly still show when bringing up the map
+// (20fps~=-0.2143f, 30fps=-0.1f, 60fps=-0.1f)
+patch=0,EE,202193EC,extended,3C02BDCC
+patch=0,EE,202193F4,extended,3442CCCD
+
+// Affects how fast wetness HUD shrinks/grows when set to shrink/grow
+// (initial initialization)
+patch=0,EE,202194B4,extended,3C023D08
+patch=0,EE,202194BC,extended,34428889
+
+//
+
+// MISSING_NOTE
+patch=0,EE,202198DC,extended,3C023C08
+patch=0,EE,202198E0,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20219F34,extended,3C033D08
+patch=0,EE,20219F3C,extended,34658889
+
+// Affects speed of flashing cursor on game over screen (after selecting option, during fadeout)
+patch=0,EE,20219E7C,extended,25250044
+patch=0,EE,20219EAC,extended,24A500CC
+// Affects speed of flashing cursor on game over screen (after selecting option)
+patch=0,EE,20219F74,extended,248400CC
+// Affects speed of flashing cursor on game over screen (before selecting option)
+patch=0,EE,2021A030,extended,24E20044
+
+// Affects how fast the "Try Again? Yes No" text fades in on game over screen
+patch=0,EE,2021A124,extended,3C023D08
+patch=0,EE,2021A12C,extended,34438889
+
+// Affects how fast the game over screen fades in
+patch=0,EE,2021A2C4,extended,3C033D08
+patch=0,EE,2021A2CC,extended,34658889
+
+// Number of frames before the "Try Again? Yes No" text starts to fade in after game over screen fade finishes
+patch=0,EE,2021A304,extended,2402003C
+
+// Something to do with the game over menu
+
+// How long the fade out lasts when the player dies (health loss/instant death -- unknown case)
+patch=0,EE,2021A600,extended,3C023C36
+patch=0,EE,2021A604,extended,34420B61
+
+// How long the fade out lasts when the player dies (health loss/instant death -- normal case)
+patch=0,EE,2021A614,extended,3C023BB6
+patch=0,EE,2021A618,extended,34420B61
+
+// MISSING_NOTE
+patch=0,EE,2021A6D0,extended,240400B4
+
+// MISSING_NOTE
+patch=0,EE,2021A6EC,extended,240500B4
+
+// Fade in/out transitions?
+
+// MISSING_NOTE
+patch=0,EE,2021CD04,extended,3C024100
+
+// MISSING_NOTE
+patch=0,EE,2021CE74,extended,3C024100
+
+// Affects how long the game takes to fade back in after closing map
+patch=0,EE,2021CFB8,extended,3C024180
+
+// Affects how long the map screen takes to fade out
+patch=0,EE,2021D094,extended,3C024180
+
+// MISSING_NOTE
+patch=0,EE,2021D488,extended,3C024180
+
+// Affects how long the map screen takes to fade in (R3)
+patch=0,EE,2021D4B8,extended,3C024180
+patch=0,EE,2021D4BC,extended,3C024180
+
+//
+
+// MISSING_NOTE
+patch=0,EE,2021E2D4,extended,3C033D08
+patch=0,EE,2021E2DC,extended,34638889
+
+// MISSING_NOTE
+patch=0,EE,2021E344,extended,3C023D08
+patch=0,EE,2021E348,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,2021E444,extended,3C023D80
+
+// Affects the behavior of the camera tilting right/left when player BT reaches 0
+patch=0,EE,2022CB48,extended,24020078
+patch=0,EE,2022CFF0,extended,2881003C
+patch=0,EE,2022CFFC,extended,24030078
+patch=0,EE,2022D02C,extended,00021143
+patch=0,EE,2022D080,extended,00021143
+
+// More fade in/out stuff I think
+
+// Affects how fast the tutorial menu fades out
+patch=0,EE,20230584,extended,3C0241F0
+
+// Affects how fast the tutorial menu fades in
+patch=0,EE,20230634,extended,3C0241F0
+
+// Affects how quickly the buttons on the tutorial menu pulse
+patch=0,EE,20230D90,extended,3C033C88
+patch=0,EE,20230D94,extended,34638889
+patch=0,EE,20230DB8,extended,3C043C88
+patch=0,EE,20230DC0,extended,34848889
+// Affects how quickly the tutorial picture fades in/out when changing to/from exit button
+patch=0,EE,20230E00,extended,3C033D88
+patch=0,EE,20230E04,extended,34638889
+
+// MISSING_NOTE
+// Something in "WaterColumnCreate"
+patch=0,EE,20236198,extended,3C023C88
+patch=0,EE,2023619C,extended,34428889
+
+// More WaterPlane
+
+// Jump to code cave to only update the "shakiness" of the waterplane every other frame
+patch=0,EE,20239C50,extended,0C062864 // jal 0x0018A190
+
+// MISSING_NOTE
+patch=0,EE,2023AE64,extended,3C023C88
+patch=0,EE,2023AE68,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,2023B590,extended,3C033C88
+patch=0,EE,2023B594,extended,34648889
+
+//
+
+// Affects how quickly rain drops fall on the water in the <News> screen
+patch=0,EE,2024056C,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,20241A3C,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,20241A54,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,20242484,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,2024AAE8,extended,3C033C88
+patch=0,EE,2024AAF0,extended,34638889
+
+// MISSING_NOTE
+patch=0,EE,2024AB40,extended,3C034270
+
+// Force scroll speed argument for credits textures to 0.5f
+// (all 116 calls use 1.5f in US, 1.0f in PAL)
+patch=0,EE,2024B688,extended,3C023F00
+patch=0,EE,2024B694,extended,4482A000
+// Something to do with credits roll? (US: 20.0f, PAL: 30.0f)
+patch=0,EE,2024B6E4,extended,3C034270
+
+// Vehicles (Base)
+
+// MISSING_NOTE
+patch=0,EE,2024F368,extended,3C034270
+
+// Vehicles (Jetski)
+
+// MISSING_NOTE
+patch=0,EE,20251288,extended,3C024852
+patch=0,EE,20251290,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2025129C,extended,3C023C88
+patch=0,EE,202512A4,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20251A0C,extended,3C023D3D
+patch=0,EE,20251A10,extended,3442A130
+
+// MISSING_NOTE
+patch=0,EE,20251BFC,extended,3C033D3D
+patch=0,EE,20251C00,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,20251E84,extended,3C023D3D
+patch=0,EE,20251E88,extended,3442A130
+
+// MISSING_NOTE
+patch=0,EE,2025209C,extended,3C023D3D
+patch=0,EE,202520A0,extended,3442A130
+
+// MISSING_NOTE
+patch=0,EE,202522E8,extended,3C023D3D
+patch=0,EE,202522EC,extended,3442A130
+
+// MISSING_NOTE
+patch=0,EE,20252494,extended,3C024852
+patch=0,EE,20252498,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,202525FC,extended,3C024852
+patch=0,EE,20252600,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,202526A4,extended,3C024852
+patch=0,EE,202526AC,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,202527F4,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,202529EC,extended,3C024852
+patch=0,EE,202529F0,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20252AF0,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,20254288,extended,3C024852
+patch=0,EE,2025428C,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,202546D4,extended,3C024852
+patch=0,EE,202546D8,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20254838,extended,3C023B97
+patch=0,EE,2025483C,extended,3443B426
+
+// MISSING_NOTE
+patch=0,EE,20254CA0,extended,3C024852
+patch=0,EE,20254CA4,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20254D88,extended,3C023B97
+patch=0,EE,20254D8C,extended,3443B426
+
+// MISSING_NOTE
+patch=0,EE,20255428,extended,3C034852
+patch=0,EE,2025542C,extended,3C044270
+patch=0,EE,20255430,extended,3465F000
+
+// Halves jetski turning speed
+// (a lot of this is just reordering instructions to fit in a * 0.5f)
+patch=0,EE,20255668,extended,C61415AC // lwc1 f20,0x15AC(s0)
+patch=0,EE,2025566C,extended,4480A800 // mtc1 zero,f21
+patch=0,EE,20255670,extended,3C013F00 // lui at,0x3F00
+patch=0,EE,20255674,extended,44810800 // mtc1 at,f01
+patch=0,EE,20255678,extended,46010002 // mul.s f00,f00,f01
+patch=0,EE,2025567C,extended,4614A832 // c.eq.s f21,f20
+patch=0,EE,20255680,extended,45010007 // bc1t 0x002556A0
+patch=0,EE,20255684,extended,E60015B8 // swc1 f00,0x15B8(s0)
+patch=0,EE,20255688,extended,C0B5EDC  // jal z_un_002d7b70
+//                                    // mov.s f12,f20
+patch=0,EE,20255690,extended,4600A306 // mov.s f12,f20
+patch=0,EE,20255694,extended,C0B5F40  // jal z_un_002d7d00
+patch=0,EE,20255698,extended,46000546 // mov.s f21,f00
+patch=0,EE,2025569C,extended,10000003 // beq zero,zero,0x002556AC
+patch=0,EE,202556A0,extended,27A40030 // addiu a0,sp,0x30
+patch=0,EE,202556A4,extended,3C023F80 // lui v0,0x3F80
+patch=0,EE,202556A8,extended,44820000 // mtc1 v0,f00
+
+// MISSING_NOTE
+patch=0,EE,202558EC,extended,3C034852
+
+// MISSING_NOTE
+patch=0,EE,202558F4,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20255904,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,20255A68,extended,3C024852
+patch=0,EE,20255A6C,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20255C48,extended,3C033C88
+patch=0,EE,20255C58,extended,34648889
+
+// MISSING_NOTE
+patch=0,EE,20255CB4,extended,3C023C88
+patch=0,EE,20255CB8,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20255E6C,extended,3C024852
+patch=0,EE,20255E74,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20255EF4,extended,3C034852
+patch=0,EE,20255EFC,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20255F90,extended,3C034852
+patch=0,EE,20255F98,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20255FBC,extended,3C034852
+patch=0,EE,20255FC4,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20257DB0,extended,3C024852
+patch=0,EE,20257DB4,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20257E84,extended,3C023C88
+patch=0,EE,20257E8C,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20257ED0,extended,3C023C88
+patch=0,EE,20257ED4,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,202580FC,extended,3C033C88
+patch=0,EE,20258100,extended,34638889
+
+// MISSING_NOTE
+patch=0,EE,20258154,extended,3C033C88
+patch=0,EE,20258158,extended,34638889
+
+// MISSING_NOTE
+patch=0,EE,20258474,extended,3C024852
+patch=0,EE,20258478,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,202584B4,extended,3C024852
+patch=0,EE,202584B8,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20258DEC,extended,3C024270
+
+// Vehicles (Boat)
+
+// MISSING_NOTE
+patch=0,EE,2025AA34,extended,3C023D3D
+patch=0,EE,2025AA38,extended,3442A130
+
+// MISSING_NOTE
+patch=0,EE,2025ABF0,extended,3C024852
+patch=0,EE,2025ABF4,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2025ADCC,extended,3C023D3D
+patch=0,EE,2025ADD0,extended,3442A130
+
+// MISSING_NOTE
+patch=0,EE,2025B074,extended,3C023D3D
+patch=0,EE,2025B078,extended,3442A130
+
+// MISSING_NOTE
+patch=0,EE,2025B314,extended,3C023D3D
+patch=0,EE,2025B318,extended,3442A130
+
+// MISSING_NOTE
+patch=0,EE,2025B4D0,extended,3C024852
+patch=0,EE,2025B4D4,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2025B7AC,extended,3C023D3D
+patch=0,EE,2025B7B0,extended,3442A130
+
+// MISSING_NOTE
+patch=0,EE,2025B95C,extended,3C024852
+patch=0,EE,2025B964,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2025BE6C,extended,3C024852
+patch=0,EE,2025BE70,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,2025BF28,extended,3C024852
+patch=0,EE,2025BF30,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2025C07C,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,2025D294,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,2025D540,extended,3C024852
+patch=0,EE,2025D544,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2025DA50,extended,3C024852
+patch=0,EE,2025DA54,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2025E590,extended,3C023C88
+patch=0,EE,2025E594,extended,34438889
+
+// MISSING_NOTE
+patch=0,EE,2025E70C,extended,3C024852
+patch=0,EE,2025E714,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2025E750,extended,3C024852
+patch=0,EE,2025E754,extended,3443F000
+patch=0,EE,2025E758,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,2025F288,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,2025F490,extended,3C024852
+patch=0,EE,2025F498,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2025F4D4,extended,3C024852
+patch=0,EE,2025F4D8,extended,3443F000
+patch=0,EE,2025F4DC,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,2025F60C,extended,3C023C88
+patch=0,EE,2025F610,extended,34438889
+
+// MISSING_NOTE
+patch=0,EE,2025FAFC,extended,3C034852
+patch=0,EE,2025FB04,extended,3465F000
+
+// MISSING_NOTE
+patch=0,EE,2025FF3C,extended,3C034852
+patch=0,EE,2025FF44,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,2025FF54,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,20260304,extended,3C033C88
+patch=0,EE,20260308,extended,34648889
+
+// MISSING_NOTE
+patch=0,EE,202605D8,extended,3C033B97
+patch=0,EE,202605DC,extended,3464B426
+
+// MISSING_NOTE
+patch=0,EE,202606DC,extended,3C024852
+patch=0,EE,202606E4,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20260764,extended,3C034852
+patch=0,EE,2026076C,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20260800,extended,3C034852
+patch=0,EE,20260808,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,2026082C,extended,3C034852
+patch=0,EE,20260834,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20263274,extended,3C024852
+patch=0,EE,20263278,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,202632B4,extended,3C024852
+patch=0,EE,202632B8,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20264378,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,202645A8,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,202647D8,extended,3C024270
+
+// Vehicles (Taxi)
+
+// Affects how often the tire skidding sound plays when drifting (initial tick)
+patch=0,EE,2026C06C,extended,3C034270
+
+// Affects how often the tire skidding sound plays when drifting
+patch=0,EE,2026C0D8,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,2026C198,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,2026C204,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,2026C2EC,extended,3C024852
+patch=0,EE,2026C2F4,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2026C33C,extended,3C024852
+patch=0,EE,2026C340,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,2026C364,extended,3C023C88
+patch=0,EE,2026C368,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,2026E344,extended,3C034852
+patch=0,EE,2026E34C,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,2026E534,extended,3C033D3D
+patch=0,EE,2026E53C,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,2026E7D4,extended,3C033D3D
+patch=0,EE,2026E7DC,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,2026EAA8,extended,3C033D3D
+patch=0,EE,2026EAB0,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,2026EE40,extended,3C033D3D
+patch=0,EE,2026EE48,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,2026F1CC,extended,3C033D3D
+patch=0,EE,2026F1D4,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,2026F314,extended,3C023F19
+
+// MISSING_NOTE
+patch=0,EE,2026F444,extended,3C033D3D
+patch=0,EE,2026F44C,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,2026F8D8,extended,3C033D3D
+patch=0,EE,2026F8E0,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,2026FBF4,extended,3C033D3D
+patch=0,EE,2026FBFC,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,2027015C,extended,3C033D3D
+patch=0,EE,20270164,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,20270510,extended,3C033D3D
+patch=0,EE,20270518,extended,3463A130
+
+// MISSING_NOTE
+patch=0,EE,20270728,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,202707C4,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,20270894,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,2027093C,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,202709DC,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,20270B70,extended,3C024852
+patch=0,EE,20270B74,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,20270C88,extended,3C024852
+patch=0,EE,20270C90,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,202710F4,extended,3C024852
+patch=0,EE,202710F8,extended,3444F000
+
+// MISSING_NOTE
+patch=0,EE,202711E8,extended,3C024852
+patch=0,EE,202711F0,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20271234,extended,3C024852
+patch=0,EE,2027123C,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2027131C,extended,3C034852
+patch=0,EE,20271324,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,2027136C,extended,3C034852
+patch=0,EE,20271374,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,202715B4,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,20272700,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,20273BE4,extended,3C024852
+patch=0,EE,20273BEC,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,20273CE0,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,20274018,extended,3C024852
+patch=0,EE,2027401C,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20274378,extended,3C024852
+patch=0,EE,2027437C,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20274470,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,2027447C,extended,3C024852
+patch=0,EE,20274480,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,202748F8,extended,3C024852
+patch=0,EE,202748FC,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,20274A30,extended,3C023B97
+patch=0,EE,20274A34,extended,3442B426
+
+// MISSING_NOTE
+patch=0,EE,2027525C,extended,3C024852
+patch=0,EE,20275260,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,20275454,extended,3C023B97
+patch=0,EE,20275458,extended,3442B436
+
+// MISSING_NOTE
+patch=0,EE,20275AE0,extended,3C034270
+
+// MISSING_NOTE
+patch=0,EE,20275E48,extended,3C024852
+patch=0,EE,20275E4C,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20276404,extended,3C034852
+patch=0,EE,20276408,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20276790,extended,3C034852
+patch=0,EE,20276794,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,2027689C,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,20276C10,extended,3C024852
+patch=0,EE,20276C14,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,20276C74,extended,3C034852
+patch=0,EE,20276C78,extended,3C024270
+patch=0,EE,20276C7C,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20276DC4,extended,3C034852
+patch=0,EE,20276DCC,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20276DDC,extended,3C074270
+
+// MISSING_NOTE
+patch=0,EE,20276F08,extended,3C024852
+patch=0,EE,20276F0C,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,20276F80,extended,3C024852
+patch=0,EE,20276F84,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,202770C0,extended,3C024270
+
+// MISSING_NOTE
+patch=0,EE,20277540,extended,3C033C88
+patch=0,EE,20277548,extended,34668889
+
+// MISSING_NOTE
+patch=0,EE,20277738,extended,3C033C88
+patch=0,EE,20277744,extended,34658889
+
+// MISSING_NOTE
+patch=0,EE,20277864,extended,3C023B97
+patch=0,EE,20277868,extended,3442B426
+
+// MISSING_NOTE
+patch=0,EE,20277A10,extended,3C023C88
+patch=0,EE,20277A14,extended,34458889
+
+// MISSING_NOTE
+patch=0,EE,20277EA4,extended,3C024852
+patch=0,EE,20277EAC,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20277F2C,extended,3C034852
+patch=0,EE,20277F34,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20277FC8,extended,3C034852
+patch=0,EE,20277FD0,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,20277FF4,extended,3C034852
+patch=0,EE,20277FFC,extended,3463F000
+
+// MISSING_NOTE
+patch=0,EE,2027818C,extended,3C024852
+patch=0,EE,20278194,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20278548,extended,3C024852
+patch=0,EE,20278550,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,202788CC,extended,3C024852
+patch=0,EE,202788D4,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,2027CA20,extended,3C024852
+patch=0,EE,2027CA24,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,2027CA70,extended,3C024852
+patch=0,EE,2027CA74,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,2027F05C,extended,3C064270
+
+// MISSING_NOTE
+patch=0,EE,20280398,extended,3C023D88
+patch=0,EE,2028039C,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,202804D8,extended,3C023D88
+patch=0,EE,202804DC,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20280E80,extended,3C024852
+patch=0,EE,20280E84,extended,3442F000
+
+// MISSING_NOTE
+patch=0,EE,20281A6C,extended,3C024852
+patch=0,EE,20281A70,extended,3443F000
+
+// MISSING_NOTE
+patch=0,EE,20281F90,extended,3C023D08
+patch=0,EE,20281F98,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20281FF4,extended,3C023D08
+patch=0,EE,20281FF8,extended,34428889
+
+// MISSING_NOTE
+patch=0,EE,20283E70,extended,3C034852
+patch=0,EE,20283E74,extended,3464F000
+
+// MISSING_NOTE
+patch=0,EE,20283EA4,extended,3C034852
+patch=0,EE,20283EA8,extended,3463F000
+
+// More item stuff
+
+// Flammables heat over time duration (give to NPC)
+patch=0,EE,20285358,extended,3C024270
+
+// Flammables heat over time duration (use)
+patch=0,EE,20285488,extended,3C024270
+
+// Fade speed when using unknown item(?)
+// MISSING_NOTE
+patch=0,EE,20289F14,extended,3C024180
+
+// Fade speed when using unknown item(?)
+// MISSING_NOTE
+patch=0,EE,2028A074,extended,3C024180
+
+// Fade speed when using unknown item(?)
+// MISSING_NOTE
+patch=0,EE,2028A2A4,extended,3C024180
+
+// Fade speed when using unknown item(?)
+// MISSING_NOTE
+patch=0,EE,2028A448,extended,3C024180
+
+// MISSING_NOTE
+patch=0,EE,2028E074,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,2028E124,extended,2405003C
+
+// Extend delay between messages in news prompts on mid-area transitions
+patch=0,EE,2028DFD8,extended,24060078
+patch=0,EE,2028E2AC,extended,24060078
+patch=0,EE,2028E674,extended,24060078
+
+// MISSING_NOTE
+patch=0,EE,2028E71C,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20290E1C,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20291C04,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20292004,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20292024,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20292034,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20292044,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20292054,extended,2405003C
+
+// Collision stuff?
+
+// MISSING_NOTE
+patch=0,EE,20297C84,extended,3C033DCC
+patch=0,EE,20297C88,extended,3463CCCD
+
+// MISSING_NOTE
+patch=0,EE,20297CAC,extended,3C033DCC
+patch=0,EE,20297CB0,extended,3464CCCD
+
+// MISSING_NOTE
+patch=0,EE,20297CD8,extended,3C033CBF
+patch=0,EE,20297CDC,extended,3464258C
+
+// MISSING_NOTE
+patch=0,EE,20297D04,extended,3C033CBF
+patch=0,EE,20297D08,extended,3464258C
+
+// MISSING_NOTE
+patch=0,EE,202985AC,extended,3C033F80
+
+// MISSING_NOTE
+patch=0,EE,202986A0,extended,3C033F80
+
+// MISSING_NOTE
+patch=0,EE,20298BC0,extended,3C064270
+
+//
+
+// How fast the game fades out when opening the save menu at survival point
+patch=0,EE,202A2264,extended,3C0241F0
+
+// How fast the the save menu fades in when opening the save menu at survival point
+patch=0,EE,202A2294,extended,3C0241F0
+
+// Force vsync divisor to 1
+patch=0,EE,202CBD04,extended,24030001
+patch=0,EE,202CBD14,extended,24040001
+patch=0,EE,202CBD18,extended,3E00008
+patch=0,EE,202CBD1C,extended,AC64024C
+
+// MISSING_NOTE
+// Has something to with how rain (i.e. the slanted lines, not the straight rain textures) renders
+// (US=20, PAL=30, kept at 30 as rain was a lot less prevalent at 60)
+patch=0,EE,20334EE8,extended,3C0241F0
+
+// in-executable scripts
+
+// MISSING_NOTE
+patch=0,EE,203372C4,extended,3C034208
+patch=0,EE,203372C8,extended,34638889
+
+// MISSING_NOTE
+patch=0,EE,20337304,extended,3C034208
+patch=0,EE,20337308,extended,34638889
+
+// MISSING_NOTE
+patch=0,EE,2033AA2C,extended,3C034208
+patch=0,EE,2033AA30,extended,34638889
+
+// MISSING_NOTE
+patch=0,EE,2033AA6C,extended,3C034208
+patch=0,EE,2033AA70,extended,34638889
+
+// Fade in speed when giving items?
+patch=0,EE,2033C28C,extended,3C0241A0
+
+// Affects how long it takes for the item menu background to fade out
+patch=0,EE,2033D0A0,extended,3C03BDAA
+
+// Affects how long it takes for the item menu background to fade in after pressing Square
+patch=0,EE,2033D138,extended,3C033DAA
+
+// Affects how fast item menu elements animate (e.g. when changing categories, or entering/exiting menu)
+patch=0,EE,2033DA08,extended,00052840 // sll a1,a1,0x01
+
+// Affects how fast weight squares flash when item is highlighted in item menu
+patch=0,EE,2033E760,extended,24630011
+
+// Affects the white outline pulse speed around player icon in item menu if player is under effect of Heating Pad, etc.
+patch=0,EE,2033EEA4,extended,24430011
+
+// MISSING_NOTE
+patch=0,EE,20348890,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,203488F8,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20348908,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20348918,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20348AD0,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,20348B18,extended,2405003C
+
+// MISSING_NOTE
+patch=0,EE,2034AF44,extended,3C024852
+patch=0,EE,2034AF48,extended,3442F000
+
+
+// Data
+
+
+// Camera initialization parameters
+// Affects horizontal speed (not vertical), etc. for different cameras?
+patch=0,EE,203A8D68,extended,40400000
+patch=0,EE,203A8D6C,extended,40000000
+patch=0,EE,203A8DB0,extended,41A00000
+patch=0,EE,203A8DBC,extended,40000000
+patch=0,EE,203A9260,extended,41F00000
+patch=0,EE,203A9264,extended,42480000
+patch=0,EE,203A9268,extended,40800000
+patch=0,EE,203A926C,extended,40000000
+patch=0,EE,203A927C,extended,41800000
+patch=0,EE,203A92B0,extended,41000000
+patch=0,EE,203A92B4,extended,41A00000
+patch=0,EE,203A92B8,extended,40800000
+patch=0,EE,203A92BC,extended,40000000
+patch=0,EE,203A92CC,extended,41800000
+patch=0,EE,203A9350,extended,41000000
+patch=0,EE,203A9354,extended,41E00000
+patch=0,EE,203A9358,extended,40800000
+patch=0,EE,203A935C,extended,40000000
+patch=0,EE,203A936C,extended,41800000
+patch=0,EE,203A9378,extended,41000000
+patch=0,EE,203A937C,extended,41E00000
+
+// Affects how long the death timer lasts when BT=0
+patch=0,EE,203A9544,extended,3C
+patch=0,EE,203A9558,extended,1770
+patch=0,EE,203A9560,extended,3C
+patch=0,EE,203A9574,extended,258
+patch=0,EE,203A957C,extended,3C
+patch=0,EE,203A9598,extended,3C
+
+// Corrects how wet the player gets from events which instantly set how wet they are
+// (e.g. opening the door with a bunch of water behind it in the first level)
+patch=0,EE,203A9928,extended,42700000
+patch=0,EE,203A9930,extended,42700000
+patch=0,EE,203A993C,extended,43480000
+patch=0,EE,203A9940,extended,430C0000
+patch=0,EE,203A9944,extended,430C0000
+patch=0,EE,203A9950,extended,43480000
+patch=0,EE,203A9954,extended,43480000
+patch=0,EE,203A9958,extended,43480000
+patch=0,EE,203A9964,extended,43480000
+patch=0,EE,203A9968,extended,43480000
+patch=0,EE,203A996C,extended,43480000
+
+// Something to do with players
+// MISSING_NOTE
+patch=0,EE,203A9CC0,extended,41100000
+patch=0,EE,203A9CC4,extended,41100000
+patch=0,EE,203A9CC8,extended,41100000
+patch=0,EE,203A9CCC,extended,41100000
+
+// Player gravity
+// Initial velocity when jumping (unknown case?)
+patch=0,EE,203AA0C0,extended,3D75C28F
+// Initial velocity when jumping (unknown case?)
+patch=0,EE,203AA0C4,extended,3D75C28F
+// Initial velocity when jumping off a ledge
+patch=0,EE,203AA0C8,extended,3D75C28F
+
+// Player ladder move speed
+patch=0,EE,203AA240,extended,3C449BA6
+
+// How long meal effects last on each difficulty (30fps=1.0f)
+patch=0,EE,203AAFE0,extended,40000000
+patch=0,EE,203AAFE4,extended,40000000
+patch=0,EE,203AAFE8,extended,40000000
+
+// How fast the player gets wet on each difficulty (30fps=1.0f)
+patch=0,EE,203AAFF0,extended,3F000000
+patch=0,EE,203AAFF4,extended,3F000000
+patch=0,EE,203AAFF8,extended,3F000000
+
+// Player initialization parameters, for each player (including NPCs)
+// This, for each actor, changes the 4 following parameters:
+// 1. Actor rotation speed while standing
+// e.g. how fast they rotate in generic cases, like if you talk to one from behind.
+// (US=18.0f, PAL=12.0f, 60fps=6.0f)
+// 2. Actor rotation speed while crawling (US=6.0f, PAL=4.0f, 60fps=2.0f)
+// 3. Actor rotation speed while ??? (TODO: find this again) (US=3.0f, PAL=2.0f, 60fps=1.0f)
+// 4. ??? (US=1200, PAL=1800, 60fps=3600)
+patch=0,EE,203AB55C,extended,40C00000
+patch=0,EE,203AB560,extended,40000000
+patch=0,EE,203AB564,extended,3F800000
+patch=0,EE,203AB620,extended,E10
+patch=0,EE,203AB654,extended,40C00000
+patch=0,EE,203AB658,extended,40000000
+patch=0,EE,203AB65C,extended,3F800000
+patch=0,EE,203AB718,extended,E10
+patch=0,EE,203AB74C,extended,40C00000
+patch=0,EE,203AB750,extended,40000000
+patch=0,EE,203AB754,extended,3F800000
+patch=0,EE,203AB810,extended,E10
+patch=0,EE,203AB844,extended,40C00000
+patch=0,EE,203AB848,extended,40000000
+patch=0,EE,203AB84C,extended,3F800000
+patch=0,EE,203AB908,extended,E10
+patch=0,EE,203AB93C,extended,40C00000
+patch=0,EE,203AB940,extended,40000000
+patch=0,EE,203AB944,extended,3F800000
+patch=0,EE,203ABA00,extended,E10
+patch=0,EE,203ABA34,extended,40C00000
+patch=0,EE,203ABA38,extended,40000000
+patch=0,EE,203ABA3C,extended,3F800000
+patch=0,EE,203ABAF8,extended,E10
+patch=0,EE,203ABB2C,extended,40C00000
+patch=0,EE,203ABB30,extended,40000000
+patch=0,EE,203ABB34,extended,3F800000
+patch=0,EE,203ABBF0,extended,E10
+patch=0,EE,203ABC24,extended,40C00000
+patch=0,EE,203ABC28,extended,40000000
+patch=0,EE,203ABC2C,extended,3F800000
+patch=0,EE,203ABCE8,extended,E10
+patch=0,EE,203ABD1C,extended,40C00000
+patch=0,EE,203ABD20,extended,40000000
+patch=0,EE,203ABD24,extended,3F800000
+patch=0,EE,203ABDE0,extended,E10
+patch=0,EE,203ABE14,extended,40C00000
+patch=0,EE,203ABE18,extended,40000000
+patch=0,EE,203ABE1C,extended,3F800000
+patch=0,EE,203ABED8,extended,E10
+patch=0,EE,203ABF0C,extended,40C00000
+patch=0,EE,203ABF10,extended,40000000
+patch=0,EE,203ABF14,extended,3F800000
+patch=0,EE,203ABFD0,extended,E10
+patch=0,EE,203AC004,extended,40C00000
+patch=0,EE,203AC008,extended,40000000
+patch=0,EE,203AC00C,extended,3F800000
+patch=0,EE,203AC0C8,extended,E10
+patch=0,EE,203AC0FC,extended,40C00000
+patch=0,EE,203AC100,extended,40000000
+patch=0,EE,203AC104,extended,3F800000
+patch=0,EE,203AC1C0,extended,E10
+patch=0,EE,203AC1F4,extended,40C00000
+patch=0,EE,203AC1F8,extended,40000000
+patch=0,EE,203AC1FC,extended,3F800000
+patch=0,EE,203AC2B8,extended,E10
+patch=0,EE,203AC2EC,extended,40C00000
+patch=0,EE,203AC2F0,extended,40000000
+patch=0,EE,203AC2F4,extended,3F800000
+patch=0,EE,203AC3B0,extended,E10
+patch=0,EE,203AC3E4,extended,40C00000
+patch=0,EE,203AC3E8,extended,40000000
+patch=0,EE,203AC3EC,extended,3F800000
+patch=0,EE,203AC4A8,extended,E10
+patch=0,EE,203AC4DC,extended,40C00000
+patch=0,EE,203AC4E0,extended,40000000
+patch=0,EE,203AC4E4,extended,3F800000
+patch=0,EE,203AC5A0,extended,E10
+patch=0,EE,203AC5D4,extended,40C00000
+patch=0,EE,203AC5D8,extended,40000000
+patch=0,EE,203AC5DC,extended,3F800000
+patch=0,EE,203AC698,extended,E10
+patch=0,EE,203AC6CC,extended,40C00000
+patch=0,EE,203AC6D0,extended,40000000
+patch=0,EE,203AC6D4,extended,3F800000
+patch=0,EE,203AC790,extended,E10
+patch=0,EE,203AC7C4,extended,40C00000
+patch=0,EE,203AC7C8,extended,40000000
+patch=0,EE,203AC7CC,extended,3F800000
+patch=0,EE,203AC888,extended,E10
+patch=0,EE,203AC8BC,extended,40C00000
+patch=0,EE,203AC8C0,extended,40000000
+patch=0,EE,203AC8C4,extended,3F800000
+patch=0,EE,203AC980,extended,E10
+patch=0,EE,203AC9B4,extended,40C00000
+patch=0,EE,203AC9B8,extended,40000000
+patch=0,EE,203AC9BC,extended,3F800000
+patch=0,EE,203ACA78,extended,E10
+patch=0,EE,203ACAAC,extended,40C00000
+patch=0,EE,203ACAB0,extended,40000000
+patch=0,EE,203ACAB4,extended,3F800000
+patch=0,EE,203ACB70,extended,E10
+patch=0,EE,203ACBA4,extended,40C00000
+patch=0,EE,203ACBA8,extended,40000000
+patch=0,EE,203ACBAC,extended,3F800000
+patch=0,EE,203ACC68,extended,E10
+patch=0,EE,203ACC9C,extended,40C00000
+patch=0,EE,203ACCA0,extended,40000000
+patch=0,EE,203ACCA4,extended,3F800000
+patch=0,EE,203ACD60,extended,E10
+patch=0,EE,203ACD94,extended,40C00000
+patch=0,EE,203ACD98,extended,40000000
+patch=0,EE,203ACD9C,extended,3F800000
+patch=0,EE,203ACE58,extended,E10
+patch=0,EE,203ACE8C,extended,40C00000
+patch=0,EE,203ACE90,extended,40000000
+patch=0,EE,203ACE94,extended,3F800000
+patch=0,EE,203ACF50,extended,E10
+patch=0,EE,203ACF84,extended,40C00000
+patch=0,EE,203ACF88,extended,40000000
+patch=0,EE,203ACF8C,extended,3F800000
+patch=0,EE,203AD048,extended,E10
+patch=0,EE,203AD07C,extended,40C00000
+patch=0,EE,203AD080,extended,40000000
+patch=0,EE,203AD084,extended,3F800000
+patch=0,EE,203AD140,extended,E10
+patch=0,EE,203AD174,extended,40C00000
+patch=0,EE,203AD178,extended,40000000
+patch=0,EE,203AD17C,extended,3F800000
+patch=0,EE,203AD238,extended,E10
+patch=0,EE,203AD26C,extended,40C00000
+patch=0,EE,203AD270,extended,40000000
+patch=0,EE,203AD274,extended,3F800000
+patch=0,EE,203AD330,extended,E10
+patch=0,EE,203AD364,extended,40C00000
+patch=0,EE,203AD368,extended,40000000
+patch=0,EE,203AD36C,extended,3F800000
+patch=0,EE,203AD428,extended,E10
+patch=0,EE,203AD45C,extended,40C00000
+patch=0,EE,203AD460,extended,40000000
+patch=0,EE,203AD464,extended,3F800000
+patch=0,EE,203AD520,extended,E10
+patch=0,EE,203AD554,extended,40C00000
+patch=0,EE,203AD558,extended,40000000
+patch=0,EE,203AD55C,extended,3F800000
+patch=0,EE,203AD618,extended,E10
+patch=0,EE,203AD64C,extended,40C00000
+patch=0,EE,203AD650,extended,40000000
+patch=0,EE,203AD654,extended,3F800000
+patch=0,EE,203AD710,extended,E10
+patch=0,EE,203AD744,extended,40C00000
+patch=0,EE,203AD748,extended,40000000
+patch=0,EE,203AD74C,extended,3F800000
+patch=0,EE,203AD808,extended,E10
+patch=0,EE,203AD83C,extended,40C00000
+patch=0,EE,203AD840,extended,40000000
+patch=0,EE,203AD844,extended,3F800000
+patch=0,EE,203AD900,extended,E10
+patch=0,EE,203AD934,extended,40C00000
+patch=0,EE,203AD938,extended,40000000
+patch=0,EE,203AD93C,extended,3F800000
+patch=0,EE,203AD9F8,extended,E10
+patch=0,EE,203ADA2C,extended,40C00000
+patch=0,EE,203ADA30,extended,40000000
+patch=0,EE,203ADA34,extended,3F800000
+patch=0,EE,203ADAF0,extended,E10
+patch=0,EE,203ADB24,extended,40C00000
+patch=0,EE,203ADB28,extended,40000000
+patch=0,EE,203ADB2C,extended,3F800000
+patch=0,EE,203ADBE8,extended,E10
+patch=0,EE,203ADC1C,extended,40C00000
+patch=0,EE,203ADC20,extended,40000000
+patch=0,EE,203ADC24,extended,3F800000
+patch=0,EE,203ADCE0,extended,E10
+patch=0,EE,203ADD14,extended,40C00000
+patch=0,EE,203ADD18,extended,40000000
+patch=0,EE,203ADD1C,extended,3F800000
+patch=0,EE,203ADDD8,extended,E10
+patch=0,EE,203ADE0C,extended,40C00000
+patch=0,EE,203ADE10,extended,40000000
+patch=0,EE,203ADE14,extended,3F800000
+patch=0,EE,203ADED0,extended,E10
+patch=0,EE,203ADF04,extended,40C00000
+patch=0,EE,203ADF08,extended,40000000
+patch=0,EE,203ADF0C,extended,3F800000
+patch=0,EE,203ADFC8,extended,E10
+patch=0,EE,203ADFFC,extended,40C00000
+patch=0,EE,203AE000,extended,40000000
+patch=0,EE,203AE004,extended,3F800000
+patch=0,EE,203AE0C0,extended,E10
+patch=0,EE,203AE0F4,extended,40C00000
+patch=0,EE,203AE0F8,extended,40000000
+patch=0,EE,203AE0FC,extended,3F800000
+patch=0,EE,203AE1B8,extended,E10
+patch=0,EE,203AE1EC,extended,40C00000
+patch=0,EE,203AE1F0,extended,40000000
+patch=0,EE,203AE1F4,extended,3F800000
+patch=0,EE,203AE2B0,extended,E10
+patch=0,EE,203AE2E4,extended,40C00000
+patch=0,EE,203AE2E8,extended,40000000
+patch=0,EE,203AE2EC,extended,3F800000
+patch=0,EE,203AE3A8,extended,E10
+patch=0,EE,203AE3DC,extended,40C00000
+patch=0,EE,203AE3E0,extended,40000000
+patch=0,EE,203AE3E4,extended,3F800000
+patch=0,EE,203AE4A0,extended,E10
+patch=0,EE,203AE4D4,extended,40C00000
+patch=0,EE,203AE4D8,extended,40000000
+patch=0,EE,203AE4DC,extended,3F800000
+patch=0,EE,203AE598,extended,E10
+patch=0,EE,203AE5CC,extended,40C00000
+patch=0,EE,203AE5D0,extended,40000000
+patch=0,EE,203AE5D4,extended,3F800000
+patch=0,EE,203AE690,extended,E10
+patch=0,EE,203AE6C4,extended,40C00000
+patch=0,EE,203AE6C8,extended,40000000
+patch=0,EE,203AE6CC,extended,3F800000
+patch=0,EE,203AE788,extended,E10
+patch=0,EE,203AE7BC,extended,40C00000
+patch=0,EE,203AE7C0,extended,40000000
+patch=0,EE,203AE7C4,extended,3F800000
+patch=0,EE,203AE880,extended,E10
+patch=0,EE,203AE8B4,extended,40C00000
+patch=0,EE,203AE8B8,extended,40000000
+patch=0,EE,203AE8BC,extended,3F800000
+patch=0,EE,203AE978,extended,E10
+patch=0,EE,203AE9AC,extended,40C00000
+patch=0,EE,203AE9B0,extended,40000000
+patch=0,EE,203AE9B4,extended,3F800000
+patch=0,EE,203AEA70,extended,E10
+patch=0,EE,203AEAA4,extended,40C00000
+patch=0,EE,203AEAA8,extended,40000000
+patch=0,EE,203AEAAC,extended,3F800000
+patch=0,EE,203AEB68,extended,E10
+patch=0,EE,203AEB9C,extended,40C00000
+patch=0,EE,203AEBA0,extended,40000000
+patch=0,EE,203AEBA4,extended,3F800000
+patch=0,EE,203AEC60,extended,E10
+patch=0,EE,203AEC94,extended,40C00000
+patch=0,EE,203AEC98,extended,40000000
+patch=0,EE,203AEC9C,extended,3F800000
+patch=0,EE,203AED58,extended,E10
+patch=0,EE,203AED8C,extended,40C00000
+patch=0,EE,203AED90,extended,40000000
+patch=0,EE,203AED94,extended,3F800000
+patch=0,EE,203AEE50,extended,E10
+patch=0,EE,203AEE84,extended,40C00000
+patch=0,EE,203AEE88,extended,40000000
+patch=0,EE,203AEE8C,extended,3F800000
+patch=0,EE,203AEF48,extended,E10
+patch=0,EE,203AEF7C,extended,40C00000
+patch=0,EE,203AEF80,extended,40000000
+patch=0,EE,203AEF84,extended,3F800000
+patch=0,EE,203AF040,extended,E10
+patch=0,EE,203AF074,extended,40C00000
+patch=0,EE,203AF078,extended,40000000
+patch=0,EE,203AF07C,extended,3F800000
+patch=0,EE,203AF138,extended,E10
+patch=0,EE,203AF16C,extended,40C00000
+patch=0,EE,203AF170,extended,40000000
+patch=0,EE,203AF174,extended,3F800000
+patch=0,EE,203AF230,extended,E10
+patch=0,EE,203AF264,extended,40C00000
+patch=0,EE,203AF268,extended,40000000
+patch=0,EE,203AF26C,extended,3F800000
+patch=0,EE,203AF328,extended,E10
+patch=0,EE,203AF35C,extended,40C00000
+patch=0,EE,203AF360,extended,40000000
+patch=0,EE,203AF364,extended,3F800000
+patch=0,EE,203AF420,extended,E10
+patch=0,EE,203AF454,extended,40C00000
+patch=0,EE,203AF458,extended,40000000
+patch=0,EE,203AF45C,extended,3F800000
+patch=0,EE,203AF518,extended,E10
+patch=0,EE,203AF54C,extended,40C00000
+patch=0,EE,203AF550,extended,40000000
+patch=0,EE,203AF554,extended,3F800000
+patch=0,EE,203AF610,extended,E10
+patch=0,EE,203AF644,extended,40C00000
+patch=0,EE,203AF648,extended,40000000
+patch=0,EE,203AF64C,extended,3F800000
+patch=0,EE,203AF708,extended,E10
+patch=0,EE,203AF73C,extended,40C00000
+patch=0,EE,203AF740,extended,40000000
+patch=0,EE,203AF744,extended,3F800000
+patch=0,EE,203AF800,extended,E10
+patch=0,EE,203AF834,extended,40C00000
+patch=0,EE,203AF838,extended,40000000
+patch=0,EE,203AF83C,extended,3F800000
+patch=0,EE,203AF8F8,extended,E10
+patch=0,EE,203AF92C,extended,40C00000
+patch=0,EE,203AF930,extended,40000000
+patch=0,EE,203AF934,extended,3F800000
+patch=0,EE,203AF9F0,extended,E10
+patch=0,EE,203AFA24,extended,40C00000
+patch=0,EE,203AFA28,extended,40000000
+patch=0,EE,203AFA2C,extended,3F800000
+patch=0,EE,203AFAE8,extended,E10
+patch=0,EE,203AFB1C,extended,40C00000
+patch=0,EE,203AFB20,extended,40000000
+patch=0,EE,203AFB24,extended,3F800000
+patch=0,EE,203AFBE0,extended,E10
+patch=0,EE,203AFC14,extended,40C00000
+patch=0,EE,203AFC18,extended,40000000
+patch=0,EE,203AFC1C,extended,3F800000
+patch=0,EE,203AFCD8,extended,E10
+patch=0,EE,203AFD0C,extended,40C00000
+patch=0,EE,203AFD10,extended,40000000
+patch=0,EE,203AFD14,extended,3F800000
+patch=0,EE,203AFDD0,extended,E10
+patch=0,EE,203AFE04,extended,40C00000
+patch=0,EE,203AFE08,extended,40000000
+patch=0,EE,203AFE0C,extended,3F800000
+patch=0,EE,203AFEC8,extended,E10
+patch=0,EE,203AFEFC,extended,40C00000
+patch=0,EE,203AFF00,extended,40000000
+patch=0,EE,203AFF04,extended,3F800000
+patch=0,EE,203AFFC0,extended,E10
+patch=0,EE,203AFFF4,extended,40C00000
+patch=0,EE,203AFFF8,extended,40000000
+patch=0,EE,203AFFFC,extended,3F800000
+patch=0,EE,203B00B8,extended,E10
+patch=0,EE,203B00EC,extended,40C00000
+patch=0,EE,203B00F0,extended,40000000
+patch=0,EE,203B00F4,extended,3F800000
+patch=0,EE,203B01B0,extended,E10
+patch=0,EE,203B01E4,extended,40C00000
+patch=0,EE,203B01E8,extended,40000000
+patch=0,EE,203B01EC,extended,3F800000
+patch=0,EE,203B02A8,extended,E10
+patch=0,EE,203B02DC,extended,40C00000
+patch=0,EE,203B02E0,extended,40000000
+patch=0,EE,203B02E4,extended,3F800000
+patch=0,EE,203B03A0,extended,E10
+patch=0,EE,203B03D4,extended,40C00000
+patch=0,EE,203B03D8,extended,40000000
+patch=0,EE,203B03DC,extended,3F800000
+patch=0,EE,203B0498,extended,E10
+patch=0,EE,203B04CC,extended,40C00000
+patch=0,EE,203B04D0,extended,40000000
+patch=0,EE,203B04D4,extended,3F800000
+patch=0,EE,203B0590,extended,E10
+patch=0,EE,203B05C4,extended,40C00000
+patch=0,EE,203B05C8,extended,40000000
+patch=0,EE,203B05CC,extended,3F800000
+patch=0,EE,203B0688,extended,E10
+patch=0,EE,203B06BC,extended,40C00000
+patch=0,EE,203B06C0,extended,40000000
+patch=0,EE,203B06C4,extended,3F800000
+patch=0,EE,203B0780,extended,E10
+patch=0,EE,203B07B4,extended,40C00000
+patch=0,EE,203B07B8,extended,40000000
+patch=0,EE,203B07BC,extended,3F800000
+patch=0,EE,203B0878,extended,E10
+patch=0,EE,203B08AC,extended,40C00000
+patch=0,EE,203B08B0,extended,40000000
+patch=0,EE,203B08B4,extended,3F800000
+patch=0,EE,203B0970,extended,E10
+patch=0,EE,203B09A4,extended,40C00000
+patch=0,EE,203B09A8,extended,40000000
+patch=0,EE,203B09AC,extended,3F800000
+patch=0,EE,203B0A68,extended,E10
+patch=0,EE,203B0A9C,extended,40C00000
+patch=0,EE,203B0AA0,extended,40000000
+patch=0,EE,203B0AA4,extended,3F800000
+patch=0,EE,203B0B60,extended,E10
+patch=0,EE,203B0B94,extended,40C00000
+patch=0,EE,203B0B98,extended,40000000
+patch=0,EE,203B0B9C,extended,3F800000
+patch=0,EE,203B0C58,extended,E10
+patch=0,EE,203B0C8C,extended,40C00000
+patch=0,EE,203B0C90,extended,40000000
+patch=0,EE,203B0C94,extended,3F800000
+patch=0,EE,203B0D50,extended,E10
+patch=0,EE,203B0D84,extended,40C00000
+patch=0,EE,203B0D88,extended,40000000
+patch=0,EE,203B0D8C,extended,3F800000
+patch=0,EE,203B0E48,extended,E10
+patch=0,EE,203B0E7C,extended,40C00000
+patch=0,EE,203B0E80,extended,40000000
+patch=0,EE,203B0E84,extended,3F800000
+patch=0,EE,203B0F40,extended,E10
+patch=0,EE,203B0F74,extended,40C00000
+patch=0,EE,203B0F78,extended,40000000
+patch=0,EE,203B0F7C,extended,3F800000
+patch=0,EE,203B1038,extended,E10
+patch=0,EE,203B106C,extended,40C00000
+patch=0,EE,203B1070,extended,40000000
+patch=0,EE,203B1074,extended,3F800000
+patch=0,EE,203B1130,extended,E10
+patch=0,EE,203B1164,extended,40C00000
+patch=0,EE,203B1168,extended,40000000
+patch=0,EE,203B116C,extended,3F800000
+patch=0,EE,203B1228,extended,E10
+patch=0,EE,203B125C,extended,40C00000
+patch=0,EE,203B1260,extended,40000000
+patch=0,EE,203B1264,extended,3F800000
+patch=0,EE,203B1320,extended,E10
+patch=0,EE,203B1354,extended,40C00000
+patch=0,EE,203B1358,extended,40000000
+patch=0,EE,203B135C,extended,3F800000
+patch=0,EE,203B1418,extended,E10
+patch=0,EE,203B144C,extended,40C00000
+patch=0,EE,203B1450,extended,40000000
+patch=0,EE,203B1454,extended,3F800000
+patch=0,EE,203B1510,extended,E10
+patch=0,EE,203B1544,extended,40C00000
+patch=0,EE,203B1548,extended,40000000
+patch=0,EE,203B154C,extended,3F800000
+patch=0,EE,203B1608,extended,E10
+patch=0,EE,203B163C,extended,40C00000
+patch=0,EE,203B1640,extended,40000000
+patch=0,EE,203B1644,extended,3F800000
+patch=0,EE,203B1700,extended,E10
+patch=0,EE,203B1734,extended,40C00000
+patch=0,EE,203B1738,extended,40000000
+patch=0,EE,203B173C,extended,3F800000
+patch=0,EE,203B17F8,extended,E10
+patch=0,EE,203B182C,extended,40C00000
+patch=0,EE,203B1830,extended,40000000
+patch=0,EE,203B1834,extended,3F800000
+patch=0,EE,203B18F0,extended,E10
+patch=0,EE,203B1924,extended,40C00000
+patch=0,EE,203B1928,extended,40000000
+patch=0,EE,203B192C,extended,3F800000
+patch=0,EE,203B19E8,extended,E10
+patch=0,EE,203B1A1C,extended,40C00000
+patch=0,EE,203B1A20,extended,40000000
+patch=0,EE,203B1A24,extended,3F800000
+patch=0,EE,203B1AE0,extended,E10
+patch=0,EE,203B1B14,extended,40C00000
+patch=0,EE,203B1B18,extended,40000000
+patch=0,EE,203B1B1C,extended,3F800000
+patch=0,EE,203B1BD8,extended,E10
+patch=0,EE,203B1C0C,extended,40C00000
+patch=0,EE,203B1C10,extended,40000000
+patch=0,EE,203B1C14,extended,3F800000
+patch=0,EE,203B1CD0,extended,E10
+patch=0,EE,203B1D04,extended,40C00000
+patch=0,EE,203B1D08,extended,40000000
+patch=0,EE,203B1D0C,extended,3F800000
+patch=0,EE,203B1DC8,extended,E10
+patch=0,EE,203B1DFC,extended,40C00000
+patch=0,EE,203B1E00,extended,40000000
+patch=0,EE,203B1E04,extended,3F800000
+patch=0,EE,203B1EC0,extended,E10
+patch=0,EE,203B1EF4,extended,40C00000
+patch=0,EE,203B1EF8,extended,40000000
+patch=0,EE,203B1EFC,extended,3F800000
+patch=0,EE,203B1FB8,extended,E10
+patch=0,EE,203B1FEC,extended,40C00000
+patch=0,EE,203B1FF0,extended,40000000
+patch=0,EE,203B1FF4,extended,3F800000
+patch=0,EE,203B20B0,extended,E10
+patch=0,EE,203B20E4,extended,40C00000
+patch=0,EE,203B20E8,extended,40000000
+patch=0,EE,203B20EC,extended,3F800000
+patch=0,EE,203B21A8,extended,E10
+patch=0,EE,203B21DC,extended,40C00000
+patch=0,EE,203B21E0,extended,40000000
+patch=0,EE,203B21E4,extended,3F800000
+patch=0,EE,203B22A0,extended,E10
+patch=0,EE,203B22D4,extended,40C00000
+patch=0,EE,203B22D8,extended,40000000
+patch=0,EE,203B22DC,extended,3F800000
+patch=0,EE,203B2398,extended,E10
+patch=0,EE,203B23CC,extended,40C00000
+patch=0,EE,203B23D0,extended,40000000
+patch=0,EE,203B23D4,extended,3F800000
+patch=0,EE,203B2490,extended,E10
+patch=0,EE,203B24C4,extended,40C00000
+patch=0,EE,203B24C8,extended,40000000
+patch=0,EE,203B24CC,extended,3F800000
+patch=0,EE,203B2588,extended,E10
+patch=0,EE,203B25BC,extended,40C00000
+patch=0,EE,203B25C0,extended,40000000
+patch=0,EE,203B25C4,extended,3F800000
+patch=0,EE,203B2680,extended,E10
+patch=0,EE,203B26B4,extended,40C00000
+patch=0,EE,203B26B8,extended,40000000
+patch=0,EE,203B26BC,extended,3F800000
+patch=0,EE,203B2778,extended,E10
+patch=0,EE,203B27AC,extended,40C00000
+patch=0,EE,203B27B0,extended,40000000
+patch=0,EE,203B27B4,extended,3F800000
+patch=0,EE,203B2870,extended,E10
+patch=0,EE,203B28A4,extended,40C00000
+patch=0,EE,203B28A8,extended,40000000
+patch=0,EE,203B28AC,extended,3F800000
+patch=0,EE,203B2968,extended,E10
+patch=0,EE,203B299C,extended,40C00000
+patch=0,EE,203B29A0,extended,40000000
+patch=0,EE,203B29A4,extended,3F800000
+patch=0,EE,203B2A60,extended,E10
+patch=0,EE,203B2A94,extended,40C00000
+patch=0,EE,203B2A98,extended,40000000
+patch=0,EE,203B2A9C,extended,3F800000
+patch=0,EE,203B2B58,extended,E10
+patch=0,EE,203B2B8C,extended,40C00000
+patch=0,EE,203B2B90,extended,40000000
+patch=0,EE,203B2B94,extended,3F800000
+patch=0,EE,203B2C50,extended,E10
+patch=0,EE,203B2C84,extended,40C00000
+patch=0,EE,203B2C88,extended,40000000
+patch=0,EE,203B2C8C,extended,3F800000
+patch=0,EE,203B2D48,extended,E10
+patch=0,EE,203B2D7C,extended,40C00000
+patch=0,EE,203B2D80,extended,40000000
+patch=0,EE,203B2D84,extended,3F800000
+patch=0,EE,203B2E40,extended,E10
+patch=0,EE,203B2E74,extended,40C00000
+patch=0,EE,203B2E78,extended,40000000
+patch=0,EE,203B2E7C,extended,3F800000
+patch=0,EE,203B2F38,extended,E10
+patch=0,EE,203B2F6C,extended,40C00000
+patch=0,EE,203B2F70,extended,40000000
+patch=0,EE,203B2F74,extended,3F800000
+patch=0,EE,203B3030,extended,E10
+patch=0,EE,203B3064,extended,40C00000
+patch=0,EE,203B3068,extended,40000000
+patch=0,EE,203B306C,extended,3F800000
+patch=0,EE,203B3128,extended,E10
+patch=0,EE,203B315C,extended,40C00000
+patch=0,EE,203B3160,extended,40000000
+patch=0,EE,203B3164,extended,3F800000
+patch=0,EE,203B3220,extended,E10
+patch=0,EE,203B3254,extended,40C00000
+patch=0,EE,203B3258,extended,40000000
+patch=0,EE,203B325C,extended,3F800000
+patch=0,EE,203B3318,extended,E10
+patch=0,EE,203B334C,extended,40C00000
+patch=0,EE,203B3350,extended,40000000
+patch=0,EE,203B3354,extended,3F800000
+patch=0,EE,203B3410,extended,E10
+patch=0,EE,203B3444,extended,40C00000
+patch=0,EE,203B3448,extended,40000000
+patch=0,EE,203B344C,extended,3F800000
+patch=0,EE,203B3508,extended,E10
+patch=0,EE,203B353C,extended,40C00000
+patch=0,EE,203B3540,extended,40000000
+patch=0,EE,203B3544,extended,3F800000
+patch=0,EE,203B3600,extended,E10
+patch=0,EE,203B3634,extended,40C00000
+patch=0,EE,203B3638,extended,40000000
+patch=0,EE,203B363C,extended,3F800000
+patch=0,EE,203B36F8,extended,E10
+patch=0,EE,203B372C,extended,40C00000
+patch=0,EE,203B3730,extended,40000000
+patch=0,EE,203B3734,extended,3F800000
+patch=0,EE,203B37F0,extended,E10
+patch=0,EE,203B3824,extended,40C00000
+patch=0,EE,203B3828,extended,40000000
+patch=0,EE,203B382C,extended,3F800000
+patch=0,EE,203B38E8,extended,E10
+patch=0,EE,203B391C,extended,40C00000
+patch=0,EE,203B3920,extended,40000000
+patch=0,EE,203B3924,extended,3F800000
+patch=0,EE,203B39E0,extended,E10
+patch=0,EE,203B3A14,extended,40C00000
+patch=0,EE,203B3A18,extended,40000000
+patch=0,EE,203B3A1C,extended,3F800000
+patch=0,EE,203B3AD8,extended,E10
+patch=0,EE,203B3B0C,extended,40C00000
+patch=0,EE,203B3B10,extended,40000000
+patch=0,EE,203B3B14,extended,3F800000
+patch=0,EE,203B3BD0,extended,E10
+patch=0,EE,203B3C04,extended,40C00000
+patch=0,EE,203B3C08,extended,40000000
+patch=0,EE,203B3C0C,extended,3F800000
+patch=0,EE,203B3CC8,extended,E10
+patch=0,EE,203B3CFC,extended,40C00000
+patch=0,EE,203B3D00,extended,40000000
+patch=0,EE,203B3D04,extended,3F800000
+patch=0,EE,203B3DC0,extended,E10
+patch=0,EE,203B3DF4,extended,40C00000
+patch=0,EE,203B3DF8,extended,40000000
+patch=0,EE,203B3DFC,extended,3F800000
+patch=0,EE,203B3EB8,extended,E10
+patch=0,EE,203B3EEC,extended,40C00000
+patch=0,EE,203B3EF0,extended,40000000
+patch=0,EE,203B3EF4,extended,3F800000
+patch=0,EE,203B3FB0,extended,E10
+patch=0,EE,203B3FE4,extended,40C00000
+patch=0,EE,203B3FE8,extended,40000000
+patch=0,EE,203B3FEC,extended,3F800000
+patch=0,EE,203B40A8,extended,E10
+patch=0,EE,203B40DC,extended,40C00000
+patch=0,EE,203B40E0,extended,40000000
+patch=0,EE,203B40E4,extended,3F800000
+patch=0,EE,203B41A0,extended,E10
+patch=0,EE,203B41D4,extended,40C00000
+patch=0,EE,203B41D8,extended,40000000
+patch=0,EE,203B41DC,extended,3F800000
+patch=0,EE,203B4298,extended,E10
+patch=0,EE,203B42CC,extended,40C00000
+patch=0,EE,203B42D0,extended,40000000
+patch=0,EE,203B42D4,extended,3F800000
+patch=0,EE,203B4390,extended,E10
+patch=0,EE,203B43C4,extended,40C00000
+patch=0,EE,203B43C8,extended,40000000
+patch=0,EE,203B43CC,extended,3F800000
+patch=0,EE,203B4488,extended,E10
+patch=0,EE,203B44BC,extended,40C00000
+patch=0,EE,203B44C0,extended,40000000
+patch=0,EE,203B44C4,extended,3F800000
+patch=0,EE,203B4580,extended,E10
+patch=0,EE,203B45B4,extended,40C00000
+patch=0,EE,203B45B8,extended,40000000
+patch=0,EE,203B45BC,extended,3F800000
+patch=0,EE,203B4678,extended,E10
+patch=0,EE,203B46AC,extended,40C00000
+patch=0,EE,203B46B0,extended,40000000
+patch=0,EE,203B46B4,extended,3F800000
+patch=0,EE,203B4770,extended,E10
+patch=0,EE,203B47A4,extended,40C00000
+patch=0,EE,203B47A8,extended,40000000
+patch=0,EE,203B47AC,extended,3F800000
+patch=0,EE,203B4868,extended,E10
+patch=0,EE,203B489C,extended,40C00000
+patch=0,EE,203B48A0,extended,40000000
+patch=0,EE,203B48A4,extended,3F800000
+patch=0,EE,203B4960,extended,E10
+patch=0,EE,203B4994,extended,40C00000
+patch=0,EE,203B4998,extended,40000000
+patch=0,EE,203B499C,extended,3F800000
+patch=0,EE,203B4A58,extended,E10
+patch=0,EE,203B4A8C,extended,40C00000
+patch=0,EE,203B4A90,extended,40000000
+patch=0,EE,203B4A94,extended,3F800000
+patch=0,EE,203B4B50,extended,E10
+patch=0,EE,203B4B84,extended,40C00000
+patch=0,EE,203B4B88,extended,40000000
+patch=0,EE,203B4B8C,extended,3F800000
+patch=0,EE,203B4C48,extended,E10
+patch=0,EE,203B4C7C,extended,40C00000
+patch=0,EE,203B4C80,extended,40000000
+patch=0,EE,203B4C84,extended,3F800000
+patch=0,EE,203B4D40,extended,E10
+patch=0,EE,203B4D74,extended,40C00000
+patch=0,EE,203B4D78,extended,40000000
+patch=0,EE,203B4D7C,extended,3F800000
+patch=0,EE,203B4E38,extended,E10
+patch=0,EE,203B4E6C,extended,40C00000
+patch=0,EE,203B4E70,extended,40000000
+patch=0,EE,203B4E74,extended,3F800000
+patch=0,EE,203B4F30,extended,E10
+patch=0,EE,203B4F64,extended,40C00000
+patch=0,EE,203B4F68,extended,40000000
+patch=0,EE,203B4F6C,extended,3F800000
+patch=0,EE,203B5028,extended,E10
+patch=0,EE,203B505C,extended,40C00000
+patch=0,EE,203B5060,extended,40000000
+patch=0,EE,203B5064,extended,3F800000
+patch=0,EE,203B5120,extended,E10
+patch=0,EE,203B5154,extended,40C00000
+patch=0,EE,203B5158,extended,40000000
+patch=0,EE,203B515C,extended,3F800000
+patch=0,EE,203B5218,extended,E10
+patch=0,EE,203B524C,extended,40C00000
+patch=0,EE,203B5250,extended,40000000
+patch=0,EE,203B5254,extended,3F800000
+patch=0,EE,203B5310,extended,E10
+patch=0,EE,203B5344,extended,40C00000
+patch=0,EE,203B5348,extended,40000000
+patch=0,EE,203B534C,extended,3F800000
+patch=0,EE,203B5408,extended,E10
+patch=0,EE,203B543C,extended,40C00000
+patch=0,EE,203B5440,extended,40000000
+patch=0,EE,203B5444,extended,3F800000
+patch=0,EE,203B5500,extended,E10
+patch=0,EE,203B5534,extended,40C00000
+patch=0,EE,203B5538,extended,40000000
+patch=0,EE,203B553C,extended,3F800000
+patch=0,EE,203B55F8,extended,E10
+patch=0,EE,203B562C,extended,40C00000
+patch=0,EE,203B5630,extended,40000000
+patch=0,EE,203B5634,extended,3F800000
+patch=0,EE,203B56F0,extended,E10
+patch=0,EE,203B5724,extended,40C00000
+patch=0,EE,203B5728,extended,40000000
+patch=0,EE,203B572C,extended,3F800000
+patch=0,EE,203B57E8,extended,E10
+patch=0,EE,203B581C,extended,40C00000
+patch=0,EE,203B5820,extended,40000000
+patch=0,EE,203B5824,extended,3F800000
+patch=0,EE,203B58E0,extended,E10
+patch=0,EE,203B5914,extended,40C00000
+patch=0,EE,203B5918,extended,40000000
+patch=0,EE,203B591C,extended,3F800000
+patch=0,EE,203B59D8,extended,E10
+patch=0,EE,203B5A0C,extended,40C00000
+patch=0,EE,203B5A10,extended,40000000
+patch=0,EE,203B5A14,extended,3F800000
+patch=0,EE,203B5AD0,extended,E10
+patch=0,EE,203B5B04,extended,40C00000
+patch=0,EE,203B5B08,extended,40000000
+patch=0,EE,203B5B0C,extended,3F800000
+patch=0,EE,203B5BC8,extended,E10
+patch=0,EE,203B5BFC,extended,40C00000
+patch=0,EE,203B5C00,extended,40000000
+patch=0,EE,203B5C04,extended,3F800000
+patch=0,EE,203B5CC0,extended,E10
+patch=0,EE,203B5CF4,extended,40C00000
+patch=0,EE,203B5CF8,extended,40000000
+patch=0,EE,203B5CFC,extended,3F800000
+patch=0,EE,203B5DB8,extended,E10
+patch=0,EE,203B5DEC,extended,40C00000
+patch=0,EE,203B5DF0,extended,40000000
+patch=0,EE,203B5DF4,extended,3F800000
+patch=0,EE,203B5EB0,extended,E10
+patch=0,EE,203B5EE4,extended,40C00000
+patch=0,EE,203B5EE8,extended,40000000
+patch=0,EE,203B5EEC,extended,3F800000
+patch=0,EE,203B5FA8,extended,E10
+patch=0,EE,203B5FDC,extended,40C00000
+patch=0,EE,203B5FE0,extended,40000000
+patch=0,EE,203B5FE4,extended,3F800000
+patch=0,EE,203B60A0,extended,E10
+patch=0,EE,203B60D4,extended,40C00000
+patch=0,EE,203B60D8,extended,40000000
+patch=0,EE,203B60DC,extended,3F800000
+patch=0,EE,203B6198,extended,E10
+patch=0,EE,203B61CC,extended,40C00000
+patch=0,EE,203B61D0,extended,40000000
+patch=0,EE,203B61D4,extended,3F800000
+patch=0,EE,203B6290,extended,E10
+patch=0,EE,203B62C4,extended,40C00000
+patch=0,EE,203B62C8,extended,40000000
+patch=0,EE,203B62CC,extended,3F800000
+patch=0,EE,203B6388,extended,E10
+patch=0,EE,203B63BC,extended,40C00000
+patch=0,EE,203B63C0,extended,40000000
+patch=0,EE,203B63C4,extended,3F800000
+patch=0,EE,203B6480,extended,E10
+patch=0,EE,203B64B4,extended,40C00000
+patch=0,EE,203B64B8,extended,40000000
+patch=0,EE,203B64BC,extended,3F800000
+patch=0,EE,203B6578,extended,E10
+patch=0,EE,203B65AC,extended,40C00000
+patch=0,EE,203B65B0,extended,40000000
+patch=0,EE,203B65B4,extended,3F800000
+patch=0,EE,203B6670,extended,E10
+patch=0,EE,203B66A4,extended,40C00000
+patch=0,EE,203B66A8,extended,40000000
+patch=0,EE,203B66AC,extended,3F800000
+patch=0,EE,203B6768,extended,E10
+patch=0,EE,203B679C,extended,40C00000
+patch=0,EE,203B67A0,extended,40000000
+patch=0,EE,203B67A4,extended,3F800000
+patch=0,EE,203B6860,extended,E10
+patch=0,EE,203B6894,extended,40C00000
+patch=0,EE,203B6898,extended,40000000
+patch=0,EE,203B689C,extended,3F800000
+patch=0,EE,203B6958,extended,E10
+patch=0,EE,203B698C,extended,40C00000
+patch=0,EE,203B6990,extended,40000000
+patch=0,EE,203B6994,extended,3F800000
+patch=0,EE,203B6A50,extended,E10
+patch=0,EE,203B6A84,extended,40C00000
+patch=0,EE,203B6A88,extended,40000000
+patch=0,EE,203B6A8C,extended,3F800000
+patch=0,EE,203B6B48,extended,E10
+patch=0,EE,203B6B7C,extended,40C00000
+patch=0,EE,203B6B80,extended,40000000
+patch=0,EE,203B6B84,extended,3F800000
+patch=0,EE,203B6C40,extended,E10
+patch=0,EE,203B6C74,extended,40C00000
+patch=0,EE,203B6C78,extended,40000000
+patch=0,EE,203B6C7C,extended,3F800000
+patch=0,EE,203B6D38,extended,E10
+patch=0,EE,203B6D6C,extended,40C00000
+patch=0,EE,203B6D70,extended,40000000
+patch=0,EE,203B6D74,extended,3F800000
+patch=0,EE,203B6E30,extended,E10
+patch=0,EE,203B6E64,extended,40C00000
+patch=0,EE,203B6E68,extended,40000000
+patch=0,EE,203B6E6C,extended,3F800000
+patch=0,EE,203B6F28,extended,E10
+patch=0,EE,203B6F5C,extended,40C00000
+patch=0,EE,203B6F60,extended,40000000
+patch=0,EE,203B6F64,extended,3F800000
+patch=0,EE,203B7020,extended,E10
+patch=0,EE,203B7054,extended,40C00000
+patch=0,EE,203B7058,extended,40000000
+patch=0,EE,203B705C,extended,3F800000
+patch=0,EE,203B7118,extended,E10
+patch=0,EE,203B714C,extended,40C00000
+patch=0,EE,203B7150,extended,40000000
+patch=0,EE,203B7154,extended,3F800000
+patch=0,EE,203B7210,extended,E10
+patch=0,EE,203B7244,extended,40C00000
+patch=0,EE,203B7248,extended,40000000
+patch=0,EE,203B724C,extended,3F800000
+patch=0,EE,203B7308,extended,E10
+patch=0,EE,203B733C,extended,40C00000
+patch=0,EE,203B7340,extended,40000000
+patch=0,EE,203B7344,extended,3F800000
+patch=0,EE,203B7400,extended,E10
+patch=0,EE,203B7434,extended,40C00000
+patch=0,EE,203B7438,extended,40000000
+patch=0,EE,203B743C,extended,3F800000
+patch=0,EE,203B74F8,extended,E10
+patch=0,EE,203B752C,extended,40C00000
+patch=0,EE,203B7530,extended,40000000
+patch=0,EE,203B7534,extended,3F800000
+patch=0,EE,203B75F0,extended,E10
+patch=0,EE,203B7624,extended,40C00000
+patch=0,EE,203B7628,extended,40000000
+patch=0,EE,203B762C,extended,3F800000
+patch=0,EE,203B76E8,extended,E10
+patch=0,EE,203B771C,extended,40C00000
+patch=0,EE,203B7720,extended,40000000
+patch=0,EE,203B7724,extended,3F800000
+patch=0,EE,203B77E0,extended,E10
+patch=0,EE,203B7814,extended,40C00000
+patch=0,EE,203B7818,extended,40000000
+patch=0,EE,203B781C,extended,3F800000
+patch=0,EE,203B78D8,extended,E10
+patch=0,EE,203B790C,extended,40C00000
+patch=0,EE,203B7910,extended,40000000
+patch=0,EE,203B7914,extended,3F800000
+patch=0,EE,203B79D0,extended,E10
+patch=0,EE,203B7A04,extended,40C00000
+patch=0,EE,203B7A08,extended,40000000
+patch=0,EE,203B7A0C,extended,3F800000
+patch=0,EE,203B7AC8,extended,E10
+patch=0,EE,203B7AFC,extended,40C00000
+patch=0,EE,203B7B00,extended,40000000
+patch=0,EE,203B7B04,extended,3F800000
+patch=0,EE,203B7BC0,extended,E10
+patch=0,EE,203B7BF4,extended,40C00000
+patch=0,EE,203B7BF8,extended,40000000
+patch=0,EE,203B7BFC,extended,3F800000
+patch=0,EE,203B7CB8,extended,E10
+patch=0,EE,203B7CEC,extended,40C00000
+patch=0,EE,203B7CF0,extended,40000000
+patch=0,EE,203B7CF4,extended,3F800000
+patch=0,EE,203B7DB0,extended,E10
+patch=0,EE,203B7DE4,extended,40C00000
+patch=0,EE,203B7DE8,extended,40000000
+patch=0,EE,203B7DEC,extended,3F800000
+patch=0,EE,203B7EA8,extended,E10
+patch=0,EE,203B7EDC,extended,40C00000
+patch=0,EE,203B7EE0,extended,40000000
+patch=0,EE,203B7EE4,extended,3F800000
+patch=0,EE,203B7FA0,extended,E10
+patch=0,EE,203B7FD4,extended,40C00000
+patch=0,EE,203B7FD8,extended,40000000
+patch=0,EE,203B7FDC,extended,3F800000
+patch=0,EE,203B8098,extended,E10
+patch=0,EE,203B80CC,extended,40C00000
+patch=0,EE,203B80D0,extended,40000000
+patch=0,EE,203B80D4,extended,3F800000
+patch=0,EE,203B8190,extended,E10
+patch=0,EE,203B81C4,extended,40C00000
+patch=0,EE,203B81C8,extended,40000000
+patch=0,EE,203B81CC,extended,3F800000
+patch=0,EE,203B8288,extended,E10
+patch=0,EE,203B82BC,extended,40C00000
+patch=0,EE,203B82C0,extended,40000000
+patch=0,EE,203B82C4,extended,3F800000
+patch=0,EE,203B8380,extended,E10
+patch=0,EE,203B83B4,extended,40C00000
+patch=0,EE,203B83B8,extended,40000000
+patch=0,EE,203B83BC,extended,3F800000
+patch=0,EE,203B8478,extended,E10
+patch=0,EE,203B84AC,extended,40C00000
+patch=0,EE,203B84B0,extended,40000000
+patch=0,EE,203B84B4,extended,3F800000
+patch=0,EE,203B8570,extended,E10
+patch=0,EE,203B85A4,extended,40C00000
+patch=0,EE,203B85A8,extended,40000000
+patch=0,EE,203B85AC,extended,3F800000
+patch=0,EE,203B8668,extended,E10
+patch=0,EE,203B869C,extended,40C00000
+patch=0,EE,203B86A0,extended,40000000
+patch=0,EE,203B86A4,extended,3F800000
+patch=0,EE,203B8760,extended,E10
+patch=0,EE,203B8794,extended,40C00000
+patch=0,EE,203B8798,extended,40000000
+patch=0,EE,203B879C,extended,3F800000
+patch=0,EE,203B8858,extended,E10
+patch=0,EE,203B888C,extended,40C00000
+patch=0,EE,203B8890,extended,40000000
+patch=0,EE,203B8894,extended,3F800000
+patch=0,EE,203B8950,extended,E10
+patch=0,EE,203B8984,extended,40C00000
+patch=0,EE,203B8988,extended,40000000
+patch=0,EE,203B898C,extended,3F800000
+patch=0,EE,203B8A48,extended,E10
+patch=0,EE,203B8A7C,extended,40C00000
+patch=0,EE,203B8A80,extended,40000000
+patch=0,EE,203B8A84,extended,3F800000
+patch=0,EE,203B8B40,extended,E10
+patch=0,EE,203B8B74,extended,40C00000
+patch=0,EE,203B8B78,extended,40000000
+patch=0,EE,203B8B7C,extended,3F800000
+patch=0,EE,203B8C38,extended,E10
+patch=0,EE,203B8C6C,extended,40C00000
+patch=0,EE,203B8C70,extended,40000000
+patch=0,EE,203B8C74,extended,3F800000
+patch=0,EE,203B8D30,extended,E10
+patch=0,EE,203B8D64,extended,40C00000
+patch=0,EE,203B8D68,extended,40000000
+patch=0,EE,203B8D6C,extended,3F800000
+patch=0,EE,203B8E28,extended,E10
+patch=0,EE,203B8E5C,extended,40C00000
+patch=0,EE,203B8E60,extended,40000000
+patch=0,EE,203B8E64,extended,3F800000
+patch=0,EE,203B8F20,extended,E10
+patch=0,EE,203B8F54,extended,40C00000
+patch=0,EE,203B8F58,extended,40000000
+patch=0,EE,203B8F5C,extended,3F800000
+patch=0,EE,203B9018,extended,E10
+patch=0,EE,203B904C,extended,40C00000
+patch=0,EE,203B9050,extended,40000000
+patch=0,EE,203B9054,extended,3F800000
+patch=0,EE,203B9110,extended,E10
+patch=0,EE,203B9144,extended,40C00000
+patch=0,EE,203B9148,extended,40000000
+patch=0,EE,203B914C,extended,3F800000
+patch=0,EE,203B9208,extended,E10
+patch=0,EE,203B923C,extended,40C00000
+patch=0,EE,203B9240,extended,40000000
+patch=0,EE,203B9244,extended,3F800000
+patch=0,EE,203B9300,extended,E10
+patch=0,EE,203B9334,extended,40C00000
+patch=0,EE,203B9338,extended,40000000
+patch=0,EE,203B933C,extended,3F800000
+patch=0,EE,203B93F8,extended,E10
+patch=0,EE,203B942C,extended,40C00000
+patch=0,EE,203B9430,extended,40000000
+patch=0,EE,203B9434,extended,3F800000
+patch=0,EE,203B94F0,extended,E10
+patch=0,EE,203B9524,extended,40C00000
+patch=0,EE,203B9528,extended,40000000
+patch=0,EE,203B952C,extended,3F800000
+patch=0,EE,203B95E8,extended,E10
+patch=0,EE,203B961C,extended,40C00000
+patch=0,EE,203B9620,extended,40000000
+patch=0,EE,203B9624,extended,3F800000
+patch=0,EE,203B96E0,extended,E10
+patch=0,EE,203B9714,extended,40C00000
+patch=0,EE,203B9718,extended,40000000
+patch=0,EE,203B971C,extended,3F800000
+patch=0,EE,203B97D8,extended,E10
+patch=0,EE,203B980C,extended,40C00000
+patch=0,EE,203B9810,extended,40000000
+patch=0,EE,203B9814,extended,3F800000
+patch=0,EE,203B98D0,extended,E10
+
+// Change the frames in which the garbage bin (and player) are posed within animations when opening/closing the recycle bin
+// The game uses these as frame counters, so we have to change these. They also multiply these numbers by 2 elsewhere in order
+// to pose the player and the trash bin animations, so we'll have to remove that.
+// See 151FD8 for that change.
+//3D9B50 is the open start frame (0)
+patch=0,EE,103D9B52,extended,78 // 0x3C -> 0x78; end frame for opening bin
+patch=0,EE,103D9B54,extended,78 // 0x3C -> 0x78; start frame for closing bin
+patch=0,EE,103D9B56,extended,F0 // 0x78 -> 0xF0; end frame for closing bin
+
+// MISSING_NOTE
+patch=0,EE,203E13EC,extended,10
+patch=0,EE,203E13F0,extended,10
+
+// MISSING_NOTE
+patch=0,EE,203E1404,extended,A
+patch=0,EE,203E1408,extended,4
+
+// MISSING_NOTE
+patch=0,EE,203E17CC,extended,10
+patch=0,EE,203E17D0,extended,10
+
+// MISSING_NOTE
+patch=0,EE,203E17E8,extended,4
+
+// MISSING_NOTE
+patch=0,EE,203E1B3C,extended,10
+patch=0,EE,203E1B40,extended,10
+
+// MISSING_NOTE
+patch=0,EE,203E1B54,extended,14
+patch=0,EE,203E1B58,extended,4
+
+// MISSING_NOTE
+patch=0,EE,103E1D42,extended,78
+
+// MISSING_NOTE
+patch=0,EE,103E1D70,extended,78
+
+// MISSING_NOTE
+patch=0,EE,103E1D9E,extended,78
+
+// MISSING_NOTE
+patch=0,EE,20404BD4,extended,64
+
+// MISSING_NOTE
+patch=0,EE,20404CC4,extended,64
+
+// Affects behavior of the smoke sprites above food window when cooking something at survival point
+// Affects various parameters used to randomly determine how the sprite is transformed/scaled
+//patch=0,EE,20418928,extended,41400000
+//patch=0,EE,2041892C,extended,40800000
+//patch=0,EE,20418930,extended,BE800000
+//patch=0,EE,20418934,extended,3E800000
+//patch=0,EE,20418938,extended,BE19999A
+//patch=0,EE,2041893C,extended,BECCCCCD
+patch=0,EE,20418940,extended,BCCCCCCD
+patch=0,EE,20418944,extended,3CCCCCCD
+patch=0,EE,20418954,extended,3D4CCCCD
+patch=0,EE,20418958,extended,3C23D70A
+patch=0,EE,2041895C,extended,3CA3D70A
+//patch=0,EE,20418968,extended,42000000
+//patch=0,EE,2041896C,extended,42800000
+patch=0,EE,20418970,extended,40000000
+patch=0,EE,20418974,extended,40800000
+patch=0,EE,20418988,extended,41700000
+patch=0,EE,2041898C,extended,42B40000 // Doubles lifetime of smoke sprites
+//patch=0,EE,20418994,extended,10 // Doubles delay between spawning smoke sprites
+// This is the same thing below for 3 other food types
+//patch=0,EE,204189A8,extended,41400000
+//patch=0,EE,204189AC,extended,40800000
+//patch=0,EE,204189B0,extended,BE800000
+//patch=0,EE,204189B4,extended,3E800000
+//patch=0,EE,204189B8,extended,BE19999A
+//patch=0,EE,204189BC,extended,BECCCCCD
+patch=0,EE,204189C0,extended,BCCCCCCD
+patch=0,EE,204189C4,extended,3CCCCCCD
+patch=0,EE,204189D4,extended,3D4CCCCD
+patch=0,EE,204189D8,extended,3C23D70A
+patch=0,EE,204189DC,extended,3CA3D70A
+//patch=0,EE,204189E8,extended,42000000
+//patch=0,EE,204189EC,extended,42800000
+patch=0,EE,204189F0,extended,40000000
+patch=0,EE,204189F4,extended,40800000
+patch=0,EE,20418A08,extended,41700000
+patch=0,EE,20418A0C,extended,42B40000
+//patch=0,EE,20418A14,extended,10
+//patch=0,EE,20418A28,extended,41400000
+//patch=0,EE,20418A2C,extended,40800000
+//patch=0,EE,20418A30,extended,BE800000
+//patch=0,EE,20418A34,extended,3E800000
+//patch=0,EE,20418A38,extended,BE19999A
+//patch=0,EE,20418A3C,extended,BECCCCCD
+patch=0,EE,20418A40,extended,BCCCCCCD
+patch=0,EE,20418A44,extended,3CCCCCCD
+patch=0,EE,20418A54,extended,3D4CCCCD
+patch=0,EE,20418A58,extended,3C23D70A
+patch=0,EE,20418A5C,extended,3CA3D70A
+//patch=0,EE,20418A68,extended,42000000
+//patch=0,EE,20418A6C,extended,42800000
+patch=0,EE,20418A70,extended,40000000
+patch=0,EE,20418A74,extended,40800000
+patch=0,EE,20418A88,extended,41700000
+patch=0,EE,20418A8C,extended,42B40000
+//patch=0,EE,20418A94,extended,10
+//patch=0,EE,20418AA8,extended,41400000
+//patch=0,EE,20418AAC,extended,40800000
+//patch=0,EE,20418AB0,extended,BE800000
+//patch=0,EE,20418AB4,extended,3E800000
+//patch=0,EE,20418AB8,extended,BE19999A
+//patch=0,EE,20418ABC,extended,BECCCCCD
+patch=0,EE,20418AC0,extended,BCCCCCCD
+patch=0,EE,20418AC4,extended,3CCCCCCD
+patch=0,EE,20418AD4,extended,3D4CCCCD
+patch=0,EE,20418AD8,extended,3C23D70A
+patch=0,EE,20418ADC,extended,3CA3D70A
+//patch=0,EE,20418AE8,extended,42000000
+//patch=0,EE,20418AEC,extended,42800000
+patch=0,EE,20418AF0,extended,40000000
+patch=0,EE,20418AF4,extended,40800000
+patch=0,EE,20418B08,extended,41700000
+patch=0,EE,20418B0C,extended,42B40000
+//patch=0,EE,20418B14,extended,10
+
+
+// Player gravity value
+patch=0,EE,20456E28,extended,3B9D4952
+
+// Player terminal velocity
+patch=0,EE,20456E30,extended,3E99999A
+
+// MISSING_NOTE
+patch=0,EE,2045773C,extended,40C00000
+patch=0,EE,20457740,extended,40000000
+patch=0,EE,20457744,extended,3F800000
+
+// MISSING_NOTE
+patch=0,EE,2045778C,extended,10
+
+// MISSING_NOTE
+patch=0,EE,204577B8,extended,E10
+
+// Fade in/out duration for specific situations
+patch=0,EE,2046D610,extended,42200000
+
+// MISSING_NOTE
+patch=0,EE,2046D628,extended,20
+
+// How fast "rubble" falls
+// In this game, might only be used for the furniture falling when Ivan sails through the one apartment!
+patch=0,EE,2048BF18,extended,3DCCCCCD // Height lost per frame 0.2f -> 0.1f
+
+// MISSING_NOTE
+patch=0,EE,2048C008,extended,3D088888
+patch=0,EE,2048C00C,extended,3E4CCCCD
+
+// Something to do with the camera
+// MISSING_NOTE
+patch=0,EE,2048C034,extended,28
+// Something to do with players moving along splines
+// MISSING_NOTE
+patch=0,EE,2048C038,extended,28
+
+// some sort of camera transitions
+// MISSING_NOTE
+patch=0,EE,2048C044,extended,41A00000
+patch=0,EE,2048C048,extended,41200000
+patch=0,EE,2048C050,extended,3E4CCCCD
+patch=0,EE,2048C05C,extended,3F800000
+patch=0,EE,2048C060,extended,3E4CCCCD
+patch=0,EE,2048C068,extended,3C
+
+// something to do with players
+// MISSING_NOTE
+patch=0,EE,2048C078,extended,3C
+patch=0,EE,2048C07C,extended,D2
+patch=0,EE,2048C084,extended,708
+patch=0,EE,2048C088,extended,B4
+patch=0,EE,2048C08C,extended,3C
+patch=0,EE,2048C0B0,extended,40
+patch=0,EE,2048C0C0,extended,B4
+patch=0,EE,2048C0C4,extended,14
+patch=0,EE,2048C0C8,extended,14
+// Divisor for how fast players lose BT due to ambient map temperature
+patch=0,EE,2048C0CC,extended,40400000
+// Divisor for how fast players lose BT due to being wet
+patch=0,EE,2048C0D0,extended,41F00000
+patch=0,EE,2048C0EC,extended,41200000
+
+// something to do with players
+// MISSING_NOTE
+patch=0,EE,2048C110,extended,3C
+patch=0,EE,2048C114,extended,B4
+// How fast player's character can turn (normal)
+patch=0,EE,2048C118,extended,41700000
+// How fast player's character can turn (when carrying another actor?)
+patch=0,EE,2048C120,extended,40200000
+
+// MISSING_NOTE
+patch=0,EE,2048C12C,extended,1E
+
+// MISSING_NOTE
+patch=0,EE,2048C134,extended,40800000
+
+// MISSING_NOTE
+patch=0,EE,2048C144,extended,14
+patch=0,EE,2048C148,extended,14
+
+// MISSING_NOTE
+patch=0,EE,2048C168,extended,10
+
+// MISSING_NOTE
+patch=0,EE,2048C174,extended,B4
+patch=0,EE,2048C178,extended,3D4CCCCD
+patch=0,EE,2048C17C,extended,28
+
+// MISSING_NOTE
+patch=0,EE,2048C184,extended,14
+patch=0,EE,2048C188,extended,10
+patch=0,EE,2048C18C,extended,20
+patch=0,EE,2048C190,extended,10
+
+// MISSING_NOTE
+patch=0,EE,2048C1BC,extended,12C
+patch=0,EE,2048C1C0,extended,28
+patch=0,EE,2048C1C4,extended,50
+
+// MISSING_NOTE
+patch=0,EE,2048C1EC,extended,78
+patch=0,EE,2048C1F0,extended,78
+
+// MISSING_NOTE
+patch=0,EE,2048C200,extended,14
+
+// MISSING_NOTE
+patch=0,EE,2048C20C,extended,B4
+
+// MISSING_NOTE
+patch=0,EE,2048C224,extended,10
+
+// MISSING_NOTE
+patch=0,EE,2048C234,extended,B4
+
+// MISSING_NOTE
+patch=0,EE,2048C288,extended,21C
+patch=0,EE,2048C28C,extended,F0
+
+// MISSING_NOTE
+patch=0,EE,2048C2B4,extended,40000000
+
+// MISSING_NOTE
+patch=0,EE,2048C2F8,extended,3C888889
+
+// MISSING_NOTE
+patch=0,EE,2048C960,extended,78
+patch=0,EE,2048C964,extended,78
+patch=0,EE,2048C968,extended,78
+patch=0,EE,2048C96C,extended,78
+
+// MISSING_NOTE
+patch=0,EE,2048D6D8,extended,3DCCCCCD
+patch=0,EE,2048D6DC,extended,3DCCCCCD
+patch=0,EE,2048D6E0,extended,44
+
+// Affects speed of camera moving l/r and u/d when BT=0
+patch=0,EE,2048D778,extended,B4
+patch=0,EE,2048D77C,extended,B4
+patch=0,EE,2048D788,extended,5A
+patch=0,EE,2048D78C,extended,5A
+
+// Affects how fast the taxi turns when using the handbrake.
+patch=0,EE,2048D9AC,extended,3D4CCCCD
+
+// Reduce radio scan speed when Isaac is listening to radio
+patch=0,EE,2048E1E4,extended,5
+
+// Overlays
+// Menu overlays
+
+// ATLAS.BIN (Map Menu)
+
+// String compare file name
+patch=1,EE,E0145441,extended,00718A20 // "AT"
+patch=1,EE,E013414C,extended,00718A22 // "LA"
+patch=1,EE,E0122E53,extended,00718A24 // "S."
+
+// MISSING_NOTE
+patch=1,EE,207194A8,extended,3C023D4C
+patch=1,EE,207194AC,extended,3442CCCE
+// MISSING_NOTE
+patch=1,EE,20719B88,extended,3C023E80
+// MISSING_NOTE
+patch=1,EE,20719B98,extended,3C024080
+// MISSING_NOTE
+patch=1,EE,20719C50,extended,3C034080
+// MISSING_NOTE
+patch=1,EE,20719E8C,extended,3C034040
+// MISSING_NOTE
+patch=1,EE,2071B654,extended,3C033DCC
+patch=1,EE,2071B65C,extended,3463CCCE
+// MISSING_NOTE
+patch=1,EE,2071B678,extended,3C023DCC
+patch=1,EE,2071B67C,extended,3442CCCE
+// MISSING_NOTE
+patch=1,EE,2071B7A4,extended,3C033DCC
+patch=1,EE,2071B7AC,extended,3463CCCE
+// MISSING_NOTE
+patch=1,EE,2071B7C8,extended,3C023DCC
+patch=1,EE,2071B7CC,extended,3442CCCE
+// MISSING_NOTE
+patch=1,EE,2071D45C,extended,3C023D08
+patch=1,EE,2071D460,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2071D478,extended,3C023D08
+patch=1,EE,2071D47C,extended,34428889
+
+// CMPSMENU.BIN (Compass menu)
+
+// String compare file name
+patch=1,EE,E00C4D43,extended,00738620 // "CM"
+patch=1,EE,E00B5350,extended,00738622 // "PS"
+patch=1,EE,E00A454D,extended,00738624 // "ME"
+
+// Affects rotation speed of the compass with right stick (horizontal)
+patch=1,EE,2073A0EC,extended,3C033D56
+patch=1,EE,2073A0F4,extended,34637751
+patch=1,EE,2073A100,extended,3C033DD6
+patch=1,EE,2073A108,extended,34637751
+// Vertical rotation speed
+patch=1,EE,2073A168,extended,3C033D56
+patch=1,EE,2073A16C,extended,34637751
+patch=1,EE,2073A178,extended,3C033DD6
+patch=1,EE,2073A17C,extended,34637751
+// MISSING_NOTE
+patch=1,EE,2073AB34,extended,3C024180
+patch=1,EE,2073ABE0,extended,3C024180
+
+// GAMERESULT.BIN
+
+// String compare file name
+patch=1,EE,E0444147,extended,00745D20 // "GA"
+patch=1,EE,E043454D,extended,00745D22 // "ME"
+patch=1,EE,E0424552,extended,00745D24 // "RE"
+
+// MISSING_NOTE
+patch=1,EE,20745E04,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20745F24,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20747278,extended,3C010208
+patch=1,EE,2074727C,extended,3421CE55
+// MISSING_NOTE
+patch=1,EE,2074728C,extended,3C020208
+patch=1,EE,20747290,extended,3456CE54
+// MISSING_NOTE
+patch=1,EE,207488EC,extended,3C010208
+patch=1,EE,207488F0,extended,3421CE55
+// MISSING_NOTE
+patch=1,EE,20748900,extended,3C020208
+patch=1,EE,20748904,extended,3452CE54
+// MISSING_NOTE
+patch=1,EE,20749E64,extended,FFBF0040
+patch=1,EE,20749E68,extended,7FB30030
+patch=1,EE,20749E6C,extended,7FB20020
+patch=1,EE,20749E70,extended,7FB10010
+patch=1,EE,20749E74,extended,7FB00000
+patch=1,EE,20749E78,extended,3C030003
+patch=1,EE,20749E7C,extended,34634BC0
+patch=1,EE,20749E80,extended,83001A
+patch=1,EE,20749E84,extended,8012
+patch=1,EE,20749E88,extended,24030E10
+patch=1,EE,20749E8C,extended,2010
+patch=1,EE,20749E90,extended,83001A
+patch=1,EE,20749E94,extended,9812
+patch=1,EE,20749E98,extended,2403003C
+patch=1,EE,20749E9C,extended,2010
+patch=1,EE,20749EA0,extended,83001A
+patch=1,EE,20749EA4,extended,9012
+patch=1,EE,20749EA8,extended,24110001
+patch=1,EE,20749EAC,extended,0
+patch=1,EE,20749EB0,extended,0
+patch=1,EE,20749EB4,extended,0
+patch=1,EE,20749EB8,extended,0
+patch=1,EE,20749EBC,extended,0
+patch=1,EE,20749EC0,extended,0
+patch=1,EE,20749EC4,extended,0
+patch=1,EE,20749EC8,extended,0
+patch=1,EE,20749ECC,extended,0
+patch=1,EE,20749ED0,extended,0
+patch=1,EE,20749ED4,extended,0
+patch=1,EE,20749ED8,extended,0
+patch=1,EE,20749EDC,extended,0
+patch=1,EE,20749EE4,extended,0
+patch=1,EE,20749EE8,extended,0
+patch=1,EE,20749EEC,extended,0
+patch=1,EE,20749EF0,extended,0
+patch=1,EE,20749EF4,extended,0
+patch=1,EE,20749EF8,extended,0
+patch=1,EE,20749EFC,extended,0
+patch=1,EE,20749F00,extended,0
+patch=1,EE,20749F04,extended,0
+patch=1,EE,20749F08,extended,0
+patch=1,EE,20749F10,extended,0
+patch=1,EE,20749F14,extended,0
+patch=1,EE,20749F18,extended,0
+patch=1,EE,20749F1C,extended,0
+patch=1,EE,20749F20,extended,0
+patch=1,EE,20749F24,extended,0
+patch=1,EE,20749F28,extended,0
+patch=1,EE,20749F2C,extended,0
+patch=1,EE,20749F30,extended,0
+patch=1,EE,20749F38,extended,0
+patch=1,EE,20749F3C,extended,0
+patch=1,EE,20749F40,extended,0
+patch=1,EE,20749F44,extended,27A40080
+patch=1,EE,20749F48,extended,2785A408
+patch=1,EE,20749F50,extended,200302D
+
+// IMENU.BIN (Item Menu + item pickup prompts)
+
+// String compare file name
+patch=1,EE,E04D4D49,extended,00718A20 // "IM"
+patch=1,EE,E04C4E45,extended,00718A22 // "EN"
+patch=1,EE,E04B2E55,extended,00718A24 // "U."
+
+// MISSING_NOTE
+patch=1,EE,2071A3D0,extended,3C033F80
+patch=1,EE,2071A3D4,extended,0
+// MISSING_NOTE
+patch=1,EE,2071A4B0,extended,3C023F80
+patch=1,EE,2071A4B4,extended,0
+// MISSING_NOTE
+patch=1,EE,2071C28C,extended,3C024120
+// MISSING_NOTE
+patch=1,EE,2071C37C,extended,3C024120
+// MISSING_NOTE
+patch=1,EE,2071EE18,extended,3C024140
+// MISSING_NOTE
+patch=1,EE,2071EF20,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,207200F4,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20720190,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,207202D4,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,207203CC,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,20720780,extended,3C024140
+// MISSING_NOTE
+patch=1,EE,20720C20,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20720F10,extended,3C024140
+// MISSING_NOTE
+patch=1,EE,207212EC,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20722578,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,20722A1C,extended,3C024100
+// MISSING_NOTE
+patch=1,EE,207258C4,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20725CBC,extended,3C0241A0
+// MISSING_NOTE
+patch=1,EE,207261D4,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,2072681C,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20727A50,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,20727FBC,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20728738,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,20728C80,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20729E80,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,2072A700,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,2072A720,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2072A928,extended,3C024140
+// MISSING_NOTE
+patch=1,EE,2072A958,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2072A978,extended,3C024180
+
+// Adjust how long of a pause there is between scrolling options in top menu
+// Horizontal
+patch=1,EE,2072B19C,extended,24060006
+// Vertical
+patch=1,EE,2072B2C4,extended,24060006
+
+// MISSING_NOTE
+patch=1,EE,2072B9E4,extended,3C024140
+// MISSING_NOTE
+patch=1,EE,2072BA14,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2072BA34,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2072BB24,extended,3C034208
+patch=1,EE,2072BB28,extended,34638889
+// MISSING_NOTE
+patch=1,EE,2072C3F0,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2072C46C,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2072C5D4,extended,3C0241C0
+// MISSING_NOTE
+patch=1,EE,2072C610,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2072E654,extended,3C024208
+patch=1,EE,2072E658,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2072E694,extended,3C024208
+patch=1,EE,2072E698,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2072EC30,extended,3C024208
+patch=1,EE,2072EC34,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2072EC70,extended,3C024208
+patch=1,EE,2072EC74,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2072F620,extended,3C034208
+patch=1,EE,2072F624,extended,34638889
+// MISSING_NOTE
+patch=1,EE,2072F660,extended,3C034208
+patch=1,EE,2072F664,extended,34638889
+// MISSING_NOTE
+patch=1,EE,2072FD3C,extended,3C024208
+patch=1,EE,2072FD40,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2072FD7C,extended,3C024208
+patch=1,EE,2072FD80,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20730714,extended,3C024208
+patch=1,EE,20730718,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20730754,extended,3C024208
+patch=1,EE,20730758,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20730EBC,extended,3C024208
+patch=1,EE,20730EC0,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20730EFC,extended,3C024208
+patch=1,EE,20730F00,extended,34428889
+
+// In equip screen, affect how fast player actor rotates
+patch=1,EE,20733F98,extended,3C023C0E
+// In equip screen, affect how fast selected item part pulses
+patch=1,EE,20733FD4,extended,3C023D8E
+
+// MISSING_NOTE
+patch=1,EE,20735B50,extended,3C024180
+
+// Halve the speed of item pickup item background transitions
+// Transition in
+patch=1,EE,207367E0,extended,1E
+// Transition out
+patch=1,EE,20736810,extended,1E
+
+// Significantly slow down the spinning animation for item pickup backgrounds
+// in
+patch=1,EE,207367E4,extended,BCD67751
+patch=1,EE,207367E8,extended,3EC90FDC
+// out
+patch=1,EE,20736814,extended,3CD67751
+
+// IMENU_READ.BIN (Reading documents, i.e. the Info -> Read option inside item menu)
+
+// String compare file name
+patch=1,EE,E0104D49,extended,00738620 // "IM"
+patch=1,EE,E00F4E45,extended,00738622 // "EN"
+patch=1,EE,E00E5F55,extended,00738624 // "U_"
+
+// MISSING_NOTE
+patch=1,EE,207386B0,extended,3C033D88
+patch=1,EE,207386B4,extended,34638889
+// MISSING_NOTE
+patch=1,EE,207386DC,extended,3C023D88
+patch=1,EE,207386E0,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20739064,extended,3C024208
+patch=1,EE,20739068,extended,34428889
+// MISSING_NOTE
+patch=1,EE,207390A4,extended,3C024208
+patch=1,EE,207390A8,extended,34428889
+// MISSING_NOTE
+patch=1,EE,207392E4,extended,3C033D88
+patch=1,EE,207392EC,extended,34638889
+// MISSING_NOTE
+patch=1,EE,20739394,extended,3C033D88
+patch=1,EE,2073939C,extended,34658889
+// MISSING_NOTE
+patch=1,EE,20739AE4,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20739B90,extended,3C024180
+
+// MCMENU.BIN (Save/load menu)
+
+// String compare file name
+patch=1,EE,E005434D,extended,00738620 // "MC"
+patch=1,EE,E004454D,extended,00738622 // "ME"
+patch=1,EE,E003554E,extended,00738624 // "NU"
+
+// MISSING_NOTE
+patch=1,EE,20738740,extended,3C023C88
+patch=1,EE,20738744,extended,34438889
+// MISSING_NOTE
+patch=1,EE,20738E54,extended,3C033C88
+
+// OMOIDE.BIN (Memories menu)
+
+// String compare file name
+patch=1,EE,E0044D4F,extended,00738620 // "OM"
+patch=1,EE,E003494F,extended,00738622 // "OI"
+patch=1,EE,E0024544,extended,00738624 // "DE"
+
+// MISSING_NOTE
+patch=1,EE,20739684,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,20739730,extended,3C024180
+
+// OPTION.BIN (Options menu)
+
+// String compare file name
+patch=1,EE,E01E504F,extended,00738620 // "OP"
+patch=1,EE,E01D4954,extended,00738622 // "TI"
+patch=1,EE,E01C4E4F,extended,00738624 // "ON"
+
+// MISSING_NOTE
+patch=1,EE,2073A224,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2073A58C,extended,3C023D08
+patch=1,EE,2073A590,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2073A5B4,extended,3C033D08
+patch=1,EE,2073A5BC,extended,34638889
+// MISSING_NOTE
+patch=1,EE,2073A934,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2073AD04,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2073ADC4,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2073AE94,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2073AF54,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,2073AFD4,extended,3C023D08
+patch=1,EE,2073AFDC,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2073B074,extended,3C023D08
+patch=1,EE,2073B078,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2073B0F4,extended,3C023D08
+patch=1,EE,2073B0FC,extended,34438889
+// MISSING_NOTE
+patch=1,EE,2073B194,extended,3C023D08
+patch=1,EE,2073B198,extended,34438889
+// MISSING_NOTE
+patch=1,EE,2073B264,extended,3C0241F0
+// MISSING_NOTE
+patch=1,EE,2073B338,extended,3C0241F0
+// MISSING_NOTE
+patch=1,EE,2073BC2C,extended,3C023D08
+patch=1,EE,2073BC30,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2073BC54,extended,3C033D08
+patch=1,EE,2073BC5C,extended,34638889
+// MISSING_NOTE
+patch=1,EE,2073BD64,extended,3C023D08
+patch=1,EE,2073BD68,extended,34428889
+// MISSING_NOTE
+patch=1,EE,2073BD8C,extended,3C033D08
+patch=1,EE,2073BD94,extended,34638889
+
+// RADIO.BIN (The radio talent menu)
+
+// String compare file name
+patch=1,EE,E0054152,extended,00738620 // "RA"
+patch=1,EE,E0044944,extended,00738622 // "DI"
+patch=1,EE,E0032E4F,extended,00738624 // "O."
+
+// MISSING_NOTE
+patch=1,EE,207387EC,extended,3C024270
+// MISSING_NOTE
+patch=1,EE,20739314,extended,3C024180
+// MISSING_NOTE
+patch=1,EE,207393C0,extended,3C024180
+
+// RELATE.BIN (Relationship menu)
+
+// String compare file name
+patch=1,EE,E0044552,extended,00738620 // "RE"
+patch=1,EE,E003414C,extended,00738622 // "LA"
+patch=1,EE,E0024554,extended,00738624 // "TE"
+
+// MISSING_NOTE
+patch=1,EE,2073873C,extended,3C0241F0
+// MISSING_NOTE
+patch=1,EE,207387AC,extended,3C0241F0
+
+// TITLE.BIN (Title menu)
+
+// String compare file name
+patch=1,EE,E0594954,extended,00745D20 // "TI"
+patch=1,EE,E0584C54,extended,00745D22 // "TL"
+patch=1,EE,E0572E45,extended,00745D24 // "E."
+
+// MISSING_NOTE
+patch=1,EE,20745F94,extended,3C0241F0
+// MISSING_NOTE
+patch=1,EE,20745FB4,extended,2405001E
+// MISSING_NOTE
+patch=1,EE,207460EC,extended,3C024270
+// MISSING_NOTE
+patch=1,EE,20746338,extended,3C023C88
+patch=1,EE,2074633C,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20746794,extended,3C024270
+// MISSING_NOTE
+patch=1,EE,20746998,extended,3C024270
+// MISSING_NOTE
+patch=1,EE,20746B1C,extended,3C023C88
+patch=1,EE,20746B24,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20746C14,extended,3C024270
+// MISSING_NOTE
+patch=1,EE,20746D54,extended,3C024270
+// MISSING_NOTE
+patch=1,EE,20746DD4,extended,3C024270
+// MISSING_NOTE
+patch=1,EE,20746E74,extended,3C033C88
+patch=1,EE,20746E78,extended,34658889
+// MISSING_NOTE
+patch=1,EE,20746ED4,extended,3C023C88
+patch=1,EE,20746ED8,extended,34448889
+// MISSING_NOTE
+patch=1,EE,207470C4,extended,3C044270
+// MISSING_NOTE
+patch=1,EE,207471D8,extended,3C034270
+// MISSING_NOTE
+patch=1,EE,20747380,extended,3C0241F0
+// MISSING_NOTE
+patch=1,EE,207474E0,extended,3C0241F0
+// MISSING_NOTE
+patch=1,EE,20748428,extended,3C063C88
+patch=1,EE,20748430,extended,34C68889
+// MISSING_NOTE
+patch=1,EE,20748638,extended,3C064270
+// MISSING_NOTE
+patch=1,EE,20748734,extended,3C023C88
+patch=1,EE,20748738,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20748780,extended,3C023C88
+patch=1,EE,20748784,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20748888,extended,3C064270
+// MISSING_NOTE
+patch=1,EE,20748984,extended,3C023C88
+patch=1,EE,20748988,extended,34428889
+// MISSING_NOTE
+patch=1,EE,207489D0,extended,3C023C88
+patch=1,EE,207489D4,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20748B44,extended,3C0241F0
+// MISSING_NOTE
+patch=1,EE,20748B60,extended,2405001E
+// MISSING_NOTE
+patch=1,EE,20748C64,extended,3C0241F0
+// MISSING_NOTE
+patch=1,EE,20748C80,extended,2405001E
+// MISSING_NOTE
+patch=1,EE,20748D84,extended,3C0241F0
+// MISSING_NOTE
+patch=1,EE,20748DA0,extended,2405001E
+// MISSING_NOTE
+patch=1,EE,20748E24,extended,3C023D88
+patch=1,EE,20748E2C,extended,34428889
+// MISSING_NOTE
+patch=1,EE,20748EC4,extended,3C023D88
+patch=1,EE,20748ECC,extended,34438889
+// MISSING_NOTE
+patch=1,EE,20748FB8,extended,3C023D88
+patch=1,EE,20748FBC,extended,34438889
+// MISSING_NOTE
+patch=1,EE,2074A698,extended,3C023D80
+// MISSING_NOTE
+patch=1,EE,2074A92C,extended,3C033D08
+patch=1,EE,2074A934,extended,34628889
+// MISSING_NOTE
+patch=1,EE,2074AAB8,extended,3C023D80
+// MISSING_NOTE
+patch=1,EE,2074AC5C,extended,3C033D08
+patch=1,EE,2074AC64,extended,34628889
+// MISSING_NOTE
+patch=1,EE,2074AD20,extended,3C033D80
+// MISSING_NOTE
+patch=1,EE,2074AD38,extended,3C033D80
+// MISSING_NOTE
+patch=1,EE,2074AF88,extended,3C023D80
+// MISSING_NOTE
+patch=1,EE,2074B1FC,extended,3C033D08
+patch=1,EE,2074B200,extended,34638889
+// MISSING_NOTE
+patch=1,EE,2074B248,extended,3C043D80
+// MISSING_NOTE
+patch=1,EE,2074B290,extended,3C024270
+// MISSING_NOTE
+patch=1,EE,2074B2F0,extended,3C024270
+// MISSING_NOTE
+patch=1,EE,2074B354,extended,3C044270
+// MISSING_NOTE
+patch=1,EE,2074B3C4,extended,3C044270
+// MISSING_NOTE
+patch=1,EE,2074B430,extended,3C034270
+// MISSING_NOTE
+patch=1,EE,2074C280,extended,3C033D80
+// MISSING_NOTE
+patch=1,EE,2074C2C8,extended,3C024408
+// MISSING_NOTE
+patch=1,EE,2074DA40,extended,3C033D56
+patch=1,EE,2074DA48,extended,34627752
+// MISSING_NOTE
+patch=1,EE,2074DA88,extended,3C033C26
+patch=1,EE,2074DA90,extended,3462CE95
+// MISSING_NOTE
+patch=1,EE,2074DB68,extended,3C023C08
+patch=1,EE,2074DB6C,extended,34438889
+// MISSING_NOTE
+patch=1,EE,2074DB8C,extended,3C023C08
+patch=1,EE,2074DB90,extended,34438889
+// MISSING_NOTE
+patch=1,EE,2074DBE8,extended,3C033D56
+patch=1,EE,2074DBEC,extended,34637752
+// MISSING_NOTE
+patch=1,EE,2074DC38,extended,3C033C26
+patch=1,EE,2074DC3C,extended,3463CE95
+// MISSING_NOTE
+patch=1,EE,2074DC88,extended,3C033C08
+patch=1,EE,2074DC8C,extended,34638889
+// MISSING_NOTE
+patch=1,EE,2074DCB0,extended,3C033D56
+patch=1,EE,2074DCB4,extended,34637752
+// MISSING_NOTE
+patch=1,EE,2074DCDC,extended,3C033C26
+patch=1,EE,2074DCE0,extended,3463CE95
+// MISSING_NOTE
+patch=1,EE,2074DD08,extended,3C033C08
+patch=1,EE,2074DD0C,extended,34638889
+// MISSING_NOTE
+patch=1,EE,2074F218,extended,3C023D08
+patch=1,EE,2074F21C,extended,34438889
+// MISSING_NOTE
+patch=1,EE,2074F274,extended,3C023D08
+patch=1,EE,2074F278,extended,34438889
+
+// Level overlays
+
+// M1_01_00.BIN (First Joshua level (not intro level) in banquet hall)
+
+// String compare file name
+patch=1,EE,E007314D,extended,00745D20 // "M1"
+patch=1,EE,E006305F,extended,00745D22 // "_0"
+patch=1,EE,E0055F31,extended,00745D24 // "1_"
+patch=1,EE,E0043030,extended,00745D26 // "00"
+
+// Timer for reaction when crawling in kitchen/banquet hall
+patch=1,EE,2077AB48,extended,286300B4
+
+// There's a race condition in which a level display manager script will kill the broken sink
+// water spray effect during the cutscene in which Aiden and Joshua are in the bathroom.
+// Forces the effect back on after this happens, right when the fadein begins.
+// Replaces a cutscene skip check, but it's called right after again on the same frame so it shouldn't be an issue.
+patch=1,EE,2076B7D4,extended,240402AF
+patch=1,EE,2076B7D8,extended,0C042CF0
+patch=1,EE,2076B7DC,extended,24050001
+
+// M1_09_00.BIN (Last Joshua level -- specifically fixes for last campaign here)
+
+// String compare file name
+//patch=1,EE,E008314D,extended,00745D20 // "M1"
+//patch=1,EE,E007305F,extended,00745D22 // "_0"
+//patch=1,EE,E0065F39,extended,00745D24 // "9_"
+//patch=1,EE,E0053030,extended,00745D26 // "00"
+
+// M2_02_00.BIN (Amber level in jail)
+
+// String compare file name
+patch=1,EE,E006324D,extended,00745D20 // "M2"
+patch=1,EE,E005305F,extended,00745D22 // "_0"
+patch=1,EE,E0045F32,extended,00745D24 // "2_"
+patch=1,EE,E0033030,extended,00745D26 // "00"
+
+// Reduce speed at which the water rises during cutscene
+// where Amber climbs a ladder to escape the jail basement.
+patch=1,EE,2074D6E8,extended,3C024300
+
+// Better sync up Amber's hands when she opens the gate with the Key Ring
+// w/o guard
+patch=1,EE,2074F79C,extended,24040031
+// w/ guard
+patch=1,EE,20750FDC,extended,24040031
+
+// M2_08_00.BIN (Amber level at dam)
+
+// String compare file name
+patch=1,EE,E006324D,extended,00745D20 // "M2"
+patch=1,EE,E005305F,extended,00745D22 // "_0"
+patch=1,EE,E0045F38,extended,00745D24 // "8_"
+patch=1,EE,E0033030,extended,00745D26 // "00"
+
+// Frame counter for how long the player has control during avalanche sequence...
+patch=1,EE,20755804,extended,240202EE // addiu v0,zero,0x2EE (750 frames; 12.5 seconds)
+
+// Disables 1 of the snow particle spawners for avalanche sequence
+// TODO: This disables the "powder snow" effect in Amber's direction --
+// maybe disabling the snow heading in Jaden's direction would look better?
+// If all are active, there seems to be some sort of OOM error. Needs more research.
+patch=1,EE,20755A54,extended,0
+// Actually I crashed mid-section with just 1 removed; let's try 2 to be safe.
+patch=1,EE,20755A8C,extended,0
+
+// M3_02_01.BIN (Isaac w/ Sophia at jail)
+
+// String compare file name
+patch=1,EE,E00B334D,extended,00745D20 // "M3"
+patch=1,EE,E00A305F,extended,00745D22 // "_0"
+patch=1,EE,E0095F32,extended,00745D24 // "2_"
+patch=1,EE,E0083130,extended,00745D26 // "01"
+
+// For some reason in the cutscene after the quake where there's an internal
+// taxi camera shot, the camera ends up slightly in front of the windscreen.
+// Might be something to do with the taxi handling model but here's a patch for now.
+// Changes camera x from -30.38 -> -30.2
+patch=1,EE,207550DC,extended,3C02C1F1
+patch=1,EE,207550E0,extended,3442999A
+
+// Similar deal with second shot where Isaac can drink coffee, etc.
+patch=1,EE,207557F8,extended,3C06C1ED
+patch=1,EE,207557FC,extended,34C5999A
+patch=1,EE,20755958,extended,3C02C1ED
+patch=1,EE,2075595C,extended,3442999A
+patch=1,EE,20755998,extended,3C05C1ED
+patch=1,EE,2075599C,extended,34A4851F
+
+// M3_15_00.BIN (Isaac w/ Sophia outside Capitol Post)
+
+// String compare file name
+patch=1,EE,E007334D,extended,00745D20 // "M3"
+patch=1,EE,E006315F,extended,00745D22 // "_1"
+patch=1,EE,E0055F35,extended,00745D24 // "5_"
+patch=1,EE,E0043030,extended,00745D26 // "00"
+
+// Adjust another internal taxi shot near beginning of level
+patch=1,EE,2074E008,extended,3C0242B2
+patch=1,EE,2074E00C,extended,34423333
+patch=1,EE,2074E048,extended,3C0242B2
+patch=1,EE,2074E04C,extended,34423333
+
+// M5_06_00.BIN (Ivan in Central Geo District)
+
+// String compare file name
+patch=1,EE,E005354D,extended,00745D20 // "M5"
+patch=1,EE,E004305F,extended,00745D22 // "_0"
+patch=1,EE,E0035F36,extended,00745D24 // "6_"
+patch=1,EE,E0023030,extended,00745D26 // "00"
+
+// HACKFIX: Slow down container speed and following wave after train falls
+// (I think the boat is just too slow (maybe about 75% intended speed??) so that might need tweaking)
+// Container speed
+patch=1,EE,2074C264,extended,3C043E1A
+// Wave speed
+patch=1,EE,20749D08,extended,3C023E5C
+
+// M5_07_00.BIN (Ivan in substation)
+
+// String compare file name
+patch=1,EE,E00E354D,extended,00745D20 // "M5"
+patch=1,EE,E00D305F,extended,00745D22 // "_0"
+patch=1,EE,E00C5F37,extended,00745D24 // "7_"
+patch=1,EE,E00B3030,extended,00745D26 // "00"
+
+// HACKFIX: Ivan gets carried "behind" the guard when getting thrown out to sea.
+// I have no idea how this *doesn't* manifest at 20/30fps, but we can fix this by
+// disabling Ivan->player collisions while he's being dragged.
+// Disable collision
+// This just moves up/reorders some operations to make space
+patch=1,EE,2074AFCC,extended,0C072E30
+patch=1,EE,2074AFD0,extended,0000302D
+patch=1,EE,2074AFD4,extended,3C024188
+patch=1,EE,2074AFD8,extended,44826000
+patch=1,EE,2074AFDC,extended,44806800
+patch=1,EE,2074AFE0,extended,24040004
+patch=1,EE,2074AFE4,extended,0C05248C
+patch=1,EE,2074AFE8,extended,24050038
+// Now actually disable Ivan's into player collision
+patch=1,EE,2074AFEC,extended,24040004 // addiu a0,zero,0x4 ; Ivan's ID
+patch=1,EE,2074AFF0,extended,0C05325C // jal z_un_0014c970 ; set if Ivan has into player collision
+patch=1,EE,2074AFF4,extended,0000282D // daddu a1,zero,zero ; false
+// NOTE: I'm just going to leave his collision disabled for now,
+// as there's no way to actually even interact with a player actor for the rest of the level.
+// Getting a game over re-enables the collision too.
