@@ -17,6 +17,149 @@ patch=1,EE,204A6A20,extended,00000003
 patch=1,EE,D02EA812,extended,0000FDFE
 patch=1,EE,20250D84,extended,00832025
 
+[Force progressive scan]
+author=xan1242
+patch=1,EE,00243204,short,3F80
+patch=1,EE,2024341C,short,01C0
+patch=1,EE,20243260,short,01C0
+patch=1,EE,202432CC,short,0001
+patch=1,EE,202432F4,word,AC530008
+patch=1,EE,2025A3C8,extended,34020001
+patch=1,EE,2010148C,extended,24030000
+patch=1,EE,201014A4,extended,24020001
+patch=1,EE,20101490,extended,00000000
+patch=1,EE,201014B0,extended,00000000
+patch=1,EE,204A6A20,extended,00000001
+patch=1,EE,20252A44,extended,00003021
+patch=1,EE,20252A70,extended,00003021
+patch=1,EE,20252ABC,extended,00001821
+patch=1,EE,20252AE4,extended,00002021
+patch=1,EE,20252B10,extended,00003021
+patch=1,EE,201D1B54,short,01C0
+patch=1,EE,20180B6C,short,01C0
+patch=1,EE,20180CDC,short,01C0
+patch=1,EE,201CAE7C,extended,0C0D2226
+patch=1,EE,201CAE98,extended,0C0D2226
+patch=1,EE,20348898,extended,03E03821
+patch=1,EE,2034889C,extended,0C091146
+patch=1,EE,203488A0,extended,00000000
+patch=1,EE,203488A4,extended,00E0F821
+patch=1,EE,203488A8,extended,24030280
+patch=1,EE,203488AC,extended,AC830008
+patch=1,EE,203488B0,extended,24030140
+patch=1,EE,203488B4,extended,AC83000C
+patch=1,EE,203488B8,extended,03E00008
+patch=1,EE,203488BC,extended,00000000
+patch=1,EE,2013DA20,extended,0C0D14FA
+patch=1,EE,2013DA38,extended,0C0D14FA
+patch=1,EE,203453E8,extended,27BDFFD0
+patch=1,EE,203453EC,extended,FFB00000
+patch=1,EE,203453F0,extended,0080802D
+patch=1,EE,203453F4,extended,FFB10010
+patch=1,EE,203453F8,extended,FFBF0020
+patch=1,EE,203453FC,extended,0C0D2226
+patch=1,EE,20345400,extended,00C0882D
+patch=1,EE,20345404,extended,AE110004
+patch=1,EE,20345408,extended,0200202D
+patch=1,EE,2034540C,extended,0C09134C
+patch=1,EE,20345410,extended,AE000028
+patch=1,EE,20345414,extended,0200102D
+patch=1,EE,20345418,extended,DFBF0020
+patch=1,EE,2034541C,extended,DFB10010
+patch=1,EE,20345420,extended,DFB00000
+patch=1,EE,20345424,extended,03E00008
+patch=1,EE,20345428,extended,27BD0030
+patch=1,EE,201CD8A4,extended,0C0D243C
+patch=1,EE,20183E88,extended,0C0D243C
+patch=1,EE,201D22C4,extended,0C0D243C
+patch=1,EE,201D2318,extended,0C0D243C
+patch=1,EE,201D24F8,extended,0C0D243C
+patch=1,EE,201D2538,extended,0C0D243C
+patch=1,EE,201D1F1C,extended,0C0D243C
+patch=1,EE,201D1F70,extended,0C0D243C
+patch=1,EE,201AFF34,extended,0C0D243C
+patch=1,EE,201D1DE0,extended,0C0D243C
+patch=1,EE,201D1E34,extended,0C0D243C
+patch=1,EE,201D2060,extended,0C0D243C
+patch=1,EE,201D20B0,extended,0C0D243C
+patch=1,EE,201D2194,extended,0C0D243C
+patch=1,EE,201D21E8,extended,0C0D243C
+patch=1,EE,201D23F0,extended,0C0D243C
+patch=1,EE,201D243C,extended,0C0D243C
+patch=1,EE,203490F0,extended,03E00008
+patch=1,EE,203490F4,extended,8C82000C
+patch=1,EE,202446F8,extended,02401021
+patch=1,EE,20139BF0,extended,0C0D150B
+patch=1,EE,2034542C,extended,27BDFFE0
+patch=1,EE,20345430,extended,FFB60010
+patch=1,EE,20345434,extended,FFBF0000
+patch=1,EE,20345438,extended,24020006
+patch=1,EE,2034543C,extended,24030001
+patch=1,EE,20345440,extended,3C160014
+patch=1,EE,20345444,extended,26D69700
+patch=1,EE,20345448,extended,A6C20060
+patch=1,EE,2034544C,extended,A6C20098
+patch=1,EE,20345450,extended,A6C3FE20
+patch=1,EE,20345454,extended,A2C3016C
+patch=1,EE,20345458,extended,0C04E528
+patch=1,EE,2034545C,extended,24050001
+patch=1,EE,20345460,extended,24020005
+patch=1,EE,20345464,extended,24030004
+patch=1,EE,20345468,extended,A6C20060
+patch=1,EE,2034546C,extended,A6C20098
+patch=1,EE,20345470,extended,A6C3FE20
+patch=1,EE,20345474,extended,A2C0016C
+patch=1,EE,20345478,extended,DFB60010
+patch=1,EE,2034547C,extended,DFBF0000
+patch=1,EE,20345480,extended,03E00008
+patch=1,EE,20345484,extended,27BD0020
+patch=1,EE,201396C0,extended,0C0D1522
+patch=1,EE,20345488,extended,3C030014
+patch=1,EE,2034548C,extended,2463986C
+patch=1,EE,20345490,extended,8C620000
+patch=1,EE,20345494,extended,10400003
+patch=1,EE,20345498,extended,00000000
+patch=1,EE,2034549C,extended,03E00008
+patch=1,EE,203454A0,extended,00001021
+patch=1,EE,203454A4,extended,00000000
+patch=1,EE,203454A8,extended,0809128C
+patch=1,EE,203454AC,extended,00000000
+
+[Corrected text aspect ratio for 16:9]
+author=Aero_
+patch=1,EE,2023CBD4,extended,08124DC8
+patch=1,EE,20493720,extended,3C09002F
+patch=1,EE,20493724,extended,3529424C
+patch=1,EE,20493728,extended,812A0000
+patch=1,EE,2049372C,extended,3C013F80
+patch=1,EE,20493730,extended,34210000
+patch=1,EE,20493734,extended,11400003
+patch=1,EE,20493738,extended,00000000
+patch=1,EE,2049373C,extended,3C013F40
+patch=1,EE,20493740,extended,34210000
+patch=1,EE,20493744,extended,44810000
+patch=1,EE,20493748,extended,3C013F80
+patch=1,EE,2049374C,extended,34210000
+patch=1,EE,20493750,extended,44810800
+patch=1,EE,20493754,extended,0808F2F7
+patch=1,EE,2023CC14,extended,E6210260
+patch=1,EE,20197C84,extended,08124DD8
+patch=1,EE,20493760,extended,3C09002F
+patch=1,EE,20493764,extended,3529424C
+patch=1,EE,20493768,extended,812A0000
+patch=1,EE,2049376C,extended,3C0B3F80
+patch=1,EE,20493770,extended,356B0000
+patch=1,EE,20493774,extended,11400003
+patch=1,EE,20493778,extended,00000000
+patch=1,EE,2049377C,extended,3C0B3F40
+patch=1,EE,20493780,extended,356B0000
+patch=1,EE,20493784,extended,448B0000
+patch=1,EE,20493788,extended,08065F22
+patch=1,EE,2018A948,extended,10000003
+patch=1,EE,20193658,extended,10000003
+patch=1,EE,201AFF78,extended,10000019
+patch=1,EE,201B00D4,extended,10000008
+
 [Adjusted triggers sensitivity]
 description=Makes throttle/brake more precise when using triggers, like on the PS3
 author=Silent & Aero_
@@ -31,13 +174,21 @@ patch=1,EE,102112F0,extended,0000005A
 patch=1,EE,20211014,extended,00000000
 
 [Metric units]
-description=Changes MPH to KMH, ft.lb to kgf.m
+description=Changes MPH to KMH, HP to PS, ft.lb to kgf.m. Units can be tweaked editing the patch file.
 author=Silent
 
 // Speed and distance units
 // 0 - KMH/KM
 // 1 - MPH/Miles
 patch=1,EE,202F59D8,extended,0
+
+// Power units
+// 0 - PS
+// 1 - HP
+// 2 - BHP
+// 3 - CV
+// 4 - kW
+patch=1,EE,202F59DC,extended,0
 
 // Torque units
 // 0 - kgf.m
