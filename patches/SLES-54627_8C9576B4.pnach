@@ -1,8 +1,8 @@
-gametitle=Burnout Dominator (PAL-E) (SLES-54627)
+gametitle=Burnout Dominator (PAL) (SLES-54627)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht and Arapapa
+author=ElHecht, Arapapa
 
 //Force turn on Internal Widescreen (Full boot bypassing)
 patch=1,EE,0038b128,word,24020002 //30420003
@@ -10,4 +10,20 @@ patch=1,EE,0038b128,word,24020002 //30420003
 //Zoom fix
 patch=1,EE,2043E8F0,extended,3FAAAAAB // 3F800000 Camera Zoom
 
+[Autoboot in 480p]
+author=felixthecat1970
+comment=Skip the framerate selector and autoboots at 480p
+patch=0,EE,0020967C,extended,24030004
+patch=0,EE,2020A304,extended,24030002
+patch=0,EE,001B4904,extended,24020001
+patch=0,EE,201B4918,extended,00000000
+patch=0,EE,101B4E50,extended,240601E0
 
+[Enable build USA version parameters + pmode + langs]
+author=felixthecat1970
+comment=Activates the parameters to enable a USA build (480p with only English as available language)
+patch=0,EE,003C5104,extended,55
+patch=0,EE,2020A304,extended,24030002
+patch=0,EE,001B4904,extended,24020001
+patch=0,EE,201B4918,extended,00000000
+patch=0,EE,101B4E50,extended,240601E0
