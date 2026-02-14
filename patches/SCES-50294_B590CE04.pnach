@@ -11,34 +11,6 @@ gametitle=Gran Turismo 3 - A-Spec (PAL - 2.00) (SCES-50294)
 //patch=1,EE,201F0D30,extended,24420032 //speed timer
 //patch=1,EE,204A840C,extended,00080000
 
-[Adjusted triggers senstivity]
-description=Adjusted triggers sensitivity, makes throttle/brake more precise when using triggers, like on PS3
-author=Silent, Aero_
-// Throttle
-patch=1,EE,10212160,extended,0000005A
-// Brake
-patch=1,EE,102121A8,extended,0000005A
-// Reverse
-patch=1,EE,10212238,extended,0000005A
-// Input multiplier
-patch=1,EE,20211F5C,extended,00000000
-
-[No-Interlacing]
-gsinterlacemode=1
-author=PeterDelta
-description=Enables progressive interlacing
-patch=1,EE,0028F81C,word,3C050000
-
-[60 FPS]
-author=PeterDelta
-description=Forces progressive scan and run at 60 fps
-patch=1,EE,2028F840,extended,24120052
-patch=1,EE,2035163C,extended,3C888889 //speed flags
-patch=1,EE,20351F1C,extended,3C888889 //speed cars
-patch=1,EE,20351980,extended,3C888889 //speed icon ilumination
-patch=1,EE,203519D4,extended,3C888889 //speed icon menu principal
-patch=1,EE,201F0D30,extended,24420032 //speed timer
-patch=1,EE,204A840C,extended,00080000
 
 [Adjustable units]
 author=Silent
@@ -57,10 +29,22 @@ patch=1,EE,202F7010,extended,0 //Torque units
 //1 - ft.lb
 //2 - NM
 
-[Adjusted triggers sensitivity]
-author=Silent & Aero_
-description=Makes throttle/brake more precise when using triggers, like on the PS3
-patch=1,EE,10212160,extended,0000005A //Throttle
-patch=1,EE,102121A8,extended,0000005A //Brake
-patch=1,EE,10212238,extended,0000005A //Reverse
-patch=1,EE,20211F5C,extended,00000000 //Input multiplier
+
+[Adjusted triggers senstivity]
+description=Adjusted triggers sensitivity, makes throttle/brake more precise when using triggers, like on PS3
+author=Silent, Aero_
+// Throttle
+patch=1,EE,10212160,extended,0000005A
+// Brake
+patch=1,EE,102121A8,extended,0000005A
+// Reverse
+patch=1,EE,10212238,extended,0000005A
+// Input multiplier
+patch=1,EE,20211F5C,extended,00000000
+
+
+[No-Interlacing]
+gsinterlacemode=1
+author=PeterDelta
+description=Enables progressive interlacing
+patch=1,EE,0028F81C,word,3C050000
