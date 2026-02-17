@@ -1,9 +1,9 @@
-gametitle=Monsters Inc - Scare Island (PAL-F) (SCES-50599)
+gametitle=Monstres & Cie - L'ile de l'épouvante (PAL-F) (SCES-50599)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen hack conversion
 author=Bigdemon
+description=Patches the game to run at 16:9 Widescreen Aspect Ratio.
 
 // 16:9
 patch=1,EE,0011a3f0,word,0808ad25 // c6010068 jump to code-inject 0022b494
