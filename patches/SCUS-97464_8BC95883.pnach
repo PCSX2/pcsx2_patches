@@ -2,6 +2,7 @@ gametitle=Sly 3 - Honour Among Thieves NTSC-U
 
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=sergx12
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 patch=1,EE,0016680c,word,3c014455
 

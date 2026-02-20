@@ -2,7 +2,7 @@ gametitle=Sly Cooper 3 - Honour Among Thieves (K)(SCKA-20063)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=sergx12, ported by arapapa
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 
 //X-Fov 16:9

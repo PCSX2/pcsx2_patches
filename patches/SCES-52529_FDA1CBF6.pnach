@@ -2,7 +2,7 @@ gametitle=Sly 2 - Band of Thieves (PAL-M11) (SCES-52529)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht and nemesis2000
+author=nemesis2000 & ElHecht
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 // Widescreen by nemesis2000
 patch=1,EE,2014D778,word,3C013FDD
