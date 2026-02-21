@@ -1,0 +1,18 @@
+gametitle=Rayman 3 - Hoodlum Havoc [SLES-51222]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,0036D268,byte,1 //0
+
+
+//[480p Mode]
+//gsaspectratio=16:9
+//author=CRASHARKI
+//description=Run the game at 480p Mode from the start.
+//patch=1,EE,0036C3E8,byte,1 //0 Progressive Mode On
+//
+// I couldn't find the address to force the NTSC Mode
+// I'm leaving this here in case someone can find the
+// remaining address.
