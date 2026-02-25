@@ -1,5 +1,13 @@
 gametitle=Ape Escape 3 (SCUS-97501)
 
+[480p Progressive Scan]
+gsinterlacemode=1
+author=mthsk
+description=Forces 480p display mode
+patch=1,EE,00403C3C,word,24110000
+patch=1,EE,00403C40,word,24120050
+patch=1,EE,00403C4C,word,24130001
+
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=CRASHARKI
