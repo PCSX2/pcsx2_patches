@@ -16,3 +16,54 @@ patch=1,EE,203670C4,word,3F5EEEEF // y fov - HD remaster
 patch=1,EE,002142cc,word,3c013f40
 
 
+[More Precise Completion Percentage]
+author=Souzooka
+description=Shows a more precise completion percentage in the save menu. Older saves have to be resaved with this patch on to see completion percentage.
+
+// NOTE: Only saves saved with this patch active will show a correct percentage.
+// Saves saved without this patch will likely just display as "0.0%",
+// but saves saved with this patch may show arbitrary completion values when
+// this patch is disabled.
+
+// Change code which calculates the completion percentage for save files
+// This is originally done by taking min(100, (total event flags - not set event flags) / 5)
+// e.g. min(100, (525 - 489) / 5) = 7%
+// and then saved as a byte on [s2+0xC].
+// The offsets 0xD..0xF are unused, so we can promote this directly to float.
+// New formula = fminf(100.0f, (525 - 489) / 5.0f) = 7.2%
+patch=0,EE,2024172C,extended,3C0140A0 // lui at,0x40A0
+patch=0,EE,20241730,extended,44810000 // mtc1 at,f00
+patch=0,EE,20241734,extended,44900800 // mtc1 s0,f01
+patch=0,EE,20241738,extended,46800860 // cvt.s.w f01,f01
+patch=0,EE,2024173C,extended,46000843 // div.s f01,f01,f00
+patch=0,EE,20241740,extended,3C0142C8 // lui at,0x42C8
+patch=0,EE,20241744,extended,44810000 // mtc1 at,f00
+patch=0,EE,20241748,extended,00000000 // nop
+patch=0,EE,2024174C,extended,00000000 // nop
+patch=0,EE,20241750,extended,46010029 // min.s f00,f00,f01
+patch=0,EE,20241754,extended,E640000C // swc1 f00,0xC(s2)
+
+// Now here's the code which sets up the completion percentage string in the save file screen
+patch=0,EE,20242C20,extended,C6CC000C // lwc1 f12,0xC(s6)
+// Overwrite call to sprintf to unused Sony function (scePadGetSlotMax)
+// so that we have some space to promote the float to double (as needed for sprintf)
+patch=0,EE,20242C2C,extended,0C0C8864 // jal z_un_00322190
+// modified callsite
+patch=0,EE,20322190,extended,27BDFFD0 // addiu sp,sp,-0x30
+patch=0,EE,20322194,extended,7FBF0020 // sq ra,0x20(sp)
+patch=0,EE,20322198,extended,7FB00010 // sq s0,0x10(sp)
+patch=0,EE,2032219C,extended,7FB10000 // sq s1,0x0(sp)
+patch=0,EE,203221A0,extended,00808021 // addu s0,a0,zero
+patch=0,EE,203221A4,extended,0C0CE872 // jal z_un_0033a1c8 ; jal fptodp
+patch=0,EE,203221A8,extended,00A08821 // addu s1,a1,zero
+patch=0,EE,203221AC,extended,02002021 // addu a0,s0,zero
+patch=0,EE,203221B0,extended,02202821 // addu a1,s1,zero
+patch=0,EE,203221B4,extended,0040302D // daddu a2,v0,zero
+patch=0,EE,203221B8,extended,7BBF0020 // lq ra,0x20(sp)
+patch=0,EE,203221BC,extended,7BB00010 // lq s0,0x10(sp)
+patch=0,EE,203221C0,extended,7BB10000 // lq s1,0x0(sp)
+patch=0,EE,203221C4,extended,080CFFC2 // j z_un_0033ff08 ; j sprintf
+patch=0,EE,203221C8,extended,27BD0030 // addiu sp,sp,0x30
+// And edit the format string used for sprintf for displaying percentage in save menu
+patch=0,EE,20484C10,extended,66312E25 // "%.1f"
+patch=0,EE,20484C14,extended,00002525 // "%%"<0><0>
