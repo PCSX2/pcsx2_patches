@@ -1,10 +1,16 @@
 gametitle=Saru Get You 3 [NTSC-J] （SCPS-15096)
 
+[480p Progressive Scan]
+gsinterlacemode=1
+comment=Forces 480p display mode
+author=mthsk
+patch=1,EE,003FA9F4,word,24110000
+patch=1,EE,003FA9F8,word,24120050
+patch=1,EE,003FAA04,word,24130001
+
 [Widescreen 16:9]
 gsaspectratio=16:9
 description=Widescreen hack
 
 patch=1,EE,20762BB0,extended,3F100000
 patch=1,EE,206F2734,extended,3FCF5C29
-
-
