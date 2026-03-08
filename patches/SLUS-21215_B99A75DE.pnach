@@ -1,19 +1,34 @@
-gametitle=The Warriors (U)(SLUS-21215)
+gametitle=The Warriors (NTSC-U) (SLUS-21215)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=CRASHARKI & arapapa
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
 
 //Widescreen hack 16:9
+//Enable ingame widescreen by CRASHARKI
+patch=1,EE,007AA05C,byte,01 //00
 
-//Fix '4:3 Screen'
+//Fix '4:3 Screen' by arapapa
 //patch=1,EE,00194ec4,word,3c013fe3 //3c013faa
 //patch=1,EE,00194ec8,word,34218e3e //3421aa8f
 
 
-//Fix 'Internal Widecscreen'
+//Fix 'Internal Widecscreen' by arapapa
 //d53f013c 1d552134 (2nd)
 patch=1,EE,00194e8c,word,3c013fe3 //3c013fd5
 patch=1,EE,00194e90,word,34218e3e //3421551d
 
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,00596D70,byte,01
 
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0043CCA0,word,34050050
+patch=1,EE,0043CCA4,word,24030002
+patch=1,EE,0043CCA8,word,0000000C
+patch=1,EE,0043CCAC,word,03E00008
