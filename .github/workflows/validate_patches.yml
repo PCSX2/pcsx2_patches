@@ -10,7 +10,7 @@ jobs:
     timeout-minutes: 1
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Validate all patches
         run: |
