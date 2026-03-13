@@ -1,0 +1,12 @@
+gametitle=Sly Cooper and the Thievius Raccoonus [Demo] (SCUS-97210)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=asasega & Meos
+description=No Interlacing & No Motion Blur
+
+// No Interlacing by asasega
+patch=1,EE,201E4C6C,extended,00000000
+
+// No Motion Blur by Meos
+patch=1,EE,20159644,extended,24060000

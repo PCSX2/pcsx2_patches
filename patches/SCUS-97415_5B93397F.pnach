@@ -1,0 +1,12 @@
+gametitle=Sly 2 - Band of Thieves [E3 Demo] (SCUS-97415)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=asasega & Meos
+description=No Interlacing & No Motion Blur
+
+// No Interlacing by asasega
+patch=1,EE,2022CD44,extended,00000000
+
+// No Motion Blur by Meos
+patch=1,EE,2015EE68,extended,00000000

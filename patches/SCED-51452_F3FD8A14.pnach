@@ -1,0 +1,9 @@
+gametitle=Sly Raccoon [Demo] (SCED-51452)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=asasega
+description=Attempts to disable interlaced offset rendering.
+
+// No Interlacing by asasega
+patch=1,EE,201FFF54,extended,00000000
