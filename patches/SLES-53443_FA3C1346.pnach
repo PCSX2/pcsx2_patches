@@ -1,4 +1,13 @@
-gametitle=Warriors, The (PAL-M) SLES-53443 FA3C1346
+gametitle=The Warriors (PAL-M) (SLES-53443)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+
+//Widescreen hack 16:9
+//Enable ingame widescreen
+patch=1,EE,007AA05C,byte,01 //00
 
 [50/60 FPS]
 author=PeterDelta
