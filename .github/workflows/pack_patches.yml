@@ -36,5 +36,5 @@ jobs:
             GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete latest --cleanup-tag --yes
-          gh release create latest --latest --title "Latest Build" --generate-notes
+          gh release create latest --latest --title "Latest Build"
           gh release upload latest ./patches.zip
