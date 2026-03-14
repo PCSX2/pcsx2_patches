@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Create archives
         run: |
           7z a -r patches.zip ./patches/*
 
       - name: Upload archives
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: cheats
           path: ./patches.zip
@@ -27,14 +27,14 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
       - name: Download artifacts
-        uses: actions/download-artifact@v4
-
+        uses: actions/download-artifact@v8
       - name: Create a new release
-        uses: marvinpinto/action-automatic-releases@latest
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: latest
-          prerelease: false
-          title: Latest Build
-          files: ./cheats/patches.zip
+        env:
+            GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --cleanup-tag --yes
+          gh release create latest --latest --title "Latest Build" --generate-notes
+          gh release upload latest ./patches.zip
