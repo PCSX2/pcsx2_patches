@@ -2,7 +2,7 @@ gametitle=Saru Get You 3 [NTSC-J] （SCPS-15096)
 
 [No-Interlacing]
 gsinterlacemode=1
-comment=Forces 480p display mode
+description=Forces 480p display mode
 author=mthsk
 patch=1,EE,003FA9F4,word,24110000
 patch=1,EE,003FA9F8,word,24120050
