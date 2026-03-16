@@ -1,24 +1,21 @@
-gametitle=Gran Turismo 4 Online Public Beta [SCUS-97436] (U)
+gametitle=Gran Turismo 4 Online Public Beta (NTSC-U) (SCUS-97436)
 
-[Widescreen 16:9]
-gsaspectratio=16:9
-description=Widescreen Text
+[32-Bit color depth]
+description=Color depth will remain 32-bit while using 480p.
 author=Aero_
-// Corrects Text Aspect Ratio for Widescreen
-patch=1,EE,2033D7DC,extended,3C013F40 // lui at, 0x3F40
-patch=1,EE,2033D7E0,extended,34210000 // ori at, 0x0000
+patch=1,EE,1031268C,extended,0001 // Color Depth Mode
+patch=1,EE,10312698,extended,0280 // Resolution X
+patch=1,EE,103126A0,extended,0168 // Resolution Y
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+patch=1,EE,202B0DF0,extended,10400002 // beq v0,zero,0x002B0DFC : Jumps if Widescreen Mode is Disabled
+patch=1,EE,202B0DF4,extended,3C013F40 // lui at,0x3F40 : License Trophy Aspect Ratio Float Value (4:3)
+patch=1,EE,202B0DF8,extended,3C013F80 // lui at,0x3F80 : License Trophy Aspect Ratio Float Value (16:9)
+patch=1,EE,202B0DFC,extended,34210000 // ori at,at,0x0000
 
-[No-Interlacing]
-description=Autoboot in 480p
-author=Silent
-
-patch=1,EE,20312544,extended,34080001
-patch=1,EE,20312558,extended,AE481718
 
 [Adjusted triggers sensitivity]
 description=Makes throttle/brake more precise when using triggers, like on PS3
-author=Silent & Aero_
-
+author=Silent, Aero_
 // Throttle
 patch=1,EE,10319114,extended,0000005A
 patch=1,EE,20319194,extended,00000000
@@ -26,14 +23,140 @@ patch=1,EE,20319194,extended,00000000
 patch=1,EE,1031911C,extended,0000005A
 patch=1,EE,203191F0,extended,00000000
 
-[GT3 Chase Camera]
-description=GT3-like camera from GT4 First Preview
-author=Silent
 
+[Analog HUD for all camera views]
+description=The analog tachometer will be used for the exterior cameras and roof camera.
+author=Aero_
+patch=1,EE,201C2668,extended,1000000F
+patch=1,EE,2039CEB8,extended,24020000
+
+
+[Analog HUD for roof camera]
+description=Restores the default HUD behavior of retail GT4.
+author=Aero_
+patch=1,EE,206EC59C,extended,001C2688
+
+
+[Digital HUD for all camera views]
+description=The digital tachometer will be used for the bumper camera.
+author=Aero_
+patch=1,EE,201C2668,extended,1000000F
+patch=1,EE,2039CEB8,extended,24020001
+
+
+[Disable bumper cam pitching/crash effect]
+comment=Removes pitching and blurry shaking crash effect from bumper cam
+author=TheAdmiester
+// Overwrite the first instruction of Automobile::DriverCameraExtension::UpdatePitchLPF with an early return
+// NOPing the call to this function may have the same effect but it's used as a return value so this seemed safer
+patch=1,EE,2020B594,extended,03E00008
+// Change the check in Automobile::DriverCameraExtension::Crash to always false
+// Replaces bnel v0,zero,0x0020B760 with bne zero,zero,0x0020B760
+patch=1,EE,2020B744,extended,14000006
+
+
+[Disable dynamic race text]
+comment=Disables the text that appears at the bottom of the screen. Example: "GET READY TO DRIVE"
+author=Aero_
+patch=1,EE,201C3474,extended,00000000 // GET READY TO DRIVE
+patch=1,EE,201C306C,extended,00000000 // Penalty Timer
+
+
+[Disable G-meter]
+comment=Hides the G-meter from all views
+author=TheAdmiester
+// RaceDisplay::render_panel, bool is set to false just before checking this function - if skipped then it will never set to true to render
+// Change beq v0,zero,0x001C5DE4 to bne v0,zero,0x001C5DE4
+patch=1,EE,201C5DD0,extended,14400004
+
+
+[Disable licence/mission assists]
+comment=Disable ASM and TCS in licences and mission races.
+author=TheAdmiester
+// QUICK_MENU::ApplyLicenseRaceOption
+patch=1,EE,1010C1FC,extended,0000 // Parameter passed into RaceOrganization::setSteerAssistAsm
+patch=1,EE,1010C20C,extended,0000 // Parameter passed into RaceOrganization::setSteerAssistTcs
+// QUICK_MENU::ApplyMissionRaceOption
+patch=1,EE,1010C254,extended,0000 // Parameter passed into RaceOrganization::setSteerAssistAsm
+patch=1,EE,1010C264,extended,0000 // Parameter passed into RaceOrganization::setSteerAssistTcs
+
+
+[Disable replay HUD]
+comment=Hide replay song, GT logo, fast forward indicator, etc.
+author=TheAdmiester
+// NOP the call to RaceMusicDisplay::update inside RaceDisplay::update
+patch=1,EE,201C44C8,extended,00000000
+// Skip the branch in RaceDisplay::update that runs when replay mode is active
+patch=1,EE,201C443C,extended,08071130
+
+
+[Disable suggested gear]
+comment=Hides the suggested gear indicator from all views
+author=TheAdmiester
+// Skip a call to RaceSuggestedGearDisplay::render_main
+// Change beq v0,zero,0x001CD6E0 to beq zero,zero,0x001CD6E0
+patch=1,EE,201CD6D0,extended,10000003
+
+
+[Disable Sun lens flare]
+comment=Disables the lens flare that appears on some tracks when facing the sun. Useful for PCSX2 performance.
+author=TheAdmiester
+// Return early from CourseEnvPtr::setSun
+patch=1,EE,2029E758,extended,03E00008
+patch=1,EE,2029E75C,extended,00000000
+
+
+[Disable wind noise]
+comment=Disables wind noise
+author=TheAdmiester
+// Pretend we're in the incorrect draw mode for turbulence to be calculated in Automobile::getTurbulence
+// Change bnel v0, zero, 0x002127E0 to beq zero, zero, 0x002127E0 to always branch
+patch=1,EE,202126BC,extended,10000048
+// Return early from CourseData::setFlare
+patch=1,EE,2029D590,extended,03E00008
+patch=1,EE,2029D594,extended,00000000
+
+
+[Far chase camera]
+description=Added GT4 First Preview camera mode
+author=Silent
+// Swap 4-byte instructions to 2-byte ones to make space
+patch=1,EE,2023F37C,extended,84E30000
+patch=1,EE,1023F380,extended,0002
+patch=1,EE,1023F390,extended,0004
+patch=1,EE,2023F3A0,extended,84E30000
+patch=1,EE,1023F3B0,extended,0004
+patch=1,EE,0023F3C8,extended,40
+patch=1,EE,1023F3DA,extended,8442
+patch=1,EE,20662B30,extended,00010000
+patch=1,EE,20662B34,extended,00060014
+
+
+[Gran Turismo 3 camera placement]
+comment=Moves the exterior camera closer to the ground like Gran Turismo 3.
+author=Aero_
+patch=1,EE,2023FD7C,extended,0816A2B4 // j 0x005A8AD0
+patch=1,EE,205A8AD0,extended,8E180008 // lw t8,0x8(s0)
+patch=1,EE,205A8AD4,extended,3C19C0C0 // lui t9,0xC0C0
+patch=1,EE,205A8AD8,extended,17380006 // bne t9,t8,0x005A8AF4 : jumps if Z-Axis does not equal -6.0 float
+patch=1,EE,205A8ADC,extended,3C19BFC0 // lui t9,0xBFC0 : Y-Axis 1st-Half of Float Value
+patch=1,EE,205A8AE0,extended,37390000 // ori t9,0x0000 : Y-Axis 2nd-Half of Float Value
+patch=1,EE,205A8AE4,extended,AE190004 // sw t9,0x4(s0)
+patch=1,EE,205A8AE8,extended,3C19C0C0 // lui t9,0xC0C0 : Z-Axis 1st-Half of Float Value
+patch=1,EE,205A8AEC,extended,37390000 // ori t9,0x0000 : Z-Axis 2nd-Half of Float Value
+patch=1,EE,205A8AF0,extended,AE190008 // sw t9,0x8(s0)
+patch=1,EE,205A8AF4,extended,C6010000 // lwc1 f01,(s0)
+patch=1,EE,205A8AF8,extended,C6020004 // lwc1 f02,0x4(s0)
+patch=1,EE,205A8AFC,extended,C6000008 // lwc1 f00,0x8(s0)
+patch=1,EE,205A8B00,extended,0808FF62 // j 0x0023FD88
+
+
+[Gran Turismo 3 chase camera]
+description=GT3-like camera from Gran Turismo 4 First Preview
+author=Silent
 // Values changed by this cheat are hexadecimal.
 // They are 1-byte each, repeated 4 times - so a value of 30 (0x1E)
 // corresponds to 1E1E1E1E etc,
-
 // Default parameters in this cheat correspond to the values from GT4 First Preview,
 // but you may freely customize them. For example, if you want to make the camera
 // even stiffer (like in GT5/6), increase the damper value.
@@ -48,19 +171,46 @@ patch=1,EE,106635DC,extended,1E1E // 30
 patch=1,EE,106635DE,extended,0A0A // 10
 patch=1,EE,106635E0,extended,0A0A // 10
 
-[Far chase camera]
-description=Added GT4 First Preview camera mode
+
+[Gran Turismo 5 camera placement]
+comment=Moves the exterior camera further from the ground like GT5.
+author=Aero_
+patch=1,EE,2023FD7C,extended,0816A2B4 // j 0x005A8AD0
+patch=1,EE,205A8AD0,extended,8E180008 // lw t8,0x8(s0)
+patch=1,EE,205A8AD4,extended,3C19C0C0 // lui t9,0xC0C0
+patch=1,EE,205A8AD8,extended,17380006 // bne t9,t8,0x005A8AF4 : jumps if Z-Axis does not equal -6.0 float
+patch=1,EE,205A8ADC,extended,3C19BFF3 // lui t9,0xBFF3 : Y-Axis 1st-Half of Float Value
+patch=1,EE,205A8AE0,extended,37393333 // ori t9,0x3333 : Y-Axis 2nd-Half of Float Value
+patch=1,EE,205A8AE4,extended,AE190004 // sw t9,0x4(s0)
+patch=1,EE,205A8AE8,extended,3C19C0E0 // lui t9,0xC0E0 : Z-Axis 1st-Half of Float Value
+patch=1,EE,205A8AEC,extended,37390000 // ori t9,0x0000 : Z-Axis 2nd-Half of Float Value
+patch=1,EE,205A8AF0,extended,AE190008 // sw t9,0x8(s0)
+patch=1,EE,205A8AF4,extended,C6010000 // lwc1 f01,(s0)
+patch=1,EE,205A8AF8,extended,C6020004 // lwc1 f02,0x4(s0)
+patch=1,EE,205A8AFC,extended,C6000008 // lwc1 f00,0x8(s0)
+patch=1,EE,205A8B00,extended,0808FF62 // j 0x0023FD88
+
+
+[Increase B-Spec speed Mmltiplier]
+comment=Allow B-Spec's speedup mode to go to 16x
+author=TheAdmiester, Vyerq
+// Change limiter check from 3 to 16
+patch=1,EE,201F2D0C,extended,28420010
+// Change override value from 3 to 16 if somehow over limiter
+patch=1,EE,201F2D14,extended,24020010
+
+
+[No-Interlacing]
+description=Autoboot in 480p
 author=Silent
+patch=1,EE,20312544,extended,34080001
+patch=1,EE,20312558,extended,AE481718
 
-// Swap 4-byte instructions to 2-byte ones to make space
-patch=1,EE,2023F37C,extended,84E30000
-patch=1,EE,1023F380,extended,0002
-patch=1,EE,1023F390,extended,0004
-patch=1,EE,2023F3A0,extended,84E30000
 
-patch=1,EE,1023F3B0,extended,0004
-patch=1,EE,0023F3C8,extended,40
-patch=1,EE,1023F3DA,extended,8442
-
-patch=1,EE,20662B30,extended,00010000
-patch=1,EE,20662B34,extended,00060014
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen Text
+author=Aero_
+// Corrects Text Aspect Ratio for Widescreen
+patch=1,EE,2033D7DC,extended,3C013F40 // lui at, 0x3F40
+patch=1,EE,2033D7E0,extended,34210000 // ori at, 0x0000
