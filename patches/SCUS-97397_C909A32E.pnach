@@ -1,0 +1,13 @@
+gametitle=Syphon Filter: The Omega Strain Public Beta 1 (NTSC-U) (SCUS-97397) BFCE8450
+
+[Widescreen 16:9]
+author=YukiXXL
+gsaspectratio=16:9
+
+//Gameplay fix
+patch=1,EE,00369510,extended,3C043F40
+patch=1,EE,20369514,extended,44841800
+patch=1,EE,20369518,extended,46030003
+patch=1,EE,2036951C,extended,460318C3
+patch=1,EE,20369520,extended,46031840
+patch=1,EE,20369594,extended,E603007C

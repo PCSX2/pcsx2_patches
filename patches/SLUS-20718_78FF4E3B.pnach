@@ -1,9 +1,8 @@
-gametitle=Sonic Heroes (SLUS-20718)
+gametitle=Sonic Heroes (NTSC-U) (SLUS-20718) 78FF4E3B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Brandondorf9999
-
 //---
 patch=1,EE,000C0000,word,3C023F40
 patch=1,EE,000C0004,word,34420000
@@ -22,4 +21,8 @@ patch=1,EE,0016A4DC,word,08030000
 patch=1,EE,0016A4E8,word,08030006
 patch=1,EE,002AD094,word,24050002//---
 
-
+[60 FPS]
+author=asasega
+description=Might need EE Overclock at 130%.
+patch=1,EE,004777C0,word,00000001 //fps
+patch=1,EE,2028FF5C,word,24020001 //speed

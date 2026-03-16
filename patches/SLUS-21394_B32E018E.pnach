@@ -1,13 +1,9 @@
-gametitle=Tokyo Xtreme Racer: Drift 2 (NTSC-U - SLUS-21394)
-
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=nemesis2000
-patch=1,EE,203f59d0,extended,3f400000
+gametitle=Tokyo Xtreme Racer: Drift 2 [NTSC-U] SLUS-21394 B32E018E
 
 [No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
+author=asasega
+description=Attempts to disable interlaced offset rendering.
 patch=1,EE,20153B90,extended,00000000
 patch=1,EE,E002FFFC,extended,0065581C
 patch=1,EE,20153AB4,extended,34050001
@@ -15,6 +11,22 @@ patch=1,EE,20153A9C,extended,34051400
 patch=1,EE,E002FFFA,extended,0065581C
 patch=1,EE,20153AB4,extended,DCC50008
 patch=1,EE,20153A9C,extended,DCC50020
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=val
+patch=1,EE,003F59D2,short,3F40 //3F80 //3D General
+patch=1,EE,003F6B12,short,3F40 //3F80 //3D Reflections
+patch=1,EE,003F7C52,short,3F40 //3F80 //3D Mirror
+//patch=1,EE,003F5A22,short,3F80 //3F80 //3D Weather
+
+[Native 10:7]
+gsaspectratio=10:7
+author=val
+patch=1,EE,003F59D2,short,3F6F //3F80 //3D General
+patch=1,EE,003F6B12,short,3F6F //3F80 //3D Reflections
+patch=1,EE,003F7C52,short,3F6F //3F80 //3D Mirror
+//patch=1,EE,003F5A22,short,3F80 //3F80 //3D Weather
 
 [Convert units from mph to km/h]
 description=Changes the ingame speedometer and gear menu to km/h

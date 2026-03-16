@@ -65,9 +65,9 @@ description=Might need EE overclocking to be stable.
 // 60 fps
 patch=1,EE,0028F4C4,word,00000001
 
-// Revert to 30 fps during Cutscenes
-//patch=1,EE,e0010001,extended,0063AA08
-//patch=1,EE,2028F4C4,extended,00000002
+// Revert to 30 fps during Cutscenes (cutscenes break when played at 60 fps)
+patch=1,EE,e0010001,extended,0063AA08
+patch=1,EE,2028F4C4,extended,00000002
 
 // No Interlacing (needed for 60 fps)
 patch=1,EE,0013CAD0,word,30420000

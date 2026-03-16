@@ -1,0 +1,5 @@
+[Enable Burger King Challenge]
+description=Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574314,byte,1
+patch=1,EE,20574350,byte,1

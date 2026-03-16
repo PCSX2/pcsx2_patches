@@ -22,7 +22,7 @@ author=asasega
 description=Patches the game to run at 60 FPS (EE Overclock should be set to 130%. Higher values are usable but may cause hanging).
 patch=1,EE,20113E2C,extended,2C420001
 
-[Trigger control mapppings]
+[Trigger control mappings]
 author=Silent
 description=Adds extra controller setups, mirroring the scrapped prototype trigger-based setup, two Underground-like setups, and an Xbox HP2-like setup.
 
@@ -314,3 +314,12 @@ patch=0,EE,202DDBEC,extended,1F160D0B
 patch=0,EE,202DDBF0,extended,2221
 patch=0,EE,202DE240,extended,21201F1E
 patch=0,EE,202DE244,extended,22
+
+[Bypass Save Prompt]
+description=Automatically saves the game after events if "autosave" is on.
+author=Souzooka
+
+// Causes save menu to progress to saving after checking memory card
+// instead of asking if user wishes to save
+patch=0,EE,20246208,extended,2402000F // addiu v0,zero,0xF
+patch=0,EE,20246224,extended,2402000F // addiu v0,zero,0xF

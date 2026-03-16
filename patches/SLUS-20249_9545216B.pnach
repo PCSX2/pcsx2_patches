@@ -2,12 +2,15 @@ gametitle=Armored Core 2 Another Age SLUS_202.49
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hack
-patch=1,EE,001c7ce8,word,3c013f40
-patch=1,EE,001dcb4c,word,3c013f40
-patch=1,EE,001dcc6c,word,3c013f40
-patch=1,EE,202FBF80,word,43f00000
-
+author=Elhecht, Berylskid
+patch=1,EE,201C740C,extended,3C013F4D //hor fov menu
+patch=1,EE,201C7410,extended,3421B6DC
+patch=1,EE,201C741C,extended,4481F000
+patch=1,EE,201C7420,extended,461E6B42
+patch=1,EE,202C4DE4,extended,3C013F4D //hor fov gameplay
+patch=1,EE,202C4DE8,extended,3421B6DC
+patch=1,EE,202C4DF0,extended,44810000
+patch=1,EE,202C4DF4,extended,4600C602
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.

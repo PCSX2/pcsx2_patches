@@ -1,4 +1,5 @@
-gametitle=Gregory Horror Show SLES_519.33
+gametitle=Gregory Horror Show * SLES-51933 * 412D44E8
+// same serial-code as 41215EB8 - the Undub version
 
 [Widescreen 16:9]
 gsaspectratio=16:9

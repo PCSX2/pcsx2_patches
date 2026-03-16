@@ -1,3 +1,23 @@
+gametitle=Sonic Unleashed NTSC-U SLUS-21846 FB236A46
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Gabominated
+description=Widescreen hack
+patch=1,EE,00870048,word,3FD21DAF //3F9D9643
+
+[FMVs aspect ratio]
+author=Monsterjamp & Gabominated
+description=Use in combination with widescreen patch to fix aspect ratio in FMVs.
+patch=1,EE,E0020012,extended,00780A18
+patch=1,EE,20ED1A68,extended,43E00000
+patch=1,EE,20ED1A58,extended,00000000
+
+[60 FPS]
+author=Gabominated
+description=Native 60 FPS. Might need EE overclock (130%).
+patch=0,EE,100d91a0,extended,00000000
+
 //gametitle=Sonic Unleashed (SLUS-21846)
 //Disabled due to crashing during night statges and boss battles.
 

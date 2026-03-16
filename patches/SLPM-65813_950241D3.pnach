@@ -1,10 +1,17 @@
-gametitle=Fuun Bakumatsuden [NTSC-J] (SLPM-65813)
+gametitle=Fu-un Bakumatsu-den [NTSC-J] SLPM-65813 950241D3
+
+[No-Interlacing]
+gsinterlacemode=1
+author=val
+description=Attempts to disable interlaced offset rendering.
+patch=1,EE,0015586C,word,00000000 //DC441000
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Little Giant
+author=val
+patch=1,EE,004555D2,short,3F40 //3F80 //3D General
 
-//16:9
-patch=1,EE,0014a394,word,3c023f40 //3c02bf80
-
-
+[Native 10:7]
+gsaspectratio=10:7
+author=val
+patch=1,EE,004555D2,short,3F6F //3F80 //3D General

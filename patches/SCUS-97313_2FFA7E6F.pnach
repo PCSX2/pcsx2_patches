@@ -1,0 +1,20 @@
+gametitle=Syphon Filter: The Omega Strain Jampack Demo (NTSC-U) (SCUS-97313) 2FFA7E6F
+
+[Widescreen 16:9 (Gameplay+HUD) (720p)]
+author=YukiXXL
+description=Uses "kDefaultScreenRess"(1280x720)+custom scale fix.
+gsaspectratio=16:9
+patch=1,EE,20117D54,extended,C4C10004
+patch=1,EE,20117D58,extended,C4C20000
+patch=1,EE,0010CDB4,extended,3C024040 //HUD Scale
+
+[Widescreen 16:9 (Gameplay Only)]
+author=YukiXXL
+gsaspectratio=16:9
+patch=1,EE,0010CEAC,extended,3C033F40
+patch=1,EE,2010CEB0,extended,44831800
+patch=1,EE,2010CEB4,extended,46030003
+patch=1,EE,2010CEB8,extended,460318C3
+patch=1,EE,2010CEE0,extended,46031840
+patch=1,EE,2010CEE4,extended,0200202D
+patch=1,EE,2010CF2C,extended,E603007C
