@@ -1,0 +1,12 @@
+gametitle=Sly 3 - Honor Among Thieves [Regular Demo] (SCUS-97527)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=asasega & Meos
+description=No Interlacing & No Motion Blur
+
+// No Interlacing by asasega
+patch=1,EE,20192820,extended,00000000
+
+// No Motion Blur by Meos
+patch=1,EE,20180D70,extended,00000000
