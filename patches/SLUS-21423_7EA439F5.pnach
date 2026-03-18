@@ -70,4 +70,4 @@ patch=1,EE,202D92C4,word,00000000 //14820017
 author=Mensa
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-patch=1,EE,2035F1B4,word,00000000
+patch=1,EE,2035F1B4,extended,00000001
