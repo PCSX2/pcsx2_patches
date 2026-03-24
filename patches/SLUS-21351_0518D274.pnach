@@ -18,7 +18,7 @@ patch=1,EE,00550D5C,word,00000001
 [Disable Motion Blur Effect]
 author=Steelmax
 description=Disables the smear while accelerating, using Nitro (including blue tint) and driving at high speed.
-patch=1,EE,00550150,word,00000001
+patch=1,EE,00550150,word,00000000
 
 [No Distant Fog]
 author=Steelmax
