@@ -35,7 +35,7 @@ jobs:
         env:
             GH_TOKEN: ${{ github.token }}
         run: |
-          gh release delete latest --cleanup-tag --yes
+          gh release delete latest --cleanup-tag --yes || true
 
           echo "waiting for tag to be deleted"
 
