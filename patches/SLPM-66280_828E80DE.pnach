@@ -1,0 +1,7 @@
+gametitle=Monster Hunter 2 [English Translation Patch v1.03] [MH2 Plus v1.3] (SLPM-66280)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+patch=1,EE,00377a84,word,3c023ff3
+patch=1,EE,00377a94,word,3442cf35
