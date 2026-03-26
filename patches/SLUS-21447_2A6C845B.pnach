@@ -1,0 +1,6 @@
+gametitle=Guitar Hero II NTSC-U
+
+[Auto Boot into Progressive Scan]
+author=Mahoneyt944
+description=Automatically switch into progressive scan when the game first starts.
+patch=1,EE,0046D02C,extended,00000001
