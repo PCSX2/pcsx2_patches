@@ -40,14 +40,13 @@ jobs:
           echo "waiting for tag to be deleted"
 
           while true; do
-              gh api "repos/$REPO/git/ref/tags/latest" >/dev/null 2>&1
+            if ! gh api "repos/$REPO/git/ref/tags/latest" >/dev/null 2>&1; then
+                echo "tag deleted"
+                break
+            fi
 
-              if [ $? -ne 0 ]; then
-                  break
-              fi
-
-              sleep 10
-              echo "still waiting..."
+            sleep 10
+            echo "still waiting..."
           done
 
           gh release create latest --latest --title "Latest Build"
