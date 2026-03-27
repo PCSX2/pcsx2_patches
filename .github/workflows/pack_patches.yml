@@ -35,19 +35,9 @@ jobs:
         env:
             GH_TOKEN: ${{ github.token }}
         run: |
-          gh release delete latest --cleanup-tag --yes || true
-
-          echo "waiting for tag to be deleted"
-
-          while true; do
-            if ! gh api "repos/$REPO/git/ref/tags/latest" >/dev/null 2>&1; then
-                echo "tag deleted"
-                break
-            fi
-
-            sleep 10
-            echo "still waiting..."
-          done
-
+          git push origin --delete latest || true
+          gh release delete latest --yes || true
+          git tag latest
+          git push origin tag latest
           gh release create latest --latest --title "Latest Build"
           gh release upload latest ./patches.zip
