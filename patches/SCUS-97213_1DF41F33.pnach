@@ -8,5 +8,5 @@ patch=1,EE,00138d78,word,3f023f40
 
 [Disable Depth of Field]
 author=kojinov
-description=Disables Depth of Field fixing warping/tearing in the distance.
+description=Disables Depth of Field resolving distant objects warping and shimmering.
 patch=1,EE,0017E36C,word,100001AA
