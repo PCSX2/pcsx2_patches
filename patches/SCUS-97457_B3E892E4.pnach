@@ -1,6 +1,6 @@
 gametitle=Sly 2 - Band of Thieves [Retail Demo] (SCUS-97457)
 
-[No Interlacing]
+[No-Interlacing]
 gsinterlacemode=1
 author=asasega
 description=Attempts to disable interlaced offset rendering.
