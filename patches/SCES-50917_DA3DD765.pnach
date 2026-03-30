@@ -36,7 +36,7 @@ patch=1,EE,0015f330,word,00000000 // 3c030026
 patch=1,EE,0015f334,word,00000000 // 24020001
 patch=1,EE,0015f338,word,00000000 // ac623620
 
-[No Interlacing]
+[No-Interlacing]
 gsinterlacemode=1
 author=asasega
 description=No Interlacing
