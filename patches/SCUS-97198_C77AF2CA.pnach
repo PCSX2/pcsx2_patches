@@ -16,7 +16,7 @@ patch=1,EE,2018F798,word,00000000
 patch=1,EE,201E9C98,word,00000000
 
 
-[No Interlacing]
+[No-Interlacing]
 gsinterlacemode=1
 author=asasega
 description=No Interlacing
