@@ -11,10 +11,6 @@ patch=1,EE,00259F64,extended,3C0242AC
 patch=1,EE,0025A600,extended,3C0242AC
 patch=1,EE,003345D0,extended,3C044040
 patch=1,EE,00334624,extended,3C0240D0
-patch=1,EE,003AE8C4,extended,3C013F80 //scenes zoon
-patch=1,EE,E0010001,extended,004BB3B0
-patch=1,EE,003AE8C4,extended,3C013F40
-patch=1,EE,20246ADC,extended,3C023FC0
 
 [Remove Blackbars]
 author=PeterDelta

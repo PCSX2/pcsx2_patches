@@ -1,10 +1,5 @@
 gametitle=Champions: Return to Arms * PAL-M4 * SLES-53039 * 5C64E73A
 
-// ==========
-// This game gains a minor speed-up by "EE Cyclerate" to 2
-//  under Config > Emulation Settings > Speedhacks.
-// ==========
-
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
@@ -13,6 +8,8 @@ patch=1,EE,0018AAB0,word,3C013F19 // 3C013F4C
 patch=1,EE,001952B4,word,3C013F19 // 3C013F4C
 patch=1,EE,0019A50C,word,3C013FE3 // 3C013FAA - render fix menu
 patch=1,EE,0019A90C,word,3C013FE3 // 3C013FAA - render fix
+patch=1,EE,0019A540,word,3C013FE2
+patch=1,EE,0019ADF4,word,3C013FE2
 
 [Widescreen/16:10]
 gsaspectratio=Stretch

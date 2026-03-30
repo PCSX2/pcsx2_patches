@@ -1,10 +1,12 @@
-gametitle=Enthusia - Professional Racing (SLUS_20967)
+gametitle=Enthusia Professional Racing (NTSC-U) SLUS-20967 81D233DC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=No.47
-patch=1,EE,20383708,word,3F400000
-
+author=No.47 & PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,00383708,word,3F400000
+patch=1,EE,00383728,word,3F400000
+patch=1,EE,00383A58,word,3F400000
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.

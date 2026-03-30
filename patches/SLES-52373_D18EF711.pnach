@@ -1,10 +1,5 @@
 gametitle=Champions of Norrath * PAL-M2 (En,Es) * SLES-52373 * D18EF711
 
-// ==========
-// To speed-up this game, set "EE Cyclerate" to 2 and "EE Cycle Skipping" to 3
-//  (in combination) under Config > Emulation Settings > Speedhacks.
-// ==========
-
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
@@ -13,6 +8,8 @@ patch=1,EE,0017F3E0,word,3C013F19 // 3C013F4C
 patch=1,EE,0018A1DC,word,3C013F19 // 3C013F4C
 patch=1,EE,00191324,word,3C013FE3 // 3C013FAA - render fix menu
 patch=1,EE,00191664,word,3C013FE3 // 3C013FAA - render fix
+patch=1,EE,00191358,word,3C013FE2
+patch=1,EE,00191B20,word,3C013FE2
 
 [Widescreen/16:10]
 gsaspectratio=Stretch
@@ -45,3 +42,13 @@ patch=1,EE,0017F3E0,word,3C013EE9
 patch=1,EE,0018A1DC,word,3C013EE9
 patch=1,EE,00191324,word,3C014015
 patch=1,EE,00191664,word,3C014015
+
+[No-Interlacing]
+gsinterlacemode=1
+author=PeterDelta
+description=Force frame mode.
+patch=1,EE,2019589C,extended,10000010
+patch=1,EE,20195904,extended,10000006
+patch=1,EE,003939C0,extended,00000000
+patch=1,EE,003939C4,extended,00000001
+patch=1,EE,00393A30,extended,00000001

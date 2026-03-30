@@ -1,0 +1,18 @@
+gametitle=Largo Winch - Empire Under Threat (PAL-F) SLES-50841 93A090CB
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0028029C,word,3C013F2F //3C013F80 Zoom
+patch=1,EE,001ABC40,word,08030000 //Y-Fov
+patch=1,EE,000C0000,word,46070A02
+patch=1,EE,000C0004,word,3C013FA6
+patch=1,EE,000C0008,word,4481F000
+patch=1,EE,000C000C,word,461E4202
+patch=1,EE,000C0010,word,0806AF11
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,001017AC,word,24040000
