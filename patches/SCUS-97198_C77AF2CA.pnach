@@ -18,12 +18,15 @@ patch=1,EE,201E9C98,word,00000000
 
 [No-Interlacing]
 gsinterlacemode=1
-author=asasega & Meos
-description=No Interlacing & No Motion Blur
+author=asasega
+description=No Interlacing
 
 // No Interlacing by asasega
-patch=1,EE,20202104,word,00000000
-patch=1,EE,2015F4F0,word,00009025
+patch=1,EE,20202104,extended,00000000
+
+[No Motion Blur]
+author=Meos
+description=No Motion Blur
 
 // No Motion Blur by Meos
 patch=1,EE,2015EE64,extended,08057B9D
