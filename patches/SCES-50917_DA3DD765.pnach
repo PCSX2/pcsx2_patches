@@ -36,14 +36,17 @@ patch=1,EE,0015f330,word,00000000 // 3c030026
 patch=1,EE,0015f334,word,00000000 // 24020001
 patch=1,EE,0015f338,word,00000000 // ac623620
 
-[No-Interlacing]
+[No Interlacing]
 gsinterlacemode=1
-author=asasega & Meos; ported by CRASHARKI
-description=No Interlacing & No Motion Blur
+author=asasega
+description=No Interlacing
 
-// No Interlacing by asasega; ported by CRASHARKI
+// No Interlacing by asasega
 patch=1,EE,20203444,word,00000000
-patch=1,EE,2015F9B8,word,00009025
+
+[No Motion Blur]
+author=Meos
+description=No Motion Blur
 
 // No Motion Blur by Meos
 patch=1,EE,2015F32C,extended,08057CCF
