@@ -6,7 +6,7 @@ author=sergx12
 description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 patch=1,EE,00166804,word,3c014455
 
-[No Interlacing]
+[No-Interlacing]
 gsinterlacemode=1
 author=asasega
 description=No Interlacing
