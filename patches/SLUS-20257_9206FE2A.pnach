@@ -20,7 +20,8 @@ patch=1,EE,00140af0,word,3c023f2b //3c023f00
 
 [60 FPS]
 author=PS2Hagrid
+description=Makes the game run at a near-consistent 60fps. Drops in some areas where the game has lots of enemies, but should be consistent for platforming.
 
-patch=1,EE,00107a70,word,00000000
-patch=1,EE,00107a74,word,00000000
+patch=0,EE,20107a70,extended,00000000
+patch=0,EE,20107a74,extended,00000000
 
