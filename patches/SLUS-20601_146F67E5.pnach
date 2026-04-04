@@ -1,0 +1,14 @@
+gametitle=Rayman 3 - Hoodlum Havoc [SLUS-20601]
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,0036CE68,byte,1 //0
+
+
+[480p Mode]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Run the game at 480p Mode from the start.
+patch=1,EE,0036BFE8,byte,1 //0

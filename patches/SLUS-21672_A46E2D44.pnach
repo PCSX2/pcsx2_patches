@@ -1,0 +1,6 @@
+gametitle=Guitar Hero III - Legends of Rock NTSC-U
+
+[Force Progressive Scan]
+author=Mahoneyt944
+description=sets the video output mode to progressive scan.
+patch=1,EE,00368770,extended,00000001

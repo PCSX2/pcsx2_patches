@@ -1,5 +1,19 @@
-comment=Digital Devil Saga-NTSC-U-Widescreen Hack (16:9)
-gametitle=Digital Devil Saga
+gametitle=Digital Devil Saga (U)(SLUS-20974)
+
 [Widescreen 16:9]
 gsaspectratio=16:9
 patch=1,EE,203245E4,word,3FD3A06D
+
+[No Motion Blur]
+author=Sergx12
+patch=1,EE,2032E594,word,00000000
+
+[No Radial Blur]
+author=Sergx12
+patch=1,EE,2032E598,word,00000000
+
+[No Interlacing]
+gsinterlacemode=1
+author=Altimor
+patch=1,EE,002D1558,word,00000000
+patch=1,EE,002D5060,word,00000000

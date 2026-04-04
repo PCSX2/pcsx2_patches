@@ -1,5 +1,13 @@
 gametitle=God Hand (SLUS-21503)
 
+[No-Interlacing]
+gsinterlacemode=1
+description=Forces 480p display mode
+author=mthsk
+patch=1,EE,00395224,word,24110000
+patch=1,EE,00395228,word,24120050
+patch=1,EE,00395234,word,24130001
+
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000 and Arapapa
@@ -17,9 +25,7 @@ patch=1,EE,002af4fc,word,3421cccd //34216666
 patch=1,EE,0014300c,word,3c013F40 //3c013f80
 
 
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,2039697C,extended,34021070
-
-
+//[No-Interlacing]
+//description=Attempts to disable interlaced offset rendering.
+//gsinterlacemode=1
+//patch=1,EE,2039697C,extended,34021070

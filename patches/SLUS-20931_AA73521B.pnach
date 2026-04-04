@@ -1,0 +1,41 @@
+gametitle=Trigger Man (NTSC-U) (SLUS-20931)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Souzooka
+description=16:9 aspect ratio (some UI is stretched).
+
+// The game has an unfinished widescreen mode we can just force on here
+patch=1,EE,202777F4,extended,00000001
+
+// When widescreen is on, the game intentionally crunches the vertical FOV slightly (by 1.12x), for some reason.
+// We can just undo this effect by setting the multiplier to 1.
+patch=1,EE,20277808,extended,3F800000
+
+[60 FPS]
+author=Souzooka
+description=Runs game at 60 frames per second.
+
+// Remove frame limit
+patch=0,EE,20115F80,extended,00000000 // nop
+
+// Correct game speed
+patch=0,EE,201FC97C,extended,3C013AFA // lui at,0x3AFA
+
+// Fix game hang on fade out after cellar in mission 6
+// The game initiates a fade out in a cutscene, then when the fade out is very nearly complete exits the level, which initiates a new fade (in InitFadeEx).
+// The game then takes the fade progress (incredibly close to 128.0f) and subtracts that from the goal value, 128.0f. This value is then
+// divided by the rate (0.25) and you end up with a pretty small value.
+// However, the game also then, for its fade update code, multiplies it by the deltatime before adding it to the progress float.
+// At 60fps this increment value becomes too insignificant to affect the fade progress value each frame, so the game effectively hangs.
+// We can fix this by clamping the minimum bound of this increment value so that it doesn't become insignificant.
+patch=0,EE,20151828,extended,080812F4 // j sceCdChgSys
+
+// sceCdChgSys has no references (and actually just prints an error that it's unimplemented), so we overwrite it for a code cave to do the bound check.
+patch=0,EE,20204BD0,extended,3C030025 // lui v1,0x0025
+patch=0,EE,20204BD4,extended,C4602308 // lwc1 f00,0x2308(v1)
+patch=0,EE,20204BD8,extended,3C013F80 // lui at,0x3F80
+patch=0,EE,20204BDC,extended,44810800 // mtc1 at,f01
+patch=0,EE,20204BE0,extended,46010028 // max.s f00,f00,f01
+patch=0,EE,20204BE4,extended,03E00008 // jr ra
+patch=0,EE,20204BE8,extended,E4602308 // swc1 f00,0x2308(v1)

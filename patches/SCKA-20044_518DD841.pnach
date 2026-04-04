@@ -2,7 +2,8 @@ gametitle=Sly Cooper 2 - Band of Thieves (SCKA-20044)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=PsxFan107 (NTSC-K by Arapapa)
+author=nemesis2000 & PsxFan107 (NTSC-K by Arapapa)
+description=Renders the game in 16:9 aspect ratio, instead of 4:3.
 
 // Widescreen by nemesis2000
 patch=1,EE,0014dfc0,word,3c013fdd //3c013fa6
@@ -25,4 +26,13 @@ patch=1,EE,000C0018,word,4481F000
 patch=1,EE,000C001C,word,461EA502
 patch=1,EE,000C0020,word,03E00008
 
+[No-Interlacing]
+gsinterlacemode=1
+author=asasega & Meos
+description=No Interlacing & No Motion Blur
 
+// No Interlacing by asasega
+patch=1,EE,2024284C,extended,00000000
+
+// No Motion Blur by Meos
+patch=1,EE,20161CD8,extended,00000000
