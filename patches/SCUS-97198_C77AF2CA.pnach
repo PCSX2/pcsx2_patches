@@ -17,7 +17,6 @@ patch=1,EE,201E9C98,word,00000000
 
 
 [No-Interlacing]
-author=asasega & Meos
 gsinterlacemode=1
 author=asasega & Meos
 description=No Interlacing & No Motion Blur
