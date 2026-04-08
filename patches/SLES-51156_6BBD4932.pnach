@@ -47,3 +47,8 @@ patch=1,EE,001db99c,word,3442cccd //34426666
 author=PeterDelta
 description=Might need EE Overclock at 130%.
 patch=1,EE,001A7060,word,10400009 //14400009
+
+[Disable Noise Effect]
+author=PeterDelta
+description=Disable noise filter in gameplay
+patch=1,EE,002D78A4,extended,00

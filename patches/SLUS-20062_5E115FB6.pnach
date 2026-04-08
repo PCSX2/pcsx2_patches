@@ -10,10 +10,6 @@ patch=1,EE,0025EE70,extended,3C0242AC
 patch=1,EE,00262220,extended,3C0242AC
 patch=1,EE,00317C30,extended,3C02C2A6
 patch=1,EE,00317C38,extended,3C024148
-patch=1,EE,00123E6C,extended,3C013F80 //scenes zoom
-patch=1,EE,E0010001,extended,004167BC
-patch=1,EE,00123E6C,extended,3C013F40
-patch=1,EE,20253A2C,extended,3C023FC0
 
 [Remove Blackbars]
 author=PeterDelta
@@ -21,6 +17,11 @@ description=Removes black bars in cutscenes
 patch=1,EE,0024764C,word,3C023420
 patch=1,EE,0024768C,word,3C0253E0
 patch=1,EE,0027E260,word,3C025360
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect
+patch=1,EE,0041714C,extended,00000000
 
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.

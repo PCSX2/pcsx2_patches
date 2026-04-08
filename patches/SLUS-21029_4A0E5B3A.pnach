@@ -6,7 +6,13 @@ author=PeterDelta
 description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00617AB0,word,3FC71C66 //3F955554
 
+[Remove Bloom]
+author=PeterDelta
+description=Removes the post-processing bloom effect
+patch=1,EE,001D0CE0,extended,00
+
 [60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 180%.
-patch=1,EE,00617AB4,word,00000001 //00000002
+description=Might need EE Overclock (180%).
+patch=1,EE,001A7A74,word,24020001
+//patch=1,EE,00617AB4,word,00000001 //00000002

@@ -10,10 +10,6 @@ patch=1,EE,0025EE70,extended,3C0242AC
 patch=1,EE,00262220,extended,3C0242AC
 patch=1,EE,00318880,extended,3C02C2A6
 patch=1,EE,00318888,extended,3C024148
-patch=1,EE,00123E6C,extended,3C013F80 //scenes zoom
-patch=1,EE,E0010001,extended,004184BC
-patch=1,EE,00123E6C,extended,3C013F40
-patch=1,EE,20253A2C,extended,3C023FC0
 patch=1,EE,00296DCC,word,3C024270
 patch=1,EE,00296E80,word,3C024270
 patch=1,EE,0029718C,word,3C024270
@@ -61,6 +57,11 @@ description=Removes black bars in cutscenes
 patch=1,EE,0024764C,word,3C024980
 patch=1,EE,0024768C,word,3C025400
 patch=1,EE,0027EB80,word,3C025380
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect
+patch=1,EE,0041864C,extended,00000000
 
 [50 FPS]
 author=Snake356

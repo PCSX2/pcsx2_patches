@@ -1,8 +1,18 @@
-gametitle=Enthusia - Professional Racing PAL
+gametitle=Enthusia Professional Racing (PAL-M) SLES-53125 5C63B5AC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen hack
-patch=1,EE,0038dcb8,word,3F400000
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0038DCB8,word,3F400000
+patch=1,EE,0038DCD8,word,3F400000
+patch=1,EE,0038E008,word,3F400000
 
-
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,0013245C,extended,00
+patch=1,EE,001A6BDC,extended,87
+patch=1,EE,0010E154,extended,87
+patch=1,EE,0038DFF0,extended,50
+patch=1,EE,2013368C,extended,34060001
