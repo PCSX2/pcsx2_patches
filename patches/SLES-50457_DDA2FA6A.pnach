@@ -1,7 +1,19 @@
-gametitle=Rayman M (PAL-M 2.0) (SLES-50457)
+gametitle=Rayman M (PAL 2.0) (SLES-50457)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=CRASHARKI
 description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
 patch=1,EE,003383BC,byte,1 //0
+
+[NTSC 640x448 60Hz]
+// initialize graphics engine with 640x448 resolution (this automatically sets sceGsResetGraph to NTSC mode)
+patch=0,EE,0016AFAC,word,24060280
+patch=0,EE,0016AFB8,word,240701C0
+// patch code that sets framerate
+patch=0,EE,0016C058,word,3C024270
+// patch internal resolution variables (float and int)
+patch=0,EE,00337B9C,word,44200000
+patch=0,EE,00337BA0,word,43E00000
+patch=0,EE,00337BA4,word,00000280
+patch=0,EE,00337BA8,word,000001C0
