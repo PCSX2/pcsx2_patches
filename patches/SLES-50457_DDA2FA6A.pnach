@@ -7,6 +7,8 @@ description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
 patch=1,EE,003383BC,byte,1 //0
 
 [NTSC 640x448 60Hz]
+author=Rib
+description=Run the game in NTSC 640x448 60Hz mode
 // initialize graphics engine with 640x448 resolution (this automatically sets sceGsResetGraph to NTSC mode)
 patch=0,EE,0016AFAC,word,24060280
 patch=0,EE,0016AFB8,word,240701C0
