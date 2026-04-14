@@ -1,8 +1,23 @@
 gametitle=Sprint Car Challenge (SLES-52774)
 
+[Widescreen 16:9]
+author=Souzooka
+description=Enables 16:9 setting by default upon boot. NOTE: Saved profiles will overwrite this setting.
+gsaspectratio=16:9
+
+// Sets the 16:9 setting on
+patch=0,EE,20230358,extended,00000001
+// Just having the setting on doesn't change aspect ratio,
+// so we'll do that too
+patch=0,EE,20256608,extended,3FE38E39
+
+// Change the default screen format setting
+// (for new/guest profiles during title screen)
+patch=0,EE,002395F6,extended,01
+
 [NTSC Mode]
 author=Souzooka
-description=Runs game in NTSC Mode (60hz).
+description=Runs game in NTSC Mode (60hz). NOTE: Saved profiles may need to adjust screen position.
 
 // Change vertical height to 448. The game handles the rest.
 patch=0,EE,2023B04C,extended,000001C0
