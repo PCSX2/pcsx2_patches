@@ -1,0 +1,18 @@
+gametitle=Sprint Car Challenge (SLES-52774)
+
+[NTSC Mode]
+author=Souzooka
+description=Runs game in NTSC Mode (60hz).
+
+// Change vertical height to 448. The game handles the rest.
+patch=0,EE,2023B04C,extended,000001C0
+
+// Manually adjust screen position options to
+// (mostly) resolve bad cropping
+patch=0,EE,00256604,extended,FA // Horizontal
+patch=0,EE,00256605,extended,02 // Vertical
+
+// Change the default settings
+// (for new/guest profiles during title screen)
+patch=0,EE,002395F8,extended,FA // Horizontal
+patch=0,EE,002395F9,extended,02 // Vertical
