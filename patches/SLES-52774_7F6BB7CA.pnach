@@ -31,3 +31,125 @@ patch=0,EE,00256605,extended,02 // Vertical
 // (for new/guest profiles during title screen)
 patch=0,EE,002395F8,extended,FA // Horizontal
 patch=0,EE,002395F9,extended,02 // Vertical
+
+[Modern Control Profiles]
+author=Souzooka
+description=Changes the default control profiles to more modern styles which utilize controller triggers. Refer to the control types in-game for controls.
+
+// Default control scheme
+// Steer          - Analog OR D-PAD
+// Throttle       - Cross
+// Hand Brake     - L1 OR R3 OR R2
+// Look Back      - Circle
+// Reset          - L2
+// Throttle/Brake - Analog
+// Brake          - Square
+// Change Camera  - Triangle
+// Pause          - Start
+
+// New control scheme
+// Steer          - Analog OR D-PAD (default)
+// Throttle       - R2
+// Hand Brake     - L1 OR R3 OR R1
+// Look Back      - Circle (default)
+// Reset          - Select
+// Throttle/Brake - Analog (default)
+// Brake          - L2
+// Change Camera  - Triangle (default)
+// Pause          - Start (default)
+
+// There is a button enumeration which will be used to
+// make changes below:
+// 0 - D-Pad Up
+// 1 - D-Pad Down
+// 2 - D-Pad Left
+// 3 - D-Pad Right
+// 4 - Triangle
+// 5 - Cross
+// 6 - Square
+// 7 - Circle
+// 8 - L1
+// 9 - R1
+// A - L2
+// B - R2
+// C - Start
+// D - Select
+// E - L3
+// F - R3
+
+// Type-specific control changes
+
+// Type 1
+// Throttle
+patch=0,EE,20151BF0,extended,2404000B
+
+// Type 4
+// Throttle
+patch=0,EE,20151A6C,extended,2404000B
+
+// Type 1/4
+// Brake
+patch=0,EE,20151C30,extended,2404000A
+
+// Type 2
+// Throttle
+patch=0,EE,20151908,extended,2404000B
+// Brake
+patch=0,EE,20151944,extended,2404000A
+
+// Type 3
+// Throttle
+patch=0,EE,201519AC,extended,2404000B
+// Brake
+patch=0,EE,201519E8,extended,2404000A
+// Hand Brake
+patch=0,EE,20151A10,extended,24040009
+
+// Type 5
+// Throttle
+patch=0,EE,20151AB4,extended,2404000B
+// Brake
+patch=0,EE,20151ADC,extended,2404000A
+
+// Type 6
+// Throttle
+patch=0,EE,20151B60,extended,2404000B
+// Brake
+patch=0,EE,20151B88,extended,2404000A
+// Hand Brake
+patch=0,EE,20151BB0,extended,24040009
+
+// Universal control changes
+
+// Reset
+patch=0,EE,20151C98,extended,2404000D
+
+// Visual changes (for settings)
+
+// Throttle
+patch=0,EE,2022F178,extended,0022F0F0 // Type 1
+patch=0,EE,2022F19C,extended,0022F0F0 // Type 2
+patch=0,EE,2022F1C0,extended,0022F0F0 // Type 3
+patch=0,EE,2022F1E4,extended,0022F0F0 // Type 4
+patch=0,EE,2022F208,extended,0022F0F0 // Type 5
+patch=0,EE,2022F22C,extended,0022F0F0 // Type 6
+
+// Brake
+patch=0,EE,2022F17C,extended,0022F0B0 // Type 1
+patch=0,EE,2022F1A0,extended,0022F0B0 // Type 2
+patch=0,EE,2022F1C4,extended,0022F0B0 // Type 3
+patch=0,EE,2022F1E8,extended,0022F0B0 // Type 4
+patch=0,EE,2022F20C,extended,0022F0B0 // Type 5
+patch=0,EE,2022F230,extended,0022F0B0 // Type 6
+
+// Reset
+patch=0,EE,2022F190,extended,0022F150 // Type 1
+patch=0,EE,2022F1B4,extended,0022F150 // Type 2
+patch=0,EE,2022F1D8,extended,0022F150 // Type 3
+patch=0,EE,2022F1FC,extended,0022F150 // Type 4
+patch=0,EE,2022F220,extended,0022F150 // Type 5
+patch=0,EE,2022F244,extended,0022F150 // Type 6
+
+// Hand Brake (Type 3/6)
+patch=0,EE,2022F1C8,extended,0022F0D0 // Type 3
+patch=0,EE,2022F234,extended,0022F0D0 // Type 6
