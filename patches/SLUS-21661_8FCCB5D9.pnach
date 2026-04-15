@@ -17,4 +17,4 @@ gsaspectratio=21:9
 author=Ahtheerr
 description=Can cause teleportation in some edges of the map, although very rare.
 patch=1,EE,0011940C,word,3C013F1C //3C013F89
-patch=1,EE,00119410,word,3421B002 //34212493
+patch=1,EE,00119410,word,3F1CBC19 //34212493
