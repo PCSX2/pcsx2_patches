@@ -8,11 +8,15 @@ patch=1,EE,00166804,word,3c014455
 
 [No-Interlacing]
 gsinterlacemode=1
-author=asasega & Meos; ported by CRASHARKI
-description=No Interlacing & No Motion Blur
+author=asasega
+description=No Interlacing
 
-// No Interlacing by asasega; ported by CRASHARKI
-patch=1,EE,20195F38,word,00000000
+// No Interlacing by asasega
+patch=1,EE,20195F38,extended,00000000
+
+[No Motion Blur]
+author=Meos
+description=No Motion Blur
 
 // No Motion Blur by Meos
 patch=1,EE,201837D8,extended,00000000
