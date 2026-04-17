@@ -1,0 +1,77 @@
+gametitle=Need for Speed - Most Wanted (NTSC-J) [SLPM-66232] 526914D9
+
+[Enable Black Edition]
+description=Black Edition content, Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574830,byte,1
+patch=1,EE,20574414,byte,1
+patch=1,EE,20574450,byte,1
+
+gametitle=Need for Speed - Most Wanted (NTSC-K) [SLKA-25334] 60EC6A5C
+
+[Enable Burger King Challenge]
+description=Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574314,byte,1
+patch=1,EE,20574350,byte,1
+
+gametitle=Need for Speed - Most Wanted (PAL-E) [SLES-53557] 692CBA8E
+
+[Enable Black Edition]
+description=Black Edition content, Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574940,byte,1
+patch=1,EE,20574528,byte,1
+patch=1,EE,20574564,byte,1
+
+gametitle=Need for Speed - Most Wanted (PAL-M3) [SLES-53559] CA2A1B04
+
+[Enable Black Edition]
+description=Black Edition content, Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574940,byte,1
+patch=1,EE,20574528,byte,1
+patch=1,EE,20574564,byte,1
+
+gametitle=Need for Speed - Most Wanted (PAL-M8) [SLES-53558] 1FA82CDF
+
+[Enable Black Edition]
+description=Black Edition content, Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574C40,byte,1
+patch=1,EE,20574828,byte,1
+patch=1,EE,20574864,byte,1
+
+gametitle=Need for Speed - Most Wanted (NTSC-U) [SLUS-21267] 0518D275
+
+[Enable Black Edition]
+description=Black Edition content, Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574640,byte,1
+patch=1,EE,20574228,byte,1
+patch=1,EE,20574264,byte,1
+
+gametitle=Need for Speed - Most Wanted (NTSC-U) [SLUS-21267] 270F8C03
+
+[Enable Black Edition]
+description=Black Edition content, Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574640,byte,1
+patch=1,EE,20574228,byte,1
+patch=1,EE,20574264,byte,1
+
+gametitle=Need for Speed - Most Wanted [Black Edition] (NTSC-U) [SLUS-21351] 0518D274
+
+[Enable Burger King Challenge]
+description=Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574228,byte,1
+patch=1,EE,20574264,byte,1
+
+gametitle=Need for Speed - Most Wanted [Black Edition] (PAL-M3) [SLES-53857] 805C3B3A
+
+[Enable Burger King Challenge]
+description=Burger King Challenge and Castrol Ford GT always enabled
+author=Sal_89
+patch=1,EE,20574528,byte,1
+patch=1,EE,20574564,byte,1
