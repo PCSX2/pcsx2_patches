@@ -15,4 +15,10 @@ patch=1,EE,202C4DF4,extended,4600C602
 [No-Interlacing]
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
-patch=1,EE,002bbc4c,word,0000000
+patch=1,EE,202bbc4c,extended,00000000
+
+[LINKED VS -> MODEM VS]
+author=Berylskid
+description=Access MODEM VS at selecting LINKED VS
+patch=1,EE,20106450,extended,24100005 //addiu s0,zero,0x5
+patch=1,EE,20106454,extended,0C040A54 //jal 0x00102950
