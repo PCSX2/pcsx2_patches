@@ -24,3 +24,139 @@ author=Gabominated
 description=NTSC mode at start.
 patch=1,EE,00195B14,word,14000017 //10000017
 patch=1,EE,00195B30,word,10400014 //14400014
+
+[Progression Softlock Failsafe]
+author=Souzooka
+description=Upon entering a level forces some treasure chests closed if not enough are closed to collect the remaining jigsaw pieces needed.
+
+// In order to progress through the game, all jigsaw pieces within a level must be collected.
+// Jigsaw pieces are contained within treasure chests, 1 chest to 1 jigsaw piece.
+// When a treasure chest is opened within a level, a jigsaw piece pickup spawns and moves above the chest,
+// which a player can then collect.
+
+// In save data, the following data is saved:
+// 1. The number of jigsaw pieces for the level collected
+// 2. For each chest, whether or not the chest has been opened or is closed.
+
+// This creates a pretty awful bug: if the player opens a chest, but doesn't collect a jigsaw,
+// the chest remembers that it is open and thus will not spawn a jigsaw on future visits!
+// Therefore, it is impossible for the player to complete the level.
+// Additionally, we don't know which pieces were not collected, so we can only arbitrarily reset chests.
+
+// Set up our callsite to custom code. This is immediately after the state is set for most level objects
+// (including treasure chests). This replaces a conditional debug print, which shouldn't affect players.
+patch=0,EE,20147EC8,extended,02602021 // addu a0,s3,zero
+patch=0,EE,20147ECC,extended,0C095024 // jal z_un_00254090 ; jump to sceMount (believed to be orphaned)
+patch=0,EE,20147ED0,extended,02E02821 // addu a1,s7,zero
+patch=0,EE,20147ED4,extended,00000000 // nop
+patch=0,EE,20147ED8,extended,00000000 // nop
+
+// s0 = function argument 0
+// s1 = function argument 1
+// s2 = profile id
+// s3 = level id
+// s4 = jigsaws collected for level + closed chests + force closed chests
+// s5 = max jigsaws for level
+// s6 = current object index
+// s7
+// fp
+
+// Custom code at sceMount to close treasure chests to correct progression softlocks
+// Prologue
+patch=0,EE,20254090,extended,27BDFE00 // addiu sp,sp,-0x200
+patch=0,EE,20254094,extended,FFBF0000 // sd ra,0x0(sp)
+patch=0,EE,20254098,extended,7FB00010 // sq s0,0x10(sp)
+patch=0,EE,2025409C,extended,7FB10020 // sq s1,0x20(sp)
+patch=0,EE,202540A0,extended,7FB20030 // sq s2,0x30(sp)
+patch=0,EE,202540A4,extended,7FB30040 // sq s3,0x40(sp)
+patch=0,EE,202540A8,extended,7FB40050 // sq s4,0x50(sp)
+patch=0,EE,202540AC,extended,7FB50060 // sq s5,0x60(sp)
+patch=0,EE,202540B0,extended,7FB60070 // sq s6,0x70(sp)
+patch=0,EE,202540B4,extended,7FB70080 // sq s7,0x80(sp)
+patch=0,EE,202540B8,extended,7FBE0090 // sq fp,0x90(sp)
+patch=0,EE,202540BC,extended,00808021 // addu s0,a0,zero
+patch=0,EE,202540C0,extended,00A08821 // addu s1,a1,zero
+
+// Grab all the info we need before looping over entities to determine if there's enough chests left
+patch=0,EE,202540C4,extended,3C01003B // lui at,0x003B
+patch=0,EE,202540C8,extended,8C32B000 // lw s2,-0x5000(at) ; s2 = profile ID
+patch=0,EE,202540CC,extended,8C33B004 // lw s3,-0x4FFC(at) ; s3 = level ID
+patch=0,EE,202540D0,extended,3C040001 // lui a0,0x0001
+patch=0,EE,202540D4,extended,34841FF0 // ori a0,a0,0x1FF0 ; 0x11FF0 = size of save profile data
+patch=0,EE,202540D8,extended,02442018 // mult a0,s2,a0
+patch=0,EE,202540DC,extended,24051CC0 // addiu a1,zero,0x1CC0 ; 0x1CC0 = size of level data
+patch=0,EE,202540E0,extended,02652818 // mult a1,s3,a1
+patch=0,EE,202540E4,extended,3C060032 // lui a2,0x0032
+patch=0,EE,202540E8,extended,34C6B460 // ori a2,a2,0xB460
+patch=0,EE,202540EC,extended,00C43021 // addu a2,a2,a0
+patch=0,EE,202540F0,extended,00C53021 // addu a2,a2,a1
+patch=0,EE,202540F4,extended,8CD41D04 // lw s4,0x1D04(a2) ; s4 = jigsaws collected for level
+patch=0,EE,202540F8,extended,00132180 // sll a0,s3,0x06 ; 0x40 = size of level params (for max jigsaw count)
+patch=0,EE,202540FC,extended,3C05003A // lui a1,0x003A
+patch=0,EE,20254100,extended,34A5DEB0 // ori a1,a1,0xDEB0
+patch=0,EE,20254104,extended,00A42821 // addu a1,a1,a0
+patch=0,EE,20254108,extended,8CB5000C // lw s5,0xC(a1)
+
+// First pass over entities (to determine how many chests are closed)
+patch=0,EE,2025410C,extended,8E0203F0 // lw v0,0x3F0(s0) // [s0+0x3F0] = count of entities
+patch=0,EE,20254110,extended,18400028 // blez v0,0x002541B4 ; no entities for this level...? just branch to epilogue
+patch=0,EE,20254114,extended,0000B021 // addu s6,zero,zero
+// loop body
+patch=0,EE,20254118,extended,260403F0 // addiu a0,s0,0x3F0
+patch=0,EE,2025411C,extended,0C096BEA // jal z_un_0025afa8 ; function call to retrieve a level entity given an index
+patch=0,EE,20254120,extended,02C02821 // addu a1,s6,zero
+patch=0,EE,20254124,extended,8C440000 // lw a0,0x0(v0) ; load the entity type
+patch=0,EE,20254128,extended,2405000F // addiu a1,zero,0xF ; 0xF = Treasure chest
+patch=0,EE,2025412C,extended,14850005 // bne a0,a1,0x00254144 ; branch to loop epilogue if not chest
+patch=0,EE,20254130,extended,00000000 // nop
+patch=0,EE,20254134,extended,8C44068C // lw a0,0x68C(v0)
+patch=0,EE,20254138,extended,24050001 // addiu a1,zero,0x1 ; 0x1 = Closed state
+patch=0,EE,2025413C,extended,50850001 // beql a0,a1,0x00254144
+patch=0,EE,20254140,extended,26940001 // addiu s4,s4,0x1 ; Increment potential jigsaw pieces count if chest is closed
+// loop epilogue
+patch=0,EE,20254144,extended,26D60001 // addiu s6,s6,0x1
+patch=0,EE,20254148,extended,8E0403F0 // lw a0,0x3F0(s0)
+patch=0,EE,2025414C,extended,02C4202A // slt a0,s6,a0
+patch=0,EE,20254150,extended,1480FFF1 // bne a0,zero,0x00254118
+patch=0,EE,20254154,extended,00000000 // nop
+
+// Second pass over entities (to close enough chests needed so that we have enough potential jigsaws)
+patch=0,EE,20254158,extended,02B42023 // subu a0,s5,s4 ; calculate difference in potential and max jigsaw pieces
+patch=0,EE,2025415C,extended,18800015 // blez a0,0x002541B4 ; There are enough potential jigsaw pieces, so go to epilogue
+patch=0,EE,20254160,extended,0000B021 // addu s6,zero,zero
+// loop body
+patch=0,EE,20254164,extended,260403F0 // addiu a0,s0,0x3F0
+patch=0,EE,20254168,extended,0C096BEA // jal z_un_0025afa8 ; function call to retrieve a level entity given an index
+patch=0,EE,2025416C,extended,02C02821 // addu a1,s6,zero
+patch=0,EE,20254170,extended,8C440000 // lw a0,0x0(v0) ; load the entity type
+patch=0,EE,20254174,extended,2405000F // addiu a1,zero,0xF ; 0xF = Treasure chest
+patch=0,EE,20254178,extended,14850007 // bne a0,a1,0x00254198 ; branch to loop epilogue if not chest
+patch=0,EE,2025417C,extended,00000000 // nop
+patch=0,EE,20254180,extended,8C44068C // lw a0,0x68C(v0) ; load chest state
+patch=0,EE,20254184,extended,24050005 // addiu a1,zero,0x5 ; 0x5 = open state
+patch=0,EE,20254188,extended,14A40003 // bne a1,a0,0x00254198 ; if not open, continue
+patch=0,EE,2025418C,extended,24040001 // addiu a0,zero,0x1 ; 0x1 = closed state
+patch=0,EE,20254190,extended,AC44068C // sw a0,0x68C(v0) ; close the chest
+patch=0,EE,20254194,extended,26940001 // addiu s4,s4,0x1 ; increment potential jigsaw pieces
+// loop epilogue
+patch=0,EE,20254198,extended,02B42023 // subu a0,s5,s4
+patch=0,EE,2025419C,extended,18800005 // blez a0,0x002541B8 ; leave loop if there's enough potential pieces
+patch=0,EE,202541A0,extended,26D60001 // addiu s6,s6,0x1
+patch=0,EE,202541A4,extended,8E0403F0 // lw a0,0x3F0(s0)
+patch=0,EE,202541A8,extended,02C4202A // slt a0,s6,a0
+patch=0,EE,202541AC,extended,1480FFED // bne a0,zero,0x00254164 ; leave loop if entire entity list was exhausted
+patch=0,EE,202541B0,extended,00000000 // nop
+
+// Epilogue
+patch=0,EE,202541B4,extended,7BBE0090 // lq fp,0x90(sp)
+patch=0,EE,202541B8,extended,7BB70080 // lq s7,0x80(sp)
+patch=0,EE,202541BC,extended,7BB60070 // lq s6,0x70(sp)
+patch=0,EE,202541C0,extended,7BB50060 // lq s5,0x60(sp)
+patch=0,EE,202541C4,extended,7BB40050 // lq s4,0x50(sp)
+patch=0,EE,202541C8,extended,7BB30040 // lq s3,0x40(sp)
+patch=0,EE,202541CC,extended,7BB20030 // lq s2,0x30(sp)
+patch=0,EE,202541D0,extended,7BB10020 // lq s1,0x20(sp)
+patch=0,EE,202541D4,extended,7BB00010 // lq s0,0x10(sp)
+patch=0,EE,202541D8,extended,DFBF0000 // ld ra,0x0(sp)
+patch=0,EE,202541DC,extended,03E00008 // jr ra
+patch=0,EE,202541E0,extended,27BD0200 // addiu sp,sp,0x200
