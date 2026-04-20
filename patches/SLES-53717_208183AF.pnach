@@ -1,4 +1,4 @@
-gametitle=Midnight Club 3 - DUB Edition Remix [SLES-53717]
+gametitle=Midnight Club 3 - DUB Edition Remix (PAL-M) SLES-53717 208183AF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -6,4 +6,19 @@ author=FlatOut
 description=Widescreen Hack
 patch=1,EE,2061C318,word,3FC71C76
 
+[Remove Bloom]
+author=PeterDelta
+description=Removes the post-processing bloom effect
+patch=1,EE,001D0E90,extended,00
 
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=1,EE,001A730C,word,24020001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,0061C4A4,word,00000000
+patch=1,EE,0061C388,word,000001C0
+patch=1,EE,001BE694,word,14A0002F

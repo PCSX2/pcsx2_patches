@@ -10,3 +10,8 @@ patch=1,EE,001773C8,word,3C0243C0 // 3C024400 - X-FoV
 author=PeterDelta
 description=Might need EE Overclock at 130%.
 patch=1,EE,001A3860,word,10400009 //14400009
+
+[Disable Noise Effect]
+author=PeterDelta
+description=Disable noise filter in gameplay
+patch=1,EE,002CBC54,byte,00

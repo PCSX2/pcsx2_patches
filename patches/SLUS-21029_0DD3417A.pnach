@@ -6,6 +6,11 @@ author=PeterDelta
 description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00617EC0,word,3FC71C66 //3F955554
 
+[Remove Bloom]
+author=PeterDelta
+description=Removes the post-processing bloom effect
+patch=1,EE,001D0D20,extended,00
+
 //broken patch messes up graphics
 //[60 FPS]
 //author=PeterDelta

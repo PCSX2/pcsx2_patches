@@ -1,0 +1,45 @@
+gametitle=DreamWorks Madagascar (PAL-G) SLES-53226 1468C474
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,0014A0E0,word,3C013F1F
+patch=1,EE,00288520,word,08045CA0
+patch=1,EE,00117280,word,46010043
+patch=1,EE,00117284,word,3C013F40
+patch=1,EE,00117288,word,4481F000
+patch=1,EE,0011728C,word,461E1082
+patch=1,EE,00117290,word,080A2149
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes.
+patch=1,EE,00C77F3C,word,00000000
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%). Activate only in PAL
+patch=1,EE,004B0704,byte,01 //02
+patch=1,EE,00346DE4,byte,64 //32
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode on startup at 60 FPS.
+patch=0,EE,00434E7C,word,000001C0
+patch=0,EE,00434E94,word,000001C0
+patch=0,EE,00434EAC,word,000001C0
+patch=0,EE,00434EC0,word,000001C0
+patch=0,EE,00434EC4,word,000001C0
+patch=0,EE,00434EDC,word,000001C0
+patch=0,EE,0043508C,word,000001C0
+patch=0,EE,004350A4,word,000001C0
+patch=0,EE,004350BC,word,000001C0
+patch=0,EE,004350D0,word,000001C0
+patch=0,EE,004350D4,word,000001C0
+patch=0,EE,004350EC,word,000001C0
+patch=0,EE,004352E0,word,000001C0
+patch=0,EE,00435400,word,000001C0
+patch=1,EE,004B0704,extended,01
+patch=1,EE,E0010032,extended,00346DE4
+patch=1,EE,00346DE4,extended,77

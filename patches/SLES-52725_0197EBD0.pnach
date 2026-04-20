@@ -1,0 +1,28 @@
+gametitle=Need for Speed - Underground 2 (v2.0) SLES-52725 0197EBD0
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen
+patch=1,EE,004F12DC,byte,01
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,0051715C,word,00000000
+
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect
+patch=0,EE,001D39D0,word,03E00008
+patch=0,EE,001D39D4,word,00000000
+patch=0,EE,00565E98,word,00000000
+patch=0,EE,001CA25C,word,24020000
+patch=0,EE,00565F78,word,01000100
+
+[Widen headlight beam]
+author=PeterDelta
+description=Widens the headlight beam as seen in Underground
+patch=0,EE,00565FE8,word,3E400000
+patch=0,EE,00565A00,word,3F400000
+patch=0,EE,00565FEC,word,3EFA0000

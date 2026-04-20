@@ -1,0 +1,18 @@
+gametitle=Disney-Pixar's Cars (PAL-G) SLES-54012 04D27B79
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=El_Patas
+description=Renders the game in 16:9 aspect ratio. Select aspect ratio 4:3 in game
+patch=1,EE,00116D50,word,3C033CAE //3C033C8E Zoom
+patch=1,EE,00116D54,word,34635555 //3463FA34
+patch=1,EE,00116D48,word,3C023FAB //3C023F80 Y-FOV
+patch=1,EE,001D5D74,word,3C03BFAB //3C03BF80 Render fix
+patch=1,EE,001D5D78,word,3C023FAB //3C023F80
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,001B1F44,extended,24040001
+patch=1,EE,E0010000,extended,008B88C4
+patch=1,EE,001B1F44,extended,24040002
