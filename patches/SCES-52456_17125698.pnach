@@ -138,6 +138,30 @@ patch=1,EE,204ae264,extended,461e1082 // 00000000
 patch=1,EE,204ae284,extended,14400008 // 10400008
 
 
+// Planet Aquatos - Nefarious's base (Clank)
+patch=1,EE,e008caff,extended,003dbc18
+patch=1,EE,203dbc58,extended,0803ff80
+patch=1,EE,203dbc5c,extended,00000000
+patch=1,EE,200ffe58,extended,080f6f17
+patch=1,EE,203dbc6c,extended,1060000a
+patch=1,EE,204a2344,extended,3c013f40
+patch=1,EE,204a2348,extended,4481f000
+patch=1,EE,204a2354,extended,461e1082
+patch=1,EE,204a2374,extended,14400008
+
+
+// Planet Aquatos - Sewers
+patch=1,EE,e008caff,extended,003ce8e0
+patch=1,EE,203ce920,extended,0803ff80
+patch=1,EE,203ce924,extended,00000000
+patch=1,EE,200ffe58,extended,080f3a49
+patch=1,EE,203ce934,extended,1060000a
+patch=1,EE,20493bcc,extended,3c013f40
+patch=1,EE,20493bd0,extended,4481f000
+patch=1,EE,20493bdc,extended,461e1082
+patch=1,EE,20493bfc,extended,14400008
+
+
 // Planet Tyhrranosis - Korgon Base
 patch=1,EE,e008caff,extended,0041b600 // check 0041b600 matches value xxxxcaff
 patch=1,EE,2041b640,extended,0803ff80 // c46000b0 jump to code-inject 200ffe00
@@ -148,6 +172,18 @@ patch=1,EE,204e5f74,extended,3c013f40 // 00000000 hor fov hud and menu
 patch=1,EE,204e5f78,extended,4481f000 // 00000000
 patch=1,EE,204e5f84,extended,461e1082 // 00000000
 patch=1,EE,204e5fa4,extended,14400008 // 10400008
+
+
+// Planet Tyhrranosis - Ranger Missions
+patch=1,EE,e008caff,extended,0040e528
+patch=1,EE,2040e568,extended,0803ff80
+patch=1,EE,2040e56c,extended,00000000
+patch=1,EE,200ffe58,extended,0810395b
+patch=1,EE,2040e57c,extended,1060000a
+patch=1,EE,204d75e4,extended,3c013f40
+patch=1,EE,204d75e8,extended,4481f000
+patch=1,EE,204d75f4,extended,461e1082
+patch=1,EE,204d7614,extended,14400008
 
 
 // Planet Daxx - Research Facility
@@ -184,6 +220,18 @@ patch=1,EE,204abe34,extended,3c013f40 // 00000000 hor fov hud and menu
 patch=1,EE,204abe38,extended,4481f000 // 00000000
 patch=1,EE,204abe44,extended,461e1082 // 00000000
 patch=1,EE,204abe64,extended,14400008 // 10400008
+
+
+// Holostar Studios - Lot 43 (Clank)
+patch=1,EE,e008caff,extended,003e4b40
+patch=1,EE,203e4b80,extended,0803ff80
+patch=1,EE,203e4b84,extended,00000000
+patch=1,EE,200ffe58,extended,080f92e1
+patch=1,EE,203e4b94,extended,1060000a
+patch=1,EE,204ad7bc,extended,3c013f40
+patch=1,EE,204ad7c0,extended,4481f000
+patch=1,EE,204ad7cc,extended,461e1082
+patch=1,EE,204ad7ec,extended,14400008
 
 
 // Planet Rilgar - Blackwater City
@@ -232,6 +280,18 @@ patch=1,EE,204dd624,extended,3c013f40 // 00000000 hor fov hud and menu
 patch=1,EE,204dd628,extended,4481f000 // 00000000
 patch=1,EE,204dd634,extended,461e1082 // 00000000
 patch=1,EE,204dd654,extended,14400008 // 10400008
+
+
+// Planet Kerwan - Ranger Missions
+patch=1,EE,e008caff,extended,0040b768
+patch=1,EE,2040b7a8,extended,0803ff80
+patch=1,EE,2040b7ac,extended,00000000
+patch=1,EE,200ffe58,extended,08102deb
+patch=1,EE,2040b7bc,extended,1060000a
+patch=1,EE,204d4e2c,extended,3c013f40
+patch=1,EE,204d4e30,extended,4481f000
+patch=1,EE,204d4e3c,extended,461e1082
+patch=1,EE,204d4e5c,extended,14400008
 
 
 // Planet Zeldrin - Crash Site
@@ -304,6 +364,102 @@ patch=1,EE,204ebedc,extended,3c013f40 // 00000000 hor fov hud and menu
 patch=1,EE,204ebee0,extended,4481f000 // 00000000
 patch=1,EE,204ebeec,extended,461e1082 // 00000000
 patch=1,EE,204ebf0c,extended,14400008 // 10400008
+
+
+// Insomniac Museum
+patch=1,EE,e008caff,extended,003ea068
+patch=1,EE,203ea0a8,extended,0803ff80
+patch=1,EE,203ea0ac,extended,00000000
+patch=1,EE,200ffe58,extended,080fa82b
+patch=1,EE,203ea0bc,extended,1060000a
+patch=1,EE,204b0d04,extended,3c013f40
+patch=1,EE,204b0d08,extended,4481f000
+patch=1,EE,204b0d14,extended,461e1082
+patch=1,EE,204b0d34,extended,14400008
+
+
+// Vid-comic 1
+patch=1,EE,e008caff,extended,003da5c8
+patch=1,EE,203da608,extended,0803ff80
+patch=1,EE,203da60c,extended,00000000
+patch=1,EE,200ffe58,extended,080f6983
+patch=1,EE,203da61c,extended,1060000a
+patch=1,EE,20498e94,extended,3c013f40
+patch=1,EE,20498e98,extended,4481f000
+patch=1,EE,20498ea4,extended,461e1082
+patch=1,EE,20498ec4,extended,14400008
+
+
+// Vid-comic 2
+patch=1,EE,e008caff,extended,003db108
+patch=1,EE,203db148,extended,0803ff80
+patch=1,EE,203db14c,extended,00000000
+patch=1,EE,200ffe58,extended,080f6c53
+patch=1,EE,203db15c,extended,1060000a
+patch=1,EE,2049a9cc,extended,3c013f40
+patch=1,EE,2049a9d0,extended,4481f000
+patch=1,EE,2049a9dc,extended,461e1082
+patch=1,EE,2049a9fc,extended,14400008
+
+
+// Vid-comic 3
+patch=1,EE,e008caff,extended,003dc948
+patch=1,EE,203dc988,extended,0803ff80
+patch=1,EE,203dc98c,extended,00000000
+patch=1,EE,200ffe58,extended,080f7263
+patch=1,EE,203dc99c,extended,1060000a
+patch=1,EE,2049ff34,extended,3c013f40
+patch=1,EE,2049ff38,extended,4481f000
+patch=1,EE,2049ff44,extended,461e1082
+patch=1,EE,2049ff64,extended,14400008
+
+
+// Vid-comic 4
+patch=1,EE,e008caff,extended,003e2e48
+patch=1,EE,203e2e88,extended,0803ff80
+patch=1,EE,203e2e8c,extended,00000000
+patch=1,EE,200ffe58,extended,080f8ba3
+patch=1,EE,203e2e9c,extended,1060000a
+patch=1,EE,204a2384,extended,3c013f40
+patch=1,EE,204a2388,extended,4481f000
+patch=1,EE,204a2394,extended,461e1082
+patch=1,EE,204a23b4,extended,14400008
+
+
+// Vid-comic 5
+patch=1,EE,e008caff,extended,003db948
+patch=1,EE,203db988,extended,0803ff80
+patch=1,EE,203db98c,extended,00000000
+patch=1,EE,200ffe58,extended,080f6e63
+patch=1,EE,203db99c,extended,1060000a
+patch=1,EE,2049a074,extended,3c013f40
+patch=1,EE,2049a078,extended,4481f000
+patch=1,EE,2049a084,extended,461e1082
+patch=1,EE,2049a0a4,extended,14400008
+
+
+// Vid-comic Special edition
+patch=1,EE,e008caff,extended,003e1388
+patch=1,EE,203e13c8,extended,0803ff80
+patch=1,EE,203e13cc,extended,00000000
+patch=1,EE,200ffe58,extended,080f84f3
+patch=1,EE,203e13dc,extended,1060000a
+patch=1,EE,2049fc54,extended,3c013f40
+patch=1,EE,2049fc58,extended,4481f000
+patch=1,EE,2049fc64,extended,461e1082
+patch=1,EE,2049fc84,extended,14400008
+
+
+// Vid-comic Unnamed
+patch=1,EE,e008caff,extended,003d6208
+patch=1,EE,203d6248,extended,0803ff80
+patch=1,EE,203d624c,extended,00000000
+patch=1,EE,200ffe58,extended,080f5893
+patch=1,EE,203d625c,extended,1060000a
+patch=1,EE,204999f4,extended,3c013f40
+patch=1,EE,204999f8,extended,4481f000
+patch=1,EE,20499a04,extended,461e1082
+patch=1,EE,20499a24,extended,14400008
 
 
 // Multiplayer Bakisi Isles
