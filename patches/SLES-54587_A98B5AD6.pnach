@@ -15,3 +15,14 @@ author=Souzooka
 comment=Removes a problematic color grading filter effect that causes an incredible performance increase on both software and hardware rendering modes and also gives a sharper image to the game.
 patch=0,EE,202283C0,extended,03E00008
 patch=0,EE,202283C4,extended,00000000
+
+[NTSC Mode]
+author=Souzooka
+description=Runs game at 30FPS.
+
+// Point to a NTSC video config for boot
+patch=0,EE,2016E74C,extended,24637EE0 // addiu v1,v1,0x7EE0
+
+// Affects the position of pages for the color correction filter (ScrEffHue)
+patch=0,EE,20228D94,extended,2444008C // addiu a0,v0,0x8C
+patch=0,EE,20228D9C,extended,24450118 // addiu a1,v0,0x118
