@@ -8,7 +8,7 @@ patch=1,EE,0011940C,word,3C013F4d
 patch=1,EE,00119410,word,3421b6e0
 
 [60 FPS]
-author=Ahtheerr (And other unknown Hero!)
+author=asasega and Ahtheerr
 description=Some game logic is faster, so the gameplay can be easier most of the time. QTE seems faster. Ben can Triple Jump.
 patch=1,EE,00268558,word,00000001 //00000002
 
