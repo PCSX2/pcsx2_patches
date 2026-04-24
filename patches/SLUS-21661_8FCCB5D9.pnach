@@ -7,13 +7,12 @@ description=Patches the game to run at Widescreen 16:9 aspect ratio.
 patch=1,EE,0011940C,word,3C013F4d
 patch=1,EE,00119410,word,3421b6e0
 
-[60 FPS]
-author=asasega and Ahtheerr
-description=Some game logic is faster, so the gameplay can be easier most of the time. QTE seems faster. Ben can Triple Jump.
-patch=1,EE,00268558,word,00000001 //00000002
+// [60 FPS]
+// description=Breaks Jumping
+// patch=1,EE,00268558,word,00000001 //00000002
 
-[21:9]
-gsaspectratio=21:9
+[Widescreen 21:9]
+gsaspectratio=Stretch
 author=Ahtheerr
 description=Can cause teleportation in some edges of the map, although very rare.
 patch=1,EE,0011940C,word,3C013F1C //3C013F89
