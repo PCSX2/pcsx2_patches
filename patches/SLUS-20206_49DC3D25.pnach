@@ -28,6 +28,6 @@ patch=1,EE,0020cb1c,word,3c013FB0//3c013f80
 
 
 [60 FPS]
-author=Teddy1991
+author=asasega
 description=Runs game at 60 FPS. May require 130% Overclock.
 patch=1,EE,003f5534,word,00000000
