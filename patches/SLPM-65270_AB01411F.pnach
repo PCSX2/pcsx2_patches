@@ -1,4 +1,11 @@
-gametitle=Virtua Fighter 4 - Evolution (J)(SLPM-65270)
+gametitle=Virtua Fighter 4: Evolution (NTSC-J) (SLPM-65270)
+
+[Interlaced Field Display Fix]
+author=felixthecat1970
+description=Switches gameplay to interlaced field mode for a stable progressive-like image in PCSX2 without true progressive scan
+patch=1,EE,202F82E4,extended,0000382D
+patch=1,EE,202F7F14,extended,00A32825
+patch=1,EE,202F7FB8,extended,00A32825
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -9,5 +16,3 @@ patch=1,EE,002fb184,word,3c194455 // 3c034420 hor fov
 patch=1,EE,002fb18c,word,37395555 // 44830800 hor fov
 patch=1,EE,002fb1a4,word,44990800 // 00000000
 patch=1,EE,00214918,word,3c024456 // 3c024420 renderfix
-
-

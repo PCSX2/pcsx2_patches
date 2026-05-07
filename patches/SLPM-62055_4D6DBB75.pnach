@@ -1,0 +1,10 @@
+gametitle=Bloody Roar 3 (Japan) (v1.02) (NTSC-J) (SLPM-62055)
+
+[No-Interlacing]
+author=Immersion95
+description=Disables interlacing
+patch=1,EE,201CE438,extended,34030001 // Sets SMODE2 to field mode
+patch=1,EE,201CE260,extended,240200DF // Forces DISPLAY height branch A to 224 lines
+patch=1,EE,201CE308,extended,240200DF // Forces DISPLAY height branch B to 224 lines
+patch=1,EE,201CF59C,extended,00000000 // Removes gameplay vertical field offset
+patch=1,EE,201CDAB0,extended,0000282D // Stabilizes FMV/generic field offset

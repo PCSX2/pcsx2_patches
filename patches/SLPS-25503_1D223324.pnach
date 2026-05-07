@@ -1,0 +1,7 @@
+gametitle=NeoGeo Online Collection Vol. 2: Bakumatsu Roman Gekka no Kenshi 1-2 (NTSC-J) (SLPS-25503)
+
+[240p Progressive Scan]
+author=felixthecat1970, Immersion95
+description=Forces progressive output for the menu and the gameplay
+patch=1,EE,E00182F0,extended,01FFEF20
+patch=1,EE,2013D9F8,extended,0000282D

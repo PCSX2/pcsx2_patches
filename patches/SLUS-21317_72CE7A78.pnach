@@ -1,0 +1,39 @@
+gametitle=Street Fighter Alpha Anthology (NTSC-U) (SLUS-21317)
+
+[No Bilinear Filter + UV Fix - In-game]
+author=Immersion95
+description=Disables the game's final bilinear filter and fixes the final blit UVs during gameplay only, preventing the vertical and horizontal seams that would otherwise split the image into four quads. Best used at native/1x resolution.
+
+// In-game / CPS-2 emulator active: [201DC2B0] == 0001 -> apply no bilinear + UV fix
+patch=1,EE,E0050001,extended,001DC2B0
+patch=1,EE,201499C0,extended,240B0000 // Final blit: disables forced bilinear filtering
+patch=1,EE,20149A24,extended,24840000 // Final blit: aligns U end/right texture edge
+patch=1,EE,20149A40,extended,24840000 // Final blit: aligns V end/bottom texture edge
+patch=1,EE,20149AC4,extended,34020000 // Final blit: aligns U start/left texture edge
+patch=1,EE,20149ACC,extended,34420000 // Final blit: aligns V start/top texture edge
+
+// Main menu / frontend active: [201DC2B0] == 0000 -> restore original no-bilinear/UV values
+patch=1,EE,E0050000,extended,001DC2B0
+patch=1,EE,201499C0,extended,240B0060 // Final blit: restores original forced bilinear filtering value
+patch=1,EE,20149A24,extended,2484FFF8 // Final blit: restores original U end/right texture edge offset
+patch=1,EE,20149A40,extended,2484FFF8 // Final blit: restores original V end/bottom texture edge offset
+patch=1,EE,20149AC4,extended,3C020008 // Final blit: restores original U start/left texture edge offset, upper immediate
+patch=1,EE,20149ACC,extended,34420008 // Final blit: restores original V start/top texture edge offset, lower immediate
+
+[CPS-2 384x448 Display Fix - In-game]
+author=Immersion95
+description=Sets CPS-2 gameplay to a pixel-perfect 384x448 output, matching the doubled 384x224 arcade layout. Best used at native/1x resolution.
+
+// In-game / CPS-2 emulator active: [201DC2B0] == 0001 -> apply display fix
+patch=1,EE,E0040001,extended,001DC2B0
+patch=1,EE,201499B8,extended,240517F8 // Final blit: sets the final quad right edge to 383.5 pixels for a clean 384-wide output
+patch=1,EE,20149D2C,extended,240605FF // GS DISPLAY: normal path, 384-wide window using the computed MAGH path
+patch=1,EE,20149E70,extended,240505FF // GS DISPLAY: alternate path, 384-wide window using the standard MAGH path
+patch=1,EE,20149F20,extended,240502FF // GS DISPLAY: progressive/special path, 384-wide window using the fixed MAGH=1 path
+
+// Main menu / frontend active: [201DC2B0] == 0000 -> restore original menu/display values
+patch=1,EE,E0040000,extended,001DC2B0
+patch=1,EE,201499B8,extended,00052900 // Final blit: restores original computed right edge, undoing the 383.5px / clean 384-wide output override
+patch=1,EE,20149D2C,extended,2506FFFF // GS DISPLAY: restores original normal path value, undoing the 384-wide computed MAGH path override
+patch=1,EE,20149E70,extended,240509FF // GS DISPLAY: restores original alternate path value, undoing the 384-wide standard MAGH path override
+patch=1,EE,20149F20,extended,240504FF // GS DISPLAY: restores original progressive/special path value, undoing the 384-wide fixed MAGH=1 override
