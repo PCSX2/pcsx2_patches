@@ -1,4 +1,9 @@
-gametitle=Street Fighter EX 3 (SLUS-201301)
+gametitle=Street Fighter EX3 (NTSC-U) (SLUS-20130)
+
+[Blur Removal]
+author=Immersion95
+description=Disables the fullscreen alpha blend pass
+patch=1,EE,20145B8C,extended,DF89CE28 // Disables alpha blending on the final fullscreen pass
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -7,11 +12,9 @@ patch=1,EE,002e34d4,word,3c013f40
 patch=1,EE,002e34d8,word,44810000
 patch=1,EE,002e34e0,word,4600c602
 
-
 [No-Interlacing]
+author=asasega
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,202E11FC,extended,00000000
 patch=1,EE,202E1284,extended,00000000
-
-

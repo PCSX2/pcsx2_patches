@@ -1,4 +1,10 @@
-gametitle=Namco x Capcom (NTSC-J)
+gametitle=Namco x Capcom (NTSC-J) (SLPS-25505)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=felixthecat1970
+description=Disables interlacing
+patch=1,EE,201047F4,extended,00000000
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -23,5 +29,3 @@ patch=1,EE,00192DE0,word,24E772A0 //battles background // 24E76C00
 patch=1,EE,00192E54,word,250872A0 //battles background // 25086C00
 patch=1,EE,00192ECC,word,25086680 //battles background // 25086C00
 patch=1,EE,00192F3C,word,25296680 //battles background // 25296C00
-
-

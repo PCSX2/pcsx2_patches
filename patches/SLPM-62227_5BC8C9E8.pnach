@@ -1,4 +1,20 @@
-gametitle=Marvel vs. Capcom 2: New Age of Heroes [NTSC-J] (SLPM-62227)
+gametitle=Marvel vs. Capcom 2: New Age of Heroes (NTSC-J) (SLPM-62227)
+
+[Native 480p / Full Frame Mode]
+author=felixthecat1970
+description=Enables the native 480p full-frame output path at 640x448; the doubled vertical resolution causes dithering to fit within PS2 VRAM
+patch=0,EE,003EE1D8,extended,24020002
+patch=0,EE,203EE1DC,extended,AC22F3C0
+patch=0,EE,203EE1EC,extended,AC20F3DC
+patch=0,EE,203EE714,extended,0000282D
+patch=0,EE,003EE718,extended,24060050
+patch=0,EE,203EE720,extended,24070001
+patch=0,EE,203EEB3C,extended,1040FFF6
+
+[Auto-Load Memory Card Fix]
+author=Immersion95
+description=Fixes Memory Card auto-load at startup for the Japanese retail version.
+patch=0,EE,20130470,extended,24020002 // MC main status 4: state 12 -> state 2; restores beta-like mapping and prevents silent boot auto-load abort
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -10,5 +26,3 @@ patch=1,EE,003dfad4,word,3C033F40
 patch=1,EE,003dfad8,word,03E00008
 patch=1,EE,003dfadC,word,AC830000
 patch=1,EE,003df440,word,3C023FE3
-
-

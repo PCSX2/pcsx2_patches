@@ -1,4 +1,10 @@
-gametitle=Dead or Alive 2 - Hard*Core (SLPS_25026)
+gametitle=Dead or Alive 2: Hardcore (NTSC-J) (SLPS-25026)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Immersion95
+description=Disables interlacing
+patch=1,EE,203A5D2C,extended,24040000
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -7,5 +13,4 @@ patch=1,EE,204588D0,word,3F400000
 patch=1,EE,20459140,word,3F400000
 patch=1,EE,204599B0,word,3F400000
 patch=1,EE,2045A220,word,3F400000
-
 

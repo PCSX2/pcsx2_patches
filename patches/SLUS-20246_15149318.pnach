@@ -1,4 +1,12 @@
-gametitle=Capcom vs SNK 2 (NTSC) (SLUS-20246)
+gametitle=Capcom vs. SNK 2: Mark of the Millennium 2001 (USA) (SLUS-20246)
+
+[Full Frame Mode]
+author=felixthecat1970
+description=Enables the native full-frame output path at 640x448; the doubled vertical resolution causes dithering to fit within PS2 VRAM
+patch=0,EE,20134DB4,extended,24020002
+patch=0,EE,20134DB8,extended,AC22EDD0
+patch=0,EE,20134DC8,extended,AC20EDEC
+patch=0,EE,0039A5B0,extended,02010206
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -138,12 +146,3 @@ author=gamemasterplc
 //patch=1,EE,103BAF58,extended,000000E0 //ADX Logo Copyright Symbol X Position (224)
 //patch=1,EE,103BAF6C,extended,00000168 //ADX Logo Copyright Text X Position (360)
 //patch=1,EE,103BAFC4,extended,000002A0 //Capcom vs SNK Demo Logo X Position (672)
-
-
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,20101B74,extended,00000000
-patch=1,EE,20101DDC,extended,00000000
-
-

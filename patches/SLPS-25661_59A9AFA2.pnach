@@ -1,0 +1,7 @@
+gametitle=The King of Fighters NESTS Collection - KOF 2001 NeoGeo Version (NTSC-J) (SLPS-25661)
+
+[No-Interlacing - KOF 2001 NeoGeo Version]
+gsinterlacemode=1
+author=Immersion95
+description=No interlace
+patch=1,EE,2010202C,extended,00000000 // Removes vertical field offset

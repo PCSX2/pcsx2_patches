@@ -1,0 +1,9 @@
+gametitle=The King of Fighters Collection: The Orochi Saga (NTSC-J) (SLPS-25605)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=umechan
+description=Disables interlacing
+patch=1,EE,202A8094,extended,00000000
+patch=1,EE,202A811C,extended,00000000
+patch=1,EE,2019F3B4,extended,35EF0000

@@ -1,0 +1,7 @@
+gametitle=Raiden III (NTSC-J) (SLPM-62690)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Immersion95
+description=Disables interlacing
+patch=1,EE,2010CF64,extended,00000000

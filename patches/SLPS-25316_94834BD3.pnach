@@ -1,0 +1,6 @@
+gametitle=SNK vs. Capcom: SVC Chaos (NTSC-J) (SLPS-25316)
+
+[Progressive Scan]
+author=felixthecat1970
+description=Enables progressive scan at boot
+patch=0,EE,202E8C20,extended,24025000
