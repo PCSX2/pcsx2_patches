@@ -1,0 +1,46 @@
+gametitle=Vampire: Darkstalkers Collection (NTSC-J) (SLPM-65998)
+
+[No Bilinear Filter + UV Fix - In-game]
+author=Immersion95
+description=Disables the game's final bilinear filter and fixes the final blit UVs during gameplay only, preventing the vertical and horizontal seams that would otherwise split the image into four quads. Best used at native/1x resolution.
+
+// Always-on option default: must stay outside the In-game joker because it fixes the FILTER option before the Display menu is opened
+patch=1,EE,20147230,extended,ACA00264 // Display option init: FILTER default OFF instead of ON; fixes bilinear being active until Display menu is opened
+
+// In-game / CPS-2 emulator active: [201C2600] == 0001 -> apply no bilinear + UV fix
+patch=1,EE,E0050001,extended,001C2600
+patch=1,EE,20147770,extended,240B0000 // Final blit: disables forced bilinear filtering
+patch=1,EE,201477D4,extended,24840000 // Final blit: aligns U end/right texture edge
+patch=1,EE,201477F0,extended,24840000 // Final blit: aligns V end/bottom texture edge
+patch=1,EE,20147874,extended,34020000 // Final blit: aligns U start/left texture edge
+patch=1,EE,2014787C,extended,34420000 // Final blit: aligns V start/top texture edge
+
+// Main menu / frontend active: [201C2600] == 0000 -> restore original no-bilinear/UV values
+patch=1,EE,E0050000,extended,001C2600
+patch=1,EE,20147770,extended,240B0060 // Final blit: restores original forced bilinear filtering value
+patch=1,EE,201477D4,extended,2484FFF8 // Final blit: restores original U end/right texture edge offset
+patch=1,EE,201477F0,extended,2484FFF8 // Final blit: restores original V end/bottom texture edge offset
+patch=1,EE,20147874,extended,3C020008 // Final blit: restores original U start/left texture edge offset, upper immediate
+patch=1,EE,2014787C,extended,34420008 // Final blit: restores original V start/top texture edge offset, lower immediate
+
+[CPS-2 384x448 Display Fix - In-game]
+author=Immersion95
+description=Sets CPS-2 gameplay to a pixel-perfect 384x448 output, matching the doubled 384x224 arcade layout. Best used at native/1x resolution.
+
+// In-game / CPS-2 emulator active: [201C2600] == 0001 -> apply display fix
+patch=1,EE,E0060001,extended,001C2600
+patch=1,EE,20147768,extended,240517F8 // Final blit: sets the final quad right edge to 383.5 pixels for a clean 384-wide output
+patch=1,EE,201479C8,extended,24030006 // GS DISPLAY: normal/interlace path mode value set for 384-wide output
+patch=1,EE,20147AE0,extended,24050A7F // GS DISPLAY: normal/interlace path, DW=0x0A7F with MAGH6 -> 384
+patch=1,EE,20147C04,extended,24050A7F // GS DISPLAY: alternate path, DW=0x0A7F with MAGH6 -> 384
+patch=1,EE,20147CB4,extended,2405047F // GS DISPLAY: progressive/special path, DW=0x047F with MAGH2 -> 384
+patch=1,EE,20147CC4,extended,3C050100 // GS DISPLAY: progressive/special path, fixed MAGH bits = 2 << 23 = 0x01000000
+
+// Main menu / frontend active: [201C2600] == 0000 -> restore original menu/display values
+patch=1,EE,E0060000,extended,001C2600
+patch=1,EE,20147768,extended,00052900 // Final blit: restores original computed right edge, undoing the 383.5px / clean 384-wide output override
+patch=1,EE,201479C8,extended,24030003 // GS DISPLAY: restores original normal/interlace path mode value
+patch=1,EE,20147AE0,extended,240509FF // GS DISPLAY: restores original normal DISPLAY path width value
+patch=1,EE,20147C04,extended,240509FF // GS DISPLAY: restores original alternate DISPLAY path width value
+patch=1,EE,20147CB4,extended,240504FF // GS DISPLAY: restores original progressive/special DISPLAY width value
+patch=1,EE,20147CC4,extended,3C050080 // GS DISPLAY: restores original progressive/special fixed MAGH bits = 1 << 23 = 0x00800000
