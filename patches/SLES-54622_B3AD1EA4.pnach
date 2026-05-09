@@ -24,3 +24,9 @@ patch=1,EE,21FB5830,byte,1
 author=Snake356
 description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,203704F4,word,00000000 //14820019
+
+[No-Interlacing]
+author=Mensa; ported by CRASHARKI
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+patch=1,EE,204481E4,word,00000000 //64420008
