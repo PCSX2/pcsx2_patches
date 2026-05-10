@@ -66,8 +66,9 @@ author=asasega
 description=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,202D92C4,word,00000000 //14820017
 
-[No-Interlacing]
-author=Mensa
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,2035F1B4,word,00000000
+//The following patch was discarded as it was deemed unnecessary:
+//[No-Interlacing]
+//author=Mensa
+//description=Attempts to disable interlaced offset rendering.
+//gsinterlacemode=1
+//patch=1,EE,2035F1B4,word,00000000
