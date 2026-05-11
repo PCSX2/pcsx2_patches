@@ -1,8 +1,9 @@
 gametitle=Project Zero II: Crimson Butterfly * SLES-52384 * PAL-M5 * 9D87F3AF
+// same serial-code as 9D8206D3 - the Undub version.
 // Fatal Frame II: Crimson Butterfly
 
 // This game might have some problems with the Cinematics,
-//  regardless of resolution or patches, however this pnach is not the cause of that.
+// regardless of resolution or patches, however this pnach is not the cause of that.
 
 [Widescreen 16:9]
 gsaspectratio=16:9

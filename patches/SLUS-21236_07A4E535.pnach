@@ -1,13 +1,23 @@
-gametitle=Tokyo Xtreme Racer: Drift (SLUS-21236)
+gametitle=Tokyo Xtreme Racer: Drift [NTSC-U] SLUS-21236 07A4E535
+
+[No-Interlacing]
+gsinterlacemode=1
+author=gladiator
+description=Attempts to disable interlaced offset rendering.
+patch=1,EE,201093F0,extended,30630000
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000
-patch=1,EE,001196f4,word,3c043f40
+author=val
+patch=1,EE,003BC6CE,short,3F40 //3F80 //3D General
+patch=1,EE,003BDDCE,short,3F40 //3F80 //3D Reflections
+patch=1,EE,003BE38E,short,3F40 //3F80 //3D Mirror
+patch=1,EE,003BFA8E,short,3F40 //3F80 //3D Weather
 
-
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-author=gladiator
-patch=1,EE,201093F0,extended,30630000
+[Native 10:7]
+gsaspectratio=10:7
+author=val
+patch=1,EE,003BC6CE,short,3F6F //3F80 //3D General
+patch=1,EE,003BDDCE,short,3F6F //3F80 //3D Reflections
+patch=1,EE,003BE38E,short,3F6F //3F80 //3D Mirror
+patch=1,EE,003BFA8E,short,3F6F //3F80 //3D Weather

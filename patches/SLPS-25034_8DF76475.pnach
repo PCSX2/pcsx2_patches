@@ -1,0 +1,10 @@
+gametitle=花と太陽と雨と (J)(SLPS-25034)
+
+[No-Interlacing]
+description=Attempts to disable interlaced offset rendering.
+gsinterlacemode=1
+author=NineKain
+
+//Remove Interlacing
+patch=1,EE,0010325C,extended,00000000
+patch=1,EE,00103524,extended,00000000

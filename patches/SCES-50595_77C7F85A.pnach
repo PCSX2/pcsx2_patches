@@ -1,8 +1,9 @@
-gametitle=Disney's Pixar - Monsters, Inc. - Scare Island (E)(SCES-50595)
+gametitle=Disney/Pixar Monsters, Inc. - Scare Island (PAL-E) (SCES-50595)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
+description=Patches the game to run at 16:9 Widescreen Aspect Ratio.
 
 // 16:9
 patch=1,EE,0011a3f0,word,0808ad25 // c6010068 jump to code-inject 0022b494
@@ -14,5 +15,3 @@ patch=1,EE,0022b4a0,word,c602006c // 00000000
 patch=1,EE,0022b4a4,word,461e0843 // 00000000
 patch=1,EE,0022b4a8,word,e6010068 // 00000000
 patch=1,EE,0022b4ac,word,080468fd // 00000000 jump back to 0011a3f4
-
-

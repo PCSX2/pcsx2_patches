@@ -314,3 +314,12 @@ patch=0,EE,202DDBEC,extended,1F160D0B
 patch=0,EE,202DDBF0,extended,2221
 patch=0,EE,202DE240,extended,21201F1E
 patch=0,EE,202DE244,extended,22
+
+[Bypass Save Prompt]
+description=Automatically saves the game after events if "autosave" is on.
+author=Souzooka
+
+// Causes save menu to progress to saving after checking memory card
+// instead of asking if user wishes to save
+patch=0,EE,20246208,extended,2402000F // addiu v0,zero,0xF
+patch=0,EE,20246224,extended,2402000F // addiu v0,zero,0xF

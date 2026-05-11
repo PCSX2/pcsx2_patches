@@ -2,10 +2,23 @@ gametitle=Gran Turismo 4 [SCUS-97328] (U)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Text
-author=Aero_
+author=CRASHARKI & Aero_
+description=Run the game at Enhanced 16:9 Widescreen Aspect Ratio from the start.
 
-// Corrects Text Aspect Ratio for Widescreen
+// Enable Widescreen from the start by CRASHARKI
+patch=1,EE,006184F0,byte,1 //0 Menu Option
+patch=1,EE,00A44B54,byte,1 //0 Menu Option
+patch=1,EE,00A458D4,byte,1 //0
+patch=1,EE,D0A458EC,extended,436E2831 //Is the expected value
+patch=1,EE,00A458EC,word,438A05E3 //436E2831
+patch=1,EE,D0A458F0,extended,43898000 //Is the expected value
+patch=1,EE,00A458F0,word,43D48000 //43898000
+patch=1,EE,D0A458F4,extended,434D0000 //Is the expected value
+patch=1,EE,00A458F4,word,43700000 //434D0000
+patch=1,EE,D0A458F8,extended,3F7851EB //Is the expected value
+patch=1,EE,00A458F8,word,3F7AE147 //3F7851EB
+
+// Corrects Text Aspect Ratio for Widescreen by Aero_
 patch=1,EE,20492A30,extended,08125570 // j 004955C0
 patch=1,EE,204955C0,extended,3C090061 // lui t1,0x0061 : Widescreen Mode 1st-Half of Memory Address
 patch=1,EE,204955C4,extended,352984F0 // ori t1,0x84F0 : Widescreen Mode 2nd-Half of Memory Address

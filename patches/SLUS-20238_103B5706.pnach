@@ -1,13 +1,15 @@
-gametitle=Crash Bandicoot Wrath Of Cortex (SLUS_202.38) (Version 1.1)
+gametitle=Crash Bandicoot Wrath Of Cortex (SLUS-20238) (Version 1.01)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=flameofrecca; ported by PsxFan107
+description=Patches the game to run at 16:9 Widescreen Aspect Ratio.
 patch=1,EE,001138B8,extended,3c013f11 //vertical fov
 patch=1,EE,001127A0,extended,3c013f2a //zoom value
 patch=1,EE,0011287C,extended,3c013f2a //render value
 
 [No-Interlacing]
+author=asasega
 description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,2016A048,extended,AF80E750

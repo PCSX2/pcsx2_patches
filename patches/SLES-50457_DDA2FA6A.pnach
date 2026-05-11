@@ -1,0 +1,7 @@
+gametitle=Rayman M (PAL-M 2.0) (SLES-50457)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
+patch=1,EE,003383BC,byte,1 //0

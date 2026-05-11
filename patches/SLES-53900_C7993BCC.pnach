@@ -1,15 +1,23 @@
-gametitle=Kaido Racer 2 PAL (SLES_539.00)
-
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=El_Patas
-author=El_Patas
-//Gameplay 16:9
-patch=1,EE,203FDFD0,extended,3F400000 //3F800000 (Increases hor. axis)
-
+gametitle=Kaido Racer 2 [PAL] SLES-53900 C7993BCC
 
 [No-Interlacing]
 gsinterlacemode=1
 author=val
 description=Attempts to disable interlaced offset rendering.
 patch=1,EE,001539E8,word,00000000
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=val
+patch=1,EE,003FDFD2,short,3F40 //3F80 //3D General
+patch=1,EE,003FF112,short,3F40 //3F80 //3D Reflections
+patch=1,EE,00400252,short,3F40 //3F80 //3D Mirror
+//patch=1,EE,003FE022,short,3F80 //3F80 //3D Weather
+
+[Native 10:7]
+gsaspectratio=10:7
+author=val
+patch=1,EE,003FDFD2,short,3F6F //3F80 //3D General
+patch=1,EE,003FF112,short,3F6F //3F80 //3D Reflections
+patch=1,EE,00400252,short,3F6F //3F80 //3D Mirror
+//patch=1,EE,003FE022,short,3F80 //3F80 //3D Weather

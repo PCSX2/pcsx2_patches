@@ -44,7 +44,7 @@ def is_file_valid(file_path):
                 # We can do more validations here, but for now skip these so they don't appear as unknown syntax error.
                 continue
             elif cleaned_line.startswith("patch"):
-                if not re.match(r'^patch=(0|1|2),(EE|IOP),[0-9A-Fa-f]{1,8},(byte|short|word|double|extended|beshort|beword|bedouble|bytes),[0-9A-Fa-f]{1,8}', line):
+                if not re.match(r'^patch=(0|1|2|3),(EE|IOP),[0-9A-Fa-f]{1,8},(byte|short|word|double|extended|beshort|beword|bedouble|bytes),[0-9A-Fa-f]{1,8}', line):
                     log_error(file_path, line_number, "Invalid patch format.", line, True)
                     return False
                 if re.match(r",\d{8}(\n|\s*(//.*)*)+(?!.)", line):

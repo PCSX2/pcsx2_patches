@@ -3,7 +3,7 @@ gametitle=Need for Speed - Most Wanted [Black Edition] [PAL-M] [SLES-53857] 805C
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Widescreen fix
+description=Widescreen fix.
 patch=1,EE,00AAF954,word,00000001
 patch=1,EE,0054BD38,word,3F400000
 
@@ -21,12 +21,32 @@ patch=0,EE,20533CC0,extended,00000000
 patch=0,EE,20533CC4,extended,0000102D
 patch=0,EE,20533CC8,extended,03E00008
 
-[Remove Brown Filter]
-author=fobes
-description=Disables the brownish yellow post processing filter
-patch=1,EE,00551058,extended,20000001
-
 [NTSC Mode]
 author=Felixthecat1970
 description=NTSC mode at start.
 patch=0,EE,20322DB4,extended,0000102D
+
+[Disable All Post-processing]
+author=Steelmax
+description=Disables rendering of yellow sepia, bloom, rain softening (except for motion blur).
+patch=1,EE,00551028,word,00000000
+
+[Disable Brown Filter]
+author=fobes
+description=Disables the brownish yellow post processing filter.
+patch=1,EE,00551058,extended,20000001
+
+[Disable Bloom]
+author=Steelmax
+description=Disables excessive bloom post-process effect.
+patch=1,EE,0055105C,word,00000001
+
+[Disable Motion Blur Effect]
+author=Steelmax
+description=Disables the smear while accelerating, using Nitro (including blue tint) and driving at high speed.
+patch=1,EE,00550450,word,00000000
+
+[No Distant Fog]
+author=Steelmax
+description=Removes fog from the game.
+patch=1,EE,00550329,byte,00

@@ -1,0 +1,6 @@
+gametitle=Need for Speed Underground 2 - SHA_DO [EA Best Hits] SLPM-66051 06FF4F2F
+
+[60 FPS]
+author=Xenia617
+description=Unlocks 60FPS. Certain scenes are 2x speed. 180% EE overclock is needed.
+patch=1,EE,001D80EC,extended,2C420001

@@ -1,12 +1,23 @@
-gametitle=Kaido - Touge no Densetsu [NTSC-J] (SLPM-66022)
+gametitle=Kaido Battle: Touge no Densetsu [NTSC-J] SLPM-66022 EC33CA0D
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Strawberry Shortcake
+description=Attempts to disable interlaced offset rendering.
+patch=1,EE,201532C4,extended,30840000
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000
-patch=1,EE,0016323c,word,3c043f40 //GamePlay
-patch=1,EE,0036663c,word,3c033f40 //Garage
+author=val
+patch=1,EE,003F3112,short,3F40 //3F80 //3D General
+patch=1,EE,003F4252,short,3F40 //3F80 //3D Reflections
+patch=1,EE,003F5392,short,3F40 //3F80 //3D Mirror
+//patch=1,EE,003F3162,short,3F80 //3F80 //3D Weather
 
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,201532C4,extended,30840000
+[Native 10:7]
+gsaspectratio=10:7
+author=val
+patch=1,EE,003F3112,short,3F6F //3F80 //3D General
+patch=1,EE,003F4252,short,3F6F //3F80 //3D Reflections
+patch=1,EE,003F5392,short,3F6F //3F80 //3D Mirror
+//patch=1,EE,003F3162,short,3F80 //3F80 //3D Weather

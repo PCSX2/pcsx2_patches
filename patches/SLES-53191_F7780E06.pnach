@@ -1,15 +1,23 @@
-gametitle=Kaido Racer PAL (SLES_531.91)
-
-[Widescreen 16:9]
-gsaspectratio=16:9
-author=El_Patas
-description=Widescreen Hack
-//Gameplay 16:9
-patch=1,EE,20431190,extended,3F400000 //3F800000 (Increases hor. axis)
-
+gametitle=Kaido Racer [PAL] SLES-53191 F7780E06
 
 [No-Interlacing]
 gsinterlacemode=1
 author=val
 description=Attempts to disable interlaced offset rendering.
-patch=1,EE,001350F0,word,00000000
+patch=1,EE,001350F0,word,00000000 //DC241000
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=val
+patch=1,EE,00431192,short,3F40 //3F80 //3D General
+patch=1,EE,004322D2,short,3F40 //3F80 //3D Reflections
+patch=1,EE,00433412,short,3F40 //3F80 //3D Mirror
+patch=1,EE,00433F92,short,3F40 //3F80 //3D Weather
+
+[Native 10:7]
+gsaspectratio=10:7
+author=val
+patch=1,EE,00431192,short,3F6F //3F80 //3D General
+patch=1,EE,004322D2,short,3F6F //3F80 //3D Reflections
+patch=1,EE,00433412,short,3F6F //3F80 //3D Mirror
+patch=1,EE,00433F92,short,3F6F //3F80 //3D Weather

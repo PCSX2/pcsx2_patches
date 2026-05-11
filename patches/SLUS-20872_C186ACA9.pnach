@@ -1,0 +1,42 @@
+gametitle=Juiced (U) (SLUS-20872)
+
+[Xbox Controls Layout]
+description=Enables the full Xbox controls layout, including menus. Menu button legends will not always match reality.
+author=Silent
+
+patch=0,EE,00483AE0,bytes,5F78626F782E747874 // controls_xbox.txt
+patch=0,EE,004A42D8,bytes,4241434B00 // GAMEPAD_BACK
+patch=0,EE,004A43B0,bytes,4100 // GAMEPAD_A
+patch=0,EE,004A43C0,bytes,5900 // GAMEPAD_Y
+patch=0,EE,004A43D8,bytes,5800 // GAMEPAD_X
+patch=0,EE,004A43E8,bytes,4200 // GAMEPAD_B
+patch=0,EE,004A4340,bytes,574849544500 // GAMEPAD_WHITE
+patch=0,EE,004A4350,bytes,424C41434B00 // GAMEPAD_BLACK
+patch=0,EE,004A4360,bytes,4C4546545F5452494747455200 // GAMEPAD_LEFT_TRIGGER
+
+// GAMEPAD_RIGHT_TRIGGER needs to be relocated
+patch=0,EE,004A4770,bytes,47414D455041445F52494748545F5452494747455200 // GAMEPAD_RIGHT_TRIGGER
+patch=0,EE,10345F08,extended,4770
+
+// Make GAMEPAD_*_TRIGGER analogue
+patch=0,EE,1034560C,extended,43D0
+patch=0,EE,10345620,extended,43E0
+
+patch=0,EE,10345698,extended,4358
+patch=0,EE,103456AC,extended,4770
+patch=0,EE,103456F0,extended,4358
+patch=0,EE,10345704,extended,4770
+
+patch=0,EE,1034711C,extended,4358
+patch=0,EE,10347160,extended,0131
+patch=0,EE,1034716C,extended,4770
+patch=0,EE,103471B0,extended,0133
+
+patch=0,EE,20346024,extended,00000000
+
+// Make gamepad analog inputs truly analog, like on Xbox (x / 255.0)
+patch=0,EE,203479A8,extended,3C013B80 // lui at,0x3B80
+patch=0,EE,203479AC,extended,34218081 // ori at,at,0x8081
+patch=0,EE,203479B0,extended,44810000 // mtc1 at,f00
+patch=0,EE,203479C4,extended,10000022 // b 0x00347A50
+patch=0,EE,203479C8,extended,46010002 // mul.s f00,f00,f01
