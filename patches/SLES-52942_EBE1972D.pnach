@@ -6,14 +6,22 @@ author=PeterDelta
 description=Renders the game in 16:9 aspect ratio
 patch=1,EE,00617D30,word,3FC71C66 //3F955554
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
 description=Might need EE Overclock (180%).
-patch=1,EE,001A7A74,word,24020001
+patch=0,EE,001A7A74,word,24020001
 
 [NTSC Mode]
 author=PeterDelta
 description=NTSC mode at start.
+patch=0,EE,001BE4B8,word,14A0002F
 patch=1,EE,00617EC4,word,00000000
-patch=1,EE,00617DA8,word,000001C0
-patch=1,EE,001BE4B8,word,14A0002F
+patch=0,EE,0052452C,word,240201C0
+patch=0,EE,00529F70,word,3C013C88
+patch=0,EE,00529F74,word,34218889
+patch=0,EE,00529F80,word,2402003C
+
+[Remove Bloom]
+author=PeterDelta
+description=Removes the post-processing bloom effect
+patch=1,EE,001D0D40,extended,00
