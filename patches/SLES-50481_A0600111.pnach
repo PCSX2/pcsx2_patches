@@ -1,4 +1,4 @@
-gametitle=Vexx [PAL-M5] (SLES_504.81)
+gametitle=Vexx (PAL-M) SLES-50444 802EBFF7
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -7,4 +7,7 @@ description=Widescreen Hack
 //Gameplay 16:9
 patch=1,EE,0035D87C,word,3C033F40 //3C033F80 (Increases hor. axis)
 
-
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,00434CC6,extended,94
