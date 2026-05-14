@@ -15,3 +15,20 @@ patch=1,EE,2010248c,word,64420000
 patch=1,EE,2012EE28,word,30420000
 
 
+[Fix vertical lines when upscaling]
+description=Fixes missing vertical lines down the screen when upscaling, caused by DW games rendering at a non-standard, wider-than-usual horizontal resolution.
+author=MichaelMusou
+patch=1,EE,0012f8a4,word,2AA20001
+patch=1,EE,0012f7c4,word,24090280
+patch=1,EE,0012f824,word,24090280
+patch=1,EE,0012f800,word,26020940
+patch=1,EE,0012f864,word,26020940
+patch=1,EE,0012fa58,word,2A220001
+patch=1,EE,0012f9dc,word,24090280
+patch=1,EE,0012fa28,word,26620940
+
+
+[Load original (Enables Musou and Free modes)]
+description=DW4XL contains all files required to play Musou/Free modes - this unhides them
+author=SomberTwilight
+patch=1,EE,00363014,word,00000001
