@@ -1,6 +1,7 @@
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,20101594,extended,00000000
+gametitle=Melty Blood: Act Cadenza (NTSC-J) (SLPM-55184)
 
-
+[Progressive Scan]
+author=Immersion95
+description=Enables progressive scan at boot
+patch=1,EE,201EC588,extended,0C07B3AC // Calls the game's official video-mode setup directly
+patch=1,EE,201EC58C,extended,24040001 // Forces the setup argument to progressive mode

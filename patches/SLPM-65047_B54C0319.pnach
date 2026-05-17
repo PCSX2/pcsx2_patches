@@ -1,4 +1,19 @@
-gametitle=Capcom vs. SNK 2: Mark of the Millennium 2001  [NTSC-J] (SLPM-65047)
+gametitle=Capcom vs. SNK 2: Millionaire Fighting 2001 (NTSC-J) (SLPM-65047)
+
+[Native 480p / Full Frame Mode]
+author=felixthecat1970
+description=Enables the native 480p full-frame output path at 640x448; the doubled vertical resolution causes dithering to fit within PS2 VRAM
+patch=0,EE,20124540,extended,241B0002
+patch=0,EE,20134E44,extended,AC3B2990
+patch=0,EE,20134E48,extended,24020002
+patch=0,EE,20134E58,extended,AC2029AC
+patch=0,EE,20135370,extended,0000282D
+patch=0,EE,00135390,extended,00000050
+patch=0,EE,00100460,extended,00000050
+patch=0,EE,1010051C,extended,260202D0
+patch=0,EE,001005A0,extended,26450033
+patch=0,EE,101005C4,extended,64E30134
+patch=0,EE,20135848,extended,1040FFF4
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -11,5 +26,3 @@ patch=1,EE,00125034,word,3C033F40
 patch=1,EE,00125038,word,03E00008
 patch=1,EE,0012503C,word,AC830000
 patch=1,EE,0012492c,word,3C023FE3
-
-
