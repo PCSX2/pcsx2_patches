@@ -1,14 +1,19 @@
-gametitle=TimeSplitters 2 (SLUS_20314)
+gametitle=TimeSplitters 2 * NTSC-U * SLUS-20314 * 12532F1C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=No.47
-patch=1,EE,20598A08,word,3FC71C71
-patch=1,EE,205995DC,word,3FC71C71
-patch=1,EE,20599664,word,3FC71C71
-patch=1,EE,2059CA10,word,3FC71C71
+patch=1,EE,005995dc,word,3fc71c71 // 3f955555
+patch=1,EE,00598a08,word,3fc71c71 // 3f955555
+patch=1,EE,00599664,word,3fc71c71 // 3f955555
+patch=1,EE,0059a304,word,3fc71c71 // 3f955555
+patch=1,EE,0059a308,word,3fc71c71 // 3f955555
+patch=1,EE,0059a39c,word,3fc71c71 // 3f955555
+patch=1,EE,0059a3ac,word,3fc71c71 // 3f955555
+patch=1,EE,0059ca10,word,3fc71c71 // 3f955555
 
 [No Cutscene Letterbox]
+author=Muzzarino
 patch=1,EE,203C7030,short,00000000
 patch=1,EE,203C7058,short,000001C0
 patch=1,EE,203C7668,short,00000000
