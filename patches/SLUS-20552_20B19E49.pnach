@@ -5,23 +5,19 @@ gsaspectratio=16:9
 author=PeterDelta
 description=Widescreen fix
 patch=1,EE,004B0A3C,extended,00000001
-patch=1,EE,002435CC,extended,3C0242CC
-patch=1,EE,00252D30,extended,3C0242AC
-patch=1,EE,00254D24,extended,3C0242AC
-patch=1,EE,002553C0,extended,3C0242AC
-patch=1,EE,0032B180,extended,3C044040
-patch=1,EE,0032B1D4,extended,3C0240D0
-patch=1,EE,003A4644,extended,3C013F80 //scenes zoon
-patch=1,EE,E0010001,extended,004B1630
-patch=1,EE,003A4644,extended,3C013F40
-patch=1,EE,20241A5C,extended,3C023FC0
+patch=0,EE,002435CC,extended,3C0242AC
+patch=0,EE,00252D30,extended,3C0242AC
+patch=0,EE,00254D24,extended,3C0242AC
+patch=0,EE,002553C0,extended,3C0242AC
+patch=0,EE,0032B180,extended,3C044040
+patch=0,EE,0032B1D4,extended,3C0240D0
 
 [Remove Blackbars]
 author=PeterDelta
 description=Removes black bars in cutscenes
-patch=1,EE,00245D9C,word,3C02F060
-patch=1,EE,00245E0C,word,3C02F060
-patch=1,EE,00272FF0,word,3C025380
+patch=0,EE,00245D9C,word,3C02F060
+patch=0,EE,00245E0C,word,3C02F060
+patch=0,EE,00272FF0,word,3C025380
 
 [60 FPS]
 author=asasega

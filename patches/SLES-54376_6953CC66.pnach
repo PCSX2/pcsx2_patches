@@ -1,0 +1,15 @@
+gametitle=Nickelodeon Barnyard (PAL-A) SLES-54376 6953CC66
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio
+patch=1,EE,005456E0,word,3FB58000 //3F8889A0
+patch=1,EE,00542028,word,3FD50000 //3EAAAAAB
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0054B994,extended,00000001
+patch=1,EE,E0010010,extended,004F8D94
+patch=1,EE,0054B994,extended,00000002
