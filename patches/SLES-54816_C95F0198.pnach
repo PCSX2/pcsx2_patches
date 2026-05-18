@@ -1,0 +1,11 @@
+gametitle=Legend of Spyro, The - The Eternal Night (SLES-54816)
+
+[50 FPS]
+author=asasega + CRASHARKI + manakoDE
+description=Patches the game to run at 50 FPS.
+patch=1,EE,20124310,word,28420001 //28420002
+patch=1,EE,2012442C,word,28420001 //28420002
+patch=1,EE,E0020001,extended,008CCC34
+patch=1,EE,20124310,extended,28420002
+patch=1,EE,2012442C,extended,28420002
+patch=1,EE,20946AB8,word,42700000 // Fixed Dragon Time duration
