@@ -1,11 +1,6 @@
-gametitle=Call of Duty: Finest Hour (SLUS-20725)
+gametitle=Call of Duty: Finest Hour (NTSC-U) (SLUS-20725)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-
 author=nemesis2000
-
-
 patch=1,EE,0024b3c4,word,00000000
-
-
