@@ -16,6 +16,6 @@ patch=1,EE,20383A40,word,00009450
 [Remove Speedometer Update Cap]
 author=Azullia / real-xp
 description=Allows the speedometer to update every frame instead of being capped at 3 UPS.
-patch=0,EE,20117E74,extended,46000001 // sub.s f00, f01, f00 -> sub.s f00, f00, f00
+patch=3,EE,20117E74,extended,46000001 // sub.s f00, f01, f00 -> sub.s f00, f00, f00
 
 
