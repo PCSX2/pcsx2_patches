@@ -13,3 +13,10 @@ patch=1,EE,2013363C,word,34060001
 patch=1,EE,20383A40,word,00009450
 
 
+[Fix Trigger Sensitivity]
+author=real-xp / Azullia
+description=Removes the deadzone and fixes the trigger range when using L2/R2 for brake/throttle.
+patch=3,EE,201461E0,extended,240903DF // addiu t1, zero, 0xFF -> addiu t1, zero, 0x3DF
+patch=3,EE,201461EC,extended,00842026 // lw a0, 0x2DC(s1) -> xor a0, a0, a0
+patch=3,EE,201467C8,extended,46160003 // nop -> div.s f00, f00, f22
+patch=3,EE,201467CC,extended,46000000 // div.s f00, f00, f22 -> add.s f00, f00, f00
