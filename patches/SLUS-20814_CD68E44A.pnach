@@ -13,7 +13,7 @@ patch=1,EE,D0610978,extended,00000000 //Check if it is Graphic Novel
 patch=1,EE,20569F48,extended,3eaaaaab
 
 [Remove Blackbars]
-author=PeterDelta; ported by CRASHARKI	
+author=PeterDelta; ported by CRASHARKI
 description=Removes black bars in cutscenes.
 patch=1,EE,20741878,extended,3F800000 //3F400000 (when black bars are present)
 
