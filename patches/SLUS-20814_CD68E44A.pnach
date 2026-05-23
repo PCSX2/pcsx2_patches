@@ -1,6 +1,23 @@
-gametitle=Max Payne 2 - Fall of Max Payne (SLUS-20814)
+gametitle=Max Payne 2 - The Fall of Max Payne (NTSC-U) SLUS-20814 CD68E44A
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta, Arapapa & CRASHARKI
+description=Enable enhanced native widescreen.
+patch=1,EE,00599548,extended,00000010 //00000004
+patch=1,EE,00599550,extended,00000009 //00000003
+//Zoom fix (Internal widescreen) by Arapapa & CRASHARKI
+//abaaaa3e 8988083e
+patch=1,EE,20569F48,extended,3faccccd //3eaaaaab
+patch=1,EE,D0610978,extended,00000000 //Check if it is Graphic Novel
+patch=1,EE,20569F48,extended,3eaaaaab
+
+[Remove Blackbars]
+author=PeterDelta; ported by CRASHARKI	
+description=Removes black bars in cutscenes.
+patch=1,EE,20741878,extended,3F800000 //3F400000 (when black bars are present)
 
 [60 FPS]
 author=asasega
-description=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
-patch=1,EE,005D8DF8,word,00000001
+description=Might need EE Overclock (300%).
+patch=1,EE,005D8DF8,word,00000001 //00000002
