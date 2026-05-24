@@ -1,9 +1,9 @@
-gametitle=Hitman 2 - Silent Assassin PAL-S SLES-51110 5B9ACF79
+gametitle=Hitman 2 - Silent Assassin (PAL-S 1.01 & 2.00) (SLES-51110)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-description=Widescreen hack
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,00313f7c,word,3c013f10 // 3c013f40 ver fov
 patch=1,EE,002bbe18,word,3c1b3f40 // 00000000 zoom
 patch=1,EE,002bc00c,word,3c013f00 // 3c013f80
