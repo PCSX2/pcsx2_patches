@@ -24,4 +24,4 @@ patch=1,EE,20508090,extended,00000001 //00000002
 [NTSC Mode]
 author=Gabominated
 description=NTSC mode at start. FMVs remain in PAL.
-patch=1,EE,003066B4,word,14A20057 //10A20057
+patch=0,EE,003066B4,word,14A20057 //10A20057
