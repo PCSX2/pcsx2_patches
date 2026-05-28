@@ -3,4 +3,5 @@ gametitle=Call of Duty: Finest Hour (NTSC-U) (SLUS-20725)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,0024b3c4,word,00000000
