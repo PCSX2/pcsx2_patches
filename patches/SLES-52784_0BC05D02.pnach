@@ -3,4 +3,5 @@ gametitle=Call of Duty: Finest Hour (PAL-G) (SLES-52784)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=nemesis2000
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,0024b57c,word,00000000
