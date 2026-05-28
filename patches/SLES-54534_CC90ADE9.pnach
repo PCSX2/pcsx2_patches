@@ -7,7 +7,7 @@ description=Enable native widescreen.
 patch=1,EE,00DAFAC0,extended,00000001 //00000000
 
 [50/60 FPS]
-author=Gabominated
+author=asasega
 description=Might need EE Overclock (130%).
 patch=1,EE,20DAFABC,extended,00000000 //00000001
 
