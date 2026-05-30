@@ -22,3 +22,10 @@ description=Allows the speedometer to update every frame instead of being capped
 patch=3,EE,20117E74,extended,46000001 // sub.s f00, f01, f00 -> sub.s f00, f00, f00
 
 
+[Fix Trigger Sensitivity]
+author=real-xp / Azullia
+description=Removes the deadzone and fixes the trigger range when using L2/R2 for brake/throttle.
+patch=3,EE,20146208,extended,240903DF // li t1, 0xFF -> li t1, 0x3DF
+patch=3,EE,20146214,extended,00842026 // lw a0, 0x2DC(s1) -> xor a0, a0, a0
+patch=3,EE,20146864,extended,46010043 // nop -> div.s f01, f00, f01
+patch=3,EE,20146868,extended,46010840 // div.s f01, f00, f01 -> add.s f01, f01, f01

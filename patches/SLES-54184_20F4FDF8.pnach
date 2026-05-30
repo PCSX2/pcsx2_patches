@@ -1,7 +1,13 @@
 gametitle=Scarface - The World is Yours PAL-R SLES-54184 20F4FDF8
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Enable native widescreen.
+patch=1,EE,00DAFAC0,extended,00000001 //00000000
+
 [50/60 FPS]
-author=Gabominated
+author=asasega
 description=Might need EE Overclock (130%).
 patch=1,EE,20DAFABC,extended,00000000 //00000001
 

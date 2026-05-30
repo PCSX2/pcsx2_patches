@@ -1,4 +1,4 @@
-gametitle= J-League Winning Eleven 2008 - Club Championship (NTSC-J) (SLPM-55033)
+gametitle= J-League Winning Eleven 2008 - Club Championship (NTSC-J) (SLPM-55033) B0C15891
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -12,4 +12,11 @@ patch=1,EE,00104408,word,4600c602 // 00000000
 // Render fix (42091746 803f053c)
 patch=1,EE,00125b0c,word,3c053FAB //3c053F80
 
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock. Unlocks FPS in all modes.
+patch=1,EE,10526190,extended,0100
+patch=1,EE,E0010001,extended,005CBF64
+patch=1,EE,10526190,extended,0200
+patch=1,EE,10280D84,extended,4270
+patch=1,EE,101F3350,extended,3F80

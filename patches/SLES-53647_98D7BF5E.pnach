@@ -1,0 +1,22 @@
+gametitle=Gun (PAL-M) SLES-53647 98D7BF5E
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=0,EE,0028E9C4,word,16000019
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,004779D0,extended,01
+patch=0,EE,00125EC8,extended,3C
+
+[Remove Bloom]
+author=PeterDelta
+description=Removes the bloom effect.
+patch=1,EE,00C6EA30,word,00000000
+
+[Remove Sky Filter]
+author=PeterDelta
+description=Removes the sky filter, making the game look more natural.
+patch=1,EE,0047A544,word,00000000
