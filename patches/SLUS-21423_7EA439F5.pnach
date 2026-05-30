@@ -58,7 +58,7 @@ patch=1,EE,00291990,word,44810000
 patch=1,EE,00291994,word,0c0820e8
 patch=1,EE,00291998,word,46006302
 
-//Force widescreen from the begginning
+//Force widescreen from the start
 patch=1,EE,203D8B8A,byte,1
 
 [60 FPS]
@@ -66,8 +66,9 @@ author=asasega
 description=Patches the game to run at 60 FPS (Might need 180% EE Overclock to be stable).
 patch=1,EE,202D92C4,word,00000000 //14820017
 
-[No Interlacing]
-author=Mensa
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,2035F1B4,extended,00000001
+//The following patch was discarded as it was deemed unnecessary:
+//[No-Interlacing]
+//author=Mensa
+//description=Attempts to disable interlaced offset rendering.
+//gsinterlacemode=1
+//patch=1,EE,2035F1B4,word,00000000
