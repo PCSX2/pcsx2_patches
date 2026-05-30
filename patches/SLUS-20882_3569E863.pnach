@@ -1,10 +1,9 @@
-gametitle=Hitman - Contracts (SLUS_20882, SLES_52135)
+gametitle=Hitman - Contracts (SLUS-20882)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-
-// 16:9
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,002659d8,word,3c013f10 // 3c013f40 ver fov
 patch=1,EE,001c8300,word,3c1b3f40 // 1060006e zoom
 patch=1,EE,001c8304,word,1060006d // ae220044
@@ -23,4 +22,9 @@ patch=1,EE,001c850c,word,4600a583 // e6200054
 patch=1,EE,001c8510,word,e6200054 // 3c01bf00
 patch=1,EE,001c8514,word,4600a807 // 44810000
 
-
+[60 FPS]
+author=Gabominated & CRASHARKI
+description=Unlocked at 60 FPS. Might need EE Overclock to be stable.
+patch=1,EE,2053a70c,extended,00000001 //00000002
+patch=1,EE,E0010001,extended,0053A764 //condition in FMVs
+patch=1,EE,2053a70c,extended,00000002
