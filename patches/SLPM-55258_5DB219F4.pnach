@@ -1,4 +1,4 @@
-gametitle= Winning Eleven 2010 - Aoki Samurai no Chousen (NTSC-J) (SLPM_55258)
+gametitle= Winning Eleven 2010 - Aoki Samurai no Chousen (NTSC-J) SLPM-55258 5DB219F4
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -12,4 +12,11 @@ patch=1,EE,00104408,word,4600c602 // 00000000
 // Render fix by El_Patas (42091746 803f053c)
 patch=1,EE,00125d8c,word,3C053FAB //3C053F80 (increases hor. render area)
 
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock. Unlocks FPS in all modes.
+patch=1,EE,10534E90,extended,0100
+patch=1,EE,E0010001,extended,005D9674
+patch=1,EE,10534E90,extended,0200
+patch=1,EE,101F6AC8,extended,3F80
+patch=1,EE,1026EDD4,extended,4270
