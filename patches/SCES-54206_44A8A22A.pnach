@@ -1,10 +1,16 @@
-gametitle=God of War 2 - PAL [SCES_542.06]
+gametitle=God of War 2 - PAL-M (SCES-54206)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ShaolinAssassin
-description=Widescreen Converted from NTSC hack by nemesis2000
-patch=1,EE,002348a0,word,46000406
+author=CRASHARKI & ShaolinAssassin
+description=Enable enhanced native widescreen. (Original widescreen uses vertical cropping; Enhanced expands the horizontal view.)
+//enable native widescreen
+patch=1,EE,002D8068,byte,01
+patch=1,EE,0032ED00,word,3FE38E39
+patch=1,EE,0032ED38,word,3FE38E39
+patch=1,EE,00363210,word,3FE38E39
+//Zoom value for Hor+ by nemesis2000; ported by ShaolinAssassin
+patch=1,EE,002348A0,word,46000406
 
 
 [Skip Cutscenes]
