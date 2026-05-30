@@ -1,4 +1,13 @@
-gametitle=RockMan X8 [NTSC-J] (SLPM-65730)
+gametitle=Rockman X8 (NTSC-J) (SLPM-65730)
+
+[Progressive Scan]
+author=Immersion95
+description=Enables progressive scan at boot
+patch=1,EE,20255A2C,extended,24040002 // Forces the earliest video-mode setup argument to progressive mode
+patch=1,EE,202F047C,extended,24030002 // Forces the Capcom logo movie setup path to progressive mode
+patch=1,EE,202F071C,extended,24020002 // Keeps the Capcom logo movie loop on the progressive path
+patch=1,EE,202F08A0,extended,24040002 // Forces the boot video-mode setup argument to progressive mode
+patch=1,EE,202F0A10,extended,24020002 // Keeps the Capcom logo movie display restore on the progressive path
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -7,5 +16,3 @@ author=nemesis2000
 patch=1,EE,0010f10c,word,3c013f40 //hor value
 patch=1,EE,0010f110,word,44810000
 patch=1,EE,0010f118,word,4600c602
-
-
