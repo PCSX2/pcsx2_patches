@@ -19,7 +19,7 @@ patch=1,EE,007AA05C,byte,01 //00
 patch=1,EE,00194e8c,word,3c013fe3 //3c013fd5
 patch=1,EE,00194e90,word,34218e3e //3421551d
 
-[50/60 FPS]
+[60 FPS]
 author=PeterDelta
 description=Might need EE Overclock at 130%.
 patch=1,EE,00596D70,byte,01
