@@ -13,4 +13,8 @@ patch=1,EE,20268B78,extended,461F1082 //0200202D - mul.s $f2, $f2, $f31 - Multip
 patch=1,EE,20268B7C,extended,0808F291 //3C03002C - j $0023ca44 - Jump to 2 lines after the overwritten MIPS instruction
 patch=1,EE,20268B80,extended,3C04002C //2604FFFA - lui a0, $002c - Restore overwritten MIPS instruction
 
+[60 FPS]
+author=Souzooka
+description=Runs game at 60 FPS. May require 130% Overclock.
 
+patch=0,EE,001032BC,word,24020001 // addiu v0,zero,0x1 ; wait 1 vblank instead of 2
