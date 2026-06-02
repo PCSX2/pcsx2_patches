@@ -27,7 +27,7 @@ patch=1,EE,003713A8,word,42D40000 // 3F800000 - X-axis placement of Cinematics.
 
 // ==========
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
 author=pgert
 
@@ -45,7 +45,7 @@ patch=1,EE,003713A8,word,42830000
 
 // ==========
 
-[Widescreen/15:10]
+[Widescreen 15:10]
 gsaspectratio=Stretch
 author=pgert
 

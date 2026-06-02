@@ -7,9 +7,11 @@ gametitle=Lara Croft Tomb Raider: The Angel of Darkness * NTSC-U * SLUS-20467 * 
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
-description=Native Widescreen activation hack (Full boot bypassing)
-patch=1,EE,00220bd0,word,24020002 // 30420003
+author=arapapa
+description=Shifts Aspect Ratio to correct 16:9.
+
+// Activates Native Widescreen (Full Boot bypassing).
+//patch=1,EE,00220bd0,word,24020002 // 30420003
 
 // Fast Boot 4:3 fix (proper aspect ratio)
 // aa3f013c 713d2134 (Last)
@@ -20,8 +22,10 @@ patch=1,EE,00205220,word,3421fc93 // 34213d71
 patch=1,EE,00205230,word,3c013fe2 // 3c013fd5
 patch=1,EE,00205234,word,3421fc93 // 3421c28f
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
+author=arapapa
+description=Shifts Aspect Ratio to 16:10.
 
 // Fast Boot 4:3 hack - 16:10
 patch=1,EE,0020521c,word,3C013FCC
@@ -31,8 +35,10 @@ patch=1,EE,00205220,word,342149BB
 patch=1,EE,00205230,word,3C013FCC
 patch=1,EE,00205234,word,342149BB
 
-[Widescreen/15:10]
+[Widescreen 15:10]
 gsaspectratio=Stretch
+author=arapapa
+description=Shifts Aspect Ratio to 15:10.
 
 // Fast Boot 4:3 hack - 15:10
 patch=1,EE,0020521c,word,3C013FBF

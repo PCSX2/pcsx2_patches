@@ -42,7 +42,7 @@ patch=1,EE,0033B228,word,0000006A // 00000000 - x-pos = (640-640*ratio)/(2*ratio
 
 // ==========
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
 author=nemesis2000 & pgert
 patch=1,EE,0033760C,word,3F555555 // - 16:10
@@ -77,7 +77,7 @@ patch=1,EE,0033B228,word,00000040 //
 
 // ==========
 
-[Widescreen/15:10]
+[Widescreen 15:10]
 gsaspectratio=Stretch
 author=nemesis2000 & pgert
 
