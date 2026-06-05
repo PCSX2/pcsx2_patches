@@ -1,8 +1,9 @@
-gametitle=Leisure Suit Larry - Magna Cum Laude (NTSC-U) (SLUS-20956)
+gametitle=Leisure Suit Larry - Magna Cum Laude (NTSC-U) (SLUS-20956) A1736B07
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
+description=Renders the game in 16:9 aspect ratio.
 
 // 16:9
 patch=1,EE,002e4850,word,080fb09a // 46020082 jump to code-inject 003ec268
@@ -14,5 +15,3 @@ patch=1,EE,003ec270,word,46020082 // 00000000
 patch=1,EE,003ec274,word,46020842 // 00000000
 patch=1,EE,003ec278,word,461e0843 // 00000000
 patch=1,EE,003ec27c,word,080b9215 // 00000000 jump back to 002e4854
-
-
