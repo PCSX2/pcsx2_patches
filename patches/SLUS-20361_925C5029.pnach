@@ -1,0 +1,10 @@
+gametitle=Rally Fusion - Race of Champions (NTSC-U) SLUS-20361 925C5029
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta & Arapapa
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,001AE5A0,word,3C0140AB
+patch=0,EE,001066E0,word,3C013F06
+patch=0,EE,001066E4,word,34216666
+patch=0,EE,002F9C60,word,3C013FAB

@@ -1,25 +1,17 @@
-gametitle=Rally Fusion - Race of Champions (E)(SLES-50997)
+gametitle=Rally Fusion - Race of Champions (PAL-M3) SLES-50997 55E708DA
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=PeterDelta & Arapapa
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,001AE5A0,word,3C0140AB
+patch=0,EE,001066E0,word,3C013F06
+patch=0,EE,001066E4,word,34216666
+patch=0,EE,002F9CE8,word,3C013FAB
 
-//Widescreen hack 16:9
-
-
-//Zoom
-//333f013c 33332134 43200146 > 063f013c 66662134 43200146
-patch=1,EE,001066e0,word,3c013f06 //3c013f33
-patch=1,EE,001066e4,word,34216666 //34213333
-
-//Y-Fov
-//6000c0c4 c3180046
-patch=1,EE,00106714,word,08030000
-
-patch=1,EE,000c0000,word,460018c3
-patch=1,EE,000c0004,word,3c013ea2
-patch=1,EE,000c0008,word,4481f000
-patch=1,EE,000c000c,word,461e18c2
-patch=1,EE,000c0010,word,080419c6
-
-
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=0,EE,002D8110,word,00000000
+patch=0,EE,002D7F9C,word,10440002
+patch=1,EE,00408A50,word,43E00000

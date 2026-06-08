@@ -1,0 +1,8 @@
+gametitle=Tekken 5 (NTSC-J) SLPS-25510 991F1CB8 "Devil Within/Arcade" TK5DATA4.BIN
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa
+patch=1,EE,E002FFF0,extended,00100000
+patch=1,EE,2041ECB4,extended,3F400000
+patch=1,EE,202AD458,extended,3FDDA51A

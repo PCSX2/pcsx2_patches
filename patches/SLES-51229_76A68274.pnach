@@ -1,10 +1,9 @@
 gametitle=Virtua Cop - Elite Edition (E)(SLES-51229)
 
-description=Widescreen hack conversion
-author=Bigdemon
-
 [Widescreen 16:9]
 gsaspectratio=16:9
+author=Bigdemon
+description=Renders the game in 16:9 aspect ratio.
 
 //X-Fov
 //803f013c 00a08144 20ee8424
@@ -13,3 +12,12 @@ patch=1,EE,00112534,word,3c013f40//3c013f80
 //Render fix
 patch=1,EE,0011bbec,word,3c01c3cc //3c01c399 left
 patch=1,EE,0011bc08,word,3c0143cc //3c014399 right
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,001008A0,word,240500E0
+patch=0,EE,00114334,word,3C013F82
+patch=0,EE,00114700,word,3C013F82
+patch=0,EE,00114734,word,3C013F82
+patch=0,EE,00191700,word,14E3000D

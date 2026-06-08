@@ -4,3 +4,13 @@ gametitle=Gun (NTSC-U) SLUS-21139 4B80628D
 author=asasega
 description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable.
 patch=1,EE,0028ED08,word,1000000B
+
+[Remove Bloom]
+author=PeterDelta
+description=Removes the bloom effect.
+patch=1,EE,00C6DAB0,word,00000000
+
+[Remove Sky Filter]
+author=PeterDelta
+description=Removes the sky filter, making the game look more natural.
+patch=1,EE,0047AEC4,word,00000000

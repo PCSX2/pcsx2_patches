@@ -1,14 +1,14 @@
-gametitle=Spider-Man (PAL-S) SLES-50965 CCF57297
+gametitle=Spider-Man (PAL-S) (v2.01) SLES-50965 CCF57297
 
-//[Widescreen 16:9]
-//gsaspectratio=16:9
-//author=Arapapa
-//description=Widescreen Hack
-//Y-Fov
-//patch=1,EE,004d1554,word,3fe38e2a //3faaaaab
-//Zoom
-//patch=1,EE,002b5e64,word,3c013c28 //3c013c0e
-//Missing render fix
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta & Arapapa
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,004D1954,word,3FE38E2A
+patch=1,EE,002B5E64,word,3C013C28
+patch=1,EE,0036F980,word,3C01BFAB
+patch=1,EE,0036F98C,word,3C013FAB
+patch=1,EE,004783F0,word,14830018
 
 [NTSC Mode]
 author=PeterDelta

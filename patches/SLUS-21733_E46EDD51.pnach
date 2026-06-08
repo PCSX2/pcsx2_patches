@@ -3,6 +3,7 @@ gametitle=Sega Superstars Tennis (NTSC-U) SLUS-21733 E46EDD51
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Renders the game in 16:9 aspect ratio
-patch=1,EE,00234A0C,word,3C013FE3
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00234A0C,word,3C013FE3
+patch=0,EE,00234A10,word,34218E39
 patch=1,EE,003D75EC,word,00000001
