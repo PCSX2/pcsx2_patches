@@ -3,7 +3,7 @@ gametitle=Reservoir Dogs (NTSC-U) SLUS-21479 08C682C1
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Widescreen fix
+description=Corrects display cropping to 16:9.
 patch=1,EE,004F1BEC,word,00000001
 patch=1,EE,00397770,word,3C013F25
 patch=1,EE,00377030,word,3C013F25

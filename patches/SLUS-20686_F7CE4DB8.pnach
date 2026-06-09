@@ -1,0 +1,13 @@
+gametitle=Splashdown - Rides Gone Wild (NTSC-U) SLUS-20686 F7CE4DB8
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta & El_Patas
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0011701C,word,3C023CAB
+patch=0,EE,00117020,word,3442A21D
+patch=0,EE,00117030,word,3C023FAB
+patch=0,EE,001EB8BC,word,3C033F1E
+patch=0,EE,00246CC8,word,3C023F08
+patch=0,EE,00209684,word,3C023C3D
+patch=0,EE,001EB8B4,word,3C023C92

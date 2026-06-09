@@ -1,0 +1,17 @@
+gametitle=Spider-Man (PAL-E) (v1.1) SLES-50812 8251DBEC
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta & Arapapa
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,004D1554,word,3FE38E2A
+patch=1,EE,002B5E64,word,3C013C28
+patch=1,EE,0036F9B8,word,3C01BFAB
+patch=1,EE,0036F9C4,word,3C013FAB
+patch=1,EE,00479900,word,14830018
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=1,EE,004CCCA0,word,00000001
+patch=1,EE,004CCCA8,word,000001C0

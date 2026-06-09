@@ -1,4 +1,4 @@
-gametitle=Need for Speed ProStreet [SLUS-21658] (U)
+gametitle=Need for Speed ProStreet [SLUS-21658] (U) DD3CE71B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -10,4 +10,12 @@ patch=1,EE,20168A10,extended,24020001 // li v0, 1
 patch=1,EE,206828D8,extended,3F400000 // Horizontal: 0.75f
 patch=1,EE,206828DC,extended,3F8CCCCD // Vertical: 1.10f
 
+[Remove Brume]
+author=PeterDelta
+description=Removes background brume effect.
+patch=0,EE,00688BB8,word,00000000
 
+[Disable Speed Effect]
+author=PeterDelta
+description=Removes the speed effect in race.
+patch=0,EE,0044E6B8,word,14A0003C

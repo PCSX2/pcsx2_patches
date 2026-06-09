@@ -3,7 +3,7 @@ gametitle=Kingdom Hearts II (NTSC-U) SLUS-21005 DA0535FD
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht
-description=Renders the game in 16:9 aspect ratio
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,00106c70,word,3c013f4c // c480004c
 patch=1,EE,00106c88,word,3421cccc // 4600a7c6
 patch=1,EE,00106c8c,word,4481f800 // 00000000
@@ -33,7 +33,7 @@ patch=1,EE,001aae88,word,240a0190
 
 [Remove Blackbars]
 author=ElHecht
-description=Removes black bars in cutscenes
+description=Removes black bars in cutscenes.
 patch=1,EE,0014aaf0,word,24050000
 patch=1,EE,0014ab18,word,24050000
 patch=1,EE,0014ab40,word,24050000
@@ -48,7 +48,12 @@ patch=1,EE,00356F4C,extended,00000001
 patch=1,EE,20379178,extended,3F800000
 patch=1,EE,2037CE98,extended,3F800000
 
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect displayed in some cutscenes.
+patch=1,EE,00521140,extended,00
+
 [Subtitles off]
 author=ElHecht
-description=Disable subtitles during scenes
+description=Disable subtitles during scenes.
 patch=1,EE,002274cc,word,11e00019

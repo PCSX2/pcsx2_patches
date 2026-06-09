@@ -1,23 +1,9 @@
-gametitle=Gran Turismo 4 [SCES-51719] (PAL-M)
+gametitle=Gran Turismo 4 (PAL-M) SCES-51719 44A61C8F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=CRASHARKI & Aero_
-description=Run the game at Enhanced 16:9 Widescreen Aspect Ratio from the start.
-
-// Enable Widescreen from the start by CRASHARKI
-patch=1,EE,006184F0,byte,1 //0 Menu Option
-patch=1,EE,00A567D4,byte,1 //0
-patch=1,EE,D0A567EC,extended,436E2831 //Is the expected value
-patch=1,EE,00A567EC,word,438A05E3 //436E2831
-patch=1,EE,D0A567F0,extended,43898000 //Is the expected value
-patch=1,EE,00A567F0,word,43D48000 //43898000
-patch=1,EE,D0A567F4,extended,434D0000 //Is the expected value
-patch=1,EE,00A567F4,word,43700000 //434D0000
-patch=1,EE,D0A567F8,extended,3F7851EB //Is the expected value
-patch=1,EE,00A567F8,word,3F7AE147 //3F7851EB
-
-// Corrects Text Aspect Ratio for Widescreen by Aero_
+author=Aero_
+description=Corrects the text aspect ratio when 16:9 is selected.
 patch=1,EE,20492E08,extended,08125666 // j 00495998
 patch=1,EE,20495998,extended,3C090061 // lui t1,0x0061 : Widescreen Mode 1st-Half of Memory Address
 patch=1,EE,2049599C,extended,352984F0 // ori t1,0x84F0 : Widescreen Mode 2nd-Half of Memory Address
@@ -30,3 +16,85 @@ patch=1,EE,204959B4,extended,4481A000 // mtc1 at,f20
 patch=1,EE,204959B8,extended,4614D682 // mul.s f26, f26, f20
 patch=1,EE,204959BC,extended,08124B83 // j 00492E0C
 patch=1,EE,2044DF60,extended,00000000 // nop
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode when starting a race.
+patch=1,EE,E00B4600,extended,0062151C
+patch=1,EE,206184D0,extended,00000001
+patch=1,EE,206184D4,extended,00000003
+patch=1,EE,206184FC,extended,00000002
+patch=1,EE,20618500,extended,00000003
+patch=1,EE,20618504,extended,00000280
+patch=1,EE,20618508,extended,00000200
+patch=1,EE,0035812C,extended,3C
+patch=1,EE,00365B60,extended,A3
+patch=1,EE,003899B0,extended,A3
+patch=1,EE,00389EB8,extended,A3
+patch=1,EE,003C3BEC,extended,A3
+patch=1,EE,E00B0000,extended,00620240
+patch=1,EE,206184D0,extended,00000001
+patch=1,EE,206184D4,extended,00000003
+patch=1,EE,206184FC,extended,00000002
+patch=1,EE,20618500,extended,00000003
+patch=1,EE,20618504,extended,00000280
+patch=1,EE,20618508,extended,00000200
+patch=1,EE,0035812C,extended,3C
+patch=1,EE,00365B60,extended,A3
+patch=1,EE,003899B0,extended,A3
+patch=1,EE,00389EB8,extended,A3
+patch=1,EE,003C3BEC,extended,A3
+patch=1,EE,E00B0002,extended,00620240
+patch=1,EE,206184D0,extended,00000000
+patch=1,EE,206184D4,extended,00000050
+patch=1,EE,206184FC,extended,00000002
+patch=1,EE,20618500,extended,00000007
+patch=1,EE,20618504,extended,00000280
+patch=1,EE,20618508,extended,000001C0
+patch=1,EE,0035812C,extended,32
+patch=1,EE,00365B60,extended,88
+patch=1,EE,003899B0,extended,88
+patch=1,EE,00389EB8,extended,88
+patch=1,EE,003C3BEC,extended,88
+
+[1080i Mode]
+author=PeterDelta
+description=HDTV 1080i mode when starting a race.
+patch=1,EE,E00A4600,extended,0062151C
+patch=1,EE,206184D4,extended,00000003
+patch=1,EE,206184FC,extended,00000002
+patch=1,EE,20618500,extended,00000003
+patch=1,EE,20618504,extended,00000280
+patch=1,EE,20618508,extended,00000200
+patch=1,EE,0035812C,extended,3C
+patch=1,EE,00365B60,extended,A3
+patch=1,EE,003899B0,extended,A3
+patch=1,EE,00389EB8,extended,A3
+patch=1,EE,003C3BEC,extended,A3
+patch=1,EE,E00A0000,extended,00620240
+patch=1,EE,206184D4,extended,00000003
+patch=1,EE,206184FC,extended,00000002
+patch=1,EE,20618500,extended,00000003
+patch=1,EE,20618504,extended,00000280
+patch=1,EE,20618508,extended,00000200
+patch=1,EE,0035812C,extended,3C
+patch=1,EE,00365B60,extended,A3
+patch=1,EE,003899B0,extended,A3
+patch=1,EE,00389EB8,extended,A3
+patch=1,EE,003C3BEC,extended,A3
+patch=1,EE,E00A0002,extended,00620240
+patch=1,EE,206184D4,extended,00000051
+patch=1,EE,206184FC,extended,00000002
+patch=1,EE,20618500,extended,00000007
+patch=1,EE,20618504,extended,00000240
+patch=1,EE,20618508,extended,000003C0
+patch=1,EE,0035812C,extended,32
+patch=1,EE,00365B60,extended,88
+patch=1,EE,003899B0,extended,88
+patch=1,EE,00389EB8,extended,88
+patch=1,EE,003C3BEC,extended,88
+
+[Photo Mode]
+author=PeterDelta
+description=Unlocks FPS in Photo Session.
+patch=1,EE,006186E4,extended,01
