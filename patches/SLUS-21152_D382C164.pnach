@@ -3,4 +3,21 @@ gsaspectratio=16:9
 description=Shin Megami Tensei - Digital Devil Saga 2 NTSC-U-Widescreen Hack (16:9)
 patch=1,EE,2037F5E4,extended,3FC00000
 
+[No Interlacing]
+author=Altimor
+patch=1,EE,0032A408,word,00000000
+patch=1,EE,0032DF10,word,00000000
 
+[480p]
+author=Altimor
+patch=1,EE,00348C24,word,24110000
+patch=1,EE,00348C28,word,24120050
+patch=1,EE,00348C2C,word,24020001
+
+[No Motion Blur]
+Author=Sergx12
+patch=1,EE,203899ac,word,00000000
+
+[No Radial Blur]
+Author=Sergx12
+patch=1,EE,203899b0,word,00000000
