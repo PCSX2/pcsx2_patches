@@ -23,7 +23,7 @@ patch=1,EE,002C81DC,word,24020001
 
 [No Post Process Blur]
 author=obtained from the pcsx2 wiki
-comment=skips drawing of accumulation framebuffer (avoids 3-frame ghosting, slightly darkens 3D scenes)
+description=skips drawing of accumulation framebuffer (avoids 3-frame ghosting, slightly darkens 3D scenes)
 patch=0,EE,0012AC08,word,03E00008
 
 //Optional shadow alpha hack
