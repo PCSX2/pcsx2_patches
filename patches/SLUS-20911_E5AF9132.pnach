@@ -1,0 +1,27 @@
+gametitle=Shin Megami Tensei - Nocturne HARDTYPE (SLUS-20911) (CRC-E5AF9132)
+
+[No Interlacing]
+author=Altimor
+gsinterlacemode=1
+patch=1,EE,002AA1B4,word,00000000
+patch=1,EE,002ADBE0,word,00000000
+
+[No Motion Blur]
+author=Sergx12
+patch=1,EE,202FC0E4,extended,00000000
+
+[480p]
+Author=Altimor
+patch=1,EE,002C81D4,word,24110000
+patch=1,EE,002C81D8,word,24120050
+patch=1,EE,002C81DC,word,24020001
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+description=Widescreen Hack.
+patch=1,EE,202F59B4,word,3FC6C6E7
+
+[No Post Process Blur]
+author=obtained from the pcsx2 wiki
+comment=skips drawing of accumulation framebuffer (avoids 3-frame ghosting, slightly darkens 3D scenes)
+patch=0,EE,0012AC08,word,03E00008
