@@ -1,4 +1,13 @@
-gametitle= God of War (NTSC-J) (SLPM-67010) CA052D22
+gametitle=God of War (NTSC-J) (SLPM-67010) CA052D22
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Enable native widescreen.
+patch=1,EE,0029DF80,extended,00000001 //enable widescreen
+patch=1,EE,202FC3B0,extended,3FE38E39
+patch=1,EE,202FC3E8,extended,3FE38E39
+patch=1,EE,2032DD30,extended,3FE38E39
 
 [Skip Cutscenes]
 author=Ezedequias
