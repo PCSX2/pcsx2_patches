@@ -1,0 +1,11 @@
+gametitle=NBA 2K10 (PAL-M) SLES-55576 2389E416 FRENCH
+
+[50/60 FPS]
+author=PeterDelta
+description=Unlocks FPS in all modes.
+patch=1,EE,00B1C84C,word,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,004CF858,word,240501C0

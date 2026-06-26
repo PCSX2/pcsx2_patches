@@ -1,0 +1,30 @@
+gametitle=NBA Live 07 (PAL-F) SLES-54250 44D1E823
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,007C9738,word,3FE38E39
+patch=0,EE,007C9768,word,3FE38E39
+patch=0,EE,007C9BC0,word,3FE38E39
+patch=0,EE,007CA654,word,3FE38E39
+patch=0,EE,007AF518,word,3F638E39
+patch=0,EE,007C9730,word,3F638E39
+patch=0,EE,007C9760,word,3F638E39
+patch=0,EE,00414A8C,word,3C01BF40
+patch=0,EE,00414A20,word,3C013FC0
+patch=0,EE,0046DA40,word,3C01BF40
+patch=1,EE,007EF37C,extended,00
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=1,EE,0085FC5C,extended,00
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,003E64E4,word,3C050000
+patch=0,EE,003E64EC,word,3C060050
+patch=0,EE,003E64F4,word,3C070001

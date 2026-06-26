@@ -1,0 +1,11 @@
+gametitle=NBA 2K7 (PAL-M) SLES-54210 5102ABE5 GERMAN
+
+[50/60 FPS]
+author=PeterDelta
+description=Unlocks FPS in all modes.
+patch=1,EE,00AA3E2C,word,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,00435848,word,240501C0

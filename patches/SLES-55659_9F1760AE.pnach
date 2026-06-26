@@ -1,0 +1,11 @@
+gametitle=NBA 2K12 (PAL-M) SLES-55659 9F1760AE SPANISH
+
+[50/60 FPS]
+author=PeterDelta
+description=Unlocks FPS in all modes.
+patch=1,EE,00B281AC,word,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,004D80E0,word,240501C0

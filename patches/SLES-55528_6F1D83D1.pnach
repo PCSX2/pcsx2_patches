@@ -1,0 +1,8 @@
+gametitle=Tiger Woods PGA Tour 10 (PAL-E) SLES-55528 6F1D83D1
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,0028C074,word,3C013F40
+patch=1,EE,008BB324,word,3F000000

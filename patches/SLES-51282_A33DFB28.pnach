@@ -1,0 +1,9 @@
+gametitle=Tiger Woods PGA Tour 2003 (PAL-E) SLES-51282 A33DFB28
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,0012A0C4,word,3C043F40
+patch=1,EE,005784A8,word,3F800000
+patch=1,EE,005784AC,word,3F800000

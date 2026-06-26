@@ -1,13 +1,22 @@
-gametitle=NBA Live 07 (K)(SLKA-25395)
+gametitle=NBA Live 07 (NTSC-K) SLKA-25395 600A44DC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,007C96C0,word,3FE38E39
+patch=0,EE,007C96F0,word,3FE38E39
+patch=0,EE,007C9B48,word,3FE38E39
+patch=0,EE,007CA5DC,word,3FE38E39
+patch=0,EE,007AF498,word,3F638E39
+patch=0,EE,007C96B8,word,3F638E39
+patch=0,EE,007C96E8,word,3F638E39
+patch=0,EE,004149FC,word,3C01BF40
+patch=0,EE,00414990,word,3C013FC0
+patch=0,EE,0046D9B0,word,3C01BF40
+patch=1,EE,007EF2FC,extended,00
 
-//Widescreen hack 16:9
-
-//X-Fov
-//003f013c 00088144 1800028e
-patch=1,EE,004143d4,word,3c013ec0 //3c013f00
-
-
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=1,EE,0085FC5C,extended,00

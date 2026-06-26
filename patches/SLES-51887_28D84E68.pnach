@@ -1,0 +1,7 @@
+gametitle=Tiger Woods PGA Tour 2004 (PAL-E) SLES-51887 28D84E68
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0012B8FC,word,3C023F40

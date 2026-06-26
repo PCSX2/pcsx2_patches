@@ -1,0 +1,22 @@
+gametitle=NBA Live 07 (NTSC-J) SLPM-66589 EAB205BC
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,007C8140,word,3FE38E39
+patch=0,EE,007C8170,word,3FE38E39
+patch=0,EE,007C85C8,word,3FE38E39
+patch=0,EE,007C905C,word,3FE38E39
+patch=0,EE,007ADF48,word,3F638E39
+patch=0,EE,007C8138,word,3F638E39
+patch=0,EE,007C8168,word,3F638E39
+patch=0,EE,0041349C,word,3C01BF40
+patch=0,EE,00413430,word,3C013FC0
+patch=0,EE,0046C450,word,3C01BF40
+patch=1,EE,007EDD7C,extended,00
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=1,EE,0085E85C,extended,00
