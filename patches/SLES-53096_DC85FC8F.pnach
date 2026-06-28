@@ -12,6 +12,12 @@ patch=1,EE,00424484,word,4481f000 //00000000
 patch=1,EE,00424488,word,460a0843 //00000000
 patch=1,EE,0042448c,word,461e0842 //460a0843
 
+[50 FPS]
+author=Wormi
+description=Force the game to run at 50 FPS
+patch=0,EE,003B2550,byte,14 // Halve the game speed
+patch=1,EE,006F7148,word,00000001 // Force the game to render every frame
+
 [Remove Blackbars]
 author=Arapapa
 description=Removes black bars in cutscenes
