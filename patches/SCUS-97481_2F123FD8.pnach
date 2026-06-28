@@ -1,4 +1,4 @@
-gametitle=God of War 2 (SCUS-97481)
+gametitle=God of War 2 SCUS-97481_2F123FD8
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -10,3 +10,13 @@ patch=1,EE,00234A48,word,46000406
 author=Ezedequias
 comment=With Any Action Button
 patch=1,EE,202D8194,byte,01
+
+
+[High-Res Mode]
+author=memory_fallen
+description=Enables hidden 640x448 mode at startup.
+patch=0,EE,0025A258,word,00000000
+patch=0,EE,0025A260,word,00000000
+patch=0,EE,0025A268,word,00000000
+patch=0,EE,0025A270,word,00000000
+patch=0,EE,0025A278,word,00000000
