@@ -1,11 +1,7 @@
-gametitle=Call of Duty - Finest Hour (NTSC-J)(SLPM-66159)
+gametitle=Call of Duty: Finest Hour (NTSC-J) (SLPM-66159)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000 (NTSC-J by Arapapa)
-
-//Widescreen hack 16:9
-
+author=nemesis2000; ported by Arapapa
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,0024c52c,word,00000000 //10400007
-
-
