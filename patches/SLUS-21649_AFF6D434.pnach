@@ -1,0 +1,29 @@
+gametitle=NBA Live 08 (NTSC-U) SLUS-21649 AFF6D434
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,010A202E,extended,00
+patch=1,EE,00951DD0,extended,00
+patch=0,EE,003E149C,word,3C013FE3
+patch=0,EE,003E14A0,word,34218E39
+patch=0,EE,003E65CC,word,3C013FE3
+patch=0,EE,003E65D0,word,34218E39
+patch=0,EE,007167E4,word,3C013FE3
+patch=0,EE,007167E8,word,34218E39
+patch=0,EE,003E1398,word,3C013F63
+patch=0,EE,003E139C,word,34218E39
+patch=0,EE,003E6504,word,3C013F63
+patch=0,EE,003E6508,word,34218E39
+patch=0,EE,0071F900,word,3C013F63
+patch=0,EE,0071F904,word,34218E39
+patch=0,EE,004F9844,word,3C01BF40
+patch=0,EE,004F97D8,word,3C013FC0
+patch=0,EE,00415578,word,3C014040
+patch=0,EE,00562D60,word,3C01BF40
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=1,EE,009B705C,extended,00

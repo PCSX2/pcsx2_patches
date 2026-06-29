@@ -1,0 +1,6 @@
+gametitle=NBA 2K11 (NTSC-U) SLUS-21936 D9EF78F2
+
+[60 FPS]
+author=PeterDelta
+description=Unlocks FPS in all modes.
+patch=1,EE,00B209BC,word,00000001

@@ -1,15 +1,9 @@
-gametitle=Klonoa 2: Lunatea's Veil PAL (SCES-50354)
+gametitle=Klonoa 2 - Lunatea's Veil (PAL-M) SCES-50354 7EBEEBBD
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht
-
-//50hz mode
-patch=1,EE,e0013f80,extended,0018bc94 // check 2018bc94 matches value (3c01)3f80
-patch=1,EE,2018bc94,extended,3c013f40 // 3c013f80 hor fov 50hz
-
-//60hz mode
-patch=1,EE,e0013f80,extended,0018b7fc // check 2018b7fc matches value (3c01)3f80
-patch=1,EE,2018b7fc,extended,3c013f40 // 3c013f80 hor fov 60hz
-
-
+author=ElHecht & PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,10104B98,extended,4560
+patch=0,EE,0018BC94,extended,40
+patch=0,EE,002FC7BC,extended,40

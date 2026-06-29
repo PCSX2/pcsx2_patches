@@ -1,29 +1,31 @@
-gametitle=The Simpsons - Hit & Run (NTSC-U)
+gametitle=The Simpsons - Hit & Run (NTSC-U) SLUS-20624 FC99EC8C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=ElHecht & PeterDelta
-description=Patches the game to run at 16:9 Widescreen Aspect Ratio.
-// 16:9 ver- by ElHecht
-patch=1,EE,00138a88,word,00000000 // 10400005 Interiors and fixed camera angles
-patch=1,EE,0014b360,word,00000000 // 10400004 Gameplay Height
-patch=1,EE,0014b364,word,00000000 // 10400004 ???
-patch=1,EE,002a0b38,word,00000000 // 10400004 Multiplayer Height
-//patch=1,EE,0031c888,word,00000000 // 10400004 3D HUD (it becomes misaligned and goes off the screen)
-patch=1,EE,0031d674,word,00000000 // 10400004 Main Menu
-// Zoom values by PeterDelta
-patch=0,EE,001ED69C,word,3C013F00 //3C013E80
-patch=0,EE,0031C9EC,word,3C013F00 //3C013E80
-patch=0,EE,0031C990,word,3C013F40 //3C013F80
-patch=0,EE,0032B5D4,word,3C013F88 //3C013F80
-patch=0,EE,00354208,word,3C013F92 //3C013F80
-patch=0,EE,0037E9DC,word,3C013F1D //3C013F00
-patch=0,EE,00416D50,word,3C01BFC7 //3C01BF80
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00138990,word,3C013FE3
+patch=0,EE,00138994,word,34218E39
+patch=0,EE,00142EC8,word,3C013FE3
+patch=0,EE,00142ECC,word,34218E39
+patch=0,EE,0014B32C,word,3C013FE3
+patch=0,EE,0014B330,word,34218E39
+patch=0,EE,002A0B10,word,3C013FE3
+patch=0,EE,002A0B14,word,34218E39
+patch=0,EE,001ED69C,word,3C013F00
+patch=0,EE,0031C9EC,word,3C013F00
+patch=0,EE,0031C990,word,3C013F40
+patch=0,EE,0032B5D4,word,3C013F88
+patch=0,EE,00354208,word,3C013F92
+patch=0,EE,0037E9DC,word,3C013F1D
+patch=0,EE,00416D50,word,3C01BFC7
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=0,EE,0042B584,word,00000000
 
 [480p Mode]
-gsinterlacemode=1
-author=PeterDelta; ported by CRASHARKI
-description=SDTV 480p mode at start. Might need EE Overclock (130%)
-patch=1,EE,00404ACC,word,24110000 // 00058C03
-patch=1,EE,00404AD0,word,24120050 // 00069403
-patch=1,EE,00404ADC,word,24130001 // 00079C03
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=1,EE,0064F2D0,word,00000001

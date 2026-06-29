@@ -3,13 +3,13 @@ gametitle=X-Men - The Official Game PAL-M SLES-54066 DF217C0B
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Widescreen fix
+description=Corrects display cropping to 16:9.
 patch=1,EE,004A3C50,extended,00000001
 patch=1,EE,20A0FCF0,extended,3F400000
 
 [Remove Blackbars]
 author=PeterDelta
-description=Removes black bars in cutscenes
+description=Removes black bars in cutscenes.
 patch=1,EE,00B0B198,extended,00000000
 patch=1,EE,00B0B1D8,extended,00000000
 

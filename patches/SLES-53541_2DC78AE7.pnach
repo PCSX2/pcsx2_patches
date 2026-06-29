@@ -1,0 +1,7 @@
+gametitle=Tiger Woods PGA Tour 06 (PAL-M4) SLES-53541 2DC78AE7
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,002E79B4,word,3C013F40

@@ -1,13 +1,24 @@
-gametitle=NBA Live 06 (U)(SLUS-21279)
+gametitle=NBA Live 06 (NTSC-U) SLUS-21279 10118EC4
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,E001DB6E,extended,00908028
+patch=1,EE,20908028,extended,3FE38E39
+patch=0,EE,00869E14,word,3FE38E39
+patch=0,EE,00869E1C,word,3FE38E39
+patch=0,EE,0086A0CC,word,3FE38E39
+patch=0,EE,0086A194,word,3FE38E39
+patch=0,EE,0085C3B0,word,3F638E39
+patch=0,EE,008696E0,word,3F638E39
+patch=0,EE,00869E10,word,3F638E39
+patch=0,EE,00869E18,word,3F638E39
+patch=0,EE,0059C27C,word,3C01BF40
+patch=0,EE,0059C210,word,3C013FC0
+patch=0,EE,0062F2F0,word,3C01BF40
 
-//Widescreen hack 16:9
-
-//X-Fov
-//003f013c 00088144 1800028e
-patch=1,EE,0059bc54,word,3c013ec0 //3c013f00
-
-
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=1,EE,00917C5C,extended,00

@@ -2,7 +2,7 @@ gametitle=Kingdom Hearts: Final Mix
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen patch
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,00110644,word,3c0143d6 //render fix
 patch=1,EE,00110b30,word,3c013f19 //hor value first half
 patch=1,EE,00110898,word,3421999a //hor value second half
@@ -136,3 +136,8 @@ patch=1,EE,E0011008,extended,002C5958
 patch=1,EE,002BBE0C,extended,00000001
 patch=1,EE,E0010009,extended,002C5958
 patch=1,EE,002BBE0C,extended,00000001
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect displayed in some cutscenes.
+patch=1,EE,002BBE04,extended,00

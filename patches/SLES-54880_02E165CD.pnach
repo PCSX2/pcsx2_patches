@@ -1,0 +1,11 @@
+gametitle=NBA 2K8 (PAL-M) SLES-54880 02E165CD SPANISH
+
+[50/60 FPS]
+author=PeterDelta
+description=Unlocks FPS in all modes.
+patch=1,EE,00AEE88C,word,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,004B43C8,word,240501C0

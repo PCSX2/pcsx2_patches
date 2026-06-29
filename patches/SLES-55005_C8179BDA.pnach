@@ -1,0 +1,24 @@
+gametitle=Need for Speed - ProStreet (PAL-M8) SLES-55005 C8179BDA
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Xan1242 & Aero_
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,00168A10,word,24020001
+patch=1,EE,006829D8,word,3F400000
+patch=1,EE,006829DC,word,3F8CCCCD
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,0041903C,word,0000102D
+
+[Remove Brume]
+author=PeterDelta
+description=Removes background brume effect.
+patch=0,EE,00688FB8,word,00000000
+
+[Disable Speed Effect]
+author=PeterDelta
+description=Removes the speed effect in race.
+patch=0,EE,0044E878,word,14A0003C

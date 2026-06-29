@@ -1,0 +1,24 @@
+gametitle=NBA Live 06 (NTSC-A) SLAJ-25069 AA8CA8A6
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,E001DB6E,extended,0080FC28
+patch=1,EE,2080FC28,extended,3FE38E39
+patch=0,EE,0077C380,word,3FE38E39
+patch=0,EE,0077C388,word,3FE38E39
+patch=0,EE,0077C638,word,3FE38E39
+patch=0,EE,0077C700,word,3FE38E39
+patch=0,EE,00764A70,word,3F638E39
+patch=0,EE,0077BCDC,word,3F638E39
+patch=0,EE,0077C37C,word,3F638E39
+patch=0,EE,0077C384,word,3F638E39
+patch=0,EE,0049C48C,word,3C01BF40
+patch=0,EE,0049C420,word,3C013FC0
+patch=0,EE,0051E048,word,3C01BF40
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=1,EE,0081F85C,extended,00

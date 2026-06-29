@@ -3,7 +3,7 @@ gametitle=Crónicas de Narnia, Las - El León, La Bruja y El Armario (PAL-S) SLE
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Widescreen fix
+description=Corrects display cropping to 16:9.
 patch=1,EE,006337A8,word,00010100
 patch=1,EE,006337C4,word,00010100
 patch=1,EE,0033B0C4,word,3C013F40 //3C013F80 zoom fix

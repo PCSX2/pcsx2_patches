@@ -1,0 +1,11 @@
+gametitle=NBA 2K11 (PAL-M) SLES-55645 F1BBBD32 GERMAN
+
+[50/60 FPS]
+author=PeterDelta
+description=Unlocks FPS in all modes.
+patch=1,EE,00B24CFC,word,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,004D0F28,word,240501C0

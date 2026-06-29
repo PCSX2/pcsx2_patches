@@ -1,0 +1,15 @@
+gametitle=NBA Live 2002 (PAL-G) SLES-50536 78A4222C
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00194AF8,word,3C013FE3
+patch=0,EE,00194AFC,word,34218E39
+patch=0,EE,00194F88,word,3C013F80
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,0012A808,word,2403003C
+patch=0,EE,003535FC,word,2403003C

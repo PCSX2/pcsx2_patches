@@ -1,9 +1,8 @@
-gametitle=Underworld - The Eternal War SLES_521.08
+gametitle=Underworld - The Eternal War (PAL-E) SLES-52108 590D63A9
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hack
-patch=1,EE,0018877c,word,3c033f40
-patch=1,EE,0018890c,word,3c033f40
-
-
+author=sergx12
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0018877C,word,3C033F40
+patch=0,EE,0018890C,word,3C033F40
