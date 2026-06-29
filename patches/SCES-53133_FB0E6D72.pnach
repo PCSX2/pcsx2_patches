@@ -1,9 +1,9 @@
-gametitle=God of War (PAL-M) [SCES_531.33] FB0E6D72
+gametitle=God of War (PAL-M) (SCES-53133) FB0E6D72
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Some Chump and PeterDelta
-description=Widescreen fix
+description=Enable enhanced native widescreen. (Original widescreen uses vertical cropping; Enhanced expands the horizontal view.)
 //Ported from SCUS-97399 by nemesis2000
 patch=1,EE,00169268,word,3c013f11
 patch=1,EE,0016926c,word,342135fc
@@ -133,9 +133,11 @@ patch=1,EE,00169458,word,7ba20060
 patch=1,EE,0016945c,word,7c820030
 patch=1,EE,00169460,word,03e00008
 patch=1,EE,00169464,word,27bd0090
+
 patch=1,EE,E0020001,extended,0029DA58 //Fix title flames by PeterDelta
 patch=1,EE,E0010001,extended,0029DAC8
 patch=1,EE,001692d0,extended,3c013f10
+
 patch=1,EE,0029DAC8,extended,00000001 //enable widescreen
 patch=1,EE,202FF9B0,extended,3FE38E39
 patch=1,EE,202FF9E8,extended,3FE38E39
@@ -149,5 +151,5 @@ patch=1,EE,20331330,extended,3FE38E39
 
 [Skip Cutscenes]
 author=Ezedequias
-description=With Any Action button
+description=With Any Action Button
 patch=1,EE,0029D47C,byte,01

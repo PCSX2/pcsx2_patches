@@ -2,8 +2,8 @@ gametitle=God of War (NTSC-U) (SCUS-97399) D6385328
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000
-description=Widescreen fix
+author=nemesis2000 & CRASHARKI
+description=Enable enhanced native widescreen. (Original widescreen uses vertical cropping; Enhanced expands the horizontal view.)
 patch=1,EE,00169250,word,3c013f11
 patch=1,EE,00169254,word,342135fc
 patch=1,EE,00169258,word,44812000
@@ -148,6 +148,11 @@ patch=1,EE,201692b8,extended,3c013f40
 patch=1,EE,e0020001,extended,0029cc50
 patch=1,EE,e0010000,extended,0029cc90
 patch=1,EE,201692b8,extended,3c013f40
+
+patch=1,EE,0029CC90,extended,00000001 //enable widescreen
+patch=1,EE,202FD930,extended,3FE38E39
+patch=1,EE,202FD968,extended,3FE38E39
+patch=1,EE,2032F1B0,extended,3FE38E39
 
 [Skip Cutscenes]
 author=Ezedequias

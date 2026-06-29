@@ -1,4 +1,17 @@
-gametitle= God of War 2 (NTSC-J) (SLPM-67013) E96E55BD
+gametitle=God of War 2 - NTSC-J (SLPM-67013)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Enable enhanced native widescreen. (Original widescreen uses vertical cropping; Enhanced expands the horizontal view.)
+//enable native widescreen
+patch=1,EE,002DA2F0,byte,01
+patch=1,EE,00330E80,word,3FE38E39
+patch=1,EE,00330EB8,word,3FE38E39
+patch=1,EE,00367210,word,3FE38E39
+//Zoom value for Hor+ by nemesis2000; ported by CRASHARKI
+patch=1,EE,00234810,word,46000406
+
 
 [Skip Cutscenes]
 author=Ezedequias
