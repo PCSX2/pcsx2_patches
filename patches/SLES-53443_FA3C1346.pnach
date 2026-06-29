@@ -1,9 +1,16 @@
-gametitle=Warriors, The (PAL-M) SLES-53443 FA3C1346
+gametitle=The Warriors (PAL-M) (SLES-53443)
 
-[50/60 FPS]
-author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,00596D70,byte,01
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=CRASHARKI
+description=Enable native widescreen.
+patch=1,EE,007AA05C,byte,01 //00
+
+// Apparently doesn't achieve real 50/60 FPS
+//[50/60 FPS]
+//author=PeterDelta
+//description=Might need EE Overclock at 130%.
+//patch=1,EE,00596D70,byte,01
 
 [480p Mode]
 gsinterlacemode=1
