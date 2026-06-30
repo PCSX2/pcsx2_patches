@@ -15,7 +15,8 @@ patch=1,EE,0042448c,word,461e0842 //460a0843
 [50 FPS]
 author=Wormi
 description=Force the game to run at 50 FPS. 180% EE overclock required.
-patch=0,EE,003B2554,word,3C830001 // lui v1,0x0001
+patch=0,EE,003B2550,byte,14 // Halve the game speed
+patch=1,EE,006F7148,word,00000001 // Force the game to render every frame
 
 [Remove Blackbars]
 author=Arapapa
