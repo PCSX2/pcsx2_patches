@@ -2,7 +2,7 @@ gametitle=The Bard's Tale * PAL-M8 * SLES-53154 * 26420115
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000, El_Patas & Arapapa
+author=nemesis2000, El_Patas & arapapa
 // Widescreen hack by nemesis2000 - ported by El_Patas.
 // Gameplay
 patch=1,EE,0011C0D4,word,3C023F40 // 3C023F80 - X-FoV
@@ -12,12 +12,12 @@ patch=1,EE,00144174,word,3C033F40 // 3C033F80
 patch=1,EE,001441C4,word,3C023F40 // 3C023F80
 // Render fix
 patch=1,EE,0013D9D0,word,3C023F2B // 3C023F00
-// Font fix - by Arapapa
+// Font fix - by arapapa
 patch=1,EE,0010EC74,word,3C0341C0 // 3C034200
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
-author=nemesis2000, El_Patas & Arapapa, converted by pgert
+author=nemesis2000, El_Patas & arapapa, converted by pgert
 patch=1,EE,0011C0D4,word,3C023F55
 patch=1,EE,0012E6EC,word,3C033F55
 patch=1,EE,001440F8,word,3C053F55
@@ -26,9 +26,9 @@ patch=1,EE,001441C4,word,3C023F55
 patch=1,EE,0013D9D0,word,3C023F1A
 patch=1,EE,0010EC74,word,3C0341D5
 
-[Widescreen/15:10]
+[Widescreen 15:10]
 gsaspectratio=Stretch
-author=nemesis2000, El_Patas & Arapapa, converted by pgert
+author=nemesis2000, El_Patas & arapapa, converted by pgert
 patch=1,EE,0011C0D4,word,3C023F64
 patch=1,EE,0012E6EC,word,3C033F64
 patch=1,EE,001440F8,word,3C053F64

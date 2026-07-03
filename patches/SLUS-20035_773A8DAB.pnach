@@ -28,7 +28,7 @@ patch=1,EE,00320fa8,word,3fe3d70a
 patch=1,EE,00320fcc,word,3fe3d70a
 // ==========
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
 author=nemesis2000 & No.47, converted by pgert
 // ==========
@@ -51,7 +51,7 @@ patch=1,EE,00320fa8,word,3FCC49BB
 patch=1,EE,00320fcc,word,3FCC49BB
 // ==========
 
-[Widescreen/15:10]
+[Widescreen 15:10]
 gsaspectratio=Stretch
 author=nemesis2000 & No.47, converted by pgert
 // ==========

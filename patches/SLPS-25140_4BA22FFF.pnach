@@ -7,8 +7,8 @@ gametitle=Baldur's Gate: Dark Alliance * NTSC-J * SLPS-25140 * 4BA22FFF
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000, No.47 & Arapapa
-// Widescreen hack by nemesis2000 - ported by Arapapa.
+author=nemesis2000, No.47 & arapapa
+// Widescreen hack by nemesis2000 - ported by arapapa.
 // nemesis2000's search values did not apply to NTSC-J.
 // ==========
 // Y-FoV-  eeeeee3e 00ff7445 00803b45 (5 Times)
@@ -25,14 +25,14 @@ patch=1,EE,001494dc,word,3c014440
 patch=1,EE,0014f668,word,3c014440
 patch=1,EE,001fab70,word,3c014440
 // ==========
-// Render fix value by No.47 (703daa3f 2 times) - ported by Arapapa.
+// Render fix value by No.47 (703daa3f 2 times) - ported by arapapa.
 patch=1,EE,002c4238,word,3fe3d70a // 3faa3d70 (NTSC-U 3faa3d71)
 patch=1,EE,002c4298,word,3fe3d70a
 // ==========
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
-author=nemesis2000, No.47 & Arapapa, converted by pgert
+author=nemesis2000, No.47 & arapapa, converted by pgert
 // ==========
 patch=1,EE,002c418c,word,3F0F5C2A
 patch=1,EE,002c41d4,word,3F0F5C2A
@@ -50,9 +50,9 @@ patch=1,EE,002c4238,word,3FCC49BB
 patch=1,EE,002c4298,word,3FCC49BB
 // ==========
 
-[Widescreen/15:10]
+[Widescreen 15:10]
 gsaspectratio=Stretch
-author=nemesis2000, No.47 & Arapapa, converted by pgert
+author=nemesis2000, No.47 & arapapa, converted by pgert
 // ==========
 patch=1,EE,002c418c,word,3F066665
 patch=1,EE,002c41d4,word,3F066665

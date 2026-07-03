@@ -1,9 +1,10 @@
-gametitle=Project Zero II: Crimson Butterfly (Undub v1.0) * SLES-52384 * PAL-M5 * 9D8206D3
+gametitle=Project Zero II: Crimson Butterfly [UnDub v1.0] * SLES-52384 * PAL-M5 * 9D8206D3
 // same serial-code as 9D87F3AF - the regular version.
 // Fatal Frame II: Crimson Butterfly
+// UNDUB patch: https://archive.org/details/project_zero_2_ps2_undub_patch
 
 // This game might have some problems with the Cinematics,
-// regardless of resolution or patches, however this pnach is not the cause of that.
+//  regardless of resolution or patches, however this pnach is not the cause of that.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -46,7 +47,7 @@ patch=1,EE,00344BD8,word,0000006A // 00000000 - x-pos = (640-640*ratio)/(2*ratio
 
 // ==========
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
 author=nemesis2000 & pgert
 
@@ -87,7 +88,7 @@ patch=1,EE,00344BD8,word,00000040 //
 
 // ==========
 
-[Widescreen/15:10]
+[Widescreen 15:10]
 gsaspectratio=Stretch
 author=nemesis2000 & pgert
 

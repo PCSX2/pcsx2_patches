@@ -6,7 +6,7 @@ gsaspectratio=16:9
 author=ElHecht
 description=Renders the game in 16:9 aspect ratio
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
 author=ElHecht
 description=Renders the game in 16:10 aspect ratio

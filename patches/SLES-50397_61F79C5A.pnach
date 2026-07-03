@@ -14,7 +14,7 @@ patch=1,EE,00449fb4,word,03e00008 // 00000000
 patch=1,EE,0013e6fc,word,3c0140c0 // 3c013f99 renderfix
 patch=1,EE,001a6b60,word,3c013f2b // 3c013f00 renderfix
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
 author=ElHecht
 description=Renders the game in 16:10 aspect ratio
