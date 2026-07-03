@@ -34,7 +34,7 @@ patch=1,EE,002C909C,word,3C013FE2 // 3C013FAA
 patch=1,EE,002C90A0,word,3421FC96 // 34213D71
 // ==========
 
-[Widescreen/16:10]
+[Widescreen 16:10]
 gsaspectratio=Stretch
 author=El_Patas, converted by pgert
 // ==========
@@ -58,7 +58,7 @@ patch=1,EE,002C909C,word,3C013FCC
 patch=1,EE,002C90A0,word,342149BB
 // ==========
 
-[Widescreen/15:10]
+[Widescreen 15:10]
 gsaspectratio=Stretch
 author=El_Patas, converted by pgert
 // ==========
