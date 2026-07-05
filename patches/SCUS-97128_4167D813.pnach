@@ -175,3 +175,9 @@ description=Might need EE overclocking to be stable (130%).
 patch=1,EE,001D78F0,extended,28420002
 patch=1,EE,E0010001,extended,004DC8A0
 patch=1,EE,001D78F0,extended,28420004
+
+[HUD White Line Fix]
+author=mrnecromancer247
+description=Removes white pixel lines around the health, arrows and mana HUD elements when using upscaled rendering.
+patch=1,EE,001C2214,word,3C013F7F
+patch=1,EE,001C222C,word,3C013E10
