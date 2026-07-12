@@ -1,6 +1,6 @@
 name: Pack patches
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   pack:
@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Create archives
         run: |
@@ -20,24 +20,3 @@ jobs:
           name: cheats
           path: ./patches.zip
           if-no-files-found: error
-
-  release:
-    needs: [pack]
-    name: Publish release
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-      - name: Download artifacts
-        uses: actions/download-artifact@v8
-      - name: Create a new release
-        env:
-            GH_TOKEN: ${{ github.token }}
-        run: |
-          git push origin --delete latest || true
-          gh release delete latest --yes || true
-          git tag latest
-          git push origin tag latest
-          gh release create latest --latest --title "Latest Build"
-          gh release upload latest ./patches.zip
