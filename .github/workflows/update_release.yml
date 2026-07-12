@@ -1,0 +1,62 @@
+name: Release Patches
+
+on:
+  push:
+    branches:
+      - main
+
+# This ensures that only one workflow at a time is going to be attempting to
+# mutate the tag / etc
+#
+# It will also cancel in progress runs (so if two PRs quickly merge, only
+# the most recent will run)
+concurrency:
+  group: release-updating
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publish release
+    if: github.repository == 'PCSX2/pcsx2_patches'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Create archives
+        run: |
+          7z a -r patches.zip ./patches/*
+
+      - name: Update tag
+        env:
+            GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "Pushing latest changes"
+          git push origin --delete latest || true
+          echo "Removing existing tag"
+          gh release delete latest --yes || true
+          echo "Creating tag"
+          git tag latest
+          echo "Pushing tag"
+          git push origin tag latest
+          
+      - name: Create a new release
+        env:
+            GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "Creating release"
+          for i in {1..10}; do
+              if gh release create latest \
+                  --latest \
+                  --title "Latest Build"; then
+                  break
+              fi
+
+              echo "Retrying release creation..."
+              sleep 3
+          done
+          echo "Uploading asset"
+          gh release upload latest ./patches.zip
