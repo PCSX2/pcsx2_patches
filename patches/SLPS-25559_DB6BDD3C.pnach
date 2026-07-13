@@ -1,0 +1,11 @@
+gametitle=Samurai Spirits: Tenkaichi Kenkakuden (NTSC-J) (SLPS-25559)
+
+[240p Progressive Output]
+author=felixthecat1970
+description=Forces 640x224 progressive output; menus and backgrounds originally use a 640x448 framebuffer, so they are downscaled
+patch=0,EE,20303264,extended,34021400
+patch=0,EE,2030164C,extended,3C050000
+patch=0,EE,20301654,extended,3C060050
+patch=0,EE,2030165C,extended,3C070001
+patch=0,EE,20302D20,extended,03E00008
+patch=0,EE,20302D24,extended,00000000

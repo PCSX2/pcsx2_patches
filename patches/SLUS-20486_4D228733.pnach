@@ -1,4 +1,15 @@
-gametitle=Marvel vs. Capcom 2: New Age of Heroes (SLUS204.86;1)
+gametitle=Marvel vs. Capcom 2: New Age of Heroes (NTSC-U) (SLUS-20486)
+
+[Native 480p / Full Frame Mode]
+author=felixthecat1970
+description=Enables the native 480p full-frame output path at 640x448; the doubled vertical resolution causes dithering to fit within PS2 VRAM
+patch=0,EE,003EC218,extended,24020002
+patch=0,EE,203EC21C,extended,AC22BC00
+patch=0,EE,203EC22C,extended,AC20BC1C
+patch=0,EE,203EC754,extended,0000282D
+patch=0,EE,003EC758,extended,24060050
+patch=0,EE,203EC760,extended,24070001
+patch=0,EE,203ECB7C,extended,1040FFF6
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -10,12 +21,3 @@ patch=1,EE,003DDB14,word,3C033F40
 patch=1,EE,003DDB18,word,03E00008
 patch=1,EE,003DDB1C,word,AC830000
 patch=1,EE,003DD480,word,3C023FE3
-
-
-[No-Interlacing]
-description=Attempts to disable interlaced offset rendering.
-gsinterlacemode=1
-patch=1,EE,20101E5C,extended,00000000
-patch=1,EE,201020C4,extended,00000000
-
-

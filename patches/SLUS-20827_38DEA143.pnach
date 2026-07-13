@@ -26,3 +26,15 @@ patch=1,EE,20548ecc,extended,3f0c0000
 author=asasega
 description=Patches the game to run at 60 FPS.
 patch=1,EE,00548960,word,08000001 //08000002
+
+[Crane Bug Fix]
+author=soultoyo
+description=Fixes a game-breaking bug in the mission "Fuelled By Hate"
+// Bug casued by pcsx2; it does not show up with the PS2-console.
+patch=1,EE,001D70F8,word,0803FFE0
+patch=1,EE,000FFF80,word,26737333
+patch=1,EE,000FFF84,word,16700002
+patch=1,EE,000FFF88,word,26738CCD
+patch=1,EE,000FFF8C,word,2610D1CD
+patch=1,EE,000FFF90,word,08075C43
+patch=1,EE,000FFF94,word,00000000

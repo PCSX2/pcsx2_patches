@@ -1,0 +1,6 @@
+gametitle=Hyper Street Fighter II: The Anniversary Edition (NTSC-J) (SLPM-65496)
+
+[No-Interlacing]
+author=Immersion95
+description=Disables interlaced offset rendering
+patch=1,EE,201907D8,extended,AC20268C

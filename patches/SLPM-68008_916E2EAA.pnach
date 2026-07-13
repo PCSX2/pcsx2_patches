@@ -1,0 +1,8 @@
+gametitle=Virtua Fighter: 10th Anniversary (NTSC-J) (SLPM-68008)
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Immersion95
+description=Disables interlacing
+patch=1,EE,201002E0,extended,24040000
+patch=1,EE,2010033C,extended,24040000

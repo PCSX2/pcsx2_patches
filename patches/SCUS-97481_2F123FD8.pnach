@@ -1,12 +1,19 @@
-gametitle=God of War 2 (SCUS-97481)
+gametitle=God of War 2 - NTSC-U (SCUS-97481)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000
+author=CRASHARKI & nemesis2000
+description=Enable enhanced native widescreen. (Original widescreen uses vertical cropping; Enhanced expands the horizontal view.)
+//enable native widescreen
+patch=1,EE,002D86D8,byte,01
+patch=1,EE,0032F300,word,3FE38E39
+patch=1,EE,0032F338,word,3FE38E39
+patch=1,EE,00363810,word,3FE38E39
+//Zoom value for Hor+ by nemesis2000
 patch=1,EE,00234A48,word,46000406
 
 
 [Skip Cutscenes]
 author=Ezedequias
-comment=With Any Action Button
+description=With Any Action Button
 patch=1,EE,202D8194,byte,01

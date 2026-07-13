@@ -1,0 +1,11 @@
+gametitle=Street Fighter III: 3rd Strike - Fight for the Future (NTSC-J) (SLPM-65621)
+
+[384x448 Display Fix]
+author=Immersion95
+description=Sets output to 384x448, matching the doubled CPS-3 384x224 layout. Best used at native/1x resolution.
+patch=1,EE,2038458C,extended,24080002 // Select internal 384x448 display path
+patch=1,EE,203833EC,extended,24030006 // 384 path: MAGH=6
+patch=1,EE,20383038,extended,24050A7F // DISPLAY write 1: DW=0x0A7F
+patch=1,EE,20383090,extended,24030A7F // DISPLAY write 2: DW=0x0A7F
+patch=1,EE,203831C0,extended,24030A7F // DISPLAY write 3: DW=0x0A7F
+patch=1,EE,203832F8,extended,24030A7F // DISPLAY write 4: DW=0x0A7F
