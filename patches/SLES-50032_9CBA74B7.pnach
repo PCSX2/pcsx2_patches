@@ -1,0 +1,8 @@
+gametitle=Theme Park World (SLES-50032)
+
+[NTSC Mode]
+author=Gabominated
+description=Runs game in NTSC Mode (60hz).
+
+// Change vertical height argument to 448. The game handles the rest.
+patch=0,EE,202314FC,extended,240501C0 // addiu a1,zero,0x1C0
