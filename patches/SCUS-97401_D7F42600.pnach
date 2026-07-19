@@ -1,0 +1,25 @@
+gametitle=Hot Shots Golf FORE! (NTSC-U) (SCUS-97401)
+
+[No-Interlacing]
+description=Removes Interlacing
+author=someother1ne
+gsinterlacemode=1
+patch=1,EE,0012a49c,word,00000000
+patch=1,EE,0012a704,word,00000000
+
+[Widescreen 16:9]
+description=Full widescreen aspect ratio support
+author=KingBald
+gsaspectratio=16:9
+patch=1,EE,e005010C,extended,00545924 // check 20545924 matches value xxxx010c
+patch=1,EE,20545900,extended,3c0143f0 // c4840708 hor fov menu
+patch=1,EE,20545924,extended,ac81010c // e484010c
+patch=1,EE,20154328,extended,3c023c39 // 3c023c0e zoom gameplay
+patch=1,EE,2015432c,extended,3442a4ec // 3442fa35
+patch=1,EE,205001e0,extended,43955553 // 43600000 ver fov gameplay
+
+[Shot Meter Color Fix]
+description=Correct the alpha shading on the shot meter when game is rendering in HW mode
+author=KingBald
+patch=1,EE,006BAB91,extended,00000022
+patch=1,EE,006BAB90,extended,00000080
