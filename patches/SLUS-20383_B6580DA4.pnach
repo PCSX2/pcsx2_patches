@@ -13,3 +13,13 @@ description=Unlocks the dynamic framerate cap to 60FPS. Requires 180% overclock 
 
 //60FPS
 patch=1,EE,00431BC6,short,00003F91
+
+[Start in Progressive Mode]
+author=fobes
+description=Sets the initial display state to progressive mode. Does not force progressive mode, only changes the game startup mode.
+// 0 = NTSC interlaced
+// 1 = PAL interlaced
+// 2 = Progressive (SDTV 480P - 720x480 @ 59.94)
+patch=0,EE,00369a5c,word,34040002    // daddu a0,zero,zero -> li a0,2
+// The function @ 0036aff0 maps their 'video mode' 0/1/2 to SetGsCrt values
+// Look into that if you want to add other modes
