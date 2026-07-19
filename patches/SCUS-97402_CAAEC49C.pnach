@@ -1,5 +1,13 @@
 gametitle=Killzone (NTSC-U) SCUS-97402 CAAEC49C
 
+[No-Interlacing]
+gsinterlacemode=1
+description=Forces 480p display mode
+author=mthsk
+patch=1,EE,002AC044,word,24110000
+patch=1,EE,002AC048,word,24120050
+patch=1,EE,002AC054,word,24130001
+
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Gabominated
