@@ -1,0 +1,21 @@
+gametitle=Samurai Warriors 2 - Xtreme Legends (SLUS-21726)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Heitof
+description=Run the game at 16:9 Widescreen Aspect Ratio.
+// 1 x
+patch=1,EE,00181BF8,word,3C023F19
+patch=1,EE,00181C00,word,3442FFFF
+// 1 y
+patch=1,EE,000FFA00,word,3C023EB3
+patch=1,EE,000FFA04,word,34423333
+patch=1,EE,000FFA08,word,44820000
+patch=1,EE,000FFA0C,word,08060708
+patch=1,EE,00181C1C,word,0803FE80
+// 2 x
+patch=1,EE,00181DB8,word,3C033F19
+patch=1,EE,00181DC0,word,3463999A
+// 2 y
+patch=1,EE,00181DBC,word,3C023EB3
+patch=1,EE,00181DC4,word,34423333
