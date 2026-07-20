@@ -1,0 +1,19 @@
+gametitle=DreamWorks Madagascar (NTSC-J) SLPS-20426 3EEB8615
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,0014A458,word,3C013F1F
+patch=1,EE,002894F0,word,08045D78
+patch=1,EE,001175E0,word,46010043
+patch=1,EE,001175E4,word,3C013F40
+patch=1,EE,001175E8,word,4481F000
+patch=1,EE,001175EC,word,461E1082
+patch=1,EE,001175F0,word,080A253D
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,004B2084,byte,01
+patch=1,EE,00348AA4,byte,77

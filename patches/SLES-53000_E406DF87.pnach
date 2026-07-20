@@ -1,0 +1,6 @@
+gametitle=Crazy Golf (PAL-E) SLES-53000 E406DF87
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0054D0EC,word,00000001

@@ -1,0 +1,19 @@
+gametitle=Toy Golf Extreme (PAL-M) SLES-55049 8445EB0E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00222CFC,word,3F400000
+
+[No-Interlacing]
+gsinterlacemode=1
+author=PeterDelta
+description=Attempts to disable interlaced offset rendering.
+patch=0,EE,0016C710,word,14000002
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,00135D40,word,24060002
+patch=0,EE,00135710,word,240D01C0

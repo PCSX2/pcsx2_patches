@@ -1,0 +1,14 @@
+gametitle=Nickelodeon Jimmy Neutron - Boy Genius (PAL-E) SLES-51298 C60BA9E7
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00326674,word,3C023F40
+
+[NTSC Mode]
+author=Gabominated
+description=NTSC mode at start.
+patch=0,EE,00286680,word,30820000
+patch=0,EE,00286DB4,word,00000000
+patch=0,EE,00830BA0,word,000001C0

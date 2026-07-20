@@ -1,0 +1,11 @@
+gametitle=Viewtiful Joe - A new hope (NTSC-K) SLKA-25220 9CF12158
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00100E54,word,3C013FD3
+patch=0,EE,00100E58,word,34213333
+patch=0,EE,00100E88,word,3C013FD3
+patch=0,EE,00100E8C,word,34213333
+patch=0,EE,002A99D4,word,10400039

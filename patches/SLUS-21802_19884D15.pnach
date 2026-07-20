@@ -1,0 +1,9 @@
+gametitle=Nickelodeon The Naked Brothers Band - The Video Game (NTSC-U) SLUS-21802 19884D15
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,001E7F88,word,3C013F40
+patch=0,EE,001E8760,word,3C013F40
+patch=0,EE,00248DBC,word,3C013F28
