@@ -1,0 +1,45 @@
+gametitle=Désastreuses Aventures des orphelins Baudelaire, Les (PAL-F) SLES-52808 C71D42F8
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0019B688,word,3C013F1B
+patch=0,EE,0019B6D4,word,080EAF8C
+patch=0,EE,003ABE30,word,46001082
+patch=0,EE,003ABE34,word,3C013F40
+patch=0,EE,003ABE38,word,4481F000
+patch=0,EE,003ABE3C,word,461E1082
+patch=0,EE,003ABE40,word,08066DB6
+patch=0,EE,002E9994,word,080EAF91
+patch=0,EE,003ABE44,word,C7AC0000
+patch=0,EE,003ABE48,word,3C013FAA
+patch=0,EE,003ABE4C,word,3421AAAB
+patch=0,EE,003ABE50,word,4481F000
+patch=0,EE,003ABE54,word,461E6302
+patch=0,EE,003ABE58,word,080BA666
+patch=0,EE,001C210C,word,3C013FAB
+patch=0,EE,0014DF08,word,3C013FAB
+
+[Remove Blackbars]
+author=Arapapa
+description=Removes black bars in cutscenes.
+patch=0,EE,001C2378,word,3C013A00
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,002F4B24,word,3C0142C8
+patch=0,EE,0042CADC,word,3C23D70A
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,002F4B2C,word,24020002
+patch=0,EE,003E34D4,word,000001C0
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,002F4B3C,word,1400000F
+patch=0,EE,003E34D4,word,000001E0

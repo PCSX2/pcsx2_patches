@@ -1,0 +1,11 @@
+gametitle=Spider-Man 3 (NTSC-J) SLPS-25823 9295A3BE
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,00348BB8,word,3C023F1A
+patch=1,EE,0032AC64,word,3C023F1A
+patch=1,EE,00C8E318,word,C4342333
+patch=1,EE,01A1FB4C,word,3FBFFFDD
+patch=1,EE,01A4A14C,word,3FBFFFDD

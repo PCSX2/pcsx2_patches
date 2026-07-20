@@ -1,0 +1,22 @@
+gametitle=The Chronicles of Narnia - Prince Caspian (PAL-F/NL) SLES-55145 A8DCE69E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen.
+patch=1,EE,004BA310,word,3F400000
+patch=1,EE,0056BBF0,word,00000001
+patch=1,EE,00580328,word,00000001
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=0,EE,003C2F64,word,24100001
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,00239750,word,240200E0
+patch=0,EE,0043D8AC,word,3C050000
+patch=0,EE,0043D8B4,word,3C060050
+patch=0,EE,0043D8BC,word,3C070001

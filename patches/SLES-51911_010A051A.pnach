@@ -1,0 +1,17 @@
+gametitle=Gadget Racers (PAL-M) SLES-51911 010A051A
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,006A43D8,word,4399999A
+patch=1,EE,006A43B4,word,3F19999A
+patch=1,EE,0021D90C,word,10400014
+patch=1,EE,0021D928,word,1040000D
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,0028C32C,word,3C050000
+patch=0,EE,0028C334,word,3C060050
+patch=0,EE,0028C33C,word,3C070001

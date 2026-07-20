@@ -1,0 +1,18 @@
+gametitle=Burnout 3 - Takedown (NTSC-A) SLAJ-25053 9EEBE6D4
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Corrects display cropping to 16:9.
+patch=1,EE,00665BCD,extended,01
+patch=1,EE,204E0838,extended,3FAAAAAB
+patch=1,EE,204E0A7C,extended,3FE38E39
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock.
+patch=1,EE,004E14DC,extended,00000001
+patch=1,EE,0051B7A4,extended,00000001
+patch=1,EE,204E2440,extended,3C888889
+patch=1,EE,204F4D9C,extended,3C888889
+patch=1,EE,2051A5B4,extended,3C88AB85

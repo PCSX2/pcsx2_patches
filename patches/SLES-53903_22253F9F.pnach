@@ -1,0 +1,9 @@
+gametitle=Franklin - A Birthday Surprise (PAL-M) SLES-53903 22253F9F
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00136A2C,word,3C023FC0
+patch=0,EE,00136DA0,word,3C02442B
+patch=0,EE,0014B844,word,3C034540

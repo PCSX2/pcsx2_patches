@@ -1,0 +1,8 @@
+gametitle=The Italian Job - L.A. Heist (PAL-M) SLES-51761 9A74EC41
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,00265D20,word,24030002
+patch=0,EE,0025AED0,word,240701C0
+patch=0,EE,00152614,word,3C013F55

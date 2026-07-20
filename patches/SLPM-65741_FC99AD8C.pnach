@@ -1,0 +1,6 @@
+gametitle=Driv3r (NTSC-J) SLPM-65741 FC99AD8C
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,002994E8,word,24440002

@@ -1,12 +1,12 @@
-gametitle=Death by Degrees (PAL-E/S) (SCES-52586) 59683BB0
+gametitle=Death by Degrees (PAL-I/F) (SCES-53053) 59683BB0
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=ElHecht & PeterDelta
 description=Renders the game in 16:9 aspect ratio.
-patch=0,EE,00188170,word,3C023FE3 //Gameplay
+patch=0,EE,00188170,word,3C023FE3
 patch=0,EE,00188178,word,3443CA67
-patch=0,EE,00185F8C,word,3C023FE3 //Cut-Scenes
+patch=0,EE,00185F8C,word,3C023FE3
 patch=0,EE,00185F90,word,3443CA67
 patch=0,EE,003BAAC8,word,3C023FA0
 patch=0,EE,0052F290,word,3FA00000
