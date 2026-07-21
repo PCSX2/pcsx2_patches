@@ -3,7 +3,7 @@ gametitle=Burnout 3 - Takedown (Europe, Australia) (En,Es,Nl,Sv) SLES-52584 crc 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Widescreen fix
+description=Corrects display cropping to 16:9.
 patch=1,EE,0066644D,extended,01
 patch=1,EE,204E0FB8,extended,3FAAAAAB
 patch=1,EE,204E11FC,extended,3FE38E39

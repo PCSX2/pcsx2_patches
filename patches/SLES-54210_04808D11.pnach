@@ -1,0 +1,10 @@
+gametitle=NBA 2K7 (PAL-M) SLES-54210 04808D11
+//Main CRC to activate the rest of the CRCs
+
+[50/60 FPS]
+author=PeterDelta
+description=Unlocks FPS in all modes.
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.

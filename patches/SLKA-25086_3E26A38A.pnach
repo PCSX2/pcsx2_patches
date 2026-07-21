@@ -1,19 +1,11 @@
-gametitle=NBA Live 2004 (K)(SLKA-25086)
+gametitle=NBA Live 2004 (NTSC-K) SLKA-25086 3E26A38A
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
-
-//Gameplay 16:9
-
-//Y-Fov
-//aa3f013c abaa2134 00688144 700014e6
-//e33f013c 2a8e2134 00688144 700014e6
-patch=1,EE,0011789c,word,3c013fe3 //3c013faa
-patch=1,EE,001178a0,word,34218e2a //3421aaab
-
-//Zoom
-//803f013c 00108144 1000a0c7
-patch=1,EE,0011854c,word,3c013fab //3c013f80
-
-
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0011789C,word,3C013FE3 //3c013faa
+patch=0,EE,001178A0,word,34218E39 //3421aaab
+patch=0,EE,0011854C,word,3C013FAB //3c013f80
+patch=0,EE,002E2A1C,word,3C013FC0
+patch=0,EE,002E2A50,word,3C01BF40

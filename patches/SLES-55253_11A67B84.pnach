@@ -1,0 +1,11 @@
+gametitle=NBA 2K9 (PAL-M) SLES-55253 11A67B84 SPANISH
+
+[50/60 FPS]
+author=PeterDelta
+description=Unlocks FPS in all modes.
+patch=1,EE,00B1C64C,word,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,004CF030,word,240501C0

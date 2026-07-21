@@ -1,0 +1,22 @@
+gametitle=NBA Live 2005 (NTSC-J) SLPM-65787 2E80F9FC
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,002B4170,word,3C013F63
+patch=0,EE,002B4174,word,34218E3A
+patch=0,EE,002B82D8,word,3C013F63
+patch=0,EE,002B82DC,word,34218E3A
+patch=0,EE,0041B638,word,3C013FE3
+patch=0,EE,0041B63C,word,34218E3A
+patch=0,EE,002B42C0,word,3C013FE3
+patch=0,EE,002B42C4,word,34218E3A
+patch=0,EE,0043D5F0,word,3C01BF40
+patch=0,EE,003A7470,word,3C013FC0
+patch=0,EE,003A74DC,word,3C01BF40
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=1,EE,0081F45C,extended,00

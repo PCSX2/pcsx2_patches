@@ -1,13 +1,20 @@
-gametitle=Fahrenheit (NTSC-J)(SLPM-66193)
+gametitle=Fahrenheit (NTSC-J) (SLPM-66193) 25064744
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen patch (NTSC-J by Arapapa)
-
-//Widescreen hack 16:9
-
-//aa3f013c abaa2134 00008144
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,0020b388,word,3c013fe3 //3c013faa
 patch=1,EE,0020b38c,word,34218e38 //3421aaab
 
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,0020A250,word,10400004
 
+[Remove Blur/Bloom]
+author=PeterDelta
+description=Removes the post-processing blur/bloom effect.
+patch=0,EE,0020E818,word,00000000
+patch=0,EE,001A8C1C,word,00000000
+patch=0,EE,001A52A8,word,3C010000

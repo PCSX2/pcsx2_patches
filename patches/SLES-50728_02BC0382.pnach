@@ -1,0 +1,7 @@
+gametitle=Tiger Woods PGA Tour 2002 (PAL-M3) SLES-50728 02BC0382
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00128EDC,word,3C023F40

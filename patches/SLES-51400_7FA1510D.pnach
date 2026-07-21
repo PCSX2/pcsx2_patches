@@ -1,11 +1,16 @@
-gametitle=Tenchu - Wrath of Heaven PAL (Spain) [SLES-51400]
+gametitle=Tenchu - La Ira del Cielo (PAL-S) [SLES-51400] 7FA1510D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen Hack
+author=ElHecht
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,00154998,word,3C033F40 //3C033F80 (fov)
 patch=1,EE,001549E0,word,3C033F40 //3C033F80 (fov)
-patch=1,EE,00155168,word,3C024455 //3C024422 (render fix)
-patch=1,EE,001553D0,word,3C024455 //3C024422 (render fix)
+patch=1,EE,00155168,word,3C024458 //3C024422 (render fix)
+patch=1,EE,001553D0,word,3C024458 //3C024422 (render fix)
 
-
+[No-Interlacing]
+gsinterlacemode=1
+author=asasega
+description=Attempts to disable interlaced offset rendering.
+patch=0,EE,002467E8,extended,00

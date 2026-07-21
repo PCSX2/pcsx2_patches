@@ -1,0 +1,8 @@
+gametitle=Underworld - The Eternal War (PAL-M5) SLES-52109 56C4E154
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=sergx12
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0018877C,word,3C033F40
+patch=0,EE,0018890C,word,3C033F40

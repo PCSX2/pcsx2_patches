@@ -1,0 +1,13 @@
+gametitle=Splashdown 2 - Rides Gone Wild (PAL-E/F/D) SLES-51681 AA88E010
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta & El_Patas
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0011701C,word,3C023CAB
+patch=0,EE,00117020,word,3442A21D
+patch=0,EE,00117030,word,3C023FAB
+patch=0,EE,001EC23C,word,3C033F1E
+patch=0,EE,00247848,word,3C023F08
+patch=0,EE,0020A164,word,3C023C3D
+patch=0,EE,001EC234,word,3C023C92

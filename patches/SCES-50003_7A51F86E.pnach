@@ -1,9 +1,8 @@
-gametitle=Dead or Alive 2 (SCES-50003)
+gametitle=Dead or Alive 2 (SCES-50003) 7A51F86E
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000
-description=Widescreen hack
-patch=1,EE,0021c21c,word,3c014534
-
-
+author=nemesis2000 & PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0021C21C,word,3C014534
+patch=0,EE,0021C22C,word,3C01451D

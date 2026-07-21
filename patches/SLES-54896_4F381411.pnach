@@ -1,0 +1,37 @@
+gametitle=NBA Live 08 (PAL-F) SLES-54896 4F381411
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,00F64EA9,extended,00
+patch=1,EE,00824880,extended,00
+patch=0,EE,00353BF4,word,3C013FE3
+patch=0,EE,00353BF8,word,34218E39
+patch=0,EE,00358CE4,word,3C013FE3
+patch=0,EE,00358CE8,word,34218E39
+patch=0,EE,0062846C,word,3C013FE3
+patch=0,EE,00628470,word,34218E39
+patch=0,EE,00353AF0,word,3C013F63
+patch=0,EE,00353AF4,word,34218E39
+patch=0,EE,00358C1C,word,3C013F63
+patch=0,EE,00358C20,word,34218E39
+patch=0,EE,006315F0,word,3C013F63
+patch=0,EE,006315F4,word,34218E39
+patch=0,EE,0041E064,word,3C01BF40
+patch=0,EE,0041DFF8,word,3C013FC0
+patch=0,EE,00375550,word,3C014040
+patch=0,EE,00477080,word,3C01BF40
+
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=1,EE,0089685C,extended,00
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,006344F4,word,3C050000
+patch=0,EE,006344FC,word,3C060050
+patch=0,EE,00634504,word,3C070001

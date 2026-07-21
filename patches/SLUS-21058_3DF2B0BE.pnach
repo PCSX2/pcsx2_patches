@@ -1,13 +1,22 @@
-gametitle=NBA Live 2005 (U)(SLUS-21058)
+gametitle=NBA Live 2005 (NTSC-U) SLUS-21058 3DF2B0BE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,002C2358,word,3C013F63
+patch=0,EE,002C235C,word,34218E3A
+patch=0,EE,002C6318,word,3C013F63
+patch=0,EE,002C631C,word,34218E3A
+patch=0,EE,00440D88,word,3C013FE3
+patch=0,EE,00440D8C,word,34218E3A
+patch=0,EE,002C24A8,word,3C013FE3
+patch=0,EE,002C24AC,word,34218E3A
+patch=0,EE,00462D40,word,3C01BF40
+patch=0,EE,003CCBC0,word,3C013FC0
+patch=0,EE,003CCC2C,word,3C01BF40
 
-//Widescreen hack 16:9
-
-//X-Fov
-//003f013c 00088144 1800028e
-patch=1,EE,003cc5fc,word,3c013ec0 //3c013f00
-
-
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=1,EE,0081505C,extended,00

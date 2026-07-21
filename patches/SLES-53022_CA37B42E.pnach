@@ -1,4 +1,4 @@
-gametitle=ESPN NBA 2K5 (E)(SLES-53022)
+gametitle=ESPN NBA 2K5 (PAL-E) SLES-53022 CA37B42E
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -27,4 +27,12 @@ patch=1,EE,000c000c,word,4481f000
 patch=1,EE,000c0010,word,461e39c2
 patch=1,EE,000c0014,word,0804478b
 
+[50/60 FPS]
+author=PeterDelta
+description=Unlocks FPS in all modes.
+patch=1,EE,007AF614,word,00000001
 
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,001098F4,word,240501C0

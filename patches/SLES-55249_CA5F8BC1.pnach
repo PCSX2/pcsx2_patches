@@ -3,7 +3,7 @@ gametitle=Harry Potter and the Half-Blood Prince (PAL-M) SLES-55249 CA5F8BC1
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Widescreen fix
+description=Corrects display cropping to 16:9.
 patch=1,EE,003C8F60,word,3C013F17
 
 [NTSC Mode]

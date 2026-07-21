@@ -3,14 +3,20 @@ gametitle=Syphon Filter - Dark Mirror (PAL-M) SCES-54794 EF9459D0
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Renders the game in 16:9 aspect ratio
-patch=1,EE,0018CE4C,word,14400002 //10400002
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0018CE4C,word,14400002 //10400002
+patch=0,EE,00417998,word,24117100
+patch=0,EE,0041799C,word,24127200
+patch=0,EE,004179A0,word,24131E00
+patch=0,EE,004179A8,word,24141C00
+patch=0,EE,004179AC,word,24117100
+patch=0,EE,004179B4,word,24131E00
 
 [480p Mode]
-gsinterlacemode=1
 author=PeterDelta
 description=SDTV 480p mode at start.
 patch=1,EE,005FDB74,word,00000004 //00000002
+patch=1,EE,0018CB60,word,240401C0
 patch=1,EE,0018CE4C,word,10400002 //Widescreen fix
 patch=1,EE,E0020004,extended,0064F2B0
 patch=1,EE,0064F2B0,extended,00000012

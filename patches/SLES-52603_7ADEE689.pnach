@@ -1,0 +1,11 @@
+gametitle=Room Zoom - Race for Impact (PAL-M) SLES-52603 7ADEE689
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0010188C,extended,E3
+patch=0,EE,10101890,extended,8E39
+patch=0,EE,0032CD10,extended,C6
+patch=0,EE,0032CC04,extended,C6
+patch=0,EE,0025D1A4,extended,8A
