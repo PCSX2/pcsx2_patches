@@ -7,3 +7,14 @@ patch=1,EE,00136f30,word,3c0243d6
 patch=1,EE,00183dc0,word,3c023f2b
 
 
+[Fix vertical lines when upscaling]
+description=Fixes missing vertical lines down the screen when upscaling, caused by DW games rendering into ten, vertical slices of equal width; the fix reduces this to a single rectangle.
+author=MichaelMusou, ported from DW4:XL by ConorJS
+patch=1,EE,0012cef4,word,2AA20001
+patch=1,EE,0012ce14,word,24090280
+patch=1,EE,0012ce74,word,24090280
+patch=1,EE,0012ce50,word,26020940
+patch=1,EE,0012ceb4,word,26020940
+patch=1,EE,0012d0a8,word,2A220001
+patch=1,EE,0012d02c,word,24090280
+patch=1,EE,0012d078,word,26620940
