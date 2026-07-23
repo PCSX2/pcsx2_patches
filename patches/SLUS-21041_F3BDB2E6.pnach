@@ -22,3 +22,78 @@ patch=1,EE,0022531c,word,3c033fc0
 description=Removes black bars in cutscenes
 // (c843033c 803f023c to c843033c 0000023c)
 patch=1,EE,00402f24,word,3c020000 //3c023f80
+
+[60 FPS]
+author=Souzooka
+description=Forces game to run at 60fps.
+
+// Misc. code locations where the framerate divisor is set
+// Function 0x2208E0 accepts a divisor in argument a2 (and then saves it to memory at 0x2208EC)
+// We don't have space at the top so we'll just save at the end of the function
+patch=1,EE,202208EC,extended,00000000 // nop
+patch=1,EE,20220940,extended,24050001 // addiu a1,zero,0x1
+patch=1,EE,20220944,extended,03E00008 // jr ra
+patch=1,EE,20220948,extended,A785823C // sh a1,-0x7DC4(gp)
+patch=1,EE,203EFCF8,extended,24030001 // addiu v1,zero,0x1
+patch=1,EE,203EFED4,extended,24020001 // addiu v0,zero,0x1
+
+// 2D animated effect speed (also seemingly fixes audio desync when Karin fires her gun at Lenny in the church?)
+patch=1,EE,20335C84,extended,3C023C88 // lui v0,0x3C88
+
+// Run battles at the correct speed
+// We have to use conditionals to check for a particular overlay being loaded here
+// as battle code is part of an overlay. Here we just check for an instruction to modify.
+// The game basically has a check where if delta time for battles is less than 1/30th of a second,
+// clamp delta time to 1/30th, which we change appropriately for 60fps.
+patch=1,EE,E0043D08,extended,0045F62C
+patch=1,EE,E0033C03,extended,0045F62E
+patch=1,EE,2045F5F8,extended,3C034270 // lui v1,0x4270
+patch=1,EE,2045F610,extended,3C033C88 // lui v1,0x3C88
+patch=1,EE,2045F62C,extended,3C033C88 // lui v1,0x3C88
+
+// Magic, items, etc. sequences in battles are sequenced using a frame counter (designed for 30fps)
+// so we'll just skip sequencing them on odd frames...
+patch=1,EE,20331F98,extended,0C10A650 // jal 0x00429940
+patch=1,EE,20429940,extended,8F8184C8 // lw at,-0x7B38(gp) // vblank count
+patch=1,EE,20429944,extended,30210001 // andi at,at,0x0001
+patch=1,EE,20429948,extended,14200003 // bne at,zero,0x00429958
+patch=1,EE,2042994C,extended,6402FFFF // daddiu v0,zero,0xFFFF
+patch=1,EE,20429950,extended,080CC7EC // j z_un_00331fb0
+patch=1,EE,20429954,extended,00000000 // nop
+patch=1,EE,20429958,extended,03E00008 // jr ra
+
+// FMVs/in-game cutscenes
+// OK, FMVs and cutscenes actually proved to be a gigantic pain. In-game cutscenes can run at 60fps *mostly*
+// without issues (just needing that additional patch at 0x335C84)
+// However, it is absolutely, critically essential that FMVs run at 30fps, not 60fps. At 60fps,
+// video will play twice as fast and the game will softlock.
+// However, the way in which the game runs in-game cutscenes and FMVs is actually identical. The only
+// thing which changes is a list of objects on some sort of cutscene task (?). This led me to create
+// this sort of cludgel where I hook into an update loop for these objects and type check them to see
+// if one of them is an FMV player.
+// We do so here and if one of these objects is an FMV player, we
+// force the framerate to 30 and the task dt to 1/30 (to avoid FMVs lasting twice as long as they should)
+patch=1,EE,203C8478,extended,0810FEEA // j 0x0043FBA8
+patch=1,EE,203C847C,extended,8E420098 // lw v0,0x98(s2)
+patch=1,EE,203C8480,extended,00000000 // nop
+patch=1,EE,2043FBA8,extended,00501021 // addu v0,v0,s0
+patch=1,EE,2043FBAC,extended,8C450000 // lw a1,0x0(v0)
+patch=1,EE,2043FBB0,extended,10A0000D // beq a1,zero,0x0043FBE8
+patch=1,EE,2043FBB4,extended,00000000 // nop
+patch=1,EE,2043FBB8,extended,8CA40008 // lw a0,0x8(a1)
+patch=1,EE,2043FBBC,extended,8C990010 // lw t9,0x10(a0)
+patch=1,EE,2043FBC0,extended,3C180043 // lui t8,0x0043
+patch=1,EE,2043FBC4,extended,3718B480 // ori t8,t8,0xB480
+patch=1,EE,2043FBC8,extended,17190007 // bne t8,t9,0x0043FBE8 // type check
+patch=1,EE,2043FBCC,extended,8E4F0020 // lw t7,0x20(s2)
+// make sure the timer increment is not 0 (if we don't check this, the game gets stuck
+// when attempting to pause an FMV/skip it)
+patch=1,EE,2043FBD0,extended,11E00005 // beq t7,zero,0x0043FBE8
+// set frame divisor to 2
+patch=1,EE,2043FBD4,extended,240F0002 // addiu t7,zero,0x2
+patch=1,EE,2043FBD8,extended,A78F823C // sh t7,-0x7DC4(gp)
+// set the timer increment for this cutscene to 1/30th of a second
+patch=1,EE,2043FBDC,extended,3C0F3D08 // lui t7,0x3D08
+patch=1,EE,2043FBE0,extended,35EF8889 // ori t7,t7,0x8889
+patch=1,EE,2043FBE4,extended,AE4F0020 // sw t7,0x20(s2)
+patch=1,EE,2043FBE8,extended,080F2120 // j 0x003C8480
