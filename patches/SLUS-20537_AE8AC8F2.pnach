@@ -1,0 +1,7 @@
+gametitle=Nickelodeon Jimmy Neutron - Boy Genius (NTSC-U) SLUS-20537 AE8AC8F2
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00324CB4,word,3C023F40

@@ -1,0 +1,8 @@
+gametitle=Nickelodeon Go Diego Go! Great Dinosaur Rescue (NTSC-U) SLUS-21794 4D6B5DE5
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,00119B94,word,3C013F4D
+patch=0,EE,00119B98,word,3421B6DD

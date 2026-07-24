@@ -1,0 +1,18 @@
+gametitle=Ribbit King (PAL-M) SLES-52466 6C47CF7B
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,001009A8,word,3C013F1C
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=1,EE,0020B560,word,00000001
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,001CBE54,word,24050002
+patch=0,EE,001003B8,word,240801C0

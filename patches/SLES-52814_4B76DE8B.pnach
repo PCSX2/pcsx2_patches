@@ -1,0 +1,19 @@
+gametitle=Disney/Pixar Gli Incredibili (PAL-I) SLES-52814 4B76DE8B
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,001FEF24,word,3C023F1C
+patch=0,EE,001FEF50,word,3C023F10
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes.
+patch=1,EE,0063113C,word,00000000
+patch=1,EE,00631140,word,00000000
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,001732B0,word,14C00004

@@ -1,0 +1,7 @@
+gametitle=Disney Golf (PAL-E) SLES-51042 98301AA7
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,002B8670,word,3F400000

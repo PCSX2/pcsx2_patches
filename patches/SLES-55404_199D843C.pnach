@@ -1,0 +1,9 @@
+gametitle=Nickelodeon The Naked Brothers Band - The Video Game (PAL-E) SLES-55404 199D843C
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,001E7FE8,word,3C013F40
+patch=0,EE,001E87C0,word,3C013F40
+patch=0,EE,00248E1C,word,3C013F28

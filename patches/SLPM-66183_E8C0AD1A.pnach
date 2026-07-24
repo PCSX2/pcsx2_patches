@@ -1,0 +1,11 @@
+gametitle=The Getaway - Black Monday (NTSC-J) SLPM-66183 E8C0AD1A
+
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes.
+patch=1,EE,004B22C8,extended,00000000
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,00254138,word,24020001
