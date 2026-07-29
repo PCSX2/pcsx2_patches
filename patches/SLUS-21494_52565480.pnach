@@ -8,3 +8,38 @@ description=Fixes the career cash bonus checking for an incorrect serial of Most
 patch=0,EE,205B0288,extended,4C534142
 patch=0,EE,205B028C,extended,322D5355
 patch=0,EE,205B0290,extended,31353331
+
+[Unlock DLC and Online Cars]
+author=Nicknine
+description=Unlocks Porsche 911 Turbo, Dodge Challenger R/T, Toyota Corolla GT-S, Infiniti G35, Shelby GT500 '06, Pagani Zonda F (officially only released for PC and X360 as DLC) and Porsche 911 GT3 RS, Lotus Europa S, Pontiac GTO, Lexus IS300, Toyota MR2, Plymouth Roadrunner (only available on PC, PS3 and X360 as online rewards). Only 911 Turbo, Challenger and G35 are usable in Career mode, the rest are only usable in Quick Race mode.
+
+// Hook UnlockSystem::IsDLCUnlock
+patch=0,EE,001a9230,word,08020000  // j 0x00080000
+patch=0,EE,001a9234,word,00000000  // nop
+
+// Loop over the list of unlocks
+patch=0,EE,00080000,word,3c080008  // lui $t0,0x0008
+patch=0,EE,00080004,word,8d090028  // lw $t1,0x0028($t0)
+patch=0,EE,00080008,word,11200005  // beq $t1,$zero,0x00080020
+patch=0,EE,0008000c,word,25080004  // addiu $t0,$t0,0x04
+patch=0,EE,00080010,word,14a9fffc  // bne $a1,$t1,0x00080004
+patch=0,EE,00080014,word,00000000  // nop
+patch=0,EE,00080018,word,03e00008  // jr $ra
+patch=0,EE,0008001c,word,24020001  // li $v0,1
+patch=0,EE,00080020,word,03e00008  // jr $ra
+patch=0,EE,00080024,word,00001025  // move $v0,$zero
+
+// Unlocks list
+patch=0,EE,00080028,word,01d28710  // 997tt
+patch=0,EE,0008002c,word,8b80c5fc  // challenger71
+patch=0,EE,00080030,word,e3bde8cb  // corolla
+patch=0,EE,00080034,word,0001308e  // g35
+patch=0,EE,00080038,word,60d6890e  // mustangshlbyn
+patch=0,EE,0008003c,word,0689441b  // zonda
+patch=0,EE,00080040,word,d1b7969b  // 997gt3rs
+patch=0,EE,00080044,word,a72467eb  // europa
+patch=0,EE,00080048,word,00013929  // gto
+patch=0,EE,0008004c,word,0556d32e  // is300
+patch=0,EE,00080050,word,00015230  // mr2
+patch=0,EE,00080054,word,726dcd3f  // roadrunner
+patch=0,EE,00080058,word,00000000  // (end marker)
