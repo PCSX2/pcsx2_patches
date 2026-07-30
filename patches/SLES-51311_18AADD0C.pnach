@@ -1,0 +1,13 @@
+gametitle=Rugrats Royal Ransom (PAL-E) SLES-51311 18AADD0C
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,002D7798,word,3C013FE3
+patch=0,EE,002D779C,word,34218E39
+
+[50 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0042D8A0,word,00000001

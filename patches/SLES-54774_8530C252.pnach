@@ -1,0 +1,25 @@
+gametitle=DreamWorks Shrek the Third (PAL-M3) SLES-54774 8530C252
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,002EE5CC,word,3C013F21
+patch=1,EE,002EE60C,word,08030000
+patch=1,EE,000C0000,word,46020002
+patch=1,EE,000C0004,word,3C013F40
+patch=1,EE,000C0008,word,4481F000
+patch=1,EE,000C000C,word,461E0002
+patch=1,EE,000C0010,word,080BB984
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,004253CC,word,14000008
+patch=0,EE,004253D4,word,14000006
+patch=0,EE,004253E0,word,14000003
+
+[480p Mode]
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,004253CC,word,14000008

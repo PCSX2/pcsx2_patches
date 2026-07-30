@@ -1,0 +1,6 @@
+gametitle=The Getaway (NTSC-J) SLPM-65410 E8249852
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=0,EE,001F4090,word,24020001

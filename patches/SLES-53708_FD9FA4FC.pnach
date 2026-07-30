@@ -1,19 +1,19 @@
-gametitle=The Chronicles of Narnia - The Lion, the Witch and the Wardrobe (PAL-SC) SLES-53712 37718361
+gametitle=Cronache di Narnia, Le - Il Leone, La Strega e L'Armadio (PAL-I) SLES-53708 FD9FA4FC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
 description=Corrects display cropping to 16:9.
-patch=1,EE,00633DC5,extended,01
+patch=1,EE,006337C5,extended,01
 patch=0,EE,0024036C,word,3C013F40
 patch=0,EE,002429C0,word,3C013F40
 patch=0,EE,00243B58,word,3C013F40
-patch=0,EE,003E8710,word,3F400000
+patch=0,EE,003E8110,word,3F400000
 
 [Remove Blackbars]
 author=PeterDelta
 description=Removes black bars in cutscenes.
-patch=1,EE,004038A8,word,00000000
+patch=1,EE,004032A8,word,00000000
 
 [50 FPS]
 author=PeterDelta

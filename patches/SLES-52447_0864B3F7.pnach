@@ -1,0 +1,26 @@
+gametitle=Spider-Man 2 (PAL-I) SLES-52447 0864B3F7
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,0067ACF0,word,3F947AE1
+patch=1,EE,0067ACE8,word,3C28A2F7
+patch=1,EE,006621C8,word,3F860A8A
+patch=1,EE,006621D8,word,3F860A8A
+patch=1,EE,006621DC,word,3FA00000
+
+[50/60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,0060ADA0,extended,00000001
+patch=1,EE,E0010001,extended,005E3D10
+patch=1,EE,0060ADA0,extended,00000002
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,005788B4,word,3C050000
+patch=0,EE,005788BC,word,3C060050
+patch=0,EE,005788C4,word,3C070001

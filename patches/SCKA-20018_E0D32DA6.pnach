@@ -1,0 +1,6 @@
+gametitle=The Getaway (NTSC-K) SCKA-20018 E0D32DA6
+
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,001F4090,word,24020001
