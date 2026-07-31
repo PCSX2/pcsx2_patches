@@ -1,6 +1,13 @@
 gametitle=Rugrats Rescate Real (PAL-S) SLES-51385 4603820E
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,002D78F0,word,3C013FE3
+patch=0,EE,002D78F4,word,34218E39
+
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,0042D820,word,00000001 //00000002
+description=Might need EE Overclock (130%).
+patch=1,EE,0042D820,word,00000001

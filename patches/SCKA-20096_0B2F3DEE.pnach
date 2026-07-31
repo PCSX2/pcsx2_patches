@@ -1,11 +1,9 @@
-gametitle=Barnyard (K)(SCKA-20096)
+gametitle=Barnyard (NTSC-K) (SCKA-20096) 0B2F3DEE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
-
-//Widescreen hack 16:9
-
+description=Renders the game in 16:9 aspect ratio.
 //Y-Fov
 patch=1,EE,00546004,word,3F9F4877 //3f6eecc0
 
@@ -26,3 +24,9 @@ patch=1,EE,00542958,word,3fd50000 //3eaaaaab  3fd50000
 //patch=1,EE,004cb61c,word,3f820000 //3f800000 little different than Original Graphic
 
 
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,0054C2B4,extended,00000001
+patch=1,EE,E0010010,extended,004F95D4
+patch=1,EE,0054C2B4,extended,00000002

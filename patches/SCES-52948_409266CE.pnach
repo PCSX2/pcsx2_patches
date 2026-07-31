@@ -1,9 +1,9 @@
-gametitle=The Getaway - Black Monday (PAL-M6) SCES-52758 09C3DF79
+gametitle=The Getaway - Black Monday (PAL-M4) SCES-52948 409266CE
 
 [Remove Blackbars]
 author=PeterDelta
 description=Removes black bars in cutscenes.
-patch=1,EE,004B06C8,extended,00000000
+patch=1,EE,004B1448,extended,00000000
 
 [50 FPS]
 author=Snake356

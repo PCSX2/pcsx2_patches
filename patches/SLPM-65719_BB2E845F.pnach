@@ -1,4 +1,4 @@
-gametitle=Burnout 3 - Takedown (J) (SLPM-65719)
+gametitle=Burnout 3 - Takedown (NTSC-J) SLPM-65719 BB2E845F
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -243,3 +243,11 @@ patch=1,EE,20505118,extended,3FE38E39 // Globe Aspect Ratio // 16:9 = 1.77777779
 patch=1,EE,20504F8C,extended,3FB8E38F // Globe Glow Aspect Ratio // 16:9 = 1.444444537
 
 
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock.
+patch=1,EE,00505CD4,extended,00000001
+patch=1,EE,0053FFA4,extended,00000001
+patch=1,EE,20506C50,extended,3C888889
+patch=1,EE,2051959C,extended,3C888889
+patch=1,EE,2053EDB4,extended,3C88AB85

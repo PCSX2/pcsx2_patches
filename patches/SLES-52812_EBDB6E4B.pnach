@@ -1,14 +1,22 @@
-gametitle=The Incredibles [NTSC-U] (SLUS_209.05)
+gametitle=Disney/Pixar The Incredibles (PAL-E) SLES-52812 EBDB6E4B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=sergx12
-
-//Gameplay 16:9
-patch=1,EE,001fe8e4,word,3c023f1C //3C023F00 Zoom
-patch=1,EE,001fe910,word,3c023f10 //3C023F40 Y-FOV
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,001FE8E4,word,3C023F1C //3C023F00 Zoom
+patch=0,EE,001FE910,word,3C023F10 //3C023F40 Y-FOV
 
 //Hang fix by Prafull (Only needed for pcsx2, is not needed for the PS2)
 //patch=1,EE,0010EC20,word,00000000 //40036000
 
+[Remove Blackbars]
+author=PeterDelta
+description=Removes black bars in cutscenes.
+patch=1,EE,0063113C,word,00000000
+patch=1,EE,00631140,word,00000000
 
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,00172CB0,word,14C00004

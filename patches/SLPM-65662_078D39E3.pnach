@@ -1,15 +1,14 @@
-gametitle=Spider-Man 2 (J)(SLPM-65662)
+gametitle=Spider-Man 2 (NTSC-J) SLPM-65662 078D39E3
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen fix by flameofrecca (NTSC-J by Arapapa)
-
-
-
-//52 B8 5E 3F FE FF 7F 4B 00 00 00 C0 FE FF FF C8
-patch=1,EE,20691280,word,3f947ae1  // vertical fov
-//00 00 00 3F 00 00 80 3D 00 00 00 BF 00 00 80 3E
-patch=1,EE,2069125C,word,3ec00000  // zoom value
+author=flameofrecca, Arapapa & PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,20691280,word,3F947AE1 //vertical fov
+patch=1,EE,00691278,word,3C28A2F7 //zoom value
+patch=1,EE,00678C30,word,3F860A8A //textures fixed by PeterDelta
+patch=1,EE,00678C40,word,3F860A8A
+patch=1,EE,00678C44,word,3FA00000
 
 //Map Screen HUD, text fixes
 //search the 206d**** address range for more map screen hud fixes
@@ -69,4 +68,9 @@ patch=1,EE,2074F400,word,42680000
 //00 00 50 42 00 00 50 42 44 FE 4F 3E 90 FF 47 3E
 patch=1,EE,20746604,word,421c0000  //yellow jump meter
 
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,006113A0,extended,00000001
+patch=1,EE,E0010001,extended,005EA320
+patch=1,EE,006113A0,extended,00000002

@@ -1,10 +1,18 @@
-gametitle=Enthusia - Professional Racing PAL
+gametitle=Enthusia - Professional Racing (PAL-M) SLES-53125 5C63B5AC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Widescreen hack
-patch=1,EE,0038dcb8,word,3F400000
+author=El_Patas & PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,0038DCB8,word,3F400000
+patch=1,EE,0038DCD8,word,3F400000
 
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect.
+patch=0,EE,101324BC,extended,00E0
+patch=0,EE,2013368C,extended,34060001
+patch=1,EE,0038DFF0,extended,50
 
 [Remove Speedometer Update Cap]
 author=Azullia / real-xp

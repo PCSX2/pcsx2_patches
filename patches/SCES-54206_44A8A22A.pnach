@@ -3,7 +3,7 @@ gametitle=God of War 2 - PAL-M (SCES-54206)
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=CRASHARKI & ShaolinAssassin
-description=Enable enhanced native widescreen. (Original widescreen uses vertical cropping; Enhanced expands the horizontal view.)
+description=Corrects display cropping to 16:9.
 //enable native widescreen
 patch=1,EE,002D8068,byte,01
 patch=1,EE,0032ED00,word,3FE38E39

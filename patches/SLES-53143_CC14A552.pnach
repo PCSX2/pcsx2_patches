@@ -1,12 +1,20 @@
-gametitle=Fantastic Four (PAL-E) SLES-53143 CC14A552
+gametitle=Fantastic 4 (PAL-E) SLES-53143 CC14A552
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Widescreen Hack 16:9
-patch=1,EE,0031DA70,word,3FB8E369
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0031DA70,word,3FAAAAAB
 
-[50 FPS]
+[50/60 FPS]
 author=PeterDelta
-description=Unlocked at 50 FPS. Might need enable EE Overclock to be stable.
-patch=1,EE,00177A70,word,00000000 //1462000C
+description=Might need EE Overclock (180%).
+patch=0,EE,00177A6C,word,24020000
+
+[480p Mode]
+gsinterlacemode=1
+author=PeterDelta
+description=SDTV 480p mode at start.
+patch=0,EE,0026ACEC,word,24110000
+patch=0,EE,0026ACF0,word,24120050
+patch=0,EE,0026ACFC,word,24130001

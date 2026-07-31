@@ -1,20 +1,16 @@
-gametitle=Astro Boy [PAL] (SLES_524.86) 3751BD05
+gametitle=Astro Boy (PAL-M) SLES-52486 3751BD05
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=El_Patas
-description=Renders the game in 16:9 aspect ratio
-
-//Fov
-patch=1,EE,002CD40C,word,3C013FD5 //3C013FA0
-
-//Zoom
-patch=1,EE,003811F8,word,3C013EC0 //3C013F00
+author=El_Patas & PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,002CD3E8,word,3C013FF3
+patch=0,EE,002CD3EC,word,3421CF3D
+patch=0,EE,002CD40C,word,3C013FE4
+patch=0,EE,003811F8,word,3C013EC0
 
 [50/60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,0069D990,word,00000001 //00000002
-patch=1,EE,0069D998,word,42700000 //41F00000
-patch=1,EE,0069D99C,word,3C888889 //3D088889
-patch=1,EE,0069D9A0,word,3F800000 //40000000
+description=Might need EE Overclock (130%).
+patch=0,EE,002CDC8C,word,24050001
+patch=0,EE,002CDF40,word,24050001

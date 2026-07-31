@@ -1,15 +1,13 @@
-gametitle=Astro Boy - Tetsuwan Atom (J)(v1.00) (SLPM-65551)
+gametitle=Astro Boy - Tetsuwan Atom (NTSC-J) (v1.00) (SLPM-65551) 36B523BC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,002be1f8,word,3c013fd5 //3c013fa0 Fov
+patch=0,EE,003725b8,word,3c013ec0 //3c013f00 Zoom
 
-//Widescreen hack 16:9
-
-//Fov
-patch=1,EE,002be1f8,word,3c013fd5 //3c013fa0
-
-//Zoom
-patch=1,EE,003725b8,word,3c013ec0 //3c013f00
-
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,002BEA58,word,24050001

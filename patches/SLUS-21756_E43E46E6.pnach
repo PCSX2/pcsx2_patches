@@ -1,6 +1,14 @@
 gametitle=The Chronicles of Narnia - Prince Caspian (NTSC-U) SLUS-21756 E43E46E6
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Enable native widescreen.
+patch=1,EE,004BA068,word,3F400000
+patch=1,EE,0056B7F0,word,00000001
+patch=1,EE,0057FF28,word,00000001
+
 [60 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,003BE188,word,00000000
+description=Might need EE Overclock (180%).
+patch=0,EE,003C2D04,word,24100001

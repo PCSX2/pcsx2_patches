@@ -1,6 +1,20 @@
 gametitle=Gift (PAL-S) SLES-50299 212D709B
 
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,001882DC,word,3C084420
+patch=0,EE,001A554C,word,3C024010
+patch=0,EE,001A55DC,word,3C023F40
+
 [50 FPS]
 author=PeterDelta
-description=Might need EE Overclock at 130%.
-patch=1,EE,001FE34C,word,00000000
+description=Might need EE Overclock (180%).
+patch=0,EE,001FE2D4,word,14400022
+
+[NTSC Mode]
+author=PeterDelta
+description=NTSC mode at start.
+patch=0,EE,001B82F0,word,240201C0
+patch=0,EE,0021BF6C,word,24060002

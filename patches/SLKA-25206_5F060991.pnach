@@ -1,8 +1,9 @@
-gametitle=Burnout 3 - Takedown (K) (SLKA-25206)
+gametitle=Burnout 3 - Takedown (NTSC-K) SLKA-25206 5F060991
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Aero_ (NTSC-K by Arapapa)
+description=Corrects display cropping to 16:9.
 
 
 
@@ -242,3 +243,11 @@ patch=1,EE,204E0F3C,extended,3FE38E39 // Globe Aspect Ratio // 16:9 = 1.77777779
 patch=1,EE,204E0D94,extended,3FB8E38F // Globe Glow Aspect Ratio // 16:9 = 1.444444537
 
 
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock.
+patch=1,EE,004E1ADC,extended,00000001
+patch=1,EE,0051BDA4,extended,00000001
+patch=1,EE,204E2A40,extended,3C888889
+patch=1,EE,204F539C,extended,3C888889
+patch=1,EE,2051ABB4,extended,3C88AB85

@@ -1,13 +1,11 @@
-gametitle=The Incredibles - Rise of the Underminer (PAL-M) SLES-53474 F3AE68FC
+gametitle=The Incredibles - Rise of the Underminer (PAL-M) SLES-53473 F3AE68FC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=El_Patas
 description=Renders the game in 16:9 aspect ratio.
-patch=0,EE,00218F24,word,3C023F1C //3C023F00 Zoom
-patch=0,EE,00218F50,word,3C023F10 //3C023F40 Y-FOV
-//Hang fix by Prafull (Only needed for pcsx2, is not needed for the PS2)
-//patch=1,EE,001110E0,word,00000000 //40036000
+patch=0,EE,00218F24,word,3C023F1C
+patch=0,EE,00218F50,word,3C023F10
 
 [Remove Blackbars]
 author=PeterDelta

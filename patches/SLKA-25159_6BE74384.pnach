@@ -1,17 +1,13 @@
-gametitle=Astro Boy (K)(SLKA-25159)
+gametitle=Astro Boy Atom (NTSC-K) (SLKA-25159) 6BE74384
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,002cb550,word,3c013fd5 //3c013fa0 Fov
+patch=0,EE,0037f0d8,word,3c013ec0 //3c013f00 Zoom
 
-//Widescreen hack 16:9
-
-//Fov
-//a03f013c 00688144 e4310b0c
-patch=1,EE,002cb550,word,3c013fd5 //3c013fa0
-
-//Zoom
-//003f013c 00088144 0000bfdf
-patch=1,EE,0037f0d8,word,3c013ec0 //3c013f00
-
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=0,EE,002CBE24,word,24050001

@@ -1,22 +1,20 @@
-gametitle=Final Fantasy X (PAL-Spain) [SCES-50494]
+gametitle=Final Fantasy X (PAL-S) SCES-50494 941BB7DE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-description=Final Fantasy X (PAL-S)
-
-// 16:9
+author=nemesis2000
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,001A5974,word,3C013F19
 patch=1,EE,001A5978,word,3421999A
-// Render-Fix
-patch=1,EE,0011973C,word,3C014440
+patch=1,EE,0011973C,word,3C014440 //Render-Fix
 patch=1,EE,00176144,word,3C01442B
-// Progressive Scan (haven't tested)
-//patch=1,EE,002D98B4,word,3C050000
+patch=1,EE,002649C4,word,3C013F40 //3C013f80 sphere grid
 
-//world map (haven't tested)
-//patch=1,EE,00263068,word,3c013f40 //3c013f80
+//(haven't tested)
+//patch=1,EE,002D98B4,word,3C050000 //Progressive Scan
+//patch=1,EE,00263068,word,3c013f40 //3c013f80 world map
 
-//sphere grid
-patch=1,EE,002649c4,word,3c013f40 //3c013f80
-
-
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect in the background of the battles.
+patch=1,EE,00580444,extended,00

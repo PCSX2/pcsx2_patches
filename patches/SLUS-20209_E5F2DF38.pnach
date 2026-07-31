@@ -2,12 +2,21 @@ gametitle=Midnight Club II (U)(SLUS-20209) E5F2DF38
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=PeterDelta
-description=Renders the game in 16:9 aspect ratio
-patch=1,EE,0042FAB4,word,3FC71C65 //3F955553
+author=Arapapa
+description=Renders the game in 16:9 aspect ratio.
+patch=0,EE,0036C884,word,3C013FE3
+patch=0,EE,0036C888,word,34218E35
 
 [60 FPS]
-author=asasega & PeterDelta
-description=Might need EE Overclock (130%).
-patch=1,EE,00106F64,word,24070001
-patch=1,EE,00432164,word,3C888889
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=0,EE,00106F64,word,24070001
+patch=0,EE,001FF094,word,3C013E19
+patch=0,EE,001FF0C0,word,3C010EC0
+patch=0,EE,003A01AC,word,3C013F00
+
+[Remove Brume]
+author=PeterDelta
+description=Removes background brume effect.
+patch=0,EE,00427E6C,word,00000000
+patch=0,EE,00427E78,word,00000000

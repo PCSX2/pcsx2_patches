@@ -1,9 +1,9 @@
-gametitle=BLACK (K)(SLKA-25372)
+gametitle=Black (NTSC-K) (SLKA-25372) 688E77CC
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=No.47 and 60 FPS by asasega (NTSC-K by Arapapa)
-
+author=No.47 and Arapapa
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,203BE8BC,extended,00000001
 patch=1,EE,204BC950,extended,00000001
 patch=1,EE,204BD98C,extended,00000001
@@ -22,10 +22,10 @@ patch=1,EE,205BCB90,extended,3F400000
 //patch=1,EE,20432278,extended,3f400000
 //patch=1,EE,20432370,extended,43aaaaaa //43a00000
 
-
 [60 FPS]
-//60 FPS by asasega
-patch=1,EE,1040dff4,extended,00000001
-patch=1,EE,2040ec2c,extended,3C888889
-
-
+author=Gabominated & PeterDelta
+description=Might need EE Overclock (180%).
+patch=1,EE,00125104,word,24040001
+patch=1,EE,001C5B88,word,24040001
+patch=1,EE,00102648,word,2404003C
+patch=1,EE,001250F0,word,2410003C

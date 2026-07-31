@@ -3,13 +3,15 @@ gametitle=Grand Theft Auto III (v1.40) (PAL-M) SLES-50330 021396FD
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Widescreen fix
-patch=1,EE,004179CC,extended,00000001
-patch=0,EE,00253D64,extended,3C0342AC
-patch=0,EE,0025ED20,extended,3C0242AC
-patch=0,EE,002620D0,extended,3C0242AC
-patch=0,EE,00318620,extended,3C02C2A6
-patch=0,EE,00318628,extended,3C024148
+description=Corrects display cropping to 16:9.
+patch=1,EE,004179CC,extended,01
+patch=0,EE,00253D64,extended,AC
+patch=0,EE,0025ED20,extended,AC
+patch=0,EE,002620D0,extended,AC
+patch=0,EE,002666F4,extended,AC
+patch=0,EE,002680B0,extended,AC
+patch=0,EE,00318620,extended,A6
+patch=0,EE,00318628,extended,48
 patch=0,EE,00296C8C,word,3C024270
 patch=0,EE,00296D40,word,3C024270
 patch=0,EE,0029704C,word,3C024270
@@ -53,20 +55,26 @@ patch=0,EE,002CD1BC,word,E42DC8F8
 
 [Remove Blackbars]
 author=PeterDelta
-description=Removes black bars in cutscenes
+description=Removes black bars in cutscenes.
 patch=0,EE,002474FC,word,3C029420
 patch=0,EE,0024753C,word,3C025400
 patch=0,EE,0027EA00,word,3C025380
 
 [Remove Blur]
 author=PeterDelta
-description=Removes the blur effect
+description=Removes the blur effect.
 patch=1,EE,004183CC,extended,00
 
 [50 FPS]
-author=Snake356
-description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
-patch=1,EE,2027D64C,extended,28420001
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=0,EE,0027FAD8,word,24420002
+patch=0,EE,0025870C,word,3C024320
+patch=0,EE,0025C14C,word,3C024320
+patch=0,EE,0025B010,word,3C024316
+patch=0,EE,0025B038,word,3C033D2A
+patch=0,EE,0025B8A0,word,3C024316
+patch=0,EE,0025B8C8,word,3C033D2A
 
 [480p Mode]
 gsinterlacemode=1

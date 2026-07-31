@@ -1,17 +1,13 @@
-gametitle=Batman - Rise of Shin Tzu (K)(SLKA-25102)
+gametitle=Batman - Rise of Sin Tzu (NTSC-K) SLKA-25102 E600953D
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Arapapa
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,004AF398,word,3F5A7408 //3f23d70a X-Fov
+patch=1,EE,00307F88,word,3C023F40 //3c023f00 Render Fix
 
-//Widescreen hack 16:9
-
-//X-Fov
-//0ad7233f 8fc2f53e
-patch=1,EE,004af398,word,3F5A7408 //3f23d70a
-
-//Render Fix
-//003f023c a80000c6
-patch=1,EE,00307f88,word,3c023f40 //3c023f00
-
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (130%).
+patch=1,EE,005346A0,word,00000001

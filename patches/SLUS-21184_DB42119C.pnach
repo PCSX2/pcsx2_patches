@@ -1,4 +1,4 @@
-gametitle=TMNT 3 Mutant Nightmare SLUS_211.84
+gametitle=TMNT 3 Mutant Nightmare (NTSC-U) SLUS-21184 DB42119C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
@@ -9,8 +9,6 @@ patch=1,EE,0028fdb8,extended,34428e38
 
 [60 FPS]
 author=Gabominated
-description=Unlocked at 60 FPS. Might need enable EE Overclock to be stable
-patch=1,EE,E0030002,extended,007491C4 //condition
-patch=1,EE,107491C4,extended,00000001 //04000002 //fps
-patch=1,EE,205B06F0,extended,3c888889 //3d088889 //speed
-patch=1,EE,205B06E8,extended,42700000 //41f00000
+description=Might need EE Overclock (130%).
+patch=0,EE,0026A7F4,word,24040001
+patch=0,EE,00264530,word,28A10002

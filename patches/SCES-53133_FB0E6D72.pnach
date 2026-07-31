@@ -3,7 +3,7 @@ gametitle=God of War (PAL-M) (SCES-53133) FB0E6D72
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Some Chump and PeterDelta
-description=Enable enhanced native widescreen. (Original widescreen uses vertical cropping; Enhanced expands the horizontal view.)
+description=Corrects display cropping to 16:9.
 //Ported from SCUS-97399 by nemesis2000
 patch=1,EE,00169268,word,3c013f11
 patch=1,EE,0016926c,word,342135fc

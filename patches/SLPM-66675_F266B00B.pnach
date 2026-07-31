@@ -56,6 +56,11 @@ patch=1,EE,00349E1C,extended,00000001
 patch=1,EE,2036B0F8,extended,3F800000
 patch=1,EE,2036EF20,extended,3F800000
 
+[Remove Blur]
+author=PeterDelta
+description=Removes the blur effect displayed in some cutscenes.
+patch=1,EE,004F4240,extended,00
+
 [Subtitles off]
 author=ElHecht
 description=Disable subtitles during scenes

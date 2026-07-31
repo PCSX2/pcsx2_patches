@@ -1,12 +1,16 @@
-gametitle=Spider-Man 2 (NTSC-U) (SLUS_207.76)
+gametitle=Spider-Man 2 (NTSC-U) SLUS-20776 E2DFCE12
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=flameofrecca + CRASHARKI
-description=Patches the game to run at 16:9 Widescreen Aspect Ratio. (Original pnach by flameofrecca; new zoom value, gauge_hero, some map and the unused boss hud codes found by CRASHARKI)
-patch=1,EE,2067a910,word,3f947ae1  //vertical fov 3f5eb852
-patch=1,EE,2067a908,word,3c28a2f7  //zoom value 3c0efa35
+author=flameofrecca, PeterDelta & CRASHARKI
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,2067A910,word,3F947AE1 //vertical fov 3f5eb852
+patch=1,EE,2067A908,word,3C28A2F7 //zoom value 3c0efa35
+patch=1,EE,00661DD8,word,3F860A8A //textures fix by PeterDelta
+patch=1,EE,00661DE8,word,3F860A8A
+patch=1,EE,00661DEC,word,3FA00000
 
+//new zoom value, gauge_hero, some map and the unused boss hud codes found by CRASHARKI
 //Map Screen HUD, text fixes
 //search the 206d**** address range for more map screen hud fixes
 //patch=1,EE,206d8034,word,425c0000  // map_igo_compass 42680000 - this breakes the compass in map menu

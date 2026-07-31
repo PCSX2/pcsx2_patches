@@ -1,21 +1,16 @@
-gametitle=Marc Ecko's Getting Up - Contents Under Pressure (K)(SLKA-25331)
+gametitle=Marc Ecko's Getting Up - Contents Under Pressure (NTSC-K) SLKA-25331 068558AE
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=sergx12 (NTSC-K by Arapapa)
-
-//Widescreen hack 16:9
-
+author=sergx12 & Arapapa
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,205677EC,word,3c023f40
 
-
-
-//Y-Fov
-//patch=1,EE,001cbb70,word,40200000 //3f892492
-
-//Zoom
-//3f000000 3e800000 00000000
-//patch=1,EE,20A333A0,extended,3f35c28f //3f000000
+//patch=1,EE,001cbb70,word,40200000 //3f892492 Y-Fov
+//patch=1,EE,20A333A0,extended,3f35c28f //3f000000 Zoom
 //patch=1,EE,20A333A4,extended,3f19999a //3e800000
 
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock at 130%.
+patch=1,EE,001CC728,word,00000001 //00000002

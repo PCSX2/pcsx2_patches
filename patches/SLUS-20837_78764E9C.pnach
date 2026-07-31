@@ -1,14 +1,14 @@
-gametitle=Ribbit King (SLUS_20837)
+gametitle=Ribbit King (NTSC-U) SLUS-20837 78764E9C
 
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=Sergx12
-description=Widescreen Hack Conversion
-
-// 16:9
+description=Renders the game in 16:9 aspect ratio.
 patch=1,EE,e0024500,extended,003C5132 //font fix for pcsx2 1.7+
 patch=1,EE,203C4C10,extended,3f280000 //gameplay
 patch=1,EE,203C5110,extended,43cddf6d // planet selection
 
-
-
+[60 FPS]
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=1,EE,0020BC80,word,00000001

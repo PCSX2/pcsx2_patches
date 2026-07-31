@@ -3,14 +3,15 @@ gametitle=Grand Theft Auto - Vice City (PAL-M) (v2.03) SLES-51061 CFCB0D20
 [Widescreen 16:9]
 gsaspectratio=16:9
 author=PeterDelta
-description=Widescreen fix
-patch=1,EE,004B17B8,extended,00000001
-patch=0,EE,0024343C,extended,3C0242AC
-patch=0,EE,00252BA0,extended,3C0242AC
-patch=0,EE,00254B94,extended,3C0242AC
-patch=0,EE,00255230,extended,3C0242AC
-patch=0,EE,0032C1A0,extended,3C044040
-patch=0,EE,0032C1F4,extended,3C0240D0
+description=Corrects display cropping to 16:9.
+patch=1,EE,004B17B8,extended,01
+patch=0,EE,0024343C,extended,AC
+patch=0,EE,00252BA0,extended,AC
+patch=0,EE,00254B94,extended,AC
+patch=0,EE,00255230,extended,AC
+patch=0,EE,002549D0,extended,AC
+patch=0,EE,0032C1A0,extended,40
+patch=0,EE,0032C1F4,extended,D0
 patch=0,EE,002918A4,word,3C044270
 patch=0,EE,00291478,word,3C024270
 patch=0,EE,002915A8,word,3C024270
@@ -49,15 +50,16 @@ patch=0,EE,002CE66C,word,E42DEAF8
 
 [Remove Blackbars]
 author=PeterDelta
-description=Removes black bars in cutscenes
+description=Removes black bars in cutscenes.
 patch=0,EE,00245C0C,word,3C02F380
 patch=0,EE,00245C7C,word,3C02F380
 patch=0,EE,002738C0,word,3C025380
 
 [50 FPS]
-author=Snake356
-description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
-patch=1,EE,20272AD4,extended,28420001
+author=PeterDelta
+description=Might need EE Overclock (180%).
+patch=0,EE,002749F4,word,24420002
+patch=0,EE,0025C70C,word,3C024320
 
 [480p Mode]
 gsinterlacemode=1

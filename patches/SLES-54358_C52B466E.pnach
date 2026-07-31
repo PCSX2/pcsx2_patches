@@ -1,0 +1,9 @@
+gametitle=Final Fantasy XII (PAL-S) SLES-54358 C52B466E
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000 & PeterDelta
+description=Corrects display cropping to 16:9.
+patch=0,EE,001803C8,word,3C013F80
+patch=0,EE,001803CC,word,34210000
+patch=0,EE,0033E714,word,3C020000

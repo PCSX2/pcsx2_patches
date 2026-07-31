@@ -1,12 +1,11 @@
-gametitle=Enthusia Professional Racing (J)(SLPM-65948)
+gametitle=Enthusia Professional Racing (NTSC-J) (SLPM-65948) 5637E95B
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=No.47
-
-//Widescreen hack 16:9
-
-patch=1,EE,20388D88,word,3F400000
+author=No.47 & PeterDelta
+description=Renders the game in 16:9 aspect ratio.
+patch=1,EE,00388D88,word,3F400000
+patch=1,EE,00388DA8,word,3F400000
 
 
 [No-Interlacing]
