@@ -6,11 +6,11 @@ author=ElHecht
 
 // enable widescreen mode in options (single player)
 patch=1,EE,e0010032,extended,001439f0 // check 001439f0 matches value xxxx0032
-patch=1,EE,201439fc,extended,00000100 // 00000000
+patch=1,EE,001439fd,extended,00000001 // 00000000
 
 // enable widescreen mode in options (multiplayer)
 patch=1,EE,e0010032,extended,001a58b0 // check 001a58b0 matches value xxxx0032
-patch=1,EE,201a58bc,extended,00000100 // 00000000
+patch=1,EE,001a58bd,extended,00000001 // 00000000
 
 
 // values to check for loop
