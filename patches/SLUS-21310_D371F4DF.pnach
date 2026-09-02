@@ -16,3 +16,7 @@ patch=1,EE,003c5900,word,c6600108
 patch=1,EE,003c5904,word,46010036
 
 
+[No Old Movie Filter / Disable Post-Processing]
+author=Teddy1991
+description=Disables screen grain, sepia, and old movie overlays.
+patch=1,EE,0067cee8,word,00000000
