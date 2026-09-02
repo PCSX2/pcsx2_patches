@@ -1,0 +1,12 @@
+gametitle=Ys V - Lost Kefin, Kingdom of Sand (English 1.1) (NTSC-J) SLPM-66360 09F7E99D
+
+[No-Interlacing]
+author=heavyjam
+description=Forces progressive output (SMODE2 INT=0) and removes the per-field half-line offset. Game logic still believes it is interlaced, which it requires to boot.
+gsinterlacemode=1
+patch=1,EE,00100694,word,24020002
+patch=1,EE,00100698,word,24020000
+patch=1,EE,0010073C,word,02401021
+patch=1,EE,00187234,word,0000382D
+patch=1,EE,00135898,word,0000382D
+patch=1,EE,00188940,word,0000902D
