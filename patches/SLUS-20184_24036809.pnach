@@ -14,9 +14,59 @@ author=kapdap
 patch=1,EE,00133D4C,word,00000000 // remove call to bhControlDoor
 patch=1,EE,00133D54,word,00000000 // remove door animation completed check
 
-[Skip Startup logos and warning]
-author=illusion
-patch=1,EE,001324D4,word,34640008
+[Skippable Startup Logos and Warning]
+author=JoeKoh27 + OpenAI
+description=Preserves system-data loading. Press START after the memory-card check to skip the remaining startup warnings and logos.
+
+// Restore vanilla startup state (the previous patch changes this to 34640008).
+patch=1,EE,001324D4,word,34640002
+
+// Route bhSysCallWarning through our small wrapper.
+patch=1,EE,001325E0,word,0C0C07C5
+
+// bhSysCallWarning:
+// return 0 = keep processing warnings
+// return 1 = vanilla completion -> Capcom/logo state (0x00300004)
+// return 2 = START-skip completion -> title/menu state (0x00300008)
+patch=1,EE,001325E8,word,10400006
+patch=1,EE,001325EC,word,00021080
+patch=1,EE,001325F0,word,3C040030
+patch=1,EE,001325F4,word,00822025
+patch=1,EE,001325F8,word,3C010030
+patch=1,EE,001325FC,word,8C233C90
+patch=1,EE,00132600,word,AC640054
+
+// Code cave at 0x00301F14.
+// This is 108 bytes of linker padding between Conv8to32 and __data_start in SLUS-20184.
+// It only allows the skip once Adv_FirstWarningMessage has reached state >= 15,
+// which is after CreateSysLoadScreen / ExecuteSysLoadScreen have finished handling system data.
+patch=1,EE,00301F14,word,27BDFFF0
+patch=1,EE,00301F18,word,AFBF000C
+patch=1,EE,00301F1C,word,3C080050
+patch=1,EE,00301F20,word,8D098824
+patch=1,EE,00301F24,word,2D29000F
+patch=1,EE,00301F28,word,15200008
+patch=1,EE,00301F2C,word,00000000
+patch=1,EE,00301F30,word,3C0A004F
+patch=1,EE,00301F34,word,8D4B7098
+patch=1,EE,00301F38,word,316B0800
+patch=1,EE,00301F3C,word,11600003
+patch=1,EE,00301F40,word,00000000
+patch=1,EE,00301F44,word,2409FFFF
+patch=1,EE,00301F48,word,AD098824
+patch=1,EE,00301F4C,word,0C0B0A78
+patch=1,EE,00301F50,word,00000000
+patch=1,EE,00301F54,word,10400007
+patch=1,EE,00301F58,word,00000000
+patch=1,EE,00301F5C,word,3C0A004F
+patch=1,EE,00301F60,word,8D4B7098
+patch=1,EE,00301F64,word,316B0800
+patch=1,EE,00301F68,word,11600002
+patch=1,EE,00301F6C,word,00000000
+patch=1,EE,00301F70,word,24020002
+patch=1,EE,00301F74,word,8FBF000C
+patch=1,EE,00301F78,word,03E00008
+patch=1,EE,00301F7C,word,27BD0010
 
 [Fix time in computers]
 // Custom sceScfGetLocalTimefromRTC. Adapted from configConvertToLocalTime in PS2SDK.
