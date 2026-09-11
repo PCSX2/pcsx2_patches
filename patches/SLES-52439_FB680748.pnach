@@ -1,4 +1,6 @@
-gametitle=The Suffering PAL (SLES_524.39) FB680748
+gametitle=The Suffering * PAL-E-I-S * SLES-52439 * FB680748
+// same CRC as SLES-51693.
+// valid for discs with same CRC.
 
 [Widescreen 16:9]
 gsaspectratio=16:9

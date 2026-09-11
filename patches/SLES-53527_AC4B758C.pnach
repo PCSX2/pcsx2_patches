@@ -1,4 +1,5 @@
-gametitle=The Suffering: Ties That Bind (PAL-M) (SLES_535.27) AC4B758C
+gametitle=The Suffering: Ties That Bind * PAL-E-I-S * SLES-53527 * AC4B758C
+// valid for discs with same CRC.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
