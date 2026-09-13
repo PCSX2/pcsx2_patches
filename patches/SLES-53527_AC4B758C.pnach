@@ -1,4 +1,5 @@
 gametitle=The Suffering: Ties That Bind * PAL-E-I-S * SLES-53527 * AC4B758C
+// same CRC as SLES-53626.
 // valid for discs with same CRC.
 
 [Widescreen 16:9]
