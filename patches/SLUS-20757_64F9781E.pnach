@@ -11,7 +11,6 @@ patch=1,EE,007C3880,word,3F400000 // 3F800000
 patch=1,EE,005A7C80,word,3F400000 // 3F800000
 
 //Game Play Render Fix
-patch=1,EE,007C3890,extended,44800000 //44000000
-patch=1,EE,007C3898,extended,40000000 //3f800000
-
+patch=1,EE,207C3890,extended,44800000 //44000000
+patch=1,EE,207C3898,extended,40000000 //3f800000
 
