@@ -22,3 +22,8 @@ description=SDTV 480p mode at start.
 patch=1,EE,00671CFC,word,3C050000
 patch=1,EE,00671D04,word,3C060050
 patch=1,EE,00671D0C,word,3C070001
+
+[Skip FMVs]
+author=xan1242
+description=Allows you to always skip FMVs by pressing Start.
+patch=1,EE,2040E7B4,extended,00000000
