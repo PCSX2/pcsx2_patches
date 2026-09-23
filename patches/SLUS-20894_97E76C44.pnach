@@ -22,3 +22,34 @@ patch=1,EE,002e0e4c,word,461e0842
 //patch=1,EE,002e0ef8,word,3c0135f6
 
 
+[Invert 3rd person X-axis]
+author=Nehalem
+description=Invert the camera X-axis while in third-person view
+patch=0,EE,00156268,extended,00000058
+patch=0,EE,00156370,extended,00000078
+patch=0,EE,0015647C,extended,00000018
+patch=0,EE,00156584,extended,00000038
+patch=0,EE,0015AD14,extended,00000058
+patch=0,EE,0015AE1C,extended,00000078
+patch=0,EE,0015AF28,extended,00000018
+patch=0,EE,0015B030,extended,00000038
+
+[Invert 3rd Person Y-axis]
+author=Nehalem
+description=Invert the camera Y-axis while in third-person view
+patch=0,EE,00156690,extended,000000D8
+patch=0,EE,00156798,extended,000000F0
+patch=0,EE,001568A4,extended,00000098
+patch=0,EE,001569AC,extended,000000B8
+patch=0,EE,0015B13C,extended,000000D8
+patch=0,EE,0015B244,extended,000000F0
+patch=0,EE,0015B350,extended,00000098
+patch=0,EE,0015B458,extended,000000B8
+
+[Invert 1st Person Y-axis]
+author=Nehalem
+description=Invert the camera Y-axis while aiming in first-person view
+patch=0,EE,00155ADC,extended,000000B8
+patch=0,EE,00155BE0,extended,000000D0
+patch=0,EE,00155CE8,extended,00000088
+patch=0,EE,00155DF0,extended,000000A0
