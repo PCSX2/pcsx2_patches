@@ -1,4 +1,51 @@
 gametitle=Mercenaries - Playground of Destruction (NTSC-U) (SLUS-20932)
+[Save Corruption Prevention]
+author=RagingLoony
+description=Prevents save corruption over long savegames by not saving vehicle telemetry
+//Save Table Overflow Prevention - telemetry-specific guard.
+//When serialized state usage reaches 0x3800, skips VehicleDrivenTime and VehicleTravelDistance save blocks.
+//All mission, Deck of 52, faction, money, collectible and other state serialization remains untouched.
+
+// Hook VehicleDrivenTime serialization block.
+// Original at 0x00302DB0: lui a1,0x004E
+// Replaced with jal telemetry_guard_drivetime; delay slot at 0x302DB4 remains original.
+patch=1,EE,00302DB0,word,0C113A84
+
+// Hook VehicleTravelDistance serialization block.
+// Original at 0x00302ECC: lui a1,0x004E
+// Replaced with jal telemetry_guard_distance; delay slot at 0x302ED0 remains original.
+patch=1,EE,00302ECC,word,0C1150D1
+
+// telemetry_guard_drivetime @ 0x0044EA10
+// s6 = serializer object
+// [s6+0x3008] = table base
+// [s6+0x300C] = current end pointer
+// if used >= 0x3800: jump to 0x302ECC (skip VehicleDrivenTime block)
+// else restore original lui a1,0x004E and return to 0x302DB8
+patch=1,EE,0044EA10,word,8EC8300C
+patch=1,EE,0044EA14,word,8EC93008
+patch=1,EE,0044EA18,word,01094023
+patch=1,EE,0044EA1C,word,2D083800
+patch=1,EE,0044EA20,word,15000003
+patch=1,EE,0044EA24,word,3C05004E
+patch=1,EE,0044EA28,word,080C0BB3
+patch=1,EE,0044EA2C,word,00000000
+patch=1,EE,0044EA30,word,03E00008
+patch=1,EE,0044EA34,word,00000000
+
+// telemetry_guard_distance @ 0x00454344
+// if used >= 0x3800: jump to 0x302FD0 (skip VehicleTravelDistance block)
+// else restore original lui a1,0x004E and return to 0x302ED4
+patch=1,EE,00454344,word,8EC8300C
+patch=1,EE,00454348,word,8EC93008
+patch=1,EE,0045434C,word,01094023
+patch=1,EE,00454350,word,2D083800
+patch=1,EE,00454354,word,15000003
+patch=1,EE,00454358,word,3C05004E
+patch=1,EE,0045435C,word,080C0BF4
+patch=1,EE,00454360,word,00000000
+patch=1,EE,00454364,word,03E00008
+patch=1,EE,00454368,word,00000000
 
 [Widescreen 16:9]
 gsaspectratio=16:9
