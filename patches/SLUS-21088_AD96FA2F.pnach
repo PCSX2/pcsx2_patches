@@ -9,11 +9,23 @@ author=Arapapa
 ///////////////////////////////////////////////////
 //Gameplay
 //abaaaa3f 00000000 00504347 01000000 (Memory Hack)
-patch=1,EE,205c5cfc,extended,3FE38E32 //3faaaaab fov
+patch=1,EE,205c5cfc,extended,3FE38E39 //3faaaaab fov
 
 //Start Menu and Left Status Bar (ELF Hack)
 //2044013c 00608144 f043013c 00688144
 patch=1,EE,00284638,word,3c014455 //3c014420
+
+[Widescreen 16:10]
+gsaspectratio=Stretch
+author=arapapa & KyuGG + pgert
+patch=1,EE,205c5cfc,extended,3FACCCCD
+patch=1,EE,00284638,word,3C014440
+
+[Widescreen 15:10]
+gsaspectratio=Stretch
+author=arapapa & KyuGG + pgert
+patch=1,EE,205c5cfc,extended,3FC00000
+patch=1,EE,00284638,word,3C014434
 
 [60 FPS]
 author=asasega
