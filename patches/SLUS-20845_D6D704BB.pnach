@@ -32,3 +32,20 @@ patch=0,EE,10679C0C,extended,000001C0
 patch=0,EE,1042983C,extended,240201C0
 patch=0,EE,10106858,extended,00000001
 patch=0,EE,203C0018,extended,080F000C
+
+[Ultrawide]
+gsaspectratio=43:18
+author=unmedius
+description=Ultrawide projection for 43:18
+patch=1,EE,003C4CE4,word,3F0EE23C
+patch=1,EE,003C4CF4,word,3C01003C
+patch=1,EE,003C4CF8,word,46010003
+patch=1,EE,003C4CFC,word,C4214CE4
+patch=1,EE,003C4D00,word,03E00008
+patch=1,EE,003C4D04,word,4601A083
+patch=1,EE,00310F4C,word,C6740330
+patch=1,EE,00310F54,word,C7A30048
+patch=1,EE,00310F60,word,E7A20050
+patch=1,EE,00310F64,word,C6620330
+patch=1,EE,001DCC34,word,8E440058
+patch=1,EE,001DCC40,word,E7A20040
