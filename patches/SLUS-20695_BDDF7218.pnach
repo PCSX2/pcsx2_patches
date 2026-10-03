@@ -1,0 +1,15 @@
+gametitle=Chaos Legion (NTSC-U) (SLUS-20695) BDDF7218 (Russian Fan Translation)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=nemesis2000
+description=Same patch as F3B0734E; the translated ELF is code-identical at all patched addresses.
+patch=1,EE,00242f4c,word,3c013f40
+patch=1,EE,00242f5c,word,4481d800
+patch=1,EE,00242f60,word,460fdec2
+patch=1,EE,00243064,word,3c0243ab
+patch=1,EE,00228064,word,3c023fab
+
+//FMV's fix
+patch=1,EE,00325684,word,3c026fb0
+patch=1,EE,00325594,word,241e77d0
