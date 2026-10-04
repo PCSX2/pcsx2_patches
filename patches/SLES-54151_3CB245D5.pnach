@@ -1,0 +1,44 @@
+gametitle=Let's Make a Soccer Team! (PAL-M5) [SLES-54151] (3CB245D5)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Nexxus-Drako
+description=Renders the 3D in 16:9 (Hor+). The 2D UI stays stretched.
+
+patch=0,EE,0012f9b0,word,03e0c82d
+patch=0,EE,0012f9b4,word,0c060fb0
+patch=0,EE,0012f9b8,word,00000000
+patch=0,EE,0012f9bc,word,16000003
+patch=0,EE,0012f9c0,word,00000000
+patch=0,EE,0012f9c4,word,0804beb6
+patch=0,EE,0012f9c8,word,00000000
+patch=0,EE,0012f9cc,word,03200008
+patch=0,EE,0012f9d0,word,00000000
+patch=0,EE,0012fa90,word,03e0c82d
+patch=0,EE,0012fa94,word,0c060fb0
+patch=0,EE,0012fa98,word,00000000
+patch=0,EE,0012fa9c,word,16000009
+patch=0,EE,0012faa0,word,8fb80060
+patch=0,EE,0012faa4,word,3c010013
+patch=0,EE,0012faa8,word,342f853c
+patch=0,EE,0012faac,word,130f0005
+patch=0,EE,0012fab0,word,342f85c4
+patch=0,EE,0012fab4,word,130f0003
+patch=0,EE,0012fab8,word,00000000
+patch=0,EE,0012fabc,word,0804beb6
+patch=0,EE,0012fac0,word,00000000
+patch=0,EE,0012fac4,word,03200008
+patch=0,EE,0012fac8,word,00000000
+patch=0,EE,0012fad8,word,3c010037
+patch=0,EE,0012fadc,word,8c219c30
+patch=0,EE,0012fae0,word,3c0f4380
+patch=0,EE,0012fae4,word,142f0005
+patch=0,EE,0012fae8,word,3c013f40
+patch=0,EE,0012faec,word,44810800
+patch=0,EE,0012faf0,word,c4800000
+patch=0,EE,0012faf4,word,46010002
+patch=0,EE,0012faf8,word,e4800000
+patch=0,EE,0012fafc,word,03200008
+patch=0,EE,0012fb00,word,00000000
+patch=0,EE,0018f900,word,0c04be6c
+patch=0,EE,0018f488,word,0c04bea4
