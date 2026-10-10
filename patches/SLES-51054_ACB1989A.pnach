@@ -14,6 +14,8 @@ patch=0,EE,00106F64,word,24070001
 patch=0,EE,001FFB3C,word,3C013E19
 patch=0,EE,001FFB68,word,3C010EC0
 patch=0,EE,003A0D3C,word,3C013F00
+//Reset time scale to 0.5 instead of 1.0 when a vehicle repair/reset effect ends (fixes 2x game speed after gas stations or crashed bikes)
+patch=0,EE,0020F784,word,3C013F00
 
 [NTSC Mode]
 author=PeterDelta
