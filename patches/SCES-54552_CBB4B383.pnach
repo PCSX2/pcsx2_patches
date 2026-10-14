@@ -15,9 +15,10 @@ patch=1,EE,001D4E2C,word,24060000 //02C23021 Top
 patch=1,EE,001D4E7C,word,240201C0 //00451021 Bottom
 
 [Remove Blackbars]
-author=El_Patas
+author=El_Patas, caribbeanwebdev
 description=Removes black bars in cutscenes
-patch=1,EE,00261FB4,word,3C020000 //3C023F80
+patch=1,EE,00279DE0,word,4480B000 //46006586 mov.s f22,f12 -> mtc1 zero,f22 (forces letterbox target amount to 0 for all callers)
+patch=1,EE,00279F20,word,10000090 //45010090 bc1t -> b (letterbox draw routine always takes its early-out, bars are never rendered)
 
 [50/60 FPS]
 author=Red-tv
