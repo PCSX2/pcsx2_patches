@@ -6,3 +6,49 @@ author=CRASHARKI
 description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
 patch=1,EE,203E06A4,word,00000001 //00000000 Widescreen
 //patch=1,EE,20534720,word,00000004 //00000002 Widescreen
+
+[Restore Quick Select]
+author=Crashz
+description=Restore the gadget quick select feature that existed in the Japanese release but was removed for NTSC
+// The if statement used in the original GQS functionality was left in but the 
+// scope of code was presumably IFDEF'd out to only return 1. 
+// We can leverage this redundant if statement to patch in a jump to a code 
+// cave mimicking the original GQS functionality. 
+patch=1,EE,202B4B10,extended,0C115FC0
+patch=1,EE,202B4B14,extended,00000000
+
+// Code Cave 1 - Mimic if statement check for if gadget button was pressed twice
+patch=1,EE,20457F00,extended,64010001
+patch=1,EE,20457F04,extended,1201000E // Branch Equals, jump to GQS Code Cave
+patch=1,EE,20457F08,extended,00000000
+patch=1,EE,20457F0C,extended,080AD2C6 // Not GQS action, return to original code
+patch=1,EE,20457F10,extended,00000000
+
+// Code Cave 2 - Original Gadget Quick Select Asm
+patch=1,EE,20457F40,extended,0040882D
+patch=1,EE,20457F44,extended,82230B3E
+patch=1,EE,20457F48,extended,14600016
+patch=1,EE,20457F4C,extended,24020001
+patch=1,EE,20457F50,extended,3C02003B
+patch=1,EE,20457F54,extended,2404001E
+patch=1,EE,20457F58,extended,8C43A518
+patch=1,EE,20457F5C,extended,10640011
+patch=1,EE,20457F60,extended,24020001
+patch=1,EE,20457F64,extended,8E230B0C
+patch=1,EE,20457F68,extended,00121080
+patch=1,EE,20457F6C,extended,AE320B10
+patch=1,EE,20457F70,extended,00511021
+patch=1,EE,20457F74,extended,AE230B6C
+patch=1,EE,20457F78,extended,24050001
+patch=1,EE,20457F7C,extended,AE320B0C
+patch=1,EE,20457F80,extended,24040002
+patch=1,EE,20457F84,extended,AE200B60
+patch=1,EE,20457F88,extended,8C430AFC
+patch=1,EE,20457F8C,extended,AE200B64
+patch=1,EE,20457F90,extended,A2250B3E
+patch=1,EE,20457F94,extended,AE230B70
+patch=1,EE,20457F98,extended,A2200B3F
+patch=1,EE,20457F9C,extended,0C06DE70
+patch=1,EE,20457FA0,extended,AE230B74
+patch=1,EE,20457FA4,extended,080AD318
+patch=1,EE,20457FA8,extended,0000102D
