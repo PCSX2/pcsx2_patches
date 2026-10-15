@@ -1,0 +1,27 @@
+gametitle=Panzer Front Ausf.B (E)(SLES-52984)
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=murkz (AI-assisted RE)
+
+//Hor+ 16:9. Two parts.
+//
+//1) The 3-D projection. The projection builder at 0x001106A0 combines an x factor and a
+//y factor; every caller passes y=1.95 and x=1.0, so that pair encodes the screen aspect.
+//Taking x from 1.0 to 0.75 gives 0.75:1.95 = 1:2.6, widening the horizontal field of view
+//by exactly 4/3. The vertical FOV, the NDC->GS screen matrix and the framebuffer extent
+//are all untouched, and the 2-D HUD is pixel-identical. Each byte is the low byte of a
+//lui whose destination register is dead after the single mtc1 that consumes it.
+patch=1,EE,0016E6DC,byte,40
+patch=1,EE,0016EA8C,byte,40
+patch=1,EE,0016EFB0,byte,40
+patch=1,EE,0016F22C,byte,40
+patch=1,EE,0016F5D4,byte,40
+patch=1,EE,002270DC,byte,40
+
+//2) The sky / backdrop camera, which is separate and derives its own FOV from the
+//horizontal half-extent 256.0 loaded at 0x0017308C. 256.0 -> 340.0 is 256*4/3 = 341.33
+//to within 0.4%, widening that camera by the same 4/3 so the sky still covers the frame.
+//Without this line the outer ~8.3% of sky on each side is never drawn and shows the
+//framebuffer clear colour as a pale blue band in the upper corners.
+patch=1,EE,0017308C,byte,AA
