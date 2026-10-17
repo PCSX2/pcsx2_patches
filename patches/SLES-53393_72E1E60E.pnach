@@ -6,4 +6,9 @@ author=paul_met
 description=Widescreen Hack
 patch=1,EE,2057C814,extended,3F100000 // 3F400000
 
-
+[Fix freeze after Beowulf (Act II)]
+author=TizianoMazzetti
+description=Fixes the hang after "Level Complete" when defeating Beowulf. Render queues are allocated with 800 entries and filled with no bounds check; in that fight one reaches ~880 and corrupts the heap. Raises the capacity to 2048.
+patch=1,EE,0026E580,word,24020800
+patch=1,EE,0026F218,word,24020800
+patch=1,EE,0026F850,word,24020800
