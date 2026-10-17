@@ -1,0 +1,17 @@
+gametitle=Quake III - Revolution (USA) (SLUS-20167, A56A0525)
+
+[Ultrawide]
+gsaspectratio=43:18
+author=unmedius
+description=Ultrawide projection for 43:18
+patch=1,EE,002AF4D0,word,3C014018
+patch=1,EE,002AF4D4,word,3421E38E
+patch=1,EE,002AF508,word,3C014018
+patch=1,EE,002AF50C,word,3421E38E
+patch=1,EE,0027E9A0,word,3C014316
+patch=1,EE,0027E9A4,word,44816000
+patch=1,EE,0027E9A8,word,3C014334
+patch=1,EE,0027E9AC,word,4481A000
+patch=1,EE,0027E9B0,word,3C014049
+patch=1,EE,0027E9B4,word,34210FDB
+patch=1,EE,0027E9B8,word,4481A800
