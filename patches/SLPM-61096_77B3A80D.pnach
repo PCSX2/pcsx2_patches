@@ -1,0 +1,12 @@
+gametitle=Fu-un Bakumatsu-den [Demo] (J) (SLPM-61096)
+
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,101386E0,extended,0000
+patch=0,EE,10138734,extended,0000
+patch=0,EE,10138AE8,extended,0000
+patch=0,EE,10138AEC,extended,0000
+patch=0,EE,10138B50,extended,0000
+patch=0,EE,10138B54,extended,0000

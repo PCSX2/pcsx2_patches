@@ -1,0 +1,10 @@
+gametitle=Kaido Battle: Nikko, Haruna, Rokko, Hakone [Demo] (J) (SLPM-60195)
+
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,10134D0C,extended,0000
+patch=0,EE,10134D14,extended,0000
+patch=0,EE,10134D38,extended,0000
+patch=0,EE,10134D44,extended,0000

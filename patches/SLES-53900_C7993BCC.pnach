@@ -21,3 +21,14 @@ patch=1,EE,003FDFD2,short,3F6F //3F80 //3D General
 patch=1,EE,003FF112,short,3F6F //3F80 //3D Reflections
 patch=1,EE,00400252,short,3F6F //3F80 //3D Mirror
 //patch=1,EE,003FE022,short,3F80 //3F80 //3D Weather
+
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,1019C8DC,extended,0000
+patch=0,EE,1019C930,extended,0000
+patch=0,EE,1019C468,extended,0000
+patch=0,EE,1019C474,extended,0000
+patch=0,EE,1019C4D0,extended,0000
+patch=0,EE,1019C4D4,extended,0000

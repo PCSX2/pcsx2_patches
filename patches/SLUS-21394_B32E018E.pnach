@@ -28,6 +28,17 @@ patch=1,EE,003F6B12,short,3F6F //3F80 //3D Reflections
 patch=1,EE,003F7C52,short,3F6F //3F80 //3D Mirror
 //patch=1,EE,003F5A22,short,3F80 //3F80 //3D Weather
 
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,1019CA8C,extended,0000
+patch=0,EE,1019CAE0,extended,0000
+patch=0,EE,1019C618,extended,0000
+patch=0,EE,1019C624,extended,0000
+patch=0,EE,1019C680,extended,0000
+patch=0,EE,1019C684,extended,0000
+
 [Convert units from mph to km/h]
 description=Changes the ingame speedometer and gear menu to km/h
 author=JakeMR2
