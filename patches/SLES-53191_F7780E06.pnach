@@ -32,3 +32,81 @@ patch=0,EE,101491E8,extended,0000
 patch=0,EE,101491EC,extended,0000
 patch=0,EE,10149258,extended,0000
 patch=0,EE,10149260,extended,0000
+
+[Autoboot in PAL60]
+description=Boots in PAL60/NTSC mode automatically.
+author=Silent
+
+patch=0,EE,1017BE94,extended,0000
+// Skip the PAL/NTSC select screen
+patch=0,EE,202FD344,extended,1000006D // b 0x002FD4FC
+patch=0,EE,202FD348,extended,0000202D // move a0, zero
+
+[Select Language: English]
+description=Skips the language selection screen and picks English.
+author=Silent
+
+patch=0,EE,202FD598,extended,8F828D68 // lw v0, HomeMenuManager::myManager
+patch=0,EE,202FD59C,extended,8C420024 // lw v0, 0x24(v0)
+patch=0,EE,202FD5B0,extended,080444DB // j 0x0011136C
+patch=0,EE,2011136C,extended,24420001 // addiu v0, 1
+patch=0,EE,20111370,extended,2C420001 // sltiu v0, 1
+patch=0,EE,20111374,extended,AC820010 // sw v0, 0x10(a0)
+patch=0,EE,20111378,extended,03E00008 // jr ra
+patch=0,EE,2011137C,extended,AC820014 // sw v0, 0x14(a0)
+
+[Select Language: French]
+description=Skips the language selection screen and picks French.
+author=Silent
+
+patch=0,EE,202FD598,extended,8F828D68 // lw v0, HomeMenuManager::myManager
+patch=0,EE,202FD59C,extended,8C420024 // lw v0, 0x24(v0)
+patch=0,EE,202FD5B0,extended,080444DB // j 0x0011136C
+patch=0,EE,2011136C,extended,24420001 // addiu v0, 1
+patch=0,EE,20111370,extended,2C420001 // sltiu v0, 1
+patch=0,EE,20111374,extended,AC820010 // sw v0, 0x10(a0)
+patch=0,EE,20111378,extended,03E00008 // jr ra
+patch=0,EE,2011137C,extended,AC820014 // sw v0, 0x14(a0)
+patch=0,EE,1017BED8,extended,0005 // Select French
+
+[Select Language: German]
+description=Skips the language selection screen and picks German.
+author=Silent
+
+patch=0,EE,202FD598,extended,8F828D68 // lw v0, HomeMenuManager::myManager
+patch=0,EE,202FD59C,extended,8C420024 // lw v0, 0x24(v0)
+patch=0,EE,202FD5B0,extended,080444DB // j 0x0011136C
+patch=0,EE,2011136C,extended,24420001 // addiu v0, 1
+patch=0,EE,20111370,extended,2C420001 // sltiu v0, 1
+patch=0,EE,20111374,extended,AC820010 // sw v0, 0x10(a0)
+patch=0,EE,20111378,extended,03E00008 // jr ra
+patch=0,EE,2011137C,extended,AC820014 // sw v0, 0x14(a0)
+patch=0,EE,1017BED8,extended,0002 // Select German
+
+[Select Language: Italian]
+description=Skips the language selection screen and picks Italian.
+author=Silent
+
+patch=0,EE,202FD598,extended,8F828D68 // lw v0, HomeMenuManager::myManager
+patch=0,EE,202FD59C,extended,8C420024 // lw v0, 0x24(v0)
+patch=0,EE,202FD5B0,extended,080444DB // j 0x0011136C
+patch=0,EE,2011136C,extended,24420001 // addiu v0, 1
+patch=0,EE,20111370,extended,2C420001 // sltiu v0, 1
+patch=0,EE,20111374,extended,AC820010 // sw v0, 0x10(a0)
+patch=0,EE,20111378,extended,03E00008 // jr ra
+patch=0,EE,2011137C,extended,AC820014 // sw v0, 0x14(a0)
+patch=0,EE,1017BED8,extended,0003 // Select Italian
+
+[Select Language: Spanish]
+description=Skips the language selection screen and picks Spanish.
+author=Silent
+
+patch=0,EE,202FD598,extended,8F828D68 // lw v0, HomeMenuManager::myManager
+patch=0,EE,202FD59C,extended,8C420024 // lw v0, 0x24(v0)
+patch=0,EE,202FD5B0,extended,080444DB // j 0x0011136C
+patch=0,EE,2011136C,extended,24420001 // addiu v0, 1
+patch=0,EE,20111370,extended,2C420001 // sltiu v0, 1
+patch=0,EE,20111374,extended,AC820010 // sw v0, 0x10(a0)
+patch=0,EE,20111378,extended,03E00008 // jr ra
+patch=0,EE,2011137C,extended,AC820014 // sw v0, 0x14(a0)
+patch=0,EE,1017BED8,extended,0004 // Select Spanish
