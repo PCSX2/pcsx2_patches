@@ -1,0 +1,25 @@
+gametitle=NeoGeo Battle Coliseum (PAL) (SLES-54395)
+
+[Loading Time Fix]
+author=Immersion95
+description=Prevents unusually long or endless loading screens.
+// Simple explanation: when the game cannot check the disc status immediately,
+// it now waits instead of restarting the same read over and over.
+// Technical details: sceCdGetError() is handled as three different results.
+// -1 waits, 0 completes the load, and real positive CDVD errors
+// keep the original retry behavior.
+
+patch=1,EE,20200BA8,extended,080AEA35 // Jump to tri-state dispatcher in existing ELF padding
+patch=1,EE,20200BAC,extended,00000000 // Neutralize original branch delay slot
+
+// Existing zero-filled code padding at 0x002BA8D4
+patch=1,EE,202BA8D4,extended,04400005 // bltz v0, temporary_failure
+patch=1,EE,202BA8D8,extended,00000000
+patch=1,EE,202BA8DC,extended,10400005 // beqz v0, read_success
+patch=1,EE,202BA8E0,extended,00000000
+patch=1,EE,202BA8E4,extended,080802EC // Positive CDVD error: original retry path at 0x00200BB0
+patch=1,EE,202BA8E8,extended,00000000
+patch=1,EE,202BA8EC,extended,08080366 // Temporary query failure (-1): return/wait at 0x00200D98
+patch=1,EE,202BA8F0,extended,00000000
+patch=1,EE,202BA8F4,extended,08080320 // No error: normal completion path at 0x00200C80
+patch=1,EE,202BA8F8,extended,00000000
