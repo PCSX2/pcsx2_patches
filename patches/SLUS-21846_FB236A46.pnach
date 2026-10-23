@@ -32,4 +32,7 @@ patch=0,EE,100d91a0,extended,00000000
 //patch=1,EE,20ED1A68,word,43E00000
 //patch=1,EE,20ED1A58,word,00000000
 
-
+[Skip FMVs]
+author=xan1242
+description=Allows you to always skip FMVs by pressing Start.
+patch=1,EE,2040E767,extended,00000000
