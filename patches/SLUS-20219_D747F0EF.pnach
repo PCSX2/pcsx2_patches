@@ -16,8 +16,8 @@ patch=1,EE,003cd7fc,word,3f400000
 author=Souzooka
 description=Removes the flash and fog effect when firing with the Guncon controller.
 // Sudden white flash
-patch=0,EE,20126EF0,extended,03E00008
-patch=0,EE,20126EF4,extended,00000000
+patch=0,EE,20120328,extended,03E00008 // jr ra  // Stub guncon2 flash function
+patch=0,EE,2012032C,extended,00000000 // nop
 
 [Co-op 60FPS]
 author=GonkDroid99
