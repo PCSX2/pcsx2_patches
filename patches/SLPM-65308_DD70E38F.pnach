@@ -14,4 +14,11 @@ author=Tokman5
 //No Interlace
 patch=1,EE,00131664,word,34020000 //DC221000
 
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
 
+patch=0,EE,10132448,extended,0000
+patch=0,EE,10132454,extended,0000
+patch=0,EE,101323F4,extended,0000
+patch=0,EE,101323FC,extended,0000

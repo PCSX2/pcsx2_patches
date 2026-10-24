@@ -15,3 +15,14 @@ patch=1,EE,004555D2,short,3F40 //3F80 //3D General
 gsaspectratio=10:7
 author=val
 patch=1,EE,004555D2,short,3F6F //3F80 //3D General
+
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,1013B440,extended,0000
+patch=0,EE,1013B494,extended,0000
+patch=0,EE,1013B858,extended,0000
+patch=0,EE,1013B85C,extended,0000
+patch=0,EE,1013B8C8,extended,0000
+patch=0,EE,1013B8D0,extended,0000

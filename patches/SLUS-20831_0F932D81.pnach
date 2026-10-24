@@ -13,6 +13,15 @@ description=Attempts to disable interlaced offset rendering.
 gsinterlacemode=1
 patch=1,EE,20131684,extended,00000000
 
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,10132498,extended,0000
+patch=0,EE,101324A4,extended,0000
+patch=0,EE,10132444,extended,0000
+patch=0,EE,1013244C,extended,0000
+
 [Wanderers Fix]
 author=Kinglink
 description=Reduce Exotic Butterfly and Whirlwind Fanfare's Credit(CP) requirements by 100.
