@@ -1,0 +1,10 @@
+gametitle=Shutokou Battle 01 [Demo] (J) (SLPM-60206)
+
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,10132428,extended,0000
+patch=0,EE,10132434,extended,0000
+patch=0,EE,101323D4,extended,0000
+patch=0,EE,101323DC,extended,0000

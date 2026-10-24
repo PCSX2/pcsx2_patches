@@ -1,0 +1,12 @@
+gametitle=Kaidou Battle 2: Chain Reaction [Demo] (J) (SLPM-60228)
+
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,1014D9C0,extended,0000
+patch=0,EE,1014DA14,extended,0000
+patch=0,EE,1014D288,extended,0000
+patch=0,EE,1014D28C,extended,0000
+patch=0,EE,1014D2F0,extended,0000
+patch=0,EE,1014D2F4,extended,0000

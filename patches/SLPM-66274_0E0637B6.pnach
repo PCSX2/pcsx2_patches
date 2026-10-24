@@ -9,4 +9,13 @@ author=Arapapa
 //803f023c 4000a2af 80bf023c
 patch=1,EE,0014a050,word,3c023f40 //3c023f80 X-Fov
 
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
 
+patch=0,EE,1014FA1C,extended,0000
+patch=0,EE,1014FA70,extended,0000
+patch=0,EE,1014FE48,extended,0000
+patch=0,EE,1014FE54,extended,0000
+patch=0,EE,1014FEB0,extended,0000
+patch=0,EE,1014FEB4,extended,0000

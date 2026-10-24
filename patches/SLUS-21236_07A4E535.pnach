@@ -22,6 +22,15 @@ patch=1,EE,003BDDCE,short,3F6F //3F80 //3D Reflections
 patch=1,EE,003BE38E,short,3F6F //3F80 //3D Mirror
 patch=1,EE,003BFA8E,short,3F6F //3F80 //3D Weather
 
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,101086C8,extended,0000
+patch=0,EE,101086D4,extended,0000
+patch=0,EE,10108700,extended,0000
+patch=0,EE,10108708,extended,0000
+
 [Japanese Soundtrack]
 description=Fixes the music assignments to match Kaido Battle, corrects Music Test using the incorrect track names and missing the last 2 tracks.
 author=Silent
