@@ -30,3 +30,16 @@ patch=1,EE,003BE7A4,word,00000001
 author=Gabominated
 description=No blur while reloading weapons.
 patch=1,EE,005719D4,word,00000000
+
+[Ultrawide]
+gsaspectratio=43:18
+author=unmedius
+description=Ultrawide projection for 43:18
+patch=1,EE,003BE83C,word,00000001
+patch=1,EE,004BC150,word,00000001
+patch=1,EE,004BD18C,word,00000001
+patch=1,EE,004CA554,word,4018E38E
+patch=1,EE,004CA5F0,word,3FAAAAAB
+patch=1,EE,004CA5F4,word,4018E38E
+patch=1,EE,004CA694,word,4018E38E
+patch=1,EE,005BC390,word,3F0EE23C
