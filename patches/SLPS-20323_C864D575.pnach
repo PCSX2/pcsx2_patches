@@ -1,0 +1,6 @@
+gametitle=Pochi to Nyaa (NTSC-J) (SLPS-20323)
+
+[Stereo Option Fix]
+description=Fixes the audio being stuck on Mono even when set to Stereo in the options menu.
+author=Danhanado
+patch=0,EE,0013D498,word,2410FF80
