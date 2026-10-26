@@ -21,3 +21,166 @@ patch=1,EE,003BC6CE,short,3F6F //3F80 //3D General
 patch=1,EE,003BDDCE,short,3F6F //3F80 //3D Reflections
 patch=1,EE,003BE38E,short,3F6F //3F80 //3D Mirror
 patch=1,EE,003BFA8E,short,3F6F //3F80 //3D Weather
+
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,101086C8,extended,0000
+patch=0,EE,101086D4,extended,0000
+patch=0,EE,10108700,extended,0000
+patch=0,EE,10108708,extended,0000
+
+[Japanese Soundtrack]
+description=Fixes the music assignments to match Kaido Battle, corrects Music Test using the incorrect track names and missing the last 2 tracks.
+author=Silent
+
+// Fix offset track assignments
+patch=0,EE,101D47C0,extended,000D // Conquest Menu (Night)
+patch=0,EE,101D47D4,extended,000E // Parking Lot (Night)
+patch=0,EE,101658BC,extended,0015 // Lose
+patch=0,EE,10165930,extended,0015 // Lose
+patch=0,EE,10165DC4,extended,0016 // Slasher Intro
+patch=0,EE,10165DCC,extended,0018 // Emotional/Drift King Intro
+patch=0,EE,10165CC8,extended,0014 // Tricker/Tricky Intro
+patch=0,EE,10165D14,extended,001A // Replay (Night)
+patch=0,EE,10165D7C,extended,000F // Race (Night) range start
+patch=0,EE,10165D84,extended,0013 // Race (Night) range end
+patch=0,EE,10165DD4,extended,0017 // Slasher Battle
+patch=0,EE,10165DA8,extended,0019 // Emotional/Drift King Battle
+
+// Fix boss battles forcing regular Race Night music
+patch=0,EE,2022198C,extended,00000000
+
+// Move 'Bro.' and 'Sis.' from IDs 26/27 to 28/29 (like in KB1), so 'Deadly' and 'Going home' can play
+patch=0,EE,1019C360,extended,001F
+patch=0,EE,101654AC,extended,001F
+patch=0,EE,101658FC,extended,001F
+patch=0,EE,1016595C,extended,001F
+patch=0,EE,101D1684,extended,001F
+patch=0,EE,10138D9C,extended,001F
+patch=0,EE,1019C274,extended,001F
+patch=0,EE,101C1208,extended,001F
+patch=0,EE,101C7A44,extended,001F
+patch=0,EE,101C79DC,extended,001F
+patch=0,EE,101D0408,extended,001F
+patch=0,EE,101D4A80,extended,001F
+patch=0,EE,101678B4,extended,001F
+patch=0,EE,10166B30,extended,001F
+patch=0,EE,101663F4,extended,001F
+patch=0,EE,10165C3C,extended,001F
+patch=0,EE,10165CD0,extended,001F
+patch=0,EE,10165DBC,extended,001F
+patch=0,EE,1019C320,extended,001C
+patch=0,EE,1019C36C,extended,001C
+patch=0,EE,101C12F4,extended,001C
+patch=0,EE,101678A8,extended,001C
+patch=0,EE,101D48EC,extended,001C
+patch=0,EE,101D4928,extended,001C
+patch=0,EE,101D4800,extended,001C // Cruise Day
+patch=0,EE,101D4808,extended,001C // Cruise Day
+patch=0,EE,101D4810,extended,001D // Cruise Night
+patch=0,EE,10167214,extended,FFE4
+patch=0,EE,1016747C,extended,FFE4
+
+// Extend the music player to include extra 2 tracks
+patch=0,EE,101C79AC,extended,001E
+patch=0,EE,101C7980,extended,001E
+patch=0,EE,101C7988,extended,001D
+patch=0,EE,1022E2B4,extended,0018 // Grow the array size
+patch=0,EE,1022E308,extended,0018
+
+// Fix the music player using early? track names
+// This patch rewrites all the names, even if they already existed in the binary,
+// as this way it's easier to fit them in memory
+patch=0,EE,203AEF38,extended,65756C42 // Blue Dream
+patch=0,EE,203AEF3C,extended,65724420
+patch=0,EE,203AEF40,extended,00006D61
+patch=0,EE,203AEF48,extended,766C6953 // Silver Surfer
+patch=0,EE,203AEF4C,extended,53207265
+patch=0,EE,203AEF50,extended,65667275
+patch=0,EE,203AEF54,extended,00000072
+patch=0,EE,203AEF58,extended,72617053 // Spark
+patch=0,EE,203AEF5C,extended,0000006B
+patch=0,EE,203AEF60,extended,65736142 // Baseball Kids
+patch=0,EE,203AEF64,extended,6C6C6162
+patch=0,EE,203AEF68,extended,64694B20
+patch=0,EE,203AEF6C,extended,00000073
+patch=0,EE,203AEF70,extended,6C6C6548 // Hell Out Of Here
+patch=0,EE,203AEF74,extended,74754F20
+patch=0,EE,203AEF78,extended,20664F20
+patch=0,EE,203AEF7C,extended,65726548
+patch=0,EE,203AEF80,extended,00000000
+patch=0,EE,203AEF88,extended,676E6142 // Banger
+patch=0,EE,203AEF8C,extended,00007265
+patch=0,EE,203AEF90,extended,65646F52 // Rodeo Drive
+patch=0,EE,203AEF94,extended,7244206F
+patch=0,EE,203AEF98,extended,00657669
+patch=0,EE,203AEFA0,extended,20756F59 // You Know
+patch=0,EE,203AEFA4,extended,776F6E4B
+patch=0,EE,203AEFA8,extended,00000000
+patch=0,EE,203AEFB0,extended,696E6156 // Vanish Into
+patch=0,EE,203AEFB4,extended,49206873
+patch=0,EE,203AEFB8,extended,006F746E
+patch=0,EE,203AEFC0,extended,7373694D // Miss Shift
+patch=0,EE,203AEFC4,extended,69685320
+patch=0,EE,203AEFC8,extended,00007466
+patch=0,EE,203AEFD0,extended,73757254 // Trust NO One
+patch=0,EE,203AEFD4,extended,4F4E2074
+patch=0,EE,203AEFD8,extended,656E4F20
+patch=0,EE,203AEFDC,extended,00000000
+patch=0,EE,203AEFE0,extended,65766F4C // Lovely Smashin'
+patch=0,EE,203AEFE4,extended,5320796C
+patch=0,EE,203AEFE8,extended,6873616D
+patch=0,EE,203AEFEC,extended,00276E69
+patch=0,EE,203AF000,extended,7373694D // Mission
+patch=0,EE,203AF004,extended,006E6F69
+patch=0,EE,203AF008,extended,74746F47 // Gotta Goin' on
+patch=0,EE,203AF00C,extended,6F472061
+patch=0,EE,203AF010,extended,20276E69
+patch=0,EE,203AF014,extended,00006E6F
+patch=0,EE,203AF018,extended,736F6847 // Ghostly
+patch=0,EE,203AF01C,extended,00796C74
+patch=0,EE,203AF020,extended,69617254 // Trail Off
+patch=0,EE,203AF024,extended,664F206C
+patch=0,EE,203AF028,extended,00000066
+patch=0,EE,203AF030,extended,5A4E4142 // BANZAI Robo
+patch=0,EE,203AF034,extended,52204941
+patch=0,EE,203AF038,extended,006F626F
+patch=0,EE,203AF040,extended,6C776F48 // Howl
+patch=0,EE,203AF044,extended,00000000
+patch=0,EE,003AF04E,extended,61 // Meifumadou (typo)
+patch=0,EE,203AF230,extended,6F727950 // Pyro Mania
+patch=0,EE,203AF234,extended,6E614D20
+patch=0,EE,203AF238,extended,00006169
+patch=0,EE,203AF240,extended,74696157 // Waiting
+patch=0,EE,203AF244,extended,00676E69
+patch=0,EE,203AF078,extended,64616544 // Deadly
+patch=0,EE,203AF07C,extended,0000796C
+
+// Patch the array entries
+patch=0,EE,2039FA24,extended,003AEF38
+patch=0,EE,2039FA28,extended,003AEF48
+patch=0,EE,2039FA2C,extended,003AEF58
+patch=0,EE,2039FA30,extended,003AEF60
+patch=0,EE,2039FA34,extended,003AEF70
+patch=0,EE,2039FA38,extended,003AEF88
+patch=0,EE,2039FA3C,extended,003AEF90
+patch=0,EE,2039FA40,extended,003AEFA0
+patch=0,EE,2039FA44,extended,003AEFB0
+patch=0,EE,2039FA48,extended,003AEFC0
+patch=0,EE,2039FA50,extended,003AEFE0
+patch=0,EE,2039FA54,extended,003AF000
+patch=0,EE,2039FA58,extended,003AF008
+patch=0,EE,2039FA5C,extended,003AF018
+patch=0,EE,2039FA60,extended,003AEFF0
+patch=0,EE,2039FA68,extended,003AF030
+patch=0,EE,2039FA6C,extended,003AF040
+patch=0,EE,2039FA70,extended,003AF230
+patch=0,EE,2039FA74,extended,003AF240
+patch=0,EE,2039FA78,extended,003AF048
+patch=0,EE,2039FA7C,extended,003AF058
+patch=0,EE,2039FA80,extended,003AF060
+patch=0,EE,2039FA84,extended,003AF068
+patch=0,EE,2039FA88,extended,003AF078
+patch=0,EE,2039FA8C,extended,003AF080

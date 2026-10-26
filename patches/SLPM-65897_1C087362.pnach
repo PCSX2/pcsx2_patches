@@ -25,3 +25,14 @@ author=val, igorciz777
 patch=1,EE,00167318,short,3F33 //3F40 //3D General
 patch=1,EE,0016783C,short,3F33 //3F40 //3D Reflections
 patch=1,EE,00167A58,short,3F33 //3F40 //3D Mirror
+
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,10152320,extended,0000
+patch=0,EE,10152374,extended,0000
+patch=0,EE,10152A18,extended,0000
+patch=0,EE,10152A1C,extended,0000
+patch=0,EE,10152A88,extended,0000
+patch=0,EE,10152A90,extended,0000

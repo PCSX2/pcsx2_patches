@@ -1,0 +1,10 @@
+gametitle=Shutokou Battle 01 (K) (SLKA-25084)
+
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
+
+patch=0,EE,10132EA8,extended,0000
+patch=0,EE,10132EB4,extended,0000
+patch=0,EE,10132E54,extended,0000
+patch=0,EE,10132E5C,extended,0000

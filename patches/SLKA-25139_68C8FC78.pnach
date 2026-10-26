@@ -7,4 +7,11 @@ author=Little Giant
 //16:9
 patch=1,EE,001474c0,word,3c023f40 //3c023f80
 
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
 
+patch=0,EE,1013B198,extended,0000
+patch=0,EE,1013B1A4,extended,0000
+patch=0,EE,1013B144,extended,0000
+patch=0,EE,1013B14C,extended,0000

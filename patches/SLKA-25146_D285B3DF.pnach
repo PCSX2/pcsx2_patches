@@ -9,4 +9,13 @@ description=Widescreen pnach by Arapapa
 //803f023c 4000a2af 80bf023c
 patch=1,EE,00149290,word,3c023f40 //3c023f80
 
+[Remove Blur]
+description=Removes a 1-line offset from the blurring effect, preserving the Depth of Field. Improves image clarity, especially when upscaling.
+author=Silent
 
+patch=0,EE,1014E440,extended,0000
+patch=0,EE,1014E494,extended,0000
+patch=0,EE,1014DD08,extended,0000
+patch=0,EE,1014DD0C,extended,0000
+patch=0,EE,1014DD70,extended,0000
+patch=0,EE,1014DD74,extended,0000
