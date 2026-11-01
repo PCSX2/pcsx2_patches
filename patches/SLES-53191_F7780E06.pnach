@@ -110,3 +110,10 @@ patch=0,EE,20111374,extended,AC820010 // sw v0, 0x10(a0)
 patch=0,EE,20111378,extended,03E00008 // jr ra
 patch=0,EE,2011137C,extended,AC820014 // sw v0, 0x14(a0)
 patch=0,EE,1017BED8,extended,0004 // Select Spanish
+
+[Raindrops In All Camera Modes]
+description=Makes on-screen rain droplets display in all camera modes.
+author=Silent
+
+patch=0,EE,201E4314,extended,00000000
+patch=0,EE,201E1BB8,extended,00000000

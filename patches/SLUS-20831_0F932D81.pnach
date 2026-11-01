@@ -22,6 +22,12 @@ patch=0,EE,101324A4,extended,0000
 patch=0,EE,10132444,extended,0000
 patch=0,EE,1013244C,extended,0000
 
+[Raindrops In All Camera Modes]
+description=Makes on-screen rain droplets display in all camera modes.
+author=Silent
+
+patch=0,EE,20190A44,extended,00000000
+
 [Wanderers Fix]
 author=Kinglink
 description=Reduce Exotic Butterfly and Whirlwind Fanfare's Credit(CP) requirements by 100.
