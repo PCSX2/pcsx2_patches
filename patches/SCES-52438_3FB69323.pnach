@@ -1,0 +1,115 @@
+gametitle=Gran Turismo 4 Prologue (PAL-M) SCES-52438 3FB69323
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Aero_
+description=Corrects the text aspect ratio when 16:9 is selected.
+patch=1,EE,204171A8,extended,0813F668 // j 004FD9A0
+patch=1,EE,204FD9A0,extended,3C09004F // lui t1,0x004F : Widescreen Mode 1st-Half of Memory Address
+patch=1,EE,204FD9A4,extended,3529312C // ori t1,0x312C : Widescreen Mode 2nd-Half of Memory Address
+patch=1,EE,204FD9A8,extended,812A0000 // lb t2,(t1)
+patch=1,EE,204FD9AC,extended,C65A0024 // lwc1 f26,0x24(s2)
+patch=1,EE,204FD9B0,extended,11400004 // beqz t2,0x004FD9C4 : Jumps if Widescreen Mode is Disabled
+patch=1,EE,204FD9B4,extended,3C013F40 // lui at,0x3F40 : Text Width 1st-Half of Float Value
+patch=1,EE,204FD9B8,extended,34210000 // ori at,0x0000 : Text Width 2nd-Half of Float Value
+patch=1,EE,204FD9BC,extended,4481A000 // mtc1 at,f20
+patch=1,EE,204FD9C0,extended,4614D682 // mul.s f26, f26, f20
+patch=1,EE,204FD9C4,extended,08105C6B // j 004171AC
+patch=1,EE,2038AE50,extended,00000000 // nop
+
+[No-Interlacing]
+gsinterlacemode=1
+author=Silent
+description=A code disabling interlacing in the game, resulting in a sharper image.
+patch=1,EE,D04FA620,extended,00000002
+patch=1,EE,2042B0C4,extended,34020001 // Deinterlace races
+patch=1,EE,D04FA620,extended,00000000
+patch=1,EE,2042B0C4,extended,30420001
+patch=1,EE,2042408C,extended,00000000 // Deinterlace menus
+
+[Adjusted triggers sensitivity]
+author=Silent & Aero_
+description=Makes throttle/brake more precise when using triggers, like on PS3.
+// Throttle
+patch=1,EE,10380E0C,extended,0000005A
+patch=1,EE,20380E00,extended,00000000
+// Brake
+patch=1,EE,10380E6C,extended,0000005A
+patch=1,EE,20380E60,extended,00000000
+// Reverse
+patch=1,EE,10380F2C,extended,0000005A
+patch=1,EE,20380F20,extended,00000000
+
+[Reduce Vibration]
+author=Aero_
+description=Reduces the strength of the controller's vibration.
+patch=1,EE,2034AE64,extended,3C014170 // lui at,0x4170 : Vibration Float (default 0x4380)
+
+[Remapped triggers\L1-R1 shifting]
+author=Silent
+description=Maps throttle/brake to triggers, downshift/upshift to L1/R1, rear view to Cross and change view to Square.
+patch=1,EE,20382468,extended,00000000 // Do not load controls from the memory card, as they cannot be modified anyway.
+patch=1,EE,00380916,extended,88 // L2
+patch=1,EE,0038091A,extended,8F // R2
+patch=1,EE,0038090E,extended,8B // L1
+patch=1,EE,00380912,extended,8C // R1
+patch=1,EE,00380906,extended,89 // Cross
+patch=1,EE,0038090A,extended,8A // Square
+
+[Remapped triggers\Square-Cross shifting]
+author=Silent
+description=Maps throttle/brake to triggers, downshift/upshift to Square/Cross. (like in GT7)
+patch=1,EE,20382468,extended,00000000 // Do not load controls from the memory card, as they cannot be modified anyway.
+patch=1,EE,00380916,extended,88 // L2
+patch=1,EE,0038091A,extended,8F // R2
+patch=1,EE,0038090A,extended,8B // Square
+patch=1,EE,00380906,extended,8C // Cross
+
+[Remapped triggers\Cross-Square shifting]
+author=Silent
+description=Maps throttle/brake to triggers, downshift/upshift to Cross/Square.
+patch=1,EE,20382468,extended,00000000 // Do not load controls from the memory card, as they cannot be modified anyway.
+patch=1,EE,00380916,extended,88 // L2
+patch=1,EE,0038091A,extended,8F // R2
+patch=1,EE,00380906,extended,8B // Cross
+patch=1,EE,0038090A,extended,8C // Square
+
+[Adjustable units\Speed and distance]
+author=Silent
+description=Change speed and distance units from km/h and km to mph and miles.
+patch=1,EE,204FE370,extended,1
+
+[Adjustable units\Power (PS)]
+author=Silent
+description=Change power units from BHP to PS. Not compatible with other power units patches.
+patch=1,EE,204FE374,extended,0
+
+[Adjustable units\Power (HP)]
+author=Silent
+description=Change power units from BHP to HP. Not compatible with other power units patches.
+patch=1,EE,204FE374,extended,1
+
+[Adjustable units\Power (CV)]
+author=Silent
+description=Change power units from BHP to CV. Not compatible with other power units patches.
+patch=1,EE,204FE374,extended,3
+
+[Adjustable units\Power (kW)]
+author=Silent
+description=Change power units from BHP to kW. Not compatible with other power units patches.
+patch=1,EE,204FE374,extended,4
+
+[Adjustable units\Power (PF)]
+author=Silent
+description=Change power units from BHP to PF. Not compatible with other power units patches.
+patch=1,EE,204FE374,extended,5
+
+[Adjustable units\Torque (ft.lb)]
+author=Silent
+description=Change torque units from kgf.m to ft.lb. Not compatible with other torque units patches.
+patch=1,EE,204FE378,extended,1
+
+[Adjustable units\Torque (NM)]
+author=Silent
+description=Change torque units from kgf.m to NM. Not compatible with other torque units patches.
+patch=1,EE,204FE378,extended,2
