@@ -31,6 +31,13 @@ patch=0,EE,101086D4,extended,0000
 patch=0,EE,10108700,extended,0000
 patch=0,EE,10108708,extended,0000
 
+[Raindrops In All Camera Modes]
+description=Makes on-screen rain droplets display in all camera modes.
+author=Silent
+
+patch=0,EE,2014B8EC,extended,00000000
+patch=0,EE,2014949C,extended,00000000
+
 [Japanese Soundtrack]
 description=Fixes the music assignments to match Kaido Battle, corrects Music Test using the incorrect track names and missing the last 2 tracks.
 author=Silent
