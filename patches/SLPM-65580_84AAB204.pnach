@@ -2,7 +2,33 @@ gametitle=Crash Bandicoot Bakusou! Nitro Kart [NTSC-J] (SLPM-65580)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000
-patch=1,EE,005854a8,word,3c023f17
-
-
+author=CRASHARKI
+description=Enable unused native widescreen.
+// 1) 3D Rendering
+patch=1,EE,001A8714,word,0817C394
+patch=1,EE,005F0E50,word,3C033FAA
+patch=1,EE,005F0E54,word,3463AAAB
+patch=1,EE,005F0E58,word,0806A1C7
+patch=1,EE,005F0E5C,word,00000000
+// 2) Loading screen
+patch=1,EE,002034B0,word,24020000
+patch=1,EE,00203518,word,24020000
+patch=1,EE,00203580,word,24020000
+patch=1,EE,002035E4,word,24020000
+patch=1,EE,00203D64,word,24020000
+patch=1,EE,00203DD4,word,24020000
+patch=1,EE,00203E3C,word,24020000
+patch=1,EE,00203EA0,word,24020000
+patch=1,EE,0020463C,word,24020000
+patch=1,EE,002046A4,word,24020000
+patch=1,EE,00204714,word,24020000
+patch=1,EE,00204778,word,24020000
+patch=1,EE,00204F20,word,24020000
+patch=1,EE,00204F90,word,24020000
+patch=1,EE,00205000,word,24020000
+patch=1,EE,00205064,word,24020000
+patch=1,EE,00206F24,word,24020001
+// 3) FMV
+patch=1,EE,0033768C,word,0040F021
+patch=1,EE,003376A4,word,0040F021
+patch=1,EE,003378A4,word,3C0343B0

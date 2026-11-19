@@ -2,7 +2,43 @@ gametitle=Crash Nitro Kart (SLUS-20649)
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=nemesis2000
-patch=1,EE,0058bcf8,word,3c023f17
-
-
+author=CRASHARKI
+description=Enable unused native widescreen.
+// 1) 3D Rendering
+patch=1,EE,001AF6A4,word,0817F95C
+patch=1,EE,005FE570,word,3C033FAA
+patch=1,EE,005FE574,word,3463AAAB
+patch=1,EE,005FE578,word,0806BDAB
+patch=1,EE,005FE57C,word,00000000
+// 2) Loading screen
+patch=1,EE,00207EF0,word,24020051
+patch=1,EE,0020962C,word,2413007F
+patch=1,EE,0020969C,word,2414007F
+patch=1,EE,00209CE4,word,2413007F
+patch=1,EE,00209D54,word,2414007F
+patch=1,EE,002088EC,word,24140075
+patch=1,EE,00208954,word,24140075
+patch=1,EE,00208F88,word,24130075
+patch=1,EE,00208FF4,word,24140075
+patch=1,EE,00209554,word,24130075
+patch=1,EE,002095C0,word,24130075
+patch=1,EE,00209BFC,word,24150075
+patch=1,EE,00209C74,word,24150075
+// 3) FMV
+patch=1,EE,00344280,word,0000B02D
+patch=1,EE,00344288,word,0000B02D
+patch=1,EE,0034454C,word,08111537
+patch=1,EE,004454DC,word,3C013FA2
+patch=1,EE,004454E0,word,3421E8BA
+patch=1,EE,004454E4,word,44819000
+patch=1,EE,004454E8,word,46121082
+patch=1,EE,004454EC,word,46020A81
+patch=1,EE,004454F0,word,460091C6
+patch=1,EE,004454F4,word,00000000
+patch=1,EE,004454F8,word,080D1156
+patch=1,EE,004454FC,word,00000000
+patch=1,EE,00344644,word,0810F1AA
+patch=1,EE,0043C6A8,word,46120842
+patch=1,EE,0043C6AC,word,46013840
+patch=1,EE,0043C6B0,word,080D1193
+patch=1,EE,0043C6B4,word,00000000
