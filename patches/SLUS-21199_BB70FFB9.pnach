@@ -6,6 +6,11 @@ author=nemesis2000
 description=Widescreen hack
 patch=1,EE,0012927c,word,00000000
 
+[30 FPS]
+author=asasega
+description=Increases fps lock to 30
+patch=1,EE,20127570,extended,28420002
+
 [60 FPS]
 author=asasega
 description=Unlocks internal FPS. Might need EE Overclock at 180%.
