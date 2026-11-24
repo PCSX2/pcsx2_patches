@@ -1,0 +1,38 @@
+gametitle=Disney's Chicken Little [PAL-R] (SLES-53741) 7C92FDDE
+
+[Widescreen 16:9]
+gsaspectratio=16:9
+author=Batyrkhan
+description=Renders the game in 16:9 using its own unused widescreen mode, so the HUD is laid out the way the developers set it up.
+//Screen aspect 4:3 -> 16:9, same as the game's leftover debug toggle. The game then widens the 3D view,
+//keeps 2D at the right proportions and moves HUD elements flagged left/right to the screen edges.
+patch=1,EE,004AFB60,word,3FE38E39 //3FAAAAAB
+//Cannon off-screen target arrows: keep them at the screen edges (x 48 -> -56, 592 -> 696)
+patch=1,EE,001E7F78,word,3C01C260 //3C014240
+patch=1,EE,001E8028,word,3C01442E //3C014414
+//Actor__GetScreenPos script function: return positions on the 16:9 screen (x scale 0.5 -> 0.668)
+patch=1,EE,0012C4F4,word,3C013F2B //00000000 nop -> lui at,0x3F2B
+patch=1,EE,0012C4F8,word,48A13000 //00000000 nop -> qmtc2 at,vf6
+patch=1,EE,0012C534,word,4B060858 //4B030858 vmulx.x vf1,vf1,vf3x -> vmulx.x vf1,vf1,vf6x
+
+[Right stick left/right flip]
+author=Batyrkhan
+description=Flips the camera's left/right on the right stick. Turn off the controller profile's right stick inversion when using this.
+//pad read: use (255 - RX) like the game already does for the Y axes
+patch=1,EE,003A2F6C,word,00621023 //00021080 subu v0,v1,v0
+patch=1,EE,003A2F70,word,00021080 //24420C00 sll v0,v0,2
+patch=1,EE,003A2F74,word,00441021 //00821021 addu v0,v0,a0
+patch=1,EE,003A2F78,word,C4400C00 //C4400000 lwc1 f0,0xC00(v0)
+//alien walker turns the opposite way: flip it back so it keeps its original direction
+patch=1,EE,0014848C,word,46000807 //46000806 mov.s f0,f1 -> neg.s f0,f1
+
+[Right stick up/down flip]
+author=Batyrkhan
+description=Flips up/down on the right stick. Only if that axis feels inverted too.
+//pad read: use RY instead of (255 - RY)
+patch=1,EE,003A2F84,word,0040182D //00621823 move v1,v0
+
+[50 FPS]
+author=Batyrkhan
+description=Unlocks 50 FPS. Might need EE Overclock at 130%. Based on PeterDelta & asasega's patch.
+patch=1,EE,00521C58,byte,01 //02
