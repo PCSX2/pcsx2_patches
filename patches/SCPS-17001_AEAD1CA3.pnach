@@ -1,0 +1,67 @@
+gametitle=Gran Turismo 4 [SCPS-17001] (J)
+
+[No Interlacing]
+author=Duchi/Vyerq & Silentwarior112
+description=Progressive scan in menus.
+gsinterlacemode=1
+patch=1,EE,2049AA2C,extended,0000102D
+patch=1,EE,20AB4A78,byte,1
+patch=1,EE,D060FAB4,extended,1
+patch=1,EE,2060FAB4,extended,2
+
+[Full Trigger Sensitivity]
+author=Silentwarior112 (Ported from CookiePLMonster/Silent & Aero_)
+description=Allows the full range of the triggers (L2 & R2) to be used for throttle and brake inputs.
+// Throttle
+patch=1,EE,104347CC,extended,00000062
+patch=1,EE,204347C0,extended,00000000
+// Brake
+patch=1,EE,1043482C,extended,00000062
+patch=1,EE,20434820,extended,00000000
+// E-Brake
+patch=1,EE,1043488C,extended,00000062
+patch=1,EE,20434880,extended,00000000
+// Reverse
+patch=1,EE,104348E8,extended,00000062
+patch=1,EE,204348E0,extended,00000000
+
+[Reduce Vibration]
+author=thefirefox12537 (Ported from Aero_)
+description=Reduces the strength of the controller's vibration.
+patch=1,EE,2036768C,extended,3C014170 // lui at,0x4170 : Vibration Float
+
+[GT3 chase camera]
+author=thefirefox12537 (Ported from Silent)
+description=GT3-like camera from GT4 First Preview
+
+// Values changed by this cheat are float values represented in hex.
+// If you want to customize those parameters, use a float-to-hex converter like this one:
+// https://gregstoll.com/~gregstoll/floattohex/
+
+// Default parameters in this cheat correspond to the values from GT4 First Preview,
+// but you may freely customize them. For example, if you want to make the camera
+// even stiffer (like in GT5/6), increase the damper value.
+
+// Camera damper, default - 120.0
+// Higher values make the camera center quicker
+patch=1,EE,20695A08,extended,41F00000 // 30.0
+// Camera max angle, default - 15.0
+// Higher values make the camera lean further to the sides
+patch=1,EE,20695A14,extended,41200000 // 10.0
+
+[Far chase camera]
+author=thefirefox12537 (Ported from Silent)
+description=Added GT4 First Preview camera mode.
+
+// Swap 4-byte instructions to 2-byte ones to make space
+patch=1,EE,203750E4,extended,84E30000
+patch=1,EE,103750E8,extended,0002
+patch=1,EE,103750F8,extended,0004
+patch=1,EE,20375108,extended,84E30000
+
+patch=1,EE,10375118,extended,0004
+patch=1,EE,00375130,extended,40
+patch=1,EE,10375142,extended,8442
+
+patch=1,EE,20618748,extended,00010000
+patch=1,EE,2061874C,extended,00060014
