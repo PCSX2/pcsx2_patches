@@ -22,3 +22,9 @@ patch=0,EE,10132448,extended,0000
 patch=0,EE,10132454,extended,0000
 patch=0,EE,101323F4,extended,0000
 patch=0,EE,101323FC,extended,0000
+
+[Raindrops In All Camera Modes]
+description=Makes on-screen rain droplets display in all camera modes.
+author=Silent
+
+patch=0,EE,20190E34,extended,00000000

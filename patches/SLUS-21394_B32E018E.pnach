@@ -39,6 +39,12 @@ patch=0,EE,1019C624,extended,0000
 patch=0,EE,1019C680,extended,0000
 patch=0,EE,1019C684,extended,0000
 
+[Raindrops In All Camera Modes]
+description=Makes on-screen rain droplets display in all camera modes.
+author=Silent
+
+patch=0,EE,2038238C,extended,00000000
+
 [Convert units from mph to km/h]
 description=Changes the ingame speedometer and gear menu to km/h
 author=JakeMR2
