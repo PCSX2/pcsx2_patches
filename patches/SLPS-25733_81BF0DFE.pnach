@@ -1,20 +1,16 @@
-gametitle=Super Robot Taisen OG - Original Generations (J)(SLPS-25733)
+gametitle=Super Robot Taisen OG - Original Generations * NTSC-J * SLPS-25733 * 81BF0DFE
+// same serial-code as B0E44B93 & A2C12D28.
 
 [Widescreen 16:9]
 gsaspectratio=16:9
-author=Arapapa
+author=arapapa
 
-//Widescreen hack 16:9
+// X-FoV - 803f063c 905043ac
+patch=1,EE,0016ff40,word,3c063f40 // 3c063f80
 
-//X-Fov
-//803f063c 905043ac
-patch=1,EE,0016ff40,word,3c063f40 //3c063f80
+// Direction Indicator Position
+patch=1,EE,206b16c4,extended,3f400000 // 3f800000
+patch=1,EE,206b16ec,extended,3f400000 // 3f800000
 
-//Direction Indicator Position
-patch=1,EE,206b16c4,extended,3f400000 //3f800000
-patch=1,EE,206b16ec,extended,3f400000 //3f800000
-
-//Zoom
-//patch=1,EE,00147240,word,3c023fab //3c023f80
-
-
+// Zoom
+//patch=1,EE,00147240,word,3c023fab // 3c023f80
