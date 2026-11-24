@@ -1,0 +1,8 @@
+gametitle=Super Monkey Ball Deluxe PAL SLES-53037 53CAC7C4
+
+[60 FPS]
+author=PAL port by Eezzy
+description=Game @ 60fps. Breaks Golf & Tennis.
+
+patch=1,EE,20147354,extended,24020001
+patch=1,EE,004DEF80,extended,00000001
