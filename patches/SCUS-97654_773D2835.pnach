@@ -6,3 +6,10 @@ description=Patches the game to run at 60FPS. Requires 180% EE Overclock
 
 //60FPS
 patch=1,EE,2039BAF8,extended,00000000
+
+[No-Interlacing]
+gsinterlacemode=1
+author=KushagraSingh78
+description=Forces the game's built-in 480p progressive mode instead of NTSC 480i.
+patch=1,EE,00284398,word,24100002
+
