@@ -13,3 +13,8 @@ gsaspectratio=16:9
 author=CRASHARKI
 description=Run the game at 16:9 Widescreen Aspect Ratio from the start.
 patch=1,EE,20649DC8,byte,1 //0 Widescreen
+
+[Disable Monkey LOD Models]
+description=Disables the lower level-of-detail models for the monkeys.
+author=mthsk
+patch=1,EE,0030EFD8,word,00000000
