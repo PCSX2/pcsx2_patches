@@ -23,4 +23,7 @@ patch=1,EE,00655270,word,e7a40000 // 00000000
 patch=1,EE,00655274,word,c7b40070 // 00000000
 patch=1,EE,00655278,word,08063d55 // 00000000
 
-
+[50 FPS]
+author=asasega & Snake356
+description=Patches the game to run at 50 FPS (Might need 180% EE Overclock to be stable).
+patch=1,EE,2064E0B0,word,00000001
