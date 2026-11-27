@@ -14,6 +14,7 @@ patch=0,EE,00106F64,word,24070001
 patch=0,EE,001FF094,word,3C013E19
 patch=0,EE,001FF0C0,word,3C010EC0
 patch=0,EE,003A01AC,word,3C013F00
+patch=0,EE,0020ECD4,word,3C013F00
 
 [Remove Brume]
 author=PeterDelta
