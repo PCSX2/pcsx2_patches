@@ -26,6 +26,14 @@ patch=0,EE,2021F584,extended,0          // nop
 patch=0,EE,2021F588,extended,0          // nop
 patch=0,EE,2021F58C,extended,E7A00050   // swc1 $f0, 0x50($sp)
 
+// Fix polygons of cars/props (VU1 "cull-only" render paths) disappearing near the sides of the screen
+// The VU1 clip matrix (fed to CLIPw) did not include the aspect multiplier, so the horizontal guard band shrank
+// from +/-512px (192px past the screen edge) to +/-384px (64px past the edge). Move the aspect multiplier
+// from the clip->screen matrix's X scale into the clip matrix's X scale to restore the original guard band.
+patch=0,EE,2021F818,extended,4619A802   // mul.s $f0, $f21, $f25   (clip X scale = focal/512 * aspect)
+patch=0,EE,2021F820,extended,E7A00050   // swc1 $f0, 0x50($sp)      (store to clip matrix [0][0])
+patch=0,EE,2021F840,extended,E7B6007C   // swc1 $f22, 0x7C($sp)     (moved from 21F818; clip->screen X scale stays 512.0)
+
 // Various UI Scaling Functions
 // Function 1
 // Known to affect the middle portion of the minimap border/transparent overlay
